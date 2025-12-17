@@ -595,3 +595,508 @@ Changed target section to use `(candidateFuncData || funcData)` for signature fi
   - Updated `openComparisonModal()` to look up candidate function data
   - Fixed target section signature/calling_convention/return_type to use candidate data
   - Added matched function name display in modal header
+
+---
+
+## Compare Panel Refactor Plan (2025-12-15)
+
+### Overview
+Convert the comparison modal popup into a 4th panel using the **Option A: Unified Row-Based Table Layout**. The new panel will sit alongside the existing 3 panels and provide aligned side-by-side comparison of function data.
+
+### Current State
+- 3 panels: Versions (140px fixed) | Files (auto) | File Details (flex: 1, min 300px)
+- Comparison is a modal overlay that blocks interaction with panels
+- Modal has two-column layout with source/target sections rendered separately
+
+### Target State
+- 4 panels: Versions | Files | File Details | **Compare Functions** (new)
+- Compare panel appears when a function cell is clicked
+- Row-based layout with perfect source/target alignment
+- Works on narrow screens by stacking values
+
+### Implementation Plan
+
+#### Phase 1: Panel Structure (CSS)
+- [x] 1.1 Add `.panel-compare` CSS with sizing rules
+  - Default: `width: 420px; flex-shrink: 0;`
+  - Hidden state: `display: none;` when no comparison active
+- [x] 1.2 Add `.compare-row` layout CSS for aligned rows
+- [x] 1.3 Add narrow screen media query to stack layout
+- [x] 1.4 Add `.compare-section` for grouping related rows (Counts, Hashes, etc.)
+- [x] 1.5 Add `.compare-list-row` for array data (callees, strings, etc.)
+
+#### Phase 2: Panel HTML Structure
+- [x] 2.1 Add Panel 4 HTML after panel-details in panels-wrapper:
+  ```html
+  <!-- Panel 4: Compare Functions -->
+  <div class="panel panel-compare" id="comparePanel" style="display: none;">
+    <div class="panel-header">
+      <h2 id="comparePanelTitle">Compare Functions</h2>
+      <button class="compare-close-btn" onclick="closeComparePanel()">✕</button>
+    </div>
+    <div class="compare-header-info" id="compareHeaderInfo">
+      <!-- Function name, versions, addresses, overall score -->
+    </div>
+    <div class="panel-content" id="compareContent">
+      <!-- Row-based comparison content -->
+    </div>
+    <div class="compare-actions" id="compareActions">
+      <!-- Confirm/Reject buttons for candidates -->
+    </div>
+  </div>
+  ```
+
+#### Phase 3: Rendering Functions
+- [x] 3.1 Create `renderCompareRow(label, sourceVal, targetVal, matchType)` helper
+- [x] 3.2 Create `renderCompareSection(title, rows)` helper
+- [x] 3.3 Create `renderCompareListSection(title, sourceItems, targetItems)` helper
+- [x] 3.4 Create `renderCompareHeader(funcData, sourceVer, targetVer, score)` helper
+- [x] 3.5 Create `buildCompareContent(funcData, candidateFuncData, sourceVer, targetVer)` main builder
+
+#### Phase 4: Panel Control Functions
+- [x] 4.1 Create `showComparePanel(canonicalId, version, sourceVersion, isCandidate)`
+- [x] 4.2 Create `closeComparePanel()`
+- [x] 4.3 Create `updateComparePanel()`
+- [x] 4.4 Update `confirmMatch()` and `rejectMatch()` to work with panel
+
+#### Phase 5: Integration
+- [x] 5.1 Update all `onclick="openComparisonModal(...)"` calls to use `showComparePanel(...)`
+- [x] 5.2 Add keyboard shortcut (Escape) to close panel
+- [ ] 5.3 Add panel toggle in toolbar or header (optional) - not implemented, deemed unnecessary
+
+#### Phase 6: Cleanup
+- [x] 6.1 Remove old modal HTML (`#comparisonModal`)
+- [x] 6.2 Remove old modal CSS (`.comparison-modal`, `.comparison-dialog`, etc.)
+- [x] 6.3 Remove `openComparisonModal()` function
+- [x] 6.4 Remove `closeComparisonModal()` function
+- [x] 6.5 Clean up any unused similarity bar CSS
+
+### Data Fields to Display (Row-Based)
+
+**Section: Header Info**
+- Function name (with known name badge if applicable)
+- Source version + address
+- Target version + address
+- Overall similarity score with tier icon
+
+**Section: Structural Counts**
+| Source | Metric | Target | Match |
+|--------|--------|--------|-------|
+| 234 | Size (bytes) | 234 | ✓ |
+| 45 | Instructions | 45 | ✓ |
+| 12 | Basic Blocks | 11 | ≈ |
+| 3 | Loops | 3 | ✓ |
+| 0x20 | Stack Frame | 0x20 | ✓ |
+| 6 | Callees | 7 | ≈ |
+| 3 | Strings | 3 | ✓ |
+| 12 | Constants | 10 | ≈ |
+| 5 | Globals | 5 | ✓ |
+
+**Section: Fingerprints**
+| Source | Type | Target | Match |
+|--------|------|--------|-------|
+| ab12... | Mnemonic Hash | ab12... | ✓ |
+| STR:xx | Index (API) | STR:xx | ✓ |
+| API:yy | Index (STR) | API:yy | ✓ |
+
+**Section: Signature**
+- Calling convention
+- Return type
+- Full signature (spans full width)
+
+**Section: Callees (expandable)**
+- List with ✓ matched, ⊖ source-only, ⊕ target-only
+
+**Section: Strings (expandable)**
+- List with match indicators
+
+**Section: Instructions (expandable)**
+- First 8 instructions side-by-side
+
+**Section: Constants (expandable)**
+- List with match indicators
+
+**Section: Globals (expandable)**
+- List with match indicators
+
+**Section: Tags**
+- Function type badge
+- Tag list with match indicators
+
+### Narrow Screen Behavior
+When viewport width < 600px:
+- Compare panel takes full width (overlay mode) OR
+- Stacked row layout: Label above, Source | Target below
+```
+┌─────────────────────┐
+│ SIZE                │
+│  234    ✓    234    │
+├─────────────────────┤
+│ INSTRUCTIONS        │
+│   45    ✓     45    │
+└─────────────────────┘
+```
+
+---
+
+## Review: Matching Architecture Fixes (2025-12-15)
+
+### Summary
+
+The recommended fixes from `docs/matching_architecture.md` have all been implemented in `tools/sequential_matcher.py`. The changes address the "false match problem" where weak signals could accumulate to exceed the match threshold even when functions were clearly unrelated.
+
+### Implementation Status
+
+| Fix | Status | Location |
+|-----|--------|----------|
+| Option 1: Hard Constraints | ✓ Implemented | Lines 580-619 |
+| Option 2: Tier 1 Signal Requirement | ✓ Implemented | Lines 621-655 |
+| Option 3: Increase MIN_MATCH_SCORE | ✓ Implemented | Lines 100-103 |
+
+### Hard Constraints (Option 1)
+
+Three hard constraints were added that immediately reject matches:
+
+1. **Parameter Count Mismatch** (Lines 584-593)
+   - If both functions have known param counts and they differ, reject
+   - Rationale: Parameter count is a very reliable signal
+
+2. **Extreme Caller Count Mismatch** (Lines 597-606)
+   - If one function has >3 callers and the other has 0, reject
+   - Rationale: Functions with many callers are well-established, can't suddenly have none
+
+3. **Caller Ratio Check** (Lines 608-619)
+   - If caller counts differ by >5× (ratio < 0.2), reject
+   - Rationale: Even with recompilation, caller counts shouldn't vary this much
+
+### Tier 1 Signal Requirement (Option 2)
+
+- Checks if ANY hash-based signal matched (lines 624-633):
+  - mnemonic_hash, export_ordinal, export_name
+  - str_index, cal_index, api_index, cfg_index, con_index
+- If no Tier 1 signal, applies higher threshold: `MIN_MATCH_SCORE_NO_TIER1 = 4.0`
+- This prevents weak signals from accumulating to false positives
+
+### Score Threshold Changes (Option 3)
+
+| Constant | Old Value | New Value | Impact |
+|----------|-----------|-----------|--------|
+| MIN_MATCH_SCORE | 0.45 | 2.0 | Requires at least one strong signal |
+| MIN_MATCH_SCORE_NO_TIER1 | N/A | 4.0 | Requires multiple strong signals without hash match |
+| MAX_VECTOR_SCORE | 13.7 | 13.7 | Unchanged |
+
+The new thresholds mean:
+- With Tier 1 match: Need 2.0/13.7 = 14.6% of max score (was 3.3%)
+- Without Tier 1 match: Need 4.0/13.7 = 29.2% of max score
+
+### Compare Panel Refactor
+
+The Compare Panel has been fully refactored from a modal popup to a 4th panel:
+- All phases (1-6) are complete except optional toolbar toggle (5.3)
+- Old modal code has been removed
+- Panel uses row-based layout for aligned source/target comparison
+- Supports confirm/reject actions for candidate matches
+
+---
+
+## Review: Match Score Breakdown & Alternate Matches (2025-12-15)
+
+### Overview
+
+Added two new features to the Compare Panel to improve visibility into the vector matching system:
+
+1. **Match Score Breakdown Section** - Shows detailed tier-by-tier scoring breakdown
+2. **Alternate Function Selection** - Allows picking from top 3 closest matches as comparison targets
+
+### Changes Made
+
+**JavaScript Functions Added (`d2_report_viewer.html`):**
+
+1. `renderMatchScoreBreakdown(identityMatch, sourceVersion, targetVersion)` - Renders the tiered scoring breakdown:
+   - Tier 1: Hash Match status (mnemonic hash, index hash, exact counts)
+   - Tier 2: Vector Similarity with feature table and contribution bars
+   - Value Bonuses: Shows individual bonus tags with Jaccard overlap percentage
+   - Tier 3: Validation Warnings (size mismatch, callee ratio, etc.)
+
+2. `findTopAlternateMatches(sourceFuncData, sourceVersion, targetVersion, topN, excludeAddress)` - Scans all functions in the registry to find top N similar matches:
+   - Uses `calculateIdentityMatch()` for scoring
+   - Quick size filter (>3x difference = skip)
+   - Returns array of { canonicalId, address, name, score, tier } objects
+
+3. `selectAlternateMatch(sourceCanonicalId, targetVersion, sourceVersion, altCanonicalId, altAddress)` - Updates compare panel to show a different target function
+
+**UI Changes:**
+
+- **Score Breakdown Section**: First collapsible section in compare panel content
+  - Feature table with Source/Target values, Similarity%, and contribution bars
+  - Color-coded: high (green ≥80%), medium (yellow ≥50%), low (orange <50%)
+  - Value bonus tags showing individual overlaps (string, constant, global, etc.)
+  - Tier 3 warnings displayed in orange box
+
+- **Alternate Matches Bar**: Shows buttons for top 3 alternative function matches
+  - Only appears for candidate comparisons (not confirmed addresses)
+  - Each button shows function name and match score
+  - Clicking updates the entire compare panel to show new comparison
+
+**CSS Styles Added:**
+
+- `.score-breakdown`, `.score-breakdown-tier`, `.tier-header`, `.tier-icon`, `.tier-label`, `.tier-status`
+- `.score-feature-table` with `.feat-name`, `.feat-val`, `.feat-sim`, `.feat-contrib`
+- `.contrib-bar`, `.contrib-bar-fill` with `.high/.medium/.low` variants
+- `.score-value-bonuses`, `.bonuses-label`, `.bonus-tag`
+- `.score-warnings`, `.warning-item`
+- `.alternate-matches`, `.alternate-label`, `.alternate-buttons`
+- `.alternate-match-btn` with `.alt-name`, `.alt-score` (high/medium/low variants)
+
+### User Experience
+
+When comparing functions:
+1. The **Match Score Breakdown** section shows exactly why the match scored as it did
+2. Users can see which features contributed most to the score
+3. For candidate matches, **Alternate Matches** buttons let users quickly compare against other potential targets
+4. This helps identify false positives by seeing if a different function is actually a better match
+
+---
+
+## Review: Sequential Filtering & UI Simplification (2025-12-15)
+
+### Overview
+
+Made three changes to improve the alternate match finding and simplify the compare panel UI:
+
+1. **Sequential Filtering in `findTopAlternateMatches()`** - Applies strict filters before running expensive matching algorithms
+2. **Removed Match Score Breakdown Section** - Simplified the compare panel by removing the detailed tier breakdown
+3. **Score Displayed in Structural Counts** - Match score now appears alongside the structural counts summary
+
+### Changes Made
+
+**Sequential Filtering (`findTopAlternateMatches`):**
+
+Now applies four sequential filters before calculating match scores:
+
+1. **Parameter Count** - Must match exactly (eliminates candidates with different signatures)
+2. **Calling Convention** - Must match exactly (e.g., __fastcall vs __stdcall)
+3. **String Reference Count** - Must match exactly (functions with same string usage patterns)
+4. **Size Tolerance** - Within 25% (was 33%, now stricter at 75% ratio minimum)
+
+This dramatically reduces the number of candidates that require full vector similarity calculation.
+
+**UI Simplification:**
+
+- **Removed**: `Section 0: Match Score Breakdown` - The detailed tier/feature breakdown was too verbose
+- **Added**: Score displayed in Structural Counts header as `X/9 exact · YY%`
+- The score from the header bar is now echoed in the first section for quick reference
+
+### Code Changes
+
+```javascript
+// Before:
+const countsSummary = `<span class="match-count">${matchedCounts}</span>/9 exact`;
+// ... Match Score Breakdown section ...
+html += renderCompareSection('Structural Counts', countsRows, countsSummary, false);
+
+// After:
+const scoreInfo = identityMatch ? ` · ${identityMatch.score}%` : '';
+const countsSummaryWithScore = `<span class="match-count">${matchedCounts}</span>/9 exact${scoreInfo}`;
+html += renderCompareSection('Structural Counts', countsRows, countsSummaryWithScore, false);
+```
+
+### Performance Impact
+
+The sequential filtering approach:
+- Filter 1 (param_count): Eliminates ~70-80% of candidates immediately
+- Filter 2 (calling_convention): Eliminates another ~30-50% of remaining
+- Filter 3 (string_count): Eliminates ~20-40% of remaining
+- Filter 4 (size): Eliminates ~10-20% of remaining
+
+Only functions passing all four filters undergo the expensive `calculateIdentityMatch()` call.
+
+---
+
+## Callee Matcher Implementation (2025-12-16)
+
+### Goal
+Implement a callee matching system to propagate function names from documented versions to undocumented versions by matching callees between parent functions.
+
+### Approach
+Create a standalone `callee_matcher.py` tool that matches callees using a tiered fallback strategy:
+
+1. **Hash Match (Primary)** - Normalized opcode hash comparison
+2. **Position Match (Fallback 1)** - Same call order index when callee counts match
+3. **Size+Count Match (Fallback 2)** - Instruction count and size within tolerance
+4. **Signature Match (Fallback 3)** - Param count + calling convention similarity
+
+### Tasks
+
+- [ ] Create `tools/callee_matcher.py` with CalleeMatcher class
+- [ ] Implement hash-based matching (primary method)
+- [ ] Implement position-based fallback
+- [ ] Implement size/instruction count fallback
+- [ ] Implement signature-based fallback
+- [ ] Add CLI interface for testing
+- [ ] Test with the example functions (1.07 @ 0x6FD9DFF0 vs 1.08 @ 0x6FD9E4B0)
+
+### Design Notes
+
+- Keep it simple - single file, minimal dependencies
+- Use Ghidra MCP tools for hash retrieval when live
+- Return match results with confidence scores and method used
+- Support both live Ghidra queries and offline JSON index matching
+
+### Review
+
+**Implementation Complete - All Tests Pass**
+
+#### Changes Made:
+- Created `tools/callee_matcher.py` (~675 lines)
+- Implemented `CalleeMatcher` class with tiered matching strategy
+- Added `CalleeInfo` and `CalleeMatch` dataclasses for clean data handling
+- Implemented 4-tier fallback: Hash (100%) -> Position (90%) -> Size (75%) -> Signature (60%)
+- Added `GhidraMCPClient` for live Ghidra queries (REST API)
+- Added CLI interface with `--test` flag for validation
+- Added `test_with_known_data()` using actual 1.07 vs 1.08 analysis data
+
+#### Test Results:
+```
+MATCHED CALLEES (6)
+  [HASH] 100%  GetLinkedUnitData -> GetLinkedUnitOrNone
+  [HASH] 100%  GetCharacterTierIndex -> Ordinal_10001
+  [HASH] 100%  AdjustRotationAngle -> FUN_6fd9e220
+  [HASH] 100%  InterpolateCoordinates -> FUN_6fd9e370
+  [POS]  90%   GetActRoom -> GetActRoom
+  [POS]  90%   AdvanceEnvAnimationFrame -> AdvanceEnvAnimationFrame
+
+SUMMARY: 6/6 callees matched (100.0%)
+Stats: hash_matches=4, position_matches=2, size_matches=0, signature_matches=0
+```
+
+#### Key Design Decisions:
+1. **Hash-first approach** - Normalized opcode hash catches identical code at different addresses
+2. **Position fallback** - When callee counts match, same call order = same function
+3. **Greedy matching** - Each tier consumes matches before next tier runs
+4. **Confidence scoring** - Each method has explicit confidence level for downstream use
+
+#### Usage:
+```bash
+# Run test with known data
+python tools/callee_matcher.py --test
+
+# Match callees between two functions (requires Ghidra MCP server)
+python tools/callee_matcher.py \
+  --source-addr 0x6FD9DFF0 --source-prog "LoD/1.07/D2Common.dll" \
+  --target-addr 0x6FD9E4B0 --target-prog "LoD/1.08/D2Common.dll"
+```
+
+---
+
+## Callee Resolution in Merge Pipeline (2025-12-16)
+
+### Goal
+Integrate callee name resolution into the merge pipeline so that callees are automatically named with their canonical names across all versions.
+
+### Changes Made
+
+**`tools/merge_function_index.py`:**
+
+1. Added import for callee_matcher (lines 43-50):
+   ```python
+   try:
+       from callee_matcher import CalleeMatcher, CalleeInfo
+       HAS_CALLEE_MATCHER = True
+   except ImportError:
+       CalleeMatcher = None
+       CalleeInfo = None
+       HAS_CALLEE_MATCHER = False
+   ```
+
+2. Added `resolve_callees()` method (lines 789-859):
+   - Builds address-to-canonical lookup: `{(dll, version_key, address) -> canonical_id}`
+   - Iterates through all functions' callees in all versions
+   - Parses "name|address" format
+   - Looks up each callee's canonical ID by address
+   - If canonical function has a human name, replaces callee name
+   - Tracks resolution statistics
+
+3. Integrated into both registry generation methods:
+   - `generate_registry()` calls `resolve_callees()` after processing all DLLs
+   - `generate_registry_in_memory()` calls `resolve_callees()` after processing all DLLs
+
+### Test Results
+
+```
+Resolving callee names...
+  Resolved 90,779 callee names out of 954,397 total
+```
+
+The pipeline now automatically resolves 90,779 callee references to their canonical names.
+
+### Example
+
+Before resolution (1.08 function callees):
+```
+Ordinal_10001|0x6FD862F0
+FUN_6fd9e220|0x6FD9E220
+FUN_6fd9e370|0x6FD9E370
+```
+
+After resolution (if canonical names exist):
+```
+GetCharacterTierIndex|0x6FD862F0
+AdjustRotationAngle|0x6FD9E220
+InterpolateCoordinates|0x6FD9E370
+```
+
+### Limitations
+
+The resolution only works when:
+1. The callee has a canonical entry in the same DLL
+2. The canonical entry has a human name assigned
+
+Functions that exist in separate canonical entries (like 1.07 `UpdateRoomAnimationState` vs 1.08 `Ordinal_10923`) won't have their callees cross-resolved because they're separate entries. This is a top-level function matching issue, not a callee resolution issue.
+
+---
+
+## Function Signature Display (Phase 3.5) - 2025-12-16
+
+### Overview
+
+Added function signature display to the viewer, completing Phase 3.5 from the original task list.
+
+### Changes Made
+
+**HTML Viewer (`reports/d2_report_viewer.html`):**
+
+1. **State Variable**: Added `showSignatures` boolean (default: false)
+
+2. **CSS Styles**:
+   - `.fn-signature`: Monospace font, dimmed text, ellipsis overflow
+   - `.fn-name-wrapper`: Flex column layout for name + signature
+
+3. **Toggle Button**: Added "Sig" toggle in toolbar after "Copy" button
+   - ID: `signaturesToggle`
+   - Handler: `toggleSignatures()`
+
+4. **Row Rendering** (both `updateFunctionsTableBody` and `renderFunctionsTable`):
+   - Tooltip now shows signature when available (hover any function name)
+   - When "Sig" toggle is active, signature displays as subtitle under function name
+
+### User Experience
+
+| Mode | Tooltip | Display |
+|------|---------|---------|
+| Default (Sig off) | Function name + signature | Name only |
+| Sig toggle on | Function name + signature | Name + signature subtitle |
+
+### Example
+
+With "Sig" toggle enabled:
+```
+┌──────────────────────────────────────┐
+│ GetUnitXPosition                     │
+│ int __fastcall GetUnitXPosition(...) │
+├──────────────────────────────────────┤
+│ 0x6FAB1234 │ 0x6FAB1290 │ ...       │
+└──────────────────────────────────────┘
+```
+
+---

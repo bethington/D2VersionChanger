@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-15T15:44:29.888678
+// Generated: 2025-12-16T18:31:58.018344
 // Functions for ddraw.dll
 // Versions: LoD/PD2
 
@@ -10,10 +10,10 @@ var FUNCTIONS_ddraw_dll = {
   "functions": {
     "ddraw_MNE_7b4de9f0cf35": {
       "addresses": {
-        "LoD/PD2": "0x7B5ED0E7"
+        "LoD/PD2": "0x7B5C1000"
       },
       "rvas": {
-        "LoD/PD2": "0x2D0E7"
+        "LoD/PD2": "0x1000"
       },
       "sizes": {
         "LoD/PD2": 6
@@ -29,11 +29,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "bda8d286b71555535226e825c45c66ac"
       },
       "display_name": "MNE_7b4de9f0cf357b11",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "ddraw_MNE_a5566d007465": {
@@ -57,11 +57,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "0a6f8cda9a63377ae1934ab984989540"
       },
       "display_name": "MNE_a5566d0074658ad7",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a5566d0074658ad7e97730e0ed5567de"
       }
     },
     "ddraw_MNE_74844d9c39e9": {
@@ -85,11 +85,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e472080c480df4b3c5dd4fff590c5665"
       },
       "display_name": "MNE_74844d9c39e9294a",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "74844d9c39e9294aea9dde6ebcadf1bc"
       }
     },
     "ddraw_MNE_38b2ec7ac939": {
@@ -113,11 +113,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "0d60dd32f9fd49b9e0703586a2e252ec"
       },
       "display_name": "MNE_38b2ec7ac939821f",
-      "basic_block_counts": {
-        "LoD/PD2": 68
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "38b2ec7ac939821fc5be051cf2393d4e"
       }
     },
     "ddraw_MNE_1ffb30b24f24": {
@@ -141,11 +141,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "4ded90ed38d365a119c84567f5359671"
       },
       "display_name": "MNE_1ffb30b24f249b1d",
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1ffb30b24f249b1dd594d3c77ecb68f8"
       }
     },
     "ddraw_MNE_c0f550e3f2c6": {
@@ -169,11 +169,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d81a84f5778c62cfda939365a659edc8"
       },
       "display_name": "MNE_c0f550e3f2c60d8b",
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0f550e3f2c60d8b8a11c9a6b29d9d72"
       }
     },
     "ddraw_MNE_b5bed07c0282": {
@@ -197,11 +197,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f360f1c39c39280130325a4512441e1c"
       },
       "display_name": "MNE_b5bed07c0282647d",
-      "basic_block_counts": {
-        "LoD/PD2": 76
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b5bed07c0282647d795730148aa1adad"
       }
     },
     "ddraw_MNE_a2ad7d13405a": {
@@ -225,14 +225,406 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "00514d5d63f3b053c7e5452d64182eb4"
       },
       "display_name": "MNE_a2ad7d13405a5d2a",
-      "basic_block_counts": {
-        "LoD/PD2": 66
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a2ad7d13405a5d2a1691444b117c0024"
       }
     },
     "ddraw_MNE_1d4608733ce1": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1CCC"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CCC"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "d62f1bd8d21c41774057962ccd97da2b"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1CD3": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1CD3"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CD3"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "550897f62db84febafc690ed9be308b9"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1CDA": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1CDA"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CDA"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "abec4371c2152b635b3189b56a707c2b"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1CE1": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1CE1"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CE1"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "f8421a7dbd59b21b925f6cb9def51744"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1CE8": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1CE8"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CE8"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "986cdac36fc265d0ffc471690cc40dc0"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1CEF": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1CEF"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CEF"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "ab0670bb4dc50aec44ef4adf29f7feea"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1CF6": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1CF6"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CF6"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "cad6d28e7bb2c5408db0a41e085c2259"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1CFD": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1CFD"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CFD"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "8394283be41efd3513a2e3e042a8ddbb"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1D04": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1D04"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1D04"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "3d9f9349478742632d4eb0865f84f06f"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1D0B": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1D0B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1D0B"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "d24283fc85b123bf7fa86eeb435a1b8f"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1D12": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1D12"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1D12"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "fa25f7eadf89770e1a2714c745355c48"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1D19": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1D19"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1D19"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "d9dd7121ecf0d4bb0e7b1141996a78ad"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1D20": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1D20"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1D20"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "1cff48332f716afb05fe6e7a3ff54a0a"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1D27": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C1D27"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1D27"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "method": "MNE",
+      "index": "MNE:1d4608733ce12904c260a0e8cc685742",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1d4608733ce12904c260a0e8cc685742",
+        "CFG": null,
+        "PRO": "e4de861fe04d880f33d2ad0a64abe09d"
+      },
+      "display_name": "MNE_1d4608733ce12904",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
+      }
+    },
+    "ddraw_ADDR_7B5C1D2E": {
       "addresses": {
         "LoD/PD2": "0x7B5C1D2E"
       },
@@ -250,14 +642,14 @@ var FUNCTIONS_ddraw_dll = {
         "API": null,
         "MNE": "1d4608733ce12904c260a0e8cc685742",
         "CFG": null,
-        "PRO": "d62f1bd8d21c41774057962ccd97da2b"
+        "PRO": "034891083469e71991ab186208a14524"
       },
       "display_name": "MNE_1d4608733ce12904",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d4608733ce12904c260a0e8cc685742"
       }
     },
     "ddraw_MNE_2ba432a383cd": {
@@ -281,11 +673,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "fb1cbc28340826363d96c0455fd4edb1"
       },
       "display_name": "MNE_2ba432a383cdbd0d",
-      "basic_block_counts": {
-        "LoD/PD2": 49
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2ba432a383cdbd0d7cf8d3e81edc59f7"
       }
     },
     "ddraw_MNE_7225cea43f67": {
@@ -309,19 +701,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3feb7375f512ebb8ea7a5f55e5582440"
       },
       "display_name": "MNE_7225cea43f679d9d",
-      "basic_block_counts": {
-        "LoD/PD2": 42
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7225cea43f679d9d0d7ac67af2b15199"
       }
     },
     "ddraw_MNE_ba2923fbc9de": {
       "addresses": {
-        "LoD/PD2": "0x7B5C3E60"
+        "LoD/PD2": "0x7B5C2220"
       },
       "rvas": {
-        "LoD/PD2": "0x3E60"
+        "LoD/PD2": "0x2220"
       },
       "sizes": {
         "LoD/PD2": 452
@@ -337,19 +729,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "7553caa024b795cfaac9d222d2b14091"
       },
       "display_name": "MNE_ba2923fbc9defec7",
-      "basic_block_counts": {
-        "LoD/PD2": 38
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ba2923fbc9defec7adb2fda0779e4f23"
       }
     },
     "ddraw_MNE_fcb914aea6b6": {
       "addresses": {
-        "LoD/PD2": "0x7B5C40A0"
+        "LoD/PD2": "0x7B5C23F0"
       },
       "rvas": {
-        "LoD/PD2": "0x40A0"
+        "LoD/PD2": "0x23F0"
       },
       "sizes": {
         "LoD/PD2": 43
@@ -365,19 +757,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "cb72bccd096493b6a0b194bc72234fdf"
       },
       "display_name": "MNE_fcb914aea6b6d1d5",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fcb914aea6b6d1d5507f3a8e145cb691"
       }
     },
     "ddraw_MNE_d3d73994a90c": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4060"
+        "LoD/PD2": "0x7B5C2420"
       },
       "rvas": {
-        "LoD/PD2": "0x4060"
+        "LoD/PD2": "0x2420"
       },
       "sizes": {
         "LoD/PD2": 50
@@ -393,11 +785,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f7ced4c6d840cedafd462a2863c1efd8"
       },
       "display_name": "MNE_d3d73994a90cca46",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d3d73994a90cca466bda3c1d9f72ad11"
       }
     },
     "ddraw_MNE_9149c8791dff": {
@@ -421,11 +813,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9224ac783dd1e1581c76524f02c7a5a0"
       },
       "display_name": "MNE_9149c8791dffe256",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9149c8791dffe256727f5ab8562ced5a"
       }
     },
     "ddraw_MNE_3309ca133ded": {
@@ -449,19 +841,47 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "bd1b5e01cce2f0a290ded7588c05db73"
       },
       "display_name": "MNE_3309ca133ded9cb0",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3309ca133ded9cb04bd9e3fee5674416"
+      }
+    },
+    "ddraw_ADDR_7B5C24E0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C24E0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x24E0"
+      },
+      "sizes": {
+        "LoD/PD2": 43
+      },
+      "method": "MNE",
+      "index": "MNE:fcb914aea6b6d1d5507f3a8e145cb691",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fcb914aea6b6d1d5507f3a8e145cb691",
+        "CFG": null,
+        "PRO": "cb72bccd096493b6a0b194bc72234fdf"
+      },
+      "display_name": "MNE_fcb914aea6b6d1d5",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fcb914aea6b6d1d5507f3a8e145cb691"
       }
     },
     "ddraw_MNE_b11dd3e23aa4": {
       "addresses": {
-        "LoD/PD2": "0x7B5C40D0"
+        "LoD/PD2": "0x7B5C2510"
       },
       "rvas": {
-        "LoD/PD2": "0x40D0"
+        "LoD/PD2": "0x2510"
       },
       "sizes": {
         "LoD/PD2": 33
@@ -477,19 +897,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "61c1c987863f76804fffdcfe0af3846e"
       },
       "display_name": "MNE_b11dd3e23aa4fbfa",
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b11dd3e23aa4fbfa4cbde2a4c9d894eb"
       }
     },
     "ddraw_MNE_09c23ad048fc": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4100"
+        "LoD/PD2": "0x7B5C2540"
       },
       "rvas": {
-        "LoD/PD2": "0x4100"
+        "LoD/PD2": "0x2540"
       },
       "sizes": {
         "LoD/PD2": 44
@@ -505,19 +925,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "535f160f31a09cce38dc852aad5ba159"
       },
       "display_name": "MNE_09c23ad048fc1a5e",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "09c23ad048fc1a5ebe906117843967fa"
       }
     },
     "ddraw_MNE_b70bbe8343e1": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4130"
+        "LoD/PD2": "0x7B5C2570"
       },
       "rvas": {
-        "LoD/PD2": "0x4130"
+        "LoD/PD2": "0x2570"
       },
       "sizes": {
         "LoD/PD2": 29
@@ -533,19 +953,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "97a1e9b37149bee641a40a977a725f01"
       },
       "display_name": "MNE_b70bbe8343e18444",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b70bbe8343e18444d3cdc7e2609d9643"
       }
     },
     "ddraw_MNE_f465f5a47287": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4150"
+        "LoD/PD2": "0x7B5C2590"
       },
       "rvas": {
-        "LoD/PD2": "0x4150"
+        "LoD/PD2": "0x2590"
       },
       "sizes": {
         "LoD/PD2": 49
@@ -561,19 +981,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2992ffc7ebc8ceb29d95f0b1544788a3"
       },
       "display_name": "MNE_f465f5a47287cf00",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f465f5a47287cf004ef562d1c2d802e8"
       }
     },
     "ddraw_MNE_e0beba3f9abb": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4210"
+        "LoD/PD2": "0x7B5C25D0"
       },
       "rvas": {
-        "LoD/PD2": "0x4210"
+        "LoD/PD2": "0x25D0"
       },
       "sizes": {
         "LoD/PD2": 50
@@ -589,19 +1009,75 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9a954ccf2ab9c268db4bc6b3383b9724"
       },
       "display_name": "MNE_e0beba3f9abb1760",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0beba3f9abb17605d5acc99b452bcb7"
+      }
+    },
+    "ddraw_ADDR_7B5C2610": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C2610"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2610"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "method": "MNE",
+      "index": "MNE:e0beba3f9abb17605d5acc99b452bcb7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e0beba3f9abb17605d5acc99b452bcb7",
+        "CFG": null,
+        "PRO": "34d3894835e32ca702c8d9709588053d"
+      },
+      "display_name": "MNE_e0beba3f9abb1760",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0beba3f9abb17605d5acc99b452bcb7"
+      }
+    },
+    "ddraw_ADDR_7B5C2650": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C2650"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2650"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "method": "MNE",
+      "index": "MNE:e0beba3f9abb17605d5acc99b452bcb7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e0beba3f9abb17605d5acc99b452bcb7",
+        "CFG": null,
+        "PRO": "f9a5beb34c1926f0f600049fbad9650c"
+      },
+      "display_name": "MNE_e0beba3f9abb1760",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0beba3f9abb17605d5acc99b452bcb7"
       }
     },
     "ddraw_MNE_679dce1c8b48": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4280"
+        "LoD/PD2": "0x7B5C2690"
       },
       "rvas": {
-        "LoD/PD2": "0x4280"
+        "LoD/PD2": "0x2690"
       },
       "sizes": {
         "LoD/PD2": 44
@@ -617,19 +1093,47 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "81cf5904352083f573b7d8c27442e747"
       },
       "display_name": "MNE_679dce1c8b488370",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "679dce1c8b4883707d80e02dce50586c"
+      }
+    },
+    "ddraw_ADDR_7B5C26C0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C26C0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x26C0"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "method": "MNE",
+      "index": "MNE:679dce1c8b4883707d80e02dce50586c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "679dce1c8b4883707d80e02dce50586c",
+        "CFG": "2c706c4d67a00273e8f44eca61bc7769",
+        "PRO": "81cf5904352083f573b7d8c27442e747"
+      },
+      "display_name": "MNE_679dce1c8b488370",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "679dce1c8b4883707d80e02dce50586c"
       }
     },
     "ddraw_MNE_970233515028": {
       "addresses": {
-        "LoD/PD2": "0x7B5C42B0"
+        "LoD/PD2": "0x7B5C26F0"
       },
       "rvas": {
-        "LoD/PD2": "0x42B0"
+        "LoD/PD2": "0x26F0"
       },
       "sizes": {
         "LoD/PD2": 98
@@ -645,19 +1149,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "de46a66f9490235634d7e851a69e0134"
       },
       "display_name": "MNE_9702335150284543",
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9702335150284543477a329c77dbdd1d"
       }
     },
     "ddraw_MNE_90b0901bf8d8": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4320"
+        "LoD/PD2": "0x7B5C2760"
       },
       "rvas": {
-        "LoD/PD2": "0x4320"
+        "LoD/PD2": "0x2760"
       },
       "sizes": {
         "LoD/PD2": 147
@@ -673,19 +1177,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "4304540ea844e47ee74e1c42dc422585"
       },
       "display_name": "MNE_90b0901bf8d88289",
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "90b0901bf8d882898e3889d3fe64cd42"
       }
     },
     "ddraw_MNE_e00a55a2fb28": {
       "addresses": {
-        "LoD/PD2": "0x7B5C43C0"
+        "LoD/PD2": "0x7B5C2800"
       },
       "rvas": {
-        "LoD/PD2": "0x43C0"
+        "LoD/PD2": "0x2800"
       },
       "sizes": {
         "LoD/PD2": 113
@@ -701,19 +1205,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "a1ff170d88cd9e33b1b39d3471b6c3d0"
       },
       "display_name": "MNE_e00a55a2fb28bcf0",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e00a55a2fb28bcf0c970a034d79f8295"
       }
     },
     "ddraw_MNE_eb2d5785a1ce": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4440"
+        "LoD/PD2": "0x7B5C2880"
       },
       "rvas": {
-        "LoD/PD2": "0x4440"
+        "LoD/PD2": "0x2880"
       },
       "sizes": {
         "LoD/PD2": 95
@@ -729,19 +1233,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "22077dc07b512e787f7315d064bc719c"
       },
       "display_name": "MNE_eb2d5785a1ce2d4f",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eb2d5785a1ce2d4f9de3879b0e15cf2f"
       }
     },
     "ddraw_MNE_c9208939963b": {
       "addresses": {
-        "LoD/PD2": "0x7B5C44A0"
+        "LoD/PD2": "0x7B5C28E0"
       },
       "rvas": {
-        "LoD/PD2": "0x44A0"
+        "LoD/PD2": "0x28E0"
       },
       "sizes": {
         "LoD/PD2": 116
@@ -757,19 +1261,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "508b0f5862a869614bbb4a1ecd7ba1a7"
       },
       "display_name": "MNE_c9208939963b9631",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c9208939963b9631d602646c44f517d1"
       }
     },
     "ddraw_MNE_b7e7fa576407": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4520"
+        "LoD/PD2": "0x7B5C2960"
       },
       "rvas": {
-        "LoD/PD2": "0x4520"
+        "LoD/PD2": "0x2960"
       },
       "sizes": {
         "LoD/PD2": 92
@@ -785,11 +1289,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9404d2063d94ae2c40ad82676fd183f4"
       },
       "display_name": "MNE_b7e7fa5764070b04",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b7e7fa5764070b04d2278605ef12813b"
       }
     },
     "ddraw_MNE_d64050d223da": {
@@ -813,11 +1317,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "4af5f9d179cd2efe766946a428c79a0a"
       },
       "display_name": "MNE_d64050d223da4ab9",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d64050d223da4ab9386f07264d994ea7"
       }
     },
     "ddraw_MNE_f56c4d269c5f": {
@@ -841,11 +1345,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d233d3048d59b93df93fd390654e0844"
       },
       "display_name": "MNE_f56c4d269c5f46ee",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f56c4d269c5f46eedb3bfd88db9a9d62"
       }
     },
     "ddraw_MNE_eda4f8eada2d": {
@@ -869,11 +1373,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d292837f4b4b3cc7e0ec1c222a801b27"
       },
       "display_name": "MNE_eda4f8eada2db53a",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eda4f8eada2db53a71d8048f3a40f1f5"
       }
     },
     "ddraw_MNE_555e5d30c50e": {
@@ -897,11 +1401,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "5fe265348f4acc7ca6c45e86440c8c6e"
       },
       "display_name": "MNE_555e5d30c50ed5e2",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "555e5d30c50ed5e2e61d8d46cadd4936"
       }
     },
     "ddraw_MNE_cbce39a13b4b": {
@@ -925,11 +1429,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "5948bdd37fd174e3ef8f732c6ed5ebd0"
       },
       "display_name": "MNE_cbce39a13b4bb51e",
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cbce39a13b4bb51e3925c37be180ff1d"
       }
     },
     "ddraw_MNE_cc9cc13a5a30": {
@@ -953,11 +1457,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "97d8b1d623784fcf7b66c817e8ba949d"
       },
       "display_name": "MNE_cc9cc13a5a30e782",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cc9cc13a5a30e782b5d15e4322271981"
       }
     },
     "ddraw_MNE_9e910afc2caf": {
@@ -981,11 +1485,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d5f0ea0f493dfaa79a96f7188a517229"
       },
       "display_name": "MNE_9e910afc2caffbf8",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9e910afc2caffbf8df249a23d345b514"
       }
     },
     "ddraw_MNE_268bd8b534aa": {
@@ -1009,11 +1513,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e95b29f9505985dc44c04a5c0a4c371d"
       },
       "display_name": "MNE_268bd8b534aa57c3",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "268bd8b534aa57c397b996e845be64f8"
       }
     },
     "ddraw_MNE_9487d439763a": {
@@ -1037,11 +1541,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "173d676776c247e8ae2edf36bbec65d5"
       },
       "display_name": "MNE_9487d439763a3d3e",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9487d439763a3d3ee6e2dc185a8098c9"
       }
     },
     "ddraw_MNE_259bdebd48ee": {
@@ -1065,11 +1569,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "6f5aeec7b296e1286128c4562bbf6533"
       },
       "display_name": "MNE_259bdebd48ee4178",
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "259bdebd48ee4178ed48bdf901015057"
       }
     },
     "ddraw_MNE_1f7bd8766828": {
@@ -1093,11 +1597,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "0b1a4a0a342bd6b6931c75c2150c22ce"
       },
       "display_name": "MNE_1f7bd8766828b811",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1f7bd8766828b8110644513b2e9ea3f2"
       }
     },
     "ddraw_MNE_773010549ab0": {
@@ -1121,11 +1625,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f63523faa73434c2299f812b7a045924"
       },
       "display_name": "MNE_773010549ab01414",
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "773010549ab014144d66ef0a838768c2"
       }
     },
     "ddraw_MNE_a11d5085dac2": {
@@ -1149,11 +1653,67 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "411529876d721e34ecd303673c3c4ed4"
       },
       "display_name": "MNE_a11d5085dac2b948",
-      "basic_block_counts": {
-        "LoD/PD2": 56
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a11d5085dac2b948e7c1fa61177749e2"
+      }
+    },
+    "ddraw_ADDR_7B5C3980": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3980"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3980"
+      },
+      "sizes": {
+        "LoD/PD2": 43
+      },
+      "method": "MNE",
+      "index": "MNE:fcb914aea6b6d1d5507f3a8e145cb691",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fcb914aea6b6d1d5507f3a8e145cb691",
+        "CFG": null,
+        "PRO": "cb72bccd096493b6a0b194bc72234fdf"
+      },
+      "display_name": "MNE_fcb914aea6b6d1d5",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fcb914aea6b6d1d5507f3a8e145cb691"
+      }
+    },
+    "ddraw_ADDR_7B5C39B0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C39B0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x39B0"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "method": "MNE",
+      "index": "MNE:d3d73994a90cca466bda3c1d9f72ad11",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d3d73994a90cca466bda3c1d9f72ad11",
+        "CFG": null,
+        "PRO": "f7ced4c6d840cedafd462a2863c1efd8"
+      },
+      "display_name": "MNE_d3d73994a90cca46",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d3d73994a90cca466bda3c1d9f72ad11"
       }
     },
     "ddraw_MNE_a7a9983086d4": {
@@ -1177,11 +1737,235 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "798ecfb4310399a2af2c11a7b752fdf6"
       },
       "display_name": "MNE_a7a9983086d45f79",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7a9983086d45f79e95947b6cdaff954"
+      }
+    },
+    "ddraw_ADDR_7B5C3A30": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3A30"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3A30"
+      },
+      "sizes": {
+        "LoD/PD2": 43
+      },
+      "method": "MNE",
+      "index": "MNE:fcb914aea6b6d1d5507f3a8e145cb691",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fcb914aea6b6d1d5507f3a8e145cb691",
+        "CFG": null,
+        "PRO": "cb72bccd096493b6a0b194bc72234fdf"
+      },
+      "display_name": "MNE_fcb914aea6b6d1d5",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fcb914aea6b6d1d5507f3a8e145cb691"
+      }
+    },
+    "ddraw_ADDR_7B5C3A60": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3A60"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3A60"
+      },
+      "sizes": {
+        "LoD/PD2": 33
+      },
+      "method": "MNE",
+      "index": "MNE:b11dd3e23aa4fbfa4cbde2a4c9d894eb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b11dd3e23aa4fbfa4cbde2a4c9d894eb",
+        "CFG": "5ac69ddc4dc620d0fa43b9c6ebcc7e34",
+        "PRO": "f497a1e857df4f5e07a34978eca5acee"
+      },
+      "display_name": "MNE_b11dd3e23aa4fbfa",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b11dd3e23aa4fbfa4cbde2a4c9d894eb"
+      }
+    },
+    "ddraw_ADDR_7B5C3A90": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3A90"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3A90"
+      },
+      "sizes": {
+        "LoD/PD2": 49
+      },
+      "method": "MNE",
+      "index": "MNE:f465f5a47287cf004ef562d1c2d802e8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f465f5a47287cf004ef562d1c2d802e8",
+        "CFG": null,
+        "PRO": "2992ffc7ebc8ceb29d95f0b1544788a3"
+      },
+      "display_name": "MNE_f465f5a47287cf00",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f465f5a47287cf004ef562d1c2d802e8"
+      }
+    },
+    "ddraw_ADDR_7B5C3AD0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3AD0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3AD0"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "method": "MNE",
+      "index": "MNE:e0beba3f9abb17605d5acc99b452bcb7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e0beba3f9abb17605d5acc99b452bcb7",
+        "CFG": null,
+        "PRO": "9a954ccf2ab9c268db4bc6b3383b9724"
+      },
+      "display_name": "MNE_e0beba3f9abb1760",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0beba3f9abb17605d5acc99b452bcb7"
+      }
+    },
+    "ddraw_ADDR_7B5C3B10": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3B10"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3B10"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "method": "MNE",
+      "index": "MNE:e0beba3f9abb17605d5acc99b452bcb7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e0beba3f9abb17605d5acc99b452bcb7",
+        "CFG": null,
+        "PRO": "34d3894835e32ca702c8d9709588053d"
+      },
+      "display_name": "MNE_e0beba3f9abb1760",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0beba3f9abb17605d5acc99b452bcb7"
+      }
+    },
+    "ddraw_ADDR_7B5C3B50": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3B50"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3B50"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "method": "MNE",
+      "index": "MNE:e0beba3f9abb17605d5acc99b452bcb7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e0beba3f9abb17605d5acc99b452bcb7",
+        "CFG": null,
+        "PRO": "f9a5beb34c1926f0f600049fbad9650c"
+      },
+      "display_name": "MNE_e0beba3f9abb1760",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0beba3f9abb17605d5acc99b452bcb7"
+      }
+    },
+    "ddraw_ADDR_7B5C3B90": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3B90"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3B90"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "method": "MNE",
+      "index": "MNE:679dce1c8b4883707d80e02dce50586c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "679dce1c8b4883707d80e02dce50586c",
+        "CFG": "2c706c4d67a00273e8f44eca61bc7769",
+        "PRO": "81cf5904352083f573b7d8c27442e747"
+      },
+      "display_name": "MNE_679dce1c8b488370",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "679dce1c8b4883707d80e02dce50586c"
+      }
+    },
+    "ddraw_ADDR_7B5C3BC0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3BC0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3BC0"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "method": "MNE",
+      "index": "MNE:679dce1c8b4883707d80e02dce50586c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "679dce1c8b4883707d80e02dce50586c",
+        "CFG": "2c706c4d67a00273e8f44eca61bc7769",
+        "PRO": "81cf5904352083f573b7d8c27442e747"
+      },
+      "display_name": "MNE_679dce1c8b488370",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "679dce1c8b4883707d80e02dce50586c"
       }
     },
     "ddraw_MNE_c741fe36a6d1": {
@@ -1205,11 +1989,39 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "0621ffefef331e0811963eea13f67182"
       },
       "display_name": "MNE_c741fe36a6d10d83",
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c741fe36a6d10d83df1e95cbe88c7193"
+      }
+    },
+    "ddraw_ADDR_7B5C3C60": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3C60"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3C60"
+      },
+      "sizes": {
+        "LoD/PD2": 147
+      },
+      "method": "MNE",
+      "index": "MNE:90b0901bf8d882898e3889d3fe64cd42",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "90b0901bf8d882898e3889d3fe64cd42",
+        "CFG": "d7905c8e8a8e6d05ceded444a342b415",
+        "PRO": "4304540ea844e47ee74e1c42dc422585"
+      },
+      "display_name": "MNE_90b0901bf8d88289",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "90b0901bf8d882898e3889d3fe64cd42"
       }
     },
     "ddraw_MNE_d7b39a69e2db": {
@@ -1233,11 +2045,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "78f2714eded906ef3cd168e7fb08312a"
       },
       "display_name": "MNE_d7b39a69e2db290f",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7b39a69e2db290fec2315db8dc224f3"
       }
     },
     "ddraw_MNE_1dc837c14a0e": {
@@ -1261,11 +2073,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e2c95501ca7b7041859296b2903cdbc3"
       },
       "display_name": "MNE_1dc837c14a0e9a23",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1dc837c14a0e9a23beba5736352970a7"
       }
     },
     "ddraw_MNE_78a3faba7a91": {
@@ -1289,11 +2101,571 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "897451cd87e7122226bce39972293572"
       },
       "display_name": "MNE_78a3faba7a910a48",
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "78a3faba7a910a482cac7deac7b88c23"
+      }
+    },
+    "ddraw_ADDR_7B5C3E00": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3E00"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3E00"
+      },
+      "sizes": {
+        "LoD/PD2": 92
+      },
+      "method": "MNE",
+      "index": "MNE:b7e7fa5764070b04d2278605ef12813b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b7e7fa5764070b04d2278605ef12813b",
+        "CFG": "aa3a3ede3514d62ebf52e3881c88dbaf",
+        "PRO": "9404d2063d94ae2c40ad82676fd183f4"
+      },
+      "display_name": "MNE_b7e7fa5764070b04",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b7e7fa5764070b04d2278605ef12813b"
+      }
+    },
+    "ddraw_ADDR_7B5C3E60": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C3E60"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3E60"
+      },
+      "sizes": {
+        "LoD/PD2": 452
+      },
+      "method": "MNE",
+      "index": "MNE:ba2923fbc9defec7adb2fda0779e4f23",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ba2923fbc9defec7adb2fda0779e4f23",
+        "CFG": "0dbfdbbcfdde84fde66f14eb258a785e",
+        "PRO": "7553caa024b795cfaac9d222d2b14091"
+      },
+      "display_name": "MNE_ba2923fbc9defec7",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ba2923fbc9defec7adb2fda0779e4f23"
+      }
+    },
+    "ddraw_ADDR_7B5C4030": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4030"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4030"
+      },
+      "sizes": {
+        "LoD/PD2": 43
+      },
+      "method": "MNE",
+      "index": "MNE:fcb914aea6b6d1d5507f3a8e145cb691",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fcb914aea6b6d1d5507f3a8e145cb691",
+        "CFG": null,
+        "PRO": "cb72bccd096493b6a0b194bc72234fdf"
+      },
+      "display_name": "MNE_fcb914aea6b6d1d5",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fcb914aea6b6d1d5507f3a8e145cb691"
+      }
+    },
+    "ddraw_ADDR_7B5C4060": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4060"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4060"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "method": "MNE",
+      "index": "MNE:d3d73994a90cca466bda3c1d9f72ad11",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d3d73994a90cca466bda3c1d9f72ad11",
+        "CFG": null,
+        "PRO": "f7ced4c6d840cedafd462a2863c1efd8"
+      },
+      "display_name": "MNE_d3d73994a90cca46",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d3d73994a90cca466bda3c1d9f72ad11"
+      }
+    },
+    "ddraw_ADDR_7B5C40A0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C40A0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x40A0"
+      },
+      "sizes": {
+        "LoD/PD2": 43
+      },
+      "method": "MNE",
+      "index": "MNE:fcb914aea6b6d1d5507f3a8e145cb691",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fcb914aea6b6d1d5507f3a8e145cb691",
+        "CFG": null,
+        "PRO": "cb72bccd096493b6a0b194bc72234fdf"
+      },
+      "display_name": "MNE_fcb914aea6b6d1d5",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fcb914aea6b6d1d5507f3a8e145cb691"
+      }
+    },
+    "ddraw_ADDR_7B5C40D0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C40D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x40D0"
+      },
+      "sizes": {
+        "LoD/PD2": 33
+      },
+      "method": "MNE",
+      "index": "MNE:b11dd3e23aa4fbfa4cbde2a4c9d894eb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b11dd3e23aa4fbfa4cbde2a4c9d894eb",
+        "CFG": "5ac69ddc4dc620d0fa43b9c6ebcc7e34",
+        "PRO": "1562c14811a448784e2cb4ddcb5addc3"
+      },
+      "display_name": "MNE_b11dd3e23aa4fbfa",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b11dd3e23aa4fbfa4cbde2a4c9d894eb"
+      }
+    },
+    "ddraw_ADDR_7B5C4100": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4100"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4100"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "method": "MNE",
+      "index": "MNE:09c23ad048fc1a5ebe906117843967fa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "09c23ad048fc1a5ebe906117843967fa",
+        "CFG": null,
+        "PRO": "b92312e744f59362fec2a98e14bf9e6e"
+      },
+      "display_name": "MNE_09c23ad048fc1a5e",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "09c23ad048fc1a5ebe906117843967fa"
+      }
+    },
+    "ddraw_ADDR_7B5C4130": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4130"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4130"
+      },
+      "sizes": {
+        "LoD/PD2": 29
+      },
+      "method": "MNE",
+      "index": "MNE:b70bbe8343e18444d3cdc7e2609d9643",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b70bbe8343e18444d3cdc7e2609d9643",
+        "CFG": null,
+        "PRO": "3bca9a47b601d7ee6bfe2ecfa1dbc4e5"
+      },
+      "display_name": "MNE_b70bbe8343e18444",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b70bbe8343e18444d3cdc7e2609d9643"
+      }
+    },
+    "ddraw_ADDR_7B5C4150": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4150"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4150"
+      },
+      "sizes": {
+        "LoD/PD2": 49
+      },
+      "method": "MNE",
+      "index": "MNE:f465f5a47287cf004ef562d1c2d802e8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f465f5a47287cf004ef562d1c2d802e8",
+        "CFG": null,
+        "PRO": "2992ffc7ebc8ceb29d95f0b1544788a3"
+      },
+      "display_name": "MNE_f465f5a47287cf00",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f465f5a47287cf004ef562d1c2d802e8"
+      }
+    },
+    "ddraw_ADDR_7B5C4190": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4190"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4190"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "method": "MNE",
+      "index": "MNE:e0beba3f9abb17605d5acc99b452bcb7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e0beba3f9abb17605d5acc99b452bcb7",
+        "CFG": null,
+        "PRO": "9a954ccf2ab9c268db4bc6b3383b9724"
+      },
+      "display_name": "MNE_e0beba3f9abb1760",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0beba3f9abb17605d5acc99b452bcb7"
+      }
+    },
+    "ddraw_ADDR_7B5C41D0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C41D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x41D0"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "method": "MNE",
+      "index": "MNE:e0beba3f9abb17605d5acc99b452bcb7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e0beba3f9abb17605d5acc99b452bcb7",
+        "CFG": null,
+        "PRO": "34d3894835e32ca702c8d9709588053d"
+      },
+      "display_name": "MNE_e0beba3f9abb1760",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0beba3f9abb17605d5acc99b452bcb7"
+      }
+    },
+    "ddraw_ADDR_7B5C4210": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4210"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4210"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "method": "MNE",
+      "index": "MNE:e0beba3f9abb17605d5acc99b452bcb7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e0beba3f9abb17605d5acc99b452bcb7",
+        "CFG": null,
+        "PRO": "f9a5beb34c1926f0f600049fbad9650c"
+      },
+      "display_name": "MNE_e0beba3f9abb1760",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0beba3f9abb17605d5acc99b452bcb7"
+      }
+    },
+    "ddraw_ADDR_7B5C4250": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4250"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4250"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "method": "MNE",
+      "index": "MNE:679dce1c8b4883707d80e02dce50586c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "679dce1c8b4883707d80e02dce50586c",
+        "CFG": "2c706c4d67a00273e8f44eca61bc7769",
+        "PRO": "81cf5904352083f573b7d8c27442e747"
+      },
+      "display_name": "MNE_679dce1c8b488370",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "679dce1c8b4883707d80e02dce50586c"
+      }
+    },
+    "ddraw_ADDR_7B5C4280": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4280"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4280"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "method": "MNE",
+      "index": "MNE:679dce1c8b4883707d80e02dce50586c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "679dce1c8b4883707d80e02dce50586c",
+        "CFG": "2c706c4d67a00273e8f44eca61bc7769",
+        "PRO": "81cf5904352083f573b7d8c27442e747"
+      },
+      "display_name": "MNE_679dce1c8b488370",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "679dce1c8b4883707d80e02dce50586c"
+      }
+    },
+    "ddraw_ADDR_7B5C42B0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C42B0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x42B0"
+      },
+      "sizes": {
+        "LoD/PD2": 98
+      },
+      "method": "MNE",
+      "index": "MNE:9702335150284543477a329c77dbdd1d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9702335150284543477a329c77dbdd1d",
+        "CFG": "d6d31e6e0f665948c8a9b52e7fc13ebf",
+        "PRO": "de46a66f9490235634d7e851a69e0134"
+      },
+      "display_name": "MNE_9702335150284543",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9702335150284543477a329c77dbdd1d"
+      }
+    },
+    "ddraw_ADDR_7B5C4320": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4320"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4320"
+      },
+      "sizes": {
+        "LoD/PD2": 147
+      },
+      "method": "MNE",
+      "index": "MNE:90b0901bf8d882898e3889d3fe64cd42",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "90b0901bf8d882898e3889d3fe64cd42",
+        "CFG": "d7905c8e8a8e6d05ceded444a342b415",
+        "PRO": "4304540ea844e47ee74e1c42dc422585"
+      },
+      "display_name": "MNE_90b0901bf8d88289",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "90b0901bf8d882898e3889d3fe64cd42"
+      }
+    },
+    "ddraw_ADDR_7B5C43C0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C43C0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x43C0"
+      },
+      "sizes": {
+        "LoD/PD2": 113
+      },
+      "method": "MNE",
+      "index": "MNE:e00a55a2fb28bcf0c970a034d79f8295",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e00a55a2fb28bcf0c970a034d79f8295",
+        "CFG": "7e4b617ec585cdd8c5041b538898078b",
+        "PRO": "a1ff170d88cd9e33b1b39d3471b6c3d0"
+      },
+      "display_name": "MNE_e00a55a2fb28bcf0",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e00a55a2fb28bcf0c970a034d79f8295"
+      }
+    },
+    "ddraw_ADDR_7B5C4440": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4440"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4440"
+      },
+      "sizes": {
+        "LoD/PD2": 95
+      },
+      "method": "MNE",
+      "index": "MNE:eb2d5785a1ce2d4f9de3879b0e15cf2f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "eb2d5785a1ce2d4f9de3879b0e15cf2f",
+        "CFG": "f32ff75bbad71cea45a22213e4f0c070",
+        "PRO": "22077dc07b512e787f7315d064bc719c"
+      },
+      "display_name": "MNE_eb2d5785a1ce2d4f",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eb2d5785a1ce2d4f9de3879b0e15cf2f"
+      }
+    },
+    "ddraw_ADDR_7B5C44A0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C44A0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x44A0"
+      },
+      "sizes": {
+        "LoD/PD2": 116
+      },
+      "method": "MNE",
+      "index": "MNE:c9208939963b9631d602646c44f517d1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c9208939963b9631d602646c44f517d1",
+        "CFG": "f12644095ff256f0fdbf06813a4cd671",
+        "PRO": "508b0f5862a869614bbb4a1ecd7ba1a7"
+      },
+      "display_name": "MNE_c9208939963b9631",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c9208939963b9631d602646c44f517d1"
+      }
+    },
+    "ddraw_ADDR_7B5C4520": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4520"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4520"
+      },
+      "sizes": {
+        "LoD/PD2": 92
+      },
+      "method": "MNE",
+      "index": "MNE:b7e7fa5764070b04d2278605ef12813b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b7e7fa5764070b04d2278605ef12813b",
+        "CFG": "aa3a3ede3514d62ebf52e3881c88dbaf",
+        "PRO": "9404d2063d94ae2c40ad82676fd183f4"
+      },
+      "display_name": "MNE_b7e7fa5764070b04",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b7e7fa5764070b04d2278605ef12813b"
       }
     },
     "ddraw_MNE_3a0cad84ee23": {
@@ -1317,11 +2689,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "20ba4e8f3f3a648ac0ba05b7effe1eb7"
       },
       "display_name": "MNE_3a0cad84ee230c2e",
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a0cad84ee230c2ea5a2088c38f9fb33"
       }
     },
     "ddraw_MNE_8c48e7753d18": {
@@ -1345,11 +2717,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "48e492455838510eefe8577b7bad6359"
       },
       "display_name": "MNE_8c48e7753d18d4ba",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8c48e7753d18d4ba9d91a6bb88585dcc"
       }
     },
     "ddraw_MNE_3d98817f17ec": {
@@ -1373,11 +2745,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "00c1fdea851c0e5008e0d14ee5db6ca5"
       },
       "display_name": "MNE_3d98817f17ec150d",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3d98817f17ec150db12700898bd12231"
       }
     },
     "ddraw_MNE_08f959d64ab4": {
@@ -1401,11 +2773,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3c66da8463fc874339e311300559fd77"
       },
       "display_name": "MNE_08f959d64ab43ab3",
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "08f959d64ab43ab3a401a86ddc4cb67b"
       }
     },
     "ddraw_MNE_aabff38e08df": {
@@ -1429,11 +2801,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "a5f8974d0b1032c07be674ed50ec6d39"
       },
       "display_name": "MNE_aabff38e08df2292",
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aabff38e08df22922ecbf11e7ee6592e"
       }
     },
     "ddraw_STR_cd4c43384a4c": {
@@ -1457,11 +2829,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "90140128b074b27ffbcc235d0861409f"
       },
       "display_name": "STR_cd4c43384a4cb42d",
-      "basic_block_counts": {
-        "LoD/PD2": 31
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2195d7ab4109b0d4a1329f10094e21ce"
       }
     },
     "ddraw_MNE_f1c4d50ece5e": {
@@ -1488,11 +2860,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "5f09d36ea3c84b9c5081898438129db4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f1c4d50ece5e0f18826aa17be44ead14"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1500,10 +2872,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_79096fc3842f": {
       "addresses": {
-        "LoD/PD2": "0x7B5C6900"
+        "LoD/PD2": "0x7B5C4B70"
       },
       "rvas": {
-        "LoD/PD2": "0x6900"
+        "LoD/PD2": "0x4B70"
       },
       "sizes": {
         "LoD/PD2": 64
@@ -1522,11 +2894,14 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c00675d81848e1dfbe5c607ffe90e6ab",
         "PRO": "9b891cee9e6fc20bcb5e5f100a7e720d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "79096fc3842f86944fdb6d8eccdaab3a"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
       }
     },
     "ddraw_MNE_b351c79906ed": {
@@ -1553,11 +2928,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "cc84a95c3f14d7a2ae47359cd81248bd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b351c79906ed3ea73711cd737b44c9c8"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -1565,10 +2940,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_3b6fc5e4e20d": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4C60"
+        "LoD/PD2": "0x7B5C4BD0"
       },
       "rvas": {
-        "LoD/PD2": "0x4C60"
+        "LoD/PD2": "0x4BD0"
       },
       "sizes": {
         "LoD/PD2": 33
@@ -1587,11 +2962,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "933c8d35515351e80b24e6fc18dff69c",
         "PRO": "070da355f47b7210fc7ee31f64f19f51"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3b6fc5e4e20d7c19061f8bf3ba05535a"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1599,10 +2974,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_ec7303ac3866": {
       "addresses": {
-        "LoD/PD2": "0x7B5C4C30"
+        "LoD/PD2": "0x7B5C4C00"
       },
       "rvas": {
-        "LoD/PD2": "0x4C30"
+        "LoD/PD2": "0x4C00"
       },
       "sizes": {
         "LoD/PD2": 35
@@ -1621,11 +2996,79 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d525801d8d00f8589c4fa0f08b524029",
         "PRO": "779e2c0c4e64751f81eaeed91aa71c46"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ec7303ac3866de5694fb7e2d8f222dd2"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5C4C30": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4C30"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4C30"
+      },
+      "sizes": {
+        "LoD/PD2": 35
+      },
+      "name": "DirectDrawEnumerateExW",
+      "signature": "undefined4 DirectDrawEnumerateExW(undefined * param_1, undefined4 param_2)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:ec7303ac3866de5694fb7e2d8f222dd2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ec7303ac3866de5694fb7e2d8f222dd2",
+        "CFG": "d525801d8d00f8589c4fa0f08b524029",
+        "PRO": "779e2c0c4e64751f81eaeed91aa71c46"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ec7303ac3866de5694fb7e2d8f222dd2"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5C4C60": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C4C60"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4C60"
+      },
+      "sizes": {
+        "LoD/PD2": 33
+      },
+      "name": "DirectDrawEnumerateW",
+      "signature": "undefined4 DirectDrawEnumerateW(undefined * param_1, undefined4 param_2)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3b6fc5e4e20d7c19061f8bf3ba05535a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3b6fc5e4e20d7c19061f8bf3ba05535a",
+        "CFG": "933c8d35515351e80b24e6fc18dff69c",
+        "PRO": "2b2f0776367cf69fe1178492bd1859c9"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3b6fc5e4e20d7c19061f8bf3ba05535a"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1652,11 +3095,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3aa05bba39d1397dcc3b2bf1bb69e531"
       },
       "display_name": "STR_a12e4b79983511b8",
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e7c5220fc9e5ccb5b1e24cbc2d881fa1"
       }
     },
     "ddraw_MNE_d740e61500d4": {
@@ -1680,19 +3123,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "6b62b594e957fcd2003b4818b677085a"
       },
       "display_name": "MNE_d740e61500d4f210",
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d740e61500d4f210fe6ad42e9fb61f08"
       }
     },
     "ddraw_MNE_d7897101f3cb": {
       "addresses": {
-        "LoD/PD2": "0x7B5C6F10"
+        "LoD/PD2": "0x7B5C5010"
       },
       "rvas": {
-        "LoD/PD2": "0x6F10"
+        "LoD/PD2": "0x5010"
       },
       "sizes": {
         "LoD/PD2": 8
@@ -1708,11 +3151,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "80df8bfb82d90505f4ecacfa8c67af0f"
       },
       "display_name": "MNE_d7897101f3cb99eb",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7897101f3cb99eb3b89274dfb087bc9"
       }
     },
     "ddraw_MNE_5e1b01de4ca9": {
@@ -1736,11 +3179,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f657efb30180f643e90ca85daaebf639"
       },
       "display_name": "MNE_5e1b01de4ca9342c",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5e1b01de4ca9342c1e7a6de70b05167e"
       }
     },
     "ddraw_MNE_1eb20be52899": {
@@ -1764,19 +3207,131 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "448568396127bdafa434521fd13a0f72"
       },
       "display_name": "MNE_1eb20be528990221",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1eb20be5289902216279ca9c034897ef"
+      }
+    },
+    "ddraw_ADDR_7B5C5070": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C5070"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5070"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": null,
+        "PRO": "78b2e4d2131cde9b53ce5d8603c2ee02"
+      },
+      "display_name": "MNE_d7897101f3cb99eb",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7897101f3cb99eb3b89274dfb087bc9"
+      }
+    },
+    "ddraw_ADDR_7B5C5080": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C5080"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5080"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": null,
+        "PRO": "923cc05e977556b6f245052f9dfe7966"
+      },
+      "display_name": "MNE_d7897101f3cb99eb",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7897101f3cb99eb3b89274dfb087bc9"
+      }
+    },
+    "ddraw_ADDR_7B5C5090": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C5090"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5090"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": null,
+        "PRO": "40fddc552b9ce0f4e9c2060cf1c00f83"
+      },
+      "display_name": "MNE_d7897101f3cb99eb",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7897101f3cb99eb3b89274dfb087bc9"
+      }
+    },
+    "ddraw_ADDR_7B5C50A0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C50A0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x50A0"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": null,
+        "PRO": "ad89168aaf16ef23499d56387ae816a5"
+      },
+      "display_name": "MNE_d7897101f3cb99eb",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7897101f3cb99eb3b89274dfb087bc9"
       }
     },
     "ddraw_MNE_f5b0d4999cef": {
       "addresses": {
-        "LoD/PD2": "0x7B5C6F20"
+        "LoD/PD2": "0x7B5C50B0"
       },
       "rvas": {
-        "LoD/PD2": "0x6F20"
+        "LoD/PD2": "0x50B0"
       },
       "sizes": {
         "LoD/PD2": 5
@@ -1792,11 +3347,39 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d10ed07cc8e38a005814481889c7966d"
       },
       "display_name": "MNE_f5b0d4999cef381b",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5b0d4999cef381bea9a054131983f79"
+      }
+    },
+    "ddraw_ADDR_7B5C50C0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C50C0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x50C0"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": null,
+        "PRO": "15debceb561f54f19251e1e3e363608d"
+      },
+      "display_name": "MNE_d7897101f3cb99eb",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7897101f3cb99eb3b89274dfb087bc9"
       }
     },
     "ddraw_MNE_efa4e27915de": {
@@ -1820,11 +3403,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f7872c74522c121b5863d1442f9df060"
       },
       "display_name": "MNE_efa4e27915de9c99",
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "efa4e27915de9c993595647f08cb2e95"
       }
     },
     "ddraw_API_99a105f9a2c4": {
@@ -1848,11 +3431,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "fd893000c8939f7520aec9bde6c59315"
       },
       "display_name": "API_99a105f9a2c46833",
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2ccc180a557af3d59644688964dbc011"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1885,11 +3468,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "b6810e0818b50bcad90c84619959e2f3"
       },
       "display_name": "MNE_3af96b5d0919f754",
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3af96b5d0919f75412758136e970eb82"
       }
     },
     "ddraw_MNE_67fa8270704f": {
@@ -1913,11 +3496,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "1c4fcf9da333d2be8e2556b53376c19d"
       },
       "display_name": "MNE_67fa8270704f4944",
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "67fa8270704f49445cbbefa70bfb53c7"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1946,11 +3529,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "394ff7908056eedf7a55db10838f2aee"
       },
       "display_name": "MNE_9e51522089179e12",
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9e51522089179e127cf2a4caaa59df9e"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1979,11 +3562,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "8b989444180e531324e0e5d0dab7b0de"
       },
       "display_name": "MNE_96ae5548ec742d88",
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "96ae5548ec742d88c9811c1e4f527a58"
       }
     },
     "ddraw_API_aa5628222cc7": {
@@ -2007,11 +3590,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "7ad536306fadcab2466d4ee6c846b5ef"
       },
       "display_name": "API_aa5628222cc723e6",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3b9e118cd36f3a35558177b70d1e666f"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2041,11 +3624,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d0251faed2a631bffd5888a0e3e26d14"
       },
       "display_name": "MNE_cb8cd775e18963db",
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cb8cd775e18963dbfd76ed65e5b7690f"
       }
     },
     "ddraw_MNE_24fad08b170f": {
@@ -2069,11 +3652,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "b326cf3e824c4422a389923695ba7cbb"
       },
       "display_name": "MNE_24fad08b170f1e28",
-      "basic_block_counts": {
-        "LoD/PD2": 36
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "24fad08b170f1e28868fd624b5ea79d3"
       }
     },
     "ddraw_STR_bd5d9647a0cc": {
@@ -2097,11 +3680,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "0df58ed233513df61cfaf8d10fa279c4"
       },
       "display_name": "STR_bd5d9647a0ccce4c",
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe4a416a2a83c7f3f9f42123e71843c6"
       }
     },
     "ddraw_MNE_02c14faacad5": {
@@ -2125,11 +3708,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "982d44f70694717b7c49f5a03d11f5af"
       },
       "display_name": "MNE_02c14faacad5a971",
-      "basic_block_counts": {
-        "LoD/PD2": 31
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "02c14faacad5a971c6c255654b9aa845"
       }
     },
     "ddraw_STR_086790d06153": {
@@ -2153,11 +3736,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "74873092223839b7abc3108e011bb0aa"
       },
       "display_name": "STR_086790d06153d92f",
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "224f4e0d1a915f1a1d7e2d9c225f1d32"
       }
     },
     "ddraw_MNE_a31b3fffa631": {
@@ -2181,11 +3764,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e091cc7ac4c92008c50d222c2ddf6396"
       },
       "display_name": "MNE_a31b3fffa63184f9",
-      "basic_block_counts": {
-        "LoD/PD2": 43
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a31b3fffa63184f997f1a8f31eafe7c8"
       }
     },
     "ddraw_MNE_f70f37f8cd19": {
@@ -2209,11 +3792,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "890fbf6c78e0a2c391a6472074bee1de"
       },
       "display_name": "MNE_f70f37f8cd19baf3",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f70f37f8cd19baf3e712efcb81812df7"
       }
     },
     "ddraw_MNE_a63b55eb1342": {
@@ -2237,16 +3820,72 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2974449d7fedb18aca6a53495c14ebfe"
       },
       "display_name": "MNE_a63b55eb13425768",
-      "basic_block_counts": {
-        "LoD/PD2": 26
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a63b55eb13425768ab9c9678f1a75144"
       },
       "api_calls": {
         "LoD/PD2": [
           "SetWindowLongA"
         ]
+      }
+    },
+    "ddraw_ADDR_7B5C68F0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C68F0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x68F0"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "method": "MNE",
+      "index": "MNE:f5b0d4999cef381bea9a054131983f79",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f5b0d4999cef381bea9a054131983f79",
+        "CFG": null,
+        "PRO": "3f680dad362b9cf80d0793b67a7434db"
+      },
+      "display_name": "MNE_f5b0d4999cef381b",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5b0d4999cef381bea9a054131983f79"
+      }
+    },
+    "ddraw_ADDR_7B5C6900": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C6900"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6900"
+      },
+      "sizes": {
+        "LoD/PD2": 64
+      },
+      "method": "MNE",
+      "index": "MNE:79096fc3842f86944fdb6d8eccdaab3a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "79096fc3842f86944fdb6d8eccdaab3a",
+        "CFG": "c00675d81848e1dfbe5c607ffe90e6ab",
+        "PRO": "4c3e07e321b4b91b457412d6b37a71f9"
+      },
+      "display_name": "MNE_79096fc3842f8694",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "79096fc3842f86944fdb6d8eccdaab3a"
       }
     },
     "ddraw_MNE_82ae5574f74e": {
@@ -2270,11 +3909,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2e1cc73501f01f34470c959015c07319"
       },
       "display_name": "MNE_82ae5574f74eddc2",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "82ae5574f74eddc26ba6ab33c4073d26"
       }
     },
     "ddraw_MNE_fada99009c56": {
@@ -2298,11 +3937,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e1e9ce439a5bd83dae5f067949381592"
       },
       "display_name": "MNE_fada99009c5683eb",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fada99009c5683eb5aa20ed71bf18d96"
       }
     },
     "ddraw_MNE_db4148118de3": {
@@ -2326,11 +3965,39 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "46e841951610d8fc6d645f45f5e45661"
       },
       "display_name": "MNE_db4148118de36b8f",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "db4148118de36b8fc4ea5b77c73fc33d"
+      }
+    },
+    "ddraw_ADDR_7B5C69D0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C69D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x69D0"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "method": "MNE",
+      "index": "MNE:f5b0d4999cef381bea9a054131983f79",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f5b0d4999cef381bea9a054131983f79",
+        "CFG": null,
+        "PRO": "b8ee61c67b4761712dd883345ad45d18"
+      },
+      "display_name": "MNE_f5b0d4999cef381b",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5b0d4999cef381bea9a054131983f79"
       }
     },
     "ddraw_MNE_c93819d377a3": {
@@ -2354,11 +4021,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c5ccc4bf2202a0226ec0c1ccf550f6c2"
       },
       "display_name": "MNE_c93819d377a3aba3",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c93819d377a3aba338d49a9270fdfcd8"
       }
     },
     "ddraw_MNE_67c0bf0bc508": {
@@ -2382,14 +4049,70 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "14acd3f84ba038dc0639d0d8edd4fa0b"
       },
       "display_name": "MNE_67c0bf0bc508de58",
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "67c0bf0bc508de5803141461540bd9d5"
+      }
+    },
+    "ddraw_ADDR_7B5C6B20": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C6B20"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6B20"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "method": "MNE",
+      "index": "MNE:f5b0d4999cef381bea9a054131983f79",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f5b0d4999cef381bea9a054131983f79",
+        "CFG": null,
+        "PRO": "86ffe9e76e720076fa0a9a543035b74c"
+      },
+      "display_name": "MNE_f5b0d4999cef381b",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5b0d4999cef381bea9a054131983f79"
       }
     },
     "ddraw_MNE_42454d4a7ca1": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C6B30"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6B30"
+      },
+      "sizes": {
+        "LoD/PD2": 18
+      },
+      "method": "MNE",
+      "index": "MNE:42454d4a7ca1f2e985a3571f661d18cf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "42454d4a7ca1f2e985a3571f661d18cf",
+        "CFG": null,
+        "PRO": "458fbf430530a2c07ea547000de9ce1f"
+      },
+      "display_name": "MNE_42454d4a7ca1f2e9",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "42454d4a7ca1f2e985a3571f661d18cf"
+      }
+    },
+    "ddraw_ADDR_7B5C6B50": {
       "addresses": {
         "LoD/PD2": "0x7B5C6B50"
       },
@@ -2407,14 +4130,14 @@ var FUNCTIONS_ddraw_dll = {
         "API": null,
         "MNE": "42454d4a7ca1f2e985a3571f661d18cf",
         "CFG": null,
-        "PRO": "458fbf430530a2c07ea547000de9ce1f"
+        "PRO": "05f5884a809cea219c835e07adda48cd"
       },
       "display_name": "MNE_42454d4a7ca1f2e9",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "42454d4a7ca1f2e985a3571f661d18cf"
       }
     },
     "ddraw_MNE_1c0fbfdfac34": {
@@ -2438,11 +4161,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "44a672eab0c58889217d4955f5ccf954"
       },
       "display_name": "MNE_1c0fbfdfac34389c",
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1c0fbfdfac34389c2c476204c2a15a28"
       }
     },
     "ddraw_STR_414d4ade1d93": {
@@ -2466,11 +4189,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3af5771152fa5e00357b7216a861ed5c"
       },
       "display_name": "STR_414d4ade1d933891",
-      "basic_block_counts": {
-        "LoD/PD2": 34
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "861a3ca32798d4e09cc2f0b36a0a0ae4"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2482,6 +4205,34 @@ var FUNCTIONS_ddraw_dll = {
       }
     },
     "ddraw_MNE_75ffcb6e8eea": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C6E80"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6E80"
+      },
+      "sizes": {
+        "LoD/PD2": 24
+      },
+      "method": "MNE",
+      "index": "MNE:75ffcb6e8eea2941e349203927d8ac1e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "75ffcb6e8eea2941e349203927d8ac1e",
+        "CFG": null,
+        "PRO": "e3886b4fc7833e522e8f1c6b3a17682f"
+      },
+      "display_name": "MNE_75ffcb6e8eea2941",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "75ffcb6e8eea2941e349203927d8ac1e"
+      }
+    },
+    "ddraw_ADDR_7B5C6EA0": {
       "addresses": {
         "LoD/PD2": "0x7B5C6EA0"
       },
@@ -2499,14 +4250,14 @@ var FUNCTIONS_ddraw_dll = {
         "API": null,
         "MNE": "75ffcb6e8eea2941e349203927d8ac1e",
         "CFG": null,
-        "PRO": "e3886b4fc7833e522e8f1c6b3a17682f"
+        "PRO": "d7ad4c3b24515eb3adbc1e27cca405d5"
       },
       "display_name": "MNE_75ffcb6e8eea2941",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "75ffcb6e8eea2941e349203927d8ac1e"
       }
     },
     "ddraw_MNE_acced0f419d9": {
@@ -2530,11 +4281,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "80981487481e160ef95b1eb757d1fb0f"
       },
       "display_name": "MNE_acced0f419d933c6",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "acced0f419d933c69fe541a66d38a73a"
       }
     },
     "ddraw_MNE_f5d34e27ebee": {
@@ -2558,11 +4309,123 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "b745bc4576b668fbee9bcf7972e2f68f"
       },
       "display_name": "MNE_f5d34e27ebee3f05",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5d34e27ebee3f05e0f555c94a7e30fc"
+      }
+    },
+    "ddraw_ADDR_7B5C6EF0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C6EF0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6EF0"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": null,
+        "PRO": "ae0155151872d44102556e9656362c94"
+      },
+      "display_name": "MNE_d7897101f3cb99eb",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7897101f3cb99eb3b89274dfb087bc9"
+      }
+    },
+    "ddraw_ADDR_7B5C6F00": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C6F00"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6F00"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": null,
+        "PRO": "99a672ecfea7f7e9854ae3ebc98756b3"
+      },
+      "display_name": "MNE_d7897101f3cb99eb",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7897101f3cb99eb3b89274dfb087bc9"
+      }
+    },
+    "ddraw_ADDR_7B5C6F10": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C6F10"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6F10"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": null,
+        "PRO": "da9ef058b91a56f4e3a99b8b4f114314"
+      },
+      "display_name": "MNE_d7897101f3cb99eb",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7897101f3cb99eb3b89274dfb087bc9"
+      }
+    },
+    "ddraw_ADDR_7B5C6F20": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C6F20"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6F20"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "method": "MNE",
+      "index": "MNE:f5b0d4999cef381bea9a054131983f79",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f5b0d4999cef381bea9a054131983f79",
+        "CFG": null,
+        "PRO": "e3e146b143490a11ae8db8f08ab90543"
+      },
+      "display_name": "MNE_f5b0d4999cef381b",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5b0d4999cef381bea9a054131983f79"
       }
     },
     "ddraw_MNE_056770988d5e": {
@@ -2586,11 +4449,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "8a0b20fc4b60140a17fe42808795833c"
       },
       "display_name": "MNE_056770988d5e56be",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "056770988d5e56be1886cfb46ecb4420"
       }
     },
     "ddraw_MNE_df420a32a956": {
@@ -2614,11 +4477,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "46c6fa46f8e3b90674e21c543fa1c79f"
       },
       "display_name": "MNE_df420a32a956663a",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "df420a32a956663a7f911d65ea4dbb02"
       }
     },
     "ddraw_MNE_8449f0c99d02": {
@@ -2642,11 +4505,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "8ea62ce618756429041c603a09365b22"
       },
       "display_name": "MNE_8449f0c99d022ef1",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8449f0c99d022ef19d53bdeb8a83f137"
       }
     },
     "ddraw_MNE_ebbb57d4bfa0": {
@@ -2670,11 +4533,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3a04205eb0f7fabd7e6397d90b4bbef9"
       },
       "display_name": "MNE_ebbb57d4bfa0e53b",
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ebbb57d4bfa0e53b54529dfbd68d4cb6"
       }
     },
     "ddraw_MNE_c0b196e46d96": {
@@ -2698,19 +4561,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "eef1df9f33fd6310c1daa2134976e3c7"
       },
       "display_name": "MNE_c0b196e46d96c088",
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0b196e46d96c088f76a2296012380c4"
       }
     },
     "ddraw_MNE_78bffc69f3c3": {
       "addresses": {
-        "LoD/PD2": "0x7B5C71F0"
+        "LoD/PD2": "0x7B5C7170"
       },
       "rvas": {
-        "LoD/PD2": "0x71F0"
+        "LoD/PD2": "0x7170"
       },
       "sizes": {
         "LoD/PD2": 20
@@ -2726,14 +4589,42 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "bd6abbcf8dad034bb3cf58a81c12a7a1"
       },
       "display_name": "MNE_78bffc69f3c360e5",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "78bffc69f3c360e540d6f951f60e1c66"
       }
     },
     "ddraw_MNE_bc5ea9528bd1": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C7190"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7190"
+      },
+      "sizes": {
+        "LoD/PD2": 33
+      },
+      "method": "MNE",
+      "index": "MNE:bc5ea9528bd1325f972cddb171b5f1aa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bc5ea9528bd1325f972cddb171b5f1aa",
+        "CFG": null,
+        "PRO": "fca88d3f9ebb25ca5fb76b285afac32d"
+      },
+      "display_name": "MNE_bc5ea9528bd1325f",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bc5ea9528bd1325f972cddb171b5f1aa"
+      }
+    },
+    "ddraw_ADDR_7B5C71C0": {
       "addresses": {
         "LoD/PD2": "0x7B5C71C0"
       },
@@ -2754,19 +4645,47 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "fca88d3f9ebb25ca5fb76b285afac32d"
       },
       "display_name": "MNE_bc5ea9528bd1325f",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bc5ea9528bd1325f972cddb171b5f1aa"
+      }
+    },
+    "ddraw_ADDR_7B5C71F0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C71F0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x71F0"
+      },
+      "sizes": {
+        "LoD/PD2": 20
+      },
+      "method": "MNE",
+      "index": "MNE:78bffc69f3c360e540d6f951f60e1c66",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "78bffc69f3c360e540d6f951f60e1c66",
+        "CFG": null,
+        "PRO": "41fdfcbff3e764da226384a1c8d58762"
+      },
+      "display_name": "MNE_78bffc69f3c360e5",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "78bffc69f3c360e540d6f951f60e1c66"
       }
     },
     "ddraw_MNE_ab297ba4e6f0": {
       "addresses": {
-        "LoD/PD2": "0x7B5C74B0"
+        "LoD/PD2": "0x7B5C7210"
       },
       "rvas": {
-        "LoD/PD2": "0x74B0"
+        "LoD/PD2": "0x7210"
       },
       "sizes": {
         "LoD/PD2": 18
@@ -2782,11 +4701,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "aa5bf285125a2003c16040ad75eb7192"
       },
       "display_name": "MNE_ab297ba4e6f04d6b",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ab297ba4e6f04d6bfb473a4b16d42d0d"
       }
     },
     "ddraw_MNE_a7548cd17e02": {
@@ -2810,11 +4729,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "640bd06d3fb358eb5ac1b7bf778bfcf5"
       },
       "display_name": "MNE_a7548cd17e02b6f8",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7548cd17e02b6f84d94682b7fcc102a"
       }
     },
     "ddraw_MNE_60ddcbf996e7": {
@@ -2838,11 +4757,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9edc1b316b643792976224ec6cddd428"
       },
       "display_name": "MNE_60ddcbf996e7aac0",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "60ddcbf996e7aac0258aaf663b08aab0"
       }
     },
     "ddraw_MNE_c9bd6bf4ff98": {
@@ -2866,11 +4785,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c714baa60d1c2fe386f27a00c71e216f"
       },
       "display_name": "MNE_c9bd6bf4ff9827e5",
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c9bd6bf4ff9827e5dfe4570cc6508e23"
       }
     },
     "ddraw_MNE_c06cb1c42813": {
@@ -2894,19 +4813,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3668cda800102e74b3b34b691941267e"
       },
       "display_name": "MNE_c06cb1c4281316d2",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c06cb1c4281316d245b99a6dc997b95e"
       }
     },
     "ddraw_MNE_893d6a9d686e": {
       "addresses": {
-        "LoD/PD2": "0x7B5C74D0"
+        "LoD/PD2": "0x7B5C7380"
       },
       "rvas": {
-        "LoD/PD2": "0x74D0"
+        "LoD/PD2": "0x7380"
       },
       "sizes": {
         "LoD/PD2": 30
@@ -2922,11 +4841,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2fc64105975fd9c651a7a63c7fb82b68"
       },
       "display_name": "MNE_893d6a9d686e2613",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "893d6a9d686e2613a20b9dbad74c4a93"
       }
     },
     "ddraw_MNE_1873278b272d": {
@@ -2950,11 +4869,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3146b68180c1f2fe1c20036eb11a3019"
       },
       "display_name": "MNE_1873278b272de71e",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1873278b272de71ed8f8fef95a8b83fc"
       }
     },
     "ddraw_MNE_b0fef6973090": {
@@ -2978,11 +4897,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9c191496823826a32ebcfca895a6cd41"
       },
       "display_name": "MNE_b0fef6973090714b",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b0fef6973090714bc055e76c3d0910a8"
       }
     },
     "ddraw_MNE_38526742c724": {
@@ -3006,11 +4925,67 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e7376abe4dbc3bfd2540b990209dafec"
       },
       "display_name": "MNE_38526742c724aede",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "38526742c724aedeaf10e2f8bed22ca7"
+      }
+    },
+    "ddraw_ADDR_7B5C74B0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C74B0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x74B0"
+      },
+      "sizes": {
+        "LoD/PD2": 18
+      },
+      "method": "MNE",
+      "index": "MNE:ab297ba4e6f04d6bfb473a4b16d42d0d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ab297ba4e6f04d6bfb473a4b16d42d0d",
+        "CFG": null,
+        "PRO": "2685704accdf75ee07310a44245263d2"
+      },
+      "display_name": "MNE_ab297ba4e6f04d6b",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ab297ba4e6f04d6bfb473a4b16d42d0d"
+      }
+    },
+    "ddraw_ADDR_7B5C74D0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5C74D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x74D0"
+      },
+      "sizes": {
+        "LoD/PD2": 30
+      },
+      "method": "MNE",
+      "index": "MNE:893d6a9d686e2613a20b9dbad74c4a93",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "893d6a9d686e2613a20b9dbad74c4a93",
+        "CFG": "1abbbed88598ab76171d956e8b753f75",
+        "PRO": "98ddca4745ca93c64173cd2777a4077e"
+      },
+      "display_name": "MNE_893d6a9d686e2613",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "893d6a9d686e2613a20b9dbad74c4a93"
       }
     },
     "ddraw_MNE_01468f999bee": {
@@ -3034,11 +5009,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c519094aff40cacecbce859bfef3da8c"
       },
       "display_name": "MNE_01468f999beeb641",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "01468f999beeb64114c0742788baa983"
       }
     },
     "ddraw_MNE_59d05ecc9261": {
@@ -3062,11 +5037,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "ca7f8dc8ca2fdebc436537489e176f9a"
       },
       "display_name": "MNE_59d05ecc92612224",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "59d05ecc926122240be291d935542c95"
       }
     },
     "ddraw_MNE_a3090048326e": {
@@ -3090,11 +5065,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "a39e0b502023a27d65b90df7c646a4ab"
       },
       "display_name": "MNE_a3090048326e49d1",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a3090048326e49d1e69f3ba23596c6fd"
       }
     },
     "ddraw_MNE_a67b402e6f0e": {
@@ -3118,11 +5093,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "76ddc1a09b0e94ae45175ced875cd4ca"
       },
       "display_name": "MNE_a67b402e6f0ea63a",
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a67b402e6f0ea63ab7796adfd3b8ee5c"
       }
     },
     "ddraw_MNE_aff4a6437260": {
@@ -3146,11 +5121,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "cf9b61bf3d9436b2ba0e404bf0f24dca"
       },
       "display_name": "MNE_aff4a64372608c77",
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aff4a64372608c777cde1f47a7c2f264"
       }
     },
     "ddraw_MNE_5e4e79583af8": {
@@ -3174,11 +5149,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c62443391b033eed927c962575e0e44d"
       },
       "display_name": "MNE_5e4e79583af8f095",
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5e4e79583af8f0954441a19e780da6c2"
       }
     },
     "ddraw_MNE_9e11a64f7d33": {
@@ -3202,11 +5177,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "44b300b374ed3b049d0bde16c8aa5e91"
       },
       "display_name": "MNE_9e11a64f7d338c80",
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9e11a64f7d338c803f6b278d3d8d91ab"
       }
     },
     "ddraw_MNE_6a51cc39dfff": {
@@ -3230,11 +5205,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f5615640071177180ee3845e0d30c274"
       },
       "display_name": "MNE_6a51cc39dfff1ae7",
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6a51cc39dfff1ae7c87f5df239e33a3d"
       }
     },
     "ddraw_MNE_aad3d24ce100": {
@@ -3258,11 +5233,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "8375a6145764f3fdeb766a96e92521db"
       },
       "display_name": "MNE_aad3d24ce10048d3",
-      "basic_block_counts": {
-        "LoD/PD2": 63
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aad3d24ce10048d33f9260c9bea1ed07"
       }
     },
     "ddraw_MNE_5473c3a51bf5": {
@@ -3286,11 +5261,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "1c6bcad8c951db2110f4694d9e7fec14"
       },
       "display_name": "MNE_5473c3a51bf5e647",
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5473c3a51bf5e647a320f4d8da867ee0"
       }
     },
     "ddraw_MNE_d84860324571": {
@@ -3314,11 +5289,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "32d4d83c1eda67e6b4e0ce9c6c0d47b9"
       },
       "display_name": "MNE_d84860324571d639",
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d84860324571d639235abd2757015438"
       }
     },
     "ddraw_MNE_04c38624e070": {
@@ -3342,11 +5317,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9f0d1e933b3f8d4f4a46a97b15746157"
       },
       "display_name": "MNE_04c38624e070f1e2",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "04c38624e070f1e22c938b267bb841ce"
       }
     },
     "ddraw_MNE_150795b382fd": {
@@ -3370,11 +5345,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c7f8a3ae06af69ad795a4025533add19"
       },
       "display_name": "MNE_150795b382fd3677",
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "150795b382fd36774ffa1169fd656344"
       }
     },
     "ddraw_MNE_38b598f5dce5": {
@@ -3398,11 +5373,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "cbd27348da60e072b358deaa4c69e813"
       },
       "display_name": "MNE_38b598f5dce51bb6",
-      "basic_block_counts": {
-        "LoD/PD2": 45
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "38b598f5dce51bb617cdaa35d4cf88c7"
       }
     },
     "ddraw_MNE_b9a9dfd07c31": {
@@ -3426,11 +5401,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f2014230d9a9978ce9319daf6745c922"
       },
       "display_name": "MNE_b9a9dfd07c31f74d",
-      "basic_block_counts": {
-        "LoD/PD2": 113
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b9a9dfd07c31f74dbcc7ce1101fa79ec"
       }
     },
     "ddraw_MNE_b83d2e24db6e": {
@@ -3454,11 +5429,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3354ed4a7723eb8be95a5b710bfd257c"
       },
       "display_name": "MNE_b83d2e24db6ea80f",
-      "basic_block_counts": {
-        "LoD/PD2": 58
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b83d2e24db6ea80fdb9e688dd9aa7f79"
       }
     },
     "ddraw_MNE_19c5318a7f69": {
@@ -3482,11 +5457,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "0f01bf663d62bc612ad47abaa3e6c144"
       },
       "display_name": "MNE_19c5318a7f694f54",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "19c5318a7f694f5486c74cd7024b9da7"
       }
     },
     "ddraw_MNE_e2aa89d470d3": {
@@ -3510,11 +5485,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "ee0470d279f402bbdad85b444b93dcc8"
       },
       "display_name": "MNE_e2aa89d470d37c69",
-      "basic_block_counts": {
-        "LoD/PD2": 291
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e2aa89d470d37c6909ee1e8ad5adea2f"
       }
     },
     "ddraw_MNE_222dae46275d": {
@@ -3538,11 +5513,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "a93fbe79efcf555a87a2c9f801028d58"
       },
       "display_name": "MNE_222dae46275ddd2f",
-      "basic_block_counts": {
-        "LoD/PD2": 37
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "222dae46275ddd2fbb975ab14e6476c1"
       }
     },
     "ddraw_MNE_ea06b1c34898": {
@@ -3566,11 +5541,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "8711cb2ad100645e7f89a7d5b175931f"
       },
       "display_name": "MNE_ea06b1c3489823af",
-      "basic_block_counts": {
-        "LoD/PD2": 38
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ea06b1c3489823af28f76a00679e669f"
       }
     },
     "ddraw_MNE_a5dd93137a14": {
@@ -3594,11 +5569,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "b88c74f70d6e8b56c856988aa76c9088"
       },
       "display_name": "MNE_a5dd93137a148f19",
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a5dd93137a148f1928bc6db9ee1e3914"
       }
     },
     "ddraw_MNE_0626e75e53b0": {
@@ -3622,11 +5597,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "32bf55da45fc4f958792bfe1a6eaa49e"
       },
       "display_name": "MNE_0626e75e53b0de8e",
-      "basic_block_counts": {
-        "LoD/PD2": 39
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0626e75e53b0de8ea0decc3af44cf0de"
       }
     },
     "ddraw_MNE_545bf6b18af0": {
@@ -3650,11 +5625,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f70c43a311a115e739b7d271bf418337"
       },
       "display_name": "MNE_545bf6b18af09459",
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "545bf6b18af094596320bf811a63ddac"
       }
     },
     "ddraw_MNE_723ea2b4961d": {
@@ -3678,11 +5653,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "da5dbdb85db0862821d2f1295fbeb007"
       },
       "display_name": "MNE_723ea2b4961dcf70",
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "723ea2b4961dcf70defefd6f37ab679d"
       }
     },
     "ddraw_MNE_c5786338a7e9": {
@@ -3706,11 +5681,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "7cf5e60afaa38729471323f0e6be564a"
       },
       "display_name": "MNE_c5786338a7e9f89a",
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c5786338a7e9f89a13d547c7f73399d4"
       }
     },
     "ddraw_MNE_f7cd332dcb73": {
@@ -3734,11 +5709,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "857a2a88653f80493e57d6594776a990"
       },
       "display_name": "MNE_f7cd332dcb73965b",
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f7cd332dcb73965b10220cad936753e6"
       }
     },
     "ddraw_MNE_bdb11fb043c5": {
@@ -3762,11 +5737,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2ba1baa3b2a091d446dc2067f99bd602"
       },
       "display_name": "MNE_bdb11fb043c588a5",
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bdb11fb043c588a5fb3b86024ffdfdcb"
       }
     },
     "ddraw_MNE_70707f5e246f": {
@@ -3790,11 +5765,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "17e99f00c245459f36bd1862c1724eb3"
       },
       "display_name": "MNE_70707f5e246f16a3",
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "70707f5e246f16a3a3485e648826def8"
       }
     },
     "ddraw_MNE_6c0352eb439c": {
@@ -3818,11 +5793,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "ea2cfe96c773828dabfd3ff67143c078"
       },
       "display_name": "MNE_6c0352eb439c6a36",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6c0352eb439c6a36b1579fd9e39dd304"
       }
     },
     "ddraw_MNE_f55f04372c86": {
@@ -3846,11 +5821,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "8449762435d196d08877b24cb7865dee"
       },
       "display_name": "MNE_f55f04372c8678a1",
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f55f04372c8678a1a5ba6f6dd49b56f8"
       }
     },
     "ddraw_MNE_f2c13018f7a2": {
@@ -3874,11 +5849,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "999aa787d946242f0b88cc6082cb91b5"
       },
       "display_name": "MNE_f2c13018f7a29497",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f2c13018f7a2949730fff50807998a3a"
       }
     },
     "ddraw_MNE_4f371b6725b8": {
@@ -3902,11 +5877,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "a5f879b9f7da560e4d528eb7e91a0c47"
       },
       "display_name": "MNE_4f371b6725b82a45",
-      "basic_block_counts": {
-        "LoD/PD2": 38
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f371b6725b82a45c6ebe22fc6554240"
       }
     },
     "ddraw_MNE_3a7edb5f59ea": {
@@ -3930,11 +5905,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "647c0412f3a7c6a21dbafc22fd41a03a"
       },
       "display_name": "MNE_3a7edb5f59ea59df",
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a7edb5f59ea59df2f5b7b4beebe2935"
       }
     },
     "ddraw_MNE_52dd1bc053b1": {
@@ -3958,11 +5933,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "565317ae79a33fef40d461c7af1474d5"
       },
       "display_name": "MNE_52dd1bc053b16a48",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "52dd1bc053b16a4837b0cd0cf89ae0d3"
       }
     },
     "ddraw_MNE_fa075c11e51a": {
@@ -3986,11 +5961,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "471d8c8f276cac4dbc9c71f288092434"
       },
       "display_name": "MNE_fa075c11e51ab758",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fa075c11e51ab7588d10261924d169c0"
       }
     },
     "ddraw_MNE_8bc8f00e004b": {
@@ -4014,11 +5989,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f4dccf0f2c2860e44932cc1cd6bc29bf"
       },
       "display_name": "MNE_8bc8f00e004bf83f",
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8bc8f00e004bf83ff5d941ce5081ed0f"
       }
     },
     "ddraw_MNE_74301b08e5db": {
@@ -4042,11 +6017,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "eb69279b198735a12315e59cc69c1625"
       },
       "display_name": "MNE_74301b08e5db3fe9",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "74301b08e5db3fe9439dc5977d9f5476"
       }
     },
     "ddraw_MNE_81392806fa28": {
@@ -4070,11 +6045,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9d1535ec418a59985c38e0b97fa79b39"
       },
       "display_name": "MNE_81392806fa283eb0",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "81392806fa283eb0daa61fa6d985a86b"
       }
     },
     "ddraw_MNE_cb01db3116b3": {
@@ -4098,11 +6073,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "b69dcba984022d1f1443460dea9cca1e"
       },
       "display_name": "MNE_cb01db3116b38db5",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cb01db3116b38db599fa15da18c03d9e"
       }
     },
     "ddraw_MNE_22752ae21c4d": {
@@ -4126,11 +6101,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "22a809186eaa0bd1aea28632c9035126"
       },
       "display_name": "MNE_22752ae21c4d366e",
-      "basic_block_counts": {
-        "LoD/PD2": 36
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "22752ae21c4d366ed1a0607864dd4b96"
       }
     },
     "ddraw_MNE_90c5a45c97a5": {
@@ -4154,11 +6129,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "90dc2cdf3cd57254485edb6e0926cdd2"
       },
       "display_name": "MNE_90c5a45c97a56ca4",
-      "basic_block_counts": {
-        "LoD/PD2": 46
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "90c5a45c97a56ca4abfddb866a8879ff"
       }
     },
     "ddraw_MNE_1f4a918d65ca": {
@@ -4182,11 +6157,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "72e4b44137160a411b33e6bfeb4df2d6"
       },
       "display_name": "MNE_1f4a918d65ca30b4",
-      "basic_block_counts": {
-        "LoD/PD2": 107
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1f4a918d65ca30b498eae1b43eba8594"
       }
     },
     "ddraw_MNE_b84576c7a94a": {
@@ -4210,11 +6185,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "bff23c55280224c62f7b2a5e49392c24"
       },
       "display_name": "MNE_b84576c7a94a055f",
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b84576c7a94a055fa309d05917bda0cb"
       }
     },
     "ddraw_MNE_230bf8414eb9": {
@@ -4238,11 +6213,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9293b57e8720cc7fcf884d2b97cb5581"
       },
       "display_name": "MNE_230bf8414eb9b731",
-      "basic_block_counts": {
-        "LoD/PD2": 49
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "230bf8414eb9b73199d09aa0f5957e74"
       }
     },
     "ddraw_MNE_d4e9e22fa8a7": {
@@ -4266,11 +6241,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "dc78b1d9152d2e4fc7a3a1188e8f7fa1"
       },
       "display_name": "MNE_d4e9e22fa8a78779",
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4e9e22fa8a787796117c6ee39344ed1"
       }
     },
     "ddraw_MNE_9a256df880e0": {
@@ -4294,11 +6269,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "8d5b7a318a2583bfb383051158a6a48d"
       },
       "display_name": "MNE_9a256df880e0a5f6",
-      "basic_block_counts": {
-        "LoD/PD2": 139
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9a256df880e0a5f628e2d07e456cfb4b"
       }
     },
     "ddraw_MNE_9cb8d84ebe64": {
@@ -4322,11 +6297,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9b39f0747d189f6792f52a118a278252"
       },
       "display_name": "MNE_9cb8d84ebe64c055",
-      "basic_block_counts": {
-        "LoD/PD2": 35
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9cb8d84ebe64c0559cc06b6c843b7021"
       }
     },
     "ddraw_MNE_36164f30ba1c": {
@@ -4350,11 +6325,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "31eb42f55435f7a6e2b852a376d52f66"
       },
       "display_name": "MNE_36164f30ba1c9ae1",
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "36164f30ba1c9ae1ec9d18873a081bbc"
       }
     },
     "ddraw_MNE_5be7943d676d": {
@@ -4378,11 +6353,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "8ffc78ae5afe754f487e8d2568b873f3"
       },
       "display_name": "MNE_5be7943d676df323",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5be7943d676df323000003681a0c4df7"
       }
     },
     "ddraw_MNE_91a54e8b150c": {
@@ -4406,11 +6381,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d26904320acfa20ec8fb537913792766"
       },
       "display_name": "MNE_91a54e8b150c6b23",
-      "basic_block_counts": {
-        "LoD/PD2": 57
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "91a54e8b150c6b236ce344c290edb379"
       }
     },
     "ddraw_MNE_a8685061fe36": {
@@ -4434,11 +6409,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "879bdc1ba5e4d0f275ab2d695497eb5d"
       },
       "display_name": "MNE_a8685061fe362396",
-      "basic_block_counts": {
-        "LoD/PD2": 46
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a8685061fe36239620e0faacdd297706"
       }
     },
     "ddraw_MNE_c9c13d443b4d": {
@@ -4462,11 +6437,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "8dbbdd0ec44abb4ba95b77a38580728d"
       },
       "display_name": "MNE_c9c13d443b4d0483",
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c9c13d443b4d048369c88ac9609f8a56"
       }
     },
     "ddraw_MNE_cd58d1f25652": {
@@ -4490,11 +6465,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "10ef947c2a40fed024f0d846b8e07ff8"
       },
       "display_name": "MNE_cd58d1f25652ed44",
-      "basic_block_counts": {
-        "LoD/PD2": 62
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd58d1f25652ed44a3afa62d5a9ad12c"
       }
     },
     "ddraw_MNE_70d9fd724fd7": {
@@ -4518,11 +6493,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f663ec050cef1dcc726cd055ab20586b"
       },
       "display_name": "MNE_70d9fd724fd7bb65",
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "70d9fd724fd7bb653897413f826e5e0a"
       }
     },
     "ddraw_MNE_161cbb0eeafd": {
@@ -4546,11 +6521,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "fc51e1e298dd47bd0fd8b157b8eabb25"
       },
       "display_name": "MNE_161cbb0eeafde24e",
-      "basic_block_counts": {
-        "LoD/PD2": 50
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "161cbb0eeafde24ed5f9660dc530dd4f"
       }
     },
     "ddraw_MNE_ac8216a2581f": {
@@ -4574,11 +6549,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e839b9b1947619d9b06ac865e5cdce01"
       },
       "display_name": "MNE_ac8216a2581ffc69",
-      "basic_block_counts": {
-        "LoD/PD2": 103
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ac8216a2581ffc696d9230d5bead464d"
       }
     },
     "ddraw_MNE_b3e62523f305": {
@@ -4602,11 +6577,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "bf6bbaf381e5a9e53f55b90fe0ee305c"
       },
       "display_name": "MNE_b3e62523f3052fa7",
-      "basic_block_counts": {
-        "LoD/PD2": 48
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b3e62523f3052fa7f3ef89d4e1467901"
       }
     },
     "ddraw_MNE_4c57f465a5b1": {
@@ -4630,11 +6605,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3c0cdd5d9f6f62c31818d3829125f182"
       },
       "display_name": "MNE_4c57f465a5b12438",
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4c57f465a5b1243862f306440b1a6e05"
       }
     },
     "ddraw_MNE_a0abe8e9c4ee": {
@@ -4658,11 +6633,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "22d1e5592ee0ada19de90cc099ac9287"
       },
       "display_name": "MNE_a0abe8e9c4ee9140",
-      "basic_block_counts": {
-        "LoD/PD2": 53
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a0abe8e9c4ee91401292e8446eb0195c"
       }
     },
     "ddraw_MNE_a53881794b0d": {
@@ -4686,11 +6661,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "475ffa80b85d2da74003c9252ff28855"
       },
       "display_name": "MNE_a53881794b0d0262",
-      "basic_block_counts": {
-        "LoD/PD2": 48
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a53881794b0d026223256c0c030ad114"
       }
     },
     "ddraw_MNE_532ac3f4cfb8": {
@@ -4714,11 +6689,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "074b883af334341baad5d971f8d9954e"
       },
       "display_name": "MNE_532ac3f4cfb8b733",
-      "basic_block_counts": {
-        "LoD/PD2": 82
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "532ac3f4cfb8b733fe5d2955c2b661d1"
       }
     },
     "ddraw_MNE_5fbfb17989a0": {
@@ -4742,11 +6717,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "84a31656f98aec25a731bed05f9859b7"
       },
       "display_name": "MNE_5fbfb17989a09c8e",
-      "basic_block_counts": {
-        "LoD/PD2": 109
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5fbfb17989a09c8ebc82cb590f2b6233"
       }
     },
     "ddraw_MNE_c09ca2759db9": {
@@ -4770,11 +6745,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "7cdd8704ca53224f2b28cfa54d75ca5c"
       },
       "display_name": "MNE_c09ca2759db95552",
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c09ca2759db95552f6f32c3348f2ea29"
       }
     },
     "ddraw_MNE_67e9c570c2d0": {
@@ -4798,11 +6773,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c499b8e2049ac4bc5d3897736d070352"
       },
       "display_name": "MNE_67e9c570c2d06b30",
-      "basic_block_counts": {
-        "LoD/PD2": 31
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "67e9c570c2d06b30019ecef39d18b9c7"
       }
     },
     "ddraw_MNE_14903f4fa509": {
@@ -4826,11 +6801,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "508de6bc791580dbeb08ab92ce4f4153"
       },
       "display_name": "MNE_14903f4fa50915c3",
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "14903f4fa50915c3971e86678550670a"
       }
     },
     "ddraw_MNE_8ea7280ec44a": {
@@ -4854,11 +6829,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "53e3d073423247bdba8c6e9d1d3de6f7"
       },
       "display_name": "MNE_8ea7280ec44ad128",
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8ea7280ec44ad1286e4a3e1da8892ea6"
       }
     },
     "ddraw_STR_7f40aefccb3c": {
@@ -4882,11 +6857,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c67077efe5596cbbbad7d7e3a334fd32"
       },
       "display_name": "STR_7f40aefccb3c7f52",
-      "basic_block_counts": {
-        "LoD/PD2": 164
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7718317eb5f2b11282b211de0f07851"
       }
     },
     "ddraw_MNE_fdad33f32e3a": {
@@ -4910,11 +6885,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "7cd9127b86fabc0505386bf96c00e14b"
       },
       "display_name": "MNE_fdad33f32e3ad90f",
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad33f32e3ad90fd59c8421579f5a9a"
       }
     },
     "ddraw_API_d41ddaf37033": {
@@ -4938,11 +6913,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "992270e6424febf619412a2ca20e1adb"
       },
       "display_name": "API_d41ddaf37033ecac",
-      "basic_block_counts": {
-        "LoD/PD2": 113
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c22dec16d4a0d9c6dfb3d14358349dc5"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4979,11 +6954,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c192315a7a6adf427802eb1f53706a87"
       },
       "display_name": "MNE_7df17ec0cea3fc93",
-      "basic_block_counts": {
-        "LoD/PD2": 37
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7df17ec0cea3fc93b7e90878b9480fb8"
       }
     },
     "ddraw_STR_5d31295c9e06": {
@@ -5007,11 +6982,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "ad7ef7d7b7ce8b279081367b636f7e78"
       },
       "display_name": "STR_5d31295c9e0600d2",
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7d7f14a5bb4f850de3d327e19469684"
       }
     },
     "ddraw_API_491d81813dd5": {
@@ -5035,11 +7010,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "54f11541dd81d16ca911fdfd017e6797"
       },
       "display_name": "API_491d81813dd52d0c",
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "be02c39757753594062ce6ca1019748a"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5076,11 +7051,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "85c51e999eef5ec7608dc9a2dea02a4f"
       },
       "display_name": "API_ee2a8beaeb164563",
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "492dd8347cb75968f7e54b124691b389"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5118,11 +7093,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "ef77b523b0628b891d919ee8cf3a78d9"
       },
       "display_name": "STR_5a0b2ec9ae7e3e27",
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fab74315fc417cb5f1497769d5490324"
       }
     },
     "ddraw_STR_e598dbb3bda2": {
@@ -5146,11 +7121,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2b754333e18a86c34490f7999bb526e0"
       },
       "display_name": "STR_e598dbb3bda22dcc",
-      "basic_block_counts": {
-        "LoD/PD2": 34
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0664440dedb85fdb0659efefa296d677"
       }
     },
     "ddraw_MNE_24aa5449e1ae": {
@@ -5174,11 +7149,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "cc24ade8ff5c12907225fa6b4ce3c329"
       },
       "display_name": "MNE_24aa5449e1ae8a28",
-      "basic_block_counts": {
-        "LoD/PD2": 25
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "24aa5449e1ae8a283fd9c9b69dc29cc6"
       }
     },
     "ddraw_STR_eaacc2d96fab": {
@@ -5202,11 +7177,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e891f1d37929eefea7360308f4443bdf"
       },
       "display_name": "STR_eaacc2d96fabff0c",
-      "basic_block_counts": {
-        "LoD/PD2": 52
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ecfc87690c9271a217d1287c0070b463"
       }
     },
     "ddraw_MNE_c80eed1b86c6": {
@@ -5230,11 +7205,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "08b33b34113a0bff1ba5f6233d89509b"
       },
       "display_name": "MNE_c80eed1b86c64377",
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c80eed1b86c64377ca40b66e3de0da70"
       }
     },
     "ddraw_STR_c4be81796282": {
@@ -5258,11 +7233,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2a21287acac7b4786c065cd6c3f0f238"
       },
       "display_name": "STR_c4be817962822950",
-      "basic_block_counts": {
-        "LoD/PD2": 82
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "31bc2a04244b3f3296ed651719ba162d"
       }
     },
     "ddraw_MNE_e77bcde96ba2": {
@@ -5286,11 +7261,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e8617daed9cfb9eae6c5634e81055079"
       },
       "display_name": "MNE_e77bcde96ba219dc",
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e77bcde96ba219dc1ef49300208eb0b2"
       }
     },
     "ddraw_STR_82b7364040f9": {
@@ -5314,11 +7289,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f28ecce95fd9bf4f40fb9d367766a602"
       },
       "display_name": "STR_82b7364040f9159d",
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9d70bc93461afb2c960209590a0448fa"
       }
     },
     "ddraw_STR_cbc62b2e3b3d": {
@@ -5342,11 +7317,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "10bdb8c84dab3c04e6a301f03eab4e8b"
       },
       "display_name": "STR_cbc62b2e3b3d1a21",
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d32d1a3423013fbf10979425742550ac"
       }
     },
     "ddraw_MNE_39ed3660da8e": {
@@ -5370,11 +7345,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d709ef86edf0582e1c474270c63e6e32"
       },
       "display_name": "MNE_39ed3660da8ed4cf",
-      "basic_block_counts": {
-        "LoD/PD2": 75
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "39ed3660da8ed4cf4253a0a7fb14ec74"
       }
     },
     "ddraw_MNE_b94f05264c83": {
@@ -5398,11 +7373,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "8f3c1adb6d7e683c8a6e9e9563f3590a"
       },
       "display_name": "MNE_b94f05264c834f40",
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b94f05264c834f40586a08bd1fae52c9"
       }
     },
     "ddraw_STR_b82f496877cc": {
@@ -5426,11 +7401,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c0a7d20f5a043ffd9ec848afe0f9301c"
       },
       "display_name": "STR_b82f496877cc6b2a",
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "026652248cd141c1cb5cdf405918793d"
       }
     },
     "ddraw_MNE_d08d670698d6": {
@@ -5454,11 +7429,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "bab6b787b111b5fbe14a62282e16a3f2"
       },
       "display_name": "MNE_d08d670698d68867",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d08d670698d68867d1f2f43704d603e7"
       }
     },
     "ddraw_MNE_3bd7263a5105": {
@@ -5482,11 +7457,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "69809d3584cbf32d161f37a5240e1b4f"
       },
       "display_name": "MNE_3bd7263a51057451",
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3bd7263a5105745115e9a2a0c54a4081"
       }
     },
     "ddraw_MNE_b7cce4f5b90b": {
@@ -5510,11 +7485,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "ebb91f04c061c8729e7635762761d36a"
       },
       "display_name": "MNE_b7cce4f5b90bb4ce",
-      "basic_block_counts": {
-        "LoD/PD2": 39
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b7cce4f5b90bb4ce2b5eac9e88f51678"
       }
     },
     "ddraw_MNE_9c1955e799e0": {
@@ -5538,11 +7513,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2f1a1a6ba8c53d065725b6129b50c755"
       },
       "display_name": "MNE_9c1955e799e0bc24",
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9c1955e799e0bc24fdf9902869c27311"
       }
     },
     "ddraw_MNE_4d8c15b0cf49": {
@@ -5566,11 +7541,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "86c64f2484557e369cb791eca7be32dd"
       },
       "display_name": "MNE_4d8c15b0cf49a87d",
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4d8c15b0cf49a87d193c680342579851"
       }
     },
     "ddraw_MNE_c21c1f6b41bf": {
@@ -5594,11 +7569,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "63d73c227e230eb5e13638c8107cc7e0"
       },
       "display_name": "MNE_c21c1f6b41bf4f1f",
-      "basic_block_counts": {
-        "LoD/PD2": 54
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c21c1f6b41bf4f1f951c0bf726002e39"
       }
     },
     "ddraw_STR_f7bd33a0a791": {
@@ -5622,11 +7597,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "774ecae3440edc4db7c5f217c31fecfc"
       },
       "display_name": "STR_f7bd33a0a7910b44",
-      "basic_block_counts": {
-        "LoD/PD2": 45
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f2f6b5225d05ee31dbace22f2153ef58"
       }
     },
     "ddraw_STR_1dd2ed6f65ce": {
@@ -5650,11 +7625,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f491d186694603ce1f1fb97e28550540"
       },
       "display_name": "STR_1dd2ed6f65cee9b0",
-      "basic_block_counts": {
-        "LoD/PD2": 30
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1c7e67b77a125d86805f81d287de5971"
       }
     },
     "ddraw_MNE_0a278bda6148": {
@@ -5678,11 +7653,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "45926a54b7fca7a23c2309f5c52ae900"
       },
       "display_name": "MNE_0a278bda61483f26",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0a278bda61483f260edeaf10156db0ee"
       }
     },
     "ddraw_STR_59a267cb4503": {
@@ -5706,11 +7681,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "79a9ef7380c9aba31ca89a1ce519b2dc"
       },
       "display_name": "STR_59a267cb4503df19",
-      "basic_block_counts": {
-        "LoD/PD2": 136
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2ad81ced0e23fc7890c79fdf648ccf1b"
       }
     },
     "ddraw_STR_076de6e730df": {
@@ -5734,11 +7709,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "30b11323658e35a127fab501d88bc642"
       },
       "display_name": "STR_076de6e730df0b4c",
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe1a9cf4401bbe1b6b12ee50da0fc24a"
       }
     },
     "ddraw_STR_02045c109176": {
@@ -5762,11 +7737,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "6cca7359f61ebdf0aefb66abeb5ceb2c"
       },
       "display_name": "STR_02045c10917617d0",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "820101aa4720de76b94e0b108c38f8a0"
       }
     },
     "ddraw_MNE_7f72a0829411": {
@@ -5790,11 +7765,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "7b27e3cfcfd042e3cdb93392d1d36ca5"
       },
       "display_name": "MNE_7f72a08294111d55",
-      "basic_block_counts": {
-        "LoD/PD2": 121
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7f72a08294111d55022557f39d841d59"
       }
     },
     "ddraw_MNE_14b30b3b6342": {
@@ -5818,11 +7793,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "5765549d19154efeaf7fe062d7feeaa6"
       },
       "display_name": "MNE_14b30b3b6342adb1",
-      "basic_block_counts": {
-        "LoD/PD2": 37
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "14b30b3b6342adb165967f5b69e8d3a4"
       }
     },
     "ddraw_MNE_9461d072a8b2": {
@@ -5846,22 +7821,22 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "4a21d0cc3a7b8c93acd6790dddc69531"
       },
       "display_name": "MNE_9461d072a8b20aa5",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9461d072a8b20aa5f55bbf2f970fb8c7"
       }
     },
     "ddraw_API_8afc98d71d9e": {
       "addresses": {
-        "LoD/PD2": "0x7B5D8440"
+        "LoD/PD2": "0x7B5D7C90"
       },
       "rvas": {
-        "LoD/PD2": "0x18440"
+        "LoD/PD2": "0x17C90"
       },
       "sizes": {
-        "LoD/PD2": 133
+        "LoD/PD2": 666
       },
       "method": "API",
       "index": "API:8afc98d71d9e262a24585ad2c4191ca2",
@@ -5874,11 +7849,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "f615fd930e07c8317b8d52b4ea4c4c3b"
       },
       "display_name": "API_8afc98d71d9e262a",
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "81410c13bc26f0f77fa81b80c92f4531"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5908,11 +7883,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "7a3e009c9c062bbe4e99a479b86b55d4"
       },
       "display_name": "MNE_d29c3e9c16b5c6ed",
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d29c3e9c16b5c6eddb36f987d762a4eb"
       }
     },
     "ddraw_API_f4bdd744faac": {
@@ -5936,11 +7911,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "4377b20a4987c3c17c877562a53e81b3"
       },
       "display_name": "API_f4bdd744faacf9c1",
-      "basic_block_counts": {
-        "LoD/PD2": 38
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fc2f679a31204cfc049b3eeeac5ae9e0"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5972,11 +7947,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "615cf9e7760c36c8b5b52b2ec2bfdd2b"
       },
       "display_name": "MNE_69860ac3540c1f8c",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "69860ac3540c1f8cda3a52fe6da36443"
       }
     },
     "ddraw_MNE_dab5f65e29e2": {
@@ -6000,11 +7975,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "ccd3b044d96c37341df344fbf47c0c9f"
       },
       "display_name": "MNE_dab5f65e29e29243",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dab5f65e29e292437bec801270be02ed"
       }
     },
     "ddraw_MNE_eef706549893": {
@@ -6028,11 +8003,45 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "68611bb8a5969df160d36059a9b66cf2"
       },
       "display_name": "MNE_eef7065498931d2f",
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eef7065498931d2f71bdf5aca7c50c77"
+      }
+    },
+    "ddraw_MNE_47a9e8ff7b6b": {
+      "addresses": {
+        "LoD/PD2": "0x7B5D8440"
+      },
+      "rvas": {
+        "LoD/PD2": "0x18440"
+      },
+      "sizes": {
+        "LoD/PD2": 133
+      },
+      "method": "API",
+      "index": "API:8afc98d71d9e262a24585ad2c4191ca2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "8afc98d71d9e262a24585ad2c4191ca2",
+        "MNE": "47a9e8ff7b6b1d02655f47bbeaa7cd96",
+        "CFG": "cdbcbd0dc6681073025d79ee47f03454",
+        "PRO": "7e975c76a9242682db5b6302f2c708c2"
+      },
+      "display_name": "API_8afc98d71d9e262a",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "47a9e8ff7b6b1d02655f47bbeaa7cd96"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetWindowRect",
+          "GetWindowRect"
+        ]
       }
     },
     "ddraw_MNE_6de80315a5a2": {
@@ -6056,14 +8065,48 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "7a1f830d202fa8f07395a701f60acd52"
       },
       "display_name": "MNE_6de80315a5a20e5a",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6de80315a5a20e5acc3f6aae1a1492be"
       }
     },
     "ddraw_API_3f068f383b18": {
+      "addresses": {
+        "LoD/PD2": "0x7B5D8520"
+      },
+      "rvas": {
+        "LoD/PD2": "0x18520"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "method": "API",
+      "index": "API:3f068f383b187e463749081302b83d4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3f068f383b187e463749081302b83d4f",
+        "MNE": "3fae65075a233810c86395ae8d84a099",
+        "CFG": "9ee740eae2758b00f904633bf0c5e501",
+        "PRO": "009f6e10d5eaaa2576ea7bdd5d791065"
+      },
+      "display_name": "API_3f068f383b187e46",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3fae65075a233810c86395ae8d84a099"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "ClientToScreen",
+          "ScreenToClient"
+        ]
+      }
+    },
+    "ddraw_MNE_e8e735455ed3": {
       "addresses": {
         "LoD/PD2": "0x7B5D8570"
       },
@@ -6079,16 +8122,16 @@ var FUNCTIONS_ddraw_dll = {
         "EXP": null,
         "STR": null,
         "API": "3f068f383b187e463749081302b83d4f",
-        "MNE": "3fae65075a233810c86395ae8d84a099",
-        "CFG": "9ee740eae2758b00f904633bf0c5e501",
-        "PRO": "009f6e10d5eaaa2576ea7bdd5d791065"
+        "MNE": "e8e735455ed38d8192748da2bd38c799",
+        "CFG": "d88ad4fd190e65fc3b89c41b36615b62",
+        "PRO": "2faf3606005306f2e42eb24ea740dcf2"
       },
       "display_name": "API_3f068f383b187e46",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e8e735455ed38d8192748da2bd38c799"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6118,11 +8161,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "01b285868c6cb19c0665565f26ccacb9"
       },
       "display_name": "API_3c9c1cd5835d8fac",
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "18985eff80323b3a0ea05a99cd77af05"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6152,11 +8195,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "26e8e5f199a27d79df5254ec3b454670"
       },
       "display_name": "API_f9fa82f45cf4bd32",
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e2b5f148fe7bba99eff411baf4d3eaf3"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6186,11 +8229,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d8157b144ee1208264b9627f5e313faa"
       },
       "display_name": "MNE_2b1d5eb1860b004a",
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2b1d5eb1860b004a6a10564894370378"
       }
     },
     "ddraw_API_31c62959faf3": {
@@ -6214,11 +8257,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "153e2fc78953690b0d4ce522d2c12306"
       },
       "display_name": "API_31c62959faf34b3c",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "07e8feb1d8375d36c7f0fa4fc455c0af"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6248,11 +8291,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "55f1525ada7db9f183d5e86982a4dfc8"
       },
       "display_name": "MNE_a7f3d59587dc5d09",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7f3d59587dc5d09922307755cad6b4d"
       }
     },
     "ddraw_MNE_5f0a72c1e630": {
@@ -6276,11 +8319,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "830088df979713e0110baad6995eae43"
       },
       "display_name": "MNE_5f0a72c1e6302ea8",
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f0a72c1e6302ea8c65871b2a1792232"
       }
     },
     "ddraw_MNE_ca62806bc65d": {
@@ -6304,11 +8347,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "0cc11e8637c232fe112f1ba107c946af"
       },
       "display_name": "MNE_ca62806bc65d4603",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ca62806bc65d4603dcc2e0090f45433b"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6337,11 +8380,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "18dcb92622045d421aaa492ffcc599a7"
       },
       "display_name": "MNE_19c0debfc209e530",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "19c0debfc209e5300dac04010c6c6b9b"
       }
     },
     "ddraw_MNE_379371525973": {
@@ -6365,11 +8408,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d13657631fea33d9790ec81409584386"
       },
       "display_name": "MNE_379371525973104b",
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "379371525973104ba5ae6607a4cbb11c"
       }
     },
     "ddraw_MNE_4fe49d7568d6": {
@@ -6393,14 +8436,47 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "671fc517ac1ae157289a4db856869bfc"
       },
       "display_name": "MNE_4fe49d7568d648c2",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4fe49d7568d648c2cbe0edb08bc4db86"
       }
     },
     "ddraw_MNE_342d63916d2a": {
+      "addresses": {
+        "LoD/PD2": "0x7B5D88D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x188D0"
+      },
+      "sizes": {
+        "LoD/PD2": 27
+      },
+      "method": "MNE",
+      "index": "MNE:342d63916d2a9a868b67de5e0beb7459",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "342d63916d2a9a868b67de5e0beb7459",
+        "CFG": null,
+        "PRO": "2f96354c4a73c830f99015b163efe93f"
+      },
+      "display_name": "MNE_342d63916d2a9a86",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "342d63916d2a9a868b67de5e0beb7459"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "LoadLibraryA"
+        ]
+      }
+    },
+    "ddraw_ADDR_7B5D88F0": {
       "addresses": {
         "LoD/PD2": "0x7B5D88F0"
       },
@@ -6418,14 +8494,14 @@ var FUNCTIONS_ddraw_dll = {
         "API": null,
         "MNE": "342d63916d2a9a868b67de5e0beb7459",
         "CFG": null,
-        "PRO": "2f96354c4a73c830f99015b163efe93f"
+        "PRO": "424f5d3a33d70c7d9e8ac9d7a22693f9"
       },
       "display_name": "MNE_342d63916d2a9a86",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "342d63916d2a9a868b67de5e0beb7459"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6434,6 +8510,39 @@ var FUNCTIONS_ddraw_dll = {
       }
     },
     "ddraw_MNE_b57d5372ae76": {
+      "addresses": {
+        "LoD/PD2": "0x7B5D8910"
+      },
+      "rvas": {
+        "LoD/PD2": "0x18910"
+      },
+      "sizes": {
+        "LoD/PD2": 33
+      },
+      "method": "MNE",
+      "index": "MNE:b57d5372ae7698579819d466b5c89e4a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b57d5372ae7698579819d466b5c89e4a",
+        "CFG": null,
+        "PRO": "fe7e54d8440a623cfd91e22675692c1f"
+      },
+      "display_name": "MNE_b57d5372ae769857",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b57d5372ae7698579819d466b5c89e4a"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "LoadLibraryExA"
+        ]
+      }
+    },
+    "ddraw_ADDR_7B5D8940": {
       "addresses": {
         "LoD/PD2": "0x7B5D8940"
       },
@@ -6451,14 +8560,14 @@ var FUNCTIONS_ddraw_dll = {
         "API": null,
         "MNE": "b57d5372ae7698579819d466b5c89e4a",
         "CFG": null,
-        "PRO": "fe7e54d8440a623cfd91e22675692c1f"
+        "PRO": "f866f26b868e65bcdeb56aac84d51b9a"
       },
       "display_name": "MNE_b57d5372ae769857",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b57d5372ae7698579819d466b5c89e4a"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6487,11 +8596,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "09ad9c95349a0ae2f67c42f0837a6bd3"
       },
       "display_name": "API_15fbf567a6516ee7",
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "61822db33201face431b58e3366fbb0d"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6521,11 +8630,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "833555d207ae01374bcf5d8bb719fba8"
       },
       "display_name": "API_9f865f517c64ce6f",
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7d17bba39613fad1fe944d35c758eecb"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6556,11 +8665,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "1174817bd0aa701aa9240a051a2bffdc"
       },
       "display_name": "API_bef30729667d6da0",
-      "basic_block_counts": {
-        "LoD/PD2": 230
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9d46b0f364fa8e83358bf702765d1582"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6575,10 +8684,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_e3e7225badfc": {
       "addresses": {
-        "LoD/PD2": "0x7B5EF482"
+        "LoD/PD2": "0x7B5DA0C8"
       },
       "rvas": {
-        "LoD/PD2": "0x2F482"
+        "LoD/PD2": "0x1A0C8"
       },
       "sizes": {
         "LoD/PD2": 6
@@ -6597,14 +8706,728 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "8446b70b46f907de518fe08cae540ff8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5DA0CE": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA0CE"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A0CE"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "LoadLibraryExW",
+      "signature": "HMODULE LoadLibraryExW(LPCWSTR lpLibFileName, HANDLE hFile, DWORD dwFlags)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "956905e492eb3f5cf87b1ff47f166173"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5DA0D4": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA0D4"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A0D4"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "LoadLibraryA",
+      "signature": "HMODULE LoadLibraryA(LPCSTR lpLibFileName)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "59e9a66812120300464ad099fb5377df"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
       "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA0DA": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA0DA"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A0DA"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "LoadLibraryW",
+      "signature": "HMODULE LoadLibraryW(LPCWSTR lpLibFileName)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "c2a8345a0a715f8caaff660725e2f959"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA0E6": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA0E6"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A0E6"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetCursorPos",
+      "signature": "BOOL GetCursorPos(LPPOINT lpPoint)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "a0e4eb544254d5bb5c129d5f89fb8336"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA0EC": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA0EC"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A0EC"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "SetCursorPos",
+      "signature": "BOOL SetCursorPos(int X, int Y)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "485fb0c53186c902e5af838900989ce3"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5DA0F2": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA0F2"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A0F2"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "ShowCursor",
+      "signature": "int ShowCursor(BOOL bShow)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "13740908f00484a1cbbc5404ccfc9f07"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA0F8": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA0F8"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A0F8"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetClientRect",
+      "signature": "BOOL GetClientRect(HWND hWnd, LPRECT lpRect)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "4634e47d4c306a9db5f32f5c8b988cac"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5DA0FE": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA0FE"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A0FE"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "SetCursor",
+      "signature": "HCURSOR SetCursor(HCURSOR hCursor)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "da052214b8875747aa0af6c225a695d0"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA104": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA104"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A104"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "SendMessageA",
+      "signature": "LRESULT SendMessageA(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "177c548e1638fbe7a5c83ae1c1977459"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "ddraw_ADDR_7B5DA10A": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA10A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A10A"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "ClipCursor",
+      "signature": "BOOL ClipCursor(RECT * lpRect)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "66339708abf261308350455cf2043de1"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA110": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA110"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A110"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "CreateWindowExA",
+      "signature": "HWND CreateWindowExA(DWORD dwExStyle, LPCSTR lpClassName, LPCSTR lpWindowName, DWORD dwStyle, int X, int Y, int nWidth, int nHeight, HWND hWndParent, HMENU hMenu, HINSTANCE hInstance, LPVOID lpParam)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "c8f809472283883cbf25ef60edc4b3fb"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 12
+      }
+    },
+    "ddraw_ADDR_7B5DA116": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA116"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A116"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "MoveWindow",
+      "signature": "BOOL MoveWindow(HWND hWnd, int X, int Y, int nWidth, int nHeight, BOOL bRepaint)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "5647a2a2891ef8e6517d205e6471894d"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 6
+      }
+    },
+    "ddraw_ADDR_7B5DA122": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA122"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A122"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "ClientToScreen",
+      "signature": "BOOL ClientToScreen(HWND hWnd, LPPOINT lpPoint)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "b836405af430d0504baf1759889e671c"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5DA128": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA128"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A128"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "SetWindowLongA",
+      "signature": "LONG SetWindowLongA(HWND hWnd, int nIndex, LONG dwNewLong)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "0daa0a91bbe5f1715cde8fefb0d36bd9"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5DA12E": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA12E"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A12E"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetCursorInfo",
+      "signature": "BOOL GetCursorInfo(PCURSORINFO pci)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "8772d3e94a880729ed51bac95bd9b238"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA134": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA134"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A134"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "WindowFromPoint",
+      "signature": "HWND WindowFromPoint(POINT Point)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "870f0c4ff3fed56e5f735b8389a6d1a4"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA13A": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA13A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A13A"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetSystemMetrics",
+      "signature": "int GetSystemMetrics(int nIndex)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "3cae99b35c27c9c63f7e1af8b35b93aa"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA140": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA140"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A140"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "ScreenToClient",
+      "signature": "BOOL ScreenToClient(HWND hWnd, LPPOINT lpPoint)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "80ed0a210c25cad8a809c23a94c6bd68"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5DA146": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA146"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A146"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "SetWindowPos",
+      "signature": "BOOL SetWindowPos(HWND hWnd, HWND hWndInsertAfter, int X, int Y, int cx, int cy, UINT uFlags)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "c30f5565aed1e447b5fce1a9da2201ca"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 7
+      }
+    },
+    "ddraw_ADDR_7B5DA14C": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA14C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A14C"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "DestroyWindow",
+      "signature": "BOOL DestroyWindow(HWND hWnd)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "a986a00e4c40ee7164caa27e8b5995bc"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA152": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA152"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A152"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetWindowRect",
+      "signature": "BOOL GetWindowRect(HWND hWnd, LPRECT lpRect)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "26a3c26cac5cc80e1fdcaa9aa703a985"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
       }
     },
     "ddraw_MNE_d7dc58d55765": {
@@ -6632,11 +9455,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7d127f70b80059b420a06b3f952a19a3",
         "PRO": "18f417bec3cebabf9cdb1ec825daa402"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7dc58d55765d0d021c4fe8926930277"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6663,11 +9486,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "27c14b4b4a6db517ef649943cccb40fc"
       },
       "display_name": "MNE_93db47aca24076fe",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "93db47aca24076fe5d27baf3c4e380ec"
       }
     },
     "ddraw_MNE_0af48c18cc11": {
@@ -6691,11 +9514,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "54edf12a6315754ca572bc4aea1ed913"
       },
       "display_name": "MNE_0af48c18cc11c2a1",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0af48c18cc11c2a1b044a6fc47738db2"
       }
     },
     "ddraw_MNE_b3faaa54e614": {
@@ -6723,11 +9546,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ffc212cf0cc73a31e9b7aa13b24a4473",
         "PRO": "2a1c1ffdf2772f7f599b724da58d6961"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b3faaa54e614fd38955b32ddce3fe396"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -6758,11 +9581,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "43ed1f8975afc6ad6b976a0e849204d9",
         "PRO": "7dff660bba7c509338c79279594c62eb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "813902e79b8b4c3f1e839bd5ac54ccd1"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6770,10 +9593,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_5f97d76a7bf7": {
       "addresses": {
-        "LoD/PD2": "0x7B5DEF1D"
+        "LoD/PD2": "0x7B5DA2E3"
       },
       "rvas": {
-        "LoD/PD2": "0x1EF1D"
+        "LoD/PD2": "0x1A2E3"
       },
       "sizes": {
         "LoD/PD2": 10
@@ -6789,11 +9612,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "6ef0327276b18cdd9ceab52cdf9857e0"
       },
       "display_name": "MNE_5f97d76a7bf7bad4",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f97d76a7bf7bad4437ec948fbad99b7"
       }
     },
     "ddraw_MNE_7816046ec43e": {
@@ -6821,14 +9644,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1f0b199d876f44740208617600255ae3",
         "PRO": "7c2ab29b54e1c250f8aa47c373348aeb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7816046ec43e929854fe8a047b0b3cda"
+      },
       "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DA39C": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA39C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A39C"
+      },
+      "sizes": {
+        "LoD/PD2": 10
+      },
+      "method": "MNE",
+      "index": "MNE:5f97d76a7bf7bad4437ec948fbad99b7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f97d76a7bf7bad4437ec948fbad99b7",
+        "CFG": null,
+        "PRO": "f537078aef9e9d233658f5fb936b21b9"
+      },
+      "display_name": "MNE_5f97d76a7bf7bad4",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f97d76a7bf7bad4437ec948fbad99b7"
       }
     },
     "ddraw_MNE_e7313d19d2f1": {
@@ -6852,11 +9703,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "5165c86690f4d21f3c8f9b2188c68eed"
       },
       "display_name": "MNE_e7313d19d2f1b942",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e7313d19d2f1b94221ec63dffd5562f1"
       }
     },
     "ddraw_MNE_ea9bbbf8bef4": {
@@ -6884,11 +9735,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "42aae10500d98c4ac73e788bf936bce7",
         "PRO": "69a8fb8becb3442fae60223e215384bc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ea9bbbf8bef4ef26b3e4c98bd2475e75"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -6919,11 +9770,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ea03c6407b4d091868dce8d0baf95212",
         "PRO": "eda1044c0a65fad2af05982661f69171"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b29ba1c1091b500c21215b5dad4c7b51"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -6950,11 +9801,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9c4bee40d1b15541847a214dc0cb7255"
       },
       "display_name": "MNE_221794ffc10f5780",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "221794ffc10f5780ac30dfceea10155b"
       }
     },
     "ddraw_MNE_25e9db5cf2bb": {
@@ -6982,11 +9833,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "f2b75c627daef803ade41b373e90710b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "25e9db5cf2bb0c2a07b05ef3a9da54bb"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7017,11 +9868,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9de75605decc558491944beae69f7c03",
         "PRO": "a1dc8c50801b2265f54037bf34eb509c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7afa47284bfb32052145d7dc9293a38"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -7054,11 +9905,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "6fae955e81405ecd867245a784a1e2c1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a496caf02a9eda9fbb9188645656672c"
       }
     },
     "ddraw_MNE_45764320cff4": {
@@ -7086,11 +9937,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "db518abf1ec1a6ec266566e3134e4a17",
         "PRO": "c13e0fff452dbce2361160125d731a79"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "45764320cff449068f505d20d26778f5"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -7103,10 +9954,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_fdad073544ac": {
       "addresses": {
-        "LoD/PD2": "0x7B5E0D3C"
+        "LoD/PD2": "0x7B5DA70B"
       },
       "rvas": {
-        "LoD/PD2": "0x20D3C"
+        "LoD/PD2": "0x1A70B"
       },
       "sizes": {
         "LoD/PD2": 5
@@ -7125,19 +9976,22 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "cb20a76811bc1b1b480715303c0bdd90"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "ddraw_MNE_519b6a2eaec2": {
       "addresses": {
-        "LoD/PD2": "0x7B5DA743"
+        "LoD/PD2": "0x7B5DA710"
       },
       "rvas": {
-        "LoD/PD2": "0x1A743"
+        "LoD/PD2": "0x1A710"
       },
       "sizes": {
         "LoD/PD2": 27
@@ -7153,11 +10007,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "ec391a48bd4633e134235e2fe93f2266"
       },
       "display_name": "MNE_519b6a2eaec2ae04",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "519b6a2eaec2ae048072e1f9ec31a1f8"
       }
     },
     "ddraw_STR_d70f8c7bdc92": {
@@ -7181,11 +10035,39 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c49e913c5c75f1c5e9185024c5506f15"
       },
       "display_name": "STR_d70f8c7bdc921c5c",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fba3d29b6bd90bb8c4b7736f36339b2a"
+      }
+    },
+    "ddraw_ADDR_7B5DA743": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA743"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A743"
+      },
+      "sizes": {
+        "LoD/PD2": 27
+      },
+      "method": "MNE",
+      "index": "MNE:519b6a2eaec2ae048072e1f9ec31a1f8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "519b6a2eaec2ae048072e1f9ec31a1f8",
+        "CFG": null,
+        "PRO": "c40c8cddf5b844fe197665df0e7c7b77"
+      },
+      "display_name": "MNE_519b6a2eaec2ae04",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "519b6a2eaec2ae048072e1f9ec31a1f8"
       }
     },
     "ddraw_STR_d6d28e1ea47c": {
@@ -7209,11 +10091,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c2be15d562ba6ea95e121a3798e6a2ab"
       },
       "display_name": "STR_d6d28e1ea47c41d6",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fba3d29b6bd90bb8c4b7736f36339b2a"
       }
     },
     "ddraw_MNE_ef453d2076ed": {
@@ -7241,11 +10123,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "488f1f384b7b8b8da2c286bf69dc7ea1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ef453d2076eda05461445a10e3476c6d"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7272,11 +10154,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9e568b22764c7ebfb7a8127c3c43c60e"
       },
       "display_name": "MNE_8bf44fd2e3e212e4",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8bf44fd2e3e212e4a0c7c1e5e6aa6bd7"
       }
     },
     "ddraw_MNE_e29a64315945": {
@@ -7300,11 +10182,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "b8e2ce8a9660d2ef28f6d167ae0df9e7"
       },
       "display_name": "MNE_e29a64315945221b",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e29a64315945221b804171dff9178f96"
       }
     },
     "ddraw_STR_6ce4e8a3f559": {
@@ -7328,11 +10210,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9c07289887909d138058ae4421604562"
       },
       "display_name": "STR_6ce4e8a3f559a754",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9200e0ba5b72479d735d5cb45e6d679e"
       }
     },
     "ddraw_MNE_b28429b23b92": {
@@ -7356,11 +10238,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "a1986ee8f1a6fe954da41198110dca63"
       },
       "display_name": "MNE_b28429b23b92ecfd",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b28429b23b92ecfdc6bc8e01cf5611c9"
       }
     },
     "ddraw_MNE_f8a90eae4fe7": {
@@ -7384,11 +10266,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d3d93b45a9aadbdeea4b0d23fb62ffb0"
       },
       "display_name": "MNE_f8a90eae4fe79651",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f8a90eae4fe79651b3297724da273c17"
       }
     },
     "ddraw_MNE_576e71e58ac1": {
@@ -7416,11 +10298,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "4221cd66b7d1bf15a636664004a85178"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "576e71e58ac12dc4dc652fb1f77bef85"
       }
     },
     "ddraw_MNE_3658f6e3181c": {
@@ -7448,11 +10330,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "c5dd24a6a7c6dbb1d27f032a07fbb393"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3658f6e3181c1e09fd88490bb715e521"
       }
     },
     "ddraw_MNE_d2995c856eb0": {
@@ -7480,11 +10362,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fbea47b737f9cded99d3ac1117fd0429",
         "PRO": "8c397c724063c9de74a586bec806a6a9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d2995c856eb0be51cc6f663a49375b96"
       }
     },
     "ddraw_MNE_fde18f840643": {
@@ -7508,11 +10390,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d2caec9ae873efef02fc8663f3e61785"
       },
       "display_name": "MNE_fde18f840643d8d9",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fde18f840643d8d99756120348d7717e"
       }
     },
     "ddraw_MNE_bba6787b3ee5": {
@@ -7540,11 +10422,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "03fb9dd5f3e24aeb030c4c41495104bb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bba6787b3ee574ab1a3904a4931976c2"
+      }
+    },
+    "ddraw_ADDR_7B5DA93B": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DA93B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A93B"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "358dd79fc45aff68cd41c37f1c84e471"
+      },
+      "display_name": "MNE_7b4de9f0cf357b11",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "ddraw_MNE_cf4bcddf67ac": {
@@ -7572,11 +10482,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "eb7cb476a9925ba53e64381ad4ccff90"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cf4bcddf67ac9e17aa89769203bfea57"
       }
     },
     "ddraw_MNE_54240c086691": {
@@ -7604,11 +10514,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a8d36b0ca5ed1975934c1a8015201c3a",
         "PRO": "0c7493b02e6ab3526ddf682cec86ced2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "54240c08669162934f897c557f4f39c4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7639,11 +10549,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d8e234c1afd075bd3612cb5632926224",
         "PRO": "02e8ba46558fb8f0b0164ac99ba7ceab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6d1054d982f12d7786c3ee992c573f3b"
       }
     },
     "ddraw_MNE_c5ed9fc94c31": {
@@ -7671,11 +10581,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "dc0623423d93fb21da8f1c1461d32590",
         "PRO": "60e793797bd546a11eb5b68c5ae6a369"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c5ed9fc94c31ba047222fa7af95d9b83"
       }
     },
     "ddraw_MNE_494831ecedeb": {
@@ -7703,19 +10613,19 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "3bcc9e25ee57bf38856ce81963bf6ce3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "494831ecedeb44bb307191f6a9f972d0"
       }
     },
     "ddraw_MNE_0f7f0612760a": {
       "addresses": {
-        "LoD/PD2": "0x7B5DB5E4"
+        "LoD/PD2": "0x7B5DAA0D"
       },
       "rvas": {
-        "LoD/PD2": "0x1B5E4"
+        "LoD/PD2": "0x1AA0D"
       },
       "sizes": {
         "LoD/PD2": 31
@@ -7735,11 +10645,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d550e8e8abf2e6c7bc4606c0c80e2b95",
         "PRO": "753e6947267ec410f28a658b3cef687a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f7f0612760a750cf668844686b49619"
       }
     },
     "ddraw_MNE_eb59560942d3": {
@@ -7767,11 +10677,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "b0064a2213ed19580c0a7368f19a34af"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eb59560942d31215fd937048597cce9f"
       }
     },
     "ddraw_MNE_9d9882837604": {
@@ -7799,11 +10709,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8bbfe2737ef55f3a9a35ae1b43be54c6",
         "PRO": "a1a7583ec28b48ba4f178d728ac9f8f4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9d9882837604aa71830e9f2b201a0a63"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -7830,11 +10740,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "83aa06c294396a6869db5b156c824284"
       },
       "display_name": "MNE_a6edb326ee323224",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a6edb326ee323224096e5775dc4e42b2"
       }
     },
     "ddraw_MNE_c43768f4d0dd": {
@@ -7858,11 +10768,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "1bb8639f56aacc3b339b2f4799ae6cfe"
       },
       "display_name": "MNE_c43768f4d0ddaf78",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c43768f4d0ddaf780c3b3e66819b4b76"
       }
     },
     "ddraw_MNE_8ee2644d27cb": {
@@ -7890,11 +10800,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "285d09a7e9b985b0b82a1cfce0632509",
         "PRO": "3fcfdcd5045f486a48e944141c018e14"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8ee2644d27cbe7b06992437e07f34de8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7925,11 +10835,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9837f335a7f4c852d4923098d737e51d",
         "PRO": "40088c2b09cbcc075499e6469be72653"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a8a10b422712da4bbd9cb3a7439bbfa5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7960,11 +10870,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d790950703572277ff9cc2fe99997fd3",
         "PRO": "aa87e8036ed897bef97c2bab6557bfc6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8987f08d1294583acadd46f1f102f5ad"
       }
     },
     "ddraw_MNE_f7e6c19e50a3": {
@@ -7992,11 +10902,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "5f8eaafe0358964f49953899a86b0609",
         "PRO": "a576a72644a2b66236060f4180f2fdd7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f7e6c19e50a30f46926a4d1218a196eb"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8027,14 +10937,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "59064043b32d878adeb9b6c7844d59e3",
         "PRO": "add5f0cf39ae8ed0043a16b39aa2860c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1fcd22518b091651f16739ae56625ad9"
+      },
       "param_counts": {
         "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5DAC36": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DAC36"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1AC36"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "5889b49b373dcac919520cbe6ba1f1a2"
+      },
+      "display_name": "MNE_7b4de9f0cf357b11",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "ddraw_MNE_61d15aa8e60b": {
@@ -8062,11 +11000,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c69ce6313edc6deff66a726c07e58b59",
         "PRO": "4091c913a75aa1024a78e89c3ed63966"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "61d15aa8e60bef041acda0c38e5823a9"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -8095,19 +11033,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "462cdbb5ab3c4ecd54599f5936a7549d"
       },
       "display_name": "MNE_0bc0597c449eb3f9",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0bc0597c449eb3f95856ba1dd6da8aef"
       }
     },
     "ddraw_MNE_1f330ff9b893": {
       "addresses": {
-        "LoD/PD2": "0x7B5DAD8A"
+        "LoD/PD2": "0x7B5DAD5E"
       },
       "rvas": {
-        "LoD/PD2": "0x1AD8A"
+        "LoD/PD2": "0x1AD5E"
       },
       "sizes": {
         "LoD/PD2": 44
@@ -8127,11 +11065,43 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ddcab2040c8318c24b007a99f0f62124",
         "PRO": "f26896bd4cd7991d94516e5a1d7bf067"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1f330ff9b89359cdf6cadeb488a2e714"
+      }
+    },
+    "ddraw_ADDR_7B5DAD8A": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DAD8A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1AD8A"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "name": "__RTC_Terminate",
+      "signature": "undefined __RTC_Terminate(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n __RTC_Terminate\n\nLibrary: Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:1f330ff9b89359cdf6cadeb488a2e714",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1f330ff9b89359cdf6cadeb488a2e714",
+        "CFG": "ddcab2040c8318c24b007a99f0f62124",
+        "PRO": "33e7300c5c4e077855f1d4ce5811d38f"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1f330ff9b89359cdf6cadeb488a2e714"
       }
     },
     "ddraw_MNE_2c3468b423fe": {
@@ -8155,11 +11125,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "57c004e47172660b247bce7c94f56607"
       },
       "display_name": "MNE_2c3468b423fef34a",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2c3468b423fef34a4bb6fa44360db639"
       }
     },
     "ddraw_MNE_3bea7325cfa8": {
@@ -8187,11 +11157,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2ef9b75b9e7c32983e9ca6a8ec6e7956",
         "PRO": "22f54170f2887f43231e3443dc8974f9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3bea7325cfa8622a541f18173fed02fc"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -8220,11 +11190,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c0006870c47ab8b75740ed203b0785a3"
       },
       "display_name": "MNE_7ec409a9eaefed77",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7ec409a9eaefed77c043adece1ffae56"
       }
     },
     "ddraw_MNE_54eb44b5a73f": {
@@ -8252,11 +11222,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "847ce35d704f6467fe1edca6cafa3a30"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "54eb44b5a73ff76965fb286f3a476751"
       }
     },
     "ddraw_MNE_9d75cc89a17d": {
@@ -8284,11 +11254,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4829319e2a49e5c4df0979448cd2dd26",
         "PRO": "9ca10b74f090b9afc622fe761a467cdc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9d75cc89a17dcac8355f6ef97efd5751"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8319,11 +11289,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "5f480d16e7ca428a0055a5d062059fea",
         "PRO": "91b3369df11f8feb11fafa98b6bc9d00"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "17dd6baec15e2db7fba918d73f3fb6ac"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8354,11 +11324,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "616269d69488c60ad6c06535f277e575",
         "PRO": "403a81bd2dc208e0361252dc382a3dbe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f2c4a007044f1c447116ccdb496863c9"
       }
     },
     "ddraw_MNE_1afe32329822": {
@@ -8386,11 +11356,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "86e2eb50bba3c410486856c9168ce909"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1afe32329822801a6e320d6c68dd5ad7"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8421,11 +11391,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3da7d1decf651dc1e02d03fe74a4bd6a",
         "PRO": "28061c2388ad752c79081a5163172fc4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3063314a75ec1fb451bfd49d0f281dac"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8452,11 +11422,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d9aa3fb2882a3b59d45385efb0b26138"
       },
       "display_name": "MNE_557ed6e155b144d3",
-      "basic_block_counts": {
-        "LoD/PD2": 70
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "557ed6e155b144d315eb240e2a6a3e1a"
       }
     },
     "ddraw_MNE_4fc1b92d94c9": {
@@ -8484,11 +11454,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "910ce600523c05e66d9cc75591985feb",
         "PRO": "ebd642600af145633caa561893ae24df"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4fc1b92d94c9c12476c4fc7a333e79b0"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8519,11 +11489,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ebedb8faf55908534e596ba5d47d40c7",
         "PRO": "53ac517f488e65ea357748539f5a3abc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bb91777f490fd4dfe7fd7442b4c04f14"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8554,11 +11524,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3865b5f2bb4f37e3683883ab47756ae0",
         "PRO": "572ccb077fcb737c7a10071c910b2242"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "234cb430475d6ce0443bd71e0382a0dc"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8589,22 +11559,54 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a76e0273b3e592eaee672793f78290ba",
         "PRO": "6f4610780445b0c0238ef260c2bdb11f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a993bd3059910ca87071e597794b6a23"
       },
       "param_counts": {
         "LoD/PD2": 1
       }
     },
-    "ddraw_MNE_ed23cc5d152d": {
+    "ddraw_ADDR_7B5DB5E4": {
       "addresses": {
-        "LoD/PD2": "0x7B5E1059"
+        "LoD/PD2": "0x7B5DB5E4"
       },
       "rvas": {
-        "LoD/PD2": "0x21059"
+        "LoD/PD2": "0x1B5E4"
+      },
+      "sizes": {
+        "LoD/PD2": 31
+      },
+      "name": "___vcrt_initialize",
+      "signature": "undefined4 ___vcrt_initialize(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n ___vcrt_initialize\n\nLibrary: Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0f7f0612760a750cf668844686b49619",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0f7f0612760a750cf668844686b49619",
+        "CFG": "d550e8e8abf2e6c7bc4606c0c80e2b95",
+        "PRO": "c5283dcac9e8b2784fa0a39b2095d52e"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f7f0612760a750cf668844686b49619"
+      }
+    },
+    "ddraw_MNE_ed23cc5d152d": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DB603"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1B603"
       },
       "sizes": {
         "LoD/PD2": 11
@@ -8624,11 +11626,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "eb819c34f4d2a44ec98fdeb5698b9145"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed23cc5d152d612501ab985b6cd1180b"
       }
     },
     "ddraw_MNE_4f0746490522": {
@@ -8656,11 +11658,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "189371146bf1cc4bee26f55e3c521007"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f074649052283c774e863fe7dd19dfd"
       }
     },
     "ddraw_MNE_cf4213f1c246": {
@@ -8688,11 +11690,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4a19a33d654978a38a753d8c14f15e92",
         "PRO": "91331d1f1991e937ceaf7dfbb15c79d6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cf4213f1c24622ef19ecd49d55cefa47"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8700,10 +11702,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_f23776c981f8": {
       "addresses": {
-        "LoD/PD2": "0x7B5E1064"
+        "LoD/PD2": "0x7B5DB630"
       },
       "rvas": {
-        "LoD/PD2": "0x21064"
+        "LoD/PD2": "0x1B630"
       },
       "sizes": {
         "LoD/PD2": 8
@@ -8719,11 +11721,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9936bf945c53947dc019533b5c2a93dc"
       },
       "display_name": "MNE_f23776c981f88f2e",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23776c981f88f2e44bd8f0f2628e6a8"
       }
     },
     "ddraw_MNE_b300650ab0d3": {
@@ -8751,11 +11753,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b9c82149cdd16061660dd363b4e6583f",
         "PRO": "20a5ac617918f2d5f9d43e4eaefe88bf"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b300650ab0d3880a59ed2b059ab57c68"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8782,11 +11784,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e882f2177fbd49dece7b16e5ac3db4c2"
       },
       "display_name": "MNE_eccdfb063781caaa",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eccdfb063781caaa4a1969b990dcc771"
       }
     },
     "ddraw_MNE_93ee3e3eb2ce": {
@@ -8814,11 +11816,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "a3aeaf905aa3ad7e698619e7e0a53ab0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "93ee3e3eb2ce656cea811f30fb40d90f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8849,11 +11851,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "f561a7f0556b83272ce83fefaa2afa8f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e79230fb5d8226b2a60868c040f71dd0"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8884,11 +11886,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "7cb8c0ceb6db4d2d4d59ed726e0ae8fa"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f947813812ec93633c2fecc27752b1c2"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8919,11 +11921,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "0af521bf77799b92478a53c73b54170b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4e42bd50f35d0553fe79ad066a458d16"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8954,11 +11956,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2555e203409cbc2d4a46fa3a51b3c448",
         "PRO": "8b3fc53930b8d2a22f50706489fda3f5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ccf83ea34632061926306461433c0d59"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8989,11 +11991,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c2e9ee5ed820ae707521004508ba08a5",
         "PRO": "bc292565adbc30423a8e31275dfd2093"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "139aa46103c4c8cf3c505bd54038ac0b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9024,11 +12026,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "aed4449cad9c680425c75a8429257195",
         "PRO": "3bdcad800a01b9d4d158cde761ed6021"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a0a473648b8f7515b3a6e14725dfec5f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9059,11 +12061,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7963783c46f7f1fdce8941a74f835cd3",
         "PRO": "feb5e4da27202216f588e33080baba01"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "73888be34c7db1ef75080530e6ab22e0"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9094,11 +12096,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "93b5915f2433b5c17d3d3c41471d9e68",
         "PRO": "c9358e18b15f644e3abcccb478ffe159"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "db025ad6cd47be53d30ec8c7bca7f4bc"
       }
     },
     "ddraw_MNE_33151eb86bb1": {
@@ -9126,11 +12128,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1b86eb4d0c96666303d04c2121496f71",
         "PRO": "a21c3b13c0e7b6effc53957f94da870f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "33151eb86bb15e376506f8fd3f98f0a7"
       }
     },
     "ddraw_MNE_8a4000f8351a": {
@@ -9158,11 +12160,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "bfa22c3fd387f22c29ee41d99ac17a74",
         "PRO": "0f0363cb914751146dff3eaafa477ba5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8a4000f8351a0aa341d88405e70888ae"
       }
     },
     "ddraw_MNE_5aebfd690502": {
@@ -9190,11 +12192,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
         "PRO": "3d280ee2d0c6a6dc1cfd2ab3788a04e3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5aebfd690502582bb101c5c92e5b328b"
       }
     },
     "ddraw_MNE_54a4c3410932": {
@@ -9222,11 +12224,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "64f001e958cb75886bced722d66d85ff",
         "PRO": "b98277cef56d8b14e8e694472ff0dddd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "54a4c3410932c862e3fcae53288bc46f"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -9253,11 +12255,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e2c2e3944b7b3ce3e10db1c7053272ea"
       },
       "display_name": "MNE_f540a5fe2f7f8ecb",
-      "basic_block_counts": {
-        "LoD/PD2": 31
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f540a5fe2f7f8ecb759901dc7a2ca7b5"
       }
     },
     "ddraw_MNE_4e06e7380fc7": {
@@ -9285,11 +12287,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "eedaec691a4b94e5a795ce955c5fac49",
         "PRO": "966492f9688da8ab50ae05e2117234a2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4e06e7380fc707b0ff36cbc7f3d9ce45"
       }
     },
     "ddraw_MNE_a1b9b8f8fc7a": {
@@ -9317,11 +12319,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4e847b889984c71922568191fca6fba0",
         "PRO": "9b6f02682c9d0f04a27fa2d04af579d5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1b9b8f8fc7ae83c82b85617ce060d2d"
       }
     },
     "ddraw_MNE_a904c848414f": {
@@ -9349,11 +12351,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "f83a6baa50c78b29bc04bd27cd1a1642"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a904c848414f374d1ec196b628bd46f8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9384,11 +12386,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "224b62b3b81cdcb332c7db381a251614",
         "PRO": "ac354c8fdc01972bf60bdd52ec6f5b39"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7b4b3138841b156b4afc1a1a7143b54"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9419,11 +12421,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "3fbb011ef990899690a325100d58c8bb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c43b47bac3ec2db7a3f12c66010e2c00"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9454,11 +12456,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fdd5a1378d33d71c1b536e590571b410",
         "PRO": "cd478ddafd7fb914a40b791ec9570b74"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8a66beed7791df002b527959d711671a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9485,11 +12487,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "ba95c5c19848da6c40263fb68139d805"
       },
       "display_name": "MNE_92df3e3d55638061",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "92df3e3d5563806163f4fd65bc64473b"
       }
     },
     "ddraw_STR_86d63883f665": {
@@ -9517,11 +12519,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f8c870eefbab8787b409b38bbefdf1fa",
         "PRO": "d160bd86152814200ccd1365f2aef327"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2f850af52e5619dd289848b599072e01"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9552,11 +12554,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "cdc070696849588c280e846bd6455d11",
         "PRO": "37cf435fd303f9c30b2db2406e985e0e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eaf931d29dc8da6bb026196fc1d2e9e9"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -9587,11 +12589,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3d7ac2c2df8a331cdbb21fa9dd404d13",
         "PRO": "2cae2cfc0ba2345e2a3321999ea4fee8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eb9855cfe3079a68ada2b749c94de074"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9599,10 +12601,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_681a8ee97e4f": {
       "addresses": {
-        "LoD/PD2": "0x7B5DBF27"
+        "LoD/PD2": "0x7B5DBEEC"
       },
       "rvas": {
-        "LoD/PD2": "0x1BF27"
+        "LoD/PD2": "0x1BEEC"
       },
       "sizes": {
         "LoD/PD2": 59
@@ -9622,11 +12624,46 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "611b0a2738bc697e80a73ce4243ca126",
         "PRO": "333f7e2c1bb1b6f2b923f18b7d52eb3b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "681a8ee97e4f188190975f017117c4d4"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DBF27": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DBF27"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1BF27"
+      },
+      "sizes": {
+        "LoD/PD2": 59
+      },
+      "name": "___vcrt_FlsGetValue",
+      "signature": "undefined ___vcrt_FlsGetValue(DWORD param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n ___vcrt_FlsGetValue\n\nLibrary: Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:681a8ee97e4f188190975f017117c4d4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "681a8ee97e4f188190975f017117c4d4",
+        "CFG": "611b0a2738bc697e80a73ce4243ca126",
+        "PRO": "d440eb3ab40778c2fd39ae1c18199400"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "681a8ee97e4f188190975f017117c4d4"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9657,11 +12694,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f16ee01fce64ac425fc77137800a8352",
         "PRO": "a19b18315a6beb3d1896c11b65907c84"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "75b65262791c6439417fa9c6957fb064"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9692,17 +12729,73 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e6239802a5b3e3dd1f1be91f0d5c374d",
         "PRO": "9da3e4be94b00952c0686e178272e07a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b76d7f5eef9a248524bd260d012b6bb2"
       },
       "param_counts": {
         "LoD/PD2": 3
       }
     },
     "ddraw_MNE_7108372b66ec": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DBFF0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1BFF0"
+      },
+      "sizes": {
+        "LoD/PD2": 1047
+      },
+      "method": "MNE",
+      "index": "MNE:7108372b66ecf751dc8d1b6817b95672",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7108372b66ecf751dc8d1b6817b95672",
+        "CFG": "41cf389ae808dd634a76453cb4632e3a",
+        "PRO": "19478db3a4835d3e3129152057a42b94"
+      },
+      "display_name": "MNE_7108372b66ecf751",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7108372b66ecf751dc8d1b6817b95672"
+      }
+    },
+    "ddraw_MNE_ec5b4b642d4b": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DC440"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1C440"
+      },
+      "sizes": {
+        "LoD/PD2": 283
+      },
+      "method": "MNE",
+      "index": "MNE:ec5b4b642d4b85db434e2d3ccd54c2db",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ec5b4b642d4b85db434e2d3ccd54c2db",
+        "CFG": "3adaf362770f882a81273e10cfe17469",
+        "PRO": "34ce6eac616e3c8259738b56d338a799"
+      },
+      "display_name": "MNE_ec5b4b642d4b85db",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ec5b4b642d4b85db434e2d3ccd54c2db"
+      }
+    },
+    "ddraw_ADDR_7B5DC570": {
       "addresses": {
         "LoD/PD2": "0x7B5DC570"
       },
@@ -9723,14 +12816,14 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "19478db3a4835d3e3129152057a42b94"
       },
       "display_name": "MNE_7108372b66ecf751",
-      "basic_block_counts": {
-        "LoD/PD2": 67
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7108372b66ecf751dc8d1b6817b95672"
       }
     },
-    "ddraw_MNE_ec5b4b642d4b": {
+    "ddraw_ADDR_7B5DC9C0": {
       "addresses": {
         "LoD/PD2": "0x7B5DC9C0"
       },
@@ -9751,11 +12844,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "34ce6eac616e3c8259738b56d338a799"
       },
       "display_name": "MNE_ec5b4b642d4b85db",
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ec5b4b642d4b85db434e2d3ccd54c2db"
       }
     },
     "ddraw_MNE_5bdf32358fe9": {
@@ -9783,11 +12876,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "109d2b82e9e9ac3d413587907cbc5595"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5bdf32358fe939b7c2846ad0d6c8a772"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9795,10 +12888,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_908f1f8c30b4": {
       "addresses": {
-        "LoD/PD2": "0x7B5DCC1C"
+        "LoD/PD2": "0x7B5DCC08"
       },
       "rvas": {
-        "LoD/PD2": "0x1CC1C"
+        "LoD/PD2": "0x1CC08"
       },
       "sizes": {
         "LoD/PD2": 20
@@ -9818,11 +12911,46 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "39c451e5b0a4a632f410854aa0b34b72"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "908f1f8c30b4f00a21e46093676dbdd5"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DCC1C": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DCC1C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CC1C"
+      },
+      "sizes": {
+        "LoD/PD2": 20
+      },
+      "name": "__unlock_file",
+      "signature": "void __unlock_file(FILE * _File)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __unlock_file\n\nLibraries: Visual Studio 2015 Release, Visual Studio 2017 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:908f1f8c30b4f00a21e46093676dbdd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "908f1f8c30b4f00a21e46093676dbdd5",
+        "CFG": null,
+        "PRO": "38565aeb46116c3ea07d3a8fca41ff5d"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "908f1f8c30b4f00a21e46093676dbdd5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9853,11 +12981,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "be7f16355ff9c30c66a370435fdd92f3",
         "PRO": "3532303b0392a372507013b8bf258578"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b7eec2cf06bdb518b774f61da9c93710"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9888,11 +13016,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "029277f067d24b7a94ae2d537d212d9b",
         "PRO": "186dc9d504796faab5a4b9841fc1c350"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "05f2493f35d285ebbbe2a3973dfd7422"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9900,10 +13028,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_f23ef2b3a6cf": {
       "addresses": {
-        "LoD/PD2": "0x7B5EC574"
+        "LoD/PD2": "0x7B5DCCDD"
       },
       "rvas": {
-        "LoD/PD2": "0x2C574"
+        "LoD/PD2": "0x1CCDD"
       },
       "sizes": {
         "LoD/PD2": 9
@@ -9919,11 +13047,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2498ff9c6a2525153309b5ca00b05e4d"
       },
       "display_name": "MNE_f23ef2b3a6cfdeb1",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_9a8b9a93c59a": {
@@ -9951,11 +13079,67 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "28618ade51d34cd3a73fde928d5db8b3",
         "PRO": "ef7bc8665e1e5cdc3569c28423a17535"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9a8b9a93c59ae1b814e66a6332149fa6"
+      }
+    },
+    "ddraw_ADDR_7B5DCD8B": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DCD8B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CD8B"
+      },
+      "sizes": {
+        "LoD/PD2": 10
+      },
+      "method": "MNE",
+      "index": "MNE:5f97d76a7bf7bad4437ec948fbad99b7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f97d76a7bf7bad4437ec948fbad99b7",
+        "CFG": null,
+        "PRO": "d0edc2d18dd9f527d9f01fd8908729fe"
+      },
+      "display_name": "MNE_5f97d76a7bf7bad4",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f97d76a7bf7bad4437ec948fbad99b7"
+      }
+    },
+    "ddraw_ADDR_7B5DCDB5": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DCDB5"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1CDB5"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "d717aeb8de4b061db4c4d76f1d7d5875"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_91957f0656c4": {
@@ -9983,11 +13167,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "653619e4a319a726dc0e3adfbb251df0",
         "PRO": "bafd774a4fde79e7b6fb1e2bcefee782"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 30
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "91957f0656c47a6657fee92b8588a5e0"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -10018,11 +13202,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "35cb04bc19b2020a12670858f7d7ed27",
         "PRO": "cfe9b834a049d0848aee6b3cc2db7c34"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0adebb35fc3b3d5501d585fa4a988ece"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10053,11 +13237,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "222735df8dfc53cb1d441784e5a92db2",
         "PRO": "cba6ca483afc68fd8aab0cbd87d3e115"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "abb5b4355cce293937c299d6a58aed0b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10088,11 +13272,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "6a404935b94a087862895fe28a9555e4",
         "PRO": "da9639f6944fb7db7e8ac6e720d5ec1f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ccf4e998cc0b60232fb7888996ea487e"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -10123,11 +13307,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "96866a4ce8b4f0299246ba15185965f9",
         "PRO": "1716b38cc0386c7326a5d70172f4d4f1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c99858c4a5bbc22f8d89f48aa5b20262"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10158,11 +13342,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7df46024a411ad10cf531d80120336fd",
         "PRO": "573a8602234b5d4ce9c512e341a02bb4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "596efddb97a4a9da89ab849b30b01096"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -10193,11 +13377,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "82c9db7bc006b6bc92d0b6b78c419da1",
         "PRO": "bb93a25d83b0f45418337f54f9660c43"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f40ead35fca7e6612f43557738590f2c"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -10228,11 +13412,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "55d660ebbef99c0baa319e016760b8fc",
         "PRO": "cf290590b1eb5a3fb6c9b9250c71a023"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9c25a443adef76c63f6924c9f637f2d9"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -10263,11 +13447,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "f97a9154fadba562be765f4aea52db38"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f553ce36c9058eea55088a2ebb507c8e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10298,11 +13482,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "54088875c235da8ed05a5b3f293e8dc0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9d9f70f57930ce2a77ba4443ef173234"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -10333,11 +13517,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "c470f9d264489d4727c1c02d755a0d6e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed58a0ff3c606307bc1235bed9db252b"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -10368,11 +13552,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ef353e1a6ec60e54c1a32cd883661c5e",
         "PRO": "1081aa03644248e26cea49d0040c45e4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "17b7b1c804a67ae6c2471d7ed2f53674"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10403,11 +13587,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "002eb34f3385b61d24e7dcf4733a37de"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e57a862d068ef6231ee9f8220d5944d1"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10438,11 +13622,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "8444bf02dbdd671b788a12cfce4a0736"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "88fbbe9a16942a364386b02d8d0e9359"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10473,11 +13657,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a11e1db77abf011ecabe20978423fd49",
         "PRO": "07d850c55b4cf0d9aa8d2be67819f022"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "607328449541bc673136c838bda6efb2"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10508,11 +13692,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "37df6770e2b24dae8705aa111e96e769",
         "PRO": "44716b4333a15d0793b72dd240531c0f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe8ffb1f97dd4aa2770ff3f8c16f3e4e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10543,11 +13727,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7363f19606dff9806b20dbe179c35035",
         "PRO": "b7f9a580ad4dc104d356747c7cbe2d84"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "286e69ef51db9b984a4779711a349aa7"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10578,11 +13762,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7363f19606dff9806b20dbe179c35035",
         "PRO": "1dec18f827501f2643288922f5fc2fe4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "de98e0212c96a9917ec93ba9d7f31344"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10613,11 +13797,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "6b5dc3cf4304fdf9cdc7a09ce0c64201",
         "PRO": "f8c6941bc6d9fed6b3318685e5428b5d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "924352892dc253e3a04dde768ad1d1e4"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10648,11 +13832,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "cf80ab0850165be4213868a196a0d27c",
         "PRO": "3363749a0fc0bb020e331c21cc7c89d7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a4a6d8dbca9c96b7b2de49fbef905bf1"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10683,11 +13867,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ebedb8faf55908534e596ba5d47d40c7",
         "PRO": "3e018f2be7a655bfa05b749d57d95efe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a4e7fb22974403840b64afbbb3a4f3b4"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10718,11 +13902,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "bc042e4f56c5c862716dd36277cac9ef",
         "PRO": "13e15c9b8dba2779b00a998555a7d28d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "529a66af17416fb5e514351932a58f98"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10753,11 +13937,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "0259240c37ec798eb4c331e322458380",
         "PRO": "ed61cd08bf81d582e4be5fcf88598d24"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c4f399c4d080baa171d05ded3399dac"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10788,11 +13972,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2c30d1f57bc306ed0da51afaa69f5e4d",
         "PRO": "960e5fad6adef79b14b477e9dcf5e46b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c984ad432333e83f00a775f5d4b10152"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10823,11 +14007,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "28d0b8fd7a3221c5dbae0243f64a5a21",
         "PRO": "02fc2d39a00ae5939d7371f68c2471ed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 44
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "63577c29e0fa5eca5cf58e6490d57422"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10858,11 +14042,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "280eac6a96dcc8fe32cdc1d00de55ee9",
         "PRO": "32afb2f4074fb63add422c04626bf4ad"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 71
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bd337fd5a525530067c8601875a8f42d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10893,11 +14077,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c32f2e2594006a57dc36a2f597953e46",
         "PRO": "df4ae6c75cb0d5bcde0c8c3d6efd07c1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4b81b87389302d44413e920911c5358"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10928,11 +14112,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "759049959aa241f2209341e3cc371024",
         "PRO": "9ae12f8545b4b5c41ab18d6bfc964705"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b0601d6062098025c0ccb0b8ab29862"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10963,11 +14147,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9ddb4d9027f5333831a62fb85fa25472",
         "PRO": "28e395f992ef083937dea41b0f3022f7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "80c171a8768be8a3fe66f80736a91ca5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10998,11 +14182,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fb80bf8a1d24e07fad93b6de4de39d48",
         "PRO": "902e588e970f555b47160b6c28783d48"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 32
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ab8099dac7129d643de59da0c23f40df"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11033,11 +14217,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "230ca6abb5ef4c50933cbee9214ed8ef",
         "PRO": "b39f8917b609500a26f67693d67c7891"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1ef4e5888f5eb6b0a3fe24e0e4994ff"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11068,11 +14252,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c9ffd8784e80a829da36970bd982984b",
         "PRO": "d06a2a4b9b7f9b93948dfd92c46b5178"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 36
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e5eac2846b4f96eef643cd97d2d54e75"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11103,11 +14287,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "62cae694465275eb037c727c10e795e0",
         "PRO": "8fad25c4c2cb85d5212291921042dfe7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "abb81ef0e183b255ca36f070ceadc3c7"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11138,11 +14322,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ebedb8faf55908534e596ba5d47d40c7",
         "PRO": "538cb4013dabc1816ac191e7575879fc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6d86329700dd4b5850aa12abb45f8562"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11173,11 +14357,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "b3c456a4d35b8809cd63890c2bde827b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7e8565bdb4ead7d58d7e9e6e95113d42"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11208,11 +14392,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "5f64f01414d5033654d7f95e708d140a",
         "PRO": "4359f58cf3fd7c513690a3d2ef70071c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a00bf5e8aa69f97004948dbf707caefb"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11243,11 +14427,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
         "PRO": "12dc56bff2fa6d3cd1e01e95caf5a13b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "43355ad0775804b8bdd4608bfe6a83b0"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11278,11 +14462,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9cae1bd12ad16b2bfee3edc8e158e998",
         "PRO": "fe4fa2876f4e9883f743ba2d5e7a40b2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c258bdfe805d98ae1e6b72e95dd87965"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11313,11 +14497,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "79bdf2bd2ccc08e712e0ee2ea2f6f10a",
         "PRO": "60960a05670d48d794d0e011e0568d60"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c451f2bddc490c2b0d4debd20eed6c8e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11348,11 +14532,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4ddb55ec855b8ed9fa4cf0c685f0b41e",
         "PRO": "ed6c0b65f88d86f848d48c50f0952886"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ebbdd5cc70ace31ee434a82c80bef42d"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -11383,11 +14567,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "ce56a35f16699dbea60c2fd57791df17"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1366cdb9f983834987fde4599e5576c0"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -11418,11 +14602,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "2b150ca6092e38508a30f06f8129831a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f22ca4f8810386bf00f1b3000a9f7be"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11453,11 +14637,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7b0b6da23451bd04d9b49eb3cf8a27c5",
         "PRO": "26a313a542bc7b37111b35c6ee8ab4a0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 50
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a5f6635ac248ddba8c71e643f0a81f80"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -11488,11 +14672,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "caf13c7b6a64be172e5e0aed15b87765",
         "PRO": "7080f65d4051c3ecb062e5994bd36465"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "919358e3f2b1412bef218f479a615c19"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11523,11 +14707,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "8e20a9cffcb0944018e10f34f00758de"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cc720828b6d1cc7db745e5bf0f1f9176"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -11558,11 +14742,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "782ce5006ee7d6c9c45a4019c9674507",
         "PRO": "7512d896e852491c699dd1f38170f73e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 35
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c09a404c09b60148d7501f511aba84d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11593,11 +14777,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3a585170bc4bf7b3485c5d93cab06b1b",
         "PRO": "798633285bc0ceaebbbae72074467191"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1c262ac8004107bdfdaa0a190867c7a1"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11628,11 +14812,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "81d8574e2d2049b765ad2be3884d9ced",
         "PRO": "2d827e392e4ea421383f8abacc502301"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7c85e4e840b78e6e87f230b46ff82755"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -11663,11 +14847,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9a4406e0d468fb5404184f9593b4fc0f",
         "PRO": "c8f56239a2d31d0f9f30d648efd687a6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5c4e65e08619d525c85c70eb0988bf45"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11698,11 +14882,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "51e3fdb674ccdc60f6f6a9328f0a9b74",
         "PRO": "6b53751d8e109c1ac4266a9449d44a21"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a25f4bbc7317d75b5eff23523beabb0c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11733,11 +14917,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e9d94f83504c15a5ddf051c24f01041f",
         "PRO": "fc8269feee9bb1862e9ce4925f30d35e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dd88fe961772480c0e7dae567d206500"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11768,14 +14952,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c0acb31b6629c28a29c3d1d8bdb2ec4f",
         "PRO": "26b3f7fc16c5a0c954fd34d3e8e21ad0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "92272c9a86138fcd93063d570c048332"
+      },
       "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DE747": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DE747"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1E747"
+      },
+      "sizes": {
+        "LoD/PD2": 10
+      },
+      "method": "MNE",
+      "index": "MNE:5f97d76a7bf7bad4437ec948fbad99b7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f97d76a7bf7bad4437ec948fbad99b7",
+        "CFG": null,
+        "PRO": "364a9bbc915d4eeed676f06824785be8"
+      },
+      "display_name": "MNE_5f97d76a7bf7bad4",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f97d76a7bf7bad4437ec948fbad99b7"
       }
     },
     "ddraw_MNE_087449b71454": {
@@ -11803,11 +15015,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c32f2e2594006a57dc36a2f597953e46",
         "PRO": "93cec5cd0bac37f54d8e0ea346ba296a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "087449b71454ffe204d283df307fddd1"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11838,11 +15050,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "241a51ad8427d05143f2dd2ec2b0902e",
         "PRO": "c726f1aa4bcd1f450cd69eee63f8c553"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5820f8d9900a31f7627de2686d0dd9c3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11873,11 +15085,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "396d00fd3afc979690611295df0969fd",
         "PRO": "2c3725a1e3a0c5736dbb5ce2e95f13fe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b71b5c9873ef4a2990ae9762b6cf621d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11908,11 +15120,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b09f68322a64ba670b09faba059b00de",
         "PRO": "b6755b3b3595c8d5070252d3c794b51d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 25
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2c5aa4afec21ccf4f623a862da277727"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11920,10 +15132,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_f97d159a7b72": {
       "addresses": {
-        "LoD/PD2": "0x7B5EC625"
+        "LoD/PD2": "0x7B5DEC30"
       },
       "rvas": {
-        "LoD/PD2": "0x2C625"
+        "LoD/PD2": "0x1EC30"
       },
       "sizes": {
         "LoD/PD2": 11
@@ -11939,11 +15151,39 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2bddf1619ca1bd514f7c978b779b3bb0"
       },
       "display_name": "MNE_f97d159a7b72e6f6",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
+      }
+    },
+    "ddraw_ADDR_7B5DEC3B": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DEC3B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1EC3B"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "b895ba804f24e2a73c465e53d51beee9"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_ffe070bfcd14": {
@@ -11971,11 +15211,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3c2c2a488caa49d997b99da92039569f",
         "PRO": "b57848bf2f1c91072372ba89a918de97"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ffe070bfcd14eafb2dc2a191adcb5554"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12002,19 +15242,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "472e74e2eeb831de326b34e34699db21"
       },
       "display_name": "MNE_5f006f56c1a04e4c",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f006f56c1a04e4c44839f18d6a5e82a"
       }
     },
     "ddraw_MNE_34260d5eec81": {
       "addresses": {
-        "LoD/PD2": "0x7B5ECAF0"
+        "LoD/PD2": "0x7B5DED07"
       },
       "rvas": {
-        "LoD/PD2": "0x2CAF0"
+        "LoD/PD2": "0x1ED07"
       },
       "sizes": {
         "LoD/PD2": 23
@@ -12034,11 +15274,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "82d09e0939d44af37fe00c434f0c559c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "34260d5eec8139d14f8eaa440ecdab22"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12069,11 +15309,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "33e562b004b3d2a627765377cef38829",
         "PRO": "214ef9785803f8b809c0beefe182643f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5354f6eab5b7cfa80c0febbbe1912f6b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -12104,14 +15344,70 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "aa007930074ac4d2a32e091db85fe115",
         "PRO": "dbbf58b3a440cd63c0d66aca1e65f5f2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b58110b057c637801065057ae723969d"
+      },
       "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DEE0A": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DEE0A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1EE0A"
+      },
+      "sizes": {
+        "LoD/PD2": 10
+      },
+      "method": "MNE",
+      "index": "MNE:5f97d76a7bf7bad4437ec948fbad99b7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f97d76a7bf7bad4437ec948fbad99b7",
+        "CFG": null,
+        "PRO": "f8b93a7c66e3b6875a68d9b5efb71b20"
+      },
+      "display_name": "MNE_5f97d76a7bf7bad4",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f97d76a7bf7bad4437ec948fbad99b7"
+      }
+    },
+    "ddraw_ADDR_7B5DEE14": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DEE14"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1EE14"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "9478b7babdc150fd354acc53484ab858"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_418bf02e14d4": {
@@ -12139,11 +15435,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "99f49a60a0c2f69a50e2f623017df128",
         "PRO": "503cc9d3100686c9cde7a819bc421353"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "418bf02e14d4a51e21ae7ab4d5afb1e4"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12174,14 +15470,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "da65fda72f7be9045d1b6374d21384af",
         "PRO": "be643341ea3a15c471a3189edbe74a2b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "02fc7287c438f729599a5b99d805b600"
+      },
       "param_counts": {
         "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5DEF1D": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DEF1D"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1EF1D"
+      },
+      "sizes": {
+        "LoD/PD2": 10
+      },
+      "method": "MNE",
+      "index": "MNE:5f97d76a7bf7bad4437ec948fbad99b7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f97d76a7bf7bad4437ec948fbad99b7",
+        "CFG": null,
+        "PRO": "b3f5ecade38e11a92a792e694393d568"
+      },
+      "display_name": "MNE_5f97d76a7bf7bad4",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f97d76a7bf7bad4437ec948fbad99b7"
       }
     },
     "ddraw_MNE_cbdc0b651fdd": {
@@ -12209,11 +15533,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b6d31246179d73273008c43260a60774",
         "PRO": "23c536ab33e486dfce54270cd43a775c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cbdc0b651fdd5562977c3b02ca9b0f51"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12244,11 +15568,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a824c2fc04f2db2c84e29e86ce53d71c",
         "PRO": "b1476ea4dd599a173f0feb2cc4710192"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3bdd726aa62e776b61be4ed3c1c9a591"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12279,11 +15603,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "36bc8807461e39b8b41810108e64a1e6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9cc811c916bc23f32d33c6e287fdd01f"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12291,10 +15615,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_6d7f2f17dab9": {
       "addresses": {
-        "LoD/PD2": "0x7B5E0D41"
+        "LoD/PD2": "0x7B5DF0F4"
       },
       "rvas": {
-        "LoD/PD2": "0x20D41"
+        "LoD/PD2": "0x1F0F4"
       },
       "sizes": {
         "LoD/PD2": 66
@@ -12314,11 +15638,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "ae38c99d51c4cbbc0cb03707ea6c6332"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6d7f2f17dab91adb42f80d2b0fecd7ac"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -12326,10 +15650,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_3a54b0e12c44": {
       "addresses": {
-        "LoD/PD2": "0x7B5E8D38"
+        "LoD/PD2": "0x7B5DF139"
       },
       "rvas": {
-        "LoD/PD2": "0x28D38"
+        "LoD/PD2": "0x1F139"
       },
       "sizes": {
         "LoD/PD2": 12
@@ -12345,19 +15669,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "dca8c8d860ece87214106bf7b48b1493"
       },
       "display_name": "MNE_3a54b0e12c446658",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "ddraw_MNE_f42b4386967d": {
       "addresses": {
-        "LoD/PD2": "0x7B5E8D44"
+        "LoD/PD2": "0x7B5DF145"
       },
       "rvas": {
-        "LoD/PD2": "0x28D44"
+        "LoD/PD2": "0x1F145"
       },
       "sizes": {
         "LoD/PD2": 40
@@ -12377,11 +15701,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12412,11 +15736,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "4cffe6c5a1d292585f179fbcc8634db1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d99e200b6972d9e8f46a2d5125253934"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -12447,11 +15771,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "05daa9ef81ebb24e4f12f6fca9c6e5b3",
         "PRO": "d4181bafc9d24457b820fa167cddfae0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 40
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e25ed4f0fbc8d810cc8caf5b6f361188"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -12482,14 +15806,48 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1ced35eb429bb0c4854f922ecede7534",
         "PRO": "6eb51911362210ce80a158a47ac11409"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7e739736cd145f661e8be6e9c1805c17"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "ddraw_ADDR_7B5DF384": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DF384"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1F384"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "FID_conflict:_free",
+      "signature": "void FID_conflict:_free(void * _Memory)",
+      "calling_convention": "__cdecl",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "5977971adbc64047ae623de2a525e7ee"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      },
       "param_counts": {
-        "LoD/PD2": 4
+        "LoD/PD2": 1
       }
     },
     "ddraw_MNE_4cec8fec05b4": {
@@ -12517,11 +15875,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3065e85dac841734a0dfce2fa27bf202",
         "PRO": "478624ac2eb3107fde965b5612adb451"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 47
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4cec8fec05b41260ee18419c825a172d"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -12529,10 +15887,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_91d4b1ebb9ff": {
       "addresses": {
-        "LoD/PD2": "0x7B5E2FE5"
+        "LoD/PD2": "0x7B5DF555"
       },
       "rvas": {
-        "LoD/PD2": "0x22FE5"
+        "LoD/PD2": "0x1F555"
       },
       "sizes": {
         "LoD/PD2": 29
@@ -12552,11 +15910,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "ce6f23e94065245356dcc3da7043176a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "91d4b1ebb9ff1951aed60088e0d53511"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -12587,11 +15945,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4c12730512cec0c20447aa327c69ef10",
         "PRO": "72538c620d5b57a8cf2ad59eed9d3890"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "38134cc871f7429607739b84108a4207"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -12599,10 +15957,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_d4c2d26a88b1": {
       "addresses": {
-        "LoD/PD2": "0x7B5E4D2C"
+        "LoD/PD2": "0x7B5DF5FD"
       },
       "rvas": {
-        "LoD/PD2": "0x24D2C"
+        "LoD/PD2": "0x1F5FD"
       },
       "sizes": {
         "LoD/PD2": 8
@@ -12618,11 +15976,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "1272da9d1f513a23c2bd9e7a9b763bd9"
       },
       "display_name": "MNE_d4c2d26a88b113bd",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
     "ddraw_MNE_dba49a9c71c9": {
@@ -12650,14 +16008,70 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8f8c300876570b5d8e434f76a3ca5407",
         "PRO": "cdf88f293ebb89243786763a3f153b4e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dba49a9c71c970d66b5110c04eefbf85"
+      },
       "param_counts": {
         "LoD/PD2": 4
+      }
+    },
+    "ddraw_ADDR_7B5DF686": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DF686"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1F686"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "216f9e17eee6fb2299623fdbb99d0151"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
+      }
+    },
+    "ddraw_ADDR_7B5DF691": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DF691"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1F691"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "3b3a0109fac5bbb093a5972dbbab9910"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_f0bdb3ee7454": {
@@ -12685,11 +16099,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1da9a6079fe9a6cd1ec58251269f2d0d",
         "PRO": "5ef603cef5d8def49898fbdfb2060af8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f0bdb3ee7454db4cd233bd999ed034e6"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -12720,11 +16134,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "cca1b47b1ba06808af4b0047cbd05e3d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "575b9b20bfdb4d1f844f408453a44eb5"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -12755,11 +16169,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "458cc3f2e2729af8fe22b4617c6fde63",
         "PRO": "18c8800e70c80d899c329dfaaf19c5c9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e53893fc2cff00236098c49b8306c807"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12790,11 +16204,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "9786e8175149aa9caa1a0bab81397471"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "555d244777ce2c92e850d743ae228c2c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12825,11 +16239,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "53c6e5f63a6063bc545cb43981ed4884",
         "PRO": "806dac38804a7d4aa030b8dc2dfe2de4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "385f15119c063a121365c9fdf15f47e5"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12860,11 +16274,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "bfa22c3fd387f22c29ee41d99ac17a74",
         "PRO": "4318fc90fcc6ead69fbb66c4635e899a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "66ed201f9848f0a1b37f9977a0213235"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12895,11 +16309,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "139d0b8970e8e864b3f0abfce3f0ecbb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "221e519fac71c6a2bf961a9ffd4866ec"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12930,11 +16344,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2555e203409cbc2d4a46fa3a51b3c448",
         "PRO": "b8d96560702ddd004c8f40c25674998b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "05151b4e3cc495314167871dd133b956"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -12965,11 +16379,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e30f73eac0b086dad9bfe0d9c1bab746",
         "PRO": "2853581d92ece85409c7cbe6a0704ef7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd64fe25b9530fdd6de2bd3026b93f7f"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13000,11 +16414,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "375dcea6814c5d05c266588c34691f39",
         "PRO": "7ba54acd9e4f553f9fd2afc48b3884ae"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "adf4422e7656cc61a9a14d7d0f44d022"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13035,11 +16449,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f0961d10d45b799011fad765e55f03bd",
         "PRO": "ae9805c76334c1d770aabc5700f03341"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 51
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2eca058641af641b82e1cc913b0c6e87"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13070,14 +16484,112 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "90c4f17418cec0d76ed106d2d34ca67f",
         "PRO": "5a70e6c6d6507d7b0d11f6f567e74bcd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "92004600fcce4438f429245ec503a569"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5DFD6A": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DFD6A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1FD6A"
+      },
+      "sizes": {
+        "LoD/PD2": 66
+      },
+      "name": "operator()<class_<lambda_b0cac3301889906f8da68b04e3d9a7f4>,class_<lambda_9a20e10065b92b5193c3597a66cba9d4>&,class_<lambda_24b35df97fd4c1fecac72a72d95cc146>_>",
+      "signature": "int operator()<class_<lambda_b0cac3301889906f8da68b04e3d9a7f4>,class_<lambda_9a20e10065b92b5193c3597a66cba9d4>&,class_<lambda_24b35df97fd4c1fecac72a72d95cc146>_>(__crt_seh_guarded_call<int> * this, <lambda_b0cac3301889906f8da68b04e3d9a7f4> * param_1, <lambda_9a20e10065b92b5193c3597a66cba9d4> * param_2, <lambda_24b35df97fd4c1fecac72a72d95cc146> * param_3)",
+      "calling_convention": "__thiscall",
+      "comment": "Library Function - Single Match\n public: int __thiscall __crt_seh_guarded_call<int>::operator()<class <lambda_b0cac3301889906f8da68b04e3d9a7f4>,class <lambda_9a20e10065b92b5193c3597a66cba9d4> &,class <lambda_24b35df97fd4c1fecac72a72d95cc146> >(class <lambda_b0cac3301889906f8da68b04e3d9a7f4> &&,class <lambda_9a20e10065b92b5193c3597a66cba9d4> &,class <lambda_24b35df97fd4c1fecac72a72d95cc146> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:6d7f2f17dab91adb42f80d2b0fecd7ac",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6d7f2f17dab91adb42f80d2b0fecd7ac",
+        "CFG": null,
+        "PRO": "516f32ab4c4fc915f802a9d345709eb4"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6d7f2f17dab91adb42f80d2b0fecd7ac"
+      },
       "param_counts": {
-        "LoD/PD2": 1
+        "LoD/PD2": 4
+      }
+    },
+    "ddraw_ADDR_7B5DFDAF": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DFDAF"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1FDAF"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "840731cc97c4d7c202275e6f4dfc38c0"
+      },
+      "display_name": "MNE_3a54b0e12c446658",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      }
+    },
+    "ddraw_ADDR_7B5DFDBB": {
+      "addresses": {
+        "LoD/PD2": "0x7B5DFDBB"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1FDBB"
+      },
+      "sizes": {
+        "LoD/PD2": 40
+      },
+      "name": "__acrt_lock_stream_and_call<class_<lambda_9a20e10065b92b5193c3597a66cba9d4>_>",
+      "signature": "int __acrt_lock_stream_and_call<class_<lambda_9a20e10065b92b5193c3597a66cba9d4>_>(_iobuf * param_1, <lambda_9a20e10065b92b5193c3597a66cba9d4> * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n int __cdecl __acrt_lock_stream_and_call<class <lambda_9a20e10065b92b5193c3597a66cba9d4> >(struct _iobuf * const,class <lambda_9a20e10065b92b5193c3597a66cba9d4> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f42b4386967dee7286133d84d2228005",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f42b4386967dee7286133d84d2228005",
+        "CFG": null,
+        "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
       }
     },
     "ddraw_MNE_846953b38467": {
@@ -13105,11 +16617,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "cf0f530a943aff4dc3254e73fb181b91"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "846953b3846706da77739fa70e33d5c3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13140,11 +16652,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2720b92afcc9c6f26557b7f2bb725511",
         "PRO": "30dbd70305ea46e012951a4b7bd6d55b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "44e5c1f1263cb8ed3a96dafcb9e15852"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13175,11 +16687,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2bdbe5d6049f47ae5e33650ee79d4920",
         "PRO": "35db60ce6e80c4211f935a8d46dd1250"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6515e1acc8db937d0f5bde2a45b19a1b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13210,11 +16722,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
         "PRO": "a38a4100d657833fc00e18e6b5a28d3c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a096c95743fc6b7855a74340ae658a6"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -13245,11 +16757,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "590801737cfff6c09fda065d475e0b6e",
         "PRO": "ccee889f8d437b854ed4f7c669f45e30"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 66
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "97d4aeba9576827915d211f71cee5e42"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -13280,11 +16792,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "59064043b32d878adeb9b6c7844d59e3",
         "PRO": "e40a5a94a8c954e29e321aa54bfce005"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3802205d93db0ae8cab096b1605f9833"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13315,11 +16827,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "03f308f314f1c19e606188030f616e39"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5e093720c69d110cde5d08cef9a8d93b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13350,11 +16862,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "4fe260e9273d15a964d5d40b483e7aed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7f9a858ff93b266187db11034e9ab038"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13385,14 +16897,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "24b4e7feb2b63e7074c7e017420fab3d",
         "PRO": "2b63923a9e178262c9223c80ce6bc848"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "78e3fdeed317ac66ba5177d03c813177"
+      },
       "param_counts": {
         "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5E02F1": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E02F1"
+      },
+      "rvas": {
+        "LoD/PD2": "0x202F1"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "13383cff60edb951508dbfa38b68b102"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_d31faa500104": {
@@ -13420,11 +16960,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b724ed9bc22393fb1bfd3fcd83003d6f",
         "PRO": "796755a3e6200e6139312963829209ce"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d31faa50010448b70095a7e408920205"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13455,11 +16995,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4fd7bf8257cee5c1dad93f2a97117a1a",
         "PRO": "26ac4eed39441b4c866c54ea05e1cb5d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "11d02e3d9c65c56ad764342d6bc077e3"
       }
     },
     "ddraw_STR_9fe208553bf3": {
@@ -13487,11 +17027,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8afe1dbf942c6c117dd7d41a44c33921",
         "PRO": "41008b72e543a7397931b76582a5d1aa"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "61605f8acdf6e4b0aaf8b814bfc3ce4f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13518,19 +17058,19 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "bd8f46f37e41ec8b85fe716f0ea0b8e4"
       },
       "display_name": "MNE_4f35c0d25ee4bb55",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f35c0d25ee4bb55f411e4f6edc16738"
       }
     },
     "ddraw_MNE_47dfd1c23f58": {
       "addresses": {
-        "LoD/PD2": "0x7B5E0429"
+        "LoD/PD2": "0x7B5E040D"
       },
       "rvas": {
-        "LoD/PD2": "0x20429"
+        "LoD/PD2": "0x2040D"
       },
       "sizes": {
         "LoD/PD2": 22
@@ -13550,11 +17090,74 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "706fdd2494f3e9441e6cf5a65ee91cfd"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "47dfd1c23f58f1be331a84c804541d54"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5E0423": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E0423"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20423"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "4c7614d7d01c892d7ac9b7391ea23e3e"
+      },
+      "display_name": "MNE_7b4de9f0cf357b11",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "ddraw_ADDR_7B5E0429": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E0429"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20429"
+      },
+      "sizes": {
+        "LoD/PD2": 22
+      },
+      "name": "_exit",
+      "signature": "void _exit(int _Code)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _exit\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:47dfd1c23f58f1be331a84c804541d54",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "47dfd1c23f58f1be331a84c804541d54",
+        "CFG": null,
+        "PRO": "09fc010ccb45189ecea4a130458eedfe"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "47dfd1c23f58f1be331a84c804541d54"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13585,11 +17188,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "6c3b0aa07951c5e00ecf5c0f67c56cb3",
         "PRO": "ed61634cba2b311313d08b494b3ad38d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "01645b4c017a7d3f3b8649103a41fb75"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13597,10 +17200,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_c713d6c7eb52": {
       "addresses": {
-        "LoD/PD2": "0x7B5E9052"
+        "LoD/PD2": "0x7B5E0470"
       },
       "rvas": {
-        "LoD/PD2": "0x29052"
+        "LoD/PD2": "0x20470"
       },
       "sizes": {
         "LoD/PD2": 20
@@ -13616,11 +17219,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d0ce96f201cfed7f9d3a8dc7a7b22dd2"
       },
       "display_name": "MNE_c713d6c7eb52f694",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c713d6c7eb52f6942a3f8f972dc327ff"
       }
     },
     "ddraw_MNE_64d7ef4c2f51": {
@@ -13648,11 +17251,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fe7a89927a61547e116ef2fc1ca21304",
         "PRO": "0e69fc160fd4508274d1cbe73729134b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "64d7ef4c2f5168cbad7fa21e46fc7d98"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13683,11 +17286,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "6646aa62dafc3f6e73c6743164c41cd6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8769a922991188dd2a6a6a93524055e7"
+      }
+    },
+    "ddraw_ADDR_7B5E0511": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E0511"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20511"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "245f7c06ac35c48afdbd1d1196e8c4bc"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_28d00bb6a01c": {
@@ -13715,11 +17346,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8bbfe2737ef55f3a9a35ae1b43be54c6",
         "PRO": "8bf4009e24805013181031adc47cb21e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "28d00bb6a01cf52af280033a78fdd434"
       }
     },
     "ddraw_MNE_98b28be0dc5b": {
@@ -13747,11 +17378,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8f87c31656cb4d867ca492e31cb2d365",
         "PRO": "e4a5ea578451e8b13d605508ca760b2d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "98b28be0dc5b664156759eeac69a635f"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13782,11 +17413,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "40296294f7fa21941e4afb765a770226",
         "PRO": "2ba7447330f4e290bda2fcf8bb1e80b2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7384fd60dc9e01d6cf9d77a07e2c28f9"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13817,11 +17448,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c0911ab13e8db6d703c6ff224f1b4a1f",
         "PRO": "da094c62a2dbfa36ee35a0e7d978c724"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8c4c977ffca90d6427f5c9eec0eb9793"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13852,11 +17483,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3dfcba0f94446384c44eb87261fe48c5",
         "PRO": "d1467cbe6aed4e3816705e5e46173cf6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 41
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3fceafda360e1efc660358306058f755"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13887,11 +17518,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b7d6bb5d1ec0f4f17c88e193257424c9",
         "PRO": "692fcae8f94eb7ab76d9a6c1f27e5f06"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0fed4f161669d712d0aabae9f07a1ed9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13922,11 +17553,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a9753faed88ad00c65e7e4d67b64ce3e",
         "PRO": "b2cfbe1a6eb42363023e681099bb0c44"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 61
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4572a84f106c0a529ac11a42a6bf323"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -13957,14 +17588,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4350c615cd6bfbc25746920c926e53d3",
         "PRO": "cd03ac6e146bf8e1870c77ab9511811a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6a7ce3bf8c077c37a9dddab8cdae6f29"
+      },
       "param_counts": {
         "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5E0A78": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E0A78"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20A78"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "72d87c61423a76666f78c5c03d597ad3"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_55bf3d6c73fe": {
@@ -13992,11 +17651,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ee0d80f71fe25ba531bebb6d2d789b33",
         "PRO": "c13f32a979b4ac331d926d367e1be782"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "55bf3d6c73fec50d11d65a1dfeeba401"
       }
     },
     "ddraw_MNE_48d1dffc6ba2": {
@@ -14024,11 +17683,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "589f8f9c21df3f5993611088ff68158e",
         "PRO": "dd50cdfe5d72e44efa0b59bb7391ced3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "48d1dffc6ba221a8127b6b10f074df21"
       }
     },
     "ddraw_MNE_6bf94aeda060": {
@@ -14056,11 +17715,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d4f05d4722270444fef4e59db99cf596",
         "PRO": "83ee153b52cbe4c82769ffc62b53fac5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6bf94aeda0602a87b25aa198e5208af3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14091,11 +17750,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ee0d80f71fe25ba531bebb6d2d789b33",
         "PRO": "3716365673b07998d1fef4da67050806"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c1af2f07be1735e6baff61104a92ae2c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14126,11 +17785,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1d2d3c66cf1b7fb5be7b3a2985444e8c",
         "PRO": "af24363dfccee27b3ae5325a48e8fb9f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bfb19f1621a651e3b2012e3c40b9aa69"
       }
     },
     "ddraw_MNE_72440c2f9988": {
@@ -14158,17 +17817,52 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b724ed9bc22393fb1bfd3fcd83003d6f",
         "PRO": "4e99b264e64bb9eebf8b9897b7f71c43"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "72440c2f99888d0be4a2a9c98365eff6"
       },
       "param_counts": {
         "LoD/PD2": 2
       }
     },
     "ddraw_MNE_26d45e2f7abd": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E0CCA"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20CCA"
+      },
+      "sizes": {
+        "LoD/PD2": 27
+      },
+      "name": "uninitialize_environment_internal<>",
+      "signature": "undefined uninitialize_environment_internal<>(undefined4 * param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Multiple Matches With Same Base Name\n void __cdecl uninitialize_environment_internal<char>(char * * &)\n void __cdecl uninitialize_environment_internal<wchar_t>(wchar_t * * &)\n\nLibraries: Visual Studio 2015 Release, Visual Studio 2017 Release, Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:26d45e2f7abdeb4dbe66acb4796522e1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "26d45e2f7abdeb4dbe66acb4796522e1",
+        "CFG": "f09da8ab2298e4bafedfaee404f68269",
+        "PRO": "38fbb9f391eb382cb687adc6e556810a"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "26d45e2f7abdeb4dbe66acb4796522e1"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5E0CE5": {
       "addresses": {
         "LoD/PD2": "0x7B5E0CE5"
       },
@@ -14191,16 +17885,47 @@ var FUNCTIONS_ddraw_dll = {
         "API": null,
         "MNE": "26d45e2f7abdeb4dbe66acb4796522e1",
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
-        "PRO": "38fbb9f391eb382cb687adc6e556810a"
-      },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+        "PRO": "e9ddb4473ec3a23c9451f8fb184e4123"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "26d45e2f7abdeb4dbe66acb4796522e1"
+      },
       "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5E0D00": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E0D00"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20D00"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "common_get_or_create_environment_nolock<char>",
+      "signature": "char * * common_get_or_create_environment_nolock<char>(void)",
+      "calling_convention": "__cdecl",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "20d1ded948feee310f96e8f8e7ed7af1"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
       }
     },
     "ddraw_MNE_b134338d90d8": {
@@ -14224,11 +17949,140 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "190bda6455eb22cd2b778d66bcf3ca9f"
       },
       "display_name": "MNE_b134338d90d8afc0",
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b134338d90d8afc06554002eab271180"
+      }
+    },
+    "ddraw_ADDR_7B5E0D3C": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E0D3C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20D3C"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "common_initialize_environment_nolock<char>",
+      "signature": "int common_initialize_environment_nolock<char>(void)",
+      "calling_convention": "__cdecl",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "f5721ac89b38d566ba83d0840b9492fc"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      }
+    },
+    "ddraw_ADDR_7B5E0D41": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E0D41"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20D41"
+      },
+      "sizes": {
+        "LoD/PD2": 66
+      },
+      "name": "operator()<class_<lambda_995298e7d72eb4c2aab26c0585b3abe5>,class_<lambda_275893d493268fdec8709772e3fcec0e>&,class_<lambda_293819299cbf9a7022e18b56a874bb5c>_>",
+      "signature": "int operator()<class_<lambda_995298e7d72eb4c2aab26c0585b3abe5>,class_<lambda_275893d493268fdec8709772e3fcec0e>&,class_<lambda_293819299cbf9a7022e18b56a874bb5c>_>(__crt_seh_guarded_call<int> * this, <lambda_995298e7d72eb4c2aab26c0585b3abe5> * param_1, <lambda_275893d493268fdec8709772e3fcec0e> * param_2, <lambda_293819299cbf9a7022e18b56a874bb5c> * param_3)",
+      "calling_convention": "__thiscall",
+      "comment": "Library Function - Single Match\n public: int __thiscall __crt_seh_guarded_call<int>::operator()<class <lambda_995298e7d72eb4c2aab26c0585b3abe5>,class <lambda_275893d493268fdec8709772e3fcec0e> &,class <lambda_293819299cbf9a7022e18b56a874bb5c> >(class <lambda_995298e7d72eb4c2aab26c0585b3abe5> &&,class <lambda_275893d493268fdec8709772e3fcec0e> &,class <lambda_293819299cbf9a7022e18b56a874bb5c> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:6d7f2f17dab91adb42f80d2b0fecd7ac",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6d7f2f17dab91adb42f80d2b0fecd7ac",
+        "CFG": null,
+        "PRO": "fb0861599f82fec80b46b8b6eb0836bc"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6d7f2f17dab91adb42f80d2b0fecd7ac"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "ddraw_ADDR_7B5E0D86": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E0D86"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20D86"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "567c2fe6bccc1a5f40832a581736fe6f"
+      },
+      "display_name": "MNE_3a54b0e12c446658",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      }
+    },
+    "ddraw_ADDR_7B5E0D92": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E0D92"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20D92"
+      },
+      "sizes": {
+        "LoD/PD2": 40
+      },
+      "name": "__acrt_lock_and_call<class_<lambda_275893d493268fdec8709772e3fcec0e>_>",
+      "signature": "int __acrt_lock_and_call<class_<lambda_275893d493268fdec8709772e3fcec0e>_>(__acrt_lock_id param_1, <lambda_275893d493268fdec8709772e3fcec0e> * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n int __cdecl __acrt_lock_and_call<class <lambda_275893d493268fdec8709772e3fcec0e> >(enum __acrt_lock_id,class <lambda_275893d493268fdec8709772e3fcec0e> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f42b4386967dee7286133d84d2228005",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f42b4386967dee7286133d84d2228005",
+        "CFG": null,
+        "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
       }
     },
     "ddraw_MNE_a933d09ab83c": {
@@ -14256,11 +18110,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e8c6a46272965fa135a8413f1610774a",
         "PRO": "140d000dde1f82e44310e0a3fc6b5996"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a933d09ab83c6f06c0bf00828384a6ba"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14291,11 +18145,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "613b0010cd8dd0314d19080093162299"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fb95a63281a02d46e01d5e3026268f19"
       }
     },
     "ddraw_MNE_0f91a4f8acc8": {
@@ -14323,11 +18177,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8c955c77011f408ad9ffc78e365640e4",
         "PRO": "032365e3f1032389f8fe0f969d947d9a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f91a4f8acc84de30edafdd46aa8055f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14358,11 +18212,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "d4526f648d3858aa03e340b54c5d787b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "41e061a55daafd6f7c4823f6701de408"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14370,10 +18224,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_301bd5440f60": {
       "addresses": {
-        "LoD/PD2": "0x7B5E106C"
+        "LoD/PD2": "0x7B5E1047"
       },
       "rvas": {
-        "LoD/PD2": "0x2106C"
+        "LoD/PD2": "0x21047"
       },
       "sizes": {
         "LoD/PD2": 18
@@ -14393,11 +18247,103 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "ed4ec8b06b535ff541e0d99b722456a2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "301bd5440f60703ca7a24a8fb30f1e56"
+      }
+    },
+    "ddraw_ADDR_7B5E1059": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E1059"
+      },
+      "rvas": {
+        "LoD/PD2": "0x21059"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "name": "___acrt_thread_attach",
+      "signature": "bool ___acrt_thread_attach(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n ___acrt_thread_attach\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:ed23cc5d152d612501ab985b6cd1180b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ed23cc5d152d612501ab985b6cd1180b",
+        "CFG": null,
+        "PRO": "aeebe87e984889b5a0d0f268e29dd4ec"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed23cc5d152d612501ab985b6cd1180b"
+      }
+    },
+    "ddraw_ADDR_7B5E1064": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E1064"
+      },
+      "rvas": {
+        "LoD/PD2": "0x21064"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:f23776c981f88f2e44bd8f0f2628e6a8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23776c981f88f2e44bd8f0f2628e6a8",
+        "CFG": null,
+        "PRO": "363474625e3e78ab11834b8160121826"
+      },
+      "display_name": "MNE_f23776c981f88f2e",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23776c981f88f2e44bd8f0f2628e6a8"
+      }
+    },
+    "ddraw_ADDR_7B5E106C": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E106C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2106C"
+      },
+      "sizes": {
+        "LoD/PD2": 18
+      },
+      "name": "___acrt_uninitialize",
+      "signature": "undefined ___acrt_uninitialize(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n ___acrt_uninitialize\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:301bd5440f60703ca7a24a8fb30f1e56",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "301bd5440f60703ca7a24a8fb30f1e56",
+        "CFG": null,
+        "PRO": "1ba65c6c232a23bf699ae2dd0222f4c0"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "301bd5440f60703ca7a24a8fb30f1e56"
       }
     },
     "ddraw_MNE_134a136c35da": {
@@ -14425,11 +18371,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "8dd71165c693c917afabb75d6be5a876"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "134a136c35da3c89f34fcaa3501c784e"
       }
     },
     "ddraw_MNE_f69841308e51": {
@@ -14457,11 +18403,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fd32fcbc1bb7eeb18567ac64ddfa5c84",
         "PRO": "3463df8818e9bd9747a4cc45b151b3d9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f69841308e517a577cdf4c7809282ce6"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -14494,11 +18440,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "6915877a0ed6cfe545ad9e144a0163e7",
         "PRO": "1ed2a3a5b8c5395a8706a3ebb5a7f09c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "80e76759bb7d8ba4d935df0dde048698"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -14529,11 +18475,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "64da69ef3217f47828e6e59b6b548a38",
         "PRO": "c53d1abcc8089d5fc2c8b3e9e4d2fd4e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "60eae47e900bd5cccfca9527af704a4d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -14560,11 +18506,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "03174e169631020a4401034eca31b3cc"
       },
       "display_name": "MNE_363a4980e85db23a",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "363a4980e85db23a06cc2f6499b0be9a"
       }
     },
     "ddraw_MNE_8dd65e2de8e1": {
@@ -14592,11 +18538,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "981689129fcdb6123df344857609aa1c",
         "PRO": "2dd6a66206e14e50a58e220088eaef18"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8dd65e2de8e15bfddea67861f02c0369"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -14627,14 +18573,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "381d860e5a926071cbd2db63fdfae3f6",
         "PRO": "efe60cc42094f24bf4dab25ef26c2655"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "71c958eb6c3ebc1045eda3504f9b8d77"
+      },
       "param_counts": {
         "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5E131D": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E131D"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2131D"
+      },
+      "sizes": {
+        "LoD/PD2": 20
+      },
+      "method": "MNE",
+      "index": "MNE:c713d6c7eb52f6942a3f8f972dc327ff",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c713d6c7eb52f6942a3f8f972dc327ff",
+        "CFG": null,
+        "PRO": "c8fee2b3198fbaab819ad7b1f6c6ca68"
+      },
+      "display_name": "MNE_c713d6c7eb52f694",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c713d6c7eb52f6942a3f8f972dc327ff"
       }
     },
     "ddraw_MNE_51490074d616": {
@@ -14662,11 +18636,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e4e3b6478c87dea389fd715a2e60f188",
         "PRO": "0d65ea7ca1c1d0a7daa53365b94b94a8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "51490074d6164a6d7fd23a04118dbdf6"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -14693,11 +18667,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "4800ad53c24b056ba2f38f1467ae3646"
       },
       "display_name": "MNE_6d7257d3f6d65324",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6d7257d3f6d65324a2aaddba53de9ad0"
       }
     },
     "ddraw_MNE_1be6a09742b8": {
@@ -14725,11 +18699,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a6bf393c372acd04e8e2250d24df4a4c",
         "PRO": "836a8e56b02d240a87b6dd1e84135ca3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1be6a09742b8fd041faaa0693329a2b5"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -14765,11 +18739,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fd32fcbc1bb7eeb18567ac64ddfa5c84",
         "PRO": "ea6fb1d3a1eac640639c2e14a3798fc2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0eb9c57737c9945526588481caeeb787"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14800,11 +18774,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "b6df50a1c65a551726bef3667db51202"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c9e474235f8ab0b2b23a632af418b776"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14812,10 +18786,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_644c94180542": {
       "addresses": {
-        "LoD/PD2": "0x7B5E1468"
+        "LoD/PD2": "0x7B5E1455"
       },
       "rvas": {
-        "LoD/PD2": "0x21468"
+        "LoD/PD2": "0x21455"
       },
       "sizes": {
         "LoD/PD2": 19
@@ -14835,11 +18809,43 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8d598d6ff87f51df69fb6e8ad46943ae",
         "PRO": "c3817978cfdc123360015cdc1ea9b1bb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "644c941805424b14885c3ec129aaf89f"
+      }
+    },
+    "ddraw_ADDR_7B5E1468": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E1468"
+      },
+      "rvas": {
+        "LoD/PD2": "0x21468"
+      },
+      "sizes": {
+        "LoD/PD2": 19
+      },
+      "name": "__errno",
+      "signature": "int * __errno(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __errno\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:644c941805424b14885c3ec129aaf89f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "644c941805424b14885c3ec129aaf89f",
+        "CFG": "8d598d6ff87f51df69fb6e8ad46943ae",
+        "PRO": "0f367122b6dfb364f70946e10c84a348"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "644c941805424b14885c3ec129aaf89f"
       }
     },
     "ddraw_STR_797e95927108": {
@@ -14867,11 +18873,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8912452947b35fc62983867faafc41b5",
         "PRO": "3dc188288bec8890b4e1484b2521826e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 69
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d962df9b1130f92c8c34ec479613783f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14902,11 +18908,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4e3cd2219be4511bae28948823c359ed",
         "PRO": "11a51f1ddcadca4a483243d0a7693b77"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d6f536482ddc0597cbf0f07bf5b49a28"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -14937,11 +18943,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
         "PRO": "5f883a621992a2854f596f58ceb7e299"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "37d4bcd7fd69a41aef4e8a9d5cccc5d2"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14972,11 +18978,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ebedb8faf55908534e596ba5d47d40c7",
         "PRO": "4d53559db8ae54a6dc6eafd542596e1a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0b59b2e9a7e99d78092bd33ee7864d65"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14984,10 +18990,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_0fb64a4dc4b3": {
       "addresses": {
-        "LoD/PD2": "0x7B5E1805"
+        "LoD/PD2": "0x7B5E176C"
       },
       "rvas": {
-        "LoD/PD2": "0x21805"
+        "LoD/PD2": "0x2176C"
       },
       "sizes": {
         "LoD/PD2": 32
@@ -15007,11 +19013,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c0911ab13e8db6d703c6ff224f1b4a1f",
         "PRO": "9e80fbf384ca332f57aecac86dae3b34"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0fb64a4dc4b3ff40927903a397410bd3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -15042,11 +19048,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "28d68ef41469e49f60578a0ac553bdfd",
         "PRO": "882aa36a5a16bd35223981cc293c6d62"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b52ec1c1f55b4bab2a757b350dcb5c0d"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -15077,11 +19083,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "28d68ef41469e49f60578a0ac553bdfd",
         "PRO": "882aa36a5a16bd35223981cc293c6d62"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "70f0a69d6813782c45d8d85ecb8508cb"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -15112,14 +19118,77 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f9d24ef98fdfa917c554f2affffd4528",
         "PRO": "eab1464717b02a6fda196ae5ee746d8e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9b5414a577d0a27d967e3e01f234b12b"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5E1805": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E1805"
+      },
+      "rvas": {
+        "LoD/PD2": "0x21805"
+      },
+      "sizes": {
+        "LoD/PD2": 32
+      },
+      "name": "FID_conflict:__acrt_stdio_parse_mode_b",
+      "signature": "uint FID_conflict:__acrt_stdio_parse_mode_b(uint * param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Multiple Matches With Different Base Names\n bool __cdecl __acrt_stdio_parse_mode_b(struct __acrt_stdio_stream_mode &)\n bool __cdecl __acrt_stdio_parse_mode_t(struct __acrt_stdio_stream_mode &)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0fb64a4dc4b3ff40927903a397410bd3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0fb64a4dc4b3ff40927903a397410bd3",
+        "CFG": "c0911ab13e8db6d703c6ff224f1b4a1f",
+        "PRO": "9e80fbf384ca332f57aecac86dae3b34"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0fb64a4dc4b3ff40927903a397410bd3"
+      },
       "param_counts": {
-        "LoD/PD2": 2
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5E1825": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E1825"
+      },
+      "rvas": {
+        "LoD/PD2": "0x21825"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "85c76690755a64074f97f50ae6cd425b"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_66f9491d9af8": {
@@ -15147,11 +19216,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1746c214e0525153db871cfe57f9d146",
         "PRO": "f05a869ef6461fa6aff7afd9541d5ca5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "66f9491d9af8fd3d55a819090c569edf"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -15182,11 +19251,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "632e4b4dd855a441593e9c6f49473a1c",
         "PRO": "8ccfbf4526b25bdef0981a4695dcd7b6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f9514e5da365b467fcc01c8e04e82c63"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -15217,11 +19286,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "5981e16d2e10dc2e38143669e39b766c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "06ecc2bf829f9069ac3c1b4dda34cbe5"
       }
     },
     "ddraw_MNE_0ad4fc164c53": {
@@ -15249,11 +19318,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "65e7da282a57368285623946497912d5",
         "PRO": "7e7108443f70c921459f88ead6beffa0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0ad4fc164c53b4d457c0737de6c3c401"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -15284,11 +19353,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "5a88c7d74bb7ec11c2f0246f79e6ddc3",
         "PRO": "c0801f10d92833a99d7eef9d645f9b19"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5e6f6f2dd965919cc8d6f663d44676c9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -15319,11 +19388,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "59fda47cda35dae8080ac5e7e31b8139",
         "PRO": "5abfd03f7349e3a8bd500abf287b2352"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "995e6447a58d437bef02c920975bc75a"
       }
     },
     "ddraw_MNE_b9558fcdc113": {
@@ -15351,11 +19420,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "58c0211bcf791a3311bd8788a9606853",
         "PRO": "1afc27be24e555bdff08aeafc0d981e2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b9558fcdc113c604af3af8c11ff95179"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -15386,11 +19455,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8a3afe40ade373cd806ed794a856af32",
         "PRO": "258b3e1a5c30ae0352bb6073f8328ca3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f5af570a35c5871f34fe1bc08f8c831"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -15398,10 +19467,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_a0d938092a2b": {
       "addresses": {
-        "LoD/PD2": "0x7B5E1B66"
+        "LoD/PD2": "0x7B5E1B10"
       },
       "rvas": {
-        "LoD/PD2": "0x21B66"
+        "LoD/PD2": "0x21B10"
       },
       "sizes": {
         "LoD/PD2": 86
@@ -15421,11 +19490,46 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8a3afe40ade373cd806ed794a856af32",
         "PRO": "258b3e1a5c30ae0352bb6073f8328ca3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a0d938092a2b293fa0e22218baee54bf"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5E1B66": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E1B66"
+      },
+      "rvas": {
+        "LoD/PD2": "0x21B66"
+      },
+      "sizes": {
+        "LoD/PD2": 86
+      },
+      "name": "___acrt_FlsGetValue@4",
+      "signature": "undefined ___acrt_FlsGetValue@4(DWORD param_1)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n ___acrt_FlsGetValue@4\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:a0d938092a2b293fa0e22218baee54bf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a0d938092a2b293fa0e22218baee54bf",
+        "CFG": "8a3afe40ade373cd806ed794a856af32",
+        "PRO": "258b3e1a5c30ae0352bb6073f8328ca3"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a0d938092a2b293fa0e22218baee54bf"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -15456,11 +19560,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "cf736ea71c2dfdba74eadfb68c3838a7",
         "PRO": "416f4644c1f6cf693a4f3610f9326d07"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b2f5837919b24d52440fa050292c1eb5"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -15491,11 +19595,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "bed37b3f91ac8f34ee01e25f35db5c8e",
         "PRO": "93a9a7e8bbeaca7ef40cfa3e92048134"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "092b2ed6519dc4cab1d099a2bd2ef939"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -15526,11 +19630,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8a3afe40ade373cd806ed794a856af32",
         "PRO": "258b3e1a5c30ae0352bb6073f8328ca3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a0d938092a2b293fa0e22218baee54bf"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -15561,11 +19665,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "5599453e5698ad68d52ac4073b9926d3",
         "PRO": "03efc838648647308144667606e7728c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d18a89b8e1f352f9a57e93fe3a15d148"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -15596,11 +19700,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c3f5adf0146f3574c7edbe1c0434261f",
         "PRO": "cb91b627184d16afc61e4e2a683bc698"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8879c8fab55c9aca25f0f46f9a197de9"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -15631,11 +19735,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2cb1ba14d64113a387e8645b939d7d06",
         "PRO": "77f7265cf298bb627f3efeafdb6e8df2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c57b054ea6ae00f3e81500d243d2d68d"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -15666,11 +19770,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7aa88bb74b577f7eec0eddca6884c31b",
         "PRO": "c54601ac96b817da25af033049369578"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2f6aa9a70e2b9d545285ab2a2423661f"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -15701,11 +19805,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4ed24b18752c2dd6d924febec148dba6",
         "PRO": "0b1f8ee02aacf9f09cc950e4db4fe006"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "402489c321f95047f67be5d649b16a81"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -15736,11 +19840,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3c82f776bc14fd149747b0369faec340",
         "PRO": "62aae952cedbaf0cf9442eed2719e2cf"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "10dc882307c46086e1e49866197b18da"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -15771,11 +19875,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "cee38249bbf16af16fc7d89422800f64",
         "PRO": "dafaccc54a0876bdcb1069cfd50e4221"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d60bf0c7fc83f236593b812a3bde8c81"
+      }
+    },
+    "ddraw_ADDR_7B5E2020": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E2020"
+      },
+      "rvas": {
+        "LoD/PD2": "0x22020"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "28bb9e39d3d962cbb0abacc04925fe5b"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_85410ed53780": {
@@ -15803,11 +19935,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f16ee01fce64ac425fc77137800a8352",
         "PRO": "bdf8eaa3c4aa2d4f6ed09c00ee35e6f8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "85410ed537806d5ea193a45faa96676a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -15838,11 +19970,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b8461fd29efba3cc8a16ef5d10eb6c6a",
         "PRO": "06dbd299dd210dbee5fbeffb88487ede"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "87a92addd66e290aa2f7c0517a5b3db1"
       }
     },
     "ddraw_MNE_5c0280e38200": {
@@ -15866,19 +19998,47 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "a710a2803c654eb67889324210f2bd69"
       },
       "display_name": "MNE_5c0280e382007cea",
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5c0280e382007cea3dce058a9f997440"
+      }
+    },
+    "ddraw_ADDR_7B5E2220": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E2220"
+      },
+      "rvas": {
+        "LoD/PD2": "0x22220"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "474c44111521c7375c6ce9cffed86ef6"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_c0a4ab78c7bb": {
       "addresses": {
-        "LoD/PD2": "0x7B5E22DE"
+        "LoD/PD2": "0x7B5E2296"
       },
       "rvas": {
-        "LoD/PD2": "0x222DE"
+        "LoD/PD2": "0x22296"
       },
       "sizes": {
         "LoD/PD2": 23
@@ -15898,11 +20058,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "81db541998096114503fb1d538e6f2fc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0a4ab78c7bbdc5939a3219df84ac650"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -15929,11 +20089,46 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "5bef63a4124013a7b5f6c2e9af0261ce"
       },
       "display_name": "MNE_7a3970d89129d50c",
-      "basic_block_counts": {
-        "LoD/PD2": 5
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7a3970d89129d50ca1d42c01fc54f6d0"
+      }
+    },
+    "ddraw_ADDR_7B5E22DE": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E22DE"
+      },
+      "rvas": {
+        "LoD/PD2": "0x222DE"
+      },
+      "sizes": {
+        "LoD/PD2": 23
+      },
+      "name": "___acrt_unlock",
+      "signature": "undefined ___acrt_unlock(int param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n ___acrt_unlock\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:c0a4ab78c7bbdc5939a3219df84ac650",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c0a4ab78c7bbdc5939a3219df84ac650",
+        "CFG": null,
+        "PRO": "81db541998096114503fb1d538e6f2fc"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0a4ab78c7bbdc5939a3219df84ac650"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "ddraw_MNE_3fdc6bf2e20a": {
@@ -15961,14 +20156,77 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f34f40f1c5c4fb502fb66b6b2a521ece",
         "PRO": "4dfc17adaafa8053e5397221b1aa19ec"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3fdc6bf2e20a36b43c0869216d96f52c"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "ddraw_ADDR_7B5E2381": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E2381"
+      },
+      "rvas": {
+        "LoD/PD2": "0x22381"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "9f5a712351afc15f0465aaad0792dd1c"
+      },
+      "display_name": "MNE_3a54b0e12c446658",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      }
+    },
+    "ddraw_ADDR_7B5E238D": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E238D"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2238D"
+      },
+      "sizes": {
+        "LoD/PD2": 40
+      },
+      "name": "__acrt_lowio_lock_fh_and_call<class_<lambda_6978c1fb23f02e42e1d9e99668cc68aa>_>",
+      "signature": "int __acrt_lowio_lock_fh_and_call<class_<lambda_6978c1fb23f02e42e1d9e99668cc68aa>_>(int param_1, <lambda_6978c1fb23f02e42e1d9e99668cc68aa> * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n int __cdecl __acrt_lowio_lock_fh_and_call<class <lambda_6978c1fb23f02e42e1d9e99668cc68aa> >(int,class <lambda_6978c1fb23f02e42e1d9e99668cc68aa> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f42b4386967dee7286133d84d2228005",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f42b4386967dee7286133d84d2228005",
+        "CFG": null,
+        "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
+      },
       "param_counts": {
-        "LoD/PD2": 4
+        "LoD/PD2": 2
       }
     },
     "ddraw_MNE_fbb0725f06b2": {
@@ -15996,11 +20254,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "044e95a6511b64bf155bd4de5c12eeac",
         "PRO": "aad0cdbe1c80050fd811673219eb91db"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fbb0725f06b2a105f8839b45bb90a88e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -16031,11 +20289,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "5c1b6bbfdc3c63fe39a52fbf101ff762",
         "PRO": "c9f4698aedf179719834913fc709dd32"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "899977d3f9da64c59ed54092d5db4dde"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -16066,11 +20324,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c3a787b5efba22ba4a32babaa5ffc3c7",
         "PRO": "62bba0578cd88f1ba96a871fdc4e9ae6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3bb245b8e2f2faf80ee941b84fb6e49b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -16101,11 +20359,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "33e562b004b3d2a627765377cef38829",
         "PRO": "55796c73e384bf2efe4120ca5dddbc4e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "88eb18cc5b42c592d19d1ef8bee93072"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -16136,11 +20394,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8f7bbc89f28a09c4b6e1c12e6db8e45c",
         "PRO": "15b7c4225093b51ebd66c82e62fa72d0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7c9dc50925f05512a2172e5534657694"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -16171,11 +20429,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c1c6d169342dc9a2054f5ef70436e2da",
         "PRO": "dbf487e6a5b2ad8745e32b50c7a8a3ec"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "55ed8128719b312c8d9a01716e802179"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -16206,11 +20464,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c7f4d19c625a2701172b24a9896ebc53",
         "PRO": "a74707c99d74b498f86c08c8d4c3d32d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4a870a5a59f24a22a572f85ee3794a98"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -16241,14 +20499,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d38039a57004a05fdeeef3359d8bb104",
         "PRO": "7caa01fa535bae5e5ddaff042bbe82ee"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "86253300c4d25b0968ad130858ae9bfb"
+      },
       "param_counts": {
         "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5E2A76": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E2A76"
+      },
+      "rvas": {
+        "LoD/PD2": "0x22A76"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": null,
+        "PRO": "493bb68f43e4ef8c4311e23f1a1922e0"
+      },
+      "display_name": "MNE_d4c2d26a88b113bd",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
     "ddraw_MNE_d9e927c62c69": {
@@ -16276,11 +20562,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9ab2bcab6301718a7485b79e459d08ca",
         "PRO": "d969cf19fa9431bd48dcc6f3c2c306e5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 42
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d9e927c62c6920100d7281284d07c655"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -16311,11 +20597,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "dc566b7201dd86af8252efe5cb02fb0f",
         "PRO": "b4d3dce90ac88e74d113da776198a43e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "efaac41b0dedacaee329d51e4e19dac7"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -16346,11 +20632,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "25309fe7699b94d7347ad6f0663f4822",
         "PRO": "35a955b53693f484f791197f2849fe9f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8488393c9e117a0df55bd6aba5b1cbf9"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -16381,11 +20667,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7db700d6fea6bf8bb6e1c45f4f727c0d",
         "PRO": "7c00b586172cc04117fc543fa7f36dad"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f32951de48455f8ae590db26c6f9cc62"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -16416,11 +20702,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f5b3808224712f53ffb598587c395b6c",
         "PRO": "2471b09939d1d138672cd8b3f92f6d64"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7801dc6c9001232ed9ef537819640b6d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -16451,11 +20737,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "fcebb5b1de3d023b780c3619492e48fa"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6841ab193f65b04568ef023aa10cb326"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -16486,11 +20772,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "0a63ab441b4cf1d0015b35bade4a56cc",
         "PRO": "6d123886a4253f682cf014b41b3ef1a2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5da29b2823a33ee41adbeb400749f75d"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -16521,11 +20807,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "f6857ed71170c7967774408a9895b7a6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3fc5033a364713f8b258e8a3fc7e2025"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -16556,14 +20842,49 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "6491ed2659d9a4fda9f804acc775fe23",
         "PRO": "893e5465ebd10ec99798a29b03f164d3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f16e101d622efa47337cde5fe4ec59bd"
+      },
+      "param_counts": {
+        "LoD/PD2": 5
+      }
+    },
+    "ddraw_ADDR_7B5E2FE5": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E2FE5"
+      },
+      "rvas": {
+        "LoD/PD2": "0x22FE5"
+      },
+      "sizes": {
+        "LoD/PD2": 29
+      },
+      "name": "_wctomb_s",
+      "signature": "errno_t _wctomb_s(int * _SizeConverted, char * _MbCh, rsize_t _SizeInBytes, wchar_t _WCh)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _wctomb_s\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:91d4b1ebb9ff1951aed60088e0d53511",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "91d4b1ebb9ff1951aed60088e0d53511",
+        "CFG": null,
+        "PRO": "3c6f1a9a466934799743436eb93835b6"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "91d4b1ebb9ff1951aed60088e0d53511"
+      },
       "param_counts": {
-        "LoD/PD2": 5
+        "LoD/PD2": 4
       }
     },
     "ddraw_MNE_339d8967f78e": {
@@ -16587,11 +20908,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "72761dee9968bace19def42867be52e6"
       },
       "display_name": "MNE_339d8967f78e6cf3",
-      "basic_block_counts": {
-        "LoD/PD2": 37
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "339d8967f78e6cf309d5eaaba8cc2251"
       }
     },
     "ddraw_MNE_8f139b2295bf": {
@@ -16615,11 +20936,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "ef2b1978427c9a164585e1cb23afbdca"
       },
       "display_name": "MNE_8f139b2295bf02e0",
-      "basic_block_counts": {
-        "LoD/PD2": 51
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8f139b2295bf02e0352eed543fbf27bb"
       }
     },
     "ddraw_MNE_ae87a12746fd": {
@@ -16647,11 +20968,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "5973a05c1bf87e558576953ef53fced6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ae87a12746fd151b7148fc883febf292"
+      }
+    },
+    "ddraw_ADDR_7B5E3324": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E3324"
+      },
+      "rvas": {
+        "LoD/PD2": "0x23324"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "c01c7e262e539680734ef88551320853"
+      },
+      "display_name": "MNE_3a54b0e12c446658",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "ddraw_MNE_fd2ea8b470c9": {
@@ -16679,11 +21028,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ca13b0936d7d2a42bfa9fd47b995589c",
         "PRO": "d3a9cdd08b754008c0a6f5c2c549de8e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fd2ea8b470c9568d7c937001249c0072"
+      }
+    },
+    "ddraw_ADDR_7B5E3385": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E3385"
+      },
+      "rvas": {
+        "LoD/PD2": "0x23385"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "0ef5a9ecf88a6f4b2da1cc324ff43747"
+      },
+      "display_name": "MNE_3a54b0e12c446658",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "ddraw_MNE_428d4cf84880": {
@@ -16711,11 +21088,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "e644bb5688dd5ff9aeb505d31bb7f701"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "428d4cf84880bb9cbdf970fff8a1339c"
+      }
+    },
+    "ddraw_ADDR_7B5E33D0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E33D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x233D0"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "af0958548f74bff412c6043dd9c1445c"
+      },
+      "display_name": "MNE_3a54b0e12c446658",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "ddraw_MNE_4bc93d7522dc": {
@@ -16743,11 +21148,179 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "4fa194a8d1b53786fea7771e3f504bf4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4bc93d7522dcd388b4328b81479fd288"
+      }
+    },
+    "ddraw_ADDR_7B5E3418": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E3418"
+      },
+      "rvas": {
+        "LoD/PD2": "0x23418"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "71fef01ffce788001d7959aa25f74b8a"
+      },
+      "display_name": "MNE_3a54b0e12c446658",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      }
+    },
+    "ddraw_ADDR_7B5E3424": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E3424"
+      },
+      "rvas": {
+        "LoD/PD2": "0x23424"
+      },
+      "sizes": {
+        "LoD/PD2": 40
+      },
+      "name": "__acrt_lock_and_call<class_<lambda_6250bd4b2a391816dd638c3bf72b0bcb>_>",
+      "signature": "void __acrt_lock_and_call<class_<lambda_6250bd4b2a391816dd638c3bf72b0bcb>_>(__acrt_lock_id param_1, <lambda_6250bd4b2a391816dd638c3bf72b0bcb> * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n void __cdecl __acrt_lock_and_call<class <lambda_6250bd4b2a391816dd638c3bf72b0bcb> >(enum __acrt_lock_id,class <lambda_6250bd4b2a391816dd638c3bf72b0bcb> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f42b4386967dee7286133d84d2228005",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f42b4386967dee7286133d84d2228005",
+        "CFG": null,
+        "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5E344C": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E344C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2344C"
+      },
+      "sizes": {
+        "LoD/PD2": 40
+      },
+      "name": "__acrt_lock_and_call<class_<lambda_b2ea41f6bbb362cd97d94c6828d90b61>_>",
+      "signature": "void __acrt_lock_and_call<class_<lambda_b2ea41f6bbb362cd97d94c6828d90b61>_>(__acrt_lock_id param_1, <lambda_b2ea41f6bbb362cd97d94c6828d90b61> * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n void __cdecl __acrt_lock_and_call<class <lambda_b2ea41f6bbb362cd97d94c6828d90b61> >(enum __acrt_lock_id,class <lambda_b2ea41f6bbb362cd97d94c6828d90b61> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f42b4386967dee7286133d84d2228005",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f42b4386967dee7286133d84d2228005",
+        "CFG": null,
+        "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5E3474": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E3474"
+      },
+      "rvas": {
+        "LoD/PD2": "0x23474"
+      },
+      "sizes": {
+        "LoD/PD2": 40
+      },
+      "name": "__acrt_lock_and_call<class_<lambda_be2b3da3f62db62e9dad5dc70221a656>_>",
+      "signature": "void __acrt_lock_and_call<class_<lambda_be2b3da3f62db62e9dad5dc70221a656>_>(__acrt_lock_id param_1, <lambda_be2b3da3f62db62e9dad5dc70221a656> * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n void __cdecl __acrt_lock_and_call<class <lambda_be2b3da3f62db62e9dad5dc70221a656> >(enum __acrt_lock_id,class <lambda_be2b3da3f62db62e9dad5dc70221a656> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f42b4386967dee7286133d84d2228005",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f42b4386967dee7286133d84d2228005",
+        "CFG": null,
+        "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5E349C": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E349C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2349C"
+      },
+      "sizes": {
+        "LoD/PD2": 40
+      },
+      "name": "__acrt_lock_and_call<class_<lambda_e69574bed617af4e071282c136b37893>_>",
+      "signature": "void __acrt_lock_and_call<class_<lambda_e69574bed617af4e071282c136b37893>_>(__acrt_lock_id param_1, <lambda_e69574bed617af4e071282c136b37893> * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n void __cdecl __acrt_lock_and_call<class <lambda_e69574bed617af4e071282c136b37893> >(enum __acrt_lock_id,class <lambda_e69574bed617af4e071282c136b37893> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f42b4386967dee7286133d84d2228005",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f42b4386967dee7286133d84d2228005",
+        "CFG": null,
+        "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
       }
     },
     "ddraw_MNE_2c174423a444": {
@@ -16775,11 +21348,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "1b15217a7a6341548aa05218636c3728"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2c174423a4448c3a61084ae2e58f45d4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -16810,11 +21383,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "933c8d35515351e80b24e6fc18dff69c",
         "PRO": "4c564f0c90abea0c5f19c8ee66fca94d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0461e4ddc4a81a1faaeadac79911ab99"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -16845,11 +21418,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ddb262ba9416284805d8f355704814dc",
         "PRO": "01568cebba3a6577fa4ddd9a920e6a39"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b1ccafd9caf4430428821d2605b498d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -16880,11 +21453,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fbea47b737f9cded99d3ac1117fd0429",
         "PRO": "321914051a811ffee5a9662a2940c323"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "43a145a45a08af0e15f2b8158b52f01e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -16915,11 +21488,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2bea3eb19dd06b49df098eed6ded289c",
         "PRO": "ee151684604265896f87f89c810a02c3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0bd6fdb5bbf6a0dc064c573db9a07995"
       }
     },
     "ddraw_MNE_cea00d10ce4e": {
@@ -16947,11 +21520,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b86ddc6f355357bc1ec4e8b841232786",
         "PRO": "af2420360e881bc9a71a74ec3c561b33"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cea00d10ce4e61fa3a76951cde34cb00"
       }
     },
     "ddraw_MNE_f6f3412f5eca": {
@@ -16979,11 +21552,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7b58b3bbfc18ab5aaf140c27049a6422",
         "PRO": "aca8f6e9ebfae7863214168c3fb409a0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f6f3412f5eca7a9da93f2d53dec095fc"
       }
     },
     "ddraw_MNE_e0e104542d51": {
@@ -17011,19 +21584,19 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8f793f81eebf6b1a28e081f351d196b1",
         "PRO": "bede42a3cb3bc9b62e51157fa277392e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0e104542d511ea3331eb7fed1ab9e5a"
       }
     },
     "ddraw_MNE_ffdd82626896": {
       "addresses": {
-        "LoD/PD2": "0x7B5E37FA"
+        "LoD/PD2": "0x7B5E37CD"
       },
       "rvas": {
-        "LoD/PD2": "0x237FA"
+        "LoD/PD2": "0x237CD"
       },
       "sizes": {
         "LoD/PD2": 45
@@ -17043,11 +21616,46 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "13ac807217091f4044d66f8ff2174dac",
         "PRO": "2e9cccf512717575d0725414d9f431da"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ffdd82626896f5ba90f554ad3e2b4996"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5E37FA": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E37FA"
+      },
+      "rvas": {
+        "LoD/PD2": "0x237FA"
+      },
+      "sizes": {
+        "LoD/PD2": 45
+      },
+      "name": "___acrt_update_multibyte_info",
+      "signature": "undefined ___acrt_update_multibyte_info(int param_1, int * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n ___acrt_update_multibyte_info\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:ffdd82626896f5ba90f554ad3e2b4996",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ffdd82626896f5ba90f554ad3e2b4996",
+        "CFG": "13ac807217091f4044d66f8ff2174dac",
+        "PRO": "8fa4183db17cca7081ae3ed6f38dc470"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ffdd82626896f5ba90f554ad3e2b4996"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -17078,11 +21686,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b8a06bb9549b96392aabaead4a89779c",
         "PRO": "acc5bbed1c2c6b40d19070bdfa3ff8f2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b8526d17763986054ff59e407da38dfc"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -17113,11 +21721,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1abbbed88598ab76171d956e8b753f75",
         "PRO": "5ffb59da10279a1e8e98690104426b4e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "607e7e3ea9dff1d695a3b609221d89f4"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -17148,11 +21756,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "bf65cd14fdf06635335b03921888705c",
         "PRO": "d5a8f0e91af67efe5b5622311202c650"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 65
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "005d20ed57270c5831b89706eb986efc"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -17183,11 +21791,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "dde8b6a1a8abce5232052bc40656cab3",
         "PRO": "05499b531d0488a49af91ebfe61f8fcc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "541ef3dc93906820505dd897af042590"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -17218,11 +21826,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "47ce08e24bdc741a510306af621e827e",
         "PRO": "0411e28e4477a289dfa5c51404750202"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 32
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ec92e4cf478cb499a0c58e30de6cf09a"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -17253,11 +21861,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4d946ff9cefd0c42a9ee5c5c02ed6d80",
         "PRO": "91a6f3e7ccfff1600057808fee3c006b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "00cf22faf85a20c4d305951c5f176f74"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -17288,11 +21896,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7b272273d549347858f9b6f9664d703c",
         "PRO": "e290a5224f1477eac74286cd59f3ca65"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "28f9d164a9f8ac36ec5d8ee3724ceb5a"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -17323,11 +21931,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ea741236c0ccc40c4e3c9cff5bc0b274",
         "PRO": "d1cd05c4a17c69990a7b14ce619baac0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "36c650f81d4aa77d5a66ea64ebbd9c4d"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -17358,11 +21966,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d91034e5c3b15c764a4555546ad6b02c",
         "PRO": "febc7eb3d9e2fca14fc7f2e85c2006c4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "62d3dbe411c243a4c96e2419bc66f1b7"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -17393,11 +22001,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "de75fd17aaa6ef9ecbba69839bbc4dbe",
         "PRO": "b8e826e8ca284193a18896fa9fa4f284"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d3039ebe17ea9c6cfdb332bb4a76cba"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -17428,11 +22036,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "48833bea55e6a0e07e88c7f502e7115f",
         "PRO": "51f3e74eaf1f4c66080cf219fc46c14b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 31
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1078ea867f06d80251dd8cfe18823aee"
       },
       "param_counts": {
         "LoD/PD2": 10
@@ -17463,11 +22071,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "4451a2be32c4bc48170d48730b74c84d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e62b391c467dda0c9e2719ecc7c1f514"
       }
     },
     "ddraw_MNE_92a55a49b680": {
@@ -17495,11 +22103,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a87c983088805de83878497a88c9b9c3",
         "PRO": "cd0188bb3ff9ba3529676fcb8a93dea4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "92a55a49b680851239f4d093da449050"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -17530,11 +22138,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "5be153b5f54dd239523af49626db5b76",
         "PRO": "0af5073f9784e886dd8564abdc18cb05"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1b1d7f5c27ee9ad73e8dd04756111e82"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -17565,11 +22173,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "cf7e48d7e82fa0cb812c8be137883b22"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4a14b880453c1b7e037c61c3c0341b07"
+      }
+    },
+    "ddraw_ADDR_7B5E4393": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E4393"
+      },
+      "rvas": {
+        "LoD/PD2": "0x24393"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "3e0a592ceed1d4be44adab283cb91fda"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_10d5590d29ab": {
@@ -17597,11 +22233,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c543b2eaa9388453cbdaee181f834e5c",
         "PRO": "22fd4fb2b8c324905df4d23aefd9070e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "10d5590d29abb1e82591befb21d19aef"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -17628,11 +22264,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "22548ea3bf1449790da15d88e027408e"
       },
       "display_name": "MNE_0588676db7dbddd2",
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0588676db7dbddd2ce450ec261c42549"
       }
     },
     "ddraw_MNE_ecf4fe5a7e47": {
@@ -17660,11 +22296,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9d6ee55adf71a7a6ea890de91748a26f",
         "PRO": "416c862cdb184741475b23605c2c2d89"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ecf4fe5a7e473ceb70f30e35ac316045"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -17695,14 +22331,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "6736050e337bce5aecfebb30afe315bd",
         "PRO": "cc5b81827c48cbb04657d04aa738c71f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9e41a1a232da411577eb4f5976cedcc3"
+      },
       "param_counts": {
         "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5E4679": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E4679"
+      },
+      "rvas": {
+        "LoD/PD2": "0x24679"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": null,
+        "PRO": "c634f3177323a786ae6b72f836e99b76"
+      },
+      "display_name": "MNE_d4c2d26a88b113bd",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
     "ddraw_MNE_96fac8374992": {
@@ -17730,11 +22394,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d790950703572277ff9cc2fe99997fd3",
         "PRO": "eceed0dab2e44267c705ecca91b9b787"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "96fac83749925d9afd30e5707dd1e627"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -17742,10 +22406,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_0b646e6182ed": {
       "addresses": {
-        "LoD/PD2": "0x7B5E473F"
+        "LoD/PD2": "0x7B5E4724"
       },
       "rvas": {
-        "LoD/PD2": "0x2473F"
+        "LoD/PD2": "0x24724"
       },
       "sizes": {
         "LoD/PD2": 27
@@ -17765,11 +22429,46 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "187623f8a400704b2f1cc73f654cf4a6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0b646e6182edcf7aa706a5dfcd420d8d"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5E473F": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E473F"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2473F"
+      },
+      "sizes": {
+        "LoD/PD2": 27
+      },
+      "name": "__lseeki64_nolock",
+      "signature": "longlong __lseeki64_nolock(int _FileHandle, longlong _Offset, int _Origin)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __lseeki64_nolock\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0b646e6182edcf7aa706a5dfcd420d8d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0b646e6182edcf7aa706a5dfcd420d8d",
+        "CFG": null,
+        "PRO": "187623f8a400704b2f1cc73f654cf4a6"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0b646e6182edcf7aa706a5dfcd420d8d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -17800,11 +22499,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "98c96365e03b3c4389b8cd52824c35b2",
         "PRO": "0171cbff1bad2ad42ebb1ea0bd2ec5c7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a002b8822a3f18f809fd8c24210bd87b"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -17835,11 +22534,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "59fcd3dbfad09ac11bb8d27df0693f9f",
         "PRO": "701c00ab1f09db45b4b6f7e06826dfd8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 32
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4de73a1e6a5ef06f528bc03cd7bca6d3"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -17870,11 +22569,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ed97e0a9bb259f31bd4af50290920ebf",
         "PRO": "70c3248d9b47d2e6861a7ae4c36c6e04"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f20334ab3572ada4d156b57af147876"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -17905,11 +22604,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "36932fe0346a00c6ccf28110d4a63fcd",
         "PRO": "37e979593d50e12b5a2bc1d78c712388"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "304b857cc21957a652ff0b19cc94cbea"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -17940,14 +22639,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "296f5dfb883bfc97888db44c1ef20a7f",
         "PRO": "97eda8dbfaa65cd95a790e478279ad55"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d9f4106fbd13552321599fce7bb05fbf"
+      },
       "param_counts": {
         "LoD/PD2": 3
+      }
+    },
+    "ddraw_ADDR_7B5E4D2C": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E4D2C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x24D2C"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "method": "MNE",
+      "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": null,
+        "PRO": "13e48d22b55732075c5c6379212f7027"
+      },
+      "display_name": "MNE_d4c2d26a88b113bd",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
     "ddraw_MNE_6273ea976791": {
@@ -17975,11 +22702,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d7a45b0996421cc53f8223bbf4813e7b",
         "PRO": "5c84c43dbdc00d5c9c01b61cbc6f032a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 62
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6273ea9767910e2b624a349edf3e5630"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -18010,11 +22737,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "bb3c0bd91530a9a02c88a253756ea919",
         "PRO": "05cbb83623d0db3522f25e06fcf57891"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "32c800ed71f22c08eacee0c515b6fcd4"
+      }
+    },
+    "ddraw_ADDR_7B5E5160": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E5160"
+      },
+      "rvas": {
+        "LoD/PD2": "0x25160"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "3c9472e55a0ec39415fda786f01ec3bf"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_0176a5b704fb": {
@@ -18042,11 +22797,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "95a95b870f796f506f3f4fb478947245"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0176a5b704fb61d959b1442def5bb0bd"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -18077,11 +22832,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d24be24e269f134795a1efafadc03683",
         "PRO": "46b2cb6640175a54ac385a59ba031e37"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a14480bd27d218be272217b8c3a84f26"
       }
     },
     "ddraw_MNE_11f4f66cdfc4": {
@@ -18109,14 +22864,77 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "87283475836c72c77f223aca2f681249",
         "PRO": "e0c55680f8f876ec176f1a2a83f05416"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "11f4f66cdfc4a22ceb2bd6c1a1469bc6"
+      },
+      "param_counts": {
         "LoD/PD2": 4
+      }
+    },
+    "ddraw_ADDR_7B5E52DD": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E52DD"
+      },
+      "rvas": {
+        "LoD/PD2": "0x252DD"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "b18d0bef8c864d822e920b15d9d2bb96"
+      },
+      "display_name": "MNE_3a54b0e12c446658",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      }
+    },
+    "ddraw_ADDR_7B5E52E9": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E52E9"
+      },
+      "rvas": {
+        "LoD/PD2": "0x252E9"
+      },
+      "sizes": {
+        "LoD/PD2": 40
+      },
+      "name": "__acrt_lowio_lock_fh_and_call<class_<lambda_2fe9b910cf3cbf4a0ab98a02ba45b3ec>_>",
+      "signature": "int __acrt_lowio_lock_fh_and_call<class_<lambda_2fe9b910cf3cbf4a0ab98a02ba45b3ec>_>(int param_1, <lambda_2fe9b910cf3cbf4a0ab98a02ba45b3ec> * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n int __cdecl __acrt_lowio_lock_fh_and_call<class <lambda_2fe9b910cf3cbf4a0ab98a02ba45b3ec> >(int,class <lambda_2fe9b910cf3cbf4a0ab98a02ba45b3ec> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f42b4386967dee7286133d84d2228005",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f42b4386967dee7286133d84d2228005",
+        "CFG": null,
+        "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
+      },
       "param_counts": {
-        "LoD/PD2": 4
+        "LoD/PD2": 2
       }
     },
     "ddraw_MNE_9dfd94407f1e": {
@@ -18144,11 +22962,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e30f73eac0b086dad9bfe0d9c1bab746",
         "PRO": "162f0adbb1e61ea400517fd2ef8731e8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9dfd94407f1ecec042ae029401c7e128"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -18179,11 +22997,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3b5e3acc5cc3d5bb1a351e7daadb7474",
         "PRO": "3f7f8c5c60015578993ce09c487b8f63"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b202c7fedec64368716d3f622f1eb942"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -18214,11 +23032,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "cbe9ac554b36f626c7a102af34a3afe6",
         "PRO": "2a11998d866825c8108c4280503b57ab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fa7c994c784156ccfeaf3d874d33c0f8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -18249,11 +23067,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "db704e2f6a068ba4037333ee8d88bf47",
         "PRO": "8de2743eafc9cd77c1684e2382a42ad9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d81a461e01541fd7fb9069c4d57ff168"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -18284,14 +23102,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "6636ebb206f8db5276c97b7a20c53f1c",
         "PRO": "eb2626ea22b754c4034473f547768180"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "08303a2c45c8e368f878bba681c0d18c"
+      },
       "param_counts": {
         "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5E5672": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E5672"
+      },
+      "rvas": {
+        "LoD/PD2": "0x25672"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "fe1c5ac9f7935747b98751d9cc3b4c78"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_8d604b94d487": {
@@ -18319,14 +23165,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "5921b744875712c0c7726f75ec2a9c60",
         "PRO": "7143e8fbba3d7409bfc94c446edf41b7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8d604b94d4875bb067e2854aeca208d8"
+      },
       "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5E57FE": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E57FE"
+      },
+      "rvas": {
+        "LoD/PD2": "0x257FE"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "e2a8e35b6962bbe2f7e34250faffb577"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_f90f20111dfc": {
@@ -18354,11 +23228,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "cda3054984ff4d0738f6bfe495dae704",
         "PRO": "2e4f6a94efba6499c90c90e085ecf316"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f90f20111dfc64e5c8f64343eeff3fa7"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -18389,11 +23263,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "21f490b929991aaa1e1e0250cca3a193",
         "PRO": "392a402c840c7752f0078a2ad19746bd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a933f9b64f35e1b019d76ae3cdbb1c35"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -18424,11 +23298,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "765d14b8f1a59485e088e412e00a6201",
         "PRO": "ec5a7e0a9bfc57ed6d6d71dc46e6ee60"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "50af254cd75c09b360e7e7551bf10ba7"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -18459,11 +23333,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c32f2e2594006a57dc36a2f597953e46",
         "PRO": "3de9fd29f476799892a6ee66f4ee783f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "01cfec5901d80734047c69f9f6853b25"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -18490,11 +23364,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2345b8edc9758057a0617bf9df6d4283"
       },
       "display_name": "MNE_4b475efdfdc663af",
-      "basic_block_counts": {
-        "LoD/PD2": 178
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4b475efdfdc663afad30066ed516f375"
       }
     },
     "ddraw_MNE_839917c6da72": {
@@ -18522,11 +23396,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "75a218f9bbfca45130e1da67e1b14b89",
         "PRO": "613b4ce81e5d88c0841b262e8cce14df"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "839917c6da7207ae2c810733673a177d"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -18557,11 +23431,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b00a894b9aba5e9b97b2ac86226d2f9f",
         "PRO": "58a60cab0c79e42e6e9d0f2ea590744b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0ddd47d194f9fee1957527cc8d10eceb"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -18592,11 +23466,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "aca5094624ced9357feaf4941fa0558b",
         "PRO": "165dc5d4608c88a5641044c83a714ecc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8d0c9a1e010f8abe97335959344477d9"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -18627,11 +23501,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f0ba573060faaadbf35ef8f0df4b89f4",
         "PRO": "8999ef5780f96ee9b11399293ba58336"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 116
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4d21245b383c9f7d449dfa2c4c502287"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -18662,11 +23536,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "73b6a3e9429471c00bb35974cb8e4170",
         "PRO": "561c06930cc1a606177868f4797bd16c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 34
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9ebd84146184b85a76f1bd4e893c2db9"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -18697,11 +23571,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e40dbfc826024b8cfad402a6d4b21b18",
         "PRO": "a7d6e345aaf753191784d9a17e0ec5dc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f28d5c05cf0f479daa327cbc72809da8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -18732,11 +23606,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "3957c6d77460b93af545bed8c0fc3265"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5a0b53cb9ff1dccdd195a4a1adb0a740"
       }
     },
     "ddraw_MNE_e12a8899f410": {
@@ -18764,11 +23638,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "08e95e15dd9db4b91fbc31b01d542a32",
         "PRO": "9dfeb3952bcf4d881702df2a3d913ab0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e12a8899f410820e61d7ef42bf8e6135"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -18799,11 +23673,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ea26ab21642de75d5e048a27d2c1a59a",
         "PRO": "e69bc55fb1c74680ea62062e08fe2e95"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b43948e879f32259222e3ec2578ffa9d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -18834,11 +23708,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4012e2db5d2394c451e404a6e4f0eb0f",
         "PRO": "dd64095461bfbe9def6ef4eb8600ee94"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 41
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cea9bd31fe8efd8965456d1d35c13bc0"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -18869,22 +23743,134 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2bf84d6b7125dc7e4cf78ae92044c899",
         "PRO": "beea484804c2ba506340e185fcbd69f0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "89487f6d4b2481cb044ef38396dadb61"
       },
       "param_counts": {
         "LoD/PD2": 9
       }
     },
-    "ddraw_MNE_d8d467f9dd7d": {
+    "ddraw_ADDR_7B5E6F6E": {
       "addresses": {
-        "LoD/PD2": "0x7B5ECD92"
+        "LoD/PD2": "0x7B5E6F6E"
       },
       "rvas": {
-        "LoD/PD2": "0x2CD92"
+        "LoD/PD2": "0x26F6E"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "dca94808c99ae229b8cb62c2234813cf"
+      },
+      "display_name": "MNE_7b4de9f0cf357b11",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "ddraw_ADDR_7B5E6F74": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E6F74"
+      },
+      "rvas": {
+        "LoD/PD2": "0x26F74"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "5cc78d19e1d231c4915aab9abfb9ae16"
+      },
+      "display_name": "MNE_7b4de9f0cf357b11",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "ddraw_ADDR_7B5E6F7A": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E6F7A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x26F7A"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "a3834e4e24e5ae5347852172a319d543"
+      },
+      "display_name": "MNE_7b4de9f0cf357b11",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "ddraw_ADDR_7B5E6F80": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E6F80"
+      },
+      "rvas": {
+        "LoD/PD2": "0x26F80"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "a4cc458a613a6535faa0817465582a19"
+      },
+      "display_name": "MNE_7b4de9f0cf357b11",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "ddraw_MNE_d8d467f9dd7d": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E6F86"
+      },
+      "rvas": {
+        "LoD/PD2": "0x26F86"
       },
       "sizes": {
         "LoD/PD2": 44
@@ -18904,11 +23890,81 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2c706c4d67a00273e8f44eca61bc7769",
         "PRO": "e84c18acd459e785b8c67b8d6ef4404c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d8d467f9dd7d743f7fd67cff11ef9e21"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5E6FB2": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E6FB2"
+      },
+      "rvas": {
+        "LoD/PD2": "0x26FB2"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "name": "__get_dstbias",
+      "signature": "errno_t __get_dstbias(long * _Daylight_savings_bias)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __get_dstbias\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d8d467f9dd7d743f7fd67cff11ef9e21",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d8d467f9dd7d743f7fd67cff11ef9e21",
+        "CFG": "2c706c4d67a00273e8f44eca61bc7769",
+        "PRO": "1336d32c97076db02c68a408e44d558b"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d8d467f9dd7d743f7fd67cff11ef9e21"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5E6FDE": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E6FDE"
+      },
+      "rvas": {
+        "LoD/PD2": "0x26FDE"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "name": "__get_timezone",
+      "signature": "errno_t __get_timezone(long * _Timezone)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Multiple Matches With Different Base Names\n __get_daylight\n __get_timezone\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d8d467f9dd7d743f7fd67cff11ef9e21",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d8d467f9dd7d743f7fd67cff11ef9e21",
+        "CFG": "2c706c4d67a00273e8f44eca61bc7769",
+        "PRO": "06aaf3ba800472893419aae0aa1a1a7f"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d8d467f9dd7d743f7fd67cff11ef9e21"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -18939,11 +23995,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "87948115fbc6797bdf4f238a42314982"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "660a3019097d2b026500534458fd172e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -18974,11 +24030,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2f681467679d6e4e3f0c0bf1a5813a17",
         "PRO": "51842e73604195fff63295cd328ee456"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1b1b0cd76f57a95c1b00d9727fb6023"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -19009,11 +24065,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3b096227ed6c5b8080741c8d6d9c7756",
         "PRO": "94a977e38e75c0011d8e89bf8f3872b1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "53d8cdf63df98279fdf142bf683a337c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -19044,11 +24100,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d910d7d260bb7561b099dff699805bb0",
         "PRO": "78d1d43d6150473b6d6ced8945abe548"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0891074f31bbd1337007440241e9ca07"
+      }
+    },
+    "ddraw_ADDR_7B5E7273": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E7273"
+      },
+      "rvas": {
+        "LoD/PD2": "0x27273"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "48981cb220e6e9c434cb0ac09a79cd9d"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_24db94bd37f0": {
@@ -19076,11 +24160,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "55cd8b2ad107d47e30d551307e4ca804",
         "PRO": "2c6fb1f13d7f41d8915fd2de1a953620"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 32
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "24db94bd37f0026132c1629740c787c7"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -19111,11 +24195,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "79e08a26d90af9f7c7aa520558a7153e",
         "PRO": "bf0d26d0baa7509fe57fa656825c9e5b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5e7d2fad66e9981c526029376d5c5a53"
       },
       "param_counts": {
         "LoD/PD2": 11
@@ -19146,11 +24230,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1eff579f51a10266c5549149c55439b4",
         "PRO": "0ec7f7e53079b2c36d982b4bac237afb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 47
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f560089501c67b52c2ae316552a3da0"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -19181,11 +24265,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a241d689ec681d850bc9969d3b53cbe9",
         "PRO": "a36dbe4e98e4cee8a8bc0dc6d3c7f246"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "05994ae84da13c1009b32278ec1b6e5c"
       }
     },
     "ddraw_MNE_7ee68159e352": {
@@ -19213,11 +24297,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ed8f5ebaae5bf8a3b29ad4bab2f202c3",
         "PRO": "3d291dbe9f18862572a4f3be62940ce3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7ee68159e352746780fe557a3bd8b09a"
       }
     },
     "ddraw_MNE_f8fa6744c2b4": {
@@ -19245,11 +24329,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b0cd6ca5c1c13b0123323f803444d07c",
         "PRO": "b1a863e34b67b275feea1f9f2664ec85"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f8fa6744c2b492b065afe1f34e9b8219"
+      }
+    },
+    "ddraw_ADDR_7B5E7A0D": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E7A0D"
+      },
+      "rvas": {
+        "LoD/PD2": "0x27A0D"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "0721e01a3d13aa34463ac4c137f128d7"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_f62b97c31c3f": {
@@ -19277,14 +24389,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "f6bd969d8b633d59d24d32bc453c757c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f62b97c31c3fbb54065216a3e17ba267"
+      },
       "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5E7A57": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E7A57"
+      },
+      "rvas": {
+        "LoD/PD2": "0x27A57"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "c087895902b9891018cc664a2712fb9d"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_b71546f08f15": {
@@ -19312,11 +24452,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a463c0eaf8f7feb7924f80c98ffc73f8",
         "PRO": "8f7ee6602091fe317e73d4628521252f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b71546f08f15a3ccd0dc30ea03daefeb"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -19343,11 +24483,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d4c428d686eef7cbadbe32cd12577e12"
       },
       "display_name": "MNE_4c3e5943e2240c0e",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4c3e5943e2240c0e96abb1f751479a77"
       }
     },
     "ddraw_MNE_9a84ca36bc3d": {
@@ -19375,11 +24515,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8cf55cd0395e35b7ffceb7f1f7ee5378",
         "PRO": "da23ae8997e90ceb88d22c6783105566"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9a84ca36bc3d306849be538e7817e309"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -19410,11 +24550,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "02aee47d3385be34b577e540cbc18f75",
         "PRO": "5fdf1f146652a6542f3842034be02623"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2d6cb1e856917eb7ccbe9d1db286bec1"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -19445,11 +24585,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a3aca28cfad0b1a8b5e68c1bed154a47",
         "PRO": "04777384d8294d99d358b5dcad05875b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 30
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c658ea4150274b6954b7eb11dee69901"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -19480,11 +24620,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a9c729cc86b83c7c1ad73572a77516e6",
         "PRO": "edd03f3bd361b8c961a4aa3a5a29028f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2c69468e4701011b3392b622e57d3678"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -19515,11 +24655,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f9d24ef98fdfa917c554f2affffd4528",
         "PRO": "5efc9ea569083f9bf5cc4ea8aad1a5ab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "23c575935915a1a869fc5bda05acf8e6"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -19550,14 +24690,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fd9972b93bc30d9b5de608b2276eeb40",
         "PRO": "bac12cd41714af9bdb5e22db26aaf1b9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bf792333a8f00bbc2e79bfb1aad3b479"
+      },
       "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5E7F62": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E7F62"
+      },
+      "rvas": {
+        "LoD/PD2": "0x27F62"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "27ae7348f974cad909f88987104d63d6"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_ae6039e27dc1": {
@@ -19585,14 +24753,77 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "ea67967a9a0893ed48273d04df24cbb3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ae6039e27dc1045f8e55ca8bf450c0f1"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "ddraw_ADDR_7B5E7FA4": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E7FA4"
+      },
+      "rvas": {
+        "LoD/PD2": "0x27FA4"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "c8bdf22dd9e793b80bf4c066d7e4a109"
+      },
+      "display_name": "MNE_3a54b0e12c446658",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      }
+    },
+    "ddraw_ADDR_7B5E7FB0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E7FB0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x27FB0"
+      },
+      "sizes": {
+        "LoD/PD2": 40
+      },
+      "name": "__acrt_lock_and_call<class_<lambda_ad1ced32f4ac17aa236e5ef05d6b3b7c>_>",
+      "signature": "void __acrt_lock_and_call<class_<lambda_ad1ced32f4ac17aa236e5ef05d6b3b7c>_>(__acrt_lock_id param_1, <lambda_ad1ced32f4ac17aa236e5ef05d6b3b7c> * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n void __cdecl __acrt_lock_and_call<class <lambda_ad1ced32f4ac17aa236e5ef05d6b3b7c> >(enum __acrt_lock_id,class <lambda_ad1ced32f4ac17aa236e5ef05d6b3b7c> &&)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f42b4386967dee7286133d84d2228005",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f42b4386967dee7286133d84d2228005",
+        "CFG": null,
+        "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
+      },
       "param_counts": {
-        "LoD/PD2": 4
+        "LoD/PD2": 2
       }
     },
     "ddraw_MNE_0ae252ded2ab": {
@@ -19620,11 +24851,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "279a3cb1dd4008cf9aa9159f4d1d16ea",
         "PRO": "869284c467a0cb096bf2dfd5584cf273"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0ae252ded2ab2fe0f25119c68e94e8b9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -19655,11 +24886,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9e769e092d33a5207cb8844b2ed2ef06",
         "PRO": "12a97fe170cd849b65c45ed689979d60"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3929bd79ce29f38cda0437f1eae9dc40"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -19690,11 +24921,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a68969bd63a35a30025fbaa3a4e68bae",
         "PRO": "a6f4ebc877c8f446d9b064174ae3fdfc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cfab93b360e8ad000f247b2a84b76843"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -19725,11 +24956,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a9ad03a0492430bc624a62d7c6f0fd7c",
         "PRO": "b66032ebbb191aa219ffeeb3cec81be3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b4117eacf5ae9fcc56ece914ca13bba9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -19760,11 +24991,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b2e84653a111be6368415025f43b8dd8",
         "PRO": "1555f0862a08dce76ad44adf57966819"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "203f0b2c915debbb452bda81f4ec106f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -19795,11 +25026,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b1c698a3b08ce1f7497b9078c09895c2",
         "PRO": "d3c37e9615a8363407fbb3c78803db86"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d9ef3b208524bd16abb77fad4695178c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -19830,11 +25061,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1abbbed88598ab76171d956e8b753f75",
         "PRO": "101da56a61c3dd1a89bb6c776ec0468f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4fd9f17714b4726dc55f6f8541eeba9a"
       }
     },
     "ddraw_MNE_669409ca317e": {
@@ -19862,11 +25093,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "825326e89ca06b4a9064f08e3da5685a",
         "PRO": "2fc8f2e9de4a4617555e1e9d0ff533ee"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "669409ca317e85d6e7d08c392fae8b1e"
+      }
+    },
+    "ddraw_ADDR_7B5E84F6": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E84F6"
+      },
+      "rvas": {
+        "LoD/PD2": "0x284F6"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "4eeac95ed134f4a3c2536a30ef4491dd"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_ff60682ab879": {
@@ -19894,11 +25153,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b6e24826e23fb65e4b8f216ae9932a47",
         "PRO": "5f53334744905ee0ab8ee981db3d0b71"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 40
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ff60682ab87957a216ed38f714b1b81e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -19929,11 +25188,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "589f8f9c21df3f5993611088ff68158e",
         "PRO": "f1825d342c40451f77816c99c93c0bb1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ce1a8280e9790cd9da44d8e1134f206c"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -19964,11 +25223,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "356e1b6c7aeefa245a181d5e346dbc05"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a0233b04111edb7a8a617e9b940ca401"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -19999,11 +25258,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fe43afd9f3cfefc6a888c38c288cd751",
         "PRO": "b3663a0d95934c4929855bc560f9917e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a95646d8d22ce011ed8cfdab99140425"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -20034,11 +25293,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9500af2f143a2d3834ce5f07053858f9",
         "PRO": "1f857ff6f79e8887a990370fc04798e2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0299e8717cb6cfe1b60598e9f555e241"
       }
     },
     "ddraw_MNE_200758ca4997": {
@@ -20066,11 +25325,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e507f51d67cea3ccb7e782be39646d5a",
         "PRO": "a9867c7203a177960b978cba5b5b6629"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 44
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "200758ca49977afbfe7de6892abf3bdc"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -20101,11 +25360,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "76c081285b78a4eddfb5e482caf030ff",
         "PRO": "bb9efae90c686652b5e72d81f4a65aa7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6cca6bbac8f69e76fdd2456f0c082b4d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -20136,14 +25395,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "0e94c0891db73ee8ae4b5c366d38cbe4",
         "PRO": "1bbb7969b990c7375a00c8df03c3b3ab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e63e66a5d08abe37eee2e66a9a5b0cd6"
+      },
       "param_counts": {
         "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5E8B7C": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E8B7C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x28B7C"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "3290258345d5fcd0d37f97a749fa86c6"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_5d968ff1a119": {
@@ -20167,11 +25454,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3ccc367c6a149481be2b2146cca5544e"
       },
       "display_name": "MNE_5d968ff1a1190743",
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5d968ff1a11907435b8e2d3923a8a1e2"
       }
     },
     "ddraw_MNE_924dc52aa09e": {
@@ -20199,11 +25486,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1b4d85a42f3008e2b557dc8a6b762504",
         "PRO": "7f679b269a351e0d8fdab6030038da52"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "924dc52aa09e8f2c4d9df103b2119932"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -20234,11 +25521,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "29085e666b52bca7a6b7560810e12444",
         "PRO": "9fcaa46eb48c8186908de84b3abcdb9f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c9b31d5b91b8bd776df35023ba056c0b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -20269,11 +25556,74 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "3d92a38ec1a5b48ca6b3e599d077d3d4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ae8e401ce2d5a483f8ef521fdbe98c1c"
+      }
+    },
+    "ddraw_ADDR_7B5E8D38": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E8D38"
+      },
+      "rvas": {
+        "LoD/PD2": "0x28D38"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "c4dba3ab02d0fb5045b955a4f0b10d56"
+      },
+      "display_name": "MNE_3a54b0e12c446658",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      }
+    },
+    "ddraw_ADDR_7B5E8D44": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E8D44"
+      },
+      "rvas": {
+        "LoD/PD2": "0x28D44"
+      },
+      "sizes": {
+        "LoD/PD2": 40
+      },
+      "name": "__acrt_lock_and_call<class_<lambda_ec61778202f4f5fc7e7711acc23c3bca>_>",
+      "signature": "_func_void_int * __acrt_lock_and_call<class_<lambda_ec61778202f4f5fc7e7711acc23c3bca>_>(__acrt_lock_id param_1, <lambda_ec61778202f4f5fc7e7711acc23c3bca> * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n void (__cdecl*__cdecl __acrt_lock_and_call<class <lambda_ec61778202f4f5fc7e7711acc23c3bca> >(enum __acrt_lock_id,class <lambda_ec61778202f4f5fc7e7711acc23c3bca> &&))(int)\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f42b4386967dee7286133d84d2228005",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f42b4386967dee7286133d84d2228005",
+        "CFG": null,
+        "PRO": "74e1badbe8159362e5c81ef6c0933a2b"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f42b4386967dee7286133d84d2228005"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
       }
     },
     "ddraw_MNE_41600ae30682": {
@@ -20301,11 +25651,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d0ad0d5fe9cf52186bcd9f260a9eebde",
         "PRO": "db705cacc0ade8e647ef6cb3d3a024ae"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "41600ae306827ebc303914ec10618e02"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -20336,11 +25686,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9f0e6dcc6217912767c0e6d0aa226117",
         "PRO": "5e74900073d2f9b6bc3dbc70e9cbb7ab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b2491f66c9f7fa25e9bd70135d2ddcaf"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -20371,11 +25721,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "3769c3746f2fa0493c509f3c0de4680e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd7668c19c0a9a5ebe89dc41c893cb09"
       }
     },
     "ddraw_MNE_3de090840c58": {
@@ -20403,11 +25753,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "5440282cea8179c7db365a57722e598c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3de090840c587e61d24836892f2d4f4c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -20434,11 +25784,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "3839219aa51c079b1e7ac828e7c007b7"
       },
       "display_name": "MNE_b1691d6b7b8ba065",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b1691d6b7b8ba065c3fc1a089e8db64e"
       }
     },
     "ddraw_MNE_d9c88b14e14e": {
@@ -20466,11 +25816,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d78d4400ee1d10301a3f7aa7d7535175",
         "PRO": "010762ce13a1320ad17436498fdac217"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 47
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d9c88b14e14e2cebf48df752584be6f6"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -20497,11 +25847,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "5129f226e0b36b0bcf95339bd24cc029"
       },
       "display_name": "MNE_f2d25c18272c7b99",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f2d25c18272c7b996f7a3dd26e70130a"
       }
     },
     "ddraw_MNE_20b9ec495180": {
@@ -20529,11 +25879,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "9020f6932a8e6c13bd124a780ebea252"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "20b9ec495180b2e3188249743e6e431d"
+      }
+    },
+    "ddraw_ADDR_7B5E9052": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E9052"
+      },
+      "rvas": {
+        "LoD/PD2": "0x29052"
+      },
+      "sizes": {
+        "LoD/PD2": 20
+      },
+      "method": "MNE",
+      "index": "MNE:c713d6c7eb52f6942a3f8f972dc327ff",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c713d6c7eb52f6942a3f8f972dc327ff",
+        "CFG": null,
+        "PRO": "5ba091f6d436f8d7d5cb2f510e22f1ee"
+      },
+      "display_name": "MNE_c713d6c7eb52f694",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c713d6c7eb52f6942a3f8f972dc327ff"
       }
     },
     "ddraw_MNE_b0ffbebfd23c": {
@@ -20561,11 +25939,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4c2324165c5bad17abe53690039941fe",
         "PRO": "4f7018c7bf53463b2e05e5e25ec9dd9d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b0ffbebfd23c1ca4221b2eebfdd7e3fc"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -20596,11 +25974,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ea05389905bb6e64f3ce3a40d9399d17",
         "PRO": "7c5f176c814602384d71504a7ac66839"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "34df21ef502b0a17eb5791857c24d144"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -20627,11 +26005,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "de8fadd341b4df8c01ff03295440b94b"
       },
       "display_name": "MNE_b387be071be68bfa",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b387be071be68bfa7a1340b73e935cc5"
       }
     },
     "ddraw_MNE_3b0e5fbfda84": {
@@ -20659,11 +26037,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "55c6be67558b73bc6d98c1f4df5b4252",
         "PRO": "5d4fcf813b367eb1fa8e7b732c827334"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 59
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3b0e5fbfda845442a830ebb20a3c5b30"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -20694,11 +26072,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "ac6bae6d3b12f2cd450cee990ffb5021"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c5e7f58ed3f2236bbf0c4dee3966f29b"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -20729,11 +26107,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "0f1c449c81d4891b6a6f0bc0c8538043",
         "PRO": "c5746fff56934d09ff0f93e81192005f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bd44fb01493e5f23f378c633c544c3ca"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -20764,11 +26142,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "bde7e3d95dce95cb8b6b4ac5db2cca42",
         "PRO": "4f4c9223f2f99e473796a7703fd573f8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 41
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f1b5aa6e1d29ee53f84fe9fb08f36b41"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -20799,11 +26177,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "acd9c34a5e33b58a92e7ed133adc66ed",
         "PRO": "0f5c99fefb607c19c8a66bec271e89f4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0af696326b6b6301170067bdb458067e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -20834,11 +26212,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "afe4048504677809d0f6ae6d59fbce44",
         "PRO": "e013423b1ff85188ae3c8a5e011ef919"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "57a6084f503bc0dc442ee52d52b91cf5"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -20869,11 +26247,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "9b979c3c2ce7d7b3499801b996c1efde"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ad4ba35ab76dcd6db32072356d108c11"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -20904,14 +26282,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7717e302ddf2a6ae5ae47bf2733ce672",
         "PRO": "abdfa1986fcadd28c0ab9a51456ddf89"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5e87cf683fb454c7780d1b7c222485da"
+      },
       "param_counts": {
         "LoD/PD2": 7
+      }
+    },
+    "ddraw_ADDR_7B5E9A23": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E9A23"
+      },
+      "rvas": {
+        "LoD/PD2": "0x29A23"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "44796402ece5fa2090526a7651c2e5c2"
+      },
+      "display_name": "MNE_7b4de9f0cf357b11",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "ddraw_STR_c7d88f186dd5": {
@@ -20939,11 +26345,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "824270dd93b6b6e7e1a55d5b96521c88",
         "PRO": "0966329c7f4a7d36207353da33ee9db6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bf11033a30bca60593c7fb4b583ed7d0"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -20974,11 +26380,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2bea3eb19dd06b49df098eed6ded289c",
         "PRO": "53ca5524fc5a84c4d6188b00541d777f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f9cb8bbabfde9f0d802b895666dd6def"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21009,11 +26415,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "da65fda72f7be9045d1b6374d21384af",
         "PRO": "99332398a63f99089610ab689d321af0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9fc0596d538dbaeea6e64dc1294bec38"
       }
     },
     "ddraw_MNE_077522c6148b": {
@@ -21041,11 +26447,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "cbafa6d7274a163cbd4737f3f5446571",
         "PRO": "0815f411a7b4f31f8743e5e3d0dc5ab9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "077522c6148b6219a33ff503efe78b61"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21076,19 +26482,47 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e599c49d2011ede501e48668bb40661d",
         "PRO": "c9fc0cd8e584b0333e25689a530f8ec7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3ea8d38867df01cd78235e8bdfbd8e46"
+      }
+    },
+    "ddraw_ADDR_7B5E9C4F": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E9C4F"
+      },
+      "rvas": {
+        "LoD/PD2": "0x29C4F"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "774a90b7a2a850c187dc5632aba7ad2d"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_f0eea9e7b937": {
       "addresses": {
-        "LoD/PD2": "0x7B5E9D0F"
+        "LoD/PD2": "0x7B5E9C58"
       },
       "rvas": {
-        "LoD/PD2": "0x29D0F"
+        "LoD/PD2": "0x29C58"
       },
       "sizes": {
         "LoD/PD2": 35
@@ -21108,11 +26542,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "3db69c51af0643e138395283f40bbca9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f0eea9e7b937909bb6d7a1715646f825"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21143,14 +26577,49 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ab60a91382bad52741d15a474a79aacd",
         "PRO": "0c46b08d957afb4da7487bd919c6ffd6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c51c62e21be2aba2cd44394f0e19eb7a"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5E9D0F": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E9D0F"
+      },
+      "rvas": {
+        "LoD/PD2": "0x29D0F"
+      },
+      "sizes": {
+        "LoD/PD2": 35
+      },
+      "name": "___acrt_lowio_unlock_fh",
+      "signature": "undefined ___acrt_lowio_unlock_fh(uint param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n ___acrt_lowio_unlock_fh\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f0eea9e7b937909bb6d7a1715646f825",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f0eea9e7b937909bb6d7a1715646f825",
+        "CFG": null,
+        "PRO": "3db69c51af0643e138395283f40bbca9"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f0eea9e7b937909bb6d7a1715646f825"
+      },
       "param_counts": {
-        "LoD/PD2": 2
+        "LoD/PD2": 1
       }
     },
     "ddraw_MNE_723704c815a6": {
@@ -21178,11 +26647,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9da21044a93ea42988ff0cc8748c8b85",
         "PRO": "8d84f83620cb5248ae08b131f27cb287"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "723704c815a6bbc6d430118a4b4e7a5c"
+      }
+    },
+    "ddraw_ADDR_7B5E9E3B": {
+      "addresses": {
+        "LoD/PD2": "0x7B5E9E3B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x29E3B"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "f2bfe8c4f97328c467e7b62b9fdd8383"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_f99397547ac9": {
@@ -21210,11 +26707,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ab5cda07af27ebe37422fecb2796d6bf",
         "PRO": "75e9293711e84b8bf84a1ee4e045b895"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f99397547ac96d144fbfc9d408a4046c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21245,11 +26742,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "eb75f0b009e5d824741621967c5406cd",
         "PRO": "e079d1efd8ea7d1e10a9d0568387be2b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0ad7140fe64aeea8512c68a1218377b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21280,11 +26777,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1d91ef73be473d07b0518e7381470fa8",
         "PRO": "c1fc223d9471e9ff67d8017663b5301a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1326cb7049c2749944a79fe57275ce0d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21315,11 +26812,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "40296294f7fa21941e4afb765a770226",
         "PRO": "683e3b9e302244c0c775ef2268eab7e1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f4cb61d3c1fb758bee3686fb74a3dbc2"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21350,11 +26847,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "e816b12b75edd2bc9fbe296373ffb010"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0fa3047a450a74aea4301a83346e9bc7"
       }
     },
     "ddraw_MNE_6b7eabbe24cf": {
@@ -21382,11 +26879,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "64bc209334ca106024506b670c5aaf9d",
         "PRO": "74afe2a88853d226c379f5577bd6f138"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6b7eabbe24cfa72b3fe335d59e14ee79"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21417,11 +26914,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "51a350048ccfd3197674149136350e24",
         "PRO": "0b4f105d6146b6e1ff5da31529f68b8e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6ae84e36acf576b7f6700e2cab767984"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21452,11 +26949,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e6f5aaef1039a61daa103ba7f60faedc",
         "PRO": "67aecb41e401d5483222ba09c178d269"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "87f44fc8e938eab6507761382adce7aa"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21487,11 +26984,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2555e203409cbc2d4a46fa3a51b3c448",
         "PRO": "c077be18aecb2de6d8bd9225b2342279"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "98b097b786c461a3db56ee5744b48666"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21522,11 +27019,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e6f5aaef1039a61daa103ba7f60faedc",
         "PRO": "67aecb41e401d5483222ba09c178d269"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1621b59440b528d3aecaa7c5ed932877"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21557,11 +27054,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "368a49afee490612d01c74a4d00d7e24",
         "PRO": "2920fd3dc683e93c0deb2d7fd3714684"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a8fcae6302121688ab84f97b546a9ba8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21592,11 +27089,39 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "91de6121fbf9fbfd45954d0d9c243222",
         "PRO": "a86700643e448e00d2250a3a141aa830"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7598d2aa34d5681449d09b6267f3b554"
+      }
+    },
+    "ddraw_ADDR_7B5EA331": {
+      "addresses": {
+        "LoD/PD2": "0x7B5EA331"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2A331"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "7f57ef3d088af00bef8fbde892ae423a"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_a8a04c013e86": {
@@ -21624,11 +27149,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "eb3b6093f922424734a78d0a744b94e3",
         "PRO": "21d68c7808343dc7255dd6bd688a9ec6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a8a04c013e86edd9bf47c2c7caff9097"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -21659,11 +27184,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7a907d54f67efcd7b9749b4d80bf3ca0",
         "PRO": "8e137709a9a068b0724b67549ae5f7a8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e43b5f2a50078be8f7c35df0ea5d93ac"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -21694,11 +27219,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "53c6e5f63a6063bc545cb43981ed4884",
         "PRO": "e40a25a5223cd0adf806c88392e280a0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1fc523dc36bbacac62b863f35834e628"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21729,11 +27254,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "0704f4e6faa4e9e396bc201e5ebddc8a",
         "PRO": "e2041c09c314383ba52c36dbcba27e44"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 79
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5df00608f7f7cc41ed3ac42bfb4fe611"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -21764,11 +27289,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "804190a43a8da3f1698cf0c2d7d04881",
         "PRO": "cd0ac7e57c4297b91f79e011c21916ab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 313
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f959528188daa306f772309de9d9d2b"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -21799,11 +27324,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "888577915c4dc51aaea3302f4efccbc2",
         "PRO": "55ede1086407de99360b3c12d1dbb321"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "31d289fb57796ea89416395a3bf93a68"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21834,11 +27359,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "dbcfe5b3a1e464acc6b646fb5b28c75c",
         "PRO": "1b0cb2f63204ea3d31b873a87a091195"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "222a3af066895a477ac4476ed1017961"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21869,11 +27394,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "946d60bf6f7853643fddb5d1d40f9bf8",
         "PRO": "f7a6e70575c4352fee9226963fabfd8d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d395258eb2046f5b307476f154b141e9"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -21904,11 +27429,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d03648ef17280c97be1611d9fd0a9b94",
         "PRO": "5f4b91e6f93447553a1b2c14d8040bd5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dbf581d5fd5090508da74747dbf8e9fd"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -21939,11 +27464,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b533474feaf26e42540a897fcb380136",
         "PRO": "5ecc403c0bcfde16f45346cc47533159"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b894a8a0c82c33795b0e961904b85c34"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -21974,11 +27499,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d69bc82e329d76c21526cdfbd9e8cc3d",
         "PRO": "90728cc4d9f491cd7403c43c12f78f75"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5db9325ae31b38d187e799c01fb307c7"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -22009,11 +27534,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3720b7d458713d58831cf684d07f9b9f",
         "PRO": "679fb235c6643368eb0e061d20939d05"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 34
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "73857746a1877f9fc4bd1172997ec350"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -22044,11 +27569,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "a1e27cc41cfc517e0aa9f8cfb8bbe996",
         "PRO": "1eb5513647bca7031ca5c62345132680"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f862916b937749ea29861722a2714d9f"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -22079,11 +27604,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e0fac2e7fa48bc528dd49f83d8ddb234",
         "PRO": "18647d1439f4ce52a346d16bec4ecc03"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fee35e786cebf680b434840a27e70a52"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -22114,11 +27639,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "342b1d819c0880ddc496a734edabc0eb",
         "PRO": "f4006ee664c15339583b9de1e1ea7fa4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7ebbe4780b872071c50417f5077f8c08"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -22149,11 +27674,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "aed4449cad9c680425c75a8429257195",
         "PRO": "f42e94f181cff3d3f5c47b1600037184"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4757db11b7b2343f9aedab64cb45c899"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -22184,11 +27709,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d3499ca2bbd29835e881ab0d3acd6cc2",
         "PRO": "78b7ad9053ff9a70298faf5a988c4f89"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "61f3d489eb61c593868092beadddaf3d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -22219,14 +27744,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "4bd54ba5c59589ddd740266b9c0f9e64"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "114ccf68fd2e1a67bb846be08dfcfc28"
+      },
       "param_counts": {
         "LoD/PD2": 4
+      }
+    },
+    "ddraw_ADDR_7B5EC574": {
+      "addresses": {
+        "LoD/PD2": "0x7B5EC574"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2C574"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "bc9b69a7cda30b52f966afc38d09f713"
+      },
+      "display_name": "MNE_f23ef2b3a6cfdeb1",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "ddraw_MNE_a474c0012e0c": {
@@ -22254,14 +27807,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "79896b0e4b0f9b325571eee26ed72239",
         "PRO": "f50bde8f3b7026db1a372af943e24009"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a474c0012e0cbd1b59804bf0d2b428cf"
+      },
       "param_counts": {
         "LoD/PD2": 4
+      }
+    },
+    "ddraw_ADDR_7B5EC625": {
+      "addresses": {
+        "LoD/PD2": "0x7B5EC625"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2C625"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "19a0882efb9b0d8ae3eab88aa1d31c76"
+      },
+      "display_name": "MNE_f97d159a7b72e6f6",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       }
     },
     "ddraw_MNE_44190a3bea60": {
@@ -22289,11 +27870,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "db0a3f069721558f117ca9dcc976b038",
         "PRO": "b63a40af815231de640644810012f7e5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "44190a3bea6098d620ec2117028c3efa"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -22324,11 +27905,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "528877bfebb6cb7dc053ab3dc2930fa1",
         "PRO": "21c7ea79451526d34690c24fe9b1f455"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6f0645ed5088b2675b370ff79b29993d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -22359,11 +27940,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "3d927891c7d257a0621cc88de62c81ef",
         "PRO": "2d4e5e91f812ae11371dd1f067b6201e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 61
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a292928349df96d3c970c628a7f53ccc"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -22394,11 +27975,46 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fd48d6310d325d495db3e5b0dc4529ca",
         "PRO": "de907609c9ddaaea9fc64ebc489a583b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "262b55d4b1f21fd166621d0ca2135ed8"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5ECAF0": {
+      "addresses": {
+        "LoD/PD2": "0x7B5ECAF0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2CAF0"
+      },
+      "sizes": {
+        "LoD/PD2": 23
+      },
+      "name": "__mbsdec",
+      "signature": "uchar * __mbsdec(uchar * _Start, uchar * _Pos)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __mbsdec\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:34260d5eec8139d14f8eaa440ecdab22",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "34260d5eec8139d14f8eaa440ecdab22",
+        "CFG": null,
+        "PRO": "c3142cea20aab0f47fbf5ade03bfd374"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "34260d5eec8139d14f8eaa440ecdab22"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -22429,11 +28045,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7dee71a988471ceca79d029e2882819d",
         "PRO": "70daf543604ba5ddf77f4c80119936ca"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "89e6e98d5c1d663e64ce2959ee4ac547"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -22464,11 +28080,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f792c90d3df0a2ae84eb1466505be4f5",
         "PRO": "a25e05c4df41e1cd35a2a039de2faeea"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c264274e789cf94eab90a453a2015362"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -22499,11 +28115,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b51b1170f34e5775e13dcbd989b750b3",
         "PRO": "aec62e377b71380f2277cabf67c48d1a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b91f5f309d603f689a37284439e07386"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -22530,11 +28146,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "31482e7d5238e379890b646eed3e28c0"
       },
       "display_name": "MNE_821454df23359278",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "821454df23359278f97d5ca0cd1ae75b"
       }
     },
     "ddraw_MNE_a188c1e50cb4": {
@@ -22562,14 +28178,49 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2bb9a2456287b584fc6878ba73a39934",
         "PRO": "1e65e8d8679466a63417fc110d12a3a8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a188c1e50cb443d4804a3e5b51091905"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5ECD92": {
+      "addresses": {
+        "LoD/PD2": "0x7B5ECD92"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2CD92"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "name": "__get_fmode",
+      "signature": "errno_t __get_fmode(int * _PMode)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __get_fmode\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d8d467f9dd7d743f7fd67cff11ef9e21",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d8d467f9dd7d743f7fd67cff11ef9e21",
+        "CFG": "2c706c4d67a00273e8f44eca61bc7769",
+        "PRO": "820f0db872c9452c2cd998fce43842e6"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d8d467f9dd7d743f7fd67cff11ef9e21"
+      },
       "param_counts": {
-        "LoD/PD2": 2
+        "LoD/PD2": 1
       }
     },
     "ddraw_MNE_f5e509caddfa": {
@@ -22597,11 +28248,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "cfcfe9fa6f4fea4a3657d9e4b023caf8",
         "PRO": "0886193cf1a58f6bca8b642a9c0c8f97"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5e509caddfa6f2073a1b0c51c5be129"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -22632,11 +28283,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c3e9e9359d6f1767bf8d6488ccc2b50f",
         "PRO": "3bedfbe369213d35c892b652b246c6fc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "52cd8e0e4587f11d362604d6cbff0a90"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -22667,14 +28318,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8dba028834e58ef090b436fba48eb101",
         "PRO": "fc4e5c1685954001d6ac6365696fe3ba"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "65a696b668262636e5c651a33847e45c"
+      },
       "param_counts": {
         "LoD/PD2": 2
+      }
+    },
+    "ddraw_ADDR_7B5ED0E7": {
+      "addresses": {
+        "LoD/PD2": "0x7B5ED0E7"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2D0E7"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "96845714e9f403a8bd1c39d9d11c41a8"
+      },
+      "display_name": "MNE_7b4de9f0cf357b11",
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "ddraw_STR_777b7e8fcf87": {
@@ -22702,11 +28381,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "6ac5df699610a1ec3c83a3b466c29ec6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d111cac37e95e6477bce95a18c0a4d2e"
       }
     },
     "ddraw_MNE_ef97ec2639c3": {
@@ -22734,11 +28413,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "7be44d950c67914b46572bb57dfbfd94"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ef97ec2639c3f703cd44d371c538ffad"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -22769,11 +28448,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ba188a2153e1de50215b16de49c7ff74",
         "PRO": "476925fc38f8f9c8b6a68dd3e27b953b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "717fe8af6b02001c4d088e8dbfe5c226"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -22804,11 +28483,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ad56dd52a7d605fac736813fb9626b3b",
         "PRO": "859188e2327ec9792f1e8ad4be0e8087"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "774d75324b0130558045e57933d147c1"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -22835,11 +28514,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "b26b19b923575c2fa81cfeb990e4c1b7"
       },
       "display_name": "MNE_c6e7054733fc415f",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c6e7054733fc415fff96379f6df31fce"
       }
     },
     "ddraw_MNE_c9d057426189": {
@@ -22863,11 +28542,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "457d7bd6d88a0d77a883c5c9ed5eebfe"
       },
       "display_name": "MNE_c9d057426189df56",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c9d057426189df565e56f8cd4a2b034d"
       }
     },
     "ddraw_MNE_e89f139b7ebc": {
@@ -22891,11 +28570,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "7ce7da908aaf3da0781772ca7943b91e"
       },
       "display_name": "MNE_e89f139b7ebc271e",
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e89f139b7ebc271ec35e77bf5175b40a"
       }
     },
     "ddraw_MNE_9a2397dcc148": {
@@ -22919,11 +28598,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "5eedef326ea23136a39fea5e69fa7344"
       },
       "display_name": "MNE_9a2397dcc14812cf",
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9a2397dcc14812cf09ecf44325ac8e7c"
       }
     },
     "ddraw_MNE_26bfcb544491": {
@@ -22951,11 +28630,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "026d516f6ca6e4c2b690b569aefd4e16",
         "PRO": "44daac3518303fcadda6bdce8d30c2b9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 64
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "26bfcb5444915e05681e72d1e9853ddf"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -22986,11 +28665,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "e8304c2afda95740a391a275b6b161fd",
         "PRO": "4fbf3fc54e3d4d86491e1b02aa350361"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d36d7417089130c7401ad6540a2a0ffe"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -23021,11 +28700,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f16ee01fce64ac425fc77137800a8352",
         "PRO": "feedf645e7b46259981c37547ed269c9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8ec37c151758e009d496e5b65de6fd79"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -23056,11 +28735,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c5517a95916ebb0d7ab769889aa831b4",
         "PRO": "b2385cce40559c3a94aadefbb0ce0e00"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fd32e5875ade7df0127a9cbd3e441875"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -23091,11 +28770,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "15f29b626d1276a519b381e257a09290",
         "PRO": "b2b5f2cf35637fa81f2faf866f97417a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "36a0bf0632bf62960bcd5a59b2fa6611"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -23126,11 +28805,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "25aac2dc1fb861ca48a72e5284f7fc71",
         "PRO": "1c5b8e4f12fafdb5919aa22e98834c69"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "58908c983c41f00cd74be33cb9c0bd3a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -23161,11 +28840,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "b0d65ad04869f7c9a1dc41a90923d750",
         "PRO": "9456d413e6d4771318475f2eac8da268"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6776370a2e4c5c133e380da70d367115"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -23173,10 +28852,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_ee09be82fdf1": {
       "addresses": {
-        "LoD/PD2": "0x7B5ED9BD"
+        "LoD/PD2": "0x7B5ED95C"
       },
       "rvas": {
-        "LoD/PD2": "0x2D9BD"
+        "LoD/PD2": "0x2D95C"
       },
       "sizes": {
         "LoD/PD2": 97
@@ -23196,11 +28875,46 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "8d6256cf950ade1f23c4cbe19e9a5bfb",
         "PRO": "63ae4b18b259e4e3152a21d735f9c49d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ee09be82fdf1f1e15391e71d483c7174"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5ED9BD": {
+      "addresses": {
+        "LoD/PD2": "0x7B5ED9BD"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2D9BD"
+      },
+      "sizes": {
+        "LoD/PD2": 97
+      },
+      "name": "___get_machine_status_x87",
+      "signature": "byte ___get_machine_status_x87(uint param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n ___get_machine_status_x87\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:ee09be82fdf1f1e15391e71d483c7174",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ee09be82fdf1f1e15391e71d483c7174",
+        "CFG": "8d6256cf950ade1f23c4cbe19e9a5bfb",
+        "PRO": "63ae4b18b259e4e3152a21d735f9c49d"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ee09be82fdf1f1e15391e71d483c7174"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -23231,11 +28945,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "51d5ddd4ecc1dafccdeb273dae1d2adf",
         "PRO": "beb798f9655b37f931152e79a95d0888"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6744444c599600d4f5976f48059762b2"
       }
     },
     "ddraw_MNE_b1bb9703cf7f": {
@@ -23263,19 +28977,19 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9993651acdbdd8b51b8a0ecce64b760b",
         "PRO": "7274b6e19373d0dad348c86bd9595923"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 25
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b1bb9703cf7fac10dcf31f11bf581f30"
       }
     },
     "ddraw_MNE_8634e7908f5b": {
       "addresses": {
-        "LoD/PD2": "0x7B5EDB89"
+        "LoD/PD2": "0x7B5EDB09"
       },
       "rvas": {
-        "LoD/PD2": "0x2DB89"
+        "LoD/PD2": "0x2DB09"
       },
       "sizes": {
         "LoD/PD2": 128
@@ -23295,11 +29009,46 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "93e323d44b0f1f4f542b679f13d78040",
         "PRO": "822741cc2f80af078c9245b70570a1bd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8634e7908f5bea07121ddc9b8e1d0b40"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5EDB89": {
+      "addresses": {
+        "LoD/PD2": "0x7B5EDB89"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2DB89"
+      },
+      "sizes": {
+        "LoD/PD2": 128
+      },
+      "name": "__setfpstatusword",
+      "signature": "undefined __setfpstatusword(uint param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __setfpstatusword\n\nLibrary: Visual Studio 2015 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:8634e7908f5bea07121ddc9b8e1d0b40",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "8634e7908f5bea07121ddc9b8e1d0b40",
+        "CFG": "93e323d44b0f1f4f542b679f13d78040",
+        "PRO": "822741cc2f80af078c9245b70570a1bd"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8634e7908f5bea07121ddc9b8e1d0b40"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -23330,11 +29079,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "65870d7ba159a41adb28d3a0941a51f1",
         "PRO": "54b3e5b76dc52ba342c39c7a0ed6a26c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 42
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cea96fd4e29f7f2408e3a644697bfc1f"
       }
     },
     "ddraw_MNE_a1c22e91e56d": {
@@ -23358,11 +29107,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "1d78a642f23dfa61af853cd956d4101e"
       },
       "display_name": "MNE_a1c22e91e56d6050",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1c22e91e56d6050e83a99db31e20ef5"
       }
     },
     "ddraw_MNE_f7f581bd3e13": {
@@ -23386,11 +29135,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "2e5ff7e3be9726d0b74cc4217c67d09c"
       },
       "display_name": "MNE_f7f581bd3e131a46",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f7f581bd3e131a46306f4e5da3c0cb18"
       }
     },
     "ddraw_MNE_236b351f4f55": {
@@ -23414,11 +29163,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "6c4c6647cd4b53dd1b396e9262fcbad4"
       },
       "display_name": "MNE_236b351f4f558ddf",
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "236b351f4f558ddf9d59e832c106b7dc"
       }
     },
     "ddraw_MNE_457863e0e5e0": {
@@ -23442,11 +29191,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9560d354fa2322b9ce297765d26a7357"
       },
       "display_name": "MNE_457863e0e5e0aaac",
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "457863e0e5e0aaaca0dbb328e53091e9"
       }
     },
     "ddraw_MNE_d5f0d2733adf": {
@@ -23470,11 +29219,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c4933e9f67359983289bfa06a42280c8"
       },
       "display_name": "MNE_d5f0d2733adf4d1d",
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d5f0d2733adf4d1dce64e7fb83efd1d4"
       }
     },
     "ddraw_MNE_df587a37c863": {
@@ -23498,11 +29247,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "b5ba49bd58125ef109dd1a838e946bc1"
       },
       "display_name": "MNE_df587a37c8639f83",
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "df587a37c8639f83cd433c3a3fbdafc4"
       }
     },
     "ddraw_MNE_1e5021910108": {
@@ -23526,11 +29275,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "5f44c9d706744ea9e2ce14e025e6412f"
       },
       "display_name": "MNE_1e502191010869fc",
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1e502191010869fca5d6ea71e353f408"
       }
     },
     "ddraw_MNE_2efd2f634b43": {
@@ -23554,11 +29303,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "cb03b749cfb5a6cb7850eed4c81c641f"
       },
       "display_name": "MNE_2efd2f634b43779c",
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2efd2f634b43779c5726887ddad8796b"
       }
     },
     "ddraw_MNE_038f21ccadf0": {
@@ -23582,11 +29331,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c3c38319caaa90934e927a5b8cadf44b"
       },
       "display_name": "MNE_038f21ccadf05fbd",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "038f21ccadf05fbd1bec4c0181e46e90"
       }
     },
     "ddraw_MNE_58c3c7e175be": {
@@ -23610,11 +29359,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "bd6f887c20f45cd2e3d4c779f85fe31a"
       },
       "display_name": "MNE_58c3c7e175be8c19",
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "58c3c7e175be8c196c57976e375f315f"
       }
     },
     "ddraw_MNE_3c4be6dbcf12": {
@@ -23638,11 +29387,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "07e743cd59663008aa355e28886b82e5"
       },
       "display_name": "MNE_3c4be6dbcf1260e7",
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c4be6dbcf1260e7f12c4f60862ff7d6"
       }
     },
     "ddraw_MNE_3f015c1c75c5": {
@@ -23666,11 +29415,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d88336b08af1715c644e9a02a67eb019"
       },
       "display_name": "MNE_3f015c1c75c5efb0",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f015c1c75c5efb05d68ef52e0407e8b"
       }
     },
     "ddraw_MNE_4994138ab30c": {
@@ -23694,11 +29443,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "d8eb4807ca602f912e4f33ae34cafcb1"
       },
       "display_name": "MNE_4994138ab30c5990",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4994138ab30c599075def6763c96b8e4"
       }
     },
     "ddraw_MNE_7e73328c30de": {
@@ -23722,11 +29471,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9f8021330ca888b56e19c20ebdb2b790"
       },
       "display_name": "MNE_7e73328c30de0e16",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7e73328c30de0e16ec37226d5c0fbaeb"
       }
     },
     "ddraw_MNE_178bf49837b7": {
@@ -23750,11 +29499,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "54acfb3eac1eb349f73f37969cdaf67d"
       },
       "display_name": "MNE_178bf49837b7e4e6",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "178bf49837b7e4e6597a7ff702d55d4f"
       }
     },
     "ddraw_MNE_aa89b192e574": {
@@ -23782,11 +29531,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c72bd1850f0532b14dfb431312217da4",
         "PRO": "5ca46a3c1c1f93519f0f23457ffd62d1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aa89b192e57490dbcdd29af8440710b1"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -23813,11 +29562,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "dbecc4592f372f116866c3eeaf6ab0c7"
       },
       "display_name": "MNE_d63502919c4c985c",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d63502919c4c985cfbdccf3184dd15d0"
       }
     },
     "ddraw_MNE_9215dd175454": {
@@ -23845,11 +29594,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "19c71a436cd9b62cd94468fdd6017761",
         "PRO": "d4534ea44172405569ef7c69e3511570"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9215dd17545429f5a2114f3f9c06e96c"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -23880,11 +29629,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "23cd9c50e5807f3ca68d006c837e109f",
         "PRO": "4b05acf7b522e49694812b615aa87b6f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 45
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4393a6bb34947e9eb036482da5d70ca8"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -23915,11 +29664,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "609f23fcf282acfcb21fb007cdabfe59"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f9010aceb278c8bdee437e2f8623fe2"
       }
     },
     "ddraw_MNE_cee052745cdc": {
@@ -23947,11 +29696,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "56833853cdfecc3692c36995988769d7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cee052745cdcb5cc05d46b8c96c485fb"
       }
     },
     "ddraw_MNE_dda44561f477": {
@@ -23975,11 +29724,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "7e6159e9876208858d3f360a28c0ee7e"
       },
       "display_name": "MNE_dda44561f477b761",
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dda44561f477b7617b241b47339700e0"
       }
     },
     "ddraw_MNE_784c3ee735bc": {
@@ -24007,11 +29756,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "9f4a40d5d9a2befa78ad0095ac4c9ff0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "784c3ee735bcf813f3288c3760dcbb78"
       }
     },
     "ddraw_MNE_9eb540ae0819": {
@@ -24035,11 +29784,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "5d081eb168f1212c674790cb08d04cb1"
       },
       "display_name": "MNE_9eb540ae081996b2",
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9eb540ae081996b20a6c7a04000568ec"
       }
     },
     "ddraw_MNE_be5d86296cfe": {
@@ -24063,11 +29812,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "b589f944b064ea2e2e1a75f35e528f77"
       },
       "display_name": "MNE_be5d86296cfe1042",
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "be5d86296cfe10420ab6ae3acc617a84"
       }
     },
     "ddraw_MNE_b91353902613": {
@@ -24095,11 +29844,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "379606eea3ec611483309af7119c6a26",
         "PRO": "82c37a6e7cdbc384a1619071455bd523"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b913539026134e74480271a565a2f8d0"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -24126,11 +29875,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "44773617a9a3a22d16ade897fa0d9c7e"
       },
       "display_name": "MNE_67e2baae68b5c5f5",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "67e2baae68b5c5f5ed1e7420f47cff1b"
       }
     },
     "ddraw_MNE_d58e5d6011aa": {
@@ -24158,11 +29907,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "f9310d93467e6f77bf3bd571c7f5f7e8",
         "PRO": "a368e3eb8f357d9272fd340ea11812a5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d58e5d6011aaa0137cdf1e76720ccd98"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -24193,11 +29942,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d88818743b8d9536d391cc371acc4a2f",
         "PRO": "d96b33b548b1a49c4356d7ebb094fcf6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "947f789b8b5a0bd0be304aaaf2cd1bd4"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -24228,11 +29977,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "9e7fc3591492a1af79cd607d71d37fd8",
         "PRO": "b2fff6b7702d27b0114638dd733693f3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 51
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7ba625d35936d02141ba07e80f41d0d8"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -24263,11 +30012,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "407117a8ee7092c0804d627a2f0ee33c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe79b846af51e290fb82c304e25eeacf"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -24298,11 +30047,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "60b28c48098cc6c7946924eb1dd37295",
         "PRO": "53ccfde4666a6f7f2d7ed6ef70c4bfa5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 69
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6655790afa38b68f0b7a1fca3308be94"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -24333,11 +30082,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "4e847b889984c71922568191fca6fba0",
         "PRO": "a0fbc0e463bcfd69b3bd3a4910d611be"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7dfd3eee81a43aa4d07ab1a7476a0409"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -24368,11 +30117,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "2c0914e004646c34858130862cca823f",
         "PRO": "e1b04095f57d2dae60a0d213a74d31a0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f7c3fc1ee27c0387f11863e96111d832"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -24399,11 +30148,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "03e1a6ab5d039d6d4afe44ae3282c07d"
       },
       "display_name": "MNE_bd5b128324e401f6",
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bd5b128324e401f6125f68c0ee2ac00e"
       }
     },
     "ddraw_MNE_bb6fe7125090": {
@@ -24431,11 +30180,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "c7c71cc6c284865e9bf5d6d43c64b8ae"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bb6fe71250901c7132ada3a9949d6198"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -24466,11 +30215,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d75945022762be76c5f009fe4adfe4fa",
         "PRO": "caaabaa756bd1b394be43d51a1d2a444"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0448c2dc8465975ada29ee41494c0a0"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -24501,11 +30250,45 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "5983940de9a553ac159f82ced5bdfca3",
         "PRO": "d8fda1720f29503a93f3a9c4806ebf51"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1601eec9ec1d799d4f529c44cadd20f"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "ddraw_ADDR_7B5EF482": {
+      "addresses": {
+        "LoD/PD2": "0x7B5EF482"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2F482"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "IsProcessorFeaturePresent",
+      "signature": "BOOL IsProcessorFeaturePresent(DWORD ProcessorFeature)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "bd3f60e622d266ecc224ecdc6c0b12fd"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -24536,11 +30319,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "fd32fcbc1bb7eeb18567ac64ddfa5c84",
         "PRO": "ebaf229e6ab3d30073fabb7df59640bb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "74e08dea317b4f9944f12858794a3365"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -24571,11 +30354,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "6065d0e8d4d191a7ef2d41eec7067d6b",
         "PRO": "4125858257675ec53276945c8959bd41"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bf802b5c0489d1a4bda26d6e10c2b196"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -24606,11 +30389,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "bfa22c3fd387f22c29ee41d99ac17a74",
         "PRO": "b41b1a5e2deefd9ad5dab1398872bd3b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2ea2c2c39fd0ddb9af77901068f5b079"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -24641,11 +30424,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "af8f947cc0ba76aa1d310b52a6bb33e8",
         "PRO": "5d1977a5b94d5441fa3dfc6502a8e323"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6b07f716ad39855b07502ac9a8f75c79"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -24676,11 +30459,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "7602618c96604ca3686ab48465552414",
         "PRO": "9f207fab383c00a9b93510999c2833be"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9b01511769ac441c2a2af1e484a6e426"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -24711,11 +30494,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "13ac807217091f4044d66f8ff2174dac",
         "PRO": "92cf0be1ed6dadc1f8650a3472e3550a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6dff8b49f4d9b7c34ef55eb42309b484"
       }
     },
     "ddraw_MNE_1c8d55114238": {
@@ -24743,11 +30526,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "c543b2eaa9388453cbdaee181f834e5c",
         "PRO": "8c15448183989d4ed48100bd66e99357"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1c8d55114238cb2598a35c73571aa4b1"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -24778,11 +30561,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "1e14a4cf1835ff808bd8458925a42b5a",
         "PRO": "d6f03c7977d78485acfd344b1dbf3211"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ce4ae43cddfcc20c117980f988d47091"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -24813,11 +30596,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "667714027c789a8b486a563a19e4b634",
         "PRO": "3eabd37b619c8c857e7d42508a357bb6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d54b31472f74b078be31f20f65c7b2d3"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -24844,11 +30627,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "dc3eae47ca1b5ad658f3581b272046da"
       },
       "display_name": "MNE_519d7889d065c343",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "519d7889d065c343cf47e36add3810ca"
       }
     },
     "ddraw_MNE_2447f5eb0ee4": {
@@ -24872,11 +30655,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "63dd37dba9325601bd78987d61ed60e8"
       },
       "display_name": "MNE_2447f5eb0ee4905a",
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2447f5eb0ee4905a2c2ec5eaf0b78212"
       }
     },
     "ddraw_MNE_140a39153f76": {
@@ -24904,11 +30687,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d550e8e8abf2e6c7bc4606c0c80e2b95",
         "PRO": "e26a1905cb2b3130f6247d05ee5bd7af"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "140a39153f76a2a0fd46baa0988f22cf"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -24916,10 +30699,10 @@ var FUNCTIONS_ddraw_dll = {
     },
     "ddraw_MNE_d2bf5bcb7aed": {
       "addresses": {
-        "LoD/PD2": "0x7B5EF9D6"
+        "LoD/PD2": "0x7B5EF9C0"
       },
       "rvas": {
-        "LoD/PD2": "0x2F9D6"
+        "LoD/PD2": "0x2F9C0"
       },
       "sizes": {
         "LoD/PD2": 22
@@ -24939,11 +30722,42 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": null,
         "PRO": "d2fde8764ddd02ea9c12fd3033449894"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d2bf5bcb7aedd28dbc8aef58e14d356c"
+      }
+    },
+    "ddraw_ADDR_7B5EF9D6": {
+      "addresses": {
+        "LoD/PD2": "0x7B5EF9D6"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2F9D6"
+      },
+      "sizes": {
+        "LoD/PD2": 22
+      },
+      "name": "__alloca_probe_8",
+      "signature": "uint __alloca_probe_8(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d2bf5bcb7aedd28dbc8aef58e14d356c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d2bf5bcb7aedd28dbc8aef58e14d356c",
+        "CFG": null,
+        "PRO": "7dde4d03e889945550a9de3248523001"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d2bf5bcb7aedd28dbc8aef58e14d356c"
       }
     },
     "ddraw_MNE_74b28d9d2370": {
@@ -24971,11 +30785,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "d550e8e8abf2e6c7bc4606c0c80e2b95",
         "PRO": "350e8b54a6498b3b1b73a6848e3291de"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "74b28d9d2370b6358acc1c8245c3cbcf"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -25002,11 +30816,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "38b9569022cd12c30a748e06d28249d2"
       },
       "display_name": "MNE_a6ee63a174fb0324",
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a6ee63a174fb03243df19066aa98f3d9"
       }
     },
     "ddraw_MNE_673db7cbe4f9": {
@@ -25030,11 +30844,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "92cdff1205e174a1e365284eaff4a683"
       },
       "display_name": "MNE_673db7cbe4f9ed45",
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "673db7cbe4f9ed45d1ca79638cb058ca"
       }
     },
     "ddraw_MNE_6efe1f1b0847": {
@@ -25058,11 +30872,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "29959c107d42fdcfedcc18a2ac244857"
       },
       "display_name": "MNE_6efe1f1b08470575",
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6efe1f1b08470575756bdd363caf9a58"
       }
     },
     "ddraw_MNE_b8db0ca40b94": {
@@ -25086,11 +30900,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "c88801b0eee840e6bfb6e6b333267919"
       },
       "display_name": "MNE_b8db0ca40b94f76d",
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b8db0ca40b94f76d0b38f85bd6df3250"
       }
     },
     "ddraw_MNE_27d0e521101c": {
@@ -25114,11 +30928,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "1d470c7a59eaa498ce717e6a8e0b27bb"
       },
       "display_name": "MNE_27d0e521101c3a2f",
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "27d0e521101c3a2f24083a82559714dc"
       }
     },
     "ddraw_MNE_514cfd21368c": {
@@ -25142,11 +30956,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "4bf1c12d53dafe130ced240c41be3ffd"
       },
       "display_name": "MNE_514cfd21368cfdcc",
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "514cfd21368cfdcc0e00229d0ca3460c"
       }
     },
     "ddraw_MNE_681b79eef16d": {
@@ -25174,11 +30988,11 @@ var FUNCTIONS_ddraw_dll = {
         "CFG": "ce44a97749827c58d022304ba519a877",
         "PRO": "2b2586e1276aa15baee8213e9827b831"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "681b79eef16d05dc2deff0db22e0f0a9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -25205,11 +31019,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "e0c29bbee839cad06707e991b21d93f3"
       },
       "display_name": "MNE_3f8448bc52d3014c",
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f8448bc52d3014cb2f75f2917ce5381"
       }
     },
     "ddraw_MNE_064e2e3cc5bb": {
@@ -25233,11 +31047,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "9a63fce06f2fdd6531972376a09402ce"
       },
       "display_name": "MNE_064e2e3cc5bb97a2",
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "064e2e3cc5bb97a26ff0b9d7548d92ee"
       }
     },
     "ddraw_MNE_7dd1508d71e0": {
@@ -25261,11 +31075,11 @@ var FUNCTIONS_ddraw_dll = {
         "PRO": "dbf08ded1576e2086696e1ead32119d3"
       },
       "display_name": "MNE_7dd1508d71e03211",
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7dd1508d71e03211271be332b528c826"
       }
     }
   }

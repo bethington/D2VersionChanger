@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
-Generate JavaScript files from function_registry_v2.json for the report viewer.
+Generate JavaScript files for the report viewer.
 
-Reads: reports/function_registry_v2.json
+Reads directly from: data/function_index/{LoD,Classic}/{version}/*.json
 Writes: reports/functions_v2/_index.js and per-DLL files
+
+This script merges Ghidra exports and generates JS files in one step,
+eliminating the need for an intermediate registry file.
 
 Output format matches the existing viewer's expectations:
 - functions keyed by canonical_id (or RVA for compatibility)
@@ -17,6 +20,9 @@ from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
 
+# Import the function merger for direct data loading
+from merge_function_index import FunctionMerger
+
 # Feature weights for count-based similarity (simplified version)
 COUNT_FEATURES = {
     'size': {'weight': 1.0, 'tolerance': 0.15},
@@ -24,7 +30,6 @@ COUNT_FEATURES = {
     'callee_count': {'weight': 0.8, 'tolerance': 0.2},
     'caller_count': {'weight': 0.7, 'tolerance': 0.25},
     'string_count': {'weight': 0.6, 'tolerance': 0.3},
-    'basic_block_count': {'weight': 0.5, 'tolerance': 0.2},
 }
 
 def compute_feature_similarity(val1: float, val2: float, tolerance: float) -> float:
@@ -57,8 +62,6 @@ def compute_count_similarity(func1_data: dict, func2_data: dict, version1: str, 
             return data.get('caller_count', 0) or (len(data.get('callers', [])) if data.get('callers') else 0)
         elif key == 'string_count':
             return data.get('string_count', 0) or (len(data.get('strings', [])) if data.get('strings') else 0)
-        elif key == 'basic_block_count':
-            return data.get('basic_block_count', 0)
         return 0
 
     total_weight = 0
@@ -183,30 +186,34 @@ def escape_js_string(s):
     return s.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n').replace('\r', '')
 
 def generate_js_files(base_path: Path):
-    registry_file = base_path / "reports" / "function_registry_v2.json"
     output_dir = base_path / "reports" / "functions_v2"
-    
-    if not registry_file.exists():
-        print(f"Error: Registry not found: {registry_file}")
-        print("Run merge_function_index.py first.")
-        return
-    
+
     # Create output directory
     output_dir.mkdir(exist_ok=True)
-    
-    # Load registry
-    with open(registry_file, 'r', encoding='utf-8') as f:
-        registry = json.load(f)
-    
-    print(f"Loaded registry with {registry.get('total_functions', 0)} functions")
-    
+
+    # Load and merge data directly from source files (no intermediate registry file)
+    print("\n" + "=" * 60)
+    print("Loading function data from source files...")
+    print("=" * 60)
+
+    merger = FunctionMerger(str(base_path))
+    registry = merger.generate_registry_in_memory()
+
+    if registry.get('total_functions', 0) == 0:
+        print("Error: No functions found in data/function_index/")
+        return
+
     dlls = registry.get('dlls', {})
     timestamp = datetime.now().isoformat()
-    
+
     # Generate index file
+    print("\n" + "=" * 60)
+    print("Generating JavaScript files...")
+    print("=" * 60)
+
     index_data = {
         "generated": timestamp,
-        "source": "function_registry_v2.json",
+        "source": "data/function_index/",
         "total_functions": registry.get('total_functions', 0),
         "total_named": registry.get('total_named', 0),
         "files": {}
@@ -295,7 +302,6 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str,
         instruction_counts = {}
         # New enhanced fields
         stack_frame_sizes = {}
-        basic_block_counts = {}
         loop_counts = {}
         mnemonic_hashes = {}
         constants = {}
@@ -340,12 +346,12 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str,
             # New enhanced fields
             if ver_data.get('stack_frame_size'):
                 stack_frame_sizes[ver] = ver_data['stack_frame_size']
-            if ver_data.get('basic_block_count'):
-                basic_block_counts[ver] = ver_data['basic_block_count']
             if ver_data.get('loop_count') is not None:
                 loop_counts[ver] = ver_data['loop_count']
-            if ver_data.get('mnemonic_hash'):
-                mnemonic_hashes[ver] = ver_data['mnemonic_hash']
+            # Mnemonic hash: try per-version first, then function-level indexes.MNE
+            mne_hash = ver_data.get('mnemonic_hash') or func.get('indexes', {}).get('MNE', '')
+            if mne_hash:
+                mnemonic_hashes[ver] = mne_hash
             if ver_data.get('constants'):
                 constants[ver] = ver_data['constants']
             if ver_data.get('globals'):
@@ -423,8 +429,6 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str,
         # New enhanced fields for comparison
         if stack_frame_sizes:
             entry["stack_frame_sizes"] = stack_frame_sizes
-        if basic_block_counts:
-            entry["basic_block_counts"] = basic_block_counts
         if loop_counts:
             entry["loop_counts"] = loop_counts
         if mnemonic_hashes:

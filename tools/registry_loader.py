@@ -190,8 +190,6 @@ def convert_dll_format_to_registry(
             func_obj["instruction_counts"] = func_data["instruction_counts"]
         if "stack_frame_sizes" in func_data:
             func_obj["stack_frame_sizes"] = func_data["stack_frame_sizes"]
-        if "basic_block_counts" in func_data:
-            func_obj["basic_block_counts"] = func_data["basic_block_counts"]
         if "loop_counts" in func_data:
             func_obj["loop_counts"] = func_data["loop_counts"]
 

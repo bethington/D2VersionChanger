@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-15T15:44:29.888678
+// Generated: 2025-12-16T18:31:58.018344
 // Functions for PD2_EXT.dll
 // Versions: LoD/PD2
 
@@ -33,11 +33,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "bc042e4f56c5c862716dd36277cac9ef",
         "PRO": "416e2a238d1f53a62e632e2f6f17dd97"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "541190143a3ab7e12d55d20c423b370d"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -68,11 +68,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "809bca52eaccd9c02a2e095b3e34845d",
         "PRO": "886b7b104a46f394d874ea62be1efbb0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4fd68c5993cb56126ea7d3b2bd60c04b"
       }
     },
     "PD2_EXT_MNE_0e2d971e7387": {
@@ -100,11 +100,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "075135080bbbd8ff3b9b0305147b5d54",
         "PRO": "a4a166be7730bf1973bd4f90dd397475"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0e2d971e7387755a27a5a4eb39f31468"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -135,11 +135,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "74c44fff4d24f318587f22fc1085febb",
         "PRO": "412130ac6f9477a35fd15037b1e2ac3d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4efdd923a388be710585d381cbbbfb83"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -170,11 +170,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ffc212cf0cc73a31e9b7aa13b24a4473",
         "PRO": "2a1c1ffdf2772f7f599b724da58d6961"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b3faaa54e614fd38955b32ddce3fe396"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -205,11 +205,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "43ed1f8975afc6ad6b976a0e849204d9",
         "PRO": "0eb913c280572016b91d73e0d644845c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "813902e79b8b4c3f1e839bd5ac54ccd1"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -217,10 +217,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_5f97d76a7bf7": {
       "addresses": {
-        "LoD/PD2": "0x7B33143F"
+        "LoD/PD2": "0x7B331386"
       },
       "rvas": {
-        "LoD/PD2": "0x143F"
+        "LoD/PD2": "0x1386"
       },
       "sizes": {
         "LoD/PD2": 10
@@ -240,11 +240,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "3af54882954c3fea013c00f9af30f6ea"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f97d76a7bf7bad4437ec948fbad99b7"
       }
     },
     "PD2_EXT_MNE_7816046ec43e": {
@@ -272,14 +272,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "1f0b199d876f44740208617600255ae3",
         "PRO": "e046abbc1e92106a0e98812d7809c9c0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7816046ec43e929854fe8a047b0b3cda"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "PD2_EXT_ADDR_7B33143F": {
+      "addresses": {
+        "LoD/PD2": "0x7B33143F"
+      },
+      "rvas": {
+        "LoD/PD2": "0x143F"
+      },
+      "sizes": {
+        "LoD/PD2": 10
+      },
+      "name": "ReleaseCRTStartupLock",
+      "signature": "void ReleaseCRTStartupLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the C Runtime startup lock during DLL process detach.\n\nThis is a thin wrapper function that releases the CRT initialization lock\nwhen the DLL is being unloaded. Called from dllmain_crt_process_detach to\nensure proper cleanup of CRT resources.\n\nAlgorithm:\n1. Push the lock variable (stored at [EBP-0x20]) as an argument\n2. Call ___scrt_release_startup_lock to release the CRT lock\n3. Clean up the stack by popping the return value\n4. Return to caller\n\nReturn: void\nCalling Convention: __stdcall (callee cleans stack)\nCalled By: dllmain_crt_process_detach\nCalls: ___scrt_release_startup_lock",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:5f97d76a7bf7bad4437ec948fbad99b7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f97d76a7bf7bad4437ec948fbad99b7",
+        "CFG": null,
+        "PRO": "a36482fccf6e474b6ad555326742164c"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f97d76a7bf7bad4437ec948fbad99b7"
       }
     },
     "PD2_EXT_MNE_e7313d19d2f1": {
@@ -307,11 +339,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "cafb7a061851ddb77a31ab9264ccc6aa"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e7313d19d2f1b94221ec63dffd5562f1"
       }
     },
     "PD2_EXT_MNE_ea9bbbf8bef4": {
@@ -339,11 +371,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "42aae10500d98c4ac73e788bf936bce7",
         "PRO": "083226d4633d943b436ad5d79dac1822"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ea9bbbf8bef4ef26b3e4c98bd2475e75"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -374,11 +406,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ea03c6407b4d091868dce8d0baf95212",
         "PRO": "d07ec5ac8efade03ee8465977ba73e3d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b29ba1c1091b500c21215b5dad4c7b51"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -405,11 +437,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "PRO": "84caeb7f6cadbe42e93c2f62bffeff20"
       },
       "display_name": "MNE_221794ffc10f5780",
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "221794ffc10f5780ac30dfceea10155b"
       }
     },
     "PD2_EXT_MNE_25e9db5cf2bb": {
@@ -437,11 +469,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "9f331c678610c3875624e2af3bd7a065"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "25e9db5cf2bb0c2a07b05ef3a9da54bb"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -472,11 +504,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "7bfefc8801c3c6b6816629c969d6bde0",
         "PRO": "a325ad3e9ff440aaafda5e95e66d598d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bb70ec70f33544c83c2933604761b819"
       }
     },
     "PD2_EXT_MNE_3658f6e3181c": {
@@ -504,11 +536,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "c5dd24a6a7c6dbb1d27f032a07fbb393"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3658f6e3181c1e09fd88490bb715e521"
       }
     },
     "PD2_EXT_MNE_d2995c856eb0": {
@@ -536,11 +568,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fbea47b737f9cded99d3ac1117fd0429",
         "PRO": "e46535eefaef60fbc723d6946d76a33f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d2995c856eb0be51cc6f663a49375b96"
       }
     },
     "PD2_EXT_MNE_fde18f840643": {
@@ -568,11 +600,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "bdc16783bc1ef6a02ca7312960c0fb9b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fde18f840643d8d99756120348d7717e"
       }
     },
     "PD2_EXT_MNE_bba6787b3ee5": {
@@ -600,19 +632,19 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "fe7a0f3a77e3705529ca04b6812e7acb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bba6787b3ee574ab1a3904a4931976c2"
       }
     },
     "PD2_EXT_MNE_7b4de9f0cf35": {
       "addresses": {
-        "LoD/PD2": "0x7B33A921"
+        "LoD/PD2": "0x7B331785"
       },
       "rvas": {
-        "LoD/PD2": "0xA921"
+        "LoD/PD2": "0x1785"
       },
       "sizes": {
         "LoD/PD2": 6
@@ -632,11 +664,43 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "eeb03a2ce7d7c1a61d4503a71c5b7efc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "PD2_EXT_ADDR_7B33178B": {
+      "addresses": {
+        "LoD/PD2": "0x7B33178B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x178B"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetDefaultStdioOptions",
+      "signature": "void * GetDefaultStdioOptions(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves pointer to default C runtime stdio options structure.\n\nAlgorithm:\n1. Load address of default stdio options structure (0x7b345c40) into EAX\n2. Return via stdcall convention\n\nReturns:\n  Pointer to stdio options configuration structure used during C runtime initialization.\n  The structure contains default settings for standard input/output/error streams.\n\nContext:\n  Called during C runtime startup by ___scrt_initialize_default_local_stdio_options\n  to initialize the default stdio configuration for the current process.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "0ce66bb217f1121634222712edc626ee"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "PD2_EXT_MNE_cf4bcddf67ac": {
@@ -664,11 +728,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "6ba79451faca0fe02a1deeb6f0e82c39"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cf4bcddf67ac9e17aa89769203bfea57"
       }
     },
     "PD2_EXT_MNE_54240c086691": {
@@ -696,11 +760,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "a8d36b0ca5ed1975934c1a8015201c3a",
         "PRO": "0c7493b02e6ab3526ddf682cec86ced2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "54240c08669162934f897c557f4f39c4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -731,11 +795,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d8e234c1afd075bd3612cb5632926224",
         "PRO": "c631f5712ca91c8815d902e55765019a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6d1054d982f12d7786c3ee992c573f3b"
       }
     },
     "PD2_EXT_MNE_c5ed9fc94c31": {
@@ -763,11 +827,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "dc0623423d93fb21da8f1c1461d32590",
         "PRO": "19dc95aa0b20db33c4672067b685ed64"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c5ed9fc94c31ba047222fa7af95d9b83"
       }
     },
     "PD2_EXT_MNE_494831ecedeb": {
@@ -795,19 +859,19 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "3bcc9e25ee57bf38856ce81963bf6ce3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "494831ecedeb44bb307191f6a9f972d0"
       }
     },
     "PD2_EXT_MNE_0f7f0612760a": {
       "addresses": {
-        "LoD/PD2": "0x7B33217D"
+        "LoD/PD2": "0x7B33185D"
       },
       "rvas": {
-        "LoD/PD2": "0x217D"
+        "LoD/PD2": "0x185D"
       },
       "sizes": {
         "LoD/PD2": 31
@@ -827,11 +891,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d550e8e8abf2e6c7bc4606c0c80e2b95",
         "PRO": "1bd6690134ab3875957602f26064abc1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f7f0612760a750cf668844686b49619"
       }
     },
     "PD2_EXT_MNE_eb59560942d3": {
@@ -859,11 +923,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "d19d01dc63cdfb6824b96cb8466f8413"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eb59560942d31215fd937048597cce9f"
       }
     },
     "PD2_EXT_MNE_9d9882837604": {
@@ -891,11 +955,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "8bbfe2737ef55f3a9a35ae1b43be54c6",
         "PRO": "71f3bcd1241ea112e2b0e5881d3d2ae1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9d9882837604aa71830e9f2b201a0a63"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -926,11 +990,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "cb8eff8eb27b04d335095ce75c22ce5f",
         "PRO": "b942908d7f9c1aa600a15a992c402dd3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a6edb326ee323224096e5775dc4e42b2"
       }
     },
     "PD2_EXT_MNE_c43768f4d0dd": {
@@ -958,11 +1022,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "0746fd3a87463857b7c1f19bdf637d26"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c43768f4d0ddaf780c3b3e66819b4b76"
       }
     },
     "PD2_EXT_MNE_8ee2644d27cb": {
@@ -990,11 +1054,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "285d09a7e9b985b0b82a1cfce0632509",
         "PRO": "98805f012a8b96a5bed1058dab0479ae"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8ee2644d27cbe7b06992437e07f34de8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1025,11 +1089,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "9837f335a7f4c852d4923098d737e51d",
         "PRO": "edc48dc70fbc80691b5aefe1ba462157"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a8a10b422712da4bbd9cb3a7439bbfa5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1060,11 +1124,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d790950703572277ff9cc2fe99997fd3",
         "PRO": "bad8a4a7cbcd15bb403bd0a7a6d5049b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8987f08d1294583acadd46f1f102f5ad"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1095,11 +1159,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "5f8eaafe0358964f49953899a86b0609",
         "PRO": "7239d333172d44ca4fb78de82efccd6c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f7e6c19e50a30f46926a4d1218a196eb"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1130,14 +1194,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "59064043b32d878adeb9b6c7844d59e3",
         "PRO": "26890f8b5b445e6a2162ad028ce9c861"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1fcd22518b091651f16739ae56625ad9"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "PD2_EXT_ADDR_7B331A86": {
+      "addresses": {
+        "LoD/PD2": "0x7B331A86"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A86"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetInitializationCallbackTable",
+      "signature": "LPVOID GetInitializationCallbackTable(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves the base address of the initialization callback table\n\nAlgorithm:\n1. Load the static address of the initialization callback array (0x7b346330)\n2. Return the pointer to the caller\n\nReturns:\nLPVOID - Pointer to an array of initialization callbacks. The caller\ndereferences this pointer to obtain function pointers that are invoked\nduring DLL initialization. Used by dllmain_crt_process_attach to\nexecute initialization callbacks in sequence.\n\nSpecial Cases:\n- This is a simple accessor function with minimal overhead\n- The callback table is accessed during critical DLL initialization\n- Callers must verify the pointer is non-NULL before dereferencing",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "dd256592025bcff01fa706ced217378f"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 2
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "PD2_EXT_MNE_6caddc40c023": {
@@ -1165,11 +1261,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "dee5ae6c78f147ea962923b86462b4d9",
         "PRO": "289d4b0b0f5053db57f9f70355ed7716"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6caddc40c023313bf4c19c93a633030d"
       }
     },
     "PD2_EXT_MNE_0bc0597c449e": {
@@ -1197,19 +1293,19 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "0a876bc4ec49359e9b45a08f0bcb16d9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0bc0597c449eb3f95856ba1dd6da8aef"
       }
     },
     "PD2_EXT_MNE_1f330ff9b893": {
       "addresses": {
-        "LoD/PD2": "0x7B331BD5"
+        "LoD/PD2": "0x7B331BA9"
       },
       "rvas": {
-        "LoD/PD2": "0x1BD5"
+        "LoD/PD2": "0x1BA9"
       },
       "sizes": {
         "LoD/PD2": 44
@@ -1229,11 +1325,43 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ddcab2040c8318c24b007a99f0f62124",
         "PRO": "d22c4a4be5792ab02a62f5fef091dc16"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1f330ff9b89359cdf6cadeb488a2e714"
+      }
+    },
+    "PD2_EXT_ADDR_7B331BD5": {
+      "addresses": {
+        "LoD/PD2": "0x7B331BD5"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1BD5"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "name": "__RTC_Terminate",
+      "signature": "undefined __RTC_Terminate(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n __RTC_Terminate\n\nLibrary: Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:1f330ff9b89359cdf6cadeb488a2e714",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1f330ff9b89359cdf6cadeb488a2e714",
+        "CFG": "ddcab2040c8318c24b007a99f0f62124",
+        "PRO": "5c536ed40774161a76e46ad44bfc664c"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1f330ff9b89359cdf6cadeb488a2e714"
       }
     },
     "PD2_EXT_MNE_aa114f8324e6": {
@@ -1261,11 +1389,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "d860c5b91f034e585ee3a75a6cf44b4e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aa114f8324e60bfaec362f5007b6b7c5"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1296,11 +1424,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "4221cd66b7d1bf15a636664004a85178"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "576e71e58ac12dc4dc652fb1f77bef85"
       }
     },
     "PD2_EXT_MNE_604d43e5bcf6": {
@@ -1328,11 +1456,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6d806e30505702808d6989af53ecf95a",
         "PRO": "76491599a60dd1362d45f5dbe7b81447"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 31
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "604d43e5bcf69eff6aa5413313c346d7"
       }
     },
     "PD2_EXT_MNE_7ec409a9eaef": {
@@ -1360,11 +1488,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "c0006870c47ab8b75740ed203b0785a3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7ec409a9eaefed77c043adece1ffae56"
       }
     },
     "PD2_EXT_MNE_54eb44b5a73f": {
@@ -1392,11 +1520,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "8ba2043989a9093235cb9b0769474a7c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "54eb44b5a73ff76965fb286f3a476751"
       }
     },
     "PD2_EXT_MNE_514cfd21368c": {
@@ -1424,11 +1552,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "1617b24cb38e9aa97b78ff9235d92468",
         "PRO": "abe77b871131bf611813be48ff233aed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 25
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "514cfd21368cfdcc0e00229d0ca3460c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1459,11 +1587,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "4829319e2a49e5c4df0979448cd2dd26",
         "PRO": "9ca10b74f090b9afc622fe761a467cdc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9d75cc89a17dcac8355f6ef97efd5751"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1494,11 +1622,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "5f480d16e7ca428a0055a5d062059fea",
         "PRO": "91b3369df11f8feb11fafa98b6bc9d00"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "17dd6baec15e2db7fba918d73f3fb6ac"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1529,11 +1657,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "32e15db7c5b22f7bb7a58182cedf6021",
         "PRO": "d6ccd103ef028882446901c26c684439"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "99e8399ac83d2733bda29a6897eda555"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1564,22 +1692,54 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "a76e0273b3e592eaee672793f78290ba",
         "PRO": "1eb4dca57ccbebcf434ae970ede20d52"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a993bd3059910ca87071e597794b6a23"
       },
       "param_counts": {
         "LoD/PD2": 1
       }
     },
-    "PD2_EXT_MNE_ed23cc5d152d": {
+    "PD2_EXT_ADDR_7B33217D": {
       "addresses": {
-        "LoD/PD2": "0x7B334FAC"
+        "LoD/PD2": "0x7B33217D"
       },
       "rvas": {
-        "LoD/PD2": "0x4FAC"
+        "LoD/PD2": "0x217D"
+      },
+      "sizes": {
+        "LoD/PD2": 31
+      },
+      "name": "___vcrt_initialize",
+      "signature": "undefined4 ___vcrt_initialize(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n ___vcrt_initialize\n\nLibrary: Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0f7f0612760a750cf668844686b49619",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0f7f0612760a750cf668844686b49619",
+        "CFG": "d550e8e8abf2e6c7bc4606c0c80e2b95",
+        "PRO": "f42f358c8d5c9fd313de3fff5e25f1e0"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f7f0612760a750cf668844686b49619"
+      }
+    },
+    "PD2_EXT_MNE_ed23cc5d152d": {
+      "addresses": {
+        "LoD/PD2": "0x7B33219C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x219C"
       },
       "sizes": {
         "LoD/PD2": 11
@@ -1599,19 +1759,19 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "eedad9422dc6248ae039abcb80d819f5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed23cc5d152d612501ab985b6cd1180b"
       }
     },
     "PD2_EXT_MNE_f23776c981f8": {
       "addresses": {
-        "LoD/PD2": "0x7B334FB7"
+        "LoD/PD2": "0x7B3321A7"
       },
       "rvas": {
-        "LoD/PD2": "0x4FB7"
+        "LoD/PD2": "0x21A7"
       },
       "sizes": {
         "LoD/PD2": 8
@@ -1631,11 +1791,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "e6e0f0a3e635c038e4bd479b72d929d1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23776c981f88f2e44bd8f0f2628e6a8"
       }
     },
     "PD2_EXT_MNE_cf4213f1c246": {
@@ -1663,14 +1823,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "4a19a33d654978a38a753d8c14f15e92",
         "PRO": "40d546ad1477b1a45840a6e0118966b8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cf4213f1c24622ef19ecd49d55cefa47"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "PD2_EXT_ADDR_7B3321C6": {
+      "addresses": {
+        "LoD/PD2": "0x7B3321C6"
+      },
+      "rvas": {
+        "LoD/PD2": "0x21C6"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "name": "cleanup_and_continue",
+      "signature": "int cleanup_and_continue(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Cleans up per-thread C runtime data and signals continuation.\n\nAlgorithm:\n1. Call ___vcrt_uninitialize_ptd() to release thread-local data structures\n2. Set return value to 1 (true) indicating successful cleanup\n3. Return to caller\n\nParameters:\nNone\n\nReturns:\nint - Always returns 1 (true) after cleanup\n\nSpecial Cases:\n- Used during process termination to ensure proper cleanup\n- Part of the Uninit_ProcessExit sequence\n- Cleanup is performed even if other operations fail",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23776c981f88f2e44bd8f0f2628e6a8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23776c981f88f2e44bd8f0f2628e6a8",
+        "CFG": null,
+        "PRO": "9fe18c81a2e3d89391dee2481ddc8128"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23776c981f88f2e44bd8f0f2628e6a8"
       }
     },
     "PD2_EXT_MNE_f2c4a007044f": {
@@ -1698,11 +1890,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "616269d69488c60ad6c06535f277e575",
         "PRO": "3fcbadf4582f7ea2da238028d74042a7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f2c4a007044f1c447116ccdb496863c9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1733,11 +1925,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "86e2eb50bba3c410486856c9168ce909"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1afe32329822801a6e320d6c68dd5ad7"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1768,11 +1960,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f0e06b48e47d35f6214e4e8e701baba0",
         "PRO": "83224923afae6d95087d6877e861cef9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2b7a28af6339241c0af7c2338ab83d02"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1803,11 +1995,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "76db6c382c26eeeef0f0e1f77aac8844",
         "PRO": "8972a9f6914de74b4a74eee5a4784586"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c3872d0240bc624f915f7473c768c6f2"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1838,11 +2030,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "dc31fd8ae2ce6da459435b7f021fe995",
         "PRO": "8dcd29da0e631801fbbcc27c9425f659"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "beefd4590b780cc5ab9452c4491d586f"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1873,11 +2065,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "0e45c9325a2dc9f2f6d991bb86ee35e4",
         "PRO": "25237ad0402b2d887dc4f4120ac52c90"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "834de6ae16e03b37748e9709014fa787"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1885,10 +2077,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_fdad073544ac": {
       "addresses": {
-        "LoD/PD2": "0x7B33CF70"
+        "LoD/PD2": "0x7B332375"
       },
       "rvas": {
-        "LoD/PD2": "0xCF70"
+        "LoD/PD2": "0x2375"
       },
       "sizes": {
         "LoD/PD2": 5
@@ -1907,14 +2099,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "f97f2445006c847e038b034fd580e1ab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
       }
     },
     "PD2_EXT_MNE_b300650ab0d3": {
@@ -1942,11 +2131,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b9c82149cdd16061660dd363b4e6583f",
         "PRO": "20a5ac617918f2d5f9d43e4eaefe88bf"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b300650ab0d3880a59ed2b059ab57c68"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1977,11 +2166,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "049fd204bbc6d6c1f4a8e9694396506f",
         "PRO": "063b198714a0df3ea2abf902bc836c85"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4b130a7ddc52fcb9e62208c9e7cc7f42"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2012,11 +2201,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "a3aeaf905aa3ad7e698619e7e0a53ab0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "93ee3e3eb2ce656cea811f30fb40d90f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2047,11 +2236,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "ba26c8d3bc1aaf79190445a6ba2f1688"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e79230fb5d8226b2a60868c040f71dd0"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2082,11 +2271,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "1157426f97106cda8d1b357c667aefd9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f947813812ec93633c2fecc27752b1c2"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2117,11 +2306,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "8c24fd5686df2a16d005ca95ad500b54"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4e42bd50f35d0553fe79ad066a458d16"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -2152,11 +2341,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2555e203409cbc2d4a46fa3a51b3c448",
         "PRO": "52046443c0c88f8adfeca30385ed3050"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ccf83ea34632061926306461433c0d59"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2187,11 +2376,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "aed4449cad9c680425c75a8429257195",
         "PRO": "49fd19e1eb6aaeea7f7053a48ae51cab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a0a473648b8f7515b3a6e14725dfec5f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2222,11 +2411,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ea03c6407b4d091868dce8d0baf95212",
         "PRO": "4e35888d97351da6af24e2c592a045c2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "800c356bcde42f5553d0470b81df02a6"
       }
     },
     "PD2_EXT_MNE_db025ad6cd47": {
@@ -2254,11 +2443,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "93b5915f2433b5c17d3d3c41471d9e68",
         "PRO": "15284545aff9eb335f28cfbdb13d2143"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "db025ad6cd47be53d30ec8c7bca7f4bc"
       }
     },
     "PD2_EXT_MNE_33151eb86bb1": {
@@ -2286,11 +2475,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "1b86eb4d0c96666303d04c2121496f71",
         "PRO": "af7cc1d12db923e774e0507640c2cd67"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "33151eb86bb15e376506f8fd3f98f0a7"
       }
     },
     "PD2_EXT_MNE_8a4000f8351a": {
@@ -2318,11 +2507,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "bfa22c3fd387f22c29ee41d99ac17a74",
         "PRO": "eb965373977cb4f589d4e31834428093"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8a4000f8351a0aa341d88405e70888ae"
       }
     },
     "PD2_EXT_MNE_5aebfd690502": {
@@ -2350,11 +2539,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
         "PRO": "f18d5be13588fc4b6a44f720df12c0d4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5aebfd690502582bb101c5c92e5b328b"
       }
     },
     "PD2_EXT_MNE_4e06e7380fc7": {
@@ -2382,11 +2571,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "eedaec691a4b94e5a795ce955c5fac49",
         "PRO": "38844b0d944b1d414e3a88fce91ffb29"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4e06e7380fc707b0ff36cbc7f3d9ce45"
       }
     },
     "PD2_EXT_MNE_a1b9b8f8fc7a": {
@@ -2414,11 +2603,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "4e847b889984c71922568191fca6fba0",
         "PRO": "e67d380ffbab7cb66e361a2844d3e3ad"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1b9b8f8fc7ae83c82b85617ce060d2d"
       }
     },
     "PD2_EXT_MNE_285fbf375b91": {
@@ -2446,11 +2635,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "17cd6c9a2888593fd4a9c48c3c4fbf56"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "285fbf375b91db6a4aaef7c7ccdbe9ed"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2481,11 +2670,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fdd5a1378d33d71c1b536e590571b410",
         "PRO": "6e196072d72f09449344725f5a3ddc96"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8a66beed7791df002b527959d711671a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2516,11 +2705,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "ba95c5c19848da6c40263fb68139d805"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "92df3e3d5563806163f4fd65bc64473b"
       }
     },
     "PD2_EXT_MNE_3a904f51eaee": {
@@ -2548,11 +2737,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "500af4ef03c3490703ea24166f346dc9",
         "PRO": "2685a2bbb939afce441c8e31e7195372"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a904f51eaee94334e6e398aa706763c"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -2583,11 +2772,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2905a5f71956f3ea8f8249f7e990e9c6",
         "PRO": "ae08580d6cfbf25a3e28c561037c0d50"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2feb9fafe29f5f6b422340d478154186"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -2618,11 +2807,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "7f867d4d755682b4f1c250f388279fc7",
         "PRO": "1b9dee6481570558cfe7530efeeadb45"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "32dc407a777a01489fe546082ca6cc2e"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -2653,11 +2842,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "3cc833536bdfd5ce9c6ea6051767a049"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "489067da1a2c8cee5a3d2d9b9de565b4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2688,11 +2877,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "df093f47bb296618880a859e828a8e62"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f0b1ace8a5f12224e121b9af4d2c672b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2723,11 +2912,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "ad2539f2b40edf627725ffbf986ca76d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ebbf40cad4d99d238bac34c946af8450"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2758,11 +2947,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "fc00fcf02377aae9fe4d46c5bf2d1a28"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d8759df0db80c469547839b319f42d0b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2793,11 +2982,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "733afd2a4616909da7683c7bc052e8e1",
         "PRO": "65d7d5ce6451a3d8d1573a8d6e5922ba"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1bfde2ab6134a2ce093522ed6335f84a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2828,11 +3017,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "950a535247ef24e3e2febcb81273d214",
         "PRO": "a15af6512a8a1aa05b6baf4a32aec904"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "55960fbf99384e3434ee365b023c8268"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2863,11 +3052,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "3eb11560c7bf6b9350f1ef50ba3c5660"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c3e67f0f66e9fe1748a93603f0dc99e6"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -2898,11 +3087,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "41cf389ae808dd634a76453cb4632e3a",
         "PRO": "19478db3a4835d3e3129152057a42b94"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 67
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7108372b66ecf751dc8d1b6817b95672"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2933,11 +3122,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3adaf362770f882a81273e10cfe17469",
         "PRO": "34ce6eac616e3c8259738b56d338a799"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ec5b4b642d4b85db434e2d3ccd54c2db"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2968,11 +3157,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2db1c7f6668c38a7026eb82118a6cdec",
         "PRO": "0614e89b7a9bcad21ea63e583b6624ca"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a52038107640b8eaffaa003a30df9b9"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -3003,11 +3192,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d4a4f7f07eed1fb0c24bfad08eb98295",
         "PRO": "bde0d86e3f3b5fdee7d0ca5bdeb5fcc8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "76ae5b440b5b4eba709d28aaadc1e692"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3038,11 +3227,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3d7ac2c2df8a331cdbb21fa9dd404d13",
         "PRO": "5fc9dffb576987faa1780b5c4455c4ef"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eb9855cfe3079a68ada2b749c94de074"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3050,10 +3239,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_681a8ee97e4f": {
       "addresses": {
-        "LoD/PD2": "0x7B3332E5"
+        "LoD/PD2": "0x7B3332AA"
       },
       "rvas": {
-        "LoD/PD2": "0x32E5"
+        "LoD/PD2": "0x32AA"
       },
       "sizes": {
         "LoD/PD2": 59
@@ -3073,11 +3262,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "611b0a2738bc697e80a73ce4243ca126",
         "PRO": "51b628bb3397e4bcdaae0bae3cccc89d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "681a8ee97e4f188190975f017117c4d4"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "PD2_EXT_ADDR_7B3332E5": {
+      "addresses": {
+        "LoD/PD2": "0x7B3332E5"
+      },
+      "rvas": {
+        "LoD/PD2": "0x32E5"
+      },
+      "sizes": {
+        "LoD/PD2": 59
+      },
+      "name": "___vcrt_FlsGetValue",
+      "signature": "undefined ___vcrt_FlsGetValue(DWORD param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n ___vcrt_FlsGetValue\n\nLibraries: Visual Studio 2017 Release, Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:681a8ee97e4f188190975f017117c4d4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "681a8ee97e4f188190975f017117c4d4",
+        "CFG": "611b0a2738bc697e80a73ce4243ca126",
+        "PRO": "2f7ab9dc3c0e211a54049745e48d6f95"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "681a8ee97e4f188190975f017117c4d4"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3108,11 +3332,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f16ee01fce64ac425fc77137800a8352",
         "PRO": "b06c542b4c9143e5e97c419b4ffcbbc7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "75b65262791c6439417fa9c6957fb064"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3143,11 +3367,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e6239802a5b3e3dd1f1be91f0d5c374d",
         "PRO": "b5f3032f34ee37af43d77cb40f297169"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b76d7f5eef9a248524bd260d012b6bb2"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3178,11 +3402,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fb5eb2e15522055ed8ddd75942e8883a",
         "PRO": "30085646aedcd72058f53c776c5b1b40"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "61abeb07930ad8551e5cc6f1e4544c2d"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -3213,11 +3437,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e68b7688884d68f20d908ef015201416",
         "PRO": "b68836da7a5821a841320b7026a0b840"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "44921dddb1f497acc4651ae7fbab2c15"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -3248,11 +3472,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "833dd2b2958695689b3c401989f44f23",
         "PRO": "19c51558fc5d698f613d0d97f23907ea"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ca8ecdc04eed2f8da196c568de3e4013"
       },
       "param_counts": {
         "LoD/PD2": 12
@@ -3283,11 +3507,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ff6512a542087483d7724aac8b77714b",
         "PRO": "1352a677397dc50633be999771698771"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 68
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "47d2251775f9327aae3f0569123b6c7f"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -3318,11 +3542,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "8fe48d343214f9dfe1bfe33fdf7aebbe",
         "PRO": "1746fed340e053e07d4f9618fd56189d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bde4080e0ce192cbc3591ced7ae1526f"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -3353,11 +3577,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "75ae442b51ee3de06eb1d5e08cae1bb7",
         "PRO": "058c660cb9a40f87d3e37747f49323e6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b697cde157c956c790fcdd1ebc023b57"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3388,11 +3612,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "82041f95a9d6ce050d5a8f931ef72e6e",
         "PRO": "cf76cf36c1ad7a2facd2c6626ab8a642"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "54dd8c60fb60e0a39eed9d6dc81f8511"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -3423,11 +3647,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "176ae5e4b2a38a4f3d01f21abf373103"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e2a98ca0d22e18e77c8a0aec4b4a0855"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -3458,11 +3682,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "c40c8cddf5b844fe197665df0e7c7b77"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "519b6a2eaec2ae048072e1f9ec31a1f8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3493,11 +3717,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "c52aa4c4127c70921ba51efb79f4e843"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fba3d29b6bd90bb8c4b7736f36339b2a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3528,11 +3752,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "7f9bf5e2aaf2d0c89035139476cc1b80"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ef453d2076eda05461445a10e3476c6d"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3563,11 +3787,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "07ff4746bc38e88a50e5e622f6937ed2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b3382a09b4c08311210138700a7a39f0"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3598,11 +3822,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "13ac807217091f4044d66f8ff2174dac",
         "PRO": "b44e2a92b1eb94222e2ad23dba614952"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8bf44fd2e3e212e4a0c7c1e5e6aa6bd7"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3633,11 +3857,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "26a395e1d1b622a1afd71bf788c7ba1b",
         "PRO": "183d15b9dd18df9271ed731b8ae836f9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "45f53597b31fcd0826ea1ca29b423361"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -3668,11 +3892,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ba3b662644e2fe1669ad554a7693e4ef",
         "PRO": "75699cf97c1a603b2559e4ca7f652855"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d9adb33fef74f9de50f23a25f7903d40"
       }
     },
     "PD2_EXT_MNE_5fac91b074ba": {
@@ -3700,11 +3924,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e40dbfc826024b8cfad402a6d4b21b18",
         "PRO": "07a1e928bc2c384a45a02b07e3963de5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5fac91b074baa210a78337125484b2ff"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3734,11 +3958,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d0147af625798484c4e263f6efa3c3c1",
         "PRO": "d674f6dd865782819570d5e5e68de0a3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "236fe8119f341f0ffb8dd45cc4672051"
       }
     },
     "PD2_EXT_MNE_6fdd416dc96a": {
@@ -3766,11 +3990,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f040d7dd33a9d1964320dab4b163395e",
         "PRO": "024776cedaffd2de9c4d398577bb7574"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6fdd416dc96a83af6086d9a4900bdb9b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3801,11 +4025,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "78472eba13dbcc7e58d2d5f6cfb5932c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aaeff191bc43edd324a7a541652eb7eb"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3836,11 +4060,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fe7a1c2b92d57ec9368403fde8eec55d",
         "PRO": "c221a1d312deb0a74f47a1a18fe9a12c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "640f0429394792eab69117f8249645ba"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -3871,11 +4095,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "0b937785f5183116206974188ae35559",
         "PRO": "d7109d0dfbeaf4212b3da3d6f4bba1c1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3813311bc5a4241b81d444bd92c16c8"
       }
     },
     "PD2_EXT_MNE_b0da31b24ce5": {
@@ -3903,11 +4127,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fa15e96a8caed62de634d2cbba75fec1",
         "PRO": "c533e5b981ee4573237ffec26f7f44dd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b0da31b24ce535025a64d384310b57ae"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3938,11 +4162,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "df6fb71ee4be90edc38df8f5d9cf7858"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e3229058d36905a1a68cfe9e9a6dce"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3973,11 +4197,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "ce9ed9aab4b568dd7e92318daa716e39"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2a51439d3df95cdeb8e8c2f112ce2747"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -4008,11 +4232,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "a340cfa88b7fd0a75778f359c3dd3be6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6c78b8cdb99464505b02b4fce5a90a95"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4043,11 +4267,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "7750d3e200f3a3c6416ddf41088bb841",
         "PRO": "50da7fe73b2133e88f38b670df5545c7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9200e0ba5b72479d735d5cb45e6d679e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4078,11 +4302,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "64f001e958cb75886bced722d66d85ff",
         "PRO": "b98277cef56d8b14e8e694472ff0dddd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "54a4c3410932c862e3fcae53288bc46f"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -4113,11 +4337,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e4d929dcade813bcfed0f23f20c25712",
         "PRO": "cdc6fa5260874525d9295f7f2155002f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1aa16dcc47a501f5c8f75f14c67102f0"
       }
     },
     "PD2_EXT_MNE_c4d7cc35846e": {
@@ -4145,11 +4369,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e4d929dcade813bcfed0f23f20c25712",
         "PRO": "0837d89e8e4b8612accd0762362ede27"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c4d7cc35846e5594959a304e9077ef36"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -4180,11 +4404,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "1a1b3155c5789954936c221149914767"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a754c9ec0cf5b6cbbfcbdd6a75a3dd7e"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -4215,11 +4439,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "910ce600523c05e66d9cc75591985feb",
         "PRO": "ebd642600af145633caa561893ae24df"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4fc1b92d94c9c12476c4fc7a333e79b0"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4250,11 +4474,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ebedb8faf55908534e596ba5d47d40c7",
         "PRO": "53ac517f488e65ea357748539f5a3abc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bb91777f490fd4dfe7fd7442b4c04f14"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4285,11 +4509,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3865b5f2bb4f37e3683883ab47756ae0",
         "PRO": "097278655d3c7d1327f1428f553d83a5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "234cb430475d6ce0443bd71e0382a0dc"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4320,11 +4544,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "af4a8e66c8e67afd2cfb0261a7557b22",
         "PRO": "bf83aafa0f2542a2b082c3e8afa70396"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b9c5e13a0364b6cb095c8a0c4ac2ab2a"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4355,11 +4579,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "7982cea02743e8ef27b2e318b1301c25",
         "PRO": "2c82afe0146f176622d40257a9de4d2f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "82041a8a73a8b1ac01228f41bfcec2a1"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4390,11 +4614,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "c0911ab13e8db6d703c6ff224f1b4a1f",
         "PRO": "da094c62a2dbfa36ee35a0e7d978c724"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8c4c977ffca90d6427f5c9eec0eb9793"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4425,11 +4649,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "20e4c484aebdcc22ab1da208d5b013a8",
         "PRO": "99776f243ca94766e443a07c8d3bc221"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 44
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "865344578b0e04d028c10d04a82cc4b8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4437,10 +4661,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_d8e4a88a34e8": {
       "addresses": {
-        "LoD/PD2": "0x7B3368BC"
+        "LoD/PD2": "0x7B3344AF"
       },
       "rvas": {
-        "LoD/PD2": "0x68BC"
+        "LoD/PD2": "0x44AF"
       },
       "sizes": {
         "LoD/PD2": 65
@@ -4460,22 +4684,22 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "beaf90e9e19d1b293c3e66244af05211"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d8e4a88a34e829b0daa624dfafa2ea35"
+      },
       "param_counts": {
-        "LoD/PD2": 4
+        "LoD/PD2": 2
       }
     },
     "PD2_EXT_MNE_3a54b0e12c44": {
       "addresses": {
-        "LoD/PD2": "0x7B33B300"
+        "LoD/PD2": "0x7B3344F0"
       },
       "rvas": {
-        "LoD/PD2": "0xB300"
+        "LoD/PD2": "0x44F0"
       },
       "sizes": {
         "LoD/PD2": 12
@@ -4495,11 +4719,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "26dcc0d98a890c2c5b3549d69179ec0b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4530,11 +4754,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "1cd4f69f090e86bc39f625dfb8a3aec3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "118552f9636ebb54895aa82eaf47393a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4565,11 +4789,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "df5c9bb335ac539ccbf1495fdc26de41",
         "PRO": "3d82c09eed6cf609350b6b86e0a83c72"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e499a7c57fcccf765915e8852ee75143"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4600,11 +4824,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ed7a428f5334f0bccdf46bd11b3c0bb0",
         "PRO": "65bf92a91b053e53a6826cbc3a438e00"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "47dc038193f5319b95be9171532acf2a"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -4635,11 +4859,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "aedec5403543a0560d8306b93234a61b",
         "PRO": "4cdbd1c15eb89b1b8c7012f818b0191c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e8f2fbd7cc4bc606d67b32e3d63eee11"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4670,11 +4894,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d34aa10da8351dc30f8638a564d33bad",
         "PRO": "bbbe0a87db8b7cd57cbecd285744cd4b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9fc8a8238a68bf4ee6aedb45cff5a84d"
       }
     },
     "PD2_EXT_MNE_a842f4844846": {
@@ -4702,11 +4926,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "c28d843778d6313eca5e15ea77ffbb3e",
         "PRO": "73261997c9cadebdd1eabda2aaf74d05"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a842f4844846eb02a043ebdc5a43e2aa"
       }
     },
     "PD2_EXT_STR_9fe208553bf3": {
@@ -4734,11 +4958,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6d11d394882ec5edb05b323d706064fc",
         "PRO": "529c39e328cc1289a2e8a61d1a2dcc50"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "70977278121cde5160e6ce8c56856d0d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4746,10 +4970,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_4f35c0d25ee4": {
       "addresses": {
-        "LoD/PD2": "0x7B337F19"
+        "LoD/PD2": "0x7B3347A4"
       },
       "rvas": {
-        "LoD/PD2": "0x7F19"
+        "LoD/PD2": "0x47A4"
       },
       "sizes": {
         "LoD/PD2": 15
@@ -4769,11 +4993,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "dfa4b39c76f49ba55875e6d770815b2f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f35c0d25ee4bb55f411e4f6edc16738"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4804,11 +5028,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "a977aab091f96389633134c65ea4b86e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "47dfd1c23f58f1be331a84c804541d54"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4816,10 +5040,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_3a2b30f22446": {
       "addresses": {
-        "LoD/PD2": "0x7B3389E8"
+        "LoD/PD2": "0x7B3347D8"
       },
       "rvas": {
-        "LoD/PD2": "0x89E8"
+        "LoD/PD2": "0x47D8"
       },
       "sizes": {
         "LoD/PD2": 7
@@ -4839,11 +5063,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "ce15bdfbefe9caa173baf360bfad9829"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a2b30f22446d682d5d541e4afa4dbe8"
       }
     },
     "PD2_EXT_STR_ef8d6b30e6f2": {
@@ -4871,11 +5095,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "4acacf934f451dc31717d6ff6f0726b4",
         "PRO": "cc01c53f5c09afd44738f0ef38fd06fe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7d31c938be65b27fe6c15a18327d4634"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4906,11 +5130,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6bef1ca8245fb69c58566b733b1309aa",
         "PRO": "17acb71da538d7ded050db51c1c23c45"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 60
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e58f310713195eca978b84d567d23969"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -4941,11 +5165,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "32fe905309f864f6eb5bcf0764c3f9c9",
         "PRO": "a9ce57ff4d0315f0bda7fdec43637157"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "085c78326a5d3897bbf37b6337a72201"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -4953,10 +5177,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_f97d159a7b72": {
       "addresses": {
-        "LoD/PD2": "0x7B338F95"
+        "LoD/PD2": "0x7B334ADF"
       },
       "rvas": {
-        "LoD/PD2": "0x8F95"
+        "LoD/PD2": "0x4ADF"
       },
       "sizes": {
         "LoD/PD2": 11
@@ -4976,14 +5200,14 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "dbf1585d8d4b44de5f2bbd195070d021"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
+      },
       "param_counts": {
-        "LoD/PD2": 4
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_b7b9a68970bc": {
@@ -5011,11 +5235,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f7a480f5087b3f579d153b9201ef810a",
         "PRO": "39b1eab14ac8e686b04ab4923772e174"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b7b9a68970bc2b91b78fde1fc5d99582"
       }
     },
     "PD2_EXT_MNE_9a97d9360ced": {
@@ -5043,11 +5267,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "1322b5300b775d25e65d93a737a0af9e",
         "PRO": "39ec426a54306519685eb3e23f930893"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9a97d9360ced906724238f5a5aa04e11"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5078,17 +5302,52 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ee0d80f71fe25ba531bebb6d2d789b33",
         "PRO": "3716365673b07998d1fef4da67050806"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c1af2f07be1735e6baff61104a92ae2c"
       },
       "param_counts": {
         "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_26d45e2f7abd": {
+      "addresses": {
+        "LoD/PD2": "0x7B334C55"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4C55"
+      },
+      "sizes": {
+        "LoD/PD2": 27
+      },
+      "name": "uninitialize_environment_internal<>",
+      "signature": "undefined uninitialize_environment_internal<>(undefined4 * param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Multiple Matches With Same Base Name\n void __cdecl uninitialize_environment_internal<char>(char * * &)\n void __cdecl uninitialize_environment_internal<wchar_t>(wchar_t * * &)\n\nLibraries: Visual Studio 2015 Release, Visual Studio 2017 Release, Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:26d45e2f7abdeb4dbe66acb4796522e1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "26d45e2f7abdeb4dbe66acb4796522e1",
+        "CFG": "f09da8ab2298e4bafedfaee404f68269",
+        "PRO": "d42972a804f22185f3b3d575d8c07931"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "26d45e2f7abdeb4dbe66acb4796522e1"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "PD2_EXT_ADDR_7B334C70": {
       "addresses": {
         "LoD/PD2": "0x7B334C70"
       },
@@ -5111,13 +5370,13 @@ var FUNCTIONS_PD2_EXT_dll = {
         "API": null,
         "MNE": "26d45e2f7abdeb4dbe66acb4796522e1",
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
-        "PRO": "d42972a804f22185f3b3d575d8c07931"
-      },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+        "PRO": "3c7831c37dc1b9e0fafa23652530d459"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "26d45e2f7abdeb4dbe66acb4796522e1"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5148,11 +5407,42 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "a8c0aca4b4f7b010dd547b76943f610b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d881e582ff5d7ccdd2b1a7a549641fe2"
+      }
+    },
+    "PD2_EXT_ADDR_7B334CDC": {
+      "addresses": {
+        "LoD/PD2": "0x7B334CDC"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4CDC"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "InitializeApplicationEnvironment",
+      "signature": "int InitializeApplicationEnvironment(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "241964b70dc41858d3169a826e14cade"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
       }
     },
     "PD2_EXT_MNE_87f58a6e2960": {
@@ -5180,14 +5470,49 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "d3e02e74f6b94da2f634f8355b3c27f8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "87f58a6e2960bacc7c59439788d4ee3f"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "PD2_EXT_ADDR_7B334D30": {
+      "addresses": {
+        "LoD/PD2": "0x7B334D30"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4D30"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "UnlockACRTResource",
+      "signature": "void UnlockACRTResource(void * pLockObject)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks a ACRT (C Runtime) resource or synchronization object.\\n\\nThis small wrapper function dereferences a pointer to a lock object and passes\\nit to the ACRT unlock routine. It is typically called as part of RAII (Resource\\nAcquisition Is Initialization) cleanup in C++ lambda functions and scope guards.\\n\\nAlgorithm:\\n1. Load pointer to lock object from parameter\\n2. Dereference pointer to get lock object handle\\n3. Call ACRT unlock function with lock handle\\n4. Clean up stack and return\\n\\nParameters:\\n- pLockObject: Pointer to ACRT lock/resource object to unlock\\n\\nReturns:\\n- void\\n\\nSpecial Cases:\\n- Called from C++ lambda operators as part of cleanup logic\\n- The actual unlock is delegated to ___acrt_unlock system function",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "c3eb8898031fa03b9cf054c5f41b8ac5"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      },
       "param_counts": {
-        "LoD/PD2": 4
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_4f545f8af137": {
@@ -5215,11 +5540,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "cbc0ae4dbf8eeb860aa5fcab6be0308e",
         "PRO": "bfd72bb941d576650b300abb356bb4bf"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f545f8af137ab50af2d57c0bcb3c126"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5250,11 +5575,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "a158cc2992ab110e5dc1aaf586b50705"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5572041f2c2f097f78c868a32fe931c5"
       }
     },
     "PD2_EXT_MNE_f4dc1f9fea33": {
@@ -5282,11 +5607,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6f3c48c8a30820a9a8a6c4f4ad80c87c",
         "PRO": "2b6713d06753c15a83125ec403586cc2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f4dc1f9fea33b3ce87b75112461b249c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5317,11 +5642,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "b882005b45fa4ee6b00fb9273a6b2e3b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bab8af5768f2617fdbac83cd8d96cb3b"
       }
     },
     "PD2_EXT_MNE_41e061a55daa": {
@@ -5349,11 +5674,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "40a2e24a2ec6396af8469bfb232e6239"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "41e061a55daafd6f7c4823f6701de408"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5384,11 +5709,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "42bdec2f11c73aa6056b6c694ab2bc19",
         "PRO": "db6b322512e82fa2dff77bf9fa7784ed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3206315f335ddcb42b1f140a67d90aef"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -5419,11 +5744,75 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "ff6ae24f594dff8cfc31bacfd137dca8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "301bd5440f60703ca7a24a8fb30f1e56"
+      }
+    },
+    "PD2_EXT_ADDR_7B334FAC": {
+      "addresses": {
+        "LoD/PD2": "0x7B334FAC"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4FAC"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "name": "InitializeThreadLocals",
+      "signature": "bool InitializeThreadLocals(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initialize thread-local storage for the current thread.\n\nAlgorithm:\n1. Call FUN_7b335838 to allocate and initialize per-thread data (ptd)\n2. Test if returned pointer is non-null (valid initialization)\n3. Convert result to boolean (SETNZ instruction sets AL if result != 0)\n4. Return boolean success status\n\nReturns:\ntrue - Thread-local storage successfully allocated and initialized\nfalse - Initialization failed (allocation or setup error)\n\nSpecial Cases:\n- If allocation fails, returns NULL pointer which converts to false\n- Used during DLL initialization for CRT thread attachment\n- Part of UCRT thread-local storage management\n- Caller: ___scrt_dllmain_crt_thread_attach (thread attach handler)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:ed23cc5d152d612501ab985b6cd1180b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ed23cc5d152d612501ab985b6cd1180b",
+        "CFG": null,
+        "PRO": "a6a3e6d35c16f728e80619e7b6fd130a"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed23cc5d152d612501ab985b6cd1180b"
+      }
+    },
+    "PD2_EXT_ADDR_7B334FB7": {
+      "addresses": {
+        "LoD/PD2": "0x7B334FB7"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4FB7"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "name": "FreePerThreadData",
+      "signature": "int FreePerThreadData(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Frees per-thread C runtime data.\n\nAlgorithm:\n1. Call ___acrt_freeptd() to release per-thread data structures\n2. Return success status\n\nParameters:\nNone\n\nReturns:\nint - Success status (1 = success)\n\nSpecial Cases:\nThis is called during thread detachment in the CRT DLL main handler.\nCalled by: ___scrt_dllmain_crt_thread_detach",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23776c981f88f2e44bd8f0f2628e6a8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23776c981f88f2e44bd8f0f2628e6a8",
+        "CFG": null,
+        "PRO": "4bcb6294e728f322a54afdcff958a234"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23776c981f88f2e44bd8f0f2628e6a8"
       }
     },
     "PD2_EXT_MNE_2f8fb49d6e3a": {
@@ -5451,11 +5840,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2555e203409cbc2d4a46fa3a51b3c448",
         "PRO": "c3ae7d0a3897de213add353986c557a6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2f8fb49d6e3a6e73cf5cbd24f73c1d88"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5486,11 +5875,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "ce46c9d87722ccc13a17ae94593e6068"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "134a136c35da3c89f34fcaa3501c784e"
       }
     },
     "PD2_EXT_MNE_28d00bb6a01c": {
@@ -5518,11 +5907,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "8bbfe2737ef55f3a9a35ae1b43be54c6",
         "PRO": "07e6a14aebcd21dd55f38aa8e4e531f0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "28d00bb6a01cf52af280033a78fdd434"
       }
     },
     "PD2_EXT_MNE_b7f3517230d0": {
@@ -5550,11 +5939,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "5e559b70e3bfffce29afee20bf0cdee3"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b7f3517230d0ec4d7a74053fb7875b36"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "PD2_EXT_ADDR_7B335058": {
+      "addresses": {
+        "LoD/PD2": "0x7B335058"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5058"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "name": "AllocateMemory",
+      "signature": "void * AllocateMemory(SIZE_T size)",
+      "calling_convention": "__stdcall",
+      "comment": "Allocates memory from the heap via malloc wrapper.\n\nAlgorithm:\n1. Forward allocation request to __malloc_base() with requested size\n2. Return allocated memory pointer\n\nParameters:\n  size (SIZE_T) - Number of bytes to allocate from heap\n\nReturns:\n  void* - Pointer to allocated memory, or NULL if allocation fails\n\nSpecial Cases:\n  - This is a simple thunk/wrapper that directly calls __malloc_base\n  - No error checking or validation in this function; caller must check return value\n  - Typical size range: 1 to several MB for game objects",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "b0dd12aa00224434bb273f32572776ca"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5585,11 +6009,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6915877a0ed6cfe545ad9e144a0163e7",
         "PRO": "f2da543ab27086c22477efc07498f578"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3e1e254ecf03309396e24484f0d3e9f2"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5620,11 +6044,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fd32fcbc1bb7eeb18567ac64ddfa5c84",
         "PRO": "215490b9ee6c7e587130a063619d0406"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "149a36a120ba0433bb5c3b2eec7f1a8d"
       }
     },
     "PD2_EXT_MNE_ecdcac90e329": {
@@ -5652,11 +6076,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d4dea6f97df0c4a99e65dae9c9b89fdf",
         "PRO": "6f344308602636001cf69eddedccae44"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ecdcac90e329a157a1abf708578a4217"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5687,11 +6111,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "32e15db7c5b22f7bb7a58182cedf6021",
         "PRO": "dc1ce46d34a9b413d8aec9c253abd3f8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "576dacb1a3c65987f59c7822dad4d341"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5722,11 +6146,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f3972dcdfa4d57713101074a08462fae",
         "PRO": "a56767cb34208fb0974c9b587f3b085d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b369788902753172319dc36d2bb5b99e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5757,11 +6181,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d8db9e15aaed1543314905874c94395f",
         "PRO": "ede6117d4be15346aaa26973a18d165c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a764d17f20af7e503dc1ad3285470708"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5792,11 +6216,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3d8ce31b4468dcfe3dac3889efcf7817",
         "PRO": "bf681854d334009ccbaca38ba67a885e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c29e481f5f126f2c87a4f965ee41afb6"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5827,11 +6251,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "64da69ef3217f47828e6e59b6b548a38",
         "PRO": "c53d1abcc8089d5fc2c8b3e9e4d2fd4e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "60eae47e900bd5cccfca9527af704a4d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5862,11 +6286,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "03174e169631020a4401034eca31b3cc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "363a4980e85db23a06cc2f6499b0be9a"
+      }
+    },
+    "PD2_EXT_ADDR_7B335338": {
+      "addresses": {
+        "LoD/PD2": "0x7B335338"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5338"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "name": "AllocateMemoryVcrt",
+      "signature": "void * AllocateMemoryVcrt(size_t size, int flags)",
+      "calling_convention": "__stdcall",
+      "comment": "Memory allocation wrapper for VCRT thread-local storage.\n\nThis function is a thin wrapper around __calloc_base that is part of the Visual C Runtime's\nmemory allocation infrastructure. It is called during thread-local data initialization to\nallocate memory for thread-local structures.\n\nAlgorithm:\n1. Set up stack frame (MOV EBP, ESP)\n2. Immediately tear down stack frame (POP EBP)\n3. Jump directly to __calloc_base with parameters forwarded\n\nParameters:\n- size (param_1): Size in bytes of memory to allocate\n- flags (param_2): Allocation flags/type\n\nReturns:\nvoid*: Pointer to allocated memory block, or NULL if allocation fails\n\nSpecial Cases:\n- This is a trampoline function that simply forwards to __calloc_base\n- Called from ___vcrt_getptd_noexit during thread-local storage setup\n- Minimal stack overhead due to immediate stack frame teardown",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "299f1a8d321df56e7be7888e6be8cafa"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
       }
     },
     "PD2_EXT_MNE_8dd65e2de8e1": {
@@ -5894,11 +6353,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "981689129fcdb6123df344857609aa1c",
         "PRO": "2dd6a66206e14e50a58e220088eaef18"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8dd65e2de8e15bfddea67861f02c0369"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5929,14 +6388,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "abfb8b9bf9495533a26506aaee1d3911"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "90d00f9a9be307cf02192609b64b05fb"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "PD2_EXT_ADDR_7B3353C3": {
+      "addresses": {
+        "LoD/PD2": "0x7B3353C3"
+      },
+      "rvas": {
+        "LoD/PD2": "0x53C3"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "UnlockCriticalSection",
+      "signature": "void UnlockCriticalSection(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases a critical section lock by calling the ACRT unlock function.\n\nAlgorithm:\n1. Load the address of the critical section pointer from [EBP + 0x10]\n2. Dereference the pointer to obtain the lock object address\n3. Call ___acrt_unlock with the lock object as parameter\n4. Return from function\n\nParameters:\n[EBP + 0x10] - Pointer to critical section lock object (passed implicitly by caller)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nThis is a C++ lambda function generated as part of a scoped lock guard. The implicit parameter passed via EBP+0x10 contains the address of the critical section to unlock. The function uses __stdcall calling convention with callee cleanup.\n\nNotes:\nPart of ACRT (C Runtime) lock management infrastructure. Typical usage is as a destructor for lock guards that automatically unlock critical sections when leaving scope.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "f16430e56952f3dd6f51654eb9441d25"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 4
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "PD2_EXT_MNE_e1c55cb55aa8": {
@@ -5964,14 +6455,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "0186fb67df5760129d902b254084ed17",
         "PRO": "49080df2751a0bbae1ee6aaa4ce55a97"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e1c55cb55aa8db0333c697605412e2da"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "PD2_EXT_ADDR_7B33542E": {
+      "addresses": {
+        "LoD/PD2": "0x7B33542E"
+      },
+      "rvas": {
+        "LoD/PD2": "0x542E"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "UnlockCriticalSection",
+      "signature": "void UnlockCriticalSection(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks a critical section acquired from C runtime library.\n\nAlgorithm:\n1. Load critical section pointer from implicit parameter at [EBP+0x10]\n2. Dereference pointer to get critical section handle\n3. Pass handle to C runtime unlock function (___acrt_unlock)\n4. Clean up stack with RET instruction\n\nParameters:\nThis is an implicit function used as a lambda destructor within RAII pattern. The critical section pointer is passed via the calling function's stack frame, accessed at EBP+0x10.\n\nReturns:\nvoid - No explicit return value. ___acrt_unlock handles the actual unlocking.\n\nSpecial Cases:\n- Part of C++ RAII cleanup mechanism for exception safety\n- Double pointer dereference: parameter points to pointer to actual resource\n- Uses __stdcall convention indicating participation in C runtime library",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "fc4deb619f24c126d42aeb013285c41a"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 4
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "PD2_EXT_MNE_018929dfed03": {
@@ -5999,14 +6522,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "b9b7eb95233f327f6b0938a989653201"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "018929dfed036d141182e3999b8af35e"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "PD2_EXT_ADDR_7B335483": {
+      "addresses": {
+        "LoD/PD2": "0x7B335483"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5483"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "UnlockResourceClosure",
+      "signature": "void UnlockResourceClosure(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Closure wrapper that unlocks an ACRT (Active C Runtime) resource.\n\nThis function is part of a lambda/closure that manages resource locking/unlocking.\nThe function dereferences a pointer parameter and passes the result to ___acrt_unlock.\n\nAlgorithm:\n1. Load the resource pointer parameter from stack (EBP + 0x10)\n2. Dereference the pointer to get the actual resource\n3. Call ___acrt_unlock to release the resource lock\n4. Return to caller\n\nParameters:\n- Implicit parameter at [EBP + 0x10]: Pointer to pointer of resource to unlock\n\nReturns:\n- void\n\nSpecial Cases:\n- This is a closure/lambda expression, so EBP is inherited from the calling context\n- The pointer at [EBP + 0x10] must be valid or the function will crash\n- This is typically called within a RAII scope guard pattern",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "905c9279fa273f5d74c0d6c823284710"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 4
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "PD2_EXT_MNE_f1aacf68262f": {
@@ -6034,14 +6589,49 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "884caae5190509afce3c79bd9330bde2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f1aacf68262fc1f946b8a051c3854e39"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "PD2_EXT_ADDR_7B3354DD": {
+      "addresses": {
+        "LoD/PD2": "0x7B3354DD"
+      },
+      "rvas": {
+        "LoD/PD2": "0x54DD"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "UnlockMutexWrapper",
+      "signature": "void UnlockMutexWrapper(void * pLockHandle)",
+      "calling_convention": "__stdcall",
+      "comment": "Setting prototype: void UnlockMutexWrapper(void* pLockHandle)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "3636ac15515d2cede7d12e7fd24962b7"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      },
       "param_counts": {
-        "LoD/PD2": 4
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_562784e2aa25": {
@@ -6069,11 +6659,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "0172703fd4aed2588677c56666bcf022"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "562784e2aa25b159cff8ea785681ccea"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6104,11 +6694,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "933c8d35515351e80b24e6fc18dff69c",
         "PRO": "4c564f0c90abea0c5f19c8ee66fca94d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0461e4ddc4a81a1faaeadac79911ab99"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6139,11 +6729,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ac02799931187a24621263cce6da4d79",
         "PRO": "79b21cdbe380271ef40f083eaa6ad132"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "96b8fe1446ce53329ed3372543aeb919"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6174,11 +6764,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fbea47b737f9cded99d3ac1117fd0429",
         "PRO": "321914051a811ffee5a9662a2940c323"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "43a145a45a08af0e15f2b8158b52f01e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6209,11 +6799,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2bea3eb19dd06b49df098eed6ded289c",
         "PRO": "e9b4ceb4b14177e8aa2f8d02baa5a083"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0bd6fdb5bbf6a0dc064c573db9a07995"
       }
     },
     "PD2_EXT_MNE_18b8c05cf28b": {
@@ -6241,11 +6831,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "de3b2abd2d26c8e930d32a58f5915ffe",
         "PRO": "98dfb9cbc1028fb05fd5e9f284f5ad29"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "18b8c05cf28b1cda135708a22a318443"
       }
     },
     "PD2_EXT_MNE_6b10fdd13f5f": {
@@ -6273,11 +6863,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "99acbd9ba054b4b87602cdd9a1dd0e2a",
         "PRO": "25896cddb6ff42aa36c897ca3be143a1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6b10fdd13f5f7ee0973b90d8d8b2b1a0"
       }
     },
     "PD2_EXT_MNE_6202de4645be": {
@@ -6305,11 +6895,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "7f72cddf6a4ca37cae276ff8e4e5b285",
         "PRO": "b8c20d535c83efc66707c550e4c2df25"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6202de4645be18693665b1972a057c15"
       }
     },
     "PD2_EXT_MNE_3973079e5826": {
@@ -6337,11 +6927,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "a6afe2d10ce96567817331ec22986868",
         "PRO": "f004dd56f2e17f2e5f57222e67f0f15a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3973079e58265304ff2d57d22a229905"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6372,19 +6962,19 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "8f793f81eebf6b1a28e081f351d196b1",
         "PRO": "2b2bb31208431f1e6d8c4a47aff7a366"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0e104542d511ea3331eb7fed1ab9e5a"
       }
     },
     "PD2_EXT_MNE_c0a4ab78c7bb": {
       "addresses": {
-        "LoD/PD2": "0x7B335A5B"
+        "LoD/PD2": "0x7B335A13"
       },
       "rvas": {
-        "LoD/PD2": "0x5A5B"
+        "LoD/PD2": "0x5A13"
       },
       "sizes": {
         "LoD/PD2": 23
@@ -6404,11 +6994,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "cfd35da87f07fe4aa636fe8a82b5867e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0a4ab78c7bbdc5939a3219df84ac650"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6439,11 +7029,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b299961a4ff9924d9c5832fc43b80e26",
         "PRO": "12ae3557c99dcfc144f196e3b3aa262e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7a3970d89129d50ca1d42c01fc54f6d0"
+      }
+    },
+    "PD2_EXT_ADDR_7B335A5B": {
+      "addresses": {
+        "LoD/PD2": "0x7B335A5B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5A5B"
+      },
+      "sizes": {
+        "LoD/PD2": 23
+      },
+      "name": "___acrt_unlock",
+      "signature": "undefined ___acrt_unlock(int param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n ___acrt_unlock\n\nLibraries: Visual Studio 2015 Release, Visual Studio 2017 Release, Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:c0a4ab78c7bbdc5939a3219df84ac650",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c0a4ab78c7bbdc5939a3219df84ac650",
+        "CFG": null,
+        "PRO": "cfd35da87f07fe4aa636fe8a82b5867e"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0a4ab78c7bbdc5939a3219df84ac650"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_e601501afe68": {
@@ -6471,11 +7096,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "a0521d663205d8ec916aeb3fda3b9196"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e601501afe682ac9c11131099d892567"
       }
     },
     "PD2_EXT_MNE_d7fe3dde48da": {
@@ -6503,11 +7128,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "6642bdd6e708b98b09f7380f42659016"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7fe3dde48dafb03e042111f1b10ecb0"
       }
     },
     "PD2_EXT_MNE_32411d9bd442": {
@@ -6535,11 +7160,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3faa1a24a3d4c996032f03064ca761f6",
         "PRO": "b702565b1dbef1eb561507b0fc19b1e1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "32411d9bd442619bc1c91b66286639bc"
       }
     },
     "PD2_EXT_MNE_e8dbf0276f45": {
@@ -6567,11 +7192,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e6f5aaef1039a61daa103ba7f60faedc",
         "PRO": "6855209e1f68cd47fe126a6cc0b2d0c4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e8dbf0276f45b580cfb11edfd59fa97b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6602,14 +7227,49 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "61fa1b89b7ac2fb25538ca8bf5f0c526",
         "PRO": "19a049074892458dc9cb15ecb4bbfcf3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe4b300c8aac3ca15e5af72954831681"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "PD2_EXT_ADDR_7B335C20": {
+      "addresses": {
+        "LoD/PD2": "0x7B335C20"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5C20"
+      },
+      "sizes": {
+        "LoD/PD2": 15
+      },
+      "name": "SetGlobalValue",
+      "signature": "void SetGlobalValue(uint nValue)",
+      "calling_convention": "__cdecl",
+      "comment": "Stores a 32-bit value to a global variable for later retrieval.\\n\\nAlgorithm:\\n1. Load parameter nValue from stack argument (EBP + 8)\\n2. Store nValue into global variable at address 0x7b345fb4\\n3. Return to caller\\n\\nParameters:\\n  nValue (uint): The 32-bit value to store in the global variable\\n\\nReturns:\\n  void: Function does not return a value\\n\\nGlobal Variables:\\n  0x7b345fb4: Stores the last value passed to this setter function\\n\\nSpecial Cases:\\n  - Function uses standard x86 function prologue (MOV EDI,EDI for hot-patch compatibility)\\n  - Direct stack parameter access without additional local variables\\n  - Single write operation to global storage\\\"",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:4f35c0d25ee4bb55f411e4f6edc16738",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4f35c0d25ee4bb55f411e4f6edc16738",
+        "CFG": null,
+        "PRO": "e22f1578f5e069af6b9b727c89bf15bb"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f35c0d25ee4bb55f411e4f6edc16738"
+      },
       "param_counts": {
-        "LoD/PD2": 3
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_4dab91cc3a43": {
@@ -6637,11 +7297,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "baa53b741f77b7e29b73a7d2a3776071"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4dab91cc3a43376255a32bfefb498f9a"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -6672,11 +7332,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "4a4b1579ec6eca124aec7de297c71716",
         "PRO": "1a9b1f7d00870dba9b70a76759ea7ba7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5b7f275cb0bc93933303fa9e9fa92678"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -6707,11 +7367,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "6bb201ec76d18640cb75d1a71f0b1e27"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6d7257d3f6d65324a2aaddba53de9ad0"
       }
     },
     "PD2_EXT_MNE_b586167a1ef2": {
@@ -6739,11 +7399,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "667714027c789a8b486a563a19e4b634",
         "PRO": "4b62159d02001ebc89f69d9d9f8f6933"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b586167a1ef2c659ec3fba77eabe3e07"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -6774,11 +7434,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fd32fcbc1bb7eeb18567ac64ddfa5c84",
         "PRO": "0176da6b0dc1599352f33a9407593854"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0eb9c57737c9945526588481caeeb787"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6809,11 +7469,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "0df243cde0809b16507f170521759f7e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c9e474235f8ab0b2b23a632af418b776"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6844,11 +7504,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "f1c341c8227b4f521094a3957fc9377f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d0bb52082b9f6efd6d5ae65e96cba3b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6856,10 +7516,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_644c94180542": {
       "addresses": {
-        "LoD/PD2": "0x7B335DC4"
+        "LoD/PD2": "0x7B335DB1"
       },
       "rvas": {
-        "LoD/PD2": "0x5DC4"
+        "LoD/PD2": "0x5DB1"
       },
       "sizes": {
         "LoD/PD2": 19
@@ -6879,11 +7539,43 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "8d598d6ff87f51df69fb6e8ad46943ae",
         "PRO": "718bea72506b1dca2b998a61c63f56e8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "644c941805424b14885c3ec129aaf89f"
+      }
+    },
+    "PD2_EXT_ADDR_7B335DC4": {
+      "addresses": {
+        "LoD/PD2": "0x7B335DC4"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5DC4"
+      },
+      "sizes": {
+        "LoD/PD2": 19
+      },
+      "name": "GetOrCreateThreadDataRef",
+      "signature": "__acrt_ptd * GetOrCreateThreadDataRef(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves or creates per-thread data and returns offset reference.\n\nAlgorithm:\n1. Call GetOrCreatePerThreadData() to obtain per-thread data structure\n2. Test if returned pointer is NULL\n3. If NULL, return default global data at 0x7b345094\n4. If valid, return pointer offset by 0x10 bytes\n\nParameters:\nvoid - No parameters\n\nReturns:\n__acrt_ptd * - Pointer to per-thread data structure (or offset reference)\n               Returns either offset pointer or default global data address\n\nSpecial Cases:\n- If per-thread data allocation fails, returns default global data\n- Offset 0x10 applied to valid pointers may represent field access\n- Used extensively in CRT initialization and errno handling",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:644c941805424b14885c3ec129aaf89f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "644c941805424b14885c3ec129aaf89f",
+        "CFG": "8d598d6ff87f51df69fb6e8ad46943ae",
+        "PRO": "aa5b7e6b3a20960326cb9e4e1224dfb0"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "644c941805424b14885c3ec129aaf89f"
       }
     },
     "PD2_EXT_MNE_66f9491d9af8": {
@@ -6911,11 +7603,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "1746c214e0525153db871cfe57f9d146",
         "PRO": "f05a869ef6461fa6aff7afd9541d5ca5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "66f9491d9af8fd3d55a819090c569edf"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6946,11 +7638,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "0ffa8e79f94ada14a14186aa3a749bfc",
         "PRO": "8ccfbf4526b25bdef0981a4695dcd7b6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e5315069105ea6aba50d064eb91813a2"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6981,11 +7673,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "35cb04bc19b2020a12670858f7d7ed27",
         "PRO": "d4c428d686eef7cbadbe32cd12577e12"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4c3e5943e2240c0e96abb1f751479a77"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7016,11 +7708,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "dcf6e83f6e4873a0e42c4eef04e33e42",
         "PRO": "fc9244c7eda016ca16244e039f58297d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4ec4cb66c626783f3bd931a61a044c86"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7051,11 +7743,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f7106213b601a67591285814324a7d56",
         "PRO": "d43b208e265dd50b797734e855ebb721"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7820bcb3535676126683410b40ecffda"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7086,11 +7778,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "9d4e6efeadbc5b314f2bb0bfa7bc4374"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "19bef61e780c74e5dff166aab3ca2cb4"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -7121,11 +7813,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "da8a91c57591a238999cfe055c4a889f",
         "PRO": "a71b133d306b9e66edbd630da50a50b2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ad7c5bf304cac1ec0470974f13d366d4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7156,11 +7848,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "acd9c34a5e33b58a92e7ed133adc66ed",
         "PRO": "df485c995045e9e6e6f8a2ddb1a33ac8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1743000d07d02d097ed61851905367b5"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7191,11 +7883,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "c6504bccb637991ad683f482c1de0244",
         "PRO": "0d9e51a75facd9e13bfbb86d68348b7d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 46
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "87bb04582ef12a152cd0685b406c72f9"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -7226,11 +7918,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "4c039a36e9199ae2f847ed8b459b14c6",
         "PRO": "2448d0bf37c9a2de64343f5a6474ec39"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "825ffe21bc5fffcf9ff3e8ab8118c486"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7261,11 +7953,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "a9c729cc86b83c7c1ad73572a77516e6",
         "PRO": "3b27eb7ba5bff45de8ba59807ffb0f4c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2c69468e4701011b3392b622e57d3678"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7296,11 +7988,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "9fd83346965ae1ccc8207a6b9028b9ab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "db3e013359b6f457e10ef6d6f14d9807"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7331,11 +8023,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "02273156f0e4b98efa76244054230009",
         "PRO": "143a7ecb0085bcfcc3660f6fc074132b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bc198c9debcbf615c5bc60988ed4c1f4"
       }
     },
     "PD2_EXT_MNE_622cccd70890": {
@@ -7363,11 +8055,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "8f793f81eebf6b1a28e081f351d196b1",
         "PRO": "23ed600a51dd7ad1f69c8b57042f336e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "622cccd70890db97f418764d812b095e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7398,11 +8090,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "19c71a436cd9b62cd94468fdd6017761",
         "PRO": "d27761f7d36ff0091fe293d1495d2a7a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "beee665df4a2db0920647dd4d54df36d"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7433,11 +8125,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "85e807ad41b8340ac7aa6e764f7d6a4d",
         "PRO": "0471034e38325a1c37181de5af43688d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "91336d4559b379f6802f6fc02bee9a0e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7468,11 +8160,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "b83f505d1123dce1c32f09fc779e3a68"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1cef1ae5210ea6ba89c2f903625a2a75"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -7503,14 +8195,49 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fd9972b93bc30d9b5de608b2276eeb40",
         "PRO": "bac12cd41714af9bdb5e22db26aaf1b9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "84894fb111f0bc699d5ac8b77ae4117b"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "PD2_EXT_ADDR_7B336713": {
+      "addresses": {
+        "LoD/PD2": "0x7B336713"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6713"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "name": "ProcessArgumentBuffer",
+      "signature": "int ProcessArgumentBuffer(char * * ppArguments, char * * * pppProcessedBuffer)",
+      "calling_convention": "__cdecl",
+      "comment": "Processes parsed command-line arguments and builds output buffer.\n\nThis function serves as a wrapper/thunk that jumps directly to BuildArgumentBuffer,\nwhich performs the actual argument parsing and processing. It is called during\ncommand-line initialization (mode 2) after initial argument scanning and buffer\nallocation.\n\nAlgorithm:\n1. Accept parsed argument array (ppArguments) and output buffer pointer\n2. Call BuildArgumentBuffer to process arguments and populate output buffer\n3. Return processing status code from BuildArgumentBuffer\n\nParameters:\n  ppArguments (char **): Pointer to array of parsed command-line arguments\n  pppProcessedBuffer (char ***): Pointer to output buffer for processed arguments\n\nReturns:\n  int: 0 for success, non-zero error code from BuildArgumentBuffer\n\nNotes:\n  - This is a thunk function that immediately jumps to BuildArgumentBuffer at 0x7b33601b\n  - Used as part of the command-line argument initialization sequence\n  - Called only when initMode == 2 in InitializeCommandLineArguments\n  - The output buffer is scanned for null terminator to count final argv count",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "ee6f4eb8eb14aec0ce782c592e464813"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
+      },
       "param_counts": {
-        "LoD/PD2": 1
+        "LoD/PD2": 2
       }
     },
     "PD2_EXT_MNE_d79dae3c7e5a": {
@@ -7538,11 +8265,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f146e2952b94af5309ccf74dfad329ea",
         "PRO": "7e99ea503b67c0c5e16d75aa8bf65f3f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 26
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d79dae3c7e5ad2007e4eaa87540f688c"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7573,11 +8300,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "90c4f17418cec0d76ed106d2d34ca67f",
         "PRO": "178a3e5ae0bc65735aee7aa43a347a28"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eff9bc0895af26d0e13a0e5f97593b47"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7608,11 +8335,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b370095729a55966f830f9e42a501d33",
         "PRO": "0c0e816f8c64846a372207830df801e5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "240d5cb2d2b375c575a495ac0089b042"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7643,14 +8370,81 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3907a61015bea53abae30d1d00c37cc2",
         "PRO": "8bc662292686f111bd319f85ba50fcc7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0a1f072e805577cbd86c2197975d37b7"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "PD2_EXT_ADDR_7B3368BC": {
+      "addresses": {
+        "LoD/PD2": "0x7B3368BC"
+      },
+      "rvas": {
+        "LoD/PD2": "0x68BC"
+      },
+      "sizes": {
+        "LoD/PD2": 65
+      },
+      "name": "operator()<class_<lambda_ceb1ee4838e85a9d631eb091e2fbe199>,class_<lambda_ae742caa10f662c28703da3d2ea5e57e>&,class_<lambda_cd08b5d6af4937fe54fc07d0c9bf6b37>_>",
+      "signature": "void operator()<class_<lambda_ceb1ee4838e85a9d631eb091e2fbe199>,class_<lambda_ae742caa10f662c28703da3d2ea5e57e>&,class_<lambda_cd08b5d6af4937fe54fc07d0c9bf6b37>_>(__crt_seh_guarded_call<void> * this, <lambda_ceb1ee4838e85a9d631eb091e2fbe199> * param_1, <lambda_ae742caa10f662c28703da3d2ea5e57e> * param_2, <lambda_cd08b5d6af4937fe54fc07d0c9bf6b37> * param_3)",
+      "calling_convention": "__thiscall",
+      "comment": "Library Function - Single Match\n public: void __thiscall __crt_seh_guarded_call<void>::operator()<class <lambda_ceb1ee4838e85a9d631eb091e2fbe199>,class <lambda_ae742caa10f662c28703da3d2ea5e57e> &,class <lambda_cd08b5d6af4937fe54fc07d0c9bf6b37> >(class <lambda_ceb1ee4838e85a9d631eb091e2fbe199> &&,class <lambda_ae742caa10f662c28703da3d2ea5e57e> &,class <lambda_cd08b5d6af4937fe54fc07d0c9bf6b37> &&)\n\nLibrary: Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d8e4a88a34e829b0daa624dfafa2ea35",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d8e4a88a34e829b0daa624dfafa2ea35",
+        "CFG": null,
+        "PRO": "00a69ef0e5dfaa55d59b281d78954ec9"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d8e4a88a34e829b0daa624dfafa2ea35"
+      },
       "param_counts": {
-        "LoD/PD2": 3
+        "LoD/PD2": 4
+      }
+    },
+    "PD2_EXT_ADDR_7B3368FD": {
+      "addresses": {
+        "LoD/PD2": "0x7B3368FD"
+      },
+      "rvas": {
+        "LoD/PD2": "0x68FD"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "LambdaLockCleanup",
+      "signature": "void LambdaLockCleanup(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Lambda destructor that releases an ACRT lock object.\n\nAlgorithm:\n1. Load base frame pointer from EBP\n2. Read pointer to lock object from offset 0x10 relative to base pointer\n3. Dereference lock pointer to access lock structure\n4. Call ___acrt_unlock() to release the lock\n5. Return to caller\n\nReturns:\n  void\n\nSpecial Cases:\n  - This is a generated lambda destructor function\n  - Used for RAII-style lock management in C++ scoped locks\n  - The lock object is stored at EBP+0x10 in the calling frame",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "53a54a3bd1b3b3d3699664292f24bd6e"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "PD2_EXT_MNE_b4c322a1f5cc": {
@@ -7678,11 +8472,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "7b115c7406f655d5b90d1a91fd7d880f",
         "PRO": "ffc9fcda6e1a640987d4220f05279c75"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b4c322a1f5ccf1db0109c706b1f587f9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7713,11 +8507,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "9e769e092d33a5207cb8844b2ed2ef06",
         "PRO": "12a97fe170cd849b65c45ed689979d60"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3929bd79ce29f38cda0437f1eae9dc40"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7748,11 +8542,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2eac58840615cf8c3efb808b75a8ecaf",
         "PRO": "55e641fc0586378379e9e0fe90762d1d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "55e6daeb0b3a2f6cfed9f312027ebf3a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7783,11 +8577,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "cb55111c99dcd27c33594c903599235c",
         "PRO": "e0f59548f29e2f31edb7dc08a2a9caf6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0c6df9df1992eca33150f0384391f99"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7818,11 +8612,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "af90d421740e5e6c68665eec611a98f7",
         "PRO": "a334a3dc4bb1291f61b82e3b98e381f3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 50
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9081b130a587a4d185bf061a84c1269f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7853,11 +8647,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "c9242ff4098950bb196a356b0a7cd8c7",
         "PRO": "de8afe59bf1d3d0b5440cb44ff00c50b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f54e4b4076bdafe44f8e53fd946f14ed"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7888,11 +8682,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "36932fe0346a00c6ccf28110d4a63fcd",
         "PRO": "3741a117f669e5ee49566c4067f5b917"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9bc05fe94e2b9303b8e97be2aa0fb172"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7900,10 +8694,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_f23ef2b3a6cf": {
       "addresses": {
-        "LoD/PD2": "0x7B33A423"
+        "LoD/PD2": "0x7B336E17"
       },
       "rvas": {
-        "LoD/PD2": "0xA423"
+        "LoD/PD2": "0x6E17"
       },
       "sizes": {
         "LoD/PD2": 9
@@ -7923,19 +8717,19 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "211c041d2750fdb055d3452229e7c914"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "PD2_EXT_MNE_a3be8b06a2b4": {
       "addresses": {
-        "LoD/PD2": "0x7B338980"
+        "LoD/PD2": "0x7B336E20"
       },
       "rvas": {
-        "LoD/PD2": "0x8980"
+        "LoD/PD2": "0x6E20"
       },
       "sizes": {
         "LoD/PD2": 18
@@ -7955,11 +8749,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "3ada8c8978f649fc965bd35cb94fda43"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a3be8b06a2b40480e0229ac7ae834885"
       }
     },
     "PD2_EXT_MNE_d91349f5defa": {
@@ -7987,11 +8781,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e8304c2afda95740a391a275b6b161fd",
         "PRO": "ee1decd11d05f37188aa24a3f1d2d12d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d91349f5defa655773f15756410cc404"
       }
     },
     "PD2_EXT_MNE_05763b103f9f": {
@@ -8019,11 +8813,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "d8d593375e4b196a5be132cf998621f6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "05763b103f9f2ac70627795795ca4ee1"
       }
     },
     "PD2_EXT_MNE_79af0bc23b87": {
@@ -8051,11 +8845,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3f3ca72292dc36e5d2f161287468afe0",
         "PRO": "21636fed5a524f0f6b5cbaa34d77c029"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 38
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "79af0bc23b876e2e49bc9fca4ac6ba51"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8086,11 +8880,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "8f8c300876570b5d8e434f76a3ca5407",
         "PRO": "cdf88f293ebb89243786763a3f153b4e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dba49a9c71c970d66b5110c04eefbf85"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8121,11 +8915,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d977068f91f71cd3a21101f3f0e9a64a",
         "PRO": "7bd03aeb95f988a3d64325565d8789ed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e42ca910bd4d3da6dbcd9fea211b0276"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8156,11 +8950,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "258e305e32fecd402f33ed337f79f36c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a0233b04111edb7a8a617e9b940ca401"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8191,11 +8985,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ef503b57559f1d264a6c58a545f5a99a",
         "PRO": "3000ce8aea0c63e466ab12d459ff9f2d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5adec5b89fa18d060bee6305a312fb6"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8226,11 +9020,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "5ccf98067ecadb528cbec98c2208cc79"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d13e3a9dfbfc1a6057ef6afb0e3c13bf"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -8261,11 +9055,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "922a42e28bc123f0d5d8837a2850ede6",
         "PRO": "0f6f513bdcb3f7763480a929f947dc1a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 25
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2f554e15a48ba5e5331f929500321d63"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8296,11 +9090,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3a585170bc4bf7b3485c5d93cab06b1b",
         "PRO": "61bf5d940571fd5d67c3d14a54619b53"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6f90fe512523992448a711651a71fc2c"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -8331,11 +9125,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fe43afd9f3cfefc6a888c38c288cd751",
         "PRO": "b3663a0d95934c4929855bc560f9917e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a95646d8d22ce011ed8cfdab99140425"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8366,11 +9160,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "0d3e35d28ed73875cc5ddd828625347a",
         "PRO": "ea9f1ed1b06cb4db9f1b58e75e925e57"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9986705100b11eaf7f4aa4131d6686b4"
       }
     },
     "PD2_EXT_MNE_211c0e57bcbe": {
@@ -8398,11 +9192,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "bf31b103239c8413537200f3861c6900",
         "PRO": "78624cf0a10d2bb1c3da84b7766b2136"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "211c0e57bcbeb6b4390a0f712029b92f"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8433,11 +9227,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "f7994cfefd4ca57312e4b422a34f20d2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "06ecc2bf829f9069ac3c1b4dda34cbe5"
       }
     },
     "PD2_EXT_STR_fa1f9177d46a": {
@@ -8465,11 +9259,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "b352334a700edcedc59c9482b91bd2ec"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "06ecc2bf829f9069ac3c1b4dda34cbe5"
       }
     },
     "PD2_EXT_STR_392392fd6e6f": {
@@ -8497,11 +9291,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "015628509232b0332d76c1e238605d4b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "06ecc2bf829f9069ac3c1b4dda34cbe5"
       }
     },
     "PD2_EXT_STR_a4eedc969147": {
@@ -8529,11 +9323,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "21ac527cba523aaf3454972442b74108",
         "PRO": "fc2c87edb2ce4aecb91a514f07971519"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 35
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c1269defc9bad22b62a1916688e57cb8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8564,11 +9358,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ff721dbf63c8dc1f6e2dd3786cee79e8",
         "PRO": "e12e2c08c50397ced245ea1964ac1cfe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "39c6ea94cc75a52bde6d6d6adb2af45b"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8599,11 +9393,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b724ed9bc22393fb1bfd3fcd83003d6f",
         "PRO": "7b35dc4338c0447c94d92976b2f8f439"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5649c9d1a738299fb1cdec24db371b01"
       }
     },
     "PD2_EXT_MNE_6c9ec7b99b0d": {
@@ -8631,11 +9425,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ebedb8faf55908534e596ba5d47d40c7",
         "PRO": "c2ec7cbe6780d1943a07d0dca833746e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6c9ec7b99b0db251912cc83a9da1745a"
       }
     },
     "PD2_EXT_MNE_ecc255d93f2d": {
@@ -8663,11 +9457,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "85e807ad41b8340ac7aa6e764f7d6a4d",
         "PRO": "d9642e25c09a78984799f232dac81bb8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ecc255d93f2de7bd40d203689b269209"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8675,10 +9469,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_23cf53ccba93": {
       "addresses": {
-        "LoD/PD2": "0x7B337717"
+        "LoD/PD2": "0x7B3376D8"
       },
       "rvas": {
-        "LoD/PD2": "0x7717"
+        "LoD/PD2": "0x76D8"
       },
       "sizes": {
         "LoD/PD2": 63
@@ -8698,11 +9492,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ae5a7295f41b2cc6d381601031fd744e",
         "PRO": "2ff469b73c286f3db22a9c22dd5b4126"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "23cf53ccba938ee171a7985d0643662b"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "PD2_EXT_ADDR_7B337717": {
+      "addresses": {
+        "LoD/PD2": "0x7B337717"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7717"
+      },
+      "sizes": {
+        "LoD/PD2": 63
+      },
+      "name": "___acrt_FlsGetValue@4",
+      "signature": "undefined ___acrt_FlsGetValue@4(DWORD param_1)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n ___acrt_FlsGetValue@4\n\nLibraries: Visual Studio 2017 Release, Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:23cf53ccba938ee171a7985d0643662b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "23cf53ccba938ee171a7985d0643662b",
+        "CFG": "ae5a7295f41b2cc6d381601031fd744e",
+        "PRO": "488ff113ab3fa8a54590dcfa0600e752"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "23cf53ccba938ee171a7985d0643662b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8733,11 +9562,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b41b669e2a92a6b4b08274310bd54407",
         "PRO": "0f3e15b8f7082ab8081d4c054f1577ed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a6b920955629fe293acf22149f429a20"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8768,11 +9597,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b0b6c8a5de38261b0976fdc3569fd12f",
         "PRO": "42eba447fef782713ed0f64a0a4c86c1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6f93d754e044efa070526b303204bf07"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8803,11 +9632,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d69bc82e329d76c21526cdfbd9e8cc3d",
         "PRO": "3f2cddfae12cd701d8e538eadbeb702a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f096e2572c6a1c02c79779c4dda7c78"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -8838,11 +9667,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6c3b0aa07951c5e00ecf5c0f67c56cb3",
         "PRO": "aa80c99e869e1dc41cc243703ff4d118"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "de454e6d09883e71084bfc6752b21a8c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8873,11 +9702,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3c82f776bc14fd149747b0369faec340",
         "PRO": "e6531ca509cc44dfb04d4c4209be523c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "10dc882307c46086e1e49866197b18da"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8908,11 +9737,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "76ee64efd521ccdda93299f40f5aa2f2",
         "PRO": "45f86cbaf3950584cd384c577adc4335"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2dcb775632664051b0ebbd14e3616bba"
       }
     },
     "PD2_EXT_MNE_aec8926cff9c": {
@@ -8940,11 +9769,43 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "9ea393fd83fdfd9c93235cc3cdfd8fc4",
         "PRO": "757710600ba131c8d7ea7de642bd9a04"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aec8926cff9c96a2b57b5f95d180efe9"
+      }
+    },
+    "PD2_EXT_ADDR_7B337A93": {
+      "addresses": {
+        "LoD/PD2": "0x7B337A93"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7A93"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockHeapResource",
+      "signature": "void UnlockHeapResource(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks ACRT heap resource #7\n\nThis is a thin wrapper function that calls the ACRT unlock function with a\nhardcoded resource ID of 7. Resource 7 is a standard C Runtime heap lock.\n\nAlgorithm:\n1. Push resource ID 0x7 onto the stack\n2. Call ___acrt_unlock() to release the lock\n3. Pop ECX (stdcall cleanup)\n4. Return to caller\n\nReturns:\n  void - No return value\n\nSpecial Cases:\n  - Resource ID 7 is hardcoded; this function cannot unlock other resources\n  - Uses __stdcall convention; caller is responsible for stack cleanup\n  - Part of the MSVCRT initialization/cleanup sequence",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "6044e0714e504ac28868e17c2f2e1d24"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "PD2_EXT_MNE_7e6060d94cc1": {
@@ -8972,11 +9833,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f8e3ba3746e9ae51df413c84a6a6840c",
         "PRO": "0c37a23b658b1275e85eed4b47fb0986"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7e6060d94cc1865fed2b781757f3faea"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9007,14 +9868,49 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "87293770fff7dd02aae145b197058be3",
         "PRO": "1713d889f91ad517da683793ec045891"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5e5f475b09cf01829b02de9f878c2671"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "PD2_EXT_ADDR_7B337B61": {
+      "addresses": {
+        "LoD/PD2": "0x7B337B61"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7B61"
+      },
+      "sizes": {
+        "LoD/PD2": 15
+      },
+      "name": "SetGlobalConfigValue",
+      "signature": "void SetGlobalConfigValue(uint configValue)",
+      "calling_convention": "__cdecl",
+      "comment": "Stores a configuration value into a global variable for application-wide access.\n\nAlgorithm:\n1. Load the configValue parameter from [EBP+0x8] into EAX\n2. Store the value to global location 0x7b3462d4\n3. Restore stack frame and return to caller\n\nParameters:\n- configValue (uint): Configuration or state value to persist globally\n\nReturns:\n- void: No return value\n\nSpecial Cases:\n- The target global at 0x7b3462d4 is shared across all modules and retains its value until overwritten\n- Called during application initialization or when configuration changes occur\n- No validation of configValue parameter; caller is responsible for providing valid configuration values",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:4f35c0d25ee4bb55f411e4f6edc16738",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4f35c0d25ee4bb55f411e4f6edc16738",
+        "CFG": null,
+        "PRO": "b1d9e21e5e170503f12cec94d8e2a3fa"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f35c0d25ee4bb55f411e4f6edc16738"
+      },
       "param_counts": {
-        "LoD/PD2": 2
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_f330b0bce0c7": {
@@ -9042,11 +9938,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2bea3eb19dd06b49df098eed6ded289c",
         "PRO": "559e8fc71afbc3111a1f2151af05c307"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f330b0bce0c78b61732e03164daf7704"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9077,11 +9973,43 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "c55e7e48b878c959a4aa64912380aa2d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe9dac67a004cbab62879dff3a8d806e"
+      }
+    },
+    "PD2_EXT_ADDR_7B337BEA": {
+      "addresses": {
+        "LoD/PD2": "0x7B337BEA"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7BEA"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockCriticalSection",
+      "signature": "void UnlockCriticalSection(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Wrapper function that unlocks a MSVC CRT critical section/mutex. This is a thin wrapper around the ACRT unlock function, used for synchronization control in the runtime.\n\nAlgorithm:\n1. Push parameter 0 onto stack (mutex/lock identifier)\n2. Call ___acrt_unlock to release the critical section\n3. Pop return address into ECX (callee cleanup)\n4. Return to caller\n\nReturns:\nvoid - No return value; this function is called for its side effect of unlocking a synchronization object.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "11ce18e92b814c7b13f80317fb60dc32"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "PD2_EXT_MNE_727fd3fa2b90": {
@@ -9109,14 +10037,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "3066451f39292d3f91255ffec5a3cb74"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "727fd3fa2b90fa98bd1b4af4ab0b7793"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "PD2_EXT_ADDR_7B337C4F": {
+      "addresses": {
+        "LoD/PD2": "0x7B337C4F"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7C4F"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "UnlockCRTLock",
+      "signature": "void UnlockCRTLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks a CRT (C Runtime) lock/mutex object via exception handler context.\n\nAlgorithm:\n1. Load lock object pointer from caller's stack frame (EBP + 0x10)\n2. Dereference pointer to get actual lock object\n3. Call CRT unlock function to release the lock\n4. Return to caller\n\nParameters:\n(Implicit) Lock pointer location in caller's stack frame at [EBP + 0x10]\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nThis function is typically called as part of SEH (Structured Exception Handling)\ncleanup to ensure locks are released even when exceptions occur. The lock pointer\nis passed implicitly through the stack frame, not as a formal parameter.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "520f0620da3134a5b5dc624b68c33f7b"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "PD2_EXT_MNE_41600ae30682": {
@@ -9144,11 +10104,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d0ad0d5fe9cf52186bcd9f260a9eebde",
         "PRO": "db705cacc0ade8e647ef6cb3d3a024ae"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "41600ae306827ebc303914ec10618e02"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9179,11 +10139,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "9f0e6dcc6217912767c0e6d0aa226117",
         "PRO": "ac3f33e019a85cb680792286194a9fdb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b2491f66c9f7fa25e9bd70135d2ddcaf"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9191,10 +10151,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_cb0244e24146": {
       "addresses": {
-        "LoD/PD2": "0x7B338627"
+        "LoD/PD2": "0x7B337CC5"
       },
       "rvas": {
-        "LoD/PD2": "0x8627"
+        "LoD/PD2": "0x7CC5"
       },
       "sizes": {
         "LoD/PD2": 39
@@ -9214,11 +10174,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "5c457dc77c464246e4a4bb54c9ef870c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cb0244e2414688808ad59380d274f95c"
       }
     },
     "PD2_EXT_MNE_9ab6007fcb52": {
@@ -9246,11 +10206,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "86e7344bc9014e3a3d99ccee6d7caf6b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9ab6007fcb5231b0e844fe1836ec991a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9281,11 +10241,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "9003fe44325d89af3b4644c928ee3f1e",
         "PRO": "62b6e0c5841185cda0420c2a697e7c0b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 51
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6f8cbf4b368252733b601f9c8584317f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9316,11 +10276,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "31a1b9bb32221aaf75bc1a6e9cedc57f",
         "PRO": "7b74e7807e741e695d23a795321ef45e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0e4dc8777cb1c5b4c0810d7e56f371bc"
       }
     },
     "PD2_EXT_MNE_6adb83dee884": {
@@ -9348,11 +10308,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "a96ffb9e36e754a2e6bc26016824038a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6adb83dee884c52831dea2322f82176e"
+      }
+    },
+    "PD2_EXT_ADDR_7B337F19": {
+      "addresses": {
+        "LoD/PD2": "0x7B337F19"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7F19"
+      },
+      "sizes": {
+        "LoD/PD2": 15
+      },
+      "name": "SetGlobalValue",
+      "signature": "void SetGlobalValue(uint value)",
+      "calling_convention": "__cdecl",
+      "comment": "Stores a value in a global variable for later retrieval.\n\nAlgorithm:\n1. Load the input parameter from stack (EBP + 0x8)\n2. Store the value into global variable at 0x7b3462e8\n3. Return to caller\n\nParameters:\n- value: The unsigned integer value to store globally\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Global variable location: 0x7b3462e8 (g_GlobalValue)\n- Standard __cdecl calling convention with stack cleanup by caller\n- MOV EDI,EDI prologue allows hot-patching without disrupting stack alignment\n\nStructure Layout:\nN/A - Simple setter function with no structure access",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:4f35c0d25ee4bb55f411e4f6edc16738",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4f35c0d25ee4bb55f411e4f6edc16738",
+        "CFG": null,
+        "PRO": "e4416037b1e4c3897b23fd3b8efdbe23"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f35c0d25ee4bb55f411e4f6edc16738"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_f75d59011e64": {
@@ -9380,11 +10375,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "cd20c04c14c0a652449ef1b40a9b39c3",
         "PRO": "fc5797220e8dec6c9717c65b4c99834c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f75d59011e64aefb4849e5842be6f552"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9415,14 +10410,49 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "833dd2b2958695689b3c401989f44f23",
         "PRO": "f3d346b9944f8af18760612d3d8e5917"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9bb8b5cc6d8707ea1c0835cf6c7deec2"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "PD2_EXT_ADDR_7B337FDE": {
+      "addresses": {
+        "LoD/PD2": "0x7B337FDE"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7FDE"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "UnlockFileLambda",
+      "signature": "void UnlockFileLambda(FILE * * ppFile)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks a file resource by extracting FILE pointer and invoking unlock operation.\n\nAlgorithm:\n1. Load FILE** pointer from parameter at EBP+0x10\n2. Dereference to get FILE* pointer\n3. Push FILE* pointer onto stack\n4. Call __unlock_file to release file lock\n5. Pop return address and return to caller\n\nParameters:\nppFile - Pointer to FILE* pointer that will be passed to __unlock_file\n\nReturns:\nvoid\n\nSpecial Cases:\n- This is a thin wrapper/lambda adaptor for file unlocking\n- Used in RAII-style cleanup patterns from C++ standard library\n- __unlock_file performs actual file lock release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "43ad0d9a3d2d6e43f674fce33f72bd68"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      },
       "param_counts": {
-        "LoD/PD2": 4
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_eca078c0e6a7": {
@@ -9450,14 +10480,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3b8167c3b593e05f63f64d35e9f1d6f2",
         "PRO": "bd5544af69d1b6b439c18aa8694ae42b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eca078c0e6a72a986acdc9537de0692a"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "PD2_EXT_ADDR_7B33808A": {
+      "addresses": {
+        "LoD/PD2": "0x7B33808A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x808A"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "UnlockCriticalSectionLambda",
+      "signature": "void UnlockCriticalSectionLambda(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Lambda function that unlocks a captured ACRT critical section.\\n\\nThis is a wrapper generated from a lambda that serves as a destructor or cleanup function for scope-based critical section management. When the lambda goes out of scope, it automatically unlocks the captured critical section object.\\n\\nAlgorithm:\\n1. Load the captured frame pointer from EBP+0x10\\n2. Dereference the pointer to get the critical section object address\\n3. Call ___acrt_unlock() to unlock the critical section\\n4. Return to caller\\n\\nParameters:\\n  [EBP+0x10] - Pointer to captured critical section object pointer\\n\\nReturns:\\n  void\\n\\nSpecial Cases:\\n  - This function assumes the critical section object is valid and exists\\n  - Used as part of C++ scope-based locking patterns\\n  - The captured pointer is stored at a fixed offset by the lambda capture mechanism",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "a85c8744ae4c2822038e7eddf0f037f1"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 4
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "PD2_EXT_MNE_a1c5a63dfb48": {
@@ -9485,11 +10547,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "9f028b99b33abba3895bcfdb69b70d33",
         "PRO": "4d339f02dfe602ad1e566341c635d59f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1c5a63dfb48e91ed1fd252c2e990055"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9520,11 +10582,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2dd4ce25af21102b5e50a4036c05572b",
         "PRO": "81069c540bf2ac05f49af96ea5e7892a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cb8396fe8ff3de5d634fa060e04a2215"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9555,11 +10617,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "754bfc5d47177c4cbdd43b336248c7ba",
         "PRO": "7907afc5f1792147a7315f8e9572b972"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a23cedad3f20e966e19a0555066ea7ce"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9590,11 +10652,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "7d4114318ba7986221a23514c4eadd98",
         "PRO": "aa5e6dde5f03a1f420dde8864da4c1fd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ddd74fa79e2850965c61334573e992a2"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9625,22 +10687,54 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d449b8a93132d675d922372d839a516a",
         "PRO": "bf47dec8ea54a09a2b9ca3ddc801b3ce"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e292cc027763aa464deac76707c77b1f"
       },
       "param_counts": {
         "LoD/PD2": 1
       }
     },
-    "PD2_EXT_MNE_908f1f8c30b4": {
+    "PD2_EXT_ADDR_7B338205": {
       "addresses": {
-        "LoD/PD2": "0x7B338336"
+        "LoD/PD2": "0x7B338205"
       },
       "rvas": {
-        "LoD/PD2": "0x8336"
+        "LoD/PD2": "0x8205"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "__flushall",
+      "signature": "int __flushall(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __flushall\n\nLibrary: Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "fb2f0c4e6e4e5fa4de75fe3f4b153de0"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "PD2_EXT_MNE_908f1f8c30b4": {
+      "addresses": {
+        "LoD/PD2": "0x7B338322"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8322"
       },
       "sizes": {
         "LoD/PD2": 20
@@ -9660,11 +10754,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "d0d28182912a979caae088ab67d6b0c4"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "908f1f8c30b4f00a21e46093676dbdd5"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "PD2_EXT_ADDR_7B338336": {
+      "addresses": {
+        "LoD/PD2": "0x7B338336"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8336"
+      },
+      "sizes": {
+        "LoD/PD2": 20
+      },
+      "name": "__unlock_file",
+      "signature": "void __unlock_file(FILE * _File)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __unlock_file\n\nLibraries: Visual Studio 2015 Release, Visual Studio 2017 Release, Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:908f1f8c30b4f00a21e46093676dbdd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "908f1f8c30b4f00a21e46093676dbdd5",
+        "CFG": null,
+        "PRO": "1cea65fb50b411ee744faa8b088df0e5"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "908f1f8c30b4f00a21e46093676dbdd5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9695,11 +10824,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f5b3808224712f53ffb598587c395b6c",
         "PRO": "2471b09939d1d138672cd8b3f92f6d64"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7801dc6c9001232ed9ef537819640b6d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9707,10 +10836,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_ffdd82626896": {
       "addresses": {
-        "LoD/PD2": "0x7B3383F6"
+        "LoD/PD2": "0x7B338398"
       },
       "rvas": {
-        "LoD/PD2": "0x83F6"
+        "LoD/PD2": "0x8398"
       },
       "sizes": {
         "LoD/PD2": 45
@@ -9730,11 +10859,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "13ac807217091f4044d66f8ff2174dac",
         "PRO": "40f58c937d26b9dd9cdbd04f25812088"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ffdd82626896f5ba90f554ad3e2b4996"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9742,10 +10871,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_6dcf03ea4ff7": {
       "addresses": {
-        "LoD/PD2": "0x7B338423"
+        "LoD/PD2": "0x7B3383C5"
       },
       "rvas": {
-        "LoD/PD2": "0x8423"
+        "LoD/PD2": "0x83C5"
       },
       "sizes": {
         "LoD/PD2": 49
@@ -9765,11 +10894,81 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6c3b0aa07951c5e00ecf5c0f67c56cb3",
         "PRO": "555b5a433007e980c29450781bec03c2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6dcf03ea4ff7c06b9832c5b1ee6df008"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "PD2_EXT_ADDR_7B3383F6": {
+      "addresses": {
+        "LoD/PD2": "0x7B3383F6"
+      },
+      "rvas": {
+        "LoD/PD2": "0x83F6"
+      },
+      "sizes": {
+        "LoD/PD2": 45
+      },
+      "name": "UpdateLocaleIfNeeded",
+      "signature": "void UpdateLocaleIfNeeded(int * pContextState, int * pLocaleCode)",
+      "calling_convention": "__cdecl",
+      "comment": "Updates locale code conditionally if not already initialized.\n\nAlgorithm:\n1. Load current locale code from pLocaleCode pointer\n2. Compare with sentinel value DAT_7b345fc0\n3. If equal (already initialized), skip to exit\n4. If not equal, load context state flag mask from DAT_7b345730\n5. Test the flag at offset +0x350 in pContextState against the mask\n6. If any flag bits are set, skip to exit\n7. Both conditions met - call FUN_7b336e80() to generate locale code\n8. Store generated code at *pLocaleCode\n9. Return to caller\n\nParameters:\npContextState - int*: Pointer to context/state structure; offset +0x350 contains flags indicating initialization state\npLocaleCode - int*: Output pointer; receives generated locale code if conditions are met\n\nReturns:\nvoid: No return value; modifies pLocaleCode in place if initialization occurs\n\nSpecial Cases:\nDAT_7b345fc0: Sentinel value indicating already-initialized locale code (0 typically)\nDAT_7b345730: Bit mask for flag testing; only generates code if corresponding bits in pContextState+0x350 are clear\nConditional generation: Locale code only generated if both sentinel check AND flag test pass; avoids redundant initialization",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:ffdd82626896f5ba90f554ad3e2b4996",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ffdd82626896f5ba90f554ad3e2b4996",
+        "CFG": "c2e9ee5ed820ae707521004508ba08a5",
+        "PRO": "91fec2728ce470ee351b63dd78150bd9"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ffdd82626896f5ba90f554ad3e2b4996"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "PD2_EXT_ADDR_7B338423": {
+      "addresses": {
+        "LoD/PD2": "0x7B338423"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8423"
+      },
+      "sizes": {
+        "LoD/PD2": 49
+      },
+      "name": "update_locale_multibyte_data",
+      "signature": "void update_locale_multibyte_data(int pThreadData, int * pMbyteDataPtr, int locale)",
+      "calling_convention": "__cdecl",
+      "comment": "Update locale-specific multibyte character data.\n\nConditionally initializes multibyte character data based on locale flags. If the pointer at pMbyteDataPtr does not match the cached value at the locale table, and the thread context does not have the multibyte flag set, it calls the initialization function.\n\nAlgorithm:\n1. Load thread context pointer from pThreadData (EBP+0x8)\n2. Load multibyte data pointer from pMbyteDataPtr (EBP+0xc)\n3. Load locale index from locale (EBP+0x10)\n4. Read current value at pMbyteDataPtr\n5. Compare against cached table value at DAT_7b345fc0[locale]\n6. If values match, skip to exit_function\n7. Check if thread context has multibyte flag set (offset 0x350 & DAT_7b345730)\n8. If flag is set, skip to exit_function\n9. Call FUN_7b336e80 to initialize multibyte data\n10. Store return value into pMbyteDataPtr\n11. Return from function\n\nParameters:\n- pThreadData (int): Pointer to thread-specific context structure\n- pMbyteDataPtr (int *): Pointer to multibyte data value storage\n- locale (int): Locale index for accessing DAT_7b345fc0 table\n\nReturns:\n- void: No return value\n\nSpecial Cases:\n- Magic constant at offset 0x350: Thread context flag field\n- Magic constant DAT_7b345730: Multibyte initialization flag mask\n- Magic table DAT_7b345fc0: Locale-indexed cache of multibyte data values\n- Short-circuits if data already initialized or flag already set",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:6dcf03ea4ff7c06b9832c5b1ee6df008",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6dcf03ea4ff7c06b9832c5b1ee6df008",
+        "CFG": "6c3b0aa07951c5e00ecf5c0f67c56cb3",
+        "PRO": "555b5a433007e980c29450781bec03c2"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6dcf03ea4ff7c06b9832c5b1ee6df008"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -9800,11 +10999,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "4162e55f3fabcfabaf019088b3d5e690",
         "PRO": "51dd88d541a03186ed77cd2f8edbca77"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 26
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ee4a05548ebe6e554150ed4f0180f2f9"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -9835,11 +11034,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "90c4f17418cec0d76ed106d2d34ca67f",
         "PRO": "b3c817296f428fd11908a53af1198d27"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c680ced5c53f9df2eb79ca251719af08"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9870,14 +11069,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "473d086ee94878b8f6ec467e2de64aec",
         "PRO": "88544d08e1d768d05b76a3f9c6b77ba9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4179e8ffeb5b9222b592fbc9ea164c44"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "PD2_EXT_ADDR_7B338610": {
+      "addresses": {
+        "LoD/PD2": "0x7B338610"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8610"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "ReleaseLockCallback",
+      "signature": "void ReleaseLockCallback(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Lock release callback for RAII lock cleanup.\n\nThis function implements a lock release operation for C++ runtime mutual exclusion handling. It is used as a callback or destructor to release locks in RAII patterns.\n\nAlgorithm:\n1. Load the lock object pointer from EBP+0x10 (implicit parameter from calling context)\n2. Dereference the pointer to obtain the actual lock handle\n3. Call ___acrt_unlock to release the lock\n4. Return to caller\n\nParameters:\n- Implicit EBP+0x10: Pointer to lock object pointer (void**)\n\nReturns:\n- void (no return value)\n\nSpecial Cases:\n- This is a wrapper function called in RAII context where lock cleanup is needed\n- The lock handle is stored at EBP+0x10, suggesting this is part of a stack frame setup\n- Uses __stdcall convention with callee cleanup (RET instruction)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "751f1844545d5277e15060edb2a5011a"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 4
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "PD2_EXT_MNE_4a14b880453c": {
@@ -9905,11 +11136,43 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "64553968d2f848cf79f2d8a81f5897e9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4a14b880453c1b7e037c61c3c0341b07"
+      }
+    },
+    "PD2_EXT_ADDR_7B338627": {
+      "addresses": {
+        "LoD/PD2": "0x7B338627"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8627"
+      },
+      "sizes": {
+        "LoD/PD2": 39
+      },
+      "name": "___acrt_uninitialize_locale",
+      "signature": "undefined ___acrt_uninitialize_locale(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n ___acrt_uninitialize_locale\n\nLibrary: Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:cb0244e2414688808ad59380d274f95c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cb0244e2414688808ad59380d274f95c",
+        "CFG": null,
+        "PRO": "d64bb0c80456fb3f5529e5892dc4be92"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cb0244e2414688808ad59380d274f95c"
       }
     },
     "PD2_EXT_MNE_6b7eabbe24cf": {
@@ -9937,11 +11200,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "64bc209334ca106024506b670c5aaf9d",
         "PRO": "74afe2a88853d226c379f5577bd6f138"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6b7eabbe24cfa72b3fe335d59e14ee79"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9972,11 +11235,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "36349bcdbabbe0436404e326c55bc937",
         "PRO": "9542c5fa2e4d3fb47cb21effdf018dea"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e4d177e5ae596869aa69c1d70df6f43a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10007,11 +11270,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e6f5aaef1039a61daa103ba7f60faedc",
         "PRO": "979d8d2514585f637d4defc620406c5d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "87f44fc8e938eab6507761382adce7aa"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10042,11 +11305,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b299961a4ff9924d9c5832fc43b80e26",
         "PRO": "a321254b721a4430611b95f87ab6414b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b8190ec680c120458d53398875622c7d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10077,11 +11340,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e6f5aaef1039a61daa103ba7f60faedc",
         "PRO": "979d8d2514585f637d4defc620406c5d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1621b59440b528d3aecaa7c5ed932877"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10112,11 +11375,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "368a49afee490612d01c74a4d00d7e24",
         "PRO": "2920fd3dc683e93c0deb2d7fd3714684"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a8fcae6302121688ab84f97b546a9ba8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10147,11 +11410,75 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6fb487bc229d0bcd2f870f6ee59e6d22",
         "PRO": "6421c56eb28b62154fae8724bb546ef4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a76022919c989d345443bfc07d791316"
+      }
+    },
+    "PD2_EXT_ADDR_7B338977": {
+      "addresses": {
+        "LoD/PD2": "0x7B338977"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8977"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockThreadLocaleSynchronization",
+      "signature": "void UnlockThreadLocaleSynchronization(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks thread locale synchronization lock during locale data updates.\n\nWrapper function called during thread locale data initialization to release the\nglobal thread locale synchronization mutex (ID 4). This ensures thread-safe\naccess to locale data structures during runtime initialization.\n\nAlgorithm:\n1. Push synchronization lock ID (4) onto stack\n2. Call ___acrt_unlock() to release the mutex\n3. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Lock ID 4 is reserved for thread locale data synchronization\n- Called from ___acrt_update_thread_locale_data during locale initialization\n- Part of C Runtime's thread-safe locale handling mechanism",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "7255230eace74b7e57149919206c1481"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "PD2_EXT_ADDR_7B338980": {
+      "addresses": {
+        "LoD/PD2": "0x7B338980"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8980"
+      },
+      "sizes": {
+        "LoD/PD2": 18
+      },
+      "name": "RestoreExceptionContext",
+      "signature": "void RestoreExceptionContext(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Restores thread exception handling context after locale update\n\nAlgorithm:\n1. Preserve ESI register by moving to EAX\n2. Load saved exception list pointer from stack frame (EBP-0x10)\n3. Restore exception handler chain to FS:[0] segment register\n4. Pop callee-saved registers (ECX, EDI, ESI, EBX) in reverse order\n5. Execute LEAVE to restore EBP and ESP\n6. Return to caller\n\nParameters:\n(implicit) Stack frame contains saved exception context at EBP-0x10\n\nReturns:\nvoid (no return value)\n\nSpecial Cases:\n- Function is a nested exception handler restoration stub\n- Used during __acrt_update_thread_locale_data() to restore exception chain\n- FS:[0] stores pointer to first exception handler on SEH chain\n- Callee-saved registers must be restored in reverse LIFO order\n- Stack frame layout: saved EBP + saved registers + exception context\n\nStructure Layout:\nStack Frame Organization:\nOffset  Size  Description\n------  ----  -----------\n -0x10    4   Saved exception handler pointer\n   0x0    4   Return address\n   0x4    4   Saved EBP",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:a3be8b06a2b40480e0229ac7ae834885",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a3be8b06a2b40480e0229ac7ae834885",
+        "CFG": "b510b8ffcc7aeb8f051ca4553dc47090",
+        "PRO": "3ada8c8978f649fc965bd35cb94fda43"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a3be8b06a2b40480e0229ac7ae834885"
       }
     },
     "PD2_EXT_MNE_a8a04c013e86": {
@@ -10179,14 +11506,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "eb3b6093f922424734a78d0a744b94e3",
         "PRO": "21d68c7808343dc7255dd6bd688a9ec6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a8a04c013e86edd9bf47c2c7caff9097"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "PD2_EXT_ADDR_7B3389E8": {
+      "addresses": {
+        "LoD/PD2": "0x7B3389E8"
+      },
+      "rvas": {
+        "LoD/PD2": "0x89E8"
+      },
+      "sizes": {
+        "LoD/PD2": 7
+      },
+      "name": "QueryMemoryAllocationRetryPolicy",
+      "signature": "int QueryMemoryAllocationRetryPolicy(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves the current memory allocation failure retry policy flag.\n\nThis function is called during memory allocation failure in __malloc_base, __calloc_base, and __realloc_base to determine whether allocation should be retried. It returns the value of a global retry policy flag that indicates if the memory manager should attempt to recover from allocation failures by invoking the registered failure handler.\n\nAlgorithm:\n1. Load the global retry policy flag from DAT_7b34630c\n2. Return the flag value in EAX\n\nParameters:\n  None\n\nReturns:\n  Non-zero (int): Retry memory allocation (continue retry loop in caller)\n  Zero (int): Do not retry (allocation failure is fatal)\n\nSpecial Cases:\n  - This is a thin wrapper around a global flag used for dynamic policy control\n  - Called in loops within __malloc_base, __calloc_base, and __realloc_base\n  - The flag at 0x7b34630c controls behavior of all memory allocation retry logic",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a2b30f22446d682d5d541e4afa4dbe8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a2b30f22446d682d5d541e4afa4dbe8",
+        "CFG": null,
+        "PRO": "a5c055eeec40008ed636b6eca9009701"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 2
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a2b30f22446d682d5d541e4afa4dbe8"
       }
     },
     "PD2_EXT_MNE_ed0422b71e9e": {
@@ -10214,11 +11573,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e83c45bd92d1e38f0b92a568fd3649ca",
         "PRO": "fae0985d45287b89f294da3231b13492"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 81
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed0422b71e9e434a26516a831611a9bd"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -10249,11 +11608,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "cf4a8f374fb3eadf37d67fc1a15101d8",
         "PRO": "49164ecbad59e902ba1c24b60f1c5dbc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "076ec72b28fbb37622dad97be1d01ea4"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "PD2_EXT_ADDR_7B338F95": {
+      "addresses": {
+        "LoD/PD2": "0x7B338F95"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8F95"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "name": "CopyStringToArgumentBuffer",
+      "signature": "int CopyStringToArgumentBuffer(char * pDestinationBuffer, int nDestinationSize, char * pSourceString, int nSourceLength)",
+      "calling_convention": "__cdecl",
+      "comment": "Tail-call wrapper for bounded string copy to argument buffer.\n\nThis is a thin wrapper (thunk) that delegates to CopyStringToArgumentBuffer_impl.\nUsed during C runtime argument processing to copy strings into pre-allocated\nargument array buffers with strict size bounds checking.\n\nAlgorithm:\n1. Accepts destination buffer, size, source string, and source length\n2. Performs tail-call to actual implementation function\n3. Returns status code from called function\n\nParameters:\n- pDestinationBuffer: Pointer to output buffer for copied string\n- nDestinationSize: Maximum bytes available in destination buffer\n- pSourceString: Pointer to source string to copy (as integer offset/address)\n- nSourceLength: Length of source string to copy\n\nReturns:\n- 0 on successful copy\n- 0x22 (ERROR_INVALID_PARAMETER) if parameters invalid\n- 0x50 on buffer overflow (destination too small)\n- Other error code from underlying copy implementation\n\nSpecial Cases:\n- Function is a tail-call optimization; stack frame is minimal\n- All parameters passed via __cdecl calling convention (stack-based)\n- Return value from FUN_7b338ede indicates success/error codes per C runtime",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f97d159a7b72e6f60dfaec944aff89be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f97d159a7b72e6f60dfaec944aff89be",
+        "CFG": null,
+        "PRO": "837181325af3ddebbc6f7a01ae3d05c4"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f97d159a7b72e6f60dfaec944aff89be"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -10284,11 +11678,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fd48d6310d325d495db3e5b0dc4529ca",
         "PRO": "de907609c9ddaaea9fc64ebc489a583b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "262b55d4b1f21fd166621d0ca2135ed8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10319,11 +11713,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "c3142cea20aab0f47fbf5ade03bfd374"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "34260d5eec8139d14f8eaa440ecdab22"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10354,11 +11748,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b45158575cd2e0bfd79f64510e74643f",
         "PRO": "15650f5e63ff76e2f3a44f86a6dd7a7f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eaa05e5abea2c5ef0b83c962333d2ba7"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -10389,11 +11783,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "5d1cb893526c5dca2039877396d57c92",
         "PRO": "054b16d0716d6607fc3c4b2f51d21dde"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 34
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6c5190e4e0b3dbd861f91d05ba97d242"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -10424,11 +11818,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "8f07861f6cd1d62ebc3afdfd7666728c",
         "PRO": "a7d6e345aaf753191784d9a17e0ec5dc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f28d5c05cf0f479daa327cbc72809da8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10459,11 +11853,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d62e3b62cca807962786641373723e9a",
         "PRO": "60d5f8af96063912a733e64d9a891a6e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 42
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d683610fe37d4dbbe5012d024cbd8a01"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -10494,11 +11888,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "66b388b5bf2646eebda1fbdb1d0c48c4",
         "PRO": "3319a57c23c6e09bbde82160b0d44f47"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1a4cdc7cc16e44f870ec14fe34a7f129"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -10529,11 +11923,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "a6bf393c372acd04e8e2250d24df4a4c",
         "PRO": "e1d7aa91b5786301a2078faef33ae0ed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "821454df23359278f97d5ca0cd1ae75b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10564,11 +11958,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "cbe9ac554b36f626c7a102af34a3afe6",
         "PRO": "2a11998d866825c8108c4280503b57ab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fa7c994c784156ccfeaf3d874d33c0f8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10599,11 +11993,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b1a6965cb130b946575a112e50949cce",
         "PRO": "eefcdf0845e6a0ca9afbda70f196f160"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7e2b485dc7304f3b39b5e52f47d21fe1"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10634,11 +12028,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2bea3eb19dd06b49df098eed6ded289c",
         "PRO": "6cb037196f20475bc9b4a51d3c907db4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f9cb8bbabfde9f0d802b895666dd6def"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10669,11 +12063,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "9deb949d4a97738d074d21851bff7e3a",
         "PRO": "7fabee32f89a9727b9219ac2533f94c0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9e6717354394017443de5a44cb09f0b6"
       }
     },
     "PD2_EXT_MNE_077522c6148b": {
@@ -10701,11 +12095,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "cbafa6d7274a163cbd4737f3f5446571",
         "PRO": "0815f411a7b4f31f8743e5e3d0dc5ab9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "077522c6148b6219a33ff503efe78b61"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10736,22 +12130,54 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6818c90695212ca5c4ebb043f243585c",
         "PRO": "d48f84dc641d9bef59c561ff7392a224"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c4b813a7b21903a4ba0e3c408035d058"
       },
       "param_counts": {
         "LoD/PD2": 1
       }
     },
-    "PD2_EXT_MNE_f0eea9e7b937": {
+    "PD2_EXT_ADDR_7B339649": {
       "addresses": {
-        "LoD/PD2": "0x7B339675"
+        "LoD/PD2": "0x7B339649"
       },
       "rvas": {
-        "LoD/PD2": "0x9675"
+        "LoD/PD2": "0x9649"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockIoResource",
+      "signature": "void UnlockIoResource(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks the I/O resource used by MSVCRT low-level I/O operations.\n\nAlgorithm:\n1. Push parameter 7 (I/O resource identifier) onto stack\n2. Call ___acrt_unlock to release the I/O synchronization lock\n3. Pop return address and return to caller\n\nParameters:\n(none) - Resource ID 7 is hardcoded\n\nReturns:\n(none) - Void function, only performs lock cleanup\n\nSpecial Cases:\nResource 7 is a reserved I/O lock identifier in MSVCRT's low-level I/O subsystem.\nCalled as part of file handle initialization sequences.\nThe calling convention is __stdcall (callee cleanup via RET).",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "6a5d9cdba3e8f6ac6ebc35c4ec9e39c6"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "PD2_EXT_MNE_f0eea9e7b937": {
+      "addresses": {
+        "LoD/PD2": "0x7B339652"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9652"
       },
       "sizes": {
         "LoD/PD2": 35
@@ -10771,11 +12197,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "3db69c51af0643e138395283f40bbca9"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f0eea9e7b937909bb6d7a1715646f825"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "PD2_EXT_ADDR_7B339675": {
+      "addresses": {
+        "LoD/PD2": "0x7B339675"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9675"
+      },
+      "sizes": {
+        "LoD/PD2": 35
+      },
+      "name": "___acrt_lowio_unlock_fh",
+      "signature": "undefined ___acrt_lowio_unlock_fh(uint param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n ___acrt_lowio_unlock_fh\n\nLibraries: Visual Studio 2017 Release, Visual Studio 2019 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f0eea9e7b937909bb6d7a1715646f825",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f0eea9e7b937909bb6d7a1715646f825",
+        "CFG": null,
+        "PRO": "3db69c51af0643e138395283f40bbca9"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f0eea9e7b937909bb6d7a1715646f825"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10806,11 +12267,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2675712b39dde43e72311ab29c4f8a0a",
         "PRO": "75e9293711e84b8bf84a1ee4e045b895"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23488124f6199f67aa05d7c007a3b69"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10841,11 +12302,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "eb75f0b009e5d824741621967c5406cd",
         "PRO": "fdf5754b81e278d1bea27fe5429ff1bf"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "62faa96bf3c78f5ed0ea2c4515e6dcde"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10876,14 +12337,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "5f865b07fbd149fe0d57e8cc3d9d2f83",
         "PRO": "1861963b397e238f6af9fce1e2915da8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c14b7d9f7c2f0554fc35d4474ea0fe9d"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "PD2_EXT_ADDR_7B339829": {
+      "addresses": {
+        "LoD/PD2": "0x7B339829"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9829"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "UnlockFileHandleWrapper",
+      "signature": "void UnlockFileHandleWrapper(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Wrapper function to unlock a file handle in ACRT (Microsoft C Runtime).\\n\\nThis is a thin wrapper called at the end of file operation error handling routines,\\nspecifically within SEH (Structured Exception Handling) cleanup contexts. It extracts\\na file handle pointer from the exception handling frame and unlocks it.\\n\\nAlgorithm:\\n1. Load file handle pointer from [EBP + 0x10] (parameter in SEH frame)\\n2. Dereference pointer to obtain actual file handle value\\n3. Call ___acrt_lowio_unlock_fh to unlock the file handle\\n4. Return to caller\\n\\nReturns:\\n  None - void function used for cleanup side effects\\n\\nContext:\\n  Called from exception handlers and file operation cleanup routines to ensure\\n  proper resource cleanup before returning from error conditions.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "42315aa26ac69acf83a6f6800987978e"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 2
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
       }
     },
     "PD2_EXT_MNE_3dfb0e9c9ab5": {
@@ -10911,11 +12404,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6d11d394882ec5edb05b323d706064fc",
         "PRO": "6e311390662ab97da9c849a83d25d904"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3dfb0e9c9ab554df7dd5052a12a4b91c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10946,11 +12439,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f9f3129f80f9cc63b27c67d1cab45fc2",
         "PRO": "fd28d7ab86f6811f018bbdd967dffa8b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 56
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e2092ca8f567bc0e5dc92e91f4f5e581"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -10981,11 +12474,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "555d704848b8e783f7d263b7ca7bd009",
         "PRO": "a3295eea0a2ab011addfecbce2107696"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0458f672ddb743a082eba2e96af8397d"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11016,11 +12509,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "33da3718f9d8f76fa5ccda61a30ccbf4",
         "PRO": "b8a70642579488eb4e88d0e49b86eae3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0d05214adc30281db24720a89248d709"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11051,11 +12544,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b26838ba2a6f3f877a1ecec3c2fcd486",
         "PRO": "09ef13875dfc1023cf35bb0454005c84"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7364e85ef83d311208352b086ab149d9"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11086,11 +12579,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "4bb4d8fef12feef6fa1c849c52a1f060",
         "PRO": "e7cedba94fecd8716b2f05ef5e7d52db"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5b4da472478d9d34756d0d10b38c9571"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11121,11 +12614,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "43bfa7755b199d59be8d58047587b019",
         "PRO": "8c6de1899bffff68116638f2f872da62"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd0aff424184376b639a11c5a2e7ee81"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11156,11 +12649,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d5923c4652142fa570aa0914fbd8a2bf",
         "PRO": "21eb19d58b125699b867d7addc3cb2fc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b22f314a67ff2c7a74006f79f81bfcad"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -11168,10 +12661,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_d4c2d26a88b1": {
       "addresses": {
-        "LoD/PD2": "0x7B33AA89"
+        "LoD/PD2": "0x7B33A15D"
       },
       "rvas": {
-        "LoD/PD2": "0xAA89"
+        "LoD/PD2": "0xA15D"
       },
       "sizes": {
         "LoD/PD2": 8
@@ -11191,14 +12684,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "af3e5e91e2eb128326058022bc390896"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
     "PD2_EXT_MNE_f047f0bb5673": {
@@ -11226,11 +12716,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "09bda741bd942a51b0c077e66e966a02",
         "PRO": "66c257c1d088fafc10604375e081a8e2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 41
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f047f0bb5673f1eede133e21a6263a31"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -11261,11 +12751,43 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e69b5b2d2ce6c635a72554fac4fc9756",
         "PRO": "fe22072246588c6f297e624a6c709720"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1490225f6e61e23460b0ad7b0812ef57"
+      }
+    },
+    "PD2_EXT_ADDR_7B33A423": {
+      "addresses": {
+        "LoD/PD2": "0x7B33A423"
+      },
+      "rvas": {
+        "LoD/PD2": "0xA423"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockCriticalSection",
+      "signature": "void UnlockCriticalSection(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks a critical section lock by lock ID.\n\nAlgorithm:\n1. Calls ___acrt_unlock with lock ID 8 to release the acquired lock\n2. Returns control to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Lock ID 8 is a global critical section used for thread-safe file stream operations\n- This function is always paired with ___acrt_lock(8) calls elsewhere\n- Part of ACRT (Active C Runtime) thread synchronization mechanism\n- Used to ensure atomic operations on shared file stream resources",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "560a19e133b10c7107eb8cf42819822b"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "PD2_EXT_MNE_baa4962c289a": {
@@ -11293,11 +12815,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b724ed9bc22393fb1bfd3fcd83003d6f",
         "PRO": "3f49546fada9ba9407efe3b4e8ef46a9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "baa4962c289ab932127049f807079e1f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11328,11 +12850,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "1d91ef73be473d07b0518e7381470fa8",
         "PRO": "3eab0234f553e924d98befe92a8c6699"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "733b5221be189bbc3ce5891090507b61"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11363,11 +12885,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "bbe0f29261f07bd5b74df2e266486998"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bbecb901a0b363c16291d4ef44c843bd"
       }
     },
     "PD2_EXT_MNE_586845a95c67": {
@@ -11395,11 +12917,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "55d660ebbef99c0baa319e016760b8fc",
         "PRO": "0c4b0fe30a3f0f80bc2f61834056d4ce"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "586845a95c67a6dc9239748fcb06a007"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11430,11 +12952,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "dfed70108de23c8b59558196fdc2451c",
         "PRO": "ebfbd5af60cc27dd9e89f91978a0c470"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9a26155e544e15b60c49b8c9af675241"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -11465,11 +12987,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ff9f2f7d6f9bf1f2aa49feb750e2ec89",
         "PRO": "925a32b3c4a5b66511c6a5e9d39a78cf"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4eca1d0a9f0f4fe18f12de6be0694a12"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -11500,11 +13022,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "888577915c4dc51aaea3302f4efccbc2",
         "PRO": "55ede1086407de99360b3c12d1dbb321"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "31d289fb57796ea89416395a3bf93a68"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11535,11 +13057,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "dbcfe5b3a1e464acc6b646fb5b28c75c",
         "PRO": "1b0cb2f63204ea3d31b873a87a091195"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "222a3af066895a477ac4476ed1017961"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11570,11 +13092,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "a9c729cc86b83c7c1ad73572a77516e6",
         "PRO": "020018724dd2b5c12eaf011e6cd5ba7f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4efc62c9beb3599abeb4022d5797549f"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11605,11 +13127,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d03648ef17280c97be1611d9fd0a9b94",
         "PRO": "5f4b91e6f93447553a1b2c14d8040bd5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dbf581d5fd5090508da74747dbf8e9fd"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11640,11 +13162,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "aed4449cad9c680425c75a8429257195",
         "PRO": "f42e94f181cff3d3f5c47b1600037184"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4757db11b7b2343f9aedab64cb45c899"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11675,14 +13197,46 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "9cbb600873eef61c86824aadedc3c874",
         "PRO": "82bb402c3523e58c3146c826a2d9775e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bdb526ee05fd688d935b4c5ad10b5ed1"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "PD2_EXT_ADDR_7B33A921": {
+      "addresses": {
+        "LoD/PD2": "0x7B33A921"
+      },
+      "rvas": {
+        "LoD/PD2": "0xA921"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetGlobalFlag",
+      "signature": "uint GetGlobalFlag(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves the current value of a global flag variable.\n\nAlgorithm:\n1. Load the value stored at global address 0x7b346318 into EAX\n2. Return the value via standard return convention (RET)\n\nReturns:\n- EAX: The 32-bit value stored at the global flag location (0x7b346318)\n\nPurpose:\nSimple accessor function that reads and returns a global state value. The caller at\n0x7b3396d1 checks if the returned value equals 1 to make conditional decisions in\nentity processing logic. This pattern suggests a feature flag or enabled state tracker.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "ef4324ab1057700dcc28706fc25e317d"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 3
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "PD2_EXT_MNE_41cf85657f6a": {
@@ -11710,11 +13264,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ef353e1a6ec60e54c1a32cd883661c5e",
         "PRO": "bc56a2332f1a1788793ab117aa94b8c0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "41cf85657f6ad5ff45b17d91010f2d46"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -11745,11 +13299,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "8f156be76a0cfa5c819cccc23fd13a4c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b543930f88020295eb72bcda2c5f9e6c"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -11780,11 +13334,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "37df6770e2b24dae8705aa111e96e769",
         "PRO": "37f81d2fdb0ada64f8e090483157c76b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f6db893b09d1f61a0654fae64be2e22d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11815,14 +13369,49 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "46cb4e36e66ba115acf50aa1bbde514c",
         "PRO": "386f69e9947dc885fb04145428566c41"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1168db019ea996650d019e8d60e2fdc8"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "PD2_EXT_ADDR_7B33AA89": {
+      "addresses": {
+        "LoD/PD2": "0x7B33AA89"
+      },
+      "rvas": {
+        "LoD/PD2": "0xAA89"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "name": "UnlockFileStream",
+      "signature": "void UnlockFileStream(FILE * pFile)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks a file stream after file operations complete.\n\nThis function is called after file operations are finished to release the file lock acquired by __lock_file. It's part of the C runtime file I/O synchronization mechanism.\n\nAlgorithm:\n1. Call __unlock_file with the file stream pointer to release the lock\n2. Return to caller\n\nParameters:\npFile (FILE*): Pointer to the file stream structure to be unlocked. Passed implicitly in ESI register before call.\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Assumes pFile is a valid FILE* previously locked by __lock_file\n- Used in exception handlers to ensure locks are released even on error paths\n- Called via __stdcall convention with implicit register parameter",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": null,
+        "PRO": "696906b6a5930b4718f79105b67b4aec"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
+      },
       "param_counts": {
-        "LoD/PD2": 2
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_69a9b2297933": {
@@ -11850,11 +13439,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "89eea4ac70333d826a07750e8a7558be",
         "PRO": "add27b46c972357ecc2eab69fbe4c813"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "69a9b229793357f2d47b7422434d40ed"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11885,11 +13474,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "a7e887550905e3c132af559bdf387546"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "467b6ea4a5375e2d9f73e8fcca653f19"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11920,11 +13509,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d94ba0b9810e28a747c6a467ecdc38f3",
         "PRO": "7ce7da908aaf3da0781772ca7943b91e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e89f139b7ebc271ec35e77bf5175b40a"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11955,11 +13544,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "3705aef8abbc0be4dcfeccd2db20b36c",
         "PRO": "a00537081ca5d1335738e3c32b12e950"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "064573f93882ecc3f39943c44d3f0342"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11990,11 +13579,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "0fee459a58cbbbd282d434809b423815",
         "PRO": "f6ab970d1f9e82e4be4744d172d400fe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "444f103d5b146a92092cf2739042d05b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -12025,11 +13614,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "28d68ef41469e49f60578a0ac553bdfd",
         "PRO": "fd86561558d5a24a6d3a0659bfde0e12"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8a2ad80a4d28ebf029e0ace415f49bf9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -12060,11 +13649,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "60034b6e3b6f6a6854152e28e68604b8",
         "PRO": "0694a44bb111098cc6f44e25949f6c99"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "66ef614f2705cf804fa2950e8597c1e4"
       }
     },
     "PD2_EXT_MNE_980a0f88dd0c": {
@@ -12092,11 +13681,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "4b70a51b80e24e592c7ca2ce41b033bb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "980a0f88dd0cd4580fbd17a07b71b77c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12127,11 +13716,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "aca61c2a7df503782d138bc744b89053"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "36781661040e383f18f94912bb7ad0f9"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12162,11 +13751,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "7a7795225bd0a578ca0a42264a39c8cd",
         "PRO": "7c8c586677979b2b5a2af54c166238f1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 47
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9061698c2f2d7d643f020eebe10937a2"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -12197,11 +13786,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "9d6ee55adf71a7a6ea890de91748a26f",
         "PRO": "416c862cdb184741475b23605c2c2d89"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ecf4fe5a7e473ceb70f30e35ac316045"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12232,11 +13821,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "c8ebdd6e1aaa15ad5ec76e15cc2d8115"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d111cac37e95e6477bce95a18c0a4d2e"
       }
     },
     "PD2_EXT_MNE_fc814c436a02": {
@@ -12264,11 +13853,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ebedb8faf55908534e596ba5d47d40c7",
         "PRO": "c7af47baa72fbc11cb12d41a7d57bd1f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fc814c436a025d40b299a1745b8891d7"
       }
     },
     "PD2_EXT_MNE_58f0efeda523": {
@@ -12296,11 +13885,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "07cb2342909a04dfb4401d2e279eca04",
         "PRO": "fd3e17c01e554b790565934599afd4c1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "58f0efeda5232bc3e0a46b677755366d"
       }
     },
     "PD2_EXT_MNE_6299b2977dd3": {
@@ -12328,11 +13917,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "410ab348637d7ec98eb50c4e351a2bae",
         "PRO": "f59c1dbca61f1e1f2cf65be3624c1e4b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6299b2977dd3d57cb3bf14d315461e0e"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12363,14 +13952,49 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b5eb684e653ac2568d66b145edb2f76b",
         "PRO": "dfa704ac4d5cbc6dff5cf27555b36e76"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "307e17e4fa60da57125ace2774e91d6d"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "PD2_EXT_ADDR_7B33B300": {
+      "addresses": {
+        "LoD/PD2": "0x7B33B300"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB300"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "UnlockFileHandle",
+      "signature": "void UnlockFileHandle(int * pFileHandle)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks a file handle by calling the C runtime unlock function.\n\nAlgorithm:\n1. Load the file handle pointer from [EBP + 0x10]\n2. Dereference the pointer to get the actual file handle value\n3. Push the file handle as an argument\n4. Call ___acrt_lowio_unlock_fh to unlock the file handle\n5. Clean up the stack and return\n\nParameters:\n- pFileHandle (int*): Pointer to a file handle that needs to be unlocked\n\nReturns:\n- void (no return value)\n\nSpecial Cases:\n- This is a thin wrapper around the C runtime unlock function\n- The file handle must be a valid handle obtained from file operations\n- Called as part of file I/O cleanup sequences",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3a54b0e12c4466583f041806e6cbafb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3a54b0e12c4466583f041806e6cbafb8",
+        "CFG": null,
+        "PRO": "f2c2d17792a9cfd2fa152189c73b9c82"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a54b0e12c4466583f041806e6cbafb8"
+      },
       "param_counts": {
-        "LoD/PD2": 2
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_c29539044f2d": {
@@ -12398,11 +14022,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "91cd16fac685cfc7f4b2c6d937a3e779",
         "PRO": "2b81d82b430a50dd02eb044beac10048"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c29539044f2d1ea1dd8d64637953ac47"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12433,11 +14057,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2092f58a2ad22ceba56927537aaf71da",
         "PRO": "1be05984c8b2686a7c9e793978b7da7e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d3da1a6e99fa9cfad40b1bb1f6d7e6ac"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12468,11 +14092,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "95a95b870f796f506f3f4fb478947245"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0176a5b704fb61d959b1442def5bb0bd"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -12503,11 +14127,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "1d78a642f23dfa61af853cd956d4101e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1c22e91e56d6050e83a99db31e20ef5"
       }
     },
     "PD2_EXT_MNE_236b351f4f55": {
@@ -12535,11 +14159,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d1f099d3e1288b30c1cc4fa5b2b40b0a",
         "PRO": "6c4c6647cd4b53dd1b396e9262fcbad4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "236b351f4f558ddf9d59e832c106b7dc"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12570,11 +14194,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "113c47e200358f32fc9592a5a725da85",
         "PRO": "fa5a38cb52345a2769ecb91a7497e22a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "457863e0e5e0aaaca0dbb328e53091e9"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -12605,11 +14229,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d6344fc8e579e5907ad157bcb99d8080",
         "PRO": "510f3268b381a774770b98be40124f81"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d5f0d2733adf4d1dce64e7fb83efd1d4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12640,11 +14264,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "06d66ec7bcb1f57e7b149a0880226930",
         "PRO": "b5ba49bd58125ef109dd1a838e946bc1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "df587a37c8639f83cd433c3a3fbdafc4"
       }
     },
     "PD2_EXT_MNE_970e9ff091d3": {
@@ -12672,11 +14296,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "a7475d7992491ef55650f6bf8ddca095",
         "PRO": "960e361d1a9d84d906a5da45c701f690"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "970e9ff091d33e0cb05e30f2142e63fe"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -12707,11 +14331,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f692539e5e4b2c6051f22edb98cfce4a",
         "PRO": "a58a3aab0e55916d5f79cc0fcc6cd90f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "99ac315fad0e50673c730cf7cada2459"
       }
     },
     "PD2_EXT_MNE_038f21ccadf0": {
@@ -12739,11 +14363,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "c3c38319caaa90934e927a5b8cadf44b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "038f21ccadf05fbd1bec4c0181e46e90"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -12774,11 +14398,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "c3f72db7fa0f934f8ce5ed8d7fda3e1a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bfbfce5166c5415d64e88436de1018c5"
       }
     },
     "PD2_EXT_MNE_73604cb44c56": {
@@ -12806,11 +14430,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "e0cc0190add0739fe135c9b9d7285356",
         "PRO": "1070608a1d6b38c0e4cdc560b0216a0b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "73604cb44c56b091d3abe654076d9602"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -12841,11 +14465,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "da152f785615d99730162e25e87ddd37",
         "PRO": "40aa118efadca5c887be0079b0099277"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "58c3c7e175be8c196c57976e375f315f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -12876,11 +14500,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "80158248b60f953891e8fc7e6daa7eff",
         "PRO": "07e743cd59663008aa355e28886b82e5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c4be6dbcf1260e7f12c4f60862ff7d6"
       }
     },
     "PD2_EXT_MNE_3f015c1c75c5": {
@@ -12908,11 +14532,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "d88336b08af1715c644e9a02a67eb019"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f015c1c75c5efb05d68ef52e0407e8b"
       }
     },
     "PD2_EXT_MNE_4994138ab30c": {
@@ -12940,11 +14564,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "c28d843778d6313eca5e15ea77ffbb3e",
         "PRO": "c3835a1c4241d090154d6750ba3bb6d9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4994138ab30c599075def6763c96b8e4"
       }
     },
     "PD2_EXT_MNE_7e73328c30de": {
@@ -12972,11 +14596,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "51d5ddd4ecc1dafccdeb273dae1d2adf",
         "PRO": "9f8021330ca888b56e19c20ebdb2b790"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7e73328c30de0e16ec37226d5c0fbaeb"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13007,11 +14631,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "2f5c312554ae0544a3bbc9440d62b16b",
         "PRO": "54acfb3eac1eb349f73f37969cdaf67d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "178bf49837b7e4e6597a7ff702d55d4f"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13042,11 +14666,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f31fc5092d131899f5d3fcf66479e1f8",
         "PRO": "5ca46a3c1c1f93519f0f23457ffd62d1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aa89b192e57490dbcdd29af8440710b1"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -13077,11 +14701,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "7aacd61a1d81f3299fa55646a3677b47",
         "PRO": "dbecc4592f372f116866c3eeaf6ab0c7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d63502919c4c985cfbdccf3184dd15d0"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -13112,11 +14736,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "19c71a436cd9b62cd94468fdd6017761",
         "PRO": "d4534ea44172405569ef7c69e3511570"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9215dd17545429f5a2114f3f9c06e96c"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -13147,11 +14771,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6fb7039291d9622a06ea097685f543c1",
         "PRO": "317e6c0692d83e0e1653bc4c81b07f08"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 45
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e924fdadf508c826eed42821cba5fa90"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -13182,11 +14806,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "a0a06e65e5c6c8b5edc954db64298798",
         "PRO": "81998b2575f8c1c5fa8183126a0389eb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "66ca62cf04ca0813652dfb78b071de6f"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13217,11 +14841,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "0d0781a6b7855dd772cc777aef3be52e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "16d616b35c333a7dce0bb2e32c0f7126"
       }
     },
     "PD2_EXT_MNE_9265df1b9ee6": {
@@ -13249,11 +14873,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "7c823a94154ae028884ee703db75aaf4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9265df1b9ee675956a8346895fb96853"
       }
     },
     "PD2_EXT_MNE_2a80e60ea4bb": {
@@ -13281,11 +14905,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "73fc4c394048f9e591d76418eb9935ea",
         "PRO": "b3a0cbf6a4a01a8d5d007f2d718579a0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2a80e60ea4bba793c262478138e116cc"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13316,11 +14940,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "30b08fa3df6e58fd84593e5aaad2bf55"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8fd4ad643df307067f079fbd4afbbe20"
       }
     },
     "PD2_EXT_MNE_d13997106616": {
@@ -13348,11 +14972,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "c3cfbbef9502e0df52c91435392e2d73",
         "PRO": "970f47969052e17ab2f35f8f21d3649e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d13997106616502d40d002e8b0d3aafe"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13383,11 +15007,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6496ef2c0cc7bc841d31e4acb3c6aa21",
         "PRO": "b589f944b064ea2e2e1a75f35e528f77"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "be5d86296cfe10420ab6ae3acc617a84"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -13418,11 +15042,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "dddad7afdb82dd3316e4b0a202e54b16",
         "PRO": "c9d74296e4283e367d1679c90b029df4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7724bd3045b6f0ade7aa6ddff69dccb"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -13453,11 +15077,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "61128113a862ffcd5160798c88db3acc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fef66f8b6d0dd97beb2591f0fb3cce26"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13488,11 +15112,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "f9310d93467e6f77bf3bd571c7f5f7e8",
         "PRO": "a368e3eb8f357d9272fd340ea11812a5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d58e5d6011aaa0137cdf1e76720ccd98"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13523,11 +15147,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "d88818743b8d9536d391cc371acc4a2f",
         "PRO": "d96b33b548b1a49c4356d7ebb094fcf6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "947f789b8b5a0bd0be304aaaf2cd1bd4"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -13558,11 +15182,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "8a2b4e21f597a2b2acec712fc3a54eb2",
         "PRO": "c98f1ddb9237829ffc45c73f6c933138"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 73
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6b40552453a6c531f9d03ee84dd544ba"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -13593,11 +15217,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "407117a8ee7092c0804d627a2f0ee33c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe79b846af51e290fb82c304e25eeacf"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -13628,11 +15252,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "60b28c48098cc6c7946924eb1dd37295",
         "PRO": "53ccfde4666a6f7f2d7ed6ef70c4bfa5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 69
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6655790afa38b68f0b7a1fca3308be94"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -13663,11 +15287,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "aca5094624ced9357feaf4941fa0558b",
         "PRO": "0e87f0e83a4f89c0b721e19dbc83b51a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dfe41356d07ddd03dbb0f505b1c8ef92"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13698,11 +15322,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "27502b7d68faf645618154eabb3d3cfc",
         "PRO": "14e80a8878be8c25f87800d8ba66f33b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e345c6e0575c9016ccc3565868ef5d76"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -13733,11 +15357,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "c75f7684bb6a13190d99ac5176b08fda",
         "PRO": "c745885e846d1b9a58fbe650ad0429a1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 55
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c4f75d1541ddbbf3fecb4708f2c85536"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13768,11 +15392,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "0e6498da51a497ee1e5f983a0afbce57"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2b2fecda5ab0281149b562c16c46c04b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13803,11 +15427,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b96ab1c046f9dd4b69b39b911715424c",
         "PRO": "7a9d2f2bd54c7fba4ba6d0166c1cd796"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "51e50b5336f3c889077b546c8b21c4e8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13838,11 +15462,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "5983940de9a553ac159f82ced5bdfca3",
         "PRO": "d8fda1720f29503a93f3a9c4806ebf51"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1601eec9ec1d799d4f529c44cadd20f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13873,11 +15497,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "fd32fcbc1bb7eeb18567ac64ddfa5c84",
         "PRO": "ebaf229e6ab3d30073fabb7df59640bb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "74e08dea317b4f9944f12858794a3365"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -13908,11 +15532,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "6065d0e8d4d191a7ef2d41eec7067d6b",
         "PRO": "50986a3612e8e5ba42a0a138b20d047d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bf802b5c0489d1a4bda26d6e10c2b196"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13943,11 +15567,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "b299961a4ff9924d9c5832fc43b80e26",
         "PRO": "0ae9c941390bcf59ac49b87c7367afb8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "61cb386da0674c6f91039b7ce52ed495"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -13978,11 +15602,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "754bfc5d47177c4cbdd43b336248c7ba",
         "PRO": "fa5a308f885e98065f696d6e24086df6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2c3468b423fef34a4bb6fa44360db639"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -14013,11 +15637,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "27e2aba8606ba96c2068ea82b427719b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f8a90eae4fe79651b3297724da273c17"
       }
     },
     "PD2_EXT_MNE_1465ab3b31b1": {
@@ -14045,11 +15669,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "3e92ad740017f22106976023eea70ce2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1465ab3b31b1e2b2093dd3939cd9726d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14080,11 +15704,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "ef84f81518294ca890839eff0155a3e6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d0bb544fe0e5af09bec61fe3e2a7bda3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14114,11 +15738,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "0579f88b0875edaf79a0e459979135de"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
     "PD2_EXT_MNE_0af48c18cc11": {
@@ -14146,11 +15770,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "f2c382c1b43da424125fba00a6d650ff"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0af48c18cc11c2a1b044a6fc47738db2"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -14158,10 +15782,10 @@ var FUNCTIONS_PD2_EXT_dll = {
     },
     "PD2_EXT_MNE_d2bf5bcb7aed": {
       "addresses": {
-        "LoD/PD2": "0x7B33CF26"
+        "LoD/PD2": "0x7B33CF10"
       },
       "rvas": {
-        "LoD/PD2": "0xCF26"
+        "LoD/PD2": "0xCF10"
       },
       "sizes": {
         "LoD/PD2": 22
@@ -14181,11 +15805,43 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": null,
         "PRO": "d2fde8764ddd02ea9c12fd3033449894"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d2bf5bcb7aedd28dbc8aef58e14d356c"
+      }
+    },
+    "PD2_EXT_ADDR_7B33CF26": {
+      "addresses": {
+        "LoD/PD2": "0x7B33CF26"
+      },
+      "rvas": {
+        "LoD/PD2": "0xCF26"
+      },
+      "sizes": {
+        "LoD/PD2": 22
+      },
+      "name": "__alloca_probe_8",
+      "signature": "uint __alloca_probe_8(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n __alloca_probe_8\n\nLibrary: Visual Studio",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d2bf5bcb7aedd28dbc8aef58e14d356c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d2bf5bcb7aedd28dbc8aef58e14d356c",
+        "CFG": null,
+        "PRO": "7dde4d03e889945550a9de3248523001"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d2bf5bcb7aedd28dbc8aef58e14d356c"
       }
     },
     "PD2_EXT_MNE_eaded9c735f8": {
@@ -14213,11 +15869,45 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ea03c6407b4d091868dce8d0baf95212",
         "PRO": "45554d7d27a2380e7add6286eec75198"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eaded9c735f89913ca38badb8ea3bbe3"
+      }
+    },
+    "PD2_EXT_ADDR_7B33CF70": {
+      "addresses": {
+        "LoD/PD2": "0x7B33CF70"
+      },
+      "rvas": {
+        "LoD/PD2": "0xCF70"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "DeallocateHeapMemory",
+      "signature": "void DeallocateHeapMemory(LPVOID memoryPointer)",
+      "calling_convention": "__cdecl",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "e44577d28e1b43d1089b15ffb45d77b9"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "PD2_EXT_MNE_681b79eef16d": {
@@ -14245,11 +15935,11 @@ var FUNCTIONS_PD2_EXT_dll = {
         "CFG": "ce44a97749827c58d022304ba519a877",
         "PRO": "3fdd0c36c94c34eca4782cd2c9d36912"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "681b79eef16d05dc2deff0db22e0f0a9"
       },
       "param_counts": {
         "LoD/PD2": 1

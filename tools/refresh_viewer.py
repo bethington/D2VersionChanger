@@ -6,6 +6,7 @@ This script runs all necessary steps to regenerate viewer data:
 1. sequential_matcher.py - Match functions across versions using sequential pairwise approach
 2. candidate_matcher.py - Generate best-match candidates for empty cells (optional)
 3. generate_function_js.py - Generate JS files for the function viewer
+   (This step merges Ghidra exports directly from data/function_index/)
 
 Usage:
     python tools/refresh_viewer.py          # LoD versions only (default, faster)
@@ -55,7 +56,8 @@ def main():
     base_dir = tools_dir.parent
     
     # Scripts to run with their args
-    # sequential_matcher supports --game, others process the registry it creates
+    # sequential_matcher matches functions across versions
+    # generate_function_js creates the JS files for the viewer (includes merge step)
     scripts = [
         (
             "Matching functions across versions...",
@@ -67,7 +69,7 @@ def main():
             "Generating viewer JS files...",
             tools_dir / "generate_function_js.py",
             [],
-            True  # Always run
+            True  # Always run (merges Ghidra exports directly)
         ),
     ]
     

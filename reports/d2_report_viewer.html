@@ -1234,6 +1234,22 @@
             background-color: var(--bg-hover);
         }
 
+        /* Compare panel active highlighting */
+        .exports-table tbody tr.compare-active-row {
+            background-color: rgba(0, 200, 83, 0.15) !important;
+        }
+        .exports-table tbody tr.compare-active-row .fn-name-cell {
+            background-color: rgba(0, 200, 83, 0.15) !important;
+        }
+        .exports-table td.compare-active-cell {
+            background-color: rgba(0, 200, 83, 0.3) !important;
+            box-shadow: inset 0 0 0 2px var(--color-set);
+        }
+        .exports-table thead th.compare-active-column {
+            background-color: rgba(0, 200, 83, 0.2) !important;
+            box-shadow: inset 0 -2px 0 var(--color-set);
+        }
+
         .exports-table .addr-cell {
             font-family: var(--font-mono);
             color: var(--color-magic);
@@ -1383,645 +1399,879 @@
             content: '~';
         }
 
-        /* Comparison Modal */
-        .comparison-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .comparison-modal.hidden {
+        /* Panel 4: Compare Functions */
+        .panel-compare {
+            width: 420px;
+            flex-shrink: 0;
+            border-left: 1px solid var(--accent-gold);
             display: none;
         }
 
-        .comparison-dialog {
-            background: var(--bg-dark);
-            border: 1px solid var(--accent-gold);
-            border-radius: 8px;
-            width: 90%;
-            max-width: 1200px;
-            max-height: 90vh;
+        .panel-compare.visible {
             display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
 
-        .comparison-header {
-            padding: 1rem;
-            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-medium) 100%);
-            border-bottom: 1px solid var(--border-dark);
+        .panel-compare .panel-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .comparison-title {
-            font-size: 1rem;
-            color: var(--accent-gold);
-            font-weight: 600;
+        .panel-compare .panel-header h2 {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
-        .comparison-close {
+        .compare-close-btn {
             background: none;
             border: 1px solid var(--border-dark);
             color: var(--text-secondary);
-            padding: 0.3rem 0.6rem;
-            border-radius: 4px;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
             cursor: pointer;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
         }
 
-        .comparison-close:hover {
+        .compare-close-btn:hover {
             border-color: var(--accent-red-light);
             color: var(--accent-red-light);
         }
 
-        .comparison-content {
-            flex: 1;
-            overflow-y: auto;
-            padding: 1rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+        /* Compare Header Info */
+        .compare-header-info {
+            padding: 0.6rem 0.8rem;
+            background: linear-gradient(180deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid var(--border-dark);
         }
 
-        .comparison-side {
-            background: var(--bg-medium);
-            border: 1px solid var(--border-dark);
-            border-radius: 4px;
-            padding: 1rem;
-        }
-
-        .comparison-side-header {
+        .compare-func-name {
             font-size: 0.9rem;
-            color: var(--accent-gold);
-            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+            word-break: break-word;
+        }
+
+        .compare-func-name .known-badge {
+            font-size: 0.65rem;
+            padding: 0.1rem 0.3rem;
+            background: var(--color-set);
+            color: var(--bg-darkest);
+            border-radius: 2px;
+            margin-left: 0.4rem;
+            font-weight: 500;
+        }
+
+        .compare-versions {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             gap: 0.5rem;
+            font-size: 0.75rem;
         }
 
-        .comparison-side-header .version-tag {
-            font-size: 0.7rem;
-            padding: 0.15rem 0.4rem;
-            background: var(--bg-dark);
-            border-radius: 3px;
-            color: var(--color-magic);
+        .compare-version-info {
+            flex: 1;
+            min-width: 0;
         }
 
-        .comparison-section {
-            margin-bottom: 0.8rem;
-        }
-
-        .comparison-section-title {
-            font-size: 0.7rem;
+        .compare-version-label {
+            font-size: 0.6rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 0.3rem;
         }
 
-        .comparison-section-content {
-            font-size: 0.8rem;
+        .compare-version-value {
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+            font-size: 0.7rem;
+        }
+
+        .compare-version-info.source .compare-version-value {
+            color: var(--color-magic);
+        }
+
+        .compare-version-info.target .compare-version-value {
+            color: var(--color-rare);
+        }
+
+        .compare-score {
+            text-align: center;
+            padding: 0.3rem 0.5rem;
+            background: var(--bg-darkest);
+            border-radius: 4px;
+            border: 1px solid var(--border-dark);
+        }
+
+        .compare-score-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .compare-score-value.high { color: var(--color-set); }
+        .compare-score-value.medium { color: var(--color-rare); }
+        .compare-score-value.low { color: var(--color-crafted); }
+
+        .compare-score-tier {
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* Compare Content - Row Layout */
+        .compare-section {
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .compare-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.4rem 0.6rem;
+            background: var(--bg-medium);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .compare-section-header:hover {
+            background: var(--bg-light);
+        }
+
+        .compare-section-title {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .compare-section-summary {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+        }
+
+        .compare-section-summary .match-count {
+            color: var(--color-set);
+        }
+
+        .compare-section-content {
+            background: var(--bg-dark);
+        }
+
+        .compare-section.collapsed .compare-section-content {
+            display: none;
+        }
+
+        /* Column Headers */
+        .compare-columns-header {
+            display: grid;
+            grid-template-columns: 1fr 100px 1fr 28px;
+            gap: 0.3rem;
+            padding: 0.25rem 0.6rem;
+            background: var(--bg-darkest);
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .compare-col-label {
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .compare-col-label.source { text-align: right; color: var(--color-magic); }
+        .compare-col-label.metric { text-align: center; }
+        .compare-col-label.target { text-align: left; color: var(--color-rare); }
+        .compare-col-label.match { text-align: center; }
+
+        /* Compare Row */
+        .compare-row {
+            display: grid;
+            grid-template-columns: 1fr 100px 1fr 28px;
+            gap: 0.3rem;
+            padding: 0.3rem 0.6rem;
+            border-bottom: 1px solid var(--border-dark);
+            font-size: 0.75rem;
+            align-items: center;
+        }
+
+        .compare-row:last-child {
+            border-bottom: none;
+        }
+
+        .compare-row:hover {
+            background: var(--bg-medium);
+        }
+
+        .compare-row .source {
+            text-align: right;
             font-family: var(--font-mono);
             color: var(--text-primary);
-            background: var(--bg-dark);
-            padding: 0.5rem;
-            border-radius: 3px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .compare-row .metric {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.65rem;
+        }
+
+        .compare-row .target {
+            text-align: left;
+            font-family: var(--font-mono);
+            color: var(--text-primary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .compare-row .match-icon {
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .compare-row .match-icon.exact { color: var(--color-set); }
+        .compare-row .match-icon.close { color: var(--color-rare); }
+        .compare-row .match-icon.diff { color: var(--color-crafted); }
+        .compare-row .match-icon.missing { color: var(--text-muted); }
+
+        /* List Comparison (for callees, strings, etc.) */
+        .compare-list {
+            padding: 0.4rem 0.6rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
             max-height: 150px;
             overflow-y: auto;
         }
 
-        .comparison-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .compare-list-item {
+            font-size: 0.65rem;
+            font-family: var(--font-mono);
+            padding: 0.15rem 0.35rem;
+            border-radius: 3px;
+            background: var(--bg-darkest);
+            border: 1px solid var(--border-dark);
+            white-space: nowrap;
+            max-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .comparison-list li {
-            padding: 0.2rem 0;
-            border-bottom: 1px solid var(--border-dark);
-        }
-
-        .comparison-list li:last-child {
-            border-bottom: none;
-        }
-
-        .comparison-list li.match {
+        .compare-list-item.matched {
+            border-color: var(--color-set);
             color: var(--color-set);
         }
 
-        .comparison-list li.diff {
-            color: var(--color-crafted);
+        .compare-list-item.source-only {
+            border-color: var(--color-magic);
+            color: var(--color-magic);
+            opacity: 0.7;
         }
 
-        /* Enhanced comparison sections */
-        .comparison-metrics {
+        .compare-list-item.source-only::before {
+            content: '⊖ ';
+        }
+
+        .compare-list-item.target-only {
+            border-color: var(--color-rare);
+            color: var(--color-rare);
+            opacity: 0.7;
+        }
+
+        .compare-list-item.target-only::before {
+            content: '⊕ ';
+        }
+
+        /* Paired list display (side-by-side comparison) */
+        .compare-paired-list {
+            padding: 0.3rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .compare-paired-header {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .comparison-metric {
-            background: var(--bg-dark);
-            border: 1px solid var(--border-dark);
-            border-radius: 4px;
-            padding: 0.5rem;
-            text-align: center;
-        }
-
-        .metric-label {
-            font-size: 0.65rem;
+            grid-template-columns: 1fr 24px 1fr;
+            gap: 0.25rem;
+            padding: 0.2rem 0.4rem;
+            font-size: 0.6rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--border-dark);
             margin-bottom: 0.2rem;
         }
 
-        .metric-value {
-            font-size: 0.9rem;
-            font-family: var(--font-mono);
-            color: var(--text-primary);
-        }
-
-        .metric-value.match {
-            color: var(--color-set);
-        }
-
-        .metric-value.diff {
-            color: var(--color-crafted);
-        }
-
-        .metric-value.close {
-            color: var(--color-rare);
-        }
-
-        .comparison-callees {
-            margin-bottom: 0.8rem;
-        }
-
-        .callee-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.3rem;
-            max-height: 100px;
-            overflow-y: auto;
-        }
-
-        .callee-tag {
-            font-size: 0.7rem;
-            font-family: var(--font-mono);
-            padding: 0.2rem 0.4rem;
-            background: var(--bg-dark);
-            border: 1px solid var(--border-dark);
-            border-radius: 3px;
-            color: var(--text-secondary);
-        }
-
-        .callee-tag.known {
-            color: var(--color-magic);
-            border-color: var(--color-magic);
-        }
-
-        .callee-tag.match {
-            color: var(--color-set);
-            border-color: var(--color-set);
-        }
-
-        .callee-tag.shared {
-            color: var(--color-set);
-            border-color: var(--color-set);
-            background: rgba(0, 200, 83, 0.1);
-        }
-
-        /* Side-by-side callee comparison table */
-        .callee-comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            background: var(--bg-darkest);
-            border: 1px solid var(--border-dark);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .callee-comparison-table th {
-            background: var(--bg-medium);
-            color: var(--text-muted);
-            padding: 6px 8px;
-            text-align: left;
-            font-weight: 500;
+        .compare-paired-row {
+            display: grid;
+            grid-template-columns: 1fr 24px 1fr;
+            gap: 0.25rem;
+            padding: 0.15rem 0.4rem;
             font-size: 0.65rem;
-            text-transform: uppercase;
-            border-bottom: 1px solid var(--border-dark);
+            font-family: var(--font-mono);
+            border-radius: 2px;
         }
 
-        .callee-comparison-table td {
-            padding: 4px 8px;
-            vertical-align: top;
-            border-bottom: 1px solid var(--border-dark);
+        .compare-paired-row:hover {
+            background: var(--bg-light);
         }
 
-        .callee-comparison-table tr:last-child td {
-            border-bottom: none;
+        .paired-col-source,
+        .paired-col-target {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
-        .callee-comparison-table td.match-cell {
+        /* Click-to-copy styling */
+        .copyable {
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+            border-radius: 2px;
+            padding: 1px 3px;
+            margin: -1px -3px;
+        }
+        .copyable:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .copyable.copied {
+            background: rgba(0, 200, 83, 0.3) !important;
+        }
+        .copyable::after {
+            content: '';
+            opacity: 0;
+            transition: opacity 0.15s ease;
+        }
+        .copyable:hover::after {
+            content: ' [click to copy]';
+            opacity: 0.5;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+        .copyable.copied::after {
+            content: ' copied!';
+            opacity: 1;
+            color: var(--color-set);
+        }
+
+        .paired-col-match {
+            text-align: center;
+            font-size: 0.7rem;
+        }
+
+        /* Match type styling */
+        .compare-paired-row.match-exact {
             background: rgba(0, 200, 83, 0.08);
         }
-
-        .callee-comparison-table td.match-cell span {
+        .compare-paired-row.match-exact .paired-col-match {
+            color: var(--color-set);
+        }
+        .compare-paired-row.match-exact .paired-col-source,
+        .compare-paired-row.match-exact .paired-col-target {
             color: var(--color-set);
         }
 
-        .callee-comparison-table td.source-only {
+        .compare-paired-row.match-normalized {
             background: rgba(255, 199, 0, 0.08);
         }
-
-        .callee-comparison-table td.source-only span {
+        .compare-paired-row.match-normalized .paired-col-match {
+            color: var(--color-rare);
+        }
+        .compare-paired-row.match-normalized .paired-col-source,
+        .compare-paired-row.match-normalized .paired-col-target {
             color: var(--color-rare);
         }
 
-        .callee-comparison-table td.target-only {
-            background: rgba(136, 71, 255, 0.08);
+        .compare-paired-row.match-source-only {
+            opacity: 0.75;
         }
-
-        .callee-comparison-table td.target-only span {
+        .compare-paired-row.match-source-only .paired-col-match {
             color: var(--color-magic);
         }
-
-        .callee-comparison-table td.empty-cell {
+        .compare-paired-row.match-source-only .paired-col-source {
+            color: var(--color-magic);
+        }
+        .compare-paired-row.match-source-only .paired-col-target {
             color: var(--text-muted);
-            font-style: italic;
         }
 
-        .callee-comparison-table .status-icon {
-            display: inline-block;
-            width: 16px;
-            text-align: center;
+        .compare-paired-row.match-target-only {
+            opacity: 0.75;
         }
-
-        .callee-comparison-table .status-icon.match {
-            color: var(--color-set);
+        .compare-paired-row.match-target-only .paired-col-match {
+            color: var(--color-crafted);
         }
-
-        .callee-comparison-table .status-icon.diff {
+        .compare-paired-row.match-target-only .paired-col-source {
+            color: var(--text-muted);
+        }
+        .compare-paired-row.match-target-only .paired-col-target {
             color: var(--color-crafted);
         }
 
-        /* Split row callee display */
-        .callee-row {
-            margin-bottom: 6px;
-        }
-
-        .callee-row:last-child {
-            margin-bottom: 0;
-        }
-
-        .callee-row-label {
-            display: block;
-            font-size: 0.65rem;
+        .compare-paired-empty {
+            padding: 0.5rem;
+            text-align: center;
             color: var(--text-muted);
-            margin-bottom: 3px;
-            font-weight: 500;
-        }
-
-        .callee-row-matched .callee-row-label {
-            color: var(--color-set);
-        }
-
-        .callee-row-unique .callee-row-label {
-            color: var(--color-rare);
-        }
-
-        .callee-row-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3px;
-        }
-
-        .callee-tag.source-unique {
-            color: var(--color-rare);
-            border-color: var(--color-rare);
-            background: rgba(255, 199, 0, 0.1);
-        }
-
-        .callee-tag.target-unique {
-            color: var(--color-magic);
-            border-color: var(--color-magic);
-            background: rgba(136, 71, 255, 0.1);
-        }
-
-        .match-badge {
-            display: inline-block;
-            padding: 1px 6px;
-            margin-left: 6px;
             font-size: 0.7rem;
-            font-weight: 500;
-            background: rgba(0, 200, 83, 0.2);
-            border: 1px solid var(--color-set);
-            border-radius: 3px;
-            color: var(--color-set);
         }
 
-        .comparison-instructions {
-            margin-bottom: 0.8rem;
+        .compare-section-summary .match-count-normalized {
+            color: var(--color-rare);
+            font-weight: 600;
         }
 
-        .instruction-list {
+        /* Signature Row (full width) */
+        .compare-signature-row {
+            padding: 0.4rem 0.6rem;
             font-family: var(--font-mono);
             font-size: 0.7rem;
-            background: var(--bg-darkest);
-            border: 1px solid var(--border-dark);
-            border-radius: 4px;
-            padding: 0.5rem;
-            max-height: 120px;
-            overflow-y: auto;
-            line-height: 1.4;
-        }
-
-        .instruction-line {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .instruction-line .addr {
-            color: var(--text-muted);
-            min-width: 70px;
-        }
-
-        .instruction-line .mnemonic {
-            color: var(--color-magic);
-            min-width: 60px;
-        }
-
-        .instruction-line .operands {
-            color: var(--text-primary);
-        }
-
-        .comparison-strings {
-            margin-bottom: 0.8rem;
-        }
-
-        .string-list {
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            background: var(--bg-darkest);
-            border: 1px solid var(--border-dark);
-            border-radius: 4px;
-            padding: 0.5rem;
-            max-height: 80px;
-            overflow-y: auto;
-        }
-
-        .string-ref {
-            color: var(--color-rare);
-            padding: 0.1rem 0;
+            color: var(--text-secondary);
+            word-break: break-word;
             border-bottom: 1px solid var(--border-dark);
         }
 
-        .string-ref:last-child {
-            border-bottom: none;
-        }
-
-        .comparison-hash {
-            margin-bottom: 0.8rem;
-        }
-
-        .hash-value {
-            font-family: var(--font-mono);
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            word-break: break-all;
-            background: var(--bg-darkest);
-            padding: 0.3rem 0.5rem;
-            border-radius: 3px;
-            border: 1px solid var(--border-dark);
-        }
-
-        .hash-value.match {
-            color: var(--color-set);
-            border-color: var(--color-set);
-        }
-
-        .comparison-similarity {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 0.8rem;
-            background: var(--bg-medium);
-            border-radius: 4px;
-            margin-bottom: 1rem;
-        }
-
-        .similarity-score {
-            font-size: 1.5rem;
-            font-weight: 700;
-            min-width: 80px;
-            text-align: center;
-        }
-
-        .similarity-score.high {
-            color: var(--color-set);
-        }
-
-        .similarity-score.medium {
-            color: var(--color-rare);
-        }
-
-        .similarity-score.low {
-            color: var(--color-crafted);
-        }
-
-        .similarity-score.definitive {
-            color: var(--color-unique);
-            text-shadow: 0 0 10px rgba(175, 135, 80, 0.5);
-            border-left: 3px solid var(--color-unique);
-            padding-left: 0.5rem;
-        }
-
-        /* Value Bonus Breakdown Styles */
-        .value-bonus-breakdown {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.25rem;
-            justify-content: center;
-        }
-
-        .value-bonus-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.2rem;
-            background: rgba(100, 200, 100, 0.15);
-            border: 1px solid rgba(100, 200, 100, 0.3);
-            border-radius: 3px;
-            padding: 0.1rem 0.3rem;
+        .compare-signature-row .sig-label {
             font-size: 0.6rem;
-            cursor: help;
-        }
-
-        .value-bonus-item .bonus-label {
-            color: var(--text-secondary);
-            text-transform: capitalize;
-        }
-
-        .value-bonus-item .bonus-value {
-            color: var(--color-set);
-            font-weight: 600;
-        }
-
-        .match-warning {
-            background: rgba(255, 200, 100, 0.1);
-            border: 1px solid rgba(255, 200, 100, 0.3);
-            border-radius: 4px;
-            padding: 0.3rem 0.6rem;
-            font-size: 0.75rem;
-            color: var(--color-rare);
-            margin-bottom: 0.25rem;
-        }
-
-        .similarity-breakdown {
-            flex: 1;
-        }
-
-        .similarity-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
             margin-bottom: 0.2rem;
         }
 
-        .similarity-item-label {
-            color: var(--text-muted);
-            min-width: 100px;
-        }
-
-        .similarity-bar {
-            flex: 1;
-            height: 4px;
-            background: var(--bg-dark);
-            border-radius: 2px;
-            overflow: hidden;
-        }
-
-        .similarity-bar-fill {
-            height: 100%;
-            border-radius: 2px;
-            transition: width 0.3s;
-        }
-
-        .known-name-badge {
-            display: inline-block;
-            padding: 0.2rem 0.5rem;
-            background: rgba(105, 105, 255, 0.15);
-            border: 1px solid var(--color-magic);
-            border-radius: 4px;
-            color: var(--color-magic);
-            font-size: 0.75rem;
-            font-family: var(--font-mono);
-            margin-bottom: 0.5rem;
-        }
-
-        .comparison-confidence {
-            display: flex;
-            align-items: center;
+        /* Hash Row */
+        .compare-hash-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 0.5rem;
-            padding: 0.5rem;
-            background: var(--bg-dark);
-            border-radius: 4px;
-            margin-bottom: 1rem;
+            padding: 0.4rem 0.6rem;
+            border-bottom: 1px solid var(--border-dark);
         }
 
-        .confidence-bar {
-            flex: 1;
-            height: 8px;
+        .compare-hash-value {
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            word-break: break-all;
+            padding: 0.3rem;
+            background: var(--bg-darkest);
+            border-radius: 3px;
+        }
+
+        .compare-hash-value.match {
+            border: 1px solid var(--color-set);
+            color: var(--color-set);
+        }
+
+        .compare-hash-value .hash-label {
+            font-size: 0.5rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 0.15rem;
+        }
+
+        /* Compare Actions */
+        .compare-actions {
+            padding: 0.6rem;
             background: var(--bg-medium);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .confidence-fill {
-            height: 100%;
-            border-radius: 4px;
-            transition: width 0.3s;
-        }
-
-        .confidence-fill.high {
-            background: var(--color-set);
-        }
-
-        .confidence-fill.medium {
-            background: var(--color-rare);
-        }
-
-        .confidence-fill.low {
-            background: var(--color-crafted);
-        }
-
-        .confidence-value {
-            font-size: 0.8rem;
-            font-weight: 600;
-            min-width: 50px;
-            text-align: right;
-        }
-
-        .comparison-actions {
-            padding: 1rem;
             border-top: 1px solid var(--border-dark);
             display: flex;
-            justify-content: flex-end;
             gap: 0.5rem;
+            flex-shrink: 0;
         }
 
-        .comparison-btn {
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.8rem;
+        .compare-actions.hidden {
+            display: none;
+        }
+
+        .compare-btn {
+            flex: 1;
+            padding: 0.5rem;
+            font-size: 0.75rem;
             font-weight: 600;
             border: 1px solid var(--border-dark);
+            border-radius: 4px;
+            cursor: pointer;
             transition: all 0.15s;
         }
 
-        .comparison-btn.confirm {
-            background: rgba(0, 255, 0, 0.1);
-            color: var(--color-set);
+        .compare-btn.confirm {
+            background: rgba(66, 184, 131, 0.1);
             border-color: var(--color-set);
+            color: var(--color-set);
         }
 
-        .comparison-btn.confirm:hover {
-            background: rgba(0, 255, 0, 0.2);
+        .compare-btn.confirm:hover {
+            background: rgba(66, 184, 131, 0.2);
         }
 
-        .comparison-btn.reject {
-            background: rgba(255, 0, 0, 0.1);
-            color: var(--accent-red-light);
+        .compare-btn.reject {
+            background: rgba(231, 76, 60, 0.1);
             border-color: var(--accent-red-light);
+            color: var(--accent-red-light);
         }
 
-        .comparison-btn.reject:hover {
-            background: rgba(255, 0, 0, 0.2);
+        .compare-btn.reject:hover {
+            background: rgba(231, 76, 60, 0.2);
         }
 
-        .comparison-btn.close {
-            background: var(--bg-medium);
+        /* Narrow screen support */
+        @media (max-width: 1200px) {
+            .panel-compare {
+                width: 350px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .panel-compare {
+                width: 300px;
+                min-width: 280px;
+            }
+
+            .compare-columns-header,
+            .compare-row {
+                grid-template-columns: 1fr 80px 1fr 24px;
+            }
+        }
+
+        /* Match Score Breakdown Section */
+        .score-breakdown {
+            padding: 0.4rem 0.6rem;
+        }
+
+        .score-breakdown-tier {
+            margin-bottom: 0.5rem;
+            padding: 0.4rem;
+            background: var(--bg-darkest);
+            border-radius: 4px;
+            border-left: 3px solid var(--border-dark);
+        }
+
+        .score-breakdown-tier.tier-matched {
+            border-left-color: var(--color-set);
+        }
+
+        .score-breakdown-tier.tier-partial {
+            border-left-color: var(--color-rare);
+        }
+
+        .score-breakdown-tier .tier-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.3rem;
+            gap: 0.5rem;
+        }
+
+        .score-breakdown-tier .tier-icon {
+            font-size: 0.8rem;
+        }
+
+        .score-breakdown-tier .tier-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            flex: 1;
+        }
+
+        .score-breakdown-tier .tier-status {
+            font-size: 0.6rem;
+            padding: 0.1rem 0.3rem;
+            border-radius: 3px;
+            background: rgba(255, 102, 0, 0.15);
+            color: var(--color-crafted);
+        }
+
+        .score-breakdown-tier.tier-matched .tier-status {
+            background: rgba(0, 200, 83, 0.15);
+            color: var(--color-set);
+        }
+
+        .score-breakdown-tier .tier-reason {
+            font-size: 0.6rem;
+            color: var(--color-set);
+            padding-left: 1.3rem;
+        }
+
+        .score-breakdown-tier.tier-warning {
+            border-left-color: var(--color-crafted);
+        }
+
+        /* Feature table in breakdown */
+        .score-feature-table {
+            width: 100%;
+            font-size: 0.6rem;
+            border-collapse: collapse;
+        }
+
+        .score-feature-table th {
+            text-align: left;
+            color: var(--text-muted);
+            font-weight: 500;
+            padding: 0.2rem 0.3rem;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .score-feature-table td {
+            padding: 0.2rem 0.3rem;
             color: var(--text-secondary);
         }
 
-        .comparison-btn.close:hover {
+        .score-feature-table tr:hover {
+            background: var(--bg-hover);
+        }
+
+        .score-feature-table .feat-name {
+            color: var(--color-magic);
+            font-weight: 500;
+        }
+
+        .score-feature-table .feat-vals {
+            font-family: var(--font-mono);
             color: var(--text-primary);
         }
+
+        .score-feature-table .feat-sim {
+            text-align: right;
+        }
+
+        .score-feature-table .feat-contrib {
+            text-align: right;
+            width: 80px;
+        }
+
+        /* Contribution bar */
+        .contrib-bar-container {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .contrib-bar {
+            flex: 1;
+            height: 6px;
+            background: var(--bg-medium);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .contrib-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.2s;
+        }
+
+        .contrib-bar-fill.high { background: var(--color-set); }
+        .contrib-bar-fill.medium { background: var(--color-rare); }
+        .contrib-bar-fill.low { background: var(--color-crafted); }
+
+        .contrib-value {
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            min-width: 20px;
+            text-align: right;
+        }
+
+        /* Value bonuses */
+        .score-value-bonuses {
+            margin-top: 0.3rem;
+            padding-top: 0.3rem;
+            border-top: 1px dashed var(--border-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .score-value-bonuses .bonuses-label {
+            font-size: 0.55rem;
+            color: var(--text-muted);
+        }
+
+        .score-value-bonuses .bonus-tag {
+            font-size: 0.55rem;
+            padding: 0.1rem 0.4rem;
+            background: rgba(0, 200, 83, 0.15);
+            color: var(--color-set);
+            border-radius: 3px;
+            cursor: help;
+        }
+
+        .score-bonus-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.15rem 0;
+            font-size: 0.6rem;
+        }
+
+        .score-bonus-item .bonus-label {
+            color: var(--text-secondary);
+        }
+
+        .score-bonus-item .bonus-value {
+            color: var(--color-set);
+            font-weight: 600;
+        }
+
+        /* Score totals */
+        .score-totals {
+            margin-top: 0.4rem;
+            padding: 0.4rem;
+            background: var(--bg-medium);
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .score-totals-row {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.65rem;
+        }
+
+        .score-totals-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .score-totals-item .label {
+            color: var(--text-muted);
+        }
+
+        .score-totals-item .value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .score-totals-item .value.bonus {
+            color: var(--color-set);
+        }
+
+        .score-final {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .score-final.high { color: var(--color-set); }
+        .score-final.medium { color: var(--color-rare); }
+        .score-final.low { color: var(--color-crafted); }
+
+        /* Validation warnings */
+        .score-warnings {
+            margin-top: 0.3rem;
+        }
+
+        .score-warnings .warning-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.2rem 0.3rem;
+            font-size: 0.6rem;
+            color: var(--color-crafted);
+            background: rgba(255, 102, 0, 0.1);
+            border-radius: 3px;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Alternate Matches */
+        .alternate-matches {
+            padding: 0.4rem 0.6rem;
+            background: var(--bg-medium);
+            border-bottom: 1px solid var(--border-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .alternate-matches .alternate-label {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .alternate-matches .alternate-buttons {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .alternate-match-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.3rem 0.5rem;
+            background: var(--bg-darkest);
+            border: 1px solid var(--border-dark);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.15s;
+            min-width: 70px;
+        }
+
+        .alternate-match-btn:hover {
+            border-color: var(--accent-gold);
+            background: var(--bg-hover);
+        }
+
+        .alternate-match-btn.selected {
+            border-color: var(--color-magic);
+            background: rgba(105, 105, 255, 0.1);
+        }
+
+        .alternate-match-btn .alt-rank {
+            font-size: 0.5rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .alternate-match-btn .alt-score {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .alternate-match-btn .alt-score.high { color: var(--color-set); }
+        .alternate-match-btn .alt-score.medium { color: var(--color-rare); }
+        .alternate-match-btn .alt-score.low { color: var(--color-crafted); }
+
+        .alternate-match-btn .alt-addr {
+            font-size: 0.55rem;
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+        }
+
+        .alternate-match-btn .alt-name {
+            font-size: 0.5rem;
+            color: var(--text-muted);
+            max-width: 80px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* NOTE: Old Comparison Modal CSS has been removed.
+           The new Panel 4 (Compare Functions) uses .panel-compare and .compare-* classes defined above.
+
+           Removed CSS classes: .comparison-modal, .comparison-dialog, .comparison-header,
+           .comparison-title, .comparison-close, .comparison-content, .comparison-side,
+           .comparison-side-header, .comparison-section, .comparison-section-title,
+           .comparison-section-content, .comparison-list, .comparison-metrics,
+           .comparison-metric, .metric-label, .metric-value, .comparison-callees,
+           .callee-list, .callee-tag, .comparison-strings, .string-list, .string-ref,
+           .comparison-hash, .hash-value, .comparison-similarity, .similarity-score,
+           .similarity-breakdown, .similarity-item, .similarity-item-label, .similarity-bar,
+           .comparison-confidence, .confidence-bar, .confidence-fill, .confidence-value,
+           .comparison-actions, .comparison-btn, etc.
+        */
 
         .tier-legend {
             display: flex;
@@ -2045,6 +2295,24 @@
         .fn-name-text {
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        .fn-signature {
+            display: block;
+            font-size: 0.75em;
+            color: var(--text-dim);
+            font-family: 'Consolas', 'Monaco', monospace;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 280px;
+            margin-top: 1px;
+        }
+
+        .fn-name-wrapper {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
 
         /* Text file view */
@@ -2316,6 +2584,30 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Panel 4: Compare Functions -->
+            <div class="panel panel-compare" id="comparePanel">
+                <div class="panel-header">
+                    <h2 id="comparePanelTitle">Compare Functions</h2>
+                    <button class="compare-close-btn" onclick="closeComparePanel()" title="Close comparison panel">✕</button>
+                </div>
+                <div class="compare-header-info" id="compareHeaderInfo">
+                    <!-- Populated by showComparePanel() -->
+                </div>
+                <div class="panel-content" id="compareContent">
+                    <div class="details-empty">
+                        <div class="details-empty-icon">⚖️</div>
+                        <div class="details-empty-text">
+                            Click a function cell to compare<br>
+                            source and target versions
+                        </div>
+                    </div>
+                </div>
+                <div class="compare-actions hidden" id="compareActions">
+                    <button class="compare-btn confirm" id="compareBtnConfirm" onclick="confirmMatch()">✓ Confirm</button>
+                    <button class="compare-btn reject" id="compareBtnReject" onclick="rejectMatch()">✗ Reject</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -2398,6 +2690,7 @@
         let showRVA = false;  // false = full address (default), true = RVA
         let showGapsOnly = false;  // show only functions with coverage gaps
         let copyOnClick = false;  // copy address to clipboard instead of opening compare modal
+        let showSignatures = false;  // show function signatures under names
         let currentFuncData = null;
         let currentFuncBaseName = null;
         let categoryFilter = 'all';  // 'all', 'game_logic', 'crt_runtime', 'import_thunk', 'exception', 'other'
@@ -3034,7 +3327,7 @@
         }
 
         // Wrapper function that adapts calculateTieredMatch to the expected interface
-        // Expected by openComparisonModal: { score, tier, tierName, details, warnings }
+        // Expected by showComparePanel: { score, tier, tierName, details, warnings }
         function calculateIdentityMatch(sourceObj, targetObj, sourceVersion, targetVersion) {
             // Transform flat objects to the nested structure expected by calculateTieredMatch
             // Include all count fields for count-based vector similarity
@@ -3052,7 +3345,6 @@
                         Object.entries(sourceObj.indexes).find(([k, v]) => v)?.[1]) : '',
                 // Count fields for vector similarity
                 instruction_counts: { [sourceVersion]: sourceObj.instruction_count || 0 },
-                basic_block_counts: { [sourceVersion]: sourceObj.basic_block_count || 0 },
                 loop_counts: { [sourceVersion]: sourceObj.loop_count || 0 },
                 stack_frame_sizes: { [sourceVersion]: sourceObj.stack_frame_size || 0 },
                 callee_counts: { [sourceVersion]: sourceObj.callee_count || (sourceObj.callees?.length || 0) },
@@ -3078,7 +3370,6 @@
                         Object.entries(targetObj.indexes).find(([k, v]) => v)?.[1]) : '',
                 // Count fields for vector similarity
                 instruction_counts: { [targetVersion]: targetObj.instruction_count || 0 },
-                basic_block_counts: { [targetVersion]: targetObj.basic_block_count || 0 },
                 loop_counts: { [targetVersion]: targetObj.loop_count || 0 },
                 stack_frame_sizes: { [targetVersion]: targetObj.stack_frame_size || 0 },
                 callee_counts: { [targetVersion]: targetObj.callee_count || (targetObj.callees?.length || 0) },
@@ -4131,6 +4422,18 @@
             }
         }
 
+        // Handler for "Show Signatures" toggle
+        function toggleSignatures() {
+            showSignatures = !showSignatures;
+            const btn = document.getElementById('signaturesToggle');
+            if (btn) {
+                btn.classList.toggle('active', showSignatures);
+            }
+            if (currentFuncData && currentFuncBaseName) {
+                updateFunctionsTableBody();
+            }
+        }
+
         // Get the appropriate address based on RVA toggle
         function getDisplayAddress(func, version) {
             if (showRVA && func.rvas && func.rvas[version]) {
@@ -4316,11 +4619,11 @@
                         }
 
                         const confidenceTitle = `${status === 'confirmed' ? 'Confirmed' : status === 'rejected' ? 'Rejected' : 'Candidate'} (${(confidence * 100).toFixed(0)}% conf, ${candidate.method})`;
-                        const srcVer = candidate.source || cellSourceVersion;
 
                         prevAddr = candAddr;
                         prevVersion = version;
-                        return `<td class="${cellClass}" onclick="openComparisonModal('${key}', '${version}', '${srcVer}', true)" title="${confidenceTitle}">${candAddr}</td>`;
+                        // Use cellSourceVersion (based on selectedVersion) instead of candidate.source
+                        return `<td class="${cellClass}" onclick="showComparePanel('${key}', '${version}', '${cellSourceVersion}', true)" title="${confidenceTitle}">${candAddr}</td>`;
                     }
 
                     const isChanged = prevAddr !== null && addr !== prevAddr && addr;
@@ -4338,7 +4641,7 @@
                     if (addr) {
                         // Clickable confirmed address
                         const tierMatchTitle = tier > 0 ? tierTitle + ' - Click to compare' : 'Click to compare';
-                        return `<td class="addr-cell ${cellClass}" onclick="openComparisonModal('${key}', '${version}', '${cellSourceVersion}', false)" style="cursor:pointer" title="${tierMatchTitle}">${addr}</td>`;
+                        return `<td class="addr-cell ${cellClass}" onclick="showComparePanel('${key}', '${version}', '${cellSourceVersion}', false)" style="cursor:pointer" title="${tierMatchTitle}">${addr}</td>`;
                     }
                     return '<td class="addr-cell ' + cellClass + '">—</td>';
                 }).join('');
@@ -4349,7 +4652,15 @@
                 const duplicateIndicator = isDuplicate ? `<span class="fn-duplicate-indicator" title="Duplicate function name">⚠</span>` : '';
                 const gapIndicator = gapPattern ? `<span class="fn-gap-indicator gap-${gapPattern.type}" title="${gapPattern.title}"></span>` : '';
 
-                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + displayName + '">' + categoryBar + tierIndicator + '<span class="fn-name-text">' + displayName + '</span>' + duplicateIndicator + gapIndicator + '</td>' + addrCells + '</tr>';
+                // Signature display
+                const signature = func.signature || '';
+                const tooltipText = signature ? `${displayName}\n${signature}` : displayName;
+                const signatureHtml = showSignatures && signature ? `<span class="fn-signature" title="${signature}">${signature}</span>` : '';
+                const nameContent = showSignatures && signature
+                    ? `<div class="fn-name-wrapper"><span class="fn-name-text">${displayName}</span>${signatureHtml}</div>`
+                    : `<span class="fn-name-text">${displayName}</span>`;
+
+                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + tooltipText.replace(/"/g, '&quot;') + '">' + categoryBar + tierIndicator + nameContent + duplicateIndicator + gapIndicator + '</td>' + addrCells + '</tr>';
             }).join('');
         }
 
@@ -4492,6 +4803,10 @@
                                 <span class="exports-toggle-indicator"></span>
                                 <span>Copy</span>
                             </button>
+                            <button class="exports-toggle" id="signaturesToggle" onclick="toggleSignatures()" title="Show function signatures">
+                                <span class="exports-toggle-indicator"></span>
+                                <span>Sig</span>
+                            </button>
                             <div class="exports-toolbar-separator"></div>
                             <select class="category-filter" id="categoryFilter" onchange="onCategoryFilterChange(this.value)" title="Filter by function category">
                                 <option value="all">All</option>
@@ -4593,10 +4908,10 @@
                         }
 
                         const confidenceTitle = status === 'confirmed' ? 'Confirmed' : status === 'rejected' ? 'Rejected' : 'Candidate (' + (confidence * 100).toFixed(0) + '% conf, ' + candidate.method + ')';
-                        const srcVer = candidate.source || cellSourceVersion;
 
                         prevAddr = candAddr;
-                        return '<td class="' + cellClass + '" onclick="openComparisonModal(\'' + key + '\', \'' + version + '\', \'' + srcVer + '\', true)" title="' + confidenceTitle + '">' + candAddr + '</td>';
+                        // Use cellSourceVersion (based on selectedVersion) instead of candidate.source
+                        return '<td class="' + cellClass + '" onclick="showComparePanel(\'' + key + '\', \'' + version + '\', \'' + cellSourceVersion + '\', true)" title="' + confidenceTitle + '">' + candAddr + '</td>';
                     }
 
                     const isChanged = prevAddr !== null && addr !== prevAddr && addr;
@@ -4604,13 +4919,22 @@
                     prevAddr = addr || prevAddr;
 
                     if (addr) {
-                        return '<td class="addr-cell ' + cellClass + '" onclick="openComparisonModal(\'' + key + '\', \'' + version + '\', \'' + cellSourceVersion + '\', false)" style="cursor:pointer" title="Click to compare">' + addr + '</td>';
+                        return '<td class="addr-cell ' + cellClass + '" onclick="showComparePanel(\'' + key + '\', \'' + version + '\', \'' + cellSourceVersion + '\', false)" style="cursor:pointer" title="Click to compare">' + addr + '</td>';
                     }
                     return '<td class="addr-cell ' + cellClass + '">—</td>';
                 }).join('');
 
                 const tierIndicator = tier > 0 ? '<span class="tier-indicator ' + tierClass + '" title="' + tierTitle + '">' + tier + '</span>' : '';
-                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + displayName + '">' + tierIndicator + '<span class="fn-name-text">' + displayName + '</span></td>' + addrCells + '</tr>';
+
+                // Signature display
+                const signature = func.signature || '';
+                const tooltipText = signature ? `${displayName}\n${signature}` : displayName;
+                const signatureHtml = showSignatures && signature ? `<span class="fn-signature" title="${signature}">${signature}</span>` : '';
+                const nameContent = showSignatures && signature
+                    ? `<div class="fn-name-wrapper"><span class="fn-name-text">${displayName}</span>${signatureHtml}</div>`
+                    : `<span class="fn-name-text">${displayName}</span>`;
+
+                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + tooltipText.replace(/"/g, '&quot;') + '">' + tierIndicator + nameContent + '</td>' + addrCells + '</tr>';
             }).join('')}
                             </tbody>
                         </table>
@@ -4743,6 +5067,21 @@
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
+        }
+
+        // Copy text to clipboard and show feedback
+        function copyToClipboard(text, element) {
+            if (!text || text === '—') return;
+
+            navigator.clipboard.writeText(text).then(() => {
+                // Show visual feedback
+                if (element) {
+                    element.classList.add('copied');
+                    setTimeout(() => element.classList.remove('copied'), 1000);
+                }
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
         }
 
         function renderGenericPlaceholder(container, filename, fileInfo, fileType) {
@@ -4984,23 +5323,19 @@
         // Feature weights and tolerances for count-based similarity
         // Higher weight = more reliable for matching
         const COUNT_FEATURES = {
-            // Very High Confidence - structural complexity metrics
-            instruction_count: { weight: 0.15, tolerance: 0.15 },
-            size: { weight: 0.15, tolerance: 0.15 },
-            // High Confidence - control flow and signature
-            basic_block_count: { weight: 0.12, tolerance: 0.20 },
-            api_count: { weight: 0.12, tolerance: 0.25 },
-            param_count: { weight: 0.10, tolerance: 0.0 },  // Must match exactly
-            // Medium Confidence - call and reference patterns
-            callee_count: { weight: 0.08, tolerance: 0.25 },
-            string_count: { weight: 0.07, tolerance: 0.30 },
-            global_count: { weight: 0.06, tolerance: 0.30 },
-            loop_count: { weight: 0.05, tolerance: 0.35 },
-            // Lower Confidence - optimization dependent
-            constant_count: { weight: 0.04, tolerance: 0.40 },
-            local_var_count: { weight: 0.03, tolerance: 0.40 },
-            caller_count: { weight: 0.02, tolerance: 0.50 },
-            stack_frame_size: { weight: 0.01, tolerance: 0.50 }
+            // All features require exact match except size (allows 15% variance)
+            instruction_count: { weight: 0.15, tolerance: 0.0 },
+            size: { weight: 0.15, tolerance: 0.15 },  // Only feature with tolerance
+            api_count: { weight: 0.12, tolerance: 0.0 },
+            param_count: { weight: 0.10, tolerance: 0.0 },
+            callee_count: { weight: 0.08, tolerance: 0.0 },
+            string_count: { weight: 0.07, tolerance: 0.0 },
+            global_count: { weight: 0.06, tolerance: 0.0 },
+            loop_count: { weight: 0.05, tolerance: 0.0 },
+            constant_count: { weight: 0.04, tolerance: 0.0 },
+            local_var_count: { weight: 0.03, tolerance: 0.0 },
+            caller_count: { weight: 0.02, tolerance: 0.0 },
+            stack_frame_size: { weight: 0.01, tolerance: 0.0 }
         };
 
         // Normalize weights to sum to 1.0
@@ -5047,10 +5382,6 @@
             // Instruction count
             const instrCounts = funcData.instruction_counts || {};
             if (instrCounts[version] !== undefined) vector.instruction_count = instrCounts[version];
-
-            // Basic block count
-            const bbCounts = funcData.basic_block_counts || {};
-            if (bbCounts[version] !== undefined) vector.basic_block_count = bbCounts[version];
 
             // Loop count
             const loopCounts = funcData.loop_counts || {};
@@ -5649,8 +5980,801 @@
             return div.innerHTML;
         }
 
-        // Open comparison modal
-        function openComparisonModal(canonicalId, version, sourceVersion, isCandidate) {
+        // ============================================================
+        // COMPARE PANEL - Row-based aligned comparison view
+        // ============================================================
+
+        // Render a single comparison row
+        function renderCompareRow(sourceVal, metric, targetVal, matchType) {
+            const matchIcons = {
+                'exact': '✓',
+                'close': '≈',
+                'diff': '✗',
+                'missing': '—'
+            };
+            const icon = matchIcons[matchType] || '—';
+            const sourceDisplay = sourceVal !== null && sourceVal !== undefined ? sourceVal : '—';
+            const targetDisplay = targetVal !== null && targetVal !== undefined ? targetVal : '—';
+
+            const srcCopyable = sourceDisplay !== '—' ? 'copyable' : '';
+            const tgtCopyable = targetDisplay !== '—' ? 'copyable' : '';
+            const srcEscaped = escapeHtml(String(sourceDisplay)).replace(/'/g, "\\'");
+            const tgtEscaped = escapeHtml(String(targetDisplay)).replace(/'/g, "\\'");
+            const srcOnclick = srcCopyable ? `onclick="copyToClipboard('${srcEscaped}', this); event.stopPropagation();"` : '';
+            const tgtOnclick = tgtCopyable ? `onclick="copyToClipboard('${tgtEscaped}', this); event.stopPropagation();"` : '';
+
+            return `
+                <div class="compare-row">
+                    <div class="source ${srcCopyable}" title="${escapeHtml(String(sourceDisplay))}" ${srcOnclick}>${escapeHtml(String(sourceDisplay))}</div>
+                    <div class="metric">${escapeHtml(metric)}</div>
+                    <div class="target ${tgtCopyable}" title="${escapeHtml(String(targetDisplay))}" ${tgtOnclick}>${escapeHtml(String(targetDisplay))}</div>
+                    <div class="match-icon ${matchType}">${icon}</div>
+                </div>
+            `;
+        }
+
+        // Determine match type based on values
+        function getMatchType(sourceVal, targetVal, tolerance = 0) {
+            if (sourceVal === null || sourceVal === undefined || targetVal === null || targetVal === undefined) {
+                return 'missing';
+            }
+            if (sourceVal === targetVal) {
+                return 'exact';
+            }
+            if (typeof sourceVal === 'number' && typeof targetVal === 'number' && tolerance > 0) {
+                const diff = Math.abs(sourceVal - targetVal);
+                const avg = (sourceVal + targetVal) / 2;
+                if (avg > 0 && diff / avg <= tolerance) {
+                    return 'close';
+                }
+            }
+            return 'diff';
+        }
+
+        // Render a section with header and rows
+        function renderCompareSection(title, rows, summaryText = '', collapsed = false) {
+            const collapsedClass = collapsed ? ' collapsed' : '';
+            const summaryHtml = summaryText ? `<span class="compare-section-summary">${summaryText}</span>` : '';
+
+            return `
+                <div class="compare-section${collapsedClass}">
+                    <div class="compare-section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                        <span class="compare-section-title">${escapeHtml(title)}</span>
+                        ${summaryHtml}
+                    </div>
+                    <div class="compare-section-content">
+                        <div class="compare-columns-header">
+                            <span class="compare-col-label source">Source</span>
+                            <span class="compare-col-label metric">Metric</span>
+                            <span class="compare-col-label target">Target</span>
+                            <span class="compare-col-label match"></span>
+                        </div>
+                        ${rows}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render list comparison (callees, strings, etc.)
+        function renderCompareListSection(title, sourceItems, targetItems, collapsed = false, itemType = 'default') {
+            // Get normalizer for this item type
+            const normalizer = getNormalizer(itemType);
+
+            // Pair items using smart normalization
+            const pairs = pairItems(sourceItems, targetItems, normalizer);
+
+            // Count matches
+            const matchCount = pairs.filter(p => p.matchType === 'exact' || p.matchType === 'normalized').length;
+            const total = pairs.length;
+            const exactCount = pairs.filter(p => p.matchType === 'exact').length;
+            const normalizedCount = pairs.filter(p => p.matchType === 'normalized').length;
+
+            let summaryText = 'empty';
+            if (total > 0) {
+                if (normalizedCount > 0) {
+                    summaryText = `<span class="match-count">${exactCount}</span>+<span class="match-count-normalized">${normalizedCount}</span>/${total}`;
+                } else {
+                    summaryText = `<span class="match-count">${matchCount}</span>/${total} matched`;
+                }
+            }
+
+            const collapsedClass = collapsed ? ' collapsed' : '';
+
+            // Build paired rows table
+            let listHtml = '<div class="compare-paired-list">';
+
+            if (pairs.length === 0) {
+                listHtml += '<div class="compare-paired-empty">No items</div>';
+            } else {
+                // Header row
+                listHtml += `
+                    <div class="compare-paired-header">
+                        <span class="paired-col-source">Source</span>
+                        <span class="paired-col-match"></span>
+                        <span class="paired-col-target">Target</span>
+                    </div>
+                `;
+
+                // Data rows
+                pairs.forEach(pair => {
+                    const srcDisplay = pair.source ? formatListItem(pair.source, itemType) : '—';
+                    const tgtDisplay = pair.target ? formatListItem(pair.target, itemType) : '—';
+                    const srcFull = pair.source ? escapeHtml(String(pair.source)) : '';
+                    const tgtFull = pair.target ? escapeHtml(String(pair.target)) : '';
+
+                    let matchIcon, matchClass;
+                    switch (pair.matchType) {
+                        case 'exact':
+                            matchIcon = '✓';
+                            matchClass = 'match-exact';
+                            break;
+                        case 'normalized':
+                            matchIcon = '≈';
+                            matchClass = 'match-normalized';
+                            break;
+                        case 'source-only':
+                            matchIcon = '←';
+                            matchClass = 'match-source-only';
+                            break;
+                        case 'target-only':
+                            matchIcon = '→';
+                            matchClass = 'match-target-only';
+                            break;
+                        default:
+                            matchIcon = '?';
+                            matchClass = '';
+                    }
+
+                    const srcCopyable = pair.source ? 'copyable' : '';
+                    const tgtCopyable = pair.target ? 'copyable' : '';
+                    const srcOnclick = pair.source ? `onclick="copyToClipboard('${srcFull.replace(/'/g, "\\'")}', this); event.stopPropagation();"` : '';
+                    const tgtOnclick = pair.target ? `onclick="copyToClipboard('${tgtFull.replace(/'/g, "\\'")}', this); event.stopPropagation();"` : '';
+
+                    listHtml += `
+                        <div class="compare-paired-row ${matchClass}">
+                            <span class="paired-col-source ${srcCopyable}" title="${srcFull}" ${srcOnclick}>${escapeHtml(srcDisplay)}</span>
+                            <span class="paired-col-match">${matchIcon}</span>
+                            <span class="paired-col-target ${tgtCopyable}" title="${tgtFull}" ${tgtOnclick}>${escapeHtml(tgtDisplay)}</span>
+                        </div>
+                    `;
+                });
+            }
+
+            listHtml += '</div>';
+
+            return `
+                <div class="compare-section${collapsedClass}">
+                    <div class="compare-section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                        <span class="compare-section-title">${escapeHtml(title)}</span>
+                        <span class="compare-section-summary">${summaryText}</span>
+                    </div>
+                    <div class="compare-section-content">
+                        ${listHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Format list item for display based on item type
+        function formatListItem(item, itemType = 'default') {
+            let display = String(item);
+
+            if (display.includes('|')) {
+                const parts = display.split('|');
+
+                switch (itemType) {
+                    case 'callees':
+                    case 'callers':
+                        // Format: "name|address" or "name@suffix|address" - show name
+                        display = parts[0] || display;
+                        // Strip @suffix if present
+                        const atIdx = display.indexOf('@');
+                        if (atIdx > 0) {
+                            display = display.substring(0, atIdx);
+                        }
+                        break;
+                    case 'strings':
+                        // Format: "address|label|value" - show value (last part)
+                        display = parts[parts.length - 1] || parts[0];
+                        break;
+                    case 'constants':
+                        // Format: "address||value" - show value (last non-empty part)
+                        display = parts[parts.length - 1] || parts[0];
+                        break;
+                    case 'globals':
+                        // Format: "name|address" - show name
+                        display = parts[0] || display;
+                        break;
+                    default:
+                        // Default: prefer last part
+                        display = parts[parts.length - 1] || parts[0];
+                }
+            }
+
+            // Truncate long items
+            if (display.length > 30) {
+                display = display.substring(0, 27) + '...';
+            }
+            return display;
+        }
+
+        // Normalization functions for matching items across versions
+        // Each returns a normalized key for comparison
+
+        // Normalize string references: extract value, normalize paths
+        function normalizeString(item) {
+            const str = String(item);
+            // Format: "address|label|value" - extract value (3rd part)
+            const parts = str.split('|');
+            let value = parts.length >= 3 ? parts[2] : (parts.length >= 2 ? parts[1] : str);
+
+            // Normalize file paths - extract basename and lowercase
+            if (value.includes('\\') || value.includes('/') || value.match(/\.\w{1,4}$/)) {
+                // Extract filename from path
+                value = value.replace(/\\/g, '/');
+                const lastSlash = value.lastIndexOf('/');
+                if (lastSlash >= 0) {
+                    value = value.substring(lastSlash + 1);
+                }
+            }
+            return value.toLowerCase().trim();
+        }
+
+        // Normalize callee/caller names: extract function name before @ or |
+        function normalizeCallee(item) {
+            const str = String(item);
+            // Format: "name|address" or "name@suffix|address"
+            const parts = str.split('|');
+            let name = parts[0] || str;
+            // Remove @suffix (like @6fba4400)
+            const atIdx = name.indexOf('@');
+            if (atIdx > 0) {
+                name = name.substring(0, atIdx);
+            }
+            return name.toLowerCase().trim();
+        }
+
+        // Normalize constants: extract value (3rd part after ||)
+        function normalizeConstant(item) {
+            const str = String(item);
+            // Format: "address||value"
+            const parts = str.split('|');
+            // Value is the 3rd part (index 2) since format is addr||val (empty middle)
+            const value = parts.length >= 3 ? parts[2] : str;
+            // Normalize hex values
+            return value.toLowerCase().replace(/^0x/, '').trim();
+        }
+
+        // Normalize globals: extract name or address
+        function normalizeGlobal(item) {
+            const str = String(item);
+            const parts = str.split('|');
+            // Prefer name (2nd part) if present, else address
+            const name = parts.length >= 2 && parts[1] ? parts[1] : parts[0];
+            return name.toLowerCase().trim();
+        }
+
+        // Get normalizer function based on item type
+        function getNormalizer(itemType) {
+            switch (itemType) {
+                case 'strings': return normalizeString;
+                case 'callees': return normalizeCallee;
+                case 'callers': return normalizeCallee;
+                case 'constants': return normalizeConstant;
+                case 'globals': return normalizeGlobal;
+                default: return (x) => String(x).toLowerCase();
+            }
+        }
+
+        // Pair items from source and target using normalization
+        // Returns array of {source, target, matchType} objects
+        function pairItems(sourceItems, targetItems, normalizeFunc) {
+            const pairs = [];
+            const usedTargetIndices = new Set();
+
+            // Build normalized lookup for targets
+            const targetNormalized = targetItems.map(t => normalizeFunc(t));
+
+            // First pass: find matches for each source item
+            sourceItems.forEach(srcItem => {
+                const srcKey = normalizeFunc(srcItem);
+                let matchIdx = -1;
+                let matchType = 'source-only';
+
+                // Find first unused target with matching normalized key
+                for (let i = 0; i < targetItems.length; i++) {
+                    if (!usedTargetIndices.has(i) && targetNormalized[i] === srcKey) {
+                        matchIdx = i;
+                        // Check if exact match (original strings equal)
+                        matchType = String(srcItem).toLowerCase() === String(targetItems[i]).toLowerCase()
+                            ? 'exact' : 'normalized';
+                        break;
+                    }
+                }
+
+                if (matchIdx >= 0) {
+                    pairs.push({
+                        source: srcItem,
+                        target: targetItems[matchIdx],
+                        matchType
+                    });
+                    usedTargetIndices.add(matchIdx);
+                } else {
+                    pairs.push({ source: srcItem, target: null, matchType: 'source-only' });
+                }
+            });
+
+            // Second pass: add unmatched targets
+            targetItems.forEach((targetItem, i) => {
+                if (!usedTargetIndices.has(i)) {
+                    pairs.push({ source: null, target: targetItem, matchType: 'target-only' });
+                }
+            });
+
+            // Sort: matched first, then source-only, then target-only
+            const order = { 'exact': 0, 'normalized': 1, 'source-only': 2, 'target-only': 3 };
+            pairs.sort((a, b) => order[a.matchType] - order[b.matchType]);
+
+            return pairs;
+        }
+
+        // Render hash comparison
+        function renderCompareHashSection(title, sourceHash, targetHash, collapsed = false) {
+            const isMatch = sourceHash && targetHash && sourceHash === targetHash;
+            const matchClass = isMatch ? ' match' : '';
+            const collapsedClass = collapsed ? ' collapsed' : '';
+            const summaryText = isMatch ? '<span class="match-count">✓ MATCH</span>' : 'different';
+
+            const srcCopyable = sourceHash ? 'copyable' : '';
+            const tgtCopyable = targetHash ? 'copyable' : '';
+            const srcOnclick = sourceHash ? `onclick="copyToClipboard('${sourceHash}', this); event.stopPropagation();"` : '';
+            const tgtOnclick = targetHash ? `onclick="copyToClipboard('${targetHash}', this); event.stopPropagation();"` : '';
+
+            return `
+                <div class="compare-section${collapsedClass}">
+                    <div class="compare-section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                        <span class="compare-section-title">${escapeHtml(title)}</span>
+                        <span class="compare-section-summary">${summaryText}</span>
+                    </div>
+                    <div class="compare-section-content">
+                        <div class="compare-hash-row">
+                            <div class="compare-hash-value${matchClass}">
+                                <div class="hash-label">Source</div>
+                                <span class="${srcCopyable}" ${srcOnclick}>${sourceHash || '—'}</span>
+                            </div>
+                            <div class="compare-hash-value${matchClass}">
+                                <div class="hash-label">Target</div>
+                                <span class="${tgtCopyable}" ${tgtOnclick}>${targetHash || '—'}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render signature comparison
+        function renderCompareSignatureSection(sourceData, targetData, collapsed = false) {
+            const collapsedClass = collapsed ? ' collapsed' : '';
+
+            const sourceConv = sourceData.calling_convention || '—';
+            const targetConv = targetData?.calling_convention || '—';
+            const sourceRet = sourceData.return_type || '—';
+            const targetRet = targetData?.return_type || '—';
+            const sourceSig = sourceData.signature || '—';
+            const targetSig = targetData?.signature || '—';
+
+            const convMatch = sourceConv === targetConv;
+            const retMatch = sourceRet === targetRet;
+
+            const srcSigCopyable = sourceSig !== '—' ? 'copyable' : '';
+            const tgtSigCopyable = targetSig !== '—' ? 'copyable' : '';
+            const srcSigEscaped = escapeHtml(sourceSig).replace(/'/g, "\\'");
+            const tgtSigEscaped = escapeHtml(targetSig).replace(/'/g, "\\'");
+            const srcSigOnclick = srcSigCopyable ? `onclick="copyToClipboard('${srcSigEscaped}', this); event.stopPropagation();"` : '';
+            const tgtSigOnclick = tgtSigCopyable ? `onclick="copyToClipboard('${tgtSigEscaped}', this); event.stopPropagation();"` : '';
+
+            return `
+                <div class="compare-section${collapsedClass}">
+                    <div class="compare-section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                        <span class="compare-section-title">Signature</span>
+                        <span class="compare-section-summary">${convMatch && retMatch ? '<span class="match-count">✓</span>' : ''}</span>
+                    </div>
+                    <div class="compare-section-content">
+                        <div class="compare-columns-header">
+                            <span class="compare-col-label source">Source</span>
+                            <span class="compare-col-label metric">Field</span>
+                            <span class="compare-col-label target">Target</span>
+                            <span class="compare-col-label match"></span>
+                        </div>
+                        ${renderCompareRow(sourceConv, 'Convention', targetConv, convMatch ? 'exact' : 'diff')}
+                        ${renderCompareRow(sourceRet, 'Return', targetRet, retMatch ? 'exact' : 'diff')}
+                        <div class="compare-signature-row">
+                            <div class="sig-label">Source Signature</div>
+                            <span class="${srcSigCopyable}" ${srcSigOnclick}>${escapeHtml(sourceSig)}</span>
+                        </div>
+                        <div class="compare-signature-row">
+                            <div class="sig-label">Target Signature</div>
+                            <span class="${tgtSigCopyable}" ${tgtSigOnclick}>${escapeHtml(targetSig)}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render Match Score Breakdown section showing tier details and feature contributions
+        function renderMatchScoreBreakdown(identityMatch, sourceVersion, targetVersion) {
+            if (!identityMatch) return '';
+
+            const { tier, confidence, breakdown } = identityMatch;
+            const tier1 = breakdown?.tier1 || { matched: false, reason: null };
+            const tier2 = breakdown?.tier2 || { score: 0, vectorBreakdown: {}, valueBonusBreakdown: {} };
+            const tier3 = breakdown?.tier3 || { plausible: true, warnings: [] };
+
+            let html = '<div class="score-breakdown">';
+
+            // Tier 1: Hash Matches
+            const tier1Class = tier1.matched ? 'tier-matched' : '';
+            html += `
+                <div class="score-breakdown-tier ${tier1Class}">
+                    <div class="tier-header">
+                        <span class="tier-icon">${tier1.matched ? '🔒' : '○'}</span>
+                        <span class="tier-label">Tier 1: Hash Match</span>
+                        <span class="tier-status">${tier1.matched ? 'MATCHED' : 'No Match'}</span>
+                    </div>
+                    ${tier1.matched && tier1.reason ? `<div class="tier-reason">${escapeHtml(tier1.reason)}</div>` : ''}
+                </div>
+            `;
+
+            // Tier 2: Vector Similarity (only show details if Tier 1 didn't match)
+            if (!tier1.matched) {
+                const vectorBreakdown = tier2.vectorBreakdown || {};
+                const valueBonusBreakdown = tier2.valueBonusBreakdown || {};
+                const baseScore = tier2.score || 0;
+                const valueBonus = tier2.valueBonus || 0;
+                const combinedScore = tier2.combinedScore || baseScore;
+
+                const tier2Class = combinedScore >= 70 ? 'tier-matched' : combinedScore >= 40 ? 'tier-partial' : '';
+
+                html += `
+                    <div class="score-breakdown-tier ${tier2Class}">
+                        <div class="tier-header">
+                            <span class="tier-icon">${combinedScore >= 70 ? '🎯' : combinedScore >= 40 ? '◐' : '○'}</span>
+                            <span class="tier-label">Tier 2: Vector Similarity</span>
+                            <span class="tier-status">${combinedScore}% (base ${baseScore} + bonus ${valueBonus.toFixed(1)})</span>
+                        </div>
+                `;
+
+                // Feature contribution table
+                const features = Object.entries(vectorBreakdown)
+                    .filter(([_, data]) => data.val1 !== undefined || data.val2 !== undefined)
+                    .sort((a, b) => (b[1].contribution || 0) - (a[1].contribution || 0));
+
+                if (features.length > 0) {
+                    html += '<table class="score-feature-table"><tbody>';
+                    html += '<tr class="feat-header"><th>Feature</th><th>Source</th><th>Target</th><th>Sim%</th><th>Contrib</th></tr>';
+
+                    for (const [featName, data] of features.slice(0, 10)) {
+                        const sim = data.similarity || 0;
+                        const contrib = data.contribution || 0;
+                        const contribPct = Math.min(100, contrib * 10); // Scale for display
+                        const barClass = sim >= 80 ? 'high' : sim >= 50 ? 'medium' : 'low';
+
+                        html += `
+                            <tr>
+                                <td class="feat-name">${featName.replace(/_/g, ' ')}</td>
+                                <td class="feat-val">${data.val1 ?? '—'}</td>
+                                <td class="feat-val">${data.val2 ?? '—'}</td>
+                                <td class="feat-sim ${barClass}">${sim}%</td>
+                                <td class="feat-contrib">
+                                    <div class="contrib-bar">
+                                        <div class="contrib-bar-fill ${barClass}" style="width: ${contribPct}%"></div>
+                                    </div>
+                                    <span class="contrib-value">${contrib.toFixed(2)}</span>
+                                </td>
+                            </tr>
+                        `;
+                    }
+                    html += '</tbody></table>';
+                }
+
+                // Value bonuses
+                const valueBonuses = Object.entries(valueBonusBreakdown)
+                    .filter(([_, data]) => data.bonus > 0);
+
+                if (valueBonuses.length > 0) {
+                    html += '<div class="score-value-bonuses"><span class="bonuses-label">Value Bonuses:</span>';
+                    for (const [bonusType, data] of valueBonuses) {
+                        const label = bonusType.replace(/_/g, ' ').replace('overlap', '');
+                        html += `<span class="bonus-tag" title="${data.jaccard}% Jaccard overlap">+${data.bonus.toFixed(1)} ${label}</span>`;
+                    }
+                    html += '</div>';
+                }
+
+                html += '</div>';
+            }
+
+            // Tier 3: Validation Warnings
+            if (tier3.warnings && tier3.warnings.length > 0) {
+                const warningClass = tier3.plausible ? '' : 'tier-warning';
+                html += `
+                    <div class="score-breakdown-tier ${warningClass}">
+                        <div class="tier-header">
+                            <span class="tier-icon">${tier3.plausible ? '⚠️' : '❌'}</span>
+                            <span class="tier-label">Tier 3: Validation</span>
+                            <span class="tier-status">${tier3.plausible ? 'Warnings' : 'IMPLAUSIBLE'}</span>
+                        </div>
+                        <div class="score-warnings">
+                            ${tier3.warnings.map(w => `<div class="warning-item">${escapeHtml(w)}</div>`).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            html += '</div>';
+            return html;
+        }
+
+        // Find top N alternate function matches for a source function in a target version
+        // Uses sequential filtering: param count -> calling convention -> string count -> similar size
+        function findTopAlternateMatches(sourceFuncData, sourceVersion, targetVersion, topN = 3, excludeAddress = null) {
+            if (!currentFuncData?.functions) return [];
+
+            const alternates = [];
+
+            // Extract source properties for filtering
+            const sourceParamCount = sourceFuncData.param_counts?.[sourceVersion] || 0;
+            const sourceCallingConv = sourceFuncData.calling_convention || '';
+            const sourceStringCount = sourceFuncData.string_counts?.[sourceVersion] || (sourceFuncData.strings?.[sourceVersion]?.length || 0);
+            const sourceSize = sourceFuncData.sizes?.[sourceVersion] || 0;
+
+            // Build source object for comparison (after filtering)
+            const sourceObj = {
+                size: sourceSize,
+                callees: sourceFuncData.callees?.[sourceVersion] || [],
+                strings: sourceFuncData.strings?.[sourceVersion] || [],
+                constants: sourceFuncData.constants?.[sourceVersion] || [],
+                globals: sourceFuncData.globals?.[sourceVersion] || [],
+                mnemonic_hash: sourceFuncData.mnemonic_hashes?.[sourceVersion] || '',
+                indexes: sourceFuncData.indexes || {},
+                instructions: sourceFuncData.instructions?.[sourceVersion] || [],
+                tags: sourceFuncData.tags?.[sourceVersion] || [],
+                instruction_count: sourceFuncData.instruction_counts?.[sourceVersion] || (sourceFuncData.instructions?.[sourceVersion]?.length || 0),
+                loop_count: sourceFuncData.loop_counts?.[sourceVersion] || 0,
+                stack_frame_size: sourceFuncData.stack_frame_sizes?.[sourceVersion] || 0,
+                callee_count: sourceFuncData.callee_counts?.[sourceVersion] || (sourceFuncData.callees?.[sourceVersion]?.length || 0),
+                caller_count: sourceFuncData.caller_counts?.[sourceVersion] || (sourceFuncData.callers?.[sourceVersion]?.length || 0),
+                string_count: sourceStringCount,
+                constant_count: sourceFuncData.constant_counts?.[sourceVersion] || (sourceFuncData.constants?.[sourceVersion]?.length || 0),
+                global_count: sourceFuncData.global_counts?.[sourceVersion] || (sourceFuncData.globals?.[sourceVersion]?.length || 0),
+                api_count: sourceFuncData.api_counts?.[sourceVersion] || 0,
+                param_count: sourceParamCount
+            };
+
+            // Scan all functions with sequential filtering
+            for (const [canonicalId, func] of Object.entries(currentFuncData.functions)) {
+                const targetAddr = func.addresses?.[targetVersion];
+                if (!targetAddr) continue; // No address in target version
+                if (excludeAddress && targetAddr.toLowerCase() === excludeAddress.toLowerCase()) continue;
+
+                // FILTER 1: Same number of parameters (must match exactly)
+                const targetParamCount = func.param_counts?.[targetVersion] || 0;
+                if (targetParamCount !== sourceParamCount) continue;
+
+                // FILTER 2: Same calling convention
+                const targetCallingConv = func.calling_convention || '';
+                if (targetCallingConv !== sourceCallingConv) continue;
+
+                // FILTER 3: Same number of string references
+                const targetStringCount = func.string_counts?.[targetVersion] || (func.strings?.[targetVersion]?.length || 0);
+                if (targetStringCount !== sourceStringCount) continue;
+
+                // FILTER 4: Similar size (within 25% tolerance)
+                const targetSize = func.sizes?.[targetVersion] || 0;
+                if (sourceSize > 0 && targetSize > 0) {
+                    const sizeRatio = Math.min(sourceSize, targetSize) / Math.max(sourceSize, targetSize);
+                    if (sizeRatio < 0.75) continue;
+                }
+
+                // Build target object for full match calculation
+                const targetObj = {
+                    size: targetSize,
+                    callees: func.callees?.[targetVersion] || [],
+                    strings: func.strings?.[targetVersion] || [],
+                    constants: func.constants?.[targetVersion] || [],
+                    globals: func.globals?.[targetVersion] || [],
+                    mnemonic_hash: func.mnemonic_hashes?.[targetVersion] || '',
+                    indexes: func.indexes || {},
+                    instructions: func.instructions?.[targetVersion] || [],
+                    tags: func.tags?.[targetVersion] || [],
+                    instruction_count: func.instruction_counts?.[targetVersion] || (func.instructions?.[targetVersion]?.length || 0),
+                    loop_count: func.loop_counts?.[targetVersion] || 0,
+                    stack_frame_size: func.stack_frame_sizes?.[targetVersion] || 0,
+                    callee_count: func.callee_counts?.[targetVersion] || (func.callees?.[targetVersion]?.length || 0),
+                    caller_count: func.caller_counts?.[targetVersion] || (func.callers?.[targetVersion]?.length || 0),
+                    string_count: targetStringCount,
+                    constant_count: func.constant_counts?.[targetVersion] || (func.constants?.[targetVersion]?.length || 0),
+                    global_count: func.global_counts?.[targetVersion] || (func.globals?.[targetVersion]?.length || 0),
+                    api_count: func.api_counts?.[targetVersion] || 0,
+                    param_count: targetParamCount
+                };
+
+                // Calculate match score for candidates that pass all filters
+                const match = calculateIdentityMatch(sourceObj, targetObj, sourceVersion, targetVersion);
+
+                if (match.score > 20) { // Only consider if at least 20% match
+                    alternates.push({
+                        canonicalId,
+                        address: targetAddr,
+                        name: func.name || func.display_name || canonicalId,
+                        score: match.score,
+                        tier: match.tier,
+                        tierName: match.tierName,
+                        funcData: func
+                    });
+                }
+            }
+
+            // Sort by score descending and return top N
+            alternates.sort((a, b) => b.score - a.score);
+            return alternates.slice(0, topN);
+        }
+
+        // Build the complete comparison panel content
+        function buildCompareContent(funcData, candidateFuncData, sourceVersion, targetVersion, identityMatch) {
+            const targetData = candidateFuncData || funcData;
+
+            // Extract all values for source
+            const sourceSize = funcData.sizes?.[sourceVersion] || null;
+            const sourceInstrCount = funcData.instructions?.[sourceVersion]?.length || 0;
+            const sourceLoopCount = funcData.loop_counts?.[sourceVersion] ?? null;
+            const sourceStackFrame = funcData.stack_frame_sizes?.[sourceVersion] || 0;
+            const sourceCalleeCount = funcData.callees?.[sourceVersion]?.length || 0;
+            const sourceStringCount = funcData.strings?.[sourceVersion]?.length || 0;
+            const sourceConstCount = funcData.constants?.[sourceVersion]?.length || 0;
+            const sourceGlobalCount = funcData.globals?.[sourceVersion]?.length || 0;
+
+            // Extract all values for target
+            const targetSize = targetData.sizes?.[targetVersion] || null;
+            const targetInstrCount = targetData.instructions?.[targetVersion]?.length || 0;
+            const targetLoopCount = targetData.loop_counts?.[targetVersion] ?? null;
+            const targetStackFrame = targetData.stack_frame_sizes?.[targetVersion] || 0;
+            const targetCalleeCount = targetData.callees?.[targetVersion]?.length || 0;
+            const targetStringCount = targetData.strings?.[targetVersion]?.length || 0;
+            const targetConstCount = targetData.constants?.[targetVersion]?.length || 0;
+            const targetGlobalCount = targetData.globals?.[targetVersion]?.length || 0;
+
+            // Build structural counts section
+            const countsRows =
+                renderCompareRow(sourceSize, 'Size (bytes)', targetSize, getMatchType(sourceSize, targetSize, 0.15)) +
+                renderCompareRow(sourceInstrCount, 'Instructions', targetInstrCount, getMatchType(sourceInstrCount, targetInstrCount, 0.15)) +
+                renderCompareRow(sourceLoopCount, 'Loops', targetLoopCount, getMatchType(sourceLoopCount, targetLoopCount)) +
+                renderCompareRow(sourceStackFrame, 'Stack Frame', targetStackFrame, getMatchType(sourceStackFrame, targetStackFrame, 0.1)) +
+                renderCompareRow(sourceCalleeCount, 'Callees', targetCalleeCount, getMatchType(sourceCalleeCount, targetCalleeCount, 0.2)) +
+                renderCompareRow(sourceStringCount, 'Strings', targetStringCount, getMatchType(sourceStringCount, targetStringCount, 0.3)) +
+                renderCompareRow(sourceConstCount, 'Constants', targetConstCount, getMatchType(sourceConstCount, targetConstCount, 0.3)) +
+                renderCompareRow(sourceGlobalCount, 'Globals', targetGlobalCount, getMatchType(sourceGlobalCount, targetGlobalCount, 0.25));
+
+            // Count matches for summary
+            let matchedCounts = 0;
+            if (sourceSize === targetSize) matchedCounts++;
+            if (sourceInstrCount === targetInstrCount) matchedCounts++;
+            if (sourceLoopCount === targetLoopCount) matchedCounts++;
+            if (sourceStackFrame === targetStackFrame) matchedCounts++;
+            if (sourceCalleeCount === targetCalleeCount) matchedCounts++;
+            if (sourceStringCount === targetStringCount) matchedCounts++;
+            if (sourceConstCount === targetConstCount) matchedCounts++;
+            if (sourceGlobalCount === targetGlobalCount) matchedCounts++;
+
+            // Get arrays for list sections
+            const sourceCallees = funcData.callees?.[sourceVersion] || [];
+            const targetCallees = targetData.callees?.[targetVersion] || [];
+            const sourceCallers = funcData.callers?.[sourceVersion] || [];
+            const targetCallers = targetData.callers?.[targetVersion] || [];
+            const sourceStrings = funcData.strings?.[sourceVersion] || [];
+            const targetStrings = targetData.strings?.[targetVersion] || [];
+            const sourceConstants = funcData.constants?.[sourceVersion] || [];
+            const targetConstants = targetData.constants?.[targetVersion] || [];
+            const sourceGlobals = funcData.globals?.[sourceVersion] || [];
+            const targetGlobals = targetData.globals?.[targetVersion] || [];
+            const sourceTags = funcData.tags?.[sourceVersion] || [];
+            const targetTags = targetData.tags?.[targetVersion] || [];
+
+            // Get hashes
+            const sourceMnemonicHash = funcData.mnemonic_hashes?.[sourceVersion] || '';
+            const targetMnemonicHash = targetData.mnemonic_hashes?.[targetVersion] || '';
+
+            // Build content
+            let html = '';
+
+            // Structural Counts - with score alongside counts summary
+            const scoreInfo = identityMatch ? ` · ${identityMatch.score}%` : '';
+            const countsSummaryWithScore = `<span class="match-count">${matchedCounts}</span>/8 exact${scoreInfo}`;
+            html += renderCompareSection('Structural Counts', countsRows, countsSummaryWithScore, false);
+
+            // Section 2: Mnemonic Hash
+            html += renderCompareHashSection('Mnemonic Hash', sourceMnemonicHash, targetMnemonicHash, false);
+
+            // Section 3: Signature
+            html += renderCompareSignatureSection(funcData, targetData, true);
+
+            // Section 4: Callees (match by function name)
+            html += renderCompareListSection('Callees', sourceCallees, targetCallees, sourceCallees.length > 10, 'callees');
+
+            // Section 5: Callers (match by function name)
+            html += renderCompareListSection('Callers', sourceCallers, targetCallers, sourceCallers.length > 10, 'callers');
+
+            // Section 6: Strings (match by value with path normalization)
+            html += renderCompareListSection('String References', sourceStrings, targetStrings, true, 'strings');
+
+            // Section 7: Constants (match by value)
+            html += renderCompareListSection('Constants', sourceConstants, targetConstants, true, 'constants');
+
+            // Section 8: Globals (match by name)
+            html += renderCompareListSection('Global References', sourceGlobals, targetGlobals, true, 'globals');
+
+            // Section 9: Tags
+            html += renderCompareListSection('Function Tags', sourceTags, targetTags, true, 'default');
+
+            return html;
+        }
+
+        // Highlight row and column for compare panel
+        function highlightCompareCell(canonicalId, targetVersion) {
+            // Clear any existing highlights
+            clearCompareHighlights();
+
+            const funcTable = document.getElementById('funcTableBody');
+            if (!funcTable) return;
+
+            // Find the row by matching the function name
+            const funcData = currentFuncData?.functions?.[canonicalId];
+            const funcName = funcData?.name || funcData?.display_name || canonicalId;
+
+            const rows = funcTable.querySelectorAll('tr');
+            for (const row of rows) {
+                const nameCell = row.querySelector('.fn-name-cell .fn-name-text');
+                if (nameCell && nameCell.textContent === funcName) {
+                    row.classList.add('compare-active-row');
+
+                    // Find the column index for targetVersion
+                    const versionGroups = currentFuncData?.version_groups || [];
+                    let colIndex = -1;
+                    for (let i = 0; i < versionGroups.length; i++) {
+                        if (versionGroups[i].versions.includes(targetVersion)) {
+                            colIndex = i + 1; // +1 for the name column
+                            break;
+                        }
+                    }
+
+                    if (colIndex > 0) {
+                        const cells = row.querySelectorAll('td');
+                        if (cells[colIndex]) {
+                            cells[colIndex].classList.add('compare-active-cell');
+                        }
+
+                        // Highlight column header
+                        const headerRow = funcTable.closest('table')?.querySelector('thead tr');
+                        if (headerRow) {
+                            const headerCells = headerRow.querySelectorAll('th');
+                            if (headerCells[colIndex]) {
+                                headerCells[colIndex].classList.add('compare-active-column');
+                            }
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+
+        // Clear compare panel highlights
+        function clearCompareHighlights() {
+            document.querySelectorAll('.compare-active-row').forEach(el => el.classList.remove('compare-active-row'));
+            document.querySelectorAll('.compare-active-cell').forEach(el => el.classList.remove('compare-active-cell'));
+            document.querySelectorAll('.compare-active-column').forEach(el => el.classList.remove('compare-active-column'));
+        }
+
+        // Show the compare panel with function data
+        function showComparePanel(canonicalId, version, sourceVersion, isCandidate) {
             // If copyOnClick mode is enabled, copy address to clipboard instead
             if (copyOnClick) {
                 const funcData = currentFuncData?.functions?.[canonicalId];
@@ -5672,8 +6796,8 @@
                 return;
             }
 
-            const modal = document.getElementById('comparisonModal');
-            if (!modal) return;
+            const panel = document.getElementById('comparePanel');
+            if (!panel) return;
 
             // Get function data
             const funcData = currentFuncData?.functions?.[canonicalId];
@@ -5692,16 +6816,13 @@
 
             // Get addresses
             const sourceAddr = funcData.addresses?.[sourceVersion] || '—';
-            const sourceRva = funcData.rvas?.[sourceVersion] || '';
             let targetAddr = funcData.addresses?.[version];
-            let targetRva = funcData.rvas?.[version] || '';
             let candidate = null;
-            let candidateFuncData = null;  // Full function data for the candidate
+            let candidateFuncData = null;
 
             if (!targetAddr && funcData.candidates?.[version]) {
                 candidate = funcData.candidates[version];
                 targetAddr = candidate.address;
-                targetRva = candidate.rva || '';
 
                 // Look up the actual function data for the candidate by its address
                 const matchedFunc = findFunctionByAddress(candidate.address, version);
@@ -5710,512 +6831,336 @@
                 }
             }
 
-            // Get sizes (stored as funcData.sizes[version] in new structure)
-            // For candidates, look up the matched function's data
-            const sourceSize = funcData.sizes?.[sourceVersion] || null;
-            const targetSize = candidateFuncData?.sizes?.[version] || candidate?.size || funcData.sizes?.[version] || null;
+            // Build source and target objects for identity matching
+            const targetData = candidateFuncData || funcData;
+            const sourceObj = {
+                size: funcData.sizes?.[sourceVersion],
+                callees: funcData.callees?.[sourceVersion] || [],
+                strings: funcData.strings?.[sourceVersion] || [],
+                constants: funcData.constants?.[sourceVersion] || [],
+                globals: funcData.globals?.[sourceVersion] || [],
+                mnemonic_hash: funcData.mnemonic_hashes?.[sourceVersion] || '',
+                indexes: funcData.indexes || parseIndexToObject(funcData.index),
+                loop_count: funcData.loop_counts?.[sourceVersion],
+                stack_frame: funcData.stack_frame_sizes?.[sourceVersion] || 0,
+                instructions: funcData.instructions?.[sourceVersion] || []
+            };
+            const targetObj = {
+                size: targetData.sizes?.[version],
+                callees: targetData.callees?.[version] || [],
+                strings: targetData.strings?.[version] || [],
+                constants: targetData.constants?.[version] || [],
+                globals: targetData.globals?.[version] || [],
+                mnemonic_hash: targetData.mnemonic_hashes?.[version] || '',
+                indexes: targetData.indexes || parseIndexToObject(targetData.index),
+                loop_count: targetData.loop_counts?.[version],
+                stack_frame: targetData.stack_frame_sizes?.[version] || 0,
+                instructions: targetData.instructions?.[version] || []
+            };
 
-            // Get callees (stored as funcData.callees[version] in new structure)
-            const sourceCallees = funcData.callees?.[sourceVersion] || [];
-            const targetCallees = candidateFuncData?.callees?.[version] || candidate?.callees || funcData.callees?.[version] || [];
+            // Calculate identity match score
+            let identityMatch = calculateIdentityMatch(sourceObj, targetObj, sourceVersion, version);
+            let overallScore = identityMatch.score;
 
-            // Get instructions (stored as funcData.instructions[version] in new structure)
-            const sourceInstructions = funcData.instructions?.[sourceVersion] || [];
-            const targetInstructions = candidateFuncData?.instructions?.[version] || candidate?.instructions || funcData.instructions?.[version] || [];
+            // For candidates, check if any alternate has a higher score and swap if so
+            if (candidate) {
+                const alternates = findTopAlternateMatches(funcData, sourceVersion, version, 5, null);
+                const betterAlt = alternates.find(alt => alt.score > overallScore);
+                if (betterAlt) {
+                    // Swap: use the better alternate as the main candidate
+                    const betterMatchedFunc = findFunctionByAddress(betterAlt.address, version);
+                    if (betterMatchedFunc) {
+                        candidateFuncData = betterMatchedFunc.func;
+                        targetAddr = betterAlt.address;
+                        candidate = {
+                            ...candidate,
+                            address: betterAlt.address,
+                            matched_to: betterAlt.name
+                        };
+                        // Recalculate identity match with the better candidate
+                        const newTargetObj = {
+                            size: candidateFuncData.sizes?.[version],
+                            callees: candidateFuncData.callees?.[version] || [],
+                            strings: candidateFuncData.strings?.[version] || [],
+                            constants: candidateFuncData.constants?.[version] || [],
+                            globals: candidateFuncData.globals?.[version] || [],
+                            mnemonic_hash: candidateFuncData.mnemonic_hashes?.[version] || '',
+                            indexes: candidateFuncData.indexes || parseIndexToObject(candidateFuncData.index),
+                            loop_count: candidateFuncData.loop_counts?.[version],
+                            stack_frame: candidateFuncData.stack_frame_sizes?.[version] || 0,
+                            instructions: candidateFuncData.instructions?.[version] || []
+                        };
+                        identityMatch = calculateIdentityMatch(sourceObj, newTargetObj, sourceVersion, version);
+                        overallScore = identityMatch.score;
+                    }
+                }
+            }
 
-            // Get string references (stored as funcData.strings[version] in new structure)
-            const sourceStrings = funcData.strings?.[sourceVersion] || [];
-            const targetStrings = candidateFuncData?.strings?.[version] || candidate?.strings || funcData.strings?.[version] || [];
+            // Update panel title
+            document.getElementById('comparePanelTitle').textContent = 'Compare Functions';
 
-            // Get indexes/hashes - parse from string format "METHOD:hash" if needed
-            // funcData.indexes (plural) is the object format, funcData.index (singular) is the string format
-            const sourceIndexes = funcData.indexes || parseIndexToObject(funcData.index);
-            const targetIndexes = candidateFuncData?.indexes || parseIndexToObject(candidateFuncData?.index) ||
-                candidate?.indexes || parseIndexToObject(candidate?.index) ||
-                funcData.indexes || parseIndexToObject(funcData.index);
+            // Build header info
+            const funcName = funcData.name || funcData.display_name || canonicalId;
+            const isKnown = funcData.name && !funcData.name.startsWith('FUN_');
+            const knownBadge = isKnown ? '<span class="known-badge">Known</span>' : '';
+            const candidateName = candidateFuncData?.name || candidate?.matched_to || '';
+            const candidateNameDisplay = candidate && candidateName ? ` → ${candidateName}` : '';
 
-            // New enhanced comparison fields - prioritize candidateFuncData when available
-            const sourceStackFrame = funcData.stack_frame_sizes?.[sourceVersion] || 0;
-            const targetStackFrame = candidateFuncData?.stack_frame_sizes?.[version] || candidate?.stack_frame_size || funcData.stack_frame_sizes?.[version] || 0;
+            const scoreClass = overallScore >= 80 ? 'high' : overallScore >= 50 ? 'medium' : 'low';
+            const tierIcon = { 1: '🔒', 2: '🎯', 3: '⚖️' }[identityMatch.tier] || '';
 
-            const sourceBasicBlocks = funcData.basic_block_counts?.[sourceVersion] || 0;
-            const targetBasicBlocks = candidateFuncData?.basic_block_counts?.[version] || candidate?.basic_block_count || funcData.basic_block_counts?.[version] || 0;
+            const headerHtml = `
+                <div class="compare-func-name">${escapeHtml(funcName)}${knownBadge}${candidateNameDisplay}</div>
+                <div class="compare-versions">
+                    <div class="compare-version-info source">
+                        <div class="compare-version-label">Source</div>
+                        <div class="compare-version-value">${sourceVersion}<br>${sourceAddr}</div>
+                    </div>
+                    <div class="compare-score">
+                        <div class="compare-score-value ${scoreClass}">${tierIcon} ${overallScore}%</div>
+                        <div class="compare-score-tier">${identityMatch.tierName}</div>
+                    </div>
+                    <div class="compare-version-info target">
+                        <div class="compare-version-label">${candidate ? 'Candidate' : 'Target'}</div>
+                        <div class="compare-version-value">${version}<br>${targetAddr || '—'}</div>
+                    </div>
+                </div>
+            `;
 
-            const sourceLoops = funcData.loop_counts?.[sourceVersion] ?? null;
-            const targetLoops = candidateFuncData?.loop_counts?.[version] ?? candidate?.loop_count ?? funcData.loop_counts?.[version] ?? null;
+            document.getElementById('compareHeaderInfo').innerHTML = headerHtml;
 
-            const sourceMnemonicHash = funcData.mnemonic_hashes?.[sourceVersion] || '';
-            const targetMnemonicHash = candidateFuncData?.mnemonic_hashes?.[version] || candidate?.mnemonic_hash || funcData.mnemonic_hashes?.[version] || '';
+            // Find and display alternate matches (only for candidates)
+            let alternateMatchesHtml = '';
+            if (candidate) {
+                const currentAddr = targetAddr;
+                const alternates = findTopAlternateMatches(funcData, sourceVersion, version, 3, currentAddr);
 
-            const sourceConstants = funcData.constants?.[sourceVersion] || [];
-            const targetConstants = candidateFuncData?.constants?.[version] || candidate?.constants || funcData.constants?.[version] || [];
+                if (alternates.length > 0) {
+                    alternateMatchesHtml = `
+                        <div class="alternate-matches">
+                            <span class="alternate-label">Alternate Matches:</span>
+                            <div class="alternate-buttons">
+                    `;
 
-            const sourceGlobals = funcData.globals?.[sourceVersion] || [];
-            const targetGlobals = candidateFuncData?.globals?.[version] || candidate?.globals || funcData.globals?.[version] || [];
+                    for (const alt of alternates) {
+                        const altScoreClass = alt.score >= 70 ? 'high' : alt.score >= 40 ? 'medium' : 'low';
+                        const altName = alt.name.length > 20 ? alt.name.substring(0, 17) + '...' : alt.name;
+                        alternateMatchesHtml += `
+                            <button class="alternate-match-btn"
+                                    onclick="selectAlternateMatch('${canonicalId}', '${version}', '${sourceVersion}', '${alt.canonicalId}', '${alt.address}')"
+                                    title="${alt.name}&#10;Address: ${alt.address}&#10;Score: ${alt.score}%">
+                                <span class="alt-name">${escapeHtml(altName)}</span>
+                                <span class="alt-score ${altScoreClass}">${alt.score}%</span>
+                            </button>
+                        `;
+                    }
 
-            // Tags (per-version)
-            const sourceTags = funcData.tags?.[sourceVersion] || [];
-            const targetTags = candidateFuncData?.tags?.[version] || candidate?.tags || funcData.tags?.[version] || [];
+                    alternateMatchesHtml += `
+                            </div>
+                        </div>
+                    `;
+                }
+            }
 
-            // Function type (per-version)
-            const sourceFuncType = funcData.function_types?.[sourceVersion] || '';
-            const targetFuncType = candidateFuncData?.function_types?.[version] || candidate?.function_type || funcData.function_types?.[version] || '';
+            // Build content
+            const contentHtml = (alternateMatchesHtml ? alternateMatchesHtml : '') +
+                buildCompareContent(funcData, candidateFuncData, sourceVersion, version, identityMatch);
+            document.getElementById('compareContent').innerHTML = contentHtml;
 
-            // Calculate similarity scores (legacy, for display bars)
-            const sizeSimilarity = calculateSizeSimilarity(sourceSize, targetSize);
-            const callSimilarity = calculateCallSimilarity(sourceCallees, targetCallees);
-            const indexMatch = checkIndexMatch(sourceIndexes, targetIndexes);
-            const hashSimilarity = indexMatch.match ? 100 : 0;
+            // Show/hide action buttons based on whether it's a candidate
+            const actionsDiv = document.getElementById('compareActions');
+            if (candidate) {
+                const status = getMatchStatus(canonicalId, version, targetAddr);
+                document.getElementById('compareBtnConfirm').style.display = status !== 'confirmed' ? 'block' : 'none';
+                document.getElementById('compareBtnReject').style.display = status !== 'rejected' ? 'block' : 'none';
+                actionsDiv.classList.remove('hidden');
+            } else {
+                actionsDiv.classList.add('hidden');
+            }
 
-            // Instruction similarity (simplified - based on count similarity for now)
-            const instrSimilarity = sourceInstructions.length && targetInstructions.length ?
-                calculateSizeSimilarity(sourceInstructions.length, targetInstructions.length) : 0;
+            // Show panel
+            panel.classList.add('visible');
 
-            // Additional similarity calculations
-            const blockSimilarity = calculateSizeSimilarity(sourceBasicBlocks, targetBasicBlocks);
-            const stackSimilarity = sourceStackFrame && targetStackFrame ?
-                calculateSizeSimilarity(sourceStackFrame, targetStackFrame) : 0;
-            const loopMatch = sourceLoops !== null && targetLoops !== null && sourceLoops === targetLoops;
-            const mnemonicHashMatch = sourceMnemonicHash && targetMnemonicHash && sourceMnemonicHash === targetMnemonicHash;
-            const constantSimilarity = calculateConstantSimilarity(sourceConstants, targetConstants);
-            const globalSimilarity = calculateGlobalSimilarity(sourceGlobals, targetGlobals);
+            // Highlight the row and column in the table
+            highlightCompareCell(canonicalId, version);
+        }
+
+        // Close the compare panel
+        function closeComparePanel() {
+            const panel = document.getElementById('comparePanel');
+            if (panel) {
+                panel.classList.remove('visible');
+            }
+            currentComparisonData = null;
+            clearCompareHighlights();
+        }
+
+        // Select an alternate match and update the compare panel
+        function selectAlternateMatch(sourceCanonicalId, targetVersion, sourceVersion, altCanonicalId, altAddress) {
+            // Show compare panel with the alternate function as target
+            // We need to show the source function compared against the alternate target function
+            const sourceFuncData = currentFuncData?.functions?.[sourceCanonicalId];
+            const altFuncData = currentFuncData?.functions?.[altCanonicalId];
+
+            if (!sourceFuncData || !altFuncData) {
+                showToast('Function data not available');
+                return;
+            }
+
+            const panel = document.getElementById('comparePanel');
+            if (!panel) return;
+
+            // Store current comparison data with alternate
+            currentComparisonData = {
+                canonicalId: sourceCanonicalId,
+                targetVersion: targetVersion,
+                sourceVersion: sourceVersion,
+                isCandidate: true,
+                alternateCanonicalId: altCanonicalId,
+                alternateAddress: altAddress
+            };
+
+            // Get addresses
+            const sourceAddr = sourceFuncData.addresses?.[sourceVersion] || '—';
+            const targetAddr = altAddress;
 
             // Build source and target objects for identity matching
             const sourceObj = {
-                size: sourceSize,
-                callees: sourceCallees,
-                strings: sourceStrings,
-                constants: sourceConstants,
-                globals: sourceGlobals,
-                mnemonic_hash: sourceMnemonicHash,
-                indexes: sourceIndexes,
-                basic_blocks: sourceBasicBlocks,
-                loop_count: sourceLoops,
-                stack_frame: sourceStackFrame,
-                instructions: sourceInstructions
+                size: sourceFuncData.sizes?.[sourceVersion],
+                callees: sourceFuncData.callees?.[sourceVersion] || [],
+                strings: sourceFuncData.strings?.[sourceVersion] || [],
+                constants: sourceFuncData.constants?.[sourceVersion] || [],
+                globals: sourceFuncData.globals?.[sourceVersion] || [],
+                mnemonic_hash: sourceFuncData.mnemonic_hashes?.[sourceVersion] || '',
+                indexes: sourceFuncData.indexes || parseIndexToObject(sourceFuncData.index),
+                loop_count: sourceFuncData.loop_counts?.[sourceVersion],
+                stack_frame: sourceFuncData.stack_frame_sizes?.[sourceVersion] || 0,
+                instructions: sourceFuncData.instructions?.[sourceVersion] || [],
+                instruction_count: sourceFuncData.instruction_counts?.[sourceVersion] || (sourceFuncData.instructions?.[sourceVersion]?.length || 0),
+                callee_count: sourceFuncData.callee_counts?.[sourceVersion] || (sourceFuncData.callees?.[sourceVersion]?.length || 0),
+                caller_count: sourceFuncData.caller_counts?.[sourceVersion] || (sourceFuncData.callers?.[sourceVersion]?.length || 0),
+                string_count: sourceFuncData.string_counts?.[sourceVersion] || (sourceFuncData.strings?.[sourceVersion]?.length || 0),
+                constant_count: sourceFuncData.constant_counts?.[sourceVersion] || (sourceFuncData.constants?.[sourceVersion]?.length || 0),
+                global_count: sourceFuncData.global_counts?.[sourceVersion] || (sourceFuncData.globals?.[sourceVersion]?.length || 0),
+                api_count: sourceFuncData.api_counts?.[sourceVersion] || 0,
+                param_count: sourceFuncData.param_counts?.[sourceVersion] || 0
             };
             const targetObj = {
-                size: targetSize,
-                callees: targetCallees,
-                strings: targetStrings,
-                constants: targetConstants,
-                globals: targetGlobals,
-                mnemonic_hash: targetMnemonicHash,
-                indexes: targetIndexes,
-                basic_blocks: targetBasicBlocks,
-                loop_count: targetLoops,
-                stack_frame: targetStackFrame,
-                instructions: targetInstructions
+                size: altFuncData.sizes?.[targetVersion],
+                callees: altFuncData.callees?.[targetVersion] || [],
+                strings: altFuncData.strings?.[targetVersion] || [],
+                constants: altFuncData.constants?.[targetVersion] || [],
+                globals: altFuncData.globals?.[targetVersion] || [],
+                mnemonic_hash: altFuncData.mnemonic_hashes?.[targetVersion] || '',
+                indexes: altFuncData.indexes || parseIndexToObject(altFuncData.index),
+                loop_count: altFuncData.loop_counts?.[targetVersion],
+                stack_frame: altFuncData.stack_frame_sizes?.[targetVersion] || 0,
+                instructions: altFuncData.instructions?.[targetVersion] || [],
+                instruction_count: altFuncData.instruction_counts?.[targetVersion] || (altFuncData.instructions?.[targetVersion]?.length || 0),
+                callee_count: altFuncData.callee_counts?.[targetVersion] || (altFuncData.callees?.[targetVersion]?.length || 0),
+                caller_count: altFuncData.caller_counts?.[targetVersion] || (altFuncData.callers?.[targetVersion]?.length || 0),
+                string_count: altFuncData.string_counts?.[targetVersion] || (altFuncData.strings?.[targetVersion]?.length || 0),
+                constant_count: altFuncData.constant_counts?.[targetVersion] || (altFuncData.constants?.[targetVersion]?.length || 0),
+                global_count: altFuncData.global_counts?.[targetVersion] || (altFuncData.globals?.[targetVersion]?.length || 0),
+                api_count: altFuncData.api_counts?.[targetVersion] || 0,
+                param_count: altFuncData.param_counts?.[targetVersion] || 0
             };
 
-            // Calculate tiered identity match
-            const identityMatch = calculateIdentityMatch(sourceObj, targetObj, sourceVersion, version);
-            const overallSimilarity = identityMatch.score;
+            // Calculate identity match score
+            const identityMatch = calculateIdentityMatch(sourceObj, targetObj, sourceVersion, targetVersion);
+            const overallScore = identityMatch.score;
 
-            // Update modal content
-            const title = document.getElementById('comparisonTitle');
-            title.textContent = `Compare: ${funcData.name || funcData.display_name || canonicalId}`;
+            // Update panel title
+            document.getElementById('comparePanelTitle').textContent = 'Compare Functions (Alternate)';
 
-            // Known function name badge
-            const knownNameSection = document.getElementById('knownNameSection');
-            const knownNameBadge = document.getElementById('knownNameBadge');
-            if (funcData.name && !funcData.name.startsWith('FUN_')) {
-                knownNameSection.style.display = 'block';
-                knownNameBadge.textContent = `Known: ${funcData.name}`;
-            } else {
-                knownNameSection.style.display = 'none';
-            }
+            // Build header info
+            const sourceFuncName = sourceFuncData.name || sourceFuncData.display_name || sourceCanonicalId;
+            const altFuncName = altFuncData.name || altFuncData.display_name || altCanonicalId;
+            const isKnown = sourceFuncData.name && !sourceFuncData.name.startsWith('FUN_');
+            const knownBadge = isKnown ? '<span class="known-badge">Known</span>' : '';
 
-            // Similarity section
-            const similaritySection = document.getElementById('similaritySection');
-            const similarityScore = document.getElementById('similarityScore');
-            similaritySection.style.display = 'flex';
+            const scoreClass = overallScore >= 80 ? 'high' : overallScore >= 50 ? 'medium' : 'low';
+            const tierIcon = { 1: '🔒', 2: '🎯', 3: '⚖️' }[identityMatch.tier] || '';
 
-            // Display tiered match information
-            const tierColors = {
-                1: 'var(--color-unique)',    // Gold for definitive
-                2: 'var(--color-set)',       // Green for strong fingerprint
-                3: 'var(--color-rare)'       // Yellow for structural
-            };
-            const tierIcon = {
-                1: '🔒',  // Lock = definitive/certain
-                2: '🎯',  // Target = high confidence
-                3: '⚖️'   // Scale = heuristic/uncertain
-            };
-
-            similarityScore.innerHTML = `<span title="${identityMatch.tierName}">${tierIcon[identityMatch.tier] || ''}</span> ${overallSimilarity}%`;
-            similarityScore.className = 'similarity-score ' +
-                (identityMatch.tier === 1 ? 'definitive' :
-                    overallSimilarity >= 80 ? 'high' :
-                        overallSimilarity >= 50 ? 'medium' : 'low');
-            similarityScore.style.borderColor = tierColors[identityMatch.tier] || '';
-
-            // Update tier label
-            const tierLabel = document.getElementById('tierLabel');
-            if (tierLabel) {
-                // Show tier name and match method/reason
-                let tierText = identityMatch.tierName;
-                if (identityMatch.tier === 1 && identityMatch.details.tier1Reason) {
-                    // For Tier 1, show the specific reason (e.g., "Mnemonic hash match")
-                    tierText += ` - ${identityMatch.details.tier1Reason}`;
-                } else if (identityMatch.tier === 2) {
-                    // For Tier 2, show count-based vector + value bonus info
-                    const tier2 = identityMatch.breakdown?.tier2 || {};
-                    const baseScore = tier2.score || 0;
-                    const valueBonus = tier2.valueBonus || 0;
-                    if (valueBonus > 0) {
-                        tierText += ` - Vector: ${baseScore} + Value: +${valueBonus.toFixed(1)}`;
-                    } else {
-                        tierText += ' - Count-based vector';
-                    }
-                }
-                tierLabel.textContent = tierText;
-                tierLabel.style.color = tierColors[identityMatch.tier] || 'var(--text-secondary)';
-            }
-
-            // Show value bonus breakdown if available
-            const valueBonusSection = document.getElementById('valueBonusSection');
-            if (valueBonusSection && identityMatch.tier === 2) {
-                const tier2 = identityMatch.breakdown?.tier2 || {};
-                const bonusBreakdown = tier2.valueBonusBreakdown || {};
-
-                if (Object.keys(bonusBreakdown).length > 0) {
-                    let bonusHtml = '<div class="value-bonus-breakdown">';
-                    for (const [bonusType, data] of Object.entries(bonusBreakdown)) {
-                        if (data.bonus > 0) {
-                            const label = bonusType.replace('_overlap', '').replace('_', ' ');
-                            const matchInfo = data.matched !== undefined ? `${data.matched} matched` : '';
-                            bonusHtml += `<span class="value-bonus-item" title="${matchInfo}">
-                                <span class="bonus-label">${label}</span>
-                                <span class="bonus-value">+${data.bonus.toFixed(1)}</span>
-                            </span>`;
-                        }
-                    }
-                    bonusHtml += '</div>';
-                    valueBonusSection.innerHTML = bonusHtml;
-                    valueBonusSection.style.display = 'block';
-                } else {
-                    valueBonusSection.style.display = 'none';
-                }
-            } else if (valueBonusSection) {
-                valueBonusSection.style.display = 'none';
-            }
-
-            // Update breakdown bars with count-based vector info
-            document.getElementById('sizeSimilarity').style.width = `${sizeSimilarity}%`;
-            document.getElementById('callSimilarity').style.width = `${identityMatch.details.vectorScore}%`;
-            document.getElementById('instrSimilarity').style.width = `${instrSimilarity}%`;
-            document.getElementById('hashSimilarity').style.width = `${identityMatch.details.mnemonicMatch ? 100 : (identityMatch.details.indexMatch ? 100 : 0)}%`;
-
-            // Update labels with count vector info if available
-            const callLabel = document.querySelector('.similarity-item:nth-child(2) .similarity-item-label');
-            if (callLabel && identityMatch.details.vectorScore > 0) {
-                const featureCount = identityMatch.details.featureCount || 0;
-                callLabel.innerHTML = `Vector match: <span style="color: var(--text-muted); font-size: 0.7rem;">(${featureCount} features)</span>`;
-            }
-
-            // Show warnings if any
-            const warningsContainer = document.getElementById('matchWarnings');
-            if (warningsContainer) {
-                if (identityMatch.warnings && identityMatch.warnings.length > 0) {
-                    warningsContainer.innerHTML = identityMatch.warnings.map(w =>
-                        `<div class="match-warning">⚠️ ${w}</div>`
-                    ).join('');
-                    warningsContainer.style.display = 'block';
-                } else {
-                    warningsContainer.style.display = 'none';
-                }
-            }
-
-            // Confidence section (only for candidates)
-            const confidenceSection = document.getElementById('confidenceSection');
-            const matchDetailsSection = document.getElementById('matchDetailsSection');
-
-            if (candidate) {
-                confidenceSection.style.display = 'flex';
-                const confidence = candidate.confidence || 0;
-                const confidenceFill = document.getElementById('confidenceFill');
-                const confidenceValue = document.getElementById('confidenceValue');
-
-                confidenceFill.style.width = `${confidence * 100}%`;
-                confidenceFill.className = 'confidence-fill ' +
-                    (confidence >= 0.8 ? 'high' : confidence >= 0.6 ? 'medium' : 'low');
-                confidenceValue.textContent = `${(confidence * 100).toFixed(1)}%`;
-                confidenceValue.style.color = confidence >= 0.8 ? 'var(--color-set)' :
-                    confidence >= 0.6 ? 'var(--color-rare)' : 'var(--color-crafted)';
-
-                // Enhanced method display with better formatting
-                const method = candidate.method || 'unknown';
-                const direction = candidate.direction || 'forward';
-                const sourceVer = candidate.source || candidate.source_version || '';
-                const chainLen = candidate.chain_length || 1;
-
-                let methodText = `Match Method: <strong>${method}</strong>`;
-                if (chainLen > 1) {
-                    methodText += ` | Propagated: ${chainLen} versions (${direction})`;
-                } else if (direction !== 'direct') {
-                    methodText += ` | Direction: ${direction}`;
-                }
-                if (sourceVer) {
-                    methodText += ` | From: ${sourceVer}`;
-                }
-
-                document.getElementById('matchMethod').innerHTML = methodText;
-
-                // Populate match details section with tier-specific information
-                matchDetailsSection.style.display = 'block';
-                const matchDetailsContent = document.getElementById('matchDetailsContent');
-
-                let detailsHtml = `<strong>${method}</strong>`;
-
-                // Add tier-specific details if identity match
-                if (identityMatch && identityMatch.details) {
-                    const details = identityMatch.details;
-                    if (details.tier === 1 && details.tier1Reason) {
-                        detailsHtml += ` – ${details.tier1Reason}`;
-                    } else if (details.tier === 2 && details.matchedItems) {
-                        detailsHtml += ` (${details.matchedItems.join(', ')})`;
-                    } else if (details.tier === 3) {
-                        detailsHtml += ` – Structural validation only`;
-                        if (!details.plausible) {
-                            detailsHtml += ` ⚠️`;
-                        }
-                    }
-                }
-
-                // Add propagation info
-                if (chainLen > 1) {
-                    detailsHtml += `<br><span style="color: var(--text-secondary); font-size: 0.85em;">Propagated through ${chainLen} versions (${direction})`;
-                    if (sourceVer) {
-                        detailsHtml += ` from ${sourceVer}`;
-                    }
-                    detailsHtml += `</span>`;
-                }
-
-                matchDetailsContent.innerHTML = detailsHtml;
-            } else {
-                confidenceSection.style.display = 'none';
-                matchDetailsSection.style.display = 'none';
-            }
-
-            // Update side headers
-            document.getElementById('sourceSideHeader').innerHTML = `
-                Source <span class="version-tag">${sourceVersion}</span>
-                <span style="margin-left: auto; font-family: var(--font-mono); font-size: 0.75rem;">${sourceAddr}</span>
-            `;
-            // Get the matched function's name for candidates
-            const candidateName = candidateFuncData?.name || candidate?.matched_to || '';
-            const candidateNameHtml = candidate && candidateName ?
-                `<span style="margin-left: 8px; color: var(--color-magic); font-size: 0.8rem;">(${candidateName})</span>` : '';
-
-            document.getElementById('targetSideHeader').innerHTML = `
-                ${candidate ? 'Candidate' : 'Target'} <span class="version-tag">${version}</span>${candidateNameHtml}
-                <span style="margin-left: auto; font-family: var(--font-mono); font-size: 0.75rem;">${targetAddr || '—'}</span>
-            `;
-
-            // Build source details HTML
-            const sourceDetailsHtml = `
-                <!-- Structural Metrics -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Structural Metrics</div>
-                    <div class="comparison-metrics">
-                        <div class="comparison-metric">
-                            <div class="metric-label">Size</div>
-                            <div class="metric-value ${sizeSimilarity >= 95 ? 'match' : sizeSimilarity >= 80 ? 'close' : 'diff'}">${sourceSize || '—'} bytes</div>
-                        </div>
-                        <div class="comparison-metric">
-                            <div class="metric-label">Instructions</div>
-                            <div class="metric-value ${instrSimilarity >= 95 ? 'match' : instrSimilarity >= 80 ? 'close' : ''}">${sourceInstructions.length || '—'}</div>
-                        </div>
-                        <div class="comparison-metric">
-                            <div class="metric-label">Basic Blocks</div>
-                            <div class="metric-value ${blockSimilarity >= 95 ? 'match' : blockSimilarity >= 80 ? 'close' : ''}">${sourceBasicBlocks || '—'}</div>
-                        </div>
-                        <div class="comparison-metric">
-                            <div class="metric-label">Loops</div>
-                            <div class="metric-value ${loopMatch ? 'match' : ''}">${sourceLoops ?? '—'}</div>
-                        </div>
-                        <div class="comparison-metric">
-                            <div class="metric-label">Stack Frame</div>
-                            <div class="metric-value ${stackSimilarity >= 95 ? 'match' : stackSimilarity >= 80 ? 'close' : ''}">${sourceStackFrame || '—'}</div>
-                        </div>
+            const headerHtml = `
+                <div class="compare-func-name">${escapeHtml(sourceFuncName)}${knownBadge} → ${escapeHtml(altFuncName)}</div>
+                <div class="compare-versions">
+                    <div class="compare-version-info source">
+                        <div class="compare-version-label">Source</div>
+                        <div class="compare-version-value">${sourceVersion}<br>${sourceAddr}</div>
+                    </div>
+                    <div class="compare-score">
+                        <div class="compare-score-value ${scoreClass}">${tierIcon} ${overallScore}%</div>
+                        <div class="compare-score-tier">${identityMatch.tierName}</div>
+                    </div>
+                    <div class="compare-version-info target">
+                        <div class="compare-version-label">Alternate</div>
+                        <div class="compare-version-value">${targetVersion}<br>${targetAddr}</div>
                     </div>
                 </div>
-                
-                <!-- Mnemonic Hash (Position-Independent Code Signature) -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Mnemonic Hash ${mnemonicHashMatch ? '<span class="match-badge">✓ MATCH</span>' : ''}</div>
-                    <div class="hash-value ${mnemonicHashMatch ? 'match' : ''}" style="font-size: 0.7rem; word-break: break-all;">${sourceMnemonicHash || '—'}</div>
-                </div>
-
-                <!-- Signature & Calling Convention -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Signature</div>
-                    <div class="comparison-section-content">${funcData.signature || '—'}</div>
-                    ${funcData.calling_convention ? `<div class="metric-label" style="margin-top: 8px;">Calling Convention: <span class="metric-value">${funcData.calling_convention}</span></div>` : ''}
-                    ${funcData.return_type ? `<div class="metric-label">Return Type: <span class="metric-value">${funcData.return_type}</span></div>` : ''}
-                </div>
-
-                <!-- Callees (Call Graph) - Split Row Display -->
-                <div class="comparison-section comparison-callees">
-                    <div class="comparison-section-title">Callees (${sourceCallees.length}) ${callSimilarity >= 50 ? `<span class="match-badge">${callSimilarity}%</span>` : ''}</div>
-                    <div class="callee-list">${renderCalleeSplitTags(sourceCallees, targetCallees, true)}</div>
-                </div>
-
-                <!-- String References -->
-                <div class="comparison-section comparison-strings">
-                    <div class="comparison-section-title">String References (${sourceStrings.length})</div>
-                    <div class="string-list">${renderStringRefs(sourceStrings)}</div>
-                </div>
-
-                <!-- First Instructions (Prologue) -->
-                <div class="comparison-section comparison-instructions">
-                    <div class="comparison-section-title">First Instructions</div>
-                    <div class="instruction-list">${sourceInstructions.length > 0 ?
-                    sourceInstructions.slice(0, 8).map(formatInstruction).join('') :
-                    '<span style="color: var(--text-muted);">No instruction data available</span>'}</div>
-                </div>
-                
-                <!-- Constants (Magic Numbers) -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Constants (${sourceConstants.length}) ${constantSimilarity >= 50 ? `<span class="match-badge">${constantSimilarity}% match</span>` : ''}</div>
-                    <div class="callee-list">${renderConstantTags(sourceConstants, targetConstants)}</div>
-                </div>
-                
-                <!-- Global References -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Global References (${sourceGlobals.length}) ${globalSimilarity >= 50 ? `<span class="match-badge">${globalSimilarity}% match</span>` : ''}</div>
-                    <div class="string-list">${renderGlobalRefs(sourceGlobals)}</div>
-                </div>
-
-                <!-- Function Tags (Semantic Properties) -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Tags (${sourceTags.length})${sourceFuncType ? ` ${renderFunctionTypeBadge(sourceFuncType)}` : ''}</div>
-                    <div class="callee-list">${renderFunctionTags(sourceTags, targetTags)}</div>
-                </div>
-
-                <!-- Function Index -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Function Index ${indexMatch.match ? `<span class="match-badge">✓ ${indexMatch.methods.join(', ')}</span>` : ''}</div>
-                    <div class="index-list">${renderIndexInline(sourceIndexes, targetIndexes, indexMatch)}</div>
-                </div>
             `;
 
-            // Build target details HTML
-            const targetDetailsHtml = `
-                <!-- Structural Metrics -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Structural Metrics</div>
-                    <div class="comparison-metrics">
-                        <div class="comparison-metric">
-                            <div class="metric-label">Size</div>
-                            <div class="metric-value ${sizeSimilarity >= 95 ? 'match' : sizeSimilarity >= 80 ? 'close' : 'diff'}">${targetSize || '—'} bytes</div>
-                        </div>
-                        <div class="comparison-metric">
-                            <div class="metric-label">Instructions</div>
-                            <div class="metric-value ${instrSimilarity >= 95 ? 'match' : instrSimilarity >= 80 ? 'close' : ''}">${targetInstructions.length || '—'}</div>
-                        </div>
-                        <div class="comparison-metric">
-                            <div class="metric-label">Basic Blocks</div>
-                            <div class="metric-value ${blockSimilarity >= 95 ? 'match' : blockSimilarity >= 80 ? 'close' : ''}">${targetBasicBlocks || '—'}</div>
-                        </div>
-                        <div class="comparison-metric">
-                            <div class="metric-label">Loops</div>
-                            <div class="metric-value ${loopMatch ? 'match' : ''}">${targetLoops ?? '—'}</div>
-                        </div>
-                        <div class="comparison-metric">
-                            <div class="metric-label">Stack Frame</div>
-                            <div class="metric-value ${stackSimilarity >= 95 ? 'match' : stackSimilarity >= 80 ? 'close' : ''}">${targetStackFrame || '—'}</div>
+            document.getElementById('compareHeaderInfo').innerHTML = headerHtml;
+
+            // Find other alternates (excluding current alternate)
+            const alternates = findTopAlternateMatches(sourceFuncData, sourceVersion, targetVersion, 3, altAddress);
+
+            let alternateMatchesHtml = '';
+            if (alternates.length > 0) {
+                alternateMatchesHtml = `
+                    <div class="alternate-matches">
+                        <span class="alternate-label">Other Alternates:</span>
+                        <div class="alternate-buttons">
+                `;
+
+                for (const alt of alternates) {
+                    const altScoreClass = alt.score >= 70 ? 'high' : alt.score >= 40 ? 'medium' : 'low';
+                    const altDisplayName = alt.name.length > 20 ? alt.name.substring(0, 17) + '...' : alt.name;
+                    const isSelected = alt.canonicalId === altCanonicalId;
+                    alternateMatchesHtml += `
+                        <button class="alternate-match-btn ${isSelected ? 'selected' : ''}"
+                                onclick="selectAlternateMatch('${sourceCanonicalId}', '${targetVersion}', '${sourceVersion}', '${alt.canonicalId}', '${alt.address}')"
+                                title="${alt.name}&#10;Address: ${alt.address}&#10;Score: ${alt.score}%">
+                            <span class="alt-name">${escapeHtml(altDisplayName)}</span>
+                            <span class="alt-score ${altScoreClass}">${alt.score}%</span>
+                        </button>
+                    `;
+                }
+
+                alternateMatchesHtml += `
                         </div>
                     </div>
-                </div>
-                
-                <!-- Mnemonic Hash (Position-Independent Code Signature) -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Mnemonic Hash ${mnemonicHashMatch ? '<span class="match-badge">✓ MATCH</span>' : ''}</div>
-                    <div class="hash-value ${mnemonicHashMatch ? 'match' : ''}" style="font-size: 0.7rem; word-break: break-all;">${targetMnemonicHash || '—'}</div>
-                </div>
-
-                <!-- Signature & Calling Convention -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Signature</div>
-                    <div class="comparison-section-content">${(candidateFuncData || funcData).signature || '—'}</div>
-                    ${(candidateFuncData || funcData).calling_convention ? `<div class="metric-label" style="margin-top: 8px;">Calling Convention: <span class="metric-value">${(candidateFuncData || funcData).calling_convention}</span></div>` : ''}
-                    ${(candidateFuncData || funcData).return_type ? `<div class="metric-label">Return Type: <span class="metric-value">${(candidateFuncData || funcData).return_type}</span></div>` : ''}
-                </div>
-
-                <!-- Callees (Call Graph) - Split Row Display -->
-                <div class="comparison-section comparison-callees">
-                    <div class="comparison-section-title">Callees (${targetCallees.length}) ${callSimilarity >= 50 ? `<span class="match-badge">${callSimilarity}%</span>` : ''}</div>
-                    <div class="callee-list">${renderCalleeSplitTags(targetCallees, sourceCallees, false)}</div>
-                </div>
-
-                <!-- String References -->
-                <div class="comparison-section comparison-strings">
-                    <div class="comparison-section-title">String References (${targetStrings.length})</div>
-                    <div class="string-list">${renderStringRefs(targetStrings)}</div>
-                </div>
-
-                <!-- First Instructions (Prologue) -->
-                <div class="comparison-section comparison-instructions">
-                    <div class="comparison-section-title">First Instructions</div>
-                    <div class="instruction-list">${targetInstructions.length > 0 ?
-                    targetInstructions.slice(0, 8).map(formatInstruction).join('') :
-                    '<span style="color: var(--text-muted);">No instruction data available</span>'}</div>
-                </div>
-                
-                <!-- Constants (Magic Numbers) -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Constants (${targetConstants.length}) ${constantSimilarity >= 50 ? `<span class="match-badge">${constantSimilarity}% match</span>` : ''}</div>
-                    <div class="callee-list">${renderConstantTags(targetConstants, sourceConstants)}</div>
-                </div>
-                
-                <!-- Global References -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Global References (${targetGlobals.length}) ${globalSimilarity >= 50 ? `<span class="match-badge">${globalSimilarity}% match</span>` : ''}</div>
-                    <div class="string-list">${renderGlobalRefs(targetGlobals)}</div>
-                </div>
-
-                <!-- Function Tags (Semantic Properties) -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Tags (${targetTags.length})${targetFuncType ? ` ${renderFunctionTypeBadge(targetFuncType)}` : ''}</div>
-                    <div class="callee-list">${renderFunctionTags(targetTags, sourceTags)}</div>
-                </div>
-
-                <!-- Function Index -->
-                <div class="comparison-section">
-                    <div class="comparison-section-title">Function Index ${indexMatch.match ? `<span class="match-badge">✓ ${indexMatch.methods.join(', ')}</span>` : ''}</div>
-                    <div class="index-list">${renderIndexInline(targetIndexes, sourceIndexes, indexMatch)}</div>
-                </div>
-            `;
-
-            document.getElementById('sourceDetails').innerHTML = sourceDetailsHtml;
-            document.getElementById('targetDetails').innerHTML = targetDetailsHtml;
-
-            // Show/hide action buttons based on whether it's a candidate
-            const confirmBtn = document.getElementById('confirmMatchBtn');
-            const rejectBtn = document.getElementById('rejectMatchBtn');
-
-            if (candidate) {
-                const status = getMatchStatus(canonicalId, version, targetAddr);
-                confirmBtn.style.display = status !== 'confirmed' ? 'block' : 'none';
-                rejectBtn.style.display = status !== 'rejected' ? 'block' : 'none';
-            } else {
-                confirmBtn.style.display = 'none';
-                rejectBtn.style.display = 'none';
+                `;
             }
 
-            // Show modal
-            modal.classList.remove('hidden');
+            // Build content
+            const contentHtml = (alternateMatchesHtml ? alternateMatchesHtml : '') +
+                buildCompareContent(sourceFuncData, altFuncData, sourceVersion, targetVersion, identityMatch);
+            document.getElementById('compareContent').innerHTML = contentHtml;
+
+            // Hide action buttons for alternates (they're for exploration only)
+            const actionsDiv = document.getElementById('compareActions');
+            actionsDiv.classList.add('hidden');
+
+            // Show panel
+            panel.classList.add('visible');
+
+            // Highlight the source row and target column in the table
+            highlightCompareCell(sourceCanonicalId, targetVersion);
         }
 
-        // Close comparison modal
-        function closeComparisonModal() {
-            const modal = document.getElementById('comparisonModal');
-            if (modal) {
-                modal.classList.add('hidden');
+        // Update compare panel if visible (e.g., after data changes)
+        function updateComparePanel() {
+            if (!currentComparisonData) return;
+            const panel = document.getElementById('comparePanel');
+            if (panel && panel.classList.contains('visible')) {
+                showComparePanel(
+                    currentComparisonData.canonicalId,
+                    currentComparisonData.targetVersion,
+                    currentComparisonData.sourceVersion,
+                    currentComparisonData.isCandidate
+                );
             }
-            currentComparisonData = null;
         }
 
         // Confirm match
@@ -6229,7 +7174,7 @@
             if (candidate) {
                 saveMatchDecision(canonicalId, targetVersion, candidate.address, true);
                 showToast('Match confirmed! This will be treated as confirmed in the viewer.');
-                closeComparisonModal();
+                closeComparePanel();
                 updateFunctionsTableBody();
             }
         }
@@ -6245,7 +7190,7 @@
             if (candidate) {
                 saveMatchDecision(canonicalId, targetVersion, candidate.address, false);
                 showToast('Match rejected. Looking for next best match...');
-                closeComparisonModal();
+                closeComparePanel();
                 updateFunctionsTableBody();
             }
         }
@@ -6270,7 +7215,7 @@
 
             if (displayAddr) {
                 // Confirmed address - clickable for comparison
-                return `<td class="addr-cell" onclick="openComparisonModal('${canonicalId}', '${version}', '${sourceVersion}', false)" style="cursor:pointer;" title="Click to compare">${displayAddr}</td>`;
+                return `<td class="addr-cell" onclick="showComparePanel('${canonicalId}', '${version}', '${sourceVersion}', false)" style="cursor:pointer;" title="Click to compare">${displayAddr}</td>`;
             }
 
             // Check for candidate
@@ -6293,99 +7238,14 @@
 
                 const confidenceTitle = `Candidate (${(confidence * 100).toFixed(0)}% confidence, ${candidate.method})`;
 
-                return `<td class="${cellClass}" onclick="openComparisonModal('${canonicalId}', '${version}', '${candidate.source}', true)" title="${confidenceTitle}">${candAddr}</td>`;
+                // Use sourceVersion parameter instead of candidate.source
+                return `<td class="${cellClass}" onclick="showComparePanel('${canonicalId}', '${version}', '${sourceVersion}', true)" title="${confidenceTitle}">${candAddr}</td>`;
             }
 
             // Empty cell
             return '<td class="addr-cell missing">—</td>';
         }
     </script>
-
-    <!-- Comparison Modal -->
-    <div id="comparisonModal" class="comparison-modal hidden">
-        <div class="comparison-dialog" style="max-width: 1400px;">
-            <div class="comparison-header">
-                <div id="comparisonTitle" class="comparison-title">Compare Functions</div>
-                <button class="comparison-close" onclick="closeComparisonModal()">✕ Close</button>
-            </div>
-
-            <!-- Known function name if available -->
-            <div id="knownNameSection" style="padding: 0 1rem; display: none;">
-                <span id="knownNameBadge" class="known-name-badge"></span>
-            </div>
-
-            <!-- Overall similarity score with tier info -->
-            <div id="similaritySection" class="comparison-similarity" style="margin: 1rem;">
-                <div style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
-                    <div id="similarityScore" class="similarity-score">—</div>
-                    <div id="tierLabel" style="font-size: 0.7rem; color: var(--text-secondary); text-align: center; white-space: nowrap;">—</div>
-                    <div id="valueBonusSection" style="display: none; margin-top: 0.25rem;"></div>
-                </div>
-                <div class="similarity-breakdown">
-                    <div class="similarity-item">
-                        <span class="similarity-item-label">Size match:</span>
-                        <div class="similarity-bar">
-                            <div id="sizeSimilarity" class="similarity-bar-fill" style="width: 0%; background: var(--color-set);"></div>
-                        </div>
-                    </div>
-                    <div class="similarity-item">
-                        <span class="similarity-item-label">Vector match:</span>
-                        <div class="similarity-bar">
-                            <div id="callSimilarity" class="similarity-bar-fill" style="width: 0%; background: var(--color-magic);"></div>
-                        </div>
-                    </div>
-                    <div class="similarity-item">
-                        <span class="similarity-item-label">Instruction pattern:</span>
-                        <div class="similarity-bar">
-                            <div id="instrSimilarity" class="similarity-bar-fill" style="width: 0%; background: var(--color-rare);"></div>
-                        </div>
-                    </div>
-                    <div class="similarity-item">
-                        <span class="similarity-item-label">Hash match:</span>
-                        <div class="similarity-bar">
-                            <div id="hashSimilarity" class="similarity-bar-fill" style="width: 0%; background: var(--color-unique);"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Warnings container -->
-            <div id="matchWarnings" style="display: none; padding: 0 1rem; margin-bottom: 0.5rem;">
-            </div>
-
-            <!-- Match Details section -->
-            <div id="matchDetailsSection" class="comparison-metadata" style="display: none; margin: 0 1rem 1rem 1rem; padding: 0.5rem; background: rgba(66, 184, 131, 0.1); border-radius: 4px; border-left: 3px solid var(--color-success);">
-                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.25rem;">Match Method:</div>
-                <div id="matchDetailsContent" style="font-size: 0.85rem; color: var(--text-primary);"></div>
-            </div>
-
-            <div id="confidenceSection" class="comparison-confidence" style="margin: 0 1rem 1rem 1rem;">
-                <span style="font-size: 0.8rem; color: var(--text-secondary);">Match Confidence:</span>
-                <div class="confidence-bar">
-                    <div id="confidenceFill" class="confidence-fill" style="width: 0%"></div>
-                </div>
-                <span id="confidenceValue" class="confidence-value">0%</span>
-                <span id="matchMethod" style="font-size: 0.7rem; color: var(--text-muted); margin-left: 1rem;"></span>
-            </div>
-
-            <div class="comparison-content">
-                <div class="comparison-side">
-                    <div id="sourceSideHeader" class="comparison-side-header">Source</div>
-                    <div id="sourceDetails"></div>
-                </div>
-                <div class="comparison-side">
-                    <div id="targetSideHeader" class="comparison-side-header">Target</div>
-                    <div id="targetDetails"></div>
-                </div>
-            </div>
-
-            <div class="comparison-actions">
-                <button id="confirmMatchBtn" class="comparison-btn confirm" onclick="confirmMatch()">✓ Confirm Match</button>
-                <button id="rejectMatchBtn" class="comparison-btn reject" onclick="rejectMatch()">✗ Reject Match</button>
-                <button class="comparison-btn close" onclick="closeComparisonModal()">Close</button>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>

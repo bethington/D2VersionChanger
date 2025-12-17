@@ -235,9 +235,6 @@ class TieredMatcher:
         tier_config = self.config.get("tiered_matching", {})
         self.tier2_min_confidence = tier_config.get("tier2_min_confidence", 0.50)
         self.size_plausibility_ratio = tier_config.get("size_plausibility_ratio", 0.50)
-        self.block_plausibility_ratio = tier_config.get(
-            "block_plausibility_ratio", 0.50
-        )
 
         # Rarity indexes per DLL
         self.rarity_indexes: Dict[str, RarityIndex] = {}
@@ -513,19 +510,6 @@ class TieredMatcher:
                 )
             elif size_ratio < 0.80:
                 warnings.append(f"Size differs: {source_size} vs {target_size}")
-
-        # Block count check
-        source_blocks = source.get("basic_block_count", 0)
-        target_blocks = target.get("basic_block_count", 0)
-
-        if source_blocks > 0 and target_blocks > 0:
-            block_ratio = min(source_blocks, target_blocks) / max(
-                source_blocks, target_blocks
-            )
-            if block_ratio < self.block_plausibility_ratio:
-                warnings.append(
-                    f"Block count mismatch: {source_blocks} vs {target_blocks}"
-                )
 
         return is_plausible, warnings
 

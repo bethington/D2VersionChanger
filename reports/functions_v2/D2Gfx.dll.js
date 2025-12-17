@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-15T15:44:29.888678
+// Generated: 2025-12-16T18:31:58.018344
 // Functions for D2gfx.dll
 // Versions: LoD/PD2
 
@@ -33,11 +33,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e553846da5ba262778b53b44016b5225",
         "PRO": "b8fd1f8e7244b2bdde731da4f5cf9b3c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b971a7136b1dcd60f532df35ec55e166"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -50,10 +50,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_5c73446e6da2": {
       "addresses": {
-        "LoD/PD2": "0x6FA8C0D3"
+        "LoD/PD2": "0x6FA81020"
       },
       "rvas": {
-        "LoD/PD2": "0xC0D3"
+        "LoD/PD2": "0x1020"
       },
       "sizes": {
         "LoD/PD2": 1
@@ -73,14 +73,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "e1ef49ce6ed8909600367da1748e3fa9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "5c73446e6da2bc552d6d981beccb1347"
       }
     },
     "D2gfx_MNE_a3916ea23e38": {
@@ -108,11 +105,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "6a327d4d7fb03660cd9aea84617be051"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a3916ea23e38a520734795fd2a3822db"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -143,11 +140,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "5d9f02c48591020da5026c9db0c3ff30"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8f1ca339ad6427a15e24d2eb1e58d366"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -178,11 +175,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "d899fef07c1d12baa49df2291dfdf934",
         "PRO": "1a596ecdae28e1df1827f954f8515cf8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a4bc3cba703dddfe045785e905b90541"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -213,11 +210,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "b3bbce4ecc1bf4d61b4305c0a2f44bde",
         "PRO": "379b3c04c124184bb68454ae8b80d2ef"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7c308290a3e2c2e8795a914b5df1adf9"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -253,11 +250,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "cb0ff409c6c417241ca55c6e4c444bac",
         "PRO": "9a010b561e57fdde24a8dbc0c8965f4a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7dd2300cdab6e9d677439176366b161"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -288,11 +285,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "c65594e8aa0dd1dd8530e7ed504d685d",
         "PRO": "de3537d24dccfca026921ae6596e25a2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "92144b2f5cf531a7090569e6c9590a02"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -323,11 +320,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "46032800ba22ab7a7a9f9db51bda9d1a",
         "PRO": "1b2890d80557dfe2e1e276574a9d58e8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "353e1c4fa51ddf27db13e6d8edeb456c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -358,11 +355,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "afe8a26fb516db4af542a569592e7d26",
         "PRO": "b3fb54c738df198bd721e48575f55edb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ad0bca5018bb85bedbe4c97b9fabd47c"
       }
     },
     "D2gfx_STR_c170bd72c7a3": {
@@ -390,11 +387,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "80845e7377749fe62fdfa1726193a977",
         "PRO": "23d2236144a313ec4288377308ddee33"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "df0a04b7db34c5f035a394dc061ca513"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -402,10 +399,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_f23ef2b3a6cf": {
       "addresses": {
-        "LoD/PD2": "0x6FA87897"
+        "LoD/PD2": "0x6FA813B4"
       },
       "rvas": {
-        "LoD/PD2": "0x7897"
+        "LoD/PD2": "0x13B4"
       },
       "sizes": {
         "LoD/PD2": 9
@@ -425,11 +422,43 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "077c6c21b34882d84f3f3eb00803f72f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "D2gfx_ADDR_6FA813BD": {
+      "addresses": {
+        "LoD/PD2": "0x6FA813BD"
+      },
+      "rvas": {
+        "LoD/PD2": "0x13BD"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseCriticalSection8",
+      "signature": "void ReleaseCriticalSection8(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the critical section associated with index 8.\n\nThis is a specialized wrapper function that releases a specific critical section\nlock used for protecting a particular game resource (index 8). The index is\nhard-coded, indicating this lock protects a specific resource type or subsystem.\n\nAlgorithm:\n1. Push critical section index 8 onto the stack\n2. Call UnlockCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - This function takes no parameters; the critical section index is implicit.\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nThis is part of a critical section management system with multiple release functions\n(ReleaseCriticalSection0 through ReleaseCriticalSection7+). Each function protects\na different game resource. Called from ReleaseCriticalSectionCleanup during\ncleanup operations.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "64d0bd08f63da1a7a630ac7c1c78fbe8"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_996e3f0c6129": {
@@ -457,11 +486,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "4378837d3436e6162074a4fec1af3d10",
         "PRO": "56a3399a0dba94678e31baeedf1b1552"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "996e3f0c6129985d37a2b36d657b6892"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -492,11 +521,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e88749fdb0bfc0cf5a0e32fc67bb3506",
         "PRO": "bc4ca0abfb21371701ea9c607fda15b0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "28a1cba9ddfd9945ee3fec59104d67a8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -527,11 +556,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "bb2d29c85306f40b8ffddce47a988e1f",
         "PRO": "8c5ce4c92a78647993cda4fca4fb8c41"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2ef7e47ffada49e021fc9ebda7c95a50"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -562,19 +591,19 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "f1596e7f5926afa1510db879e6d50457",
         "PRO": "465eab5d0d34c37c8d1b18f13fd959b3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ca7f27832b0deaebe496b377f1c5001a"
       }
     },
     "D2gfx_MNE_cd85d17a6b19": {
       "addresses": {
-        "LoD/PD2": "0x6FA8151C"
+        "LoD/PD2": "0x6FA8150B"
       },
       "rvas": {
-        "LoD/PD2": "0x151C"
+        "LoD/PD2": "0x150B"
       },
       "sizes": {
         "LoD/PD2": 17
@@ -594,11 +623,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "94a8097d6da98e139e076864648926cd"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd85d17a6b193c95680d3fdca645abba"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8151C": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8151C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x151C"
+      },
+      "sizes": {
+        "LoD/PD2": 17
+      },
+      "name": "__exit",
+      "signature": "undefined __exit(uint param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __exit\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:cd85d17a6b193c95680d3fdca645abba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cd85d17a6b193c95680d3fdca645abba",
+        "CFG": null,
+        "PRO": "f7825b23dde492455ea61a10ffbf72e2"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd85d17a6b193c95680d3fdca645abba"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -629,11 +693,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "1d21c427e7f311517e1da7c5ba81eadc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7a5e6ed384be31095abb7960c9f1d6d0"
       }
     },
     "D2gfx_MNE_fa8972b50a91": {
@@ -661,11 +725,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "0c83c6bd384507886ac1365a43eb2cf8",
         "PRO": "cc9dc3a343c87517576eeba67052d948"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fa8972b50a91454e34542a6f7b824984"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -696,11 +760,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "4c747082602c7f76e5a0b6b31e0c33ed",
         "PRO": "cc75019028ca58cb984a564e8c07d1b4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7a09c5a73235698eb35bf1fa40abce3a"
       }
     },
     "D2gfx_MNE_266baaaf79f2": {
@@ -728,11 +792,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "074729d34b2ceac5cf54de1f1ab60b22",
         "PRO": "db6cb273acc70a9231f1f59f109b25ed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "266baaaf79f230c6a6856a4a53b42d70"
       }
     },
     "D2gfx_MNE_5d2d40297dfe": {
@@ -760,11 +824,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "2b942ffac088fef531d6bda41060e56a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5d2d40297dfe2be53beef9d63f51ef80"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -795,11 +859,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "a2ad55d571003470ebafe0caea715437"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e7313d19d2f1b94221ec63dffd5562f1"
       }
     },
     "D2gfx_MNE_2544af1d7a07": {
@@ -827,11 +891,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "ef9a4571e7167f6ca37ef06a54d91959"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2544af1d7a0712444106eb929de8e62d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -862,11 +926,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "08da3686eea5cee9f9b0724f005d7159",
         "PRO": "20e41f1deb32bcadcee45ae0c4b0c71b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1c48859ddf90d08dbf4d9d03c0c2a56a"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -893,11 +957,11 @@ var FUNCTIONS_D2gfx_dll = {
         "PRO": "9ba99ae5263908381f66aca450a138e0"
       },
       "display_name": "MNE_e12afdedf65b4f2d",
-      "basic_block_counts": {
-        "LoD/PD2": 25
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e12afdedf65b4f2d4ddeab4188a67460"
       }
     },
     "D2gfx_MNE_bed936c73fe1": {
@@ -925,11 +989,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "2555e203409cbc2d4a46fa3a51b3c448",
         "PRO": "567946a70c93ce17c92ea2e972db432d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bed936c73fe1864937225129603e250c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -960,11 +1024,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "dedcacb5022ec3081bf0e8026ad6b099",
         "PRO": "697cd33d7d0b18708ffe155a28c97c27"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "921d14ea2db8ace7085d489017738fb1"
       }
     },
     "D2gfx_MNE_3d673ff0fb62": {
@@ -992,11 +1056,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "8c5e1e7e8911884bea7e85560490f0e2",
         "PRO": "28a8240176f9ca86329f1e17d5a46a49"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3d673ff0fb622876ea58c1a43b2af6a0"
       }
     },
     "D2gfx_MNE_e83d10405144": {
@@ -1024,11 +1088,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "3545bd28f6122545223bc761d456605d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e83d104051445238b4510431aa98563d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1059,14 +1123,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "1b97c4c9ebb5e5f377a4d61d4467ef57",
         "PRO": "e428e200984bcf4dbf5280b18320bfbd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a51a9a5e7ceb2fab96b937dc9f784c13"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA81A68": {
+      "addresses": {
+        "LoD/PD2": "0x6FA81A68"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1A68"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockInitializationLock",
+      "signature": "void UnlockInitializationLock(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Summary: Unlocks the initialization critical section by releasing lock index 10.\n\nDescription: This is a simple wrapper function that calls UnlockCriticalSectionByIndex with a hardcoded lock index of 10 (0xa), which protects multi-threaded initialization operations. The function is called during __mtinitlocknum processing.\n\nAlgorithm:\n1. Push lock index constant 0x0a (10) onto the stack\n2. Call UnlockCriticalSectionByIndex to release the critical section\n3. Clean up stack with POP ECX (callee cleanup)\n4. Return to caller\n\nParameters:\n(none)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nLock index 10 is hardcoded for initialization synchronization\nUses __cdecl calling convention with callee cleanup\nPart of multi-threaded initialization lock sequence",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "180d0dbb009b4d1e2113d2477fcba925"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_a62c5e213216": {
@@ -1094,11 +1190,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "6c3b0aa07951c5e00ecf5c0f67c56cb3",
         "PRO": "7fcd11a1f5fde8eb0797531bfb045ffc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a62c5e213216063061d4d1c8c7db89e8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1106,10 +1202,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_9882f49b4616": {
       "addresses": {
-        "LoD/PD2": "0x6FA81AE6"
+        "LoD/PD2": "0x6FA81AA2"
       },
       "rvas": {
-        "LoD/PD2": "0x1AE6"
+        "LoD/PD2": "0x1AA2"
       },
       "sizes": {
         "LoD/PD2": 61
@@ -1129,11 +1225,43 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "8c955c77011f408ad9ffc78e365640e4",
         "PRO": "9e99a4d960ed529bee7a34e327858e59"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9882f49b46164551a852d0e5558c3763"
+      }
+    },
+    "D2gfx_ADDR_6FA81AE6": {
+      "addresses": {
+        "LoD/PD2": "0x6FA81AE6"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1AE6"
+      },
+      "sizes": {
+        "LoD/PD2": 61
+      },
+      "name": "DispatchCallbackTable",
+      "signature": "void DispatchCallbackTable(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Dispatches a table of callback functions by iterating through pointers and invoking each non-null handler.\n\nAlgorithm:\n1. Initialize SEH (Structured Exception Handling) frame for error recovery\n2. Load initial callback pointer from callback table at 0x6fa8e7c0\n3. Check if pointer is valid (not null)\n4. If null, skip to next iteration\n5. If valid, invoke the callback function via indirect call\n6. Increment pointer to next function pointer (add 4 bytes per entry)\n7. Repeat until loop termination condition met\n8. Execute SEH epilog and return\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Uses SEH exception handling for robustness during callback execution\n- Callback table is stored at fixed address 0x6fa8e7c0\n- Each entry is 4 bytes (32-bit function pointer)\n- Null function pointers are safely skipped without invocation\n- Called during static initialization phase\n\nStructure Layout:\nThe callback table format:\nOffset | Size | Entry Type | Description\n-------|------|------------|-------------\n0x00   | 4    | pointer    | First callback function address\n0x04   | 4    | pointer    | Second callback function address\n...    | ...  | ...        | Additional callback entries\nend    | 4    | pointer    | Sentinel marker or last entry",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:9882f49b46164551a852d0e5558c3763",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9882f49b46164551a852d0e5558c3763",
+        "CFG": "6be97e17b7a3802ad87dc51ef8cd04c3",
+        "PRO": "b7188ce9aaf75413c6e24bc033c5d37f"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9882f49b46164551a852d0e5558c3763"
       }
     },
     "D2gfx_MNE_aef9935d5818": {
@@ -1161,11 +1289,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "11a49a4f4d1f7585dbaa721e43141a3f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aef9935d5818b16bbad0952f5da65380"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1196,11 +1324,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "b9341e7a9c7fb15c0fd3b51f756cce6f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bb6caf8fa91f28d8c9b4f7822655fe6b"
       }
     },
     "D2gfx_MNE_89d1b6190541": {
@@ -1228,11 +1356,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "204649768cb6aa7c9bb671be8e047b74"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "89d1b619054116ad559c7c543db397fd"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1263,11 +1391,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "d9f501ab35c3e45910d8af88940764ed",
         "PRO": "90e9eadc7c1c9da9ca3a515f73b13cf1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c4685906a5c4fe97104af70b25069ec2"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1298,11 +1426,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "2bdbe5d6049f47ae5e33650ee79d4920",
         "PRO": "a150a68162357ae364bc07ea3ee65f66"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "97c22a85070344f102bcf14ee4f0ea92"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1333,11 +1461,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "b8441cb013c68b06fc43e57279ea6dcd",
         "PRO": "2a71c12bffbff4b88bfa2138aefb8e0b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fab24e5d32bf792b67dd222a8e1cb96f"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1368,11 +1496,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "74030650fb753398d6147a03797d11f3",
         "PRO": "fe8b22ad597beafb09901c0376a7be71"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d1375bb0092b441c0ed3bd5dfaaa61cb"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1403,11 +1531,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "08a47e92ff6d7488f728db6aa3d63aaa",
         "PRO": "c7b9eec6aeafeb135888b7ce8cd1548a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 201
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "21007ff5bd6460b5113e6bf65ba34c2f"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1438,14 +1566,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "cfb29ec8ba5518bec46a77b4d6fe6bcf",
         "PRO": "68b5f8f09942af1d0ce80c9cac7ef02d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 41
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "630b0e4f3169af3d32abd2ac2d1bf3c9"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2gfx_ADDR_6FA8274C": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8274C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x274C"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockMemoryAllocationLock",
+      "signature": "void UnlockMemoryAllocationLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks the memory allocation synchronization lock\n\nSummary:\nReleases critical section #4 which guards memory allocation operations.\nThis is called after ReallocateMemoryWithRetry completes to allow other\nthreads to access the memory allocation subsystem.\n\nAlgorithm:\n1. Call UnlockCriticalSectionByIndex(4) to release the lock\n2. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Critical section 4 must be locked before calling this function\n- Used exclusively by memory reallocation retry logic\n- stdcall convention: callee cleans up stack (POP ECX, RET)\n\nContext:\nMemory allocation in this binary uses critical sections for thread safety.\nThis function is the unlock counterpart to lock acquisition in the memory\nallocation subsystem. It's called unconditionally after reallocation attempts.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "e921639860f2c01ccf129587034ec112"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 2
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_7fa238a0d1fe": {
@@ -1473,14 +1633,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "8afe1dbf942c6c117dd7d41a44c33921",
         "PRO": "23291b0cfc9a0abfd7a03de687183b40"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7fa238a0d1fe5549fc522252a2120d78"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA82803": {
+      "addresses": {
+        "LoD/PD2": "0x6FA82803"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2803"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockGameCriticalSection",
+      "signature": "void UnlockGameCriticalSection(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks critical section at index 4.\n\nAlgorithm:\n1. Push hardcoded critical section index (4) onto stack\n2. Call UnlockCriticalSectionByIndex with index as parameter\n3. Pop return address from stack (stdcall cleanup)\n4. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Critical section index is hardcoded to 4, always locks the same resource\n- Used in __msize to ensure thread-safe memory operations\n- Paired with corresponding lock call in calling function",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "c61b7bd5382105da9c9590d766c374cf"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_8ac92c76a51a": {
@@ -1508,14 +1700,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "044e95a6511b64bf155bd4de5c12eeac",
         "PRO": "91fa0e0b112f34432f3e8fa6631bec54"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8ac92c76a51a8b065a1fac94d719ae1f"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8287E": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8287E"
+      },
+      "rvas": {
+        "LoD/PD2": "0x287E"
+      },
+      "sizes": {
         "LoD/PD2": 9
+      },
+      "name": "UnlockHeapCriticalSection",
+      "signature": "void UnlockHeapCriticalSection(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks the critical section protecting the heap memory allocator.\n\nAlgorithm:\n1. Receive no parameters (heap critical section index is hardcoded as 4)\n2. Call UnlockCriticalSectionByIndex with index 4 to release the synchronization primitive\n3. Return to caller\n\nParameters:\nNone. The critical section index (4) is hardcoded within the function.\n\nReturns:\nvoid: No return value.\n\nSpecial Cases:\n- This function is part of the Visual Studio 2003 heap allocator wrapper\n- Called after __lock(4) to release the lock protecting heap block allocation\n- The parameter value 4 refers to a specific critical section in the global array\n- Always called in pairs with __lock(4) during safe heap allocation\n- Used to protect ___sbh_alloc_block operation in __heap_alloc",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "139d37ca9e01d86e216e70d1b63fd0ad"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_be05c38d951a": {
@@ -1543,11 +1767,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "55d660ebbef99c0baa319e016760b8fc",
         "PRO": "9e156ac1d112b1b5e33d82a16514e462"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "be05c38d951a724b98e30bc46956a8c1"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1578,11 +1802,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "97a350d0b0dc45635b3c77f707f54501"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "301bd5440f60703ca7a24a8fb30f1e56"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1613,11 +1837,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "2e6249ad0abc59a109007597293b5187"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "03ce6e557a60cad10c5f167fdc7f4b70"
       }
     },
     "D2gfx_MNE_aff5ecc93302": {
@@ -1645,11 +1869,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e4d929dcade813bcfed0f23f20c25712",
         "PRO": "4f7ad6a4a3959f3b145dfc085a7e0375"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aff5ecc933020ea9f6660ca70cb9d16a"
       }
     },
     "D2gfx_MNE_a1900c49d3b8": {
@@ -1677,11 +1901,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "8321c82fb7898b227b2e755c8b0db48d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1900c49d3b847e69ff3bf21a94518de"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1712,11 +1936,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "0c8662126fe6ebdb099c385715f42fe6",
         "PRO": "b97829a4ce0885cd58d0706e5a329f3f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "04f1e6f173a4f00f5247db68bf412e5b"
       }
     },
     "D2gfx_MNE_adafedc33ce1": {
@@ -1744,14 +1968,78 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "2da93e684001310322c3f0b023dc49fc",
         "PRO": "1c03fd84b82e7e8408e0ba687bef06ab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 34
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "adafedc33ce199c85ef6d812cf9b5974"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA82AA1": {
+      "addresses": {
+        "LoD/PD2": "0x6FA82AA1"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2AA1"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockCriticalSectionIndex13",
+      "signature": "void UnlockCriticalSectionIndex13(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Wrapper function that unlocks critical section index 13.\n\nAlgorithm:\n1. Push critical section index 13 (0xd) onto stack as argument\n2. Call UnlockCriticalSectionByIndex to release the lock\n3. Pop return address into ECX (callee cleanup, __stdcall convention)\n4. Return to caller\n\nParameters:\n(none) - Fixed critical section index 13\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nCritical section 13 is a hardcoded index, typically used for thread-local storage (TLS) or global resource synchronization. This wrapper is called during FLS (Fiber Local Storage) cleanup via __freefls@4.\n\nStructure Layout:\nN/A - No structure access\n\nNotes:\nThis is a simple pass-through wrapper that always unlocks the same critical section. The calling context (__freefls@4) suggests this is part of Windows TLS/FLS cleanup infrastructure.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "2c3fd8d8af7200f94b35c0ee04a188e5"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "D2gfx_ADDR_6FA82AAD": {
+      "addresses": {
+        "LoD/PD2": "0x6FA82AAD"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2AAD"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockCriticalSection12",
+      "signature": "void UnlockCriticalSection12(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks critical section index 12 (thread synchronization cleanup).\n\nAlgorithm:\n1. Push critical section index 0xc (12) as parameter\n2. Call UnlockCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - hardcoded critical section index 12\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- This function is called during thread-local storage (TLS/FLS) cleanup\n- Critical section 12 is a fixed synchronization object managed globally\n- Part of the FLS cleanup callback infrastructure (__freefls@4)\n- Uses __stdcall convention where callee cleans stack via POP ECX\n\nContext:\nThis is a wrapper function that releases a specific critical section during\nfiber local storage cleanup. It's called whenever a thread terminates to\nensure synchronization primitives are properly released.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "295875f96f1634fa5c071dd9446bf15f"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_c0a536e0e6da": {
@@ -1779,11 +2067,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "4e847b889984c71922568191fca6fba0",
         "PRO": "c7aba8c6148a1dd833ce5838bcc2faa0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0a536e0e6dadcb5b945a8303814ecb3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1814,11 +2102,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "47193e95d9e3342a5a8c63a689eefe67",
         "PRO": "ec3587cb6025a0f9d3c257aa39c73e28"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bcce8ed29924bac295ff5cc0516a2419"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1851,14 +2139,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "555d704848b8e783f7d263b7ca7bd009",
         "PRO": "39dc174af1bb293fb63e5dc5181075fa"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d5c8453c3e2bb4ff6f437d3d747d2c97"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA82C27": {
+      "addresses": {
+        "LoD/PD2": "0x6FA82C27"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2C27"
+      },
+      "sizes": {
         "LoD/PD2": 9
+      },
+      "name": "UnlockHeapCriticalSection",
+      "signature": "void UnlockHeapCriticalSection(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks the heap critical section after memory deallocation operations.\n\nThis function is called by the _free function to release the lock on critical section index 4 (the heap critical section) after completing heap memory management operations.\n\nAlgorithm:\n1. Push the critical section index (4) onto the stack as parameter\n2. Call UnlockCriticalSectionByIndex(4) to release the heap lock\n3. Return to caller\n\nParameters:\nNone - Critical section index is hardcoded to 4 (heap critical section)\n\nReturns:\nvoid - No return value\n\nPurpose:\nPart of the heap memory manager's synchronization mechanism. The _free function acquires this lock via __lock(4) before performing heap operations, then calls this function to release the lock when done. This ensures thread-safe access to heap structures.\n\nSpecial Cases:\n- Always unlocks critical section index 4 (heap critical section)\n- Used exclusively in the _free memory deallocation path\n- Called after heap block processing completes",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "709ec126755cf00cce7e77ad45eaef24"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_43c1542ced67": {
@@ -1886,14 +2206,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "d59138f44100bd891d1023b7740338fc",
         "PRO": "57ee8bdaa95c30c0024d7d29efcd3fed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "43c1542ced67dd840c298e093699fef1"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2gfx_ADDR_6FA82D0B": {
+      "addresses": {
+        "LoD/PD2": "0x6FA82D0B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2D0B"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockMemoryAllocatorLock",
+      "signature": "void UnlockMemoryAllocatorLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Release the memory allocation synchronization lock.\n\nThis is a wrapper function that releases critical section index 4, which is used\nto synchronize access to the memory allocator across multiple threads. It should\nbe called after completing a protected memory allocation operation.\n\nAlgorithm:\n1. Push the critical section index (4) onto the stack\n2. Call UnlockCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid: No return value.\n\nSpecial Cases:\n- This lock is acquired by AllocateMemory before performing heap operations\n- Used in conjunction with __lock function for synchronization\n- Always releases lock at index 4 regardless of caller context",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "05756742d2fa368a5e616d4ea54201ea"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 2
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_124a050f7896": {
@@ -1921,11 +2273,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ce64ccb286409da41a70a80f89bb0d66",
         "PRO": "b7e9f190915bf60352c9f769f724ae68"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 46
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "124a050f7896343631e89fc5722f0cb0"
       }
     },
     "D2gfx_MNE_5c819fccbe8b": {
@@ -1953,11 +2305,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "f586866415c40e4eaee67b5c40cac105",
         "PRO": "0f3f2b41b41c68cbecf26eb8dc291235"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5c819fccbe8be253acb13e92783cc438"
       }
     },
     "D2gfx_MNE_d286a589c482": {
@@ -1985,11 +2337,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "60c2579aec5d4262b2bcbd8d56c31547",
         "PRO": "74d799a671909ed3d5577284da53dde4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d286a589c48283a2eda13c52495cb951"
       }
     },
     "D2gfx_MNE_5309cc011f44": {
@@ -2017,11 +2369,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "3ea934a2e5c85f7db5c3bb685cae36af",
         "PRO": "36e0d78a3d023220332b738484bde0f4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 63
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5309cc011f4489e83a895a5a05ecc215"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2052,11 +2404,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "9d95d0d72ba3d0f8ca13ab2ea583953f",
         "PRO": "5ad96e331bf4b08647e856f0d3858814"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "457ecf3d8055d8e00a172b3d901a03ca"
       }
     },
     "D2gfx_MNE_ba896e89d5b4": {
@@ -2084,11 +2436,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ec3c1f7068f62fb700bdaa7f18e77973",
         "PRO": "9aae7029081f58fd7f3bf8884ac7dd35"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 30
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ba896e89d5b4e319d02dcd31648ce3d9"
       }
     },
     "D2gfx_MNE_02783607761b": {
@@ -2116,11 +2468,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "5373f71b1fc67ec2016d5dcfe49dc588",
         "PRO": "0f5dfc13e612e57657d5276531fcc30d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "02783607761bb7b7f3ed068e856f0ca2"
       }
     },
     "D2gfx_MNE_057b2070bbbd": {
@@ -2148,11 +2500,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "99df254e8864ce84a96c669724d15346",
         "PRO": "257a468500b375b831be3ebb18dcd87a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "057b2070bbbdb5455d8d4d9018467770"
       }
     },
     "D2gfx_MNE_43c0a0116a01": {
@@ -2180,11 +2532,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "79578de49aac4c106e2830a21ae26f42",
         "PRO": "1c84f1d9bcb44421257bec902c52a670"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "43c0a0116a0179cd961980d35fb0c190"
       }
     },
     "D2gfx_MNE_f17bdc134d98": {
@@ -2212,11 +2564,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "7da0b27075b2247a294f35dfce854614",
         "PRO": "c5d73ae9ae5134090ea4cb384ca72353"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f17bdc134d984988a231baad11399d03"
       }
     },
     "D2gfx_MNE_79c576ae79b5": {
@@ -2244,11 +2596,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "0e61aef9e8eef9ae3e118bd261dba8e8",
         "PRO": "02e9d3da6e924c2bf96b1680a70d3b75"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 36
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "79c576ae79b525f94550b7e17b8f3e0b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2279,11 +2631,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
         "PRO": "1c492b7026a27fcdbb1290b69bddea3a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "179c969cc717d22841f18b89d2acdead"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2314,11 +2666,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "c304b1fa988d3a8a245e0f6e2f9547a8",
         "PRO": "deb21491b93d4bc32bfcc4de9e80b3b4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "907ddf19e9b559942986798c3a61049f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2349,11 +2701,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "285d09a7e9b985b0b82a1cfce0632509",
         "PRO": "d14e87288f1edcde9f795a0be8b3979b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0686acda8daa87f807e8c4bf4d7ccee"
       }
     },
     "D2gfx_MNE_b2a8f1a86586": {
@@ -2381,11 +2733,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "c326151ae67f2d2727298a6f840be658"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b2a8f1a86586c795d4e7ef4b4053c58e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2416,11 +2768,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "5a6a1bad4884a279605e3598d136f1d3",
         "PRO": "4b6df95541e95bfc1e5d3dacc7b41df8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f585ab7136accb11659a7703e402a24"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2428,10 +2780,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_b1691d6b7b8b": {
       "addresses": {
-        "LoD/PD2": "0x6FA83861"
+        "LoD/PD2": "0x6FA83858"
       },
       "rvas": {
-        "LoD/PD2": "0x3861"
+        "LoD/PD2": "0x3858"
       },
       "sizes": {
         "LoD/PD2": 9
@@ -2451,11 +2803,43 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "a5fbc572c960f03280e29642cc235ae3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b1691d6b7b8ba065c3fc1a089e8db64e"
+      }
+    },
+    "D2gfx_ADDR_6FA83861": {
+      "addresses": {
+        "LoD/PD2": "0x6FA83861"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3861"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "GetFileDescriptorTable",
+      "signature": "LPVOID GetFileDescriptorTable(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Returns pointer to thread-local file descriptor table.\n\nAlgorithm:\n1. Call __getptd() to get thread-local data pointer\n2. Add 0xc to the returned pointer to offset to file descriptor table\n3. Return the adjusted pointer\n\nParameters:\n  None\n\nReturns:\n  LPVOID: Pointer to array of file descriptor information structures. Used by FILE I/O functions (__read, __write, __close, __commit, etc.) to access per-thread file descriptor state.\n\nSpecial Cases:\n  - The offset 0xc from thread-local data points to the file descriptor table in the CRT thread-local storage block\n  - This is part of internal CRT implementation used by all C runtime I/O operations",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:b1691d6b7b8ba065c3fc1a089e8db64e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b1691d6b7b8ba065c3fc1a089e8db64e",
+        "CFG": null,
+        "PRO": "4226377b41899b790dd9bd8292e08dff"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b1691d6b7b8ba065c3fc1a089e8db64e"
       }
     },
     "D2gfx_MNE_b6f8c1079854": {
@@ -2483,11 +2867,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "29c5b729a612738fb6e8cb90e950eb24",
         "PRO": "2d65459b47791d7f297e0e3d020297be"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b6f8c10798544c3b39933775b55c5c07"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2518,11 +2902,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "83d4ad65d30dc1f07c8c82e05909137c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "059e9bb2efc1de93bfe21089d0ad96d3"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2558,11 +2942,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "d7e92aa36e4ea61ef8903512dfbaf1bc",
         "PRO": "96e279d5a20df43edcc3895c7a47428d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd4ab8e23ed6997cd2e2434b8d375458"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2593,11 +2977,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "754bfc5d47177c4cbdd43b336248c7ba",
         "PRO": "fe5cb0e5a5ea56f320d608d4f70e96f9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3e05470f02af6f6fdd7e67f07762fb3b"
       }
     },
     "D2gfx_MNE_c43b47bac3ec": {
@@ -2625,11 +3009,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "555cd55f889764e835a20b5b89a0d79e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c43b47bac3ec2db7a3f12c66010e2c00"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2660,11 +3044,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "014d2069a1aece9d955ffb144dc9da61",
         "PRO": "4bd24b9c5472cb9ce1aa70b12ba2413a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed17ad9d511f6e330c2b6a62378d83cf"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2695,11 +3079,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "f9330eca16acc1a586f19080607b798c",
         "PRO": "34fd04205b8a444137721574d896b028"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 59
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "81bc6e2827332721bcd73a06db9fcb5a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2730,11 +3114,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "5c82fc7968d7374fca493214f8fae70c",
         "PRO": "9114d3bb6407dfa943df5db9e97165ad"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f91c25bb1292543e16ed50f66b203fb"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2742,10 +3126,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_d016b68ecb5d": {
       "addresses": {
-        "LoD/PD2": "0x6FA83ED2"
+        "LoD/PD2": "0x6FA83C6B"
       },
       "rvas": {
-        "LoD/PD2": "0x3ED2"
+        "LoD/PD2": "0x3C6B"
       },
       "sizes": {
         "LoD/PD2": 160
@@ -2765,11 +3149,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "73b6fc3e113b5ff46b8a372f2e1c93fa",
         "PRO": "0f46c92f4225ad4c1700f510920e63f9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d016b68ecb5da6df87847adf03c73f3a"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2777,10 +3161,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_d4c2d26a88b1": {
       "addresses": {
-        "LoD/PD2": "0x6FA875D4"
+        "LoD/PD2": "0x6FA83CF2"
       },
       "rvas": {
-        "LoD/PD2": "0x75D4"
+        "LoD/PD2": "0x3CF2"
       },
       "sizes": {
         "LoD/PD2": 8
@@ -2800,11 +3184,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "855bb04f3093cd03c6fa492c21b5b936"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
     "D2gfx_MNE_478855be1acc": {
@@ -2832,14 +3216,81 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "94cee6e9046b74d001073808d4b21f34",
         "PRO": "367f991d527ce5aa39caa16e5996388f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 49
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "478855be1acc46abf6139addf3589574"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2gfx_ADDR_6FA83ED2": {
+      "addresses": {
+        "LoD/PD2": "0x6FA83ED2"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3ED2"
+      },
+      "sizes": {
+        "LoD/PD2": 160
+      },
+      "name": "__write",
+      "signature": "int __write(int _FileHandle, void * _Buf, uint _MaxCharCount)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __write\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d016b68ecb5da6df87847adf03c73f3a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d016b68ecb5da6df87847adf03c73f3a",
+        "CFG": "73b6fc3e113b5ff46b8a372f2e1c93fa",
+        "PRO": "70be10d7dc37cfbf9486f0f8542b8183"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d016b68ecb5da6df87847adf03c73f3a"
+      },
       "param_counts": {
         "LoD/PD2": 3
+      }
+    },
+    "D2gfx_ADDR_6FA83F59": {
+      "addresses": {
+        "LoD/PD2": "0x6FA83F59"
+      },
+      "rvas": {
+        "LoD/PD2": "0x3F59"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "name": "UnlockFileHandle",
+      "signature": "void UnlockFileHandle(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Wrapper that unlocks the currently locked file handle.\n\nAlgorithm:\n1. Push EBX to preserve the file handle value on stack\n2. Call __unlock_fhandle() to release the file lock\n3. Pop ECX to clean up the stack (callee cleanup convention)\n4. Return to caller\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nThis is a thin wrapper around __unlock_fhandle that handles the calling convention. The EBX register appears to be implicitly passed to the callee through the stack push. Used within file I/O operations after locking to ensure proper resource cleanup.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": null,
+        "PRO": "ab40d2022da7e1ff11b0b38b823f4dbe"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
     "D2gfx_MNE_0c1662f4a708": {
@@ -2867,11 +3318,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ff62e17f392c986e4932f13239e39412",
         "PRO": "dab6c9d7f78e0bae4a830fbf28aa9591"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0c1662f4a708ed2312320502a9057d72"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2902,11 +3353,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "bc042e4f56c5c862716dd36277cac9ef",
         "PRO": "781c39fd821ede4092947ad96d3b6371"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "faa86e79d9b1980bad4d322b9925b87c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2914,10 +3365,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_ff70d7fac254": {
       "addresses": {
-        "LoD/PD2": "0x6FA840FA"
+        "LoD/PD2": "0x6FA840A8"
       },
       "rvas": {
-        "LoD/PD2": "0x40FA"
+        "LoD/PD2": "0x40A8"
       },
       "sizes": {
         "LoD/PD2": 47
@@ -2937,11 +3388,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "80845e7377749fe62fdfa1726193a977",
         "PRO": "bdcc10310114e6a4a06fe796c9423f20"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ff70d7fac2548b5958f726d1eeb33c1c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2949,10 +3400,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_2221715ad392": {
       "addresses": {
-        "LoD/PD2": "0x6FA84129"
+        "LoD/PD2": "0x6FA840D7"
       },
       "rvas": {
-        "LoD/PD2": "0x4129"
+        "LoD/PD2": "0x40D7"
       },
       "sizes": {
         "LoD/PD2": 35
@@ -2972,11 +3423,81 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "d525801d8d00f8589c4fa0f08b524029",
         "PRO": "126aa142a63674eb0fefb7d150b2c70c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2221715ad392d22929a667a9021e3f90"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2gfx_ADDR_6FA840FA": {
+      "addresses": {
+        "LoD/PD2": "0x6FA840FA"
+      },
+      "rvas": {
+        "LoD/PD2": "0x40FA"
+      },
+      "sizes": {
+        "LoD/PD2": 47
+      },
+      "name": "__unlock_file",
+      "signature": "void __unlock_file(FILE * _File)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __unlock_file\n\nLibraries: Visual Studio 2003 Release, Visual Studio 2005 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:ff70d7fac2548b5958f726d1eeb33c1c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ff70d7fac2548b5958f726d1eeb33c1c",
+        "CFG": "80845e7377749fe62fdfa1726193a977",
+        "PRO": "bdcc10310114e6a4a06fe796c9423f20"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ff70d7fac2548b5958f726d1eeb33c1c"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA84129": {
+      "addresses": {
+        "LoD/PD2": "0x6FA84129"
+      },
+      "rvas": {
+        "LoD/PD2": "0x4129"
+      },
+      "sizes": {
+        "LoD/PD2": 35
+      },
+      "name": "__unlock_file2",
+      "signature": "void __unlock_file2(int _Index, void * _File)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __unlock_file2\n\nLibraries: Visual Studio 2003 Release, Visual Studio 2005 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:2221715ad392d22929a667a9021e3f90",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2221715ad392d22929a667a9021e3f90",
+        "CFG": "d525801d8d00f8589c4fa0f08b524029",
+        "PRO": "66bd1092c8209961fd1607439eb65888"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2221715ad392d22929a667a9021e3f90"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3007,11 +3528,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "6f990822ff7ab6fc4a0354777e2d7dbb",
         "PRO": "d22f820629540bc8910916bef725460e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2b72785c7d09e5484d16dae5407e64ce"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3042,11 +3563,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "c7d6543ece662e7a8daf636bba0df188",
         "PRO": "955495a0724dbc44d82ddb123ab59f3b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ec2f8cff08d73195854c9319296e0953"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3077,11 +3598,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "90c4f17418cec0d76ed106d2d34ca67f",
         "PRO": "37280dc610c502d174b731ec21cff03f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "45f246afe326e6d5962c59d89124cdf0"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3112,11 +3633,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "6f3c48c8a30820a9a8a6c4f4ad80c87c",
         "PRO": "7ce90bc572fa01b68727725acd0e40b4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9fd359b66679d8b6a2f1c57a264fe596"
       }
     },
     "D2gfx_MNE_4efdd923a388": {
@@ -3144,11 +3665,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "74c44fff4d24f318587f22fc1085febb",
         "PRO": "b854477ab48fd898103e91790b07e027"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4efdd923a388be710585d381cbbbfb83"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3179,11 +3700,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "af8f947cc0ba76aa1d310b52a6bb33e8",
         "PRO": "5d1977a5b94d5441fa3dfc6502a8e323"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6b07f716ad39855b07502ac9a8f75c79"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -3214,11 +3735,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "c514545fcce289b8241e149ad12d442a",
         "PRO": "1a239adda4bf919457849b2c86ab32e6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "45d24cae1027649da4393ef4c4f0d99b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3249,11 +3770,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e8304c2afda95740a391a275b6b161fd",
         "PRO": "9f1660d8118e5e49801b0cc962b48d16"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "288a4a209e4706fee9d14eabda44517a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3284,11 +3805,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "dc0623423d93fb21da8f1c1461d32590",
         "PRO": "7e7b1615ff60a64a4c38d7e5028de2e5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "565997ae4f137ad77dea012c57abbb1d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3319,11 +3840,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "481581f05882ccfc9daa8b7d80599503",
         "PRO": "af5ffc5fef388ef1fe1b032e30adfc61"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 50
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8b97ebec1e2ba4f1376a18655897a974"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3354,11 +3875,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "cb06ff47489f56c99a3330662b09491b",
         "PRO": "8514add82471994c76bbda44fb229d03"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8f7df14e6456cd93f8028b09582e6071"
       }
     },
     "D2gfx_MNE_c41f2d1f421c": {
@@ -3386,11 +3907,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "9da21044a93ea42988ff0cc8748c8b85",
         "PRO": "24b3b60b3217878320538ab84b5a34c5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c41f2d1f421c471451958bea4a10fa66"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3421,11 +3942,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "44831bf0135800d99aae2e5c23264fe6",
         "PRO": "9d4530e9555e83f57626964e7f569fd3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 54
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "71e3adec86883da683f0e423eb14e485"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3456,11 +3977,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e7a6cc0f7e2b744a49f409c722178a75",
         "PRO": "1559a57ade30b5f6ba57711be4cddc15"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 63
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdd552c17b8cb0117d531882b003b7d1"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3468,10 +3989,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_378e464c3884": {
       "addresses": {
-        "LoD/PD2": "0x6FA861E0"
+        "LoD/PD2": "0x6FA84E90"
       },
       "rvas": {
-        "LoD/PD2": "0x61E0"
+        "LoD/PD2": "0x4E90"
       },
       "sizes": {
         "LoD/PD2": 672
@@ -3491,11 +4012,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "8ecba1ac6a00afb63bf2cb6376fc859d",
         "PRO": "7653a0379a0a6445458757cd7dbea6be"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 63
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "378e464c38840f3332fec8fa0fd86d30"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3526,11 +4047,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "2a44c087b9d456adf3f7fe671334cd08",
         "PRO": "0fba8337ab4b1c20571910d09f9b88ca"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1c8e05375765f5055ce29f9161a94626"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3561,11 +4082,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "392d205942cc2d85569365d80a19246a",
         "PRO": "471fa8a57174ab7b60c33565cbbc850e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "81fc8ecddc12cc08d3d848c0224bdeb0"
       }
     },
     "D2gfx_MNE_202d2c66c8a5": {
@@ -3593,11 +4114,43 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "81252cc8fdc5c04e7c68f83eccf0fbeb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "202d2c66c8a5b404ad3bf64c94b499c1"
+      }
+    },
+    "D2gfx_ADDR_6FA85390": {
+      "addresses": {
+        "LoD/PD2": "0x6FA85390"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5390"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseCriticalSectionLock12",
+      "signature": "void ReleaseCriticalSectionLock12(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Release lock on critical section 12 for C runtime thread-local storage.\n\nAlgorithm:\n1. Push critical section index 0xc (12 decimal) onto stack\n2. Call UnlockCriticalSectionByIndex to release the lock\n3. Return to caller with __stdcall stack cleanup\n\nParameters:\n  None - critical section index hardcoded as 0xc\n\nReturns:\n  void - No return value; lock release side effect only\n\nSpecial Cases:\n  - Index 0xc specific to C runtime thread-local storage\n  - Called by ___updatetlocinfo during thread updates\n  - __stdcall convention provides automatic stack cleanup",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "f53030391c52cbb2d93db53d92254385",
+        "PRO": "c55530b235258b860e545cfc3a748318"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_ef80c025e383": {
@@ -3625,11 +4178,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "13f82bf08155c5d52e60aaf4f0bc8edb",
         "PRO": "510c8731d2ed770a518dbde211133926"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ef80c025e3831b06764dc8da4f7409c0"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3660,11 +4213,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "a7b46ffcf5c98a3dd42a4d49f8e4db0d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3586df3e31dd0bc0a688e61a43024ab7"
       }
     },
     "D2gfx_MNE_9dba01f3a3f5": {
@@ -3692,11 +4245,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "c3748a83d55213e3bfdbfd86de565dce",
         "PRO": "b9e1fed0f3439975f7b33064b4ed7850"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 44
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9dba01f3a3f519a348d690b818dfa854"
       }
     },
     "D2gfx_MNE_3b865c2f933c": {
@@ -3724,11 +4277,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ce4fc93e06b599e45d0292f276757311",
         "PRO": "bc9f1202e5ca6d908fd11590b1869db4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 39
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3b865c2f933cac7b684f56d2d74a981a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3759,14 +4312,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "d245bd9dbf65e94abcf0220b460866eb",
         "PRO": "5d5093f2cef3d8934cadd541804d3896"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 27
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3d95938874732b844e73905e6c952bdf"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA85867": {
+      "addresses": {
+        "LoD/PD2": "0x6FA85867"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5867"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockCriticalSectionD",
+      "signature": "void UnlockCriticalSectionD(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks critical section D during multibyte character code page initialization.\n\nAlgorithm:\n1. Push index 0xd (13) onto stack as argument for critical section identifier\n2. Call UnlockCriticalSectionByIndex() to release the critical section lock\n3. Return to caller via __stdcall cleanup\n\nParameters:\n(none) - Operates on a hardcoded critical section index\n\nReturns:\nvoid - No return value, function is used for side effects only\n\nSpecial Cases:\n- Index 0xd (13) is a reserved critical section for multibyte character processing\n- Used during __setmbcp initialization to unlock resources\n- Follows __stdcall convention where callee cleans up stack via PUSH/CALL/POP pattern",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "b6b19271db9cad20408823adf22f571f"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_a4ba30fe4414": {
@@ -3794,11 +4379,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "1abbbed88598ab76171d956e8b753f75",
         "PRO": "eb5613e38f147742faa8dc6fce55f1b8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a4ba30fe4414581a89a628d047ff2406"
       }
     },
     "D2gfx_MNE_cb39780517b1": {
@@ -3826,11 +4411,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "f4bdde520e5b2b37a12d35e86743d21a",
         "PRO": "8f4a15c4b513a8fca512bba10b0d7d63"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cb39780517b1dd8e5312f6fce0a00812"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3861,11 +4446,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "c08d053e6ad00eb22c78950f79f8409b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "70593f43ea0b0d7692df2cd60ddf29e8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3896,11 +4481,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "1ea5c571f30a096d65a25d6671cdf534",
         "PRO": "9507df991f535c513ad9f49c8a2bd9cf"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 55
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f1c393de2fac70496494aea734de5675"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3931,11 +4516,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "f15d897f6c6c56e92d0b1d7c22e06024",
         "PRO": "338c647f3f0c37bf3e9ead2103546b18"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "17ea33ac44dc56c9bc7a10bf336c7377"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3966,11 +4551,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "782ce5006ee7d6c9c45a4019c9674507",
         "PRO": "7512d896e852491c699dd1f38170f73e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 35
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c09a404c09b60148d7501f511aba84d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -4001,11 +4586,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "f73903fbb6cc9dbfde125a44617f0909",
         "PRO": "3ad7e5872587a694dad5cade723ce138"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f2706676636b43aedddd6b436caf92b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4036,11 +4621,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "c52a6791feb5482e7402cc5b5f725b60",
         "PRO": "4d21701c626175e1d34d32f74f699c1e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "82290fd4a986eda931e519e307e93b03"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4071,14 +4656,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "73c70e2fccbc6347bc43a33ccc1cab5e",
         "PRO": "472e58ccef6c317df4671288b370a36c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fd78a1cdcfba52796c1191ac28710e53"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA85D6B": {
+      "addresses": {
+        "LoD/PD2": "0x6FA85D6B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5D6B"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockCriticalSection10",
+      "signature": "void UnlockCriticalSection10(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlock global critical section 10 for file handle synchronization\n\nAlgorithm:\n1. Push critical section ID (10/0xa) onto stack as parameter\n2. Call UnlockCriticalSectionByIndex to release the critical section lock\n3. Pop return value into ECX (register cleanup)\n4. Return to caller\n\nParameters:\nNone - Critical section index (10) is hardcoded into the function\n\nReturns:\nvoid\n\nSpecial Cases:\n- Hardcoded to always unlock critical section 10 (0xa)\n- Index 10 is reserved for file handle (__fhandle) synchronization in VCRT\n- Called from __lock_fhandle after successful file operations\n- Used as a synchronization barrier for thread-safe file I/O operations\n\nNotes:\nThis is a specialized locking primitive in the Visual Studio C Runtime (VCRT). It serves as\na thin wrapper that encapsulates the critical section unlock operation for file handle management.\nThe hardcoded critical section index (10) indicates this is part of the VCRT's predefined\ncritical section pool for standard I/O operations.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "5e21902380cc516e3535915736b5fad7"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_a5b5a435a005": {
@@ -4106,11 +4723,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "ad182ad9df6c94ee55c475cfdb4e97f8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a5b5a435a00574933ae7bc271f1b0178"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4141,11 +4758,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ef353e1a6ec60e54c1a32cd883661c5e",
         "PRO": "61e5e1a4ccd3db17bd2f4d111dba17ed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "96b57c2abe5dc5792785a0347b715545"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -4176,11 +4793,43 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "cc556cd0606f776bb7c8ed11c66d7626",
         "PRO": "356fb2d8ba16020d5fde2a86b246daf7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eb37c10c6d65e405db05e051d6664293"
+      }
+    },
+    "D2gfx_ADDR_6FA85EAB": {
+      "addresses": {
+        "LoD/PD2": "0x6FA85EAB"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5EAB"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockFileAccessCriticalSection",
+      "signature": "void UnlockFileAccessCriticalSection(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks the file access critical section after file operations.\n\nAlgorithm:\n1. Call UnlockCriticalSectionByIndex with index 1 to release the file access lock\n2. Return to caller\n\nParameters:\n(none)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- This function is always called at the end of __fcloseall() after all file handles have been processed\n- Critical section index 1 corresponds to file access synchronization in the runtime library\n- Must be paired with a prior __lock(1) call in __fcloseall to maintain lock balance\n\nNotes:\nPart of the Visual Studio 2003 runtime library's file handling and thread synchronization mechanism.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "b9ccbd8e42235f858d85987987ac6bf8"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_f370c563e34e": {
@@ -4208,11 +4857,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "dcc2895e6645853551312dcb493406ae",
         "PRO": "723cef05dc4545566db8dcb5aa3068be"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f370c563e34e7403c5a45d10fafb5c93"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4243,11 +4892,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "42bdec2f11c73aa6056b6c694ab2bc19",
         "PRO": "961257c1bf280df6cff6bb8dcd5c0793"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "29a9619b77ee062a7363cd1953a97c8b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4278,11 +4927,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "76ee64efd521ccdda93299f40f5aa2f2",
         "PRO": "8abe68452be5a6474ec546198c7b5d04"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fcfd56bf5d47e09a4b8d1ac9f65fc89f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4313,14 +4962,110 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "7d3a24d23656de6c387d12440774ccd3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "903bbffc430fd56e85fa79d0fb445513"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2gfx_ADDR_6FA8600B": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8600B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x600B"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockCriticalSection1",
+      "signature": "void UnlockCriticalSection1(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks critical section index 1 used for file I/O synchronization.\n\nAlgorithm:\n1. Call UnlockCriticalSectionByIndex with index parameter 1\n2. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nPurpose:\nThis is a wrapper function called by the Visual Studio runtime file flushing routine (flsall) to release the critical section that protects file stream operations. Used as cleanup after file operations complete.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "5c6dcec0bf33c0d2cfedad88fd70f60f"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 2
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "D2gfx_ADDR_6FA86014": {
+      "addresses": {
+        "LoD/PD2": "0x6FA86014"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6014"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "__flushall",
+      "signature": "int __flushall(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __flushall\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "3e3e0d131578c7fc0b723126f03e199f"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "D2gfx_ADDR_6FA8601D": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8601D"
+      },
+      "rvas": {
+        "LoD/PD2": "0x601D"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "__fptrap",
+      "signature": "void __fptrap(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __fptrap\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "ddc66434f7702c35a75b0cce8de313a5"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_4af6f4d1378e": {
@@ -4348,11 +5093,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "290674f0d3e957f3a47123ff526d6d59",
         "PRO": "82c5d9ee064ddfeedda9b90f74345cd5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4af6f4d1378e3b27617b296b4a2b16cc"
       }
     },
     "D2gfx_STR_6829c7e2ecf5": {
@@ -4380,14 +5125,49 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "19efeacb1c9d9dd18ddc75b15dac67ba",
         "PRO": "e6d2e34250a19b565ffbc83696bc6053"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fb8791c79d0f02127c874f5d44290f32"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA861E0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA861E0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x61E0"
+      },
+      "sizes": {
+        "LoD/PD2": 672
+      },
+      "name": "_memmove",
+      "signature": "void * _memmove(void * _Dst, void * _Src, size_t _Size)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _memmove\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "378e464c38840f3332fec8fa0fd86d30",
+        "CFG": "8ecba1ac6a00afb63bf2cb6376fc859d",
+        "PRO": "7653a0379a0a6445458757cd7dbea6be"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "378e464c38840f3332fec8fa0fd86d30"
+      },
       "param_counts": {
-        "LoD/PD2": 1
+        "LoD/PD2": 3
       }
     },
     "D2gfx_MNE_6b4ad6d2941b": {
@@ -4415,11 +5195,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "16240859bdc7d7fab8ddae4522c26ec9",
         "PRO": "d51fa1ceb75b6d7c49689142454c789f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6b4ad6d2941b712fcff606229e9dd829"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4450,11 +5230,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "cbfd3d0c7425038f32cd25a3cfec4b02",
         "PRO": "f3dee295e6e023fcee8064e8021ea5c8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f70a35b7fba7d58d54c96ad387278a4c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4485,11 +5265,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "b6d31246179d73273008c43260a60774",
         "PRO": "0cd639647579e10fbedf1592f63f2f47"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "470047ed1f9244aa874a163facc5cee5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4520,11 +5300,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "cb9a1745964aa8636af8400620dcb79c",
         "PRO": "d667f0767f80378deb40a8a7c758135e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f5a2dadfb6e3cd7b350f3b00225ebe0"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4555,11 +5335,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "244d42c35cff0de8c78ffff48548cf5a",
         "PRO": "6827e29d467359e034ce8c9eee99ffe3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cf6e169535cd0b739256cb2ecfc119ba"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4590,11 +5370,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "dad2a753ae7c907198d5452c2cf5fedf",
         "PRO": "d63932be81b30027179e779219c52881"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 26
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7cec3aaa3bf000edc30666bb4980e176"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -4625,11 +5405,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "57a1818e074489c73b5b752558048ce6",
         "PRO": "7f14cc2a0f8ab60a20f51dd6aaa8be44"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe7518f9cbcae43d3194d5d079593073"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -4660,11 +5440,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "528877bfebb6cb7dc053ab3dc2930fa1",
         "PRO": "5940e08b79208ce6bdcd2695dac293d6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1ca444181aa479bff1f1eb748b3a2663"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -4695,11 +5475,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "fd48d6310d325d495db3e5b0dc4529ca",
         "PRO": "de907609c9ddaaea9fc64ebc489a583b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "262b55d4b1f21fd166621d0ca2135ed8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4730,11 +5510,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "8183a7f0607acf623a593eb6dc2898ff",
         "PRO": "2fa82a885b7b21deeda5062e7ae2b880"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 77
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9202742c31e7fad9c07478efa934202a"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -4765,11 +5545,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "9ee740eae2758b00f904633bf0c5e501",
         "PRO": "59cc5e5d7e9efa61c62c9b0e2b890a3a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eb7ebe8853ab4246d611f1ee5af2c48e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4800,11 +5580,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ad9a3b392fcc54daf4951f4d77bab78e",
         "PRO": "0900b81e5c79afbfa69a5f63724808fc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c2c985aace1b860e9b2c7a02eacdf425"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8703B": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8703B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x703B"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "name": "UnlockFileAndReturn",
+      "signature": "void UnlockFileAndReturn(FILE * pFile)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks file resource and returns to caller\n\nAlgorithm:\n1. Receive FILE pointer in ESI (via __stdcall calling convention)\n2. Call __unlock_file to release the file lock\n3. Return to _fclose\n\nParameters:\npFile (FILE *) - FILE structure pointer to unlock\n\nReturns:\nvoid - Returns control to _fclose after unlocking\n\nSpecial Cases:\nThis is a thin wrapper function that bridges calling conventions. The FILE pointer is received in ESI as an unaffected register per __stdcall. The function unlocks the file before returning to the standard C library _fclose handler.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": null,
+        "PRO": "e0f61fe4e15f0e1a9990e4a17e05ac45"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4835,14 +5650,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "c64338b35f4925b491810d5442b0e1a1",
         "PRO": "a561dd229e0a5e35bf206607a9ea67c9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "843e3db8ac5607bba3d919f4ee9bcace"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA870E3": {
+      "addresses": {
+        "LoD/PD2": "0x6FA870E3"
+      },
+      "rvas": {
+        "LoD/PD2": "0x70E3"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "name": "UnlockFileHandleWrapper",
+      "signature": "void UnlockFileHandleWrapper(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Wrapper function to unlock a file handle.\n\nAlgorithm:\n1. Preserves EBX register by pushing it onto the stack\n2. Calls __unlock_fhandle to release the lock on the file handle\n3. Restores EBX by popping it from the stack\n4. Returns to caller\n\nParameters:\n  IMPLICIT: EBX register contains the file handle to unlock\n\nReturns:\n  void - No return value\n\nSpecial Cases:\n  Uses non-standard calling convention where file handle is passed in EBX register\n  This wrapper is used by __commit to unlock file handles after flushing buffers\n\nContext:\n  This function is called by __commit (6fa87043) to release file handle locks\n  after file buffer operations have completed. The EBX register contains the\n  file handle index to be unlocked.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": null,
+        "PRO": "4dbedde1e577e831ce75fe04ddaf982f"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
     "D2gfx_MNE_cb7271f23b18": {
@@ -4870,11 +5717,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "714fe86794460a92b7c07cd2854276e8",
         "PRO": "8ae050135f8e08ab82bf616fcc905546"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cb7271f23b18085c633325272e533a6a"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4905,11 +5752,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "6a2c6063242729d398ada1dbe6ac7b2b",
         "PRO": "31e6dd745508ac7e7c438fa952787a61"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1bacf15d421243740ab5a96b430ce3dc"
       }
     },
     "D2gfx_MNE_78a86de15981": {
@@ -4937,11 +5784,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "f50e5479bfa840a829213102aed3c4ee",
         "PRO": "451179e85c2cf17b8f3986eecd429e08"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "78a86de15981e3f1c945cde9fbd4be9b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4972,11 +5819,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e6239802a5b3e3dd1f1be91f0d5c374d",
         "PRO": "2b7ee2ed533ada25ae1d43eebe0f4f52"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "138cb9be9d7caeaaa6cff721ddf1f5fa"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5007,11 +5854,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "81c39b208974ac6c9218e664489883be",
         "PRO": "aa03c89786ce0468d54ee28bd1796c9a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 63
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a82412e86c7e059d3af6ea9d376e2875"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -5042,11 +5889,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "9500af2f143a2d3834ce5f07053858f9",
         "PRO": "bf0cd87fa3c4880c14b210531c83ee5a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1819fca98b14dcf51dff412defb1fa98"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5077,14 +5924,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "661b2abc615a7cfef1d7c22a6acb0d5d",
         "PRO": "f4b81e70abfd387ddf30caeb5b8ec2c1"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b5e8d68191f204e2d43adbcf540da123"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA875D4": {
+      "addresses": {
+        "LoD/PD2": "0x6FA875D4"
+      },
+      "rvas": {
+        "LoD/PD2": "0x75D4"
+      },
+      "sizes": {
         "LoD/PD2": 8
+      },
+      "name": "UnlockFileHandle",
+      "signature": "void UnlockFileHandle(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlock a file handle by delegating to __unlock_fhandle.\n\nThis is a thin wrapper that unlocks the file handle in the implicit EBX register.\n\nParameters:\n  IMPLICIT EBX - File handle to unlock\n\nReturns:\n  void\n\nAlgorithm:\n1. Preserve EBX register by pushing it to stack\n2. Call __unlock_fhandle to perform unlock operation\n3. Restore register state\n4. Return to caller",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": null,
+        "PRO": "f4e9f40cec9b562984a5ca1808f0c786"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
     "D2gfx_MNE_f38bb98de0ca": {
@@ -5112,11 +5991,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ea03c6407b4d091868dce8d0baf95212",
         "PRO": "129d77d31b891c9523d1955fbefba481"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f38bb98de0cae7e771d97b2937aba094"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5147,11 +6026,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "a95ce1e5c935a12a7db59114a37206ec",
         "PRO": "f17796a956061d33e2e5b4b89cdc049a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "93d0dc9fd8314e8d90414fa46b2e66d4"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -5182,11 +6061,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "667714027c789a8b486a563a19e4b634",
         "PRO": "3eabd37b619c8c857e7d42508a357bb6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d54b31472f74b078be31f20f65c7b2d3"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -5217,11 +6096,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "9d6ee55adf71a7a6ea890de91748a26f",
         "PRO": "416c862cdb184741475b23605c2c2d89"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ecf4fe5a7e473ceb70f30e35ac316045"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5252,11 +6131,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "c81df70c1b97172a537e995055b0c6bd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3ecdb5e459e29b4117490dc114e98574"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -5264,10 +6143,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_e3e7225badfc": {
       "addresses": {
-        "LoD/PD2": "0x6FA878BC"
+        "LoD/PD2": "0x6FA8781E"
       },
       "rvas": {
-        "LoD/PD2": "0x78BC"
+        "LoD/PD2": "0x781E"
       },
       "sizes": {
         "LoD/PD2": 6
@@ -5287,11 +6166,273 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "08ad83d48608045113c32e66db90b7f6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "D2gfx_ADDR_6FA87824": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87824"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7824"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetExportedFunction_Ordinal401",
+      "signature": "void GetExportedFunction_Ordinal401(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Export thunk for Ordinal 401 that forwards calls to AllocateMemoryFromArena.\n\nAlgorithm:\n1. Jump indirectly through pointer at 0x6fa8d140 to external AllocateMemoryFromArena function\n2. Return control to caller\n\nThis is a jump thunk (also called a trampoline) used to export the AllocateMemoryFromArena function through ordinal 401. The actual function pointer is stored in the data section at 0x6fa8d140, which allows runtime redirection of the exported function if needed.\n\nParameters:\nNone - This is a simple jump thunk with no parameters.\n\nReturns:\nvoid - Returns control to caller via the target function (AllocateMemoryFromArena).\n\nSpecial Cases:\n- The indirect jump may be resolved at runtime, allowing the exported function to be dynamically replaced\n- Callers should treat this function as having the same signature as AllocateMemoryFromArena\n\nStructure Layout:\nNot applicable - this function contains only a jump instruction.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "ae8a0a44b85e3f8ca11136dc3f05985a"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2gfx_ADDR_6FA8782A": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8782A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x782A"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetExportedFunction_Ordinal403",
+      "signature": "void GetExportedFunction_Ordinal403(void * pObject, char * pszSource, int nMode, int nUnused)",
+      "calling_convention": "__stdcall",
+      "comment": "Thunk wrapper for exported ordinal function that performs object cleanup and destruction.\\n\\nAlgorithm:\\n1. Accept four parameters: object pointer, source identifier string, mode/context marker, and reserved parameter\\n2. Jump indirectly through external function pointer at address 0x6fa8d13c\\n3. The external function performs actual cleanup and memory deallocation based on mode parameter\\n4. Return control to caller after external function completes\\n\\nParameters:\\npObject - Pointer to the object to be cleaned up or destroyed (can be message entry or object instance)\\npszSource - Source identifier string passed for context (e.g., \\\"__AUTMESSAGESOURCE__\\\" or \\\"delete\\\")\\nnMode - Mode or context marker distinguishing operation type (0xfffffffe for message cleanup, 0xffffffff for object deletion)\\nnUnused - Reserved parameter always set to zero by callers, unused by function\\n\\nReturns:\\nvoid - No value returned; this is a wrapper that delegates to external function\\n\\nSpecial Cases:\\n- ClearMessageList calls this with 0xfffffffe marker to cleanup all message entries from list\\n- DeleteObjectWrapper calls this with 0xffffffff marker to delete individual object instances\\n- The actual implementation resides in external exported function reference at 0x6fa8d13c\\n- Different mode values (nMode parameter) indicate different cleanup operation types to external function",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "dea949d79f158817f83cb8369ea93aad"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "D2gfx_ADDR_6FA87836": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87836"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7836"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "DisplayErrorMessage",
+      "signature": "undefined DisplayErrorMessage(void)",
+      "calling_convention": "unknown",
+      "comment": "Dispatches error message display through a function pointer.\n\nAlgorithm:\n1. Indirect jump to function pointer at 0x6fa8d008\n2. Executes error handler implementation\n3. Returns to caller with handler's return value\n\nParameters:\n  IMPLICIT: No explicit parameters\n\nReturns:\n  void: Delegates return to handler\n\nSpecial Cases:\n  Thunk function used across 27 graphics error contexts",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "34a590a286f76363dbee009d457d988c"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2gfx_ADDR_6FA8783C": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8783C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x783C"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetErrorMessageResource",
+      "signature": "undefined GetErrorMessageResource(void)",
+      "calling_convention": "unknown",
+      "comment": "Thunk wrapper that jumps to the external error message resource handler function.\n\nAlgorithm:\n1. Retrieve the return address from the stack frame\n2. Jump to the external error message resource function at 0x6fa8d00c\n3. Transfer execution to the external module for error message resource handling\n4. The external function handles the actual error message retrieval and processing\n5. No return value is produced by this wrapper function\n6. Execution does not return to the caller (transfers to external code)\n\nParameters:\n  None. This thunk function accepts no parameters and uses no implicit parameters.\n\nReturns:\n  void. This function does not return to its caller. Execution transfers directly to the external error message resource handler at 0x6fa8d00c.\n\nSpecial Cases:\n  - This is a thunk function (wrapper/indirection) that provides a named entry point to external code\n  - The function is called by 27 different functions across the graphics and rendering subsystems\n  - The actual implementation resides outside the current module at 0x6fa8d00c\n  - No error handling or special cases apply to this simple jump wrapper\n  - The decompiler warning about indirect jumps is expected for thunk functions",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "912a1e54f25c3e25673489e82e4ddea6"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2gfx_ADDR_6FA87842": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87842"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7842"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetCursorResource",
+      "signature": "void GetCursorResource(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Thunk function dispatching to external GetCursorResource implementation.\nThis thin wrapper performs an indirect jump to the actual GetCursorResource function\npointer stored in the global function pointer table. Used for dynamic function dispatch.\n\nAlgorithm:\n1. Load function pointer from g_pfnGetCursorResource at 0x6fa8d000\n2. Perform indirect jump (JMP dword ptr) to target function address\n3. Target function executes with full control\n4. Return to original caller with result in EAX\n\nParameters:\nNo parameters accepted by this thunk wrapper function.\n\nReturns:\nEAX contains the return value from the target GetCursorResource function.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "2fd0e246150af0f4349fb7160c32c774"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2gfx_ADDR_6FA87848": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87848"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7848"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetIconResource",
+      "signature": "void GetIconResource(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Setting prototype: void GetIconResource(void)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "5f285c16f2ef71dcaf3de8e8cd97c461"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2gfx_ADDR_6FA8784E": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8784E"
+      },
+      "rvas": {
+        "LoD/PD2": "0x784E"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetPaletteResource",
+      "signature": "void GetPaletteResource(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Thunk function that dispatches to external palette resource handler.\n\nAlgorithm:\n1. Load function pointer from global g_pfnGetPaletteResource at address 0x6fa8d014\n2. Jump to external GetPaletteResource implementation via indirect JMP\n3. External function handles palette resource retrieval and initialization\n4. Return control to caller with result from external implementation\n\nParameters:\n  None - Thunk accepts no parameters\n\nReturns:\n  void - Function result from external implementation is passed through directly\n\nSpecial Cases:\n  - This is a thunk function providing stable entry point for dynamic dispatch\n  - Used by graphics initialization (InitializeGraphicsDLL) and display restoration\n  - The actual implementation is stored in a function pointer for runtime binding",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "a5b64acf3647827c47cce4faf1e6f139"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2gfx_ADDR_6FA87854": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87854"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7854"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetStringResource",
+      "signature": "void GetStringResource(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Setting prototype: void GetStringResource()",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "0c4624a844b81560de098425a618e127"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
     "D2gfx_MNE_3a966d378a12": {
@@ -5319,14 +6460,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "58f038befe5bbad46706be039b30588a",
         "PRO": "65a4d016a0c4bd915eaf066a72d989a2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3a966d378a126a76a245d88e9b060455"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA87897": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87897"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7897"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "UnlockCriticalSectionIndex14",
+      "signature": "void UnlockCriticalSectionIndex14(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlock critical section at index 14 (type_info destructor).\n\nAlgorithm:\n1. Push lock index 14 onto stack as parameter\n2. Call UnlockCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\n(None - lock index 14 is hardcoded)\n\nReturns:\nvoid\n\nSpecial Cases:\nThis is a specialized wrapper that always unlocks lock index 14.\nUsed as destructor for type_info object that requires critical section protection.\nThe lock index 0xe (14) maps to a specific global resource.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "32000d7afb07b9868f3ac45af133767c"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2gfx_MNE_fcd666aa0beb": {
@@ -5354,14 +6527,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e67ee52de705150869e2ef2baa9939af",
         "PRO": "fa7794653567332e53edd286ac59d4fd"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fcd666aa0beb6eec15da06c485365b59"
+      },
+      "param_counts": {
         "LoD/PD2": 3
+      }
+    },
+    "D2gfx_ADDR_6FA878BC": {
+      "addresses": {
+        "LoD/PD2": "0x6FA878BC"
+      },
+      "rvas": {
+        "LoD/PD2": "0x78BC"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetExportedFunction_Ordinal501",
+      "signature": "void GetExportedFunction_Ordinal501(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Setting prototype: void GetExportedFunction_Ordinal501(void)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "c837b86f3f6d5628e850768aebefac64"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 3
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
     "D2gfx_MNE_a5c53e09069a": {
@@ -5389,11 +6594,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "e192a846737da6a18315a150fa000325"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a5c53e09069a3cbd3f14c736c4627d39"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5424,11 +6629,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "3e1c5674e1c8446c34b099eaeccae200"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6aa86ec09ed704c2fa671b5f49de77d0"
       }
     },
     "D2gfx_STR_223f446ba4dc": {
@@ -5456,11 +6661,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "d2f0c9b853189ba00328390d42b83a84",
         "PRO": "89640140ffbb3aec9b44ecae45a73a49"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5a687908f8a4d403eafd20c027eb8bf5"
       }
     },
     "D2gfx_MNE_b5629b4d48f3": {
@@ -5488,11 +6693,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "efdf0caa95724aa54df6213c068f018d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b5629b4d48f367068efe0a60d48819eb"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5523,11 +6728,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "1aaca039d81195473c903d623cac4497",
         "PRO": "19d1d88a96aee6f76a05066c509b5abe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8df9490d4337bf01b3d09984128eee05"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5563,11 +6768,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e10086733b4f2d3736c4d7402c9a8d19",
         "PRO": "47fd6bb0cefd1a6b48b8b8d17bc01ba6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "875dbff72cb1092ab9a7d9bffdc8924d"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5600,11 +6805,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "7cc0218256416fa324a756050a6e12a7",
         "PRO": "eb5baaffaea06e6b86c7b5c5e841f66d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "309aec1248c1b94b575aa5fabd160174"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5635,11 +6840,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "0fb58838957a104ab484733ee71dc9a9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "303a16dd4c902c24875cfb07f7777004"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5670,11 +6875,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "8bcfe68be77bcf1a96fd65035c083440",
         "PRO": "184d3d438be860b5cad22b5b4632bd7f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "467593c25f6d85dfd73427680b5b43eb"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5705,11 +6910,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "2c706c4d67a00273e8f44eca61bc7769",
         "PRO": "773c7b63a8e047b58ded61107dcce0b3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "286df436b4a11cf7b837ea8338f68a59"
       }
     },
     "D2gfx_MNE_fe130b8ce836": {
@@ -5737,11 +6942,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "8f87c31656cb4d867ca492e31cb2d365",
         "PRO": "133b69110cdb086ca65641c693136d02"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe130b8ce836859b3f55fecec24b5b29"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5749,10 +6954,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_fdad073544ac": {
       "addresses": {
-        "LoD/PD2": "0x6FA8CBA0"
+        "LoD/PD2": "0x6FA87C80"
       },
       "rvas": {
-        "LoD/PD2": "0xCBA0"
+        "LoD/PD2": "0x7C80"
       },
       "sizes": {
         "LoD/PD2": 5
@@ -5772,11 +6977,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "e68b6b378dc2e999dda1e7c2aeacd5bc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
       }
     },
     "D2gfx_MNE_6a8f3235f294": {
@@ -5804,11 +7009,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "b7b9a2ea777c80f6a54fae7f1c10d596"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6a8f3235f294d7f055be83bf338dca3a"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -5816,10 +7021,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_7d5eb63aede8": {
       "addresses": {
-        "LoD/PD2": "0x6FA8B360"
+        "LoD/PD2": "0x6FA87CC0"
       },
       "rvas": {
-        "LoD/PD2": "0xB360"
+        "LoD/PD2": "0x7CC0"
       },
       "sizes": {
         "LoD/PD2": 49
@@ -5839,11 +7044,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "87293770fff7dd02aae145b197058be3",
         "PRO": "e9abec2ca79bd6d6dcdd0c3dcb6d522a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7d5eb63aede808968c80aa2e933c26a7"
       }
     },
     "D2gfx_MNE_2a2fb685db82": {
@@ -5871,22 +7076,22 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "635876a80d61047c7dd28db0170065c3",
         "PRO": "7a2a8884337a9d53e076af9af6855624"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2a2fb685db8243b990b6abe1f5f9043f"
       }
     },
     "D2gfx_API_c01fa6e1a170": {
       "addresses": {
-        "LoD/PD2": "0x6FA8B920"
+        "LoD/PD2": "0x6FA87DA0"
       },
       "rvas": {
-        "LoD/PD2": "0xB920"
+        "LoD/PD2": "0x7DA0"
       },
       "sizes": {
-        "LoD/PD2": 121
+        "LoD/PD2": 50
       },
       "name": "CallGraphicsVtable_0x48WithErrorCheck",
       "signature": "undefined CallGraphicsVtable_0x48WithErrorCheck(void)",
@@ -5903,11 +7108,87 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "4829319e2a49e5c4df0979448cd2dd26",
         "PRO": "19f238ce249fdf89b4f1fc031d08f8a5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 22
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cda64c0c75d09fc607ae9377ab6bcaed"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      }
+    },
+    "D2gfx_MNE_cda64c0c75d0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87DE0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7DE0"
+      },
+      "sizes": {
+        "LoD/PD2": 50
+      },
+      "name": "CallGraphicsVtableWithErrorHandler",
+      "signature": "undefined CallGraphicsVtableWithErrorHandler(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Safely invokes graphics library vtable method with error handling and cleanup.\n\nAlgorithm:\n1. Load graphics library pointer from global (0x6fa91268)\n2. Validate graphics library pointer is not null\n3. If null, retrieve error message resource for error code 0x30a\n4. Display error message with the retrieved resource\n5. Exit process with status code -1\n6. If library loaded, invoke method at offset 0x44 in graphics vtable\n7. Return to caller with cleanup of 4-byte parameter\n\nParameters:\nNone (parameterless void function)\n\nReturns:\nvoid - Function does not return in error case (_exit terminates process)\n\nSpecial Cases:\n- If graphics library is null: retrieves error message, displays it, and terminates with _exit(-1)\n- Error code 0x30a indicates graphics library initialization failure\n- Uses __stdcall calling convention with RET 0x4 for parameter cleanup",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "cda64c0c75d09fc607ae9377ab6bcaed",
+        "CFG": "4829319e2a49e5c4df0979448cd2dd26",
+        "PRO": "9f6b24f252d98721e83f622fe4cb79dc"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cda64c0c75d09fc607ae9377ab6bcaed"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      }
+    },
+    "D2gfx_MNE_1d9ebd7ed525": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87E20"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7E20"
+      },
+      "sizes": {
+        "LoD/PD2": 59
+      },
+      "name": "InvokeGraphicsLibraryMethod_0x40",
+      "signature": "void InvokeGraphicsLibraryMethod_0x40(int nUnused1, int nUnused2, int nMethodParam)",
+      "calling_convention": "__stdcall",
+      "comment": "Invokes graphics library virtual method at offset 0x40 with parameter validation.\n\nAlgorithm:\n1. Load graphics library pointer from global g_pGraphicsLibrary\n2. Test if pointer is null (graphics library not initialized)\n3. If null: retrieve error message resource ID 0x2fe, display error, exit with code -1\n4. If valid: invoke virtual method at offset +0x40 in graphics library structure\n5. Method called with single parameter (nMethodParam) passed via stack\n6. Return to caller\n\nParameters:\nnUnused1: Unused parameter (reserved for calling convention alignment)\nnUnused2: Unused parameter (reserved for calling convention alignment)\nnMethodParam: Parameter to pass to graphics library virtual method at offset 0x40\n\nReturns:\nvoid - function does not return in error case, returns normally if graphics library valid\n\nSpecial Cases:\n- Error exit: If g_pGraphicsLibrary is null, calls _exit(-1) and never returns\n- Graphics library structure: Expects virtual method table (vtable) at offset 0x40\n- Resource ID 0x2fe: Direct3D initialization error message from game resources",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "1d9ebd7ed5250bb9828b679819f8ab71",
+        "CFG": "3d7ac2c2df8a331cdbb21fa9dd404d13",
+        "PRO": "eff7db4a8faa7eac41c63e9c96e8bdde"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d9ebd7ed5250bb9828b679819f8ab71"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5916,7 +7197,124 @@ var FUNCTIONS_D2gfx_dll = {
         ]
       },
       "param_counts": {
-        "LoD/PD2": 2
+        "LoD/PD2": 3
+      }
+    },
+    "D2gfx_MNE_98aa5f34b274": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87E60"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7E60"
+      },
+      "sizes": {
+        "LoD/PD2": 43
+      },
+      "name": "CallGraphicsVtable_0x3cWithErrorCheck",
+      "signature": "undefined CallGraphicsVtable_0x3cWithErrorCheck(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Validates graphics library vtable pointer and invokes virtual method at offset 0x3c.\n\nAlgorithm:\n1. Load graphics library pointer from global g_pGraphicsLibrary\n2. Test if pointer is null\n3. If null: retrieve error message resource (ID 0x2f2), display error with string prefix, exit with code -1\n4. If valid: call virtual method at offset 0x3c in the graphics vtable\n\nParameters:\nNone\n\nReturns:\nvoid - Function does not return if graphics library is null (calls _exit)\n\nSpecial Cases:\n- Magic number 0x2f2 is the resource ID for the error message string\n- Magic number 0x3c is the vtable offset (15 * 4 bytes) indicating the virtual method slot\n- String prefix szOdeletePrefix + 8 points to error message header string\n- Exit code -1 indicates critical graphics library initialization failure",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "98aa5f34b2748e739a4dd5b68c5296d0",
+        "CFG": "373ab06ce4995b11aa294c119b308ebf",
+        "PRO": "7d06b88584261fa7a122ad1a49856a2f"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "98aa5f34b2748e739a4dd5b68c5296d0"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      }
+    },
+    "D2gfx_ADDR_6FA87E90": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87E90"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7E90"
+      },
+      "sizes": {
+        "LoD/PD2": 59
+      },
+      "name": "InvokeGraphicsLibraryMethod_0x38",
+      "signature": "void InvokeGraphicsLibraryMethod_0x38(uint dwGraphicsContext, uint dwParam1, uint dwParam2)",
+      "calling_convention": "__stdcall",
+      "comment": "Invoke graphics library virtual method at offset 0x38 with parameters.\n\nAlgorithm:\n1. Load graphics library pointer from global g_pGraphicsLibrary\n2. Validate graphics library pointer is not null\n3. If null: retrieve error message resource (0x2d8), display error, call _exit(-1)\n4. If initialized: load parameters from stack into registers\n5. Call virtual method at offset 0x38 in graphics library vtable\n6. Return to caller\n\nParameters:\npGraphicsContext - First parameter passed to graphics vtable method (via ECX register)\ndwParam1 - Second parameter passed to graphics vtable method (via EDX register)\ndwParam2 - Third parameter passed to graphics vtable method (via stack)\n\nReturns:\nvoid - Return value from vtable method discarded\n\nSpecial Cases:\n- Graphics library null check triggers emergency shutdown via _exit(-1)\n- Error handling displays user-visible error message before terminating\n- Virtual method return value not used by caller",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "1d9ebd7ed5250bb9828b679819f8ab71",
+        "CFG": "3d7ac2c2df8a331cdbb21fa9dd404d13",
+        "PRO": "b608a48bdf73b99dcfc62a7588255400"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d9ebd7ed5250bb9828b679819f8ab71"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2gfx_ADDR_6FA87ED0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87ED0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7ED0"
+      },
+      "sizes": {
+        "LoD/PD2": 43
+      },
+      "name": "CallGraphicsVtable_0x34WithErrorCheck",
+      "signature": "undefined CallGraphicsVtable_0x34WithErrorCheck(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Invokes graphics library virtual method at offset 0x34 with initialization error handling.\n\nAlgorithm:\n1. Load graphics library pointer from g_pGraphicsLibrary global variable\n2. Test if library pointer is NULL (TEST EAX, EAX)\n3. If library is initialized, jump directly to vtable call\n4. If library is NULL, call GetErrorMessageResource(0x2af) to fetch error message\n5. Push error message pointer onto stack with format string address\n6. Call DisplayErrorMessage to show error dialog to user\n7. Call _exit(-1) to terminate application with error code\n8. If library initialized, call vtable method at offset +0x34 from library pointer\n\nParameters:\nNone - function uses global g_pGraphicsLibrary pointer initialized elsewhere.\n\nReturns:\nvoid - function never returns; either calls vtable method or terminates via _exit().\n\nSpecial Cases:\n- Error code 0x2af indicates graphics library failed to initialize\n- Unconditional termination on library NULL\n- Vtable offset 0x34 corresponds to graphics library method slot",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "98aa5f34b2748e739a4dd5b68c5296d0",
+        "CFG": "373ab06ce4995b11aa294c119b308ebf",
+        "PRO": "3d3614e2caf30fc7e0290d7d33e659df"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "98aa5f34b2748e739a4dd5b68c5296d0"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
       }
     },
     "D2gfx_MNE_f1bb9983d9dc": {
@@ -5944,11 +7342,52 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "eba342bd98afd446744cc2b12bc97517"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f1bb9983d9dc1f8301d508469cee24d7"
+      }
+    },
+    "D2gfx_MNE_bc16e9e3908c": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87F10"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7F10"
+      },
+      "sizes": {
+        "LoD/PD2": 63
+      },
+      "name": "SetFullscreenModeAndCallGraphicsVtable_0x2c",
+      "signature": "void SetFullscreenModeAndCallGraphicsVtable_0x2c(int nMode)",
+      "calling_convention": "__stdcall",
+      "comment": "Configures fullscreen mode setting and invokes graphics library virtual function.\nAlgorithm:\n1. Validate that graphics library is loaded (g_pGraphicsLibrary != NULL)\n2. If library not loaded: retrieve error message resource (ID 0x1d5), display error, exit with code -1\n3. Convert nMode parameter to boolean fullscreen flag: nMode == 0 sets g_dwFullscreenModeEnabled to 1, else 0\n4. Invoke graphics library virtual function at offset 0x2c within vtable\nParameters:\n- nMode (int): Mode selection flag. Value 0 indicates fullscreen enabled, non-zero indicates disabled.\nReturns:\nvoid. Function terminates with exit(-1) if graphics library is not initialized.\nSpecial Cases:\n- Boolean inversion: nMode == 0 maps to fullscreen enabled (true), nMode != 0 maps to disabled (false)",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "bc16e9e3908c3db00c542f37ca667b29",
+        "CFG": "ae5a7295f41b2cc6d381601031fd744e",
+        "PRO": "2f23ce00dd10c19b6f6772427c029c4e"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bc16e9e3908c3db00c542f37ca667b29"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "D2gfx_MNE_c7caf568d623": {
@@ -5976,19 +7415,57 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "8f793f81eebf6b1a28e081f351d196b1",
         "PRO": "cf992b64823165e338ba8bcf21cc4973"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c7caf568d62303da4e067e68e8f6cf29"
+      }
+    },
+    "D2gfx_MNE_b6001309a382": {
+      "addresses": {
+        "LoD/PD2": "0x6FA87F70"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7F70"
+      },
+      "sizes": {
+        "LoD/PD2": 54
+      },
+      "name": "CallGraphicsVtable_0x50WithErrorCheck",
+      "signature": "undefined CallGraphicsVtable_0x50WithErrorCheck(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Calls the graphics vtable function at offset 0x50 with error checking.\n\nAlgorithm:\n1. Load graphics vtable pointer from global data location 0x6fa91268\n2. Test if the vtable pointer is NULL/uninitialized\n3. If vtable is NULL, retrieve error message resource and display error, then exit\n4. If vtable is initialized, load two parameters from stack (return address + offsets)\n5. Call the function at offset 0x50 within the vtable structure\n6. Return to caller with 8-byte stack adjustment\n\nParameters:\nIMPLICIT [ESP + 0x4]: First parameter passed to vtable function (ECX)\nIMPLICIT [ESP + 0x8]: Second parameter passed to vtable function (EDX)\n\nReturns:\nReturns immediately after calling the vtable function. Return value depends on the called vtable function at offset 0x50.\n\nSpecial Cases:\n- If graphics vtable is not initialized, the function calls GetErrorMessageResource with resource ID 0x1a5\n- DisplayErrorMessage is called with the error message before terminating with _exit()\n- The function uses __stdcall convention with 8-byte parameter cleanup (RET 0x8)",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "b6001309a3828a683a8fd039913618cc",
+        "CFG": "ff698eff2671bf364b1dd2af87e006df",
+        "PRO": "3ec3b6f9f20fda6f8535e3130558f208"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b6001309a3828a683a8fd039913618cc"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
       }
     },
     "D2gfx_MNE_7b4de9f0cf35": {
       "addresses": {
-        "LoD/PD2": "0x6FA8B8F0"
+        "LoD/PD2": "0x6FA87FB0"
       },
       "rvas": {
-        "LoD/PD2": "0xB8F0"
+        "LoD/PD2": "0x7FB0"
       },
       "sizes": {
         "LoD/PD2": 6
@@ -6008,19 +7485,19 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "aafbd7abb818143d3e5e83e36530f362"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "D2gfx_MNE_0f26f5ebbb65": {
       "addresses": {
-        "LoD/PD2": "0x6FA8B280"
+        "LoD/PD2": "0x6FA87FC0"
       },
       "rvas": {
-        "LoD/PD2": "0xB280"
+        "LoD/PD2": "0x7FC0"
       },
       "sizes": {
         "LoD/PD2": 12
@@ -6040,11 +7517,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "5f4343ef809ce5c29ab95963e4490874"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f26f5ebbb6562741331dd6e6bdd0342"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6075,11 +7552,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "add4bebc1212978f3a0e68f98dc2b5ca"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c61015522767419637354f5155e74113"
       }
     },
     "D2gfx_MNE_55852887d12e": {
@@ -6107,11 +7584,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "45c780e25955422bd64054a72a26c4f0",
         "PRO": "efe38cbfa15adaeda3c0be0e60661e46"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "55852887d12e56b727d5e9fc6364d88f"
       }
     },
     "D2gfx_MNE_cd93b2473ed6": {
@@ -6139,11 +7616,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "fe1da1c93249e59196e888d919db0835",
         "PRO": "58303f793369c438e157a10693473668"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd93b2473ed633e40ce3f552a9392105"
       }
     },
     "D2gfx_API_15b2b03a25dd": {
@@ -6171,11 +7648,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "60e789c6e4b37faf7528d41e89594656",
         "PRO": "a89079a51df655fa36ad35e41243d544"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "241027c8ba28d49546f65e8cae12b806"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6214,14 +7691,52 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "13d5bf8464f8840683f9cc5bb010ea15",
         "PRO": "c092c8cbf65a1ad798a649795e33a18f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "75d5af7712da313506f69f6aa4e96113"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_MNE_50168c947636": {
+      "addresses": {
+        "LoD/PD2": "0x6FA882D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x82D0"
+      },
+      "sizes": {
+        "LoD/PD2": 138
+      },
+      "name": "CleanupGraphicsAndWindow",
+      "signature": "bool CleanupGraphicsAndWindow(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Cleans up graphics library and window resources before application shutdown.\nAlgorithm:\n1. Validate graphics library pointer (g_pGraphicsLibrary) is initialized\n2. If null, display error message and exit with code -1\n3. Ensure cursor visibility by calling ShowCursor(1) in loop until return >= 0\n4. Set cursor initialization flag (g_dwCursorInitialized) to 1\n5. Call graphics library vtable method at offset 0x10 for cleanup\n6. If callback window exists (g_hCallbackWindow), destroy it via DestroyWindow\n7. Reset display settings to defaults using ChangeDisplaySettingsA(NULL, 0)\n8. Return combined success status (true only if graphics cleanup and window destroy both succeed)\nParameters: void\nReturns: bool - true if all operations succeeded, false if any operation failed\nSpecial Cases: Graphics library null check exits immediately with _exit(-1)",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "50168c947636eb975fd074815f999ac1",
+        "CFG": "045e680c5c4f0f6d3a37e3ecf0bfffa8",
+        "PRO": "6acae95b0e808d9870afc09def7214ea"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "50168c947636eb975fd074815f999ac1"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
       }
     },
     "D2gfx_API_4dc0fda924b7": {
@@ -6249,11 +7764,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "05083eb7182084670ae6ba5988d9c5f4",
         "PRO": "5c9ed55b05d1fa7e8910d5479a4c6fbb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "90186f81939c3399eb6b3c457f263b2d"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6291,11 +7806,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "191711e7ce495a05e352832741d20ccd",
         "PRO": "794e506d0384516618247e7e6d94e791"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7158a675018e630dea569d41169a63d1"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6331,11 +7846,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "2aba21aef4706a837a5dab39ba05c769",
         "PRO": "66e349b94c2231d4be3755a4bcfa4aad"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bdb451b888399a703bf4a3a16d4aa532"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6373,11 +7888,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "6143068a858e2fa2ef9a6675ec3b88df"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aaca3fe15668675c808ffe97fd4a7c1b"
       }
     },
     "D2gfx_STR_3075993bd842": {
@@ -6405,11 +7920,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "a5d844376fad8170a5461fe6986de86c",
         "PRO": "63a74dd270dbff2eb3a994295d9db4b6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ca01e1aca2d43d0f2b3015caf072494f"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6448,11 +7963,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "9300648c49d18a79bd4ffa7e447c1b5e",
         "PRO": "2482aca8729b5fd5c6a9453e25a9b850"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0434425e6f3f2ec81de36715c7ee7c6d"
       }
     },
     "D2gfx_MNE_8677cb8e1fa9": {
@@ -6480,11 +7995,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "8720adbc2f5f8db2f9b7a6c9ca7bc1c1",
         "PRO": "79b8f079560e48ee8d865325af756e0c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8677cb8e1fa90ef9ec2338bc7b8b2c21"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6515,11 +8030,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ecb957e5108d8baa2335e59c45455ed1",
         "PRO": "6a3d7be57505ed993e8abad502e5e420"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 48
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8aaa895f0abcca00cf521631e78bc067"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -6550,11 +8065,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "7ab0d5002ef8a1c3541fd42952aef160",
         "PRO": "2c131124064b6834b0c4ade724828151"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 44
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "99f9612c9e066173144a4f632523e0ad"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -6585,11 +8100,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "866ceea169b5f39334ef0ea7fc6b9acb",
         "PRO": "75f6674c41daad5c13d37263a13fad5f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cdef74b8ae16a80587312543684cd1b9"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -6620,11 +8135,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "a5fad410a190dce503726d1cf12c5a5e",
         "PRO": "c2b298151eae6f21b98551617479618f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "12ed9951fd8ee7aea066da03d5bf16d4"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6655,11 +8170,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "162d65c343290eaea378660ecd014ebc",
         "PRO": "05bee7d008778a9820e37afe6bee3689"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ae0328de6d6759f7744a858aa1079a43"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -6690,14 +8205,175 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "c0ab582983ce59d1bd818528e3313dd2",
         "PRO": "fbd0d13a3ccb1e341c4246ee07389d1b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2158f027dd805cdf33c0260ae0d19c27"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_MNE_ccfda4e40318": {
+      "addresses": {
+        "LoD/PD2": "0x6FA89660"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9660"
+      },
+      "sizes": {
+        "LoD/PD2": 853
+      },
+      "name": "RenderTilePixelsWithComposition",
+      "signature": "void RenderTilePixelsWithComposition(byte * pSrcPixels, int xCoord, int yCoord, int * pBounds, byte lightnessLevel)",
+      "calling_convention": "__fastcall",
+      "comment": "Renders palette-indexed sprite pixels with per-pixel lightness blending.\n\nAlgorithm:\n1. Select palette offset table based on lightnessLevel (0x00-0x3f: skip; 0x40-0x7f: index 2; 0x80-0xbf: index 1; 0xc0+: index 0)\n2. Extract bounds from pBounds array: minX, minY, maxX, maxY\n3. Calculate deltas: tileWidthDelta = maxX - minX, tileHeightDelta = maxY - minY\n4. Convert coordinates to fixed 32.8 format: xCoord <<= 5, yCoord <<= 5\n5. Validate global screen bounds: yCoord >= g_dwConfigValue11 && yCoord < g_dwConfigValue6 && xCoord >= g_dwConfigValue3 && xCoord < g_dwConfigValue4\n6. Check video buffer initialized: g_pGameExecutionContext must be non-zero (error 0x48b if not)\n7. Calculate base screen address: pScreenPixel = g_dwVideoBufferPointers[yCoord] + g_pGameExecutionContext + xCoord\n8. Calculate palette table base: pPaletteGradient = g_GradientLookupTable + ((xCoord >> 8) * 32 + (yCoord >> 8)) * 32\n9. If coordinates within inner safe bounds (g_dwConfigValue12-15): Execute fast 32-row loop\n   - Read 2-byte sprite row: height, pixelCount\n   - Skip row if both bytes zero (transparent)\n   - Else: blend pixels using g_TilePixelBlendTable double lookup with palette offset\n10. Else if coordinates in margin region: Execute safe clipped loop with per-row bounds validation\n   - Calculate clipped height: max = g_dwConfigValue5, min = g_dwConfigValue17\n   - Clamp render height to valid range [0, maxHeight]\n   - Skip row if clipped height becomes invalid (height <= 0)\n   - Apply pixel blending only to clipped region\n\nParameters:\npSrcPixels: Pointer to sprite row data array (packed 2-byte entries: height, pixelCount, ...)\nxCoord: Screen X position in pixels\nyCoord: Screen Y position in pixels\npBounds: Pointer to 4-element int array [minX, minY, maxX, maxY]\nlightnessLevel: Palette selector (0x40-0x7f uses offset 2, 0x80-0xbf uses offset 1, 0xc0+ uses offset 0)\n\nReturns:\nvoid\n\nSpecial Cases:\n- lightnessLevel < 0x40: Returns immediately (no rendering)\n- Buffer not initialized: Displays error, calls _exit(-1)\n- Transparent pixels (both bytes = 0): Skipped entirely\n- Coordinate overflow: Returns silently\n- Margin region uses clipping to prevent buffer overflow",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "ccfda4e403184b0c8fe7e28a09a999fc",
+        "CFG": "58903d0c2e6756bc8d760ab708f6791d",
+        "PRO": "687b09fb932aa3fb77c95e7ccb930db8"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ccfda4e403184b0c8fe7e28a09a999fc"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "param_counts": {
-        "LoD/PD2": 1
+        "LoD/PD2": 5
+      }
+    },
+    "D2gfx_MNE_ccb6239a6af6": {
+      "addresses": {
+        "LoD/PD2": "0x6FA899C0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x99C0"
+      },
+      "sizes": {
+        "LoD/PD2": 545
+      },
+      "name": "BlitPaletteImageToScreen",
+      "signature": "void BlitPaletteImageToScreen(byte * pImageData, int x, int y, byte colorMode)",
+      "calling_convention": "__fastcall",
+      "comment": "Renders a palette-indexed sprite onto the screen with optional clipping.\nSoftware blitting engine that converts indexed color image data to screen pixels.\nUses RLE encoding with skip/draw pairs for efficient sparse pixel handling.\nSupports both fast unclipped and optimized clipped rendering paths.\n\nAlgorithm:\n1. Validate color mode (0x40-0xc0) to select palette offset; invalid modes return\n2. Validate screen position within bounds [minX..maxX) and [minY..maxY)\n3. Verify video buffer initialized; error if NULL\n4. Calculate screen pixel pointer from line offset table and x,y coordinates\n5. Check if sprite fits in unclipped region; use fast 32-line path if yes\n6. Unclipped path: load RLE pairs, (0,0) moves to next line, else draw pixels\n7. Clipped path: validate y bounds, apply left/right clipping, draw visible pixels\n8. Loop until 32 lines processed or boundary exceeded\n\nParameters:\npImageData (ECX) - RLE-encoded sprite data with [skip:byte][draw:byte][pixels]\nx (EDX) - Screen X coordinate (0-based from left)\ny (Stack+4) - Screen Y coordinate (0-based from top)\ncolorMode (Stack+8) - Palette selector: determines palette[0/1/2] offset\n\nReturns:\nvoid - Modifies screen buffer in place; no return value\n\nSpecial Cases:\nColor mode < 0x40: Returns immediately without drawing\nUninitialized buffer: Displays error 0x3f8 and exits with -1\nRLE (0,0) pair: End-of-line marker; moves to next scanline\nClipped pixels: Skipped for left/right bounds; rows outside handled by fast path",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "ccb6239a6af61719f60323dc97d4c3f1",
+        "CFG": "451882a887f3c437a514810863e01329",
+        "PRO": "398db69bb6d693e66d27215b9b9d30f5"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ccb6239a6af61719f60323dc97d4c3f1"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "D2gfx_MNE_971e558edbdb": {
+      "addresses": {
+        "LoD/PD2": "0x6FA89BF0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9BF0"
+      },
+      "sizes": {
+        "LoD/PD2": 452
+      },
+      "name": "CopyTileDataToTextureBuffer",
+      "signature": "void CopyTileDataToTextureBuffer(byte * pSourceData, int nDestY, byte * pDestY)",
+      "calling_convention": "__fastcall",
+      "comment": "Copies rasterized tile command data to texture or video buffer with boundary clipping support.\n\nAlgorithm:\n1. Validate input coordinates: Y range [g_dwScreenMinY, g_dwScreenMaxY), X range [g_dwScreenMinX, g_dwScreenMaxX)\n2. Verify video buffer is initialized (g_pGameVideoBuffer != NULL), exit with error -1 if not\n3. Calculate destination address: base = g_pScreenLineOffsetTable[nDestY] + g_pGameVideoBuffer + nDestX\n4. Check if fast path applies: coordinates within clip bounds [g_dwClipMinY/X, g_dwClipMaxY/X)\n5. Fast path (32 rows, no clipping needed):\n   a. Loop 32 times reading 2-byte command headers (skipCount, pixelCount)\n   b. If both bytes are zero: end-of-row marker - advance to next row, stride = g_dwVideoBufferStride\n   c. Otherwise: Copy pixelCount bytes starting at offset skipCount in destination row\n   d. Use rep movsd (4-byte chunks) for bulk copy, rep movsb for remaining 0-3 bytes\n6. Slow path (32 rows, with clipping for buffer overflow prevention):\n   a. Loop up to 32 times reading command bytes from pSourceData\n   b. End-of-row marker (0,0): increment row counter, advance pointers, continue\n   c. Data command: Check if destination pointer exceeds g_dwScreenMaxExtent (buffer end)\n   d. If within clip region [g_dwClipLowerBound, g_dwClipMaxX): Calculate clipping offsets\n   e. Clip left edge using g_dwClipOffsetLeft, right edge using g_dwClipOffsetRight\n   f. Copy clipped size using rep movsd then rep movsb with bounds checking\n   g. If outside clip region: skip data block without copying\n7. Return to caller with stack cleanup (RET 0x4)\n\nParameters:\n- pSourceData (ECX): Pointer to command stream buffer containing 2-byte headers per row\n- nDestY (EDX): Destination X coordinate used to index g_pScreenLineOffsetTable\n- pDestY (Stack): Destination Y coordinate for initial bounds checking\n\nReturns: void\n\nSpecial Cases:\n- Error condition: g_pGameVideoBuffer uninitialized triggers GetErrorMessageResource(0x2f4) and _exit(-1)\n- Fast path requires coordinates within clip region to avoid bounds checking overhead\n- Slow path handles tile data partially outside buffer with clipping calculations\n- End-of-row markers (0,0) advance to next row and reset column position\n- Stride pattern: next_row = current_row + g_dwVideoBufferStride (typically 320 or 640 bytes)\n\nStructure Layout - Video Buffer Access:\nOffset | Size | Field Name | Type | Description\n0      | 4    | base_ptr   | ptr  | g_pGameVideoBuffer base address\n+Y*stride | 4  | row_start | ptr  | Row offset from g_pScreenLineOffsetTable[Y]\n+X     | 1    | pixel_byte | byte | Individual pixel in 8-bit paletted format",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "971e558edbdbf6773f548ede02c2dd85",
+        "CFG": "61657546e59dfb68dbeccd9c2ec9aa71",
+        "PRO": "b92235170bfdd4e7c17279e00bcb1cd1"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "971e558edbdbf6773f548ede02c2dd85"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2gfx_MNE_3ea362e127e1": {
+      "addresses": {
+        "LoD/PD2": "0x6FA89DC0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9DC0"
+      },
+      "sizes": {
+        "LoD/PD2": 197
+      },
+      "name": "InitializeAndValidateDataTable",
+      "signature": "void InitializeAndValidateDataTable(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initializes and validates a 0x4000-byte gradient lookup table with per-row checksum verification.\n\nAlgorithm:\n1. Initialize loop variables: outer loop index=0, row pattern offset=0\n2. Load base buffer pointer (g_GradientLookupTable at 0x6fa95450)\n3. Outer loop processes 32 chunks of 0x400 bytes each:\n   a. Inner middle loop processes 32 rows of 0x20 bytes per chunk\n   b. For each row, generate 32 gradient bytes with scaled values\n   c. Apply clamping to ensure values stay in valid range [0, 0x1f000000]\n   d. Validate final byte MSB matches row index (error if mismatch)\n   e. Advance pointers and offsets to next row\n   f. Return to next chunk when all 32 rows processed\n4. Exit with success when buffer end (0x6fa9d450) reached\n\nReturns: void (calls _exit(-1) with error code if validation fails)\n\nSpecial Cases:\n- Gradient clamping bounds: values clamped to [0, 0x1f000000] to prevent overflow\n- Row validation: each 32-byte sequence must have MSB of final value equal to row index\n- Error handling: on validation failure, fetches error resource 0x285 and displays message\n- Buffer layout: organized as 32 outer chunks \u00d7 32 rows per chunk \u00d7 0x20 bytes per row\n- Total size: 0x4000 bytes (32 \u00d7 32 \u00d7 0x20)\n\nStructure Layout:\nOffset    Size    Description\n------    ----    -----------\n+0x00     4       Gradient lookup table base (g_GradientLookupTable)\n+0x400    4       Next chunk boundary\n+0x4000   4       End of table (0x6fa9d450)",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "3ea362e127e12e32efcbe464634f573a",
+        "CFG": "ff4f7fb8e924f53602d4396a529f35cb",
+        "PRO": "7f21c21febb90d67977103d11968f9f2"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3ea362e127e12e32efcbe464634f573a"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
       }
     },
     "D2gfx_MNE_a2801cbe0f45": {
@@ -6725,11 +8401,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "f69c19f1167366113cb1452f6b297fe4",
         "PRO": "5263bed08b36cb78bdb1858b7ec9083c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 56
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a2801cbe0f452b056e4bd2ec06e41dd6"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -6760,11 +8436,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "92fb1e7593e1bd5293abb0b1cfccde31",
         "PRO": "daeaa8e2c8ab80fb2884cf2eafa79407"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 72
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "92b1b748e72f0f602cb90af882220ee7"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -6795,11 +8471,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "0289efeb82c41be65fe876cd0af1377e",
         "PRO": "80a3e461e5924a07388470f3e2673623"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1e29595593335ed8a1b29ea3230e3ffc"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -6830,14 +8506,55 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "4ea2f7e3f2ac5a5b18a5b59c11a5c4ce",
         "PRO": "8c43760562863f884b68702e40a1cfa1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 25
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9002127cd7e7ef52c38080c69f0cc570"
+      },
+      "param_counts": {
+        "LoD/PD2": 6
+      }
+    },
+    "D2gfx_MNE_4cd690a927ca": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8A890"
+      },
+      "rvas": {
+        "LoD/PD2": "0xA890"
+      },
+      "sizes": {
+        "LoD/PD2": 193
+      },
+      "name": "ProcessMapTileData",
+      "signature": "void ProcessMapTileData(void * pDestBuffer, int nTileX, int nTileY)",
+      "calling_convention": "__fastcall",
+      "comment": "Setting prototype: void ProcessMapTileData(void *pDestBuffer, int nTileX, int nTileY)",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "4cd690a927caae7030f9fac8b6638331",
+        "CFG": "7d6e9717fb380212faac5c5e145c900a",
+        "PRO": "7b7caddd309439f36b240722405c75a9"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4cd690a927caae7030f9fac8b6638331"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "param_counts": {
-        "LoD/PD2": 6
+        "LoD/PD2": 3
       }
     },
     "D2gfx_MNE_22ff2af72981": {
@@ -6865,11 +8582,52 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ee4f405e4c35509af8d85e629410d275",
         "PRO": "36de4fd8718f09085f902287a28e240c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 52
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "22ff2af72981281776e4c714bf2d2dce"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "D2gfx_MNE_61d41b3c8a51": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8ABF0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xABF0"
+      },
+      "sizes": {
+        "LoD/PD2": 435
+      },
+      "name": "ProcessTileDataWithValidation",
+      "signature": "void ProcessTileDataWithValidation(byte * pTileData, int nTileY, byte * pTileX, byte * pCommandData)",
+      "calling_convention": "__fastcall",
+      "comment": "Processes and validates tile rendering data with multi-path dispatch logic.\\n\\nAlgorithm:\\n1. Test global buffer initialization flag (g_dwTileBufferInitFlag)\\n   - If initialized: load header byte from tile data and check marker (0xf8)\\n   - If marker valid: dispatch to fast-path color lookup renderer\\n   - Otherwise: dispatch to standard map tile processor\\n2. If buffer uninitialized: load 4 offset values from pCommandData structure\\n   - Load base offsets: EDI=[+0], ESI=[+4], EBP=[+8], EBX=[+0xc]\\n   - Calculate scaled pixel offsets (left shift by 5 = multiply by 32)\\n   - Calculate stride differences between offset pairs\\n3. Convert all offset differences to absolute values for distance calculation\\n4. Validate minimum rendering distance threshold (must be > 10 pixels combined)\\n5. Check global game state flag (dwGameState) - skip rendering if state active\\n6. Validate primary tile coordinates within screen bounds\\n   - X: [g_dwScreenMinY, g_dwScreenMaxY)\\n   - Y: [g_dwScreenMinX, g_dwScreenMaxX)\\n7. Load render buffer pointer from g_pGameVideoBuffer with null check\\n   - If null: display error 0x3be and exit program with code -1\\n   - If valid: calculate destination pixel address using line offset table\\n8. Validate secondary clipping rectangle bounds\\n   - If in-bounds: call RenderTileWithColorLookup with tile dimensions\\n   - If out-of-bounds: call DecodeTileRLEData with full parameters\\n9. Handle alternative tile type markers (0x1f00 mask)\\n   - For RLE compressed tiles: route through alternate decoders\\n   - Extract transformation byte via MOVZX for special processing\\n10. Return with stack cleanup (RET 0x8)\\n\\nParameters:\\n- pTileData (ECX): Pointer to tile command/data buffer containing header marker and pixel data\\n- nTileY (EDX): Tile Y coordinate for boundary validation against screen dimensions\\n- pTileX (Stack +0xc): Tile X coordinate for boundary validation against screen dimensions  \\n- pCommandData (Stack +0x10): Pointer to coordinate/offset structure with 4 DWORD values\\n\\nReturns: void (modifies destination buffer in-place with rendered tile data)\\n\\nSpecial Cases:\\n- Fast path marker 0xf8: Early exit using RenderTileWithColorLookup\\n- RLE marker 0x1f00: Routes to alternative RLE decoders\\n- Null render buffer: Fatal error with program termination\\n- Secondary bounds check: Prevents rendering outside safe clipping region\\n- Distance calculation: Uses absolute values to handle negative offsets from any direction\\n\\nStructure Layout (pCommandData):\\nOffset | Size | Field Name       | Type  | Description\\n0x00   | 4    | nOffsetX1        | int   | First X offset value\\n0x04   | 4    | nOffsetY1        | int   | First Y offset value\\n0x08   | 4    | nOffsetX2        | int   | Second X offset value\\n0x0c   | 4    | nOffsetY2        | int   | Second Y offset value",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "61d41b3c8a51583e22ea3c6f8f18bffc",
+        "CFG": "6728286225532d9990b46503b3413319",
+        "PRO": "69adec2d560d8bbef62be82934da87b7"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "61d41b3c8a51583e22ea3c6f8f18bffc"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -6877,10 +8635,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_5483acfde82b": {
       "addresses": {
-        "LoD/PD2": "0x6FA8B2D0"
+        "LoD/PD2": "0x6FA8ADB0"
       },
       "rvas": {
-        "LoD/PD2": "0xB2D0"
+        "LoD/PD2": "0xADB0"
       },
       "sizes": {
         "LoD/PD2": 15
@@ -6900,11 +8658,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "54c13781b66c4841ffe68689ebcfbfad"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5483acfde82be5a955723d35564f5d51"
       }
     },
     "D2gfx_MNE_c926c5fa3561": {
@@ -6932,11 +8690,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "9aa22390e4b59791b06e5f6c168deabb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c926c5fa3561290d7d9e247edf967da1"
       }
     },
     "D2gfx_MNE_773a5ec8a9b3": {
@@ -6964,11 +8722,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "b5e3a02bdb4c7397cae3df9b052a78c6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "773a5ec8a9b3054dff4086eec9434a05"
       }
     },
     "D2gfx_MNE_d772e9331874": {
@@ -6996,11 +8754,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "b41504ac0ddb5067978bf46d3ffcce40"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d772e9331874c1ee60a55429b1147e20"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7031,11 +8789,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "adc640a3489c603170b20e3511a8313a",
         "PRO": "c7ea5d6b5d6acad123656d51a92534f9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dce33428f6fb0125f3ce698dc6049d6d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7066,11 +8824,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "9a0189bfdbed819fe6bcab0b0499108c",
         "PRO": "1fabde1e09b5e40f33a52eb92d1d836f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "27932ca97e2411d714465d121dcd253c"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7101,11 +8859,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "32cc5fbb4712c24868082309b63e1213",
         "PRO": "f3ce2228e5a2c37b611f2c3af2a186d6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "682ab6a8c673aa4e212cdb99f45c6f57"
       }
     },
     "D2gfx_MNE_7e8b5db44cc9": {
@@ -7133,11 +8891,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "7aacd61a1d81f3299fa55646a3677b47",
         "PRO": "ab60d6064418a94a9f85c7d58fa66fb4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7e8b5db44cc99af04abe0a5bb92571cd"
       }
     },
     "D2gfx_MNE_9d3000780292": {
@@ -7165,19 +8923,19 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "3245d463118c932000e60ecd4a2ccdb8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9d30007802926c303ae27211bfc3adfb"
       }
     },
     "D2gfx_MNE_d092968b6d2f": {
       "addresses": {
-        "LoD/PD2": "0x6FA8BAD0"
+        "LoD/PD2": "0x6FA8AF90"
       },
       "rvas": {
-        "LoD/PD2": "0xBAD0"
+        "LoD/PD2": "0xAF90"
       },
       "sizes": {
         "LoD/PD2": 22
@@ -7197,14 +8955,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "56982dbc8f8ec7290212dd31cb4f131d"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d092968b6d2f10526b1ce8ac8b703c25"
+      },
+      "param_counts": {
         "LoD/PD2": 2
+      }
+    },
+    "D2gfx_ADDR_6FA8AFB0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8AFB0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xAFB0"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "ThunkToExternalFunction",
+      "signature": "void ThunkToExternalFunction(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Thunk function that jumps to external function at 0x7b6624a0\n\nAlgorithm:\n1. Jump directly to external function address 0x7b6624a0\n2. External function executes and returns control\n\nParameters:\nNone\n\nReturns:\nvoid - This is a passthrough thunk, return value depends on external function\n\nSpecial Cases:\n- This is a simple thunk/trampoline function\n- Target address 0x7b6624a0 is external (outside loaded modules)\n- Function is referenced from 0x6fa8f260 and Entry Point\n- Used for dynamic linking or API forwarding",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "4b925ab8cb0f9885086f713bbca11e7c"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 2
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
       }
     },
     "D2gfx_MNE_8b4918f11433": {
@@ -7232,14 +9022,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "171c887010285950c9846a7cbbda5968"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8b4918f11433a5d23ba92e0864b5ac8c"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8AFD0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8AFD0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xAFD0"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "ThunkToExternalFunction_0x7b6624e0",
+      "signature": "void ThunkToExternalFunction_0x7b6624e0(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Setting prototype: void ThunkToExternalFunction_0x7b6624e0()",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "11cf7aca8854c85a5c4a67f654ee363d"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
       }
     },
     "D2gfx_MNE_7a6ae38e7a35": {
@@ -7267,22 +9089,54 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "df80317e8842220add61bbbbaac1876d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7a6ae38e7a35df8f688a114b31aed852"
       },
       "param_counts": {
         "LoD/PD2": 3
       }
     },
-    "D2gfx_MNE_3c6069195c1e": {
+    "D2gfx_ADDR_6FA8AFF0": {
       "addresses": {
-        "LoD/PD2": "0x6FA8BB58"
+        "LoD/PD2": "0x6FA8AFF0"
       },
       "rvas": {
-        "LoD/PD2": "0xBB58"
+        "LoD/PD2": "0xAFF0"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "ThunkToExternalFunction_0x7b662450",
+      "signature": "void ThunkToExternalFunction_0x7b662450(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Setting prototype: void ThunkToExternalFunction_0x7b662450(void)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "2de0ea35136c51bfb36c201afebc9c57"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      }
+    },
+    "D2gfx_MNE_3c6069195c1e": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8AFF8"
+      },
+      "rvas": {
+        "LoD/PD2": "0xAFF8"
       },
       "sizes": {
         "LoD/PD2": 29
@@ -7302,22 +9156,86 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "4ae3f51b5c75de16d5969bfc2596bf86"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c6069195c1e5aa9e56fdfca471a40f0"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2gfx_ADDR_6FA8B020": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B020"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB020"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "ImportThunk_10074",
+      "signature": "void ImportThunk_10074(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Import thunk for ordinal 10074\n\nAlgorithm:\n1. Jumps directly to external function at 0x7b6623b0 (import index 0x6a)\n\nParameters:\nNone\n\nReturns:\nvoid - Function signature unknown (external import)\n\nSpecial Cases:\n- This is a thunk/forwarding function for an imported external function\n- The actual implementation resides in an external DLL\n- Referenced from function pointer table at 0x6fa8f2d0",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "6d7dd33a998295a074dfc0ea324337b4"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      }
+    },
+    "D2gfx_ADDR_6FA8B050": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B050"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB050"
+      },
+      "sizes": {
         "LoD/PD2": 5
+      },
+      "name": "ThunkToExternalFunction_0x7b662350",
+      "signature": "void ThunkToExternalFunction_0x7b662350(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Thunk function that jumps to external function at 0x7b662350.\n\nAlgorithm:\n1. Execute unconditional jump to external function address 0x7b662350\n2. External function processes with passed parameters\n3. Control returns to caller with result from external function\n\nParameters:\n  Variable parameters: Pass through to external function via __stdcall convention\n\nReturns:\n  Varies: Return value determined by external function at 0x7b662350\n\nSpecial Cases:\nThis is a trampoline/thunk providing an import address for external code.\nThe actual implementation resides at address 0x7b662350.\nAll parameter passing and return semantics depend on external function.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "8bdcbb2dd6d97718fec3156c2ca16c4c"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
       }
     },
     "D2gfx_MNE_e6c49af345a9": {
       "addresses": {
-        "LoD/PD2": "0x6FA8BB28"
+        "LoD/PD2": "0x6FA8B058"
       },
       "rvas": {
-        "LoD/PD2": "0xBB28"
+        "LoD/PD2": "0xB058"
       },
       "sizes": {
         "LoD/PD2": 34
@@ -7337,14 +9255,113 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "f447cde9488e6144dbd4eb069e1585bd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e6c49af345a935f50a3d2d149f111157"
+      },
+      "param_counts": {
+        "LoD/PD2": 5
+      }
+    },
+    "D2gfx_ADDR_6FA8B080": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B080"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB080"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "ThunkToExternalFunction_0x7b662280",
+      "signature": "void ThunkToExternalFunction_0x7b662280(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Thunk function redirecting to external function at 0x7b662280.\n\nAlgorithm:\n1. Execute unconditional JMP to external address 0x7b662280\n2. Transfer control completely to external target\n3. Return behavior determined by external function\n\nParameters:\n(none) - No parameters, simple redirection thunk\n\nReturns:\nPass-through return from external function at 0x7b662280\n\nSpecial Cases:\n- Referenced from function pointer table at 0x6fa8f24c\n- Used for indirect function dispatch or late binding\n- External target EXT_FUN_7b662280 behavior is unknown\n- Thunk provides indirection layer for external API access",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "94778c3b6f5eed18e6a50f1a7767a1d7"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      }
+    },
+    "D2gfx_ADDR_6FA8B088": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B088"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB088"
+      },
+      "sizes": {
+        "LoD/PD2": 34
+      },
+      "name": "ForwardToGraphicsVtable",
+      "signature": "void ForwardToGraphicsVtable(void * this, void * pGraphicsObject, uint dwGraphicsObjContext, uint dwGraphicsObjState, uint dwCallParam1, uint dwCallParam2)",
+      "calling_convention": "__thiscall",
+      "comment": "Forwards virtual method call to graphics library vtable.\n\nAlgorithm:\n1. Load four 32-bit parameters from stack (dwGraphicsObjContext, dwGraphicsObjState, dwCallParam1, dwCallParam2)\n2. Retrieve graphics library vtable pointer from global g_pGraphicsLibrary (0x6fa91268)\n3. Call virtual method at vtable offset 0x84 with forwarded parameters (dwCallParam1, dwCallParam2, and implicit this)\n4. Return to caller with stack cleanup (0x18 bytes = 6 DWORD values)\n\nParameters:\n  this (ECX) - Graphics object pointer, passed implicitly via ECX register\n  dwGraphicsObjContext (ESP+0x08) - Graphics object context value, not forwarded to vtable\n  dwGraphicsObjState (ESP+0x0c) - Graphics object state value, not forwarded to vtable\n  dwCallParam1 (ESP+0x10) - First parameter forwarded to vtable method\n  dwCallParam2 (ESP+0x14) - Second parameter forwarded to vtable method\n\nReturns:\n  void - No return value\n\nSpecial Cases:\n  Virtual dispatch: Method address obtained by adding offset 0x84 to vtable base pointer\n  Selective forwarding: Only parameters 3-4 (dwCallParam1, dwCallParam2) are forwarded to the vtable method\n  Stack cleanup: RET instruction has immediate value 0x18, indicating callee cleanup of parameters",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e6c49af345a935f50a3d2d149f111157",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e6c49af345a935f50a3d2d149f111157",
+        "CFG": null,
+        "PRO": "f447cde9488e6144dbd4eb069e1585bd"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e6c49af345a935f50a3d2d149f111157"
+      },
       "param_counts": {
-        "LoD/PD2": 8
+        "LoD/PD2": 6
+      }
+    },
+    "D2gfx_ADDR_6FA8B0B0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B0B0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB0B0"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "ThunkToExternalFunction_0x7b662310",
+      "signature": "void ThunkToExternalFunction_0x7b662310(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Thunk function that forwards control to external function at address 0x7b662310.\n\nAlgorithm:\n1. Jump unconditionally to external function at address 0x7b662310\n2. All control flow passes through to the external function\n3. Return value and behavior determined entirely by external function\n\nParameters:\nNone - This thunk accepts no parameters and passes control directly to the external function.\n\nReturns:\nReturn value (if any) determined by external function at 0x7b662310. Thunk does not modify or inspect the return value.\n\nSpecial Cases:\n- This is a thunk function used for control flow redirection to external code\n- The external function at 0x7b662310 is outside the analyzed binary module\n- Referenced from function pointer at 0x6fa8f1e8 (DATA xref) and as entry point\n- No local state or stack manipulation occurs in this thunk\n\nStructure Layout:\nNot applicable - thunk contains no data access or structure field usage.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "b04d2249b2e184d9161f2b18f22a3673"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
       }
     },
     "D2gfx_MNE_048196c0e544": {
@@ -7372,11 +9389,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "a8cb2eb87d69750015286cc2135fc8b2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "048196c0e54428985c2d6912f114df39"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -7407,11 +9424,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "b8810c322a35dc69c89e05a5168640d9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "81ecaa00ece79f92ccd43f50a449f14c"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -7442,11 +9459,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "7454cc984ee9f2142f75d3bbb55a903b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0abdfd137b3b6a2e80be73354f71ac46"
       }
     },
     "D2gfx_MNE_11618bde6f4f": {
@@ -7474,11 +9491,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e0cc0190add0739fe135c9b9d7285356",
         "PRO": "d8f9b3872b3b48659a6b97e632488fd8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "11618bde6f4fbc58e1e98db849798b08"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7509,11 +9526,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "c28d843778d6313eca5e15ea77ffbb3e",
         "PRO": "bdf22b3e21f6d6db308e72ab161d8d65"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9c087099454eeca337d576704d2b3ed9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7521,10 +9538,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_40903556bc57": {
       "addresses": {
-        "LoD/PD2": "0x6FA8CBA5"
+        "LoD/PD2": "0x6FA8B180"
       },
       "rvas": {
-        "LoD/PD2": "0xCBA5"
+        "LoD/PD2": "0xB180"
       },
       "sizes": {
         "LoD/PD2": 8
@@ -7544,14 +9561,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "58f875d532ca4ce9c43811698c708ebb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "40903556bc57a4df1722c0a365e78b81"
       }
     },
     "D2gfx_MNE_305c32d33191": {
@@ -7579,22 +9593,54 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "d32bdb0db8efb79b4f2106ba57d12545"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "305c32d33191c1b22ce2562362c5fa24"
       },
       "param_counts": {
         "LoD/PD2": 1
       }
     },
-    "D2gfx_MNE_d98637d661e3": {
+    "D2gfx_ADDR_6FA8B1A0": {
       "addresses": {
-        "LoD/PD2": "0x6FA8B1C0"
+        "LoD/PD2": "0x6FA8B1A0"
       },
       "rvas": {
-        "LoD/PD2": "0xB1C0"
+        "LoD/PD2": "0xB1A0"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "name": "CallGraphicsVtable_0x4c",
+      "signature": "void CallGraphicsVtable_0x4c(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Invokes graphics library virtual function at vtable offset 0x4c.\n\nAlgorithm:\n1. Load graphics library pointer from g_pGraphicsLibrary at 0x6fa91268\n2. Calculate virtual method address: library base + 0x4c offset\n3. Perform indirect tail-call jump to graphics virtual method\n4. Control transfers to virtual function (tail-call optimization)\n\nParameters:\n  None\n\nReturns:\n  void: No return value\n    - Uses tail-call optimization (JMP not CALL)\n    - Return from virtual method goes directly to original caller\n    - This wrapper acts as trampoline/dispatcher\n\nSpecial Cases:\n  - Thin wrapper for vtable method dispatch pattern\n  - Vtable offset 0x4c identifies specific graphics subsystem function\n  - No error handling or validation in wrapper\n  - Tail-call eliminates return overhead\n  - Virtual function pointer at [graphics_library + 0x4c]\n  - Part of graphics library abstraction layer\n  - Allows runtime polymorphism for different graphics backends\n  - Graphics library vtable initialized during subsystem startup",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:40903556bc57a4df1722c0a365e78b81",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "40903556bc57a4df1722c0a365e78b81",
+        "CFG": null,
+        "PRO": "2246e5964c4a7e2115f9f87e8314f536"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "40903556bc57a4df1722c0a365e78b81"
+      }
+    },
+    "D2gfx_MNE_d98637d661e3": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B1B0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB1B0"
       },
       "sizes": {
         "LoD/PD2": 11
@@ -7614,11 +9660,75 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "8c6771bc6ea235192b42b306de63e9c5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d98637d661e34ac4188330085482b5ab"
+      }
+    },
+    "D2gfx_ADDR_6FA8B1C0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B1C0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB1C0"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "name": "SetInitializationFlag",
+      "signature": "void SetInitializationFlag(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Sets the global initialization flag to indicate subsystem is initialized.\n\nAlgorithm:\n1. Write value 1 (0x1) to global flag at _g_dwInitializationFlag (0x6fa90bf0)\n2. Return to caller\n\nParameters:\n  None\n\nReturns:\n  void: No return value\n\nSpecial Cases:\n  - Called during graphics subsystem startup/initialization\n  - Simple flag setter with no validation or error conditions\n  - Uses __cdecl calling convention (plain RET instruction)\n  - Single atomic write operation - no race conditions possible\n  - Global _g_dwInitializationFlag checked by other subsystem functions\n  - Flag value 1 indicates initialized, 0 indicates uninitialized\n  - Typically called after successful subsystem setup\n  - No corresponding ClearInitializationFlag - flag cleared during shutdown",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d98637d661e34ac4188330085482b5ab",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d98637d661e34ac4188330085482b5ab",
+        "CFG": null,
+        "PRO": "aaa7ca5192c5a126e9d2adb36339748a"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d98637d661e34ac4188330085482b5ab"
+      }
+    },
+    "D2gfx_ADDR_6FA8B1D0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B1D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB1D0"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "name": "CallGraphicsVtable_0x5c",
+      "signature": "void CallGraphicsVtable_0x5c(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Invokes graphics library virtual function at vtable offset 0x5c.\n\nAlgorithm:\n1. Load graphics library pointer from g_pGraphicsLibrary at 0x6fa91268\n2. Dereference pointer to access virtual method table base\n3. Calculate virtual method address: vtable_base + 0x5c offset\n4. Perform indirect tail-call jump to graphics virtual method\n5. Control transfers to virtual function (tail-call optimization)\n\nParameters:\n  None\n\nReturns:\n  void: No return value\n    - Uses tail-call optimization (JMP not CALL)\n    - Return from virtual method goes directly to original caller\n    - This wrapper acts as trampoline/dispatcher\n\nSpecial Cases:\n  - Thin wrapper for vtable method dispatch pattern\n  - Vtable offset 0x5c identifies specific graphics subsystem function\n  - Different offset from CallGraphicsVtable_0x4c (0x5c vs 0x4c)\n  - No error handling or validation in wrapper\n  - Tail-call eliminates return overhead\n  - Virtual function pointer at [graphics_library + 0x5c]\n  - Part of graphics library abstraction layer\n  - Allows runtime polymorphism for different graphics backends\n  - Graphics library vtable initialized during subsystem startup\n  - Called extensively during graphics subsystem operations",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:40903556bc57a4df1722c0a365e78b81",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "40903556bc57a4df1722c0a365e78b81",
+        "CFG": null,
+        "PRO": "63a3ed93c337adaa5017888b287f6242"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "40903556bc57a4df1722c0a365e78b81"
       }
     },
     "D2gfx_MNE_a9a3f1cd5746": {
@@ -7646,22 +9756,89 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "1abbbed88598ab76171d956e8b753f75",
         "PRO": "23de0433edc1539aa807ca3d0b9964d1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a9a3f1cd57460569e4edd4ce1f226a55"
       },
       "param_counts": {
         "LoD/PD2": 1
       }
     },
-    "D2gfx_MNE_0246ba23d2e2": {
+    "D2gfx_ADDR_6FA8B200": {
       "addresses": {
-        "LoD/PD2": "0x6FA8B2B0"
+        "LoD/PD2": "0x6FA8B200"
       },
       "rvas": {
-        "LoD/PD2": "0xB2B0"
+        "LoD/PD2": "0xB200"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "SetRenderingEnabled",
+      "signature": "void SetRenderingEnabled(uint dwNewState)",
+      "calling_convention": "__stdcall",
+      "comment": "Updates the global game state with a new value.\n\nAlgorithm:\n1. Receive new game state value as a parameter\n2. Load the dwNewState parameter from the stack\n3. Store the parameter value to the global dwGameState variable at 0x6fa90be8\n4. Return to caller with stdcall stack cleanup\n5. No validation is performed on the state value\n6. Caller is responsible for ensuring valid state values\n\nParameters:\n- dwNewState: The new game state value to set (no validation constraints)\n\nReturns:\n- void (no return value)\n\nSpecial Cases:\n- No bounds checking or validation on the input value\n- Any uint value is accepted and stored directly to the global\n- This is a simple setter function with direct global variable assignment\n- The global dwGameState at 0x6fa90be8 tracks the current game state machine value",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0f26f5ebbb6562741331dd6e6bdd0342",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0f26f5ebbb6562741331dd6e6bdd0342",
+        "CFG": null,
+        "PRO": "3550d2504df99e8b4fcecd7a24e20dee"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f26f5ebbb6562741331dd6e6bdd0342"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8B210": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B210"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB210"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetRenderingEnabled",
+      "signature": "uint GetRenderingEnabled(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieve current game state value from global state variable.\n\nAlgorithm:\n1. Load DWORD value from global dwGameState (0x6fa90be8) into EAX register\n2. Return EAX to caller via RET instruction\n\nParameters:\n  None\n\nReturns:\n  uint (EAX): Current game state value (0x00000001 = initial/default state)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "d80f65430ac374a3fc233d5853165037"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2gfx_MNE_0246ba23d2e2": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B220"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB220"
       },
       "sizes": {
         "LoD/PD2": 19
@@ -7681,11 +9858,145 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "68619e651a0a72802d99f9a6cbeaa05e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0246ba23d2e2a9bb9388cd8cc7c4cceb"
+      }
+    },
+    "D2gfx_ADDR_6FA8B240": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B240"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB240"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "SetBooleanFlag",
+      "signature": "void SetBooleanFlag(uint dwFlagValue)",
+      "calling_convention": "__stdcall",
+      "comment": "Setting prototype: void SetBooleanFlag(uint dwFlagValue)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0f26f5ebbb6562741331dd6e6bdd0342",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0f26f5ebbb6562741331dd6e6bdd0342",
+        "CFG": null,
+        "PRO": "ad7ea0adbb20eb1944d358e63dcce07e"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f26f5ebbb6562741331dd6e6bdd0342"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8B250": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B250"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB250"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetBooleanFlag",
+      "signature": "int GetBooleanFlag(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Setting prototype: int GetBooleanFlag(void)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "ee29b554c6f5cb1ff0cfb7fd011de0f4"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2gfx_ADDR_6FA8B260": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B260"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB260"
+      },
+      "sizes": {
+        "LoD/PD2": 19
+      },
+      "name": "ToggleBooleanFlag",
+      "signature": "void ToggleBooleanFlag(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Toggles the global boolean flag g_booleanFlag between 0 and 1.\n\nAlgorithm:\n1. Read current value of g_booleanFlag at 0x6fa90bf4\n2. Test if current value equals zero\n3. Set flag to 1 if it was 0, otherwise set to 0\n4. Write toggled value back to g_booleanFlag\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Uses SETZ instruction to invert boolean state\n- Any non-zero value becomes 0, zero becomes 1\n- Related functions: Ordinal_10033 (setter), Ordinal_10030 (getter)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0246ba23d2e2a9bb9388cd8cc7c4cceb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0246ba23d2e2a9bb9388cd8cc7c4cceb",
+        "CFG": null,
+        "PRO": "4beb9410732fc1efa3c7ab91da711cc0"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0246ba23d2e2a9bb9388cd8cc7c4cceb"
+      }
+    },
+    "D2gfx_ADDR_6FA8B280": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B280"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB280"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "SetCleanupHandlerFlag",
+      "signature": "void SetCleanupHandlerFlag(uint dwFlagValue)",
+      "calling_convention": "__stdcall",
+      "comment": "Sets the global cleanup handler flag to the specified value.\n\nAlgorithm:\n1. Load the flag value from the first parameter (ESP + 0x4)\n2. Store the flag value into global variable g_dwCleanupHandlerFlag\n3. Return to caller with stack frame cleanup (RET 0x4)\n\nParameters:\n  dwFlagValue (uint): The flag value to store. Used to enable/disable cleanup handler behavior.\n\nReturns:\n  void\n\nSpecial Cases:\n  - This is a simple setter with no validation; callers must ensure dwFlagValue contains valid data\n  - RET 0x4 indicates __stdcall calling convention with 4 bytes of parameters cleaned up by callee\n  - The global g_dwCleanupHandlerFlag is read by multiple functions including GetConditionalCleanupFlag, ToggleCleanupHandlerFlag, and various error handlers",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0f26f5ebbb6562741331dd6e6bdd0342",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0f26f5ebbb6562741331dd6e6bdd0342",
+        "CFG": null,
+        "PRO": "e590598d21e6533e9edba33f9e12c3a1"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f26f5ebbb6562741331dd6e6bdd0342"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "D2gfx_MNE_af413c75688c": {
@@ -7713,11 +10024,75 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "ddedd71cba749e62957fdce183c7f24d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "af413c75688c051388954706b235eefd"
+      }
+    },
+    "D2gfx_ADDR_6FA8B2B0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B2B0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB2B0"
+      },
+      "sizes": {
+        "LoD/PD2": 19
+      },
+      "name": "ToggleCleanupHandlerFlag",
+      "signature": "undefined ToggleCleanupHandlerFlag(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Toggles cleanup handler flag between enabled and disabled states by inverting the boolean value stored in global memory.\\n\\nAlgorithm:\\n1. Load current value of g_dwCleanupHandlerFlag global variable from address 0x6fa90be0 using MOV ECX instruction\\n2. Clear EAX register to 0 using XOR EAX,EAX for comparison result\\n3. Execute TEST ECX,ECX to evaluate if the loaded value equals zero\\n4. Use SETZ AL instruction to set AL register: 1 if zero flag set (value was 0), 0 if zero flag clear\\n5. Store inverted boolean result back to g_dwCleanupHandlerFlag at address 0x6fa90be0\\n6. Return to caller with RET instruction (caller cleanup via __stdcall)\\n\\nParameters:\\n  None. Function operates on implicit global state variable g_dwCleanupHandlerFlag without parameters.\\n\\nReturns:\\n  void: No return value. Function modifies global state through side effect of boolean flag inversion.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0246ba23d2e2a9bb9388cd8cc7c4cceb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0246ba23d2e2a9bb9388cd8cc7c4cceb",
+        "CFG": null,
+        "PRO": "8aed610bc1a1b8654a0bea4c34a60bff"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0246ba23d2e2a9bb9388cd8cc7c4cceb"
+      }
+    },
+    "D2gfx_ADDR_6FA8B2D0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B2D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB2D0"
+      },
+      "sizes": {
+        "LoD/PD2": 15
+      },
+      "name": "IsHighResolutionDisplayMode",
+      "signature": "bool IsHighResolutionDisplayMode(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Determines if the current display mode is high resolution.\n\nAlgorithm:\n1. Load the current display mode value from global g_dwCurrentDisplayMode\n2. Initialize return value by clearing EAX register\n3. Compare display mode value against threshold constant 4\n4. Set AL to 1 if mode >= 4, else leave as 0\n5. Return boolean result in AL register\n\nParameters:\n  None - uses global variable g_dwCurrentDisplayMode (dword, initial value 4)\n\nReturns:\n  bool - TRUE if display mode >= 4 (high resolution), FALSE if 0-3 (standard resolution)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:5483acfde82be5a955723d35564f5d51",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5483acfde82be5a955723d35564f5d51",
+        "CFG": null,
+        "PRO": "54c13781b66c4841ffe68689ebcfbfad"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5483acfde82be5a955723d35564f5d51"
       }
     },
     "D2gfx_MNE_bde119b92c87": {
@@ -7745,14 +10120,174 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ebedb8faf55908534e596ba5d47d40c7",
         "PRO": "55609acd183392e8770f9c6848014fec"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bde119b92c87788e9010eea26f66d657"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8B300": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B300"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB300"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetConfigValue",
+      "signature": "uint GetConfigValue(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieve current configuration value\n\nAlgorithm:\n1. Load DWORD value from global configuration variable at address 0x6FA90C14\n2. Return value in EAX to caller\n\nParameters:\nNone\n\nReturns:\nuint: Current configuration value stored in global variable",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "d5522d5aba287b595845666646d9bf84"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2gfx_ADDR_6FA8B310": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B310"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB310"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetInitializationFlag",
+      "signature": "undefined4 GetInitializationFlag(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves the current display mode adjustment flag from global state.\\n\\nAlgorithm:\\n1. Load the global display mode adjustment flag (g_dwDisplayModeAdjustment at 0x6fa90be4)\\n2. Move the loaded value into EAX for return\\n3. Return the value to the caller\\n\\nParameters:\\n  None\\n\\nReturns:\\n  EAX (DWORD): Current display mode adjustment flag value\\n    - Contains the state of display mode settings\\n    - Used to track graphics initialization state\\n    - Modified by SetValueIfCounterReady() and InitializeGraphicsAndWindow()\\n\\nSpecial Cases:\\n  - This is a simple accessor function for the global display mode flag\\n  - The global is shared across multiple functions that modify and read it",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "5969409e32a5ef5b803a4d218ff44bd8"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2gfx_ADDR_6FA8B320": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B320"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB320"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetWindowHandle",
+      "signature": "HANDLE GetWindowHandle(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Returns the current window handle for the main application window.\n\nAlgorithm:\n1. Load the global window handle value from g_hWindowHandle\n2. Return the handle to the caller\n\nParameters:\nNone\n\nReturns:\nHANDLE - The current window handle, or NULL if no window is active\n\nSpecial Cases:\n- This function returns the cached window handle set by CreateMainGameWindow\n- If no window has been created, returns whatever value is stored in g_hWindowHandle\n\nWindow Handle Storage:\nThe global variable g_hWindowHandle is written to by CreateMainGameWindow and used by\nmultiple display management functions including SynchronizeDisplayMode, RestoreDisplayModeAfterVideo,\nand SetWindowHandleAndCallGraphicsVtable_0x24",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "c752ae5fff80a509cc1440c3bde63a91"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2gfx_ADDR_6FA8B330": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B330"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB330"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetParameterValue",
+      "signature": "undefined4 GetParameterValue(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves the active graphics parameter value from global storage.\n\nAlgorithm:\n1. Load 32-bit DWORD from global g_dwUnknownConfig at address 0x6fa9125c\n2. Move loaded value into EAX register\n3. Return to caller\n\nParameters:\n  None\n\nReturns:\n  EAX = DWORD graphics parameter value\n\nSpecial Cases:\n  Read-only getter for graphics configuration state",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "baf9b74646646bfd854b3bce0ef2d136"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2gfx_ADDR_6FA8B340": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B340"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB340"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetDisplayMode",
+      "signature": "dword GetDisplayMode(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Returns the current error code state.\n\nAlgorithm:\n1. Load the global error code state variable (g_dwErrorCodeState) from memory address 0x6fa91258\n2. Move the loaded value into the EAX register for return to caller\n3. Return the error code value to the caller\n\nParameters:\n  None - This function takes no parameters\n\nReturns:\n  EAX (undefined4): The current error code state\n    Value 0: No error condition\n    Value non-zero: Error code indicating failure state\n\nSpecial Cases:\n  - Function is stateless read-only operation\n  - Thread-safe for concurrent read access\n  - Global g_dwErrorCodeState modified by other functions in program\n  - Caller must interpret error codes appropriately",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "f76de4a2ccdd9613608a2f3f18458046"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "D2gfx_MNE_f5b0d4999cef": {
@@ -7780,11 +10315,43 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "d10ed07cc8e38a005814481889c7966d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5b0d4999cef381bea9a054131983f79"
+      }
+    },
+    "D2gfx_ADDR_6FA8B360": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B360"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB360"
+      },
+      "sizes": {
+        "LoD/PD2": 49
+      },
+      "name": "ShowAllWindows",
+      "signature": "void ShowAllWindows(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Displays all stored application windows by calling ShowWindow on each entry.\n\nAlgorithm:\n1. Check if the fullscreen skip flag at DAT_6fa9125c is set to 1\n2. If flag is set, skip entire function (early exit at check_skip_flag)\n3. If flag is not set, save registers (ESI, EDI) and initialize loop pointer\n4. Load ShowWindow function pointer from DAT_6fa8d158 into EDI\n5. Initialize window pointer to array start at DAT_6fa9d588\n6. Loop through window array with stride 0x30 (48 bytes):\n   a. Load HWND from current entry offset +0\n   b. Check if HWND is null (if null, skip ShowWindow call)\n   c. Load show command from current entry offset +0xc (word 3)\n   d. Call ShowWindow(hwnd, showCommand) via EDI pointer\n   e. Advance pointer by 0x30 bytes to next window entry\n   f. Compare pointer against array end at DAT_6fa9d648\n   g. If pointer is less than end, loop back to step 6a\n7. Restore saved registers and return\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- If DAT_6fa9125c is set to 1, the entire function is skipped (fullscreen mode flag)\n- Window entries with null HWND are skipped without calling ShowWindow\n- Array contains exactly 4 window entries (192 bytes / 48-byte stride)\n- Complements HideTaskbarAndAppBarWindows which populates the window array\n- Used during fullscreen exit to restore taskbar and appbar windows\n\nStructure Layout:\nWindow Entry (48-byte stride):\n  Offset  Size  Field Name       Type      Description\n  +0x00    4    hwnd             HWND      Window handle to display\n  +0x04    40   windowPlacement  WINDOWPLACEMENT  Saved window placement info\n  +0x0c    4    showCommand      int       ShowWindow display command (within placement)\n  +0x30   n/a   (stride)         n/a       Next entry starts at +0x30 bytes\n\nGlobal Data Structures:\n  DAT_6fa9125c  1 byte   Fullscreen flag (1=skip, 0=execute)\n  DAT_6fa8d158  4 bytes  Pointer to ShowWindow function\n  DAT_6fa9d588  array    Window array start (4 entries @ 48 bytes each)\n  DAT_6fa9d648  4 bytes  Window array end boundary",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7d5eb63aede808968c80aa2e933c26a7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7d5eb63aede808968c80aa2e933c26a7",
+        "CFG": "f3a3cbd12ddeaa41d18ce0ae0f6014ad",
+        "PRO": "e9abec2ca79bd6d6dcdd0c3dcb6d522a"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7d5eb63aede808968c80aa2e933c26a7"
       }
     },
     "D2gfx_API_3422fd172218": {
@@ -7812,11 +10379,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "d69bc82e329d76c21526cdfbd9e8cc3d",
         "PRO": "cd01f1ed4ac3507bc73cdba076f4e794"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ca8476b621b119a9a2d067d303cc151b"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -7851,11 +10418,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "a10651910d68d1e0ee442b13a3fdacab",
         "PRO": "c0ef1477981bacdd4c84bdb0077f78ec"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aebe2442c437b7f6c9c8b32d7d362cfb"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -7889,11 +10456,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "bb2d29c85306f40b8ffddce47a988e1f",
         "PRO": "9a8388ac0fde0c4bf9f0ecdb935cc31e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bfd179fffc3764c8e8b3de8fbe0c1496"
       }
     },
     "D2gfx_STR_2268699a57d6": {
@@ -7921,11 +10488,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "5401cb6de78985c11482bf622199a717",
         "PRO": "e85fd91c24e9a07748c0606eea4b8905"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0c639397cf951f566cdf900cef8d8abf"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -7935,6 +10502,164 @@ var FUNCTIONS_D2gfx_dll = {
       },
       "param_counts": {
         "LoD/PD2": 4
+      }
+    },
+    "D2gfx_MNE_c69b02ecbd39": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B6E0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB6E0"
+      },
+      "sizes": {
+        "LoD/PD2": 80
+      },
+      "name": "HandleCriticalDisplayModeError",
+      "signature": "void HandleCriticalDisplayModeError(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Handles critical display mode errors by displaying appropriate error messages and terminating execution. Algorithm: (1) Read current display mode from g_dwCurrentDisplayMode global variable (2) Check if display mode is one of the critical modes (4, 5, 6, or 7) (3) If in critical mode, check g_dwCleanupHandlerFlag to determine cleanup status (4) If cleanup handler flag is set, invoke the graphics cleanup handler from vtable and return (5) If cleanup handler not set, select error message resource ID (0xa8 or 0xa9 based on mode) (6) Call GetErrorMessageResource() to retrieve localized error message text from resource ID (7) Call DisplayErrorMessage() with error message string and resource ID (8) Call _exit(-1) to terminate application with error status. Parameters: None. Returns: Never returns - function always terminates application with exit(-1). Special Cases: Display modes 4, 5, 6, 7 are treated as critical display mode errors. If g_dwCleanupHandlerFlag is non-zero, invokes graphics cleanup and exits immediately without displaying error message. Magic numbers: 0xa8 (non-critical error resource ID), 0xa9 (critical error resource ID). Indirect jump through vtable at offset +0x6c indicates virtual method call to graphics cleanup routine.",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "c69b02ecbd393dafdf6c2716c077edc1",
+        "CFG": "b1a6965cb130b946575a112e50949cce",
+        "PRO": "c40aebb31dd2a35221b41145a78f91a5"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c69b02ecbd393dafdf6c2716c077edc1"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      }
+    },
+    "D2gfx_MNE_192b15aa20f6": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B730"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB730"
+      },
+      "sizes": {
+        "LoD/PD2": 108
+      },
+      "name": "CallGraphicsVtable_0x68WithZeroParam",
+      "signature": "undefined CallGraphicsVtable_0x68WithZeroParam(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Invokes graphics engine virtual method at offset 0x68 with zero parameter.\n\nAlgorithm:\n1. Check if current display mode is valid (4, 5, 6, or 7)\n2. If valid and cleanup handler flag is set: invoke graphics vtable method at offset 0x68 with parameter 0 and return\n3. If valid but cleanup flag not set: set error code to 0x99 (graphics cleanup not initialized)\n4. If invalid display mode: set error code to 0x98 (invalid display mode)\n5. Retrieve error message string using GetErrorMessageResource with error code\n6. Display error message with graphics library prefix string (g_pGraphicsPrefix + 8)\n7. Exit process with code -1 (abnormal termination)\n\nParameters:\nNone\n\nReturns:\nvoid - Function does not return normally; always exits process with _exit(-1) or early return on success\n\nSpecial Cases:\n- Error code 0x98 indicates invalid display mode (not 4, 5, 6, or 7)\n- Error code 0x99 indicates cleanup handler not initialized despite valid display mode\n- Valid display modes: 4 (fullscreen 640x480), 5 (fullscreen 800x600), 6 (fullscreen 1024x768), 7 (window)\n- Only succeeds if g_dwCleanupHandlerFlag is non-zero\n- String prefix offset +8 skips \"D2Gfx\" prefix to reach actual error message",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "192b15aa20f644dcea17ce0ba123ed21",
+        "CFG": "3a585170bc4bf7b3485c5d93cab06b1b",
+        "PRO": "6cf33fe2330bd955f18d7b3189b91697"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "192b15aa20f644dcea17ce0ba123ed21"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      }
+    },
+    "D2gfx_MNE_94d0912a0e71": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B7A0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB7A0"
+      },
+      "sizes": {
+        "LoD/PD2": 90
+      },
+      "name": "HandleGraphicsErrorAndExit",
+      "signature": "undefined HandleGraphicsErrorAndExit(int nDisplayMode, int nUnused1, int nParam3, int nParam4, int nParam5)",
+      "calling_convention": "__stdcall",
+      "comment": "Handles graphics initialization errors and terminates the application.\nDetermines error code based on display mode and cleanup handler state.\nIf cleanup is needed, delegates to graphics vtable cleanup routine.\nOtherwise displays error message and exits with failure code.\n\nAlgorithm:\n1. Check if g_dwCurrentDisplayMode < 4 (low resolution check)\n2. If true, select error code 0x8b (139 - low res mode error)\n3. If false, check g_dwCleanupHandlerFlag for cleanup requirement\n4. If cleanup needed, load graphics vtable pointer from g_pGraphicsVtable\n5. Call graphics cleanup method at vtable offset 0x64 (0x100 bytes offset in code)\n6. If cleanup not needed, select error code 0x8c (140 - normal error)\n7. Resolve error code to error message text via GetErrorMessageResource\n8. Display error message with szOdeletePrefix+8 prefix and retrieved message\n9. Terminate process with exit code -1\n\nParameters:\nnDisplayMode - Display mode value (unused, not referenced in function)\nnUnused1 - Unused parameter (not referenced in function)\nnParam3 - Parameter passed to graphics vtable cleanup method (if cleanup needed)\nnParam4 - Parameter passed to graphics vtable cleanup method (if cleanup needed)\nnParam5 - Parameter passed to graphics vtable cleanup method (if cleanup needed)\n\nReturns:\nvoid - Function terminates process via _exit(-1) and never returns normally.\nWhen cleanup flag is set, returns early from cleanup vtable call (6fa8b7f7).\n\nSpecial Cases:\n- Error codes: 0x8b for low resolution mode, 0x8c for normal mode\n- Cleanup flag allows graphics system to cleanup resources before exit\n- szOdeletePrefix+8 offsets string pointer to skip first 8 bytes\n- Graphics vtable offset 0x64 (100 bytes) indexes to cleanup method",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "94d0912a0e71a0a682c8cf8634a4a07f",
+        "CFG": "1fa218869a92741bb42897678b1acf12",
+        "PRO": "e1a79ac5add02a61297d96e70d47f559"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "94d0912a0e71a0a682c8cf8634a4a07f"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 5
+      }
+    },
+    "D2gfx_MNE_1d0814f071c6": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B800"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB800"
+      },
+      "sizes": {
+        "LoD/PD2": 97
+      },
+      "name": "SetReferenceCoordinatesAndCallGraphicsVtable",
+      "signature": "void SetReferenceCoordinatesAndCallGraphicsVtable(uint dwXCoord, uint dwYCoord)",
+      "calling_convention": "__stdcall",
+      "comment": "Setting prototype: void SetReferenceCoordinatesAndCallGraphicsVtable(uint dwXCoord, uint dwYCoord)",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "1d0814f071c61e719dc3b6da823cc231",
+        "CFG": "7086c88f13f3d159ba6a886b9d51e98f",
+        "PRO": "e4c4eb062d57236070949d86229f6874"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d0814f071c61e719dc3b6da823cc231"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 2
       }
     },
     "D2gfx_MNE_d9dcd663dd64": {
@@ -7962,11 +10687,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "76db6c382c26eeeef0f0e1f77aac8844",
         "PRO": "15e0db93f33c29d5096d42d538a46869"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d9dcd663dd64b24c75ef6092525c3937"
       }
     },
     "D2gfx_MNE_b1c1c1b51857": {
@@ -7994,11 +10719,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "76db6c382c26eeeef0f0e1f77aac8844",
         "PRO": "470897169debb37d4d3dc45d28cbc1d7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b1c1c1b51857eba327201737c699d22f"
       }
     },
     "D2gfx_MNE_6fafd9d61e99": {
@@ -8026,11 +10751,43 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "82ab21280f7756b94aebf888fcf167cf",
         "PRO": "d17b83d0dbe6cd85ecafc858101ba059"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6fafd9d61e995ac46683353d63a5b0e1"
+      }
+    },
+    "D2gfx_ADDR_6FA8B8F0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B8F0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB8F0"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetCachedValue",
+      "signature": "uint GetCachedValue(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieve cached value from global storage\n\nAlgorithm:\n1. Load DWORD value from global g_dwVirtualStateDestination into EAX\n2. Return EAX to caller\n\nParameters:\n(None)\n\nReturns:\nEAX (uint): Cached virtual state destination value currently stored in g_dwVirtualStateDestination\n\nSpecial Cases:\n- Simple accessor function with no validation or processing\n- Complements CopyAndJumpVirtual54 which stores to g_dwVirtualStateDestination\n- Returns whatever value is currently cached, may be zero if not yet initialized",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "8d1a158e7f8d97396441b875ab74abd4"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "D2gfx_MNE_3b2b18453ee5": {
@@ -8058,11 +10815,52 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "cdcb69a505c3a7b19c0b68edd29573c9",
         "PRO": "5c89c78f71cca65720b8841053cd0cee"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3b2b18453ee59915d76c8b37fa8cc12b"
+      }
+    },
+    "D2gfx_MNE_93513638c131": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B920"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB920"
+      },
+      "sizes": {
+        "LoD/PD2": 121
+      },
+      "name": "ValidateDistanceWithinThreshold",
+      "signature": "bool ValidateDistanceWithinThreshold(int nCoordX, int nCoordY)",
+      "calling_convention": "__stdcall",
+      "comment": "ValidateDistanceWithinThreshold - Validate state and check coordinate distance\n\nAlgorithm:\n1. Load state variable from g_CurrentDisplayMode (0x6FA91258) into EAX\n2. Check if state equals 4 via CMP EAX, 0x4\n3. Check if state equals 5 via CMP EAX, 0x5 \n4. Check if state equals 6 via CMP EAX, 0x6\n5. Check if state equals 7 via CMP EAX, 0x7\n6. If all comparisons fail (state invalid): push error code 0x74, jump to error_handler\n7. Load initialization flag from g_CleanupHandlerFlag (0x6FA90BE0) into EAX\n8. Test if initialization flag is set using TEST EAX, EAX\n9. If zero (not initialized): push error code 0x75, jump to error_handler\n10. At error_handler: call GetErrorMessageResource with error code to retrieve message string\n11. Display error message via DisplayErrorMessage(szOdeletePrefix + 8, message)\n12. Call _exit(-1) to terminate application\n13. Load coordX parameter from [ESP+0x4] into EAX\n14. Subtract g_dwReferenceCoordX from EAX to calculate X distance\n15. If result negative: negate using NEG instruction to get absolute value\n16. Compare absolute X distance against threshold 0x320000 using CMP EAX, 0x320000\n17. If X distance > threshold (JG taken): return false (0) and exit early\n18. Load coordY parameter from [ESP+0x8] into EAX\n19. Subtract g_dwReferenceCoordY from EAX to calculate Y distance\n20. If result negative: negate using NEG instruction to get absolute value\n21. Compare absolute Y distance against threshold 0x320000 using CMP EAX, 0x320000\n22. Set CL = 1 if Y distance <= threshold (SETLE instruction), 0 if > threshold\n23. Move CL to EAX and return with RET 0x8 (clean up 8 bytes of parameters)\n\nParameters:\nnCoordX (int, [ESP+0x4]): X game coordinate to validate distance\nnCoordY (int, [ESP+0x8]): Y game coordinate to validate distance\n\nReturns:\nEAX (bool): 1 (true) if both X and Y distances <= 0x320000 from reference coordinates, \n            0 (false) if either distance exceeds threshold.\n            Function terminates application via _exit(-1) if state invalid or not initialized.\n\nSpecial Cases:\nDistance Threshold: 0x320000 (3276800 decimal) represents maximum allowed distance\nReference Coordinates: Stored at g_dwReferenceCoordX (0x6FA9124C) and g_dwReferenceCoordY (0x6FA91248)\nState Validation: Only states 4, 5, 6, 7 are valid; other values trigger error 0x74\nInitialization Check: g_CleanupHandlerFlag must be non-zero; zero value triggers error 0x75\nEarly Return: X distance is checked first; if exceeds threshold, Y is not evaluated\nAbsolute Value: Both coordinates use conditional negation (JNS/NEG pattern) for distance calculation\nError Codes: 0x74 (invalid state), 0x75 (not initialized) - passed to GetErrorMessageResource",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "93513638c1314185adda573bd31ca5de",
+        "CFG": "9302a7ef9c6d8954161f9634daf717c9",
+        "PRO": "c634d298af81b50d019a11bc8d92f04f"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "93513638c1314185adda573bd31ca5de"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 2
       }
     },
     "D2gfx_MNE_3afa8072d22a": {
@@ -8090,14 +10888,81 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "3a5fcfe2ddabc615aa9c6675a4c571ba",
         "PRO": "00898a2302ece00ca2067491d07d7afd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3afa8072d22a2bea75c54eb93b71830f"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8B9C0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B9C0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB9C0"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "RenderDisplay",
+      "signature": "void RenderDisplay(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Thunk/wrapper function that delegates to the actual render display implementation.\n\nAlgorithm:\n1. Unconditionally jump to the actual render display routine at 0x7b662720\n\nParameters:\nNone\n\nReturns:\nvoid - No return value, delegates to implementation routine\n\nSpecial Cases:\nThis is a thunk function used for indirection, typically found in export tables or function pointer arrays. The actual rendering logic is implemented in the target function.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "f501d3967f11f26b589243956e2e1ebc"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      }
+    },
+    "D2gfx_ADDR_6FA8B9C8": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8B9C8"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB9C8"
+      },
+      "sizes": {
+        "LoD/PD2": 34
+      },
+      "name": "InvokeGraphicsVtableMethod0xc0",
+      "signature": "void InvokeGraphicsVtableMethod0xc0(void * this, GraphicsObject * pGraphicsObject, uint dwParam1, uint dwParam2, uint dwParam3, uint dwParam4)",
+      "calling_convention": "__thiscall",
+      "comment": "Invokes a graphics virtual method at offset 0xc0 with parameters.\nWrapper for __thiscall convention virtual method dispatch through graphics vtable.\nAlgorithm:\n1. Load all four parameters from stack (offsets 0x10, 0x14, 0xc, 0x10)\n2. Arrange parameters in registers per __thiscall: pGraphicsObject in ECX, dwParam1-3 loaded for push\n3. Push parameters onto stack: param3, param1, param2 in reverse order\n4. Load graphics vtable pointer from global g_pGraphicsVtable at 0x6fa91268\n5. Call virtual method through vtable at offset 0xc0\n6. Return with RET 0x18 stack cleanup (6 dwords from stack)\nParameters:\npGraphicsObject: Graphics object pointer (implicit this in ECX register)\ndwParam1: First DWORD parameter to graphics method\ndwParam2: Second DWORD parameter to graphics method\ndwParam3: Third DWORD parameter to graphics method\ndwParam4: Fourth DWORD parameter (loaded but not used in call)\nReturns:\nvoid: No return value.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e6c49af345a935f50a3d2d149f111157",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e6c49af345a935f50a3d2d149f111157",
+        "CFG": null,
+        "PRO": "f447cde9488e6144dbd4eb069e1585bd"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e6c49af345a935f50a3d2d149f111157"
+      },
       "param_counts": {
-        "LoD/PD2": 1
+        "LoD/PD2": 6
       }
     },
     "D2gfx_MNE_5d4d9ee9ea92": {
@@ -8125,14 +10990,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "6b8757769b4a8dc1956bb7f6d879d16b",
         "PRO": "e3d1dd1d1eab1f064b5afe2efb2febd6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5d4d9ee9ea92d8a7f3ceaea5fbd777c9"
+      },
+      "param_counts": {
+        "LoD/PD2": 6
+      }
+    },
+    "D2gfx_ADDR_6FA8BA30": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8BA30"
+      },
+      "rvas": {
+        "LoD/PD2": "0xBA30"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "HandleInputEvent",
+      "signature": "void HandleInputEvent(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Stub function that delegates input event handling to external handler.\n\nAlgorithm:\n1. Unconditional jump to external input event handler at 0x7b662520\n\nParameters:\n(none)\n\nReturns:\nvoid - delegates control flow to external handler without returning",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "b3621959b33f4ead5f4c10b6e2b516af"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 6
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
       }
     },
     "D2gfx_MNE_cafb15237b5e": {
@@ -8160,14 +11057,320 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "26cdfa4e9a5202faa81756f8775cf88f",
         "PRO": "7584d93c0fadac1abd4b9b5984d7dd83"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cafb15237b5e84f590251fd658e49815"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2gfx_ADDR_6FA8BA90": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8BA90"
+      },
+      "rvas": {
+        "LoD/PD2": "0xBA90"
+      },
+      "sizes": {
+        "LoD/PD2": 22
+      },
+      "name": "CallVirtualMethodB0",
+      "signature": "void CallVirtualMethodB0(uint dwParam1, uint dwParam2)",
+      "calling_convention": "__stdcall",
+      "comment": "Setting prototype: void CallVirtualMethodB0(uint dwParam1, uint dwParam2)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d092968b6d2f10526b1ce8ac8b703c25",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d092968b6d2f10526b1ce8ac8b703c25",
+        "CFG": "2b9a6e26b5c543173e1554f7033272e7",
+        "PRO": "a460ff801e2525689fe8cc4576300f4e"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d092968b6d2f10526b1ce8ac8b703c25"
+      },
       "param_counts": {
-        "LoD/PD2": 3
+        "LoD/PD2": 2
+      }
+    },
+    "D2gfx_ADDR_6FA8BAB0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8BAB0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xBAB0"
+      },
+      "sizes": {
+        "LoD/PD2": 22
+      },
+      "name": "CallVirtualMethodAc",
+      "signature": "void CallVirtualMethodAc(uint dwParam1, uint dwParam2)",
+      "calling_convention": "__stdcall",
+      "comment": "Invoke virtual function at offset +0xac from graphics object\n\nAlgorithm:\n1. Load first parameter (dwParam1) from stack into ECX register\n2. Load second parameter (dwParam2) as byte into DL register\n3. Load global graphics vtable pointer from g_pGraphicsVtable (0x6FA91268) into EAX\n4. Call virtual function at offset +0xac from vtable base (indirect call via [EAX + 0xac])\n5. Return to caller with __stdcall stack cleanup (8 bytes for 2 uint parameters)\n\nParameters:\ndwParam1 (uint): First virtual method parameter, loaded into ECX\ndwParam2 (uint): Second virtual method parameter, loaded as byte into DL (suggests boolean or small value)\n\nReturns:\nvoid - No return value, effects persist in graphics system state\n\nSpecial Cases:\nOffset +0xac represents a specific virtual function in the graphics object's vtable.\nThe global g_pGraphicsVtable pointer provides the this pointer for the virtual call.\nSecond parameter is loaded as single byte despite uint type, indicating the high bytes are unused.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d092968b6d2f10526b1ce8ac8b703c25",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d092968b6d2f10526b1ce8ac8b703c25",
+        "CFG": "2b9a6e26b5c543173e1554f7033272e7",
+        "PRO": "ce35daec4328bccbeb5f67a8b456a6f9"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d092968b6d2f10526b1ce8ac8b703c25"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2gfx_ADDR_6FA8BAD0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8BAD0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xBAD0"
+      },
+      "sizes": {
+        "LoD/PD2": 22
+      },
+      "name": "CallVirtualMethod",
+      "signature": "void CallVirtualMethod(uint dwMethodParam1, byte byMethodParam2)",
+      "calling_convention": "__stdcall",
+      "comment": "Invokes a virtual method on the global graphics object.\n\nAlgorithm:\n1. Load first parameter from stack [ESP+0x4] into ECX\n2. Load second parameter from stack [ESP+0x8] into DL byte register\n3. Load global graphics object pointer from 0x6FA91268 into EAX\n4. Call virtual function at offset 0xA8 in graphics vtable\n5. Return to caller with 8 byte stack cleanup\n\nParameters:\n  dwMethodParam1: UINT first parameter for virtual method call\n  byMethodParam2: BYTE second parameter for virtual method call\n\nReturns:\n  void: No return value\n\nSpecial Cases:\n  Global graphics object at 0x6FA91268 used across 70+ functions\n  Virtual function at offset 0xA8 is 42nd vtable entry\n  __stdcall calling convention ensures callee cleanup\n  Second param passed as byte despite uint type hint",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d092968b6d2f10526b1ce8ac8b703c25",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d092968b6d2f10526b1ce8ac8b703c25",
+        "CFG": "2b9a6e26b5c543173e1554f7033272e7",
+        "PRO": "54d5dfc4c0f7c1f65a571da376ad3416"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d092968b6d2f10526b1ce8ac8b703c25"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2gfx_ADDR_6FA8BAF0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8BAF0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xBAF0"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "CleanupAndExit",
+      "signature": "void CleanupAndExit(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Wrapper/thunk function that provides an exported entry point for application cleanup and exit.\n\nAlgorithm:\n1. Unconditionally jump to external cleanup/exit routine at 0x7B662A60\n2. Target is an external function (likely in a different module or DLL)\n\nParameters:\nNone\n\nReturns:\nvoid - No return value; control transferred to external cleanup function",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "eb15a79c8cddcec2ab8591700e9a10c1"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      }
+    },
+    "D2gfx_ADDR_6FA8BAF8": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8BAF8"
+      },
+      "rvas": {
+        "LoD/PD2": "0xBAF8"
+      },
+      "sizes": {
+        "LoD/PD2": 29
+      },
+      "name": "DispatchGraphicsOperation",
+      "signature": "void DispatchGraphicsOperation(void * this, void * pThis, void * pGraphicsContext, void * pGraphicsObject, uint dwOpType, uint dwParam1, uint dwParam2)",
+      "calling_convention": "__thiscall",
+      "comment": "Dispatches a graphics operation through the graphics subsystem virtual method interface.\n\nAlgorithm:\n1. Load operation parameter (dwParam1) from stack offset +0xc into EDX\n2. Retrieve graphics vtable pointer from global address g_GraphicsVtablePtr (0x6fa91268)\n3. Load operation type (dwOpType) from stack offset +0xc into ECX\n4. Load second operation parameter (dwParam2) from stack offset +0x14 into EDX\n5. Call virtual method at offset 0xa4 (+164 bytes) in the graphics vtable\n6. Return to caller with automatic stack cleanup (RET 0x14 removes 20 bytes)\n\nParameters:\n- pThis: Implicit this pointer in ECX register; graphics dispatcher context object\n- pGraphicsContext: Stack+0x4; Pointer to graphics rendering context\n- pGraphicsObject: Stack+0x8; Pointer to graphics object being processed\n- dwOpType: Stack+0xc; Graphics operation type/command identifier\n- dwParam1: Stack+0x10; First operation parameter (varies by operation type)\n- dwParam2: Stack+0x14; Second operation parameter (varies by operation type)\n\nReturns:\n- void: No return value; function produces side effects (graphics state modifications)\n\nSpecial Cases:\n- Graphics vtable is stored at fixed address g_GraphicsVtablePtr (0x6fa91268)\n- Virtual method dispatch at offset 0xa4 (+164 bytes) in vtable structure\n- Stack cleanup uses RET 0x14 = 20 bytes (5 parameters \u00d7 4 bytes each)\n- Called as __thiscall; implicit context in ECX, remaining parameters on stack\n- Actual vtable offset computation: [g_GraphicsVtablePtr + 0xa4] = graphics_vtable[0x29]\n\nVirtual Method Interface:\n- Offset 0xa4 in vtable: void __thiscall (uint operation, void * context, void * object, uint param1, uint param2)\n- Vtable serves as dispatcher for multiple graphics subsystem operations\n- Multiple functions reference the same global g_GraphicsVtablePtr (71 cross-references)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3c6069195c1e5aa9e56fdfca471a40f0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3c6069195c1e5aa9e56fdfca471a40f0",
+        "CFG": null,
+        "PRO": "4ae3f51b5c75de16d5969bfc2596bf86"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c6069195c1e5aa9e56fdfca471a40f0"
+      },
+      "param_counts": {
+        "LoD/PD2": 7
+      }
+    },
+    "D2gfx_ADDR_6FA8BB20": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8BB20"
+      },
+      "rvas": {
+        "LoD/PD2": "0xBB20"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "ProcessGameLoop",
+      "signature": "void ProcessGameLoop(void)",
+      "calling_convention": "__cdecl",
+      "comment": "ProcessGameLoop - Thunk function that forwards control to the main game processing routine\n\nAlgorithm:\n1. Unconditionally jump to external game loop handler at 0x7B662A10\n\nParameters:\nNone\n\nReturns:\nvoid - Function does not return (control transferred to external function)\n\nSpecial Cases:\n- This is a wrapper/thunk function that acts as an exported entry point\n- Target address 0x7B662A10 is external (likely in another module or section)\n- No local state is modified",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "b8b0ba3a0d331bbd9a3444fa310f050a"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      }
+    },
+    "D2gfx_ADDR_6FA8BB28": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8BB28"
+      },
+      "rvas": {
+        "LoD/PD2": "0xBB28"
+      },
+      "sizes": {
+        "LoD/PD2": 34
+      },
+      "name": "DispatchGraphicsRenderMethod",
+      "signature": "void DispatchGraphicsRenderMethod(void * this, void * pGraphicsContext, void * pRenderTarget, void * pRenderObject, uint dwParam1, uint dwParam2, uint dwParam3, uint dwParam4)",
+      "calling_convention": "__thiscall",
+      "comment": "Setting prototype: void DispatchGraphicsRenderMethod(void * pGraphicsContext, void * pRenderTarget, void * pRenderObject, uint dwParam1, uint dwParam2, uint dwParam3, uint dwParam4)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e6c49af345a935f50a3d2d149f111157",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e6c49af345a935f50a3d2d149f111157",
+        "CFG": "a9b269248d654c49084fd8965cf9fd6f",
+        "PRO": "f447cde9488e6144dbd4eb069e1585bd"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e6c49af345a935f50a3d2d149f111157"
+      },
+      "param_counts": {
+        "LoD/PD2": 8
+      }
+    },
+    "D2gfx_ADDR_6FA8BB50": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8BB50"
+      },
+      "rvas": {
+        "LoD/PD2": "0xBB50"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "InitializeSystem",
+      "signature": "void InitializeSystem(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Wrapper function that forwards initialization to external routine\n\nALGORITHM:\n1. Jump unconditionally to external initialization function at 0x7B6629C0\n\nPARAMETERS:\nNone\n\nRETURNS:\nvoid - Control transferred to external function, no return to caller\n\nSPECIAL CASES:\n- Thunk/wrapper function - delegates all logic to external implementation\n- Target address 0x7B6629C0 is external (likely in another module or runtime library)\n- Used as exported entry point for system initialization",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "5a0fb8caeffc7e790401170aa3340af8"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      }
+    },
+    "D2gfx_ADDR_6FA8BB58": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8BB58"
+      },
+      "rvas": {
+        "LoD/PD2": "0xBB58"
+      },
+      "sizes": {
+        "LoD/PD2": 29
+      },
+      "name": "DispatchGraphicsVirtualMethod",
+      "signature": "void DispatchGraphicsVirtualMethod(void * this, GraphicsObject * pGraphicsObject, int nMethodIndex, int nParam1, int nParam2)",
+      "calling_convention": "__thiscall",
+      "comment": "Setting prototype: void DispatchGraphicsVirtualMethod(GraphicsObject * pGraphicsObject, int nMethodIndex, int nParam1, int nParam2)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:3c6069195c1e5aa9e56fdfca471a40f0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3c6069195c1e5aa9e56fdfca471a40f0",
+        "CFG": null,
+        "PRO": "4ae3f51b5c75de16d5969bfc2596bf86"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c6069195c1e5aa9e56fdfca471a40f0"
+      },
+      "param_counts": {
+        "LoD/PD2": 5
       }
     },
     "D2gfx_MNE_2cea028ef602": {
@@ -8195,11 +11398,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "e6e19a62dc9a1a47ae41060c0193e5be"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2cea028ef602e29fdf72f41ddcb408c0"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8230,11 +11433,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "3ea3294c6787ac35af21664d87a2d1d7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "711b2e0d0d87a17ec2d1d568182c417b"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8265,11 +11468,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "3cc833536bdfd5ce9c6ea6051767a049"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "489067da1a2c8cee5a3d2d9b9de565b4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8300,11 +11503,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "bb2d1da90e1266707238b5d8cb61f61d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "772d22c2541e825eefebea33eefd1baf"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8335,11 +11538,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "8745aed0d079056657ef74ec8cd6995e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d9a12ae164ceeb71b3ef1de062e62e18"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -8375,11 +11578,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "59081befd9c7c0fdc4e2ca0bf81d2b50"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c3e67f0f66e9fe1748a93603f0dc99e6"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8410,11 +11613,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "75fe8eb5309a87431907da3c5c2b5f61",
         "PRO": "51538878d2f86b13ad416058676e8b3c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "940b36171c849cbdb70fa26527e4a4dd"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -8445,11 +11648,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "2c2b41e5f94ce646e02540fd4b0fb252",
         "PRO": "2abd5a9d0c7aa8c75cf0631f0d6b6b2a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9ed74c09db5ea664214a06af5e9eacff"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8480,11 +11683,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e07eccead1f73292e394bcf6b04e25be",
         "PRO": "8f133c45fa0a28d00f17557d1230bba1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c9529d246abf4faab672947c5021a4d5"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -8515,11 +11718,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "1a7b83fd93de604000b09aaee3692d98"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bd2e318ad25348813665cf4effb251a4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8550,11 +11753,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "80d7cba25940b8a2a85ec71cc60a4ce9",
         "PRO": "2f1e43385ff08c808d019799632e3b67"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6d6cf4ba189585a4cd2d487202ee7142"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8585,11 +11788,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "9507edb72158a2a748bebdf37e4cfd3c",
         "PRO": "b8e36630ac9422663e03a5a87a5df15c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "decef60e401f8e90b7116a8a0959e784"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8620,11 +11823,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "611ba9b1c1370bd1a61e482351b36063"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "305f98c2994b523fe4a005bfb539afe0"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -8655,11 +11858,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "af5701d78567757751d7583904030786",
         "PRO": "a280373490c40bc4a90491d0ec57b305"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e86a21cb50bb81e60f0de3031d840cd4"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8690,11 +11893,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "96866a4ce8b4f0299246ba15185965f9",
         "PRO": "26eb74d01ac3fb6153b8698d0186c52a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4adabfa425928517cf130be62eff166e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8725,11 +11928,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "01d2b40e39bbd1728477b217b34d73b6",
         "PRO": "e1b82019574c21d174f23b4976292499"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0e5fe8f035f67d55ee839a615aebb8b3"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8760,11 +11963,45 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "9c4b7358ea8c9341b985f641cf18d2d4",
         "PRO": "b986d8a97b431779e5be36a6baa25ebc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "898894f98c67bfd44b8002f821424647"
+      }
+    },
+    "D2gfx_ADDR_6FA8C0D3": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8C0D3"
+      },
+      "rvas": {
+        "LoD/PD2": "0xC0D3"
+      },
+      "sizes": {
+        "LoD/PD2": 1
+      },
+      "name": "exit",
+      "signature": "void exit(int _Code)",
+      "calling_convention": "__cdecl",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c73446e6da2bc552d6d981beccb1347",
+        "CFG": null,
+        "PRO": "e1ef49ce6ed8909600367da1748e3fa9"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5c73446e6da2bc552d6d981beccb1347"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "D2gfx_MNE_efa2f79526cd": {
@@ -8792,11 +12029,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "8bbfe2737ef55f3a9a35ae1b43be54c6",
         "PRO": "6fdbf3a3dafd3e1983a5f299b6c18ece"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "efa2f79526cd6c984f92f3e2beec5d87"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8827,11 +12064,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ebedb8faf55908534e596ba5d47d40c7",
         "PRO": "8e9aad4aec1880b71db46c0be4aeff4c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "85190b86d73ebdc8e5739dd02ae41128"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8862,11 +12099,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "b1af6f7b21571bb27a714641cd69b81d",
         "PRO": "4284d497cf1a638b71f8bfe469403b6d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0cd6dc09c8745218b08aa07ad6229378"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -8897,11 +12134,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "044e95a6511b64bf155bd4de5c12eeac",
         "PRO": "4b128b191ca49f5a0ed748b9b837d678"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "63ed7c9fbe9fe31a4d4278d4042a2e84"
       }
     },
     "D2gfx_MNE_544ea4e68964": {
@@ -8929,11 +12166,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "df167a2acbf0b60dc97c0b03976f4e64",
         "PRO": "8a35263f03694b13e28c69466677a376"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 46
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "544ea4e68964a9fa10177d533eda6601"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8964,11 +12201,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e2a6504b4716007302f5667f41b848a4",
         "PRO": "50267bb0643b89bb3141894233a42199"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a2d392fa0db0696e3e245bca3260930f"
       },
       "param_counts": {
         "LoD/PD2": 11
@@ -8999,11 +12236,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "7c82cf3a78fbc6ff1d3ea126d68e7e52",
         "PRO": "0212b8a5006d8a58c6414754ce666c77"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "47bdfc874694667f1fbbded06fa6a242"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -9034,11 +12271,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e052d9f60eb1b13aa12de09005b4982f",
         "PRO": "1bc5fbf1e24040c82bc0ba9f799a94e4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 43
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "71996afe3d91ebc0635560132615f7bc"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -9069,11 +12306,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e69b5b2d2ce6c635a72554fac4fc9756",
         "PRO": "b510fadaa4446af75d5b053a40be4222"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e75ee0306c31bdd597d86ebd787537ac"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -9104,11 +12341,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "6c3f0566df164baf42f457563e0b9bcf",
         "PRO": "8b59fe2265e3ebb286c66a6a0ca4b438"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "048fa86b16ba3f4924242f25b953c745"
       }
     },
     "D2gfx_MNE_abf83bbd7e60": {
@@ -9136,11 +12373,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "c0911ab13e8db6d703c6ff224f1b4a1f",
         "PRO": "bcc41a71659498cb2c46829019968bee"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "abf83bbd7e609b1bb0ad650aa99da4ac"
       }
     },
     "D2gfx_MNE_54a4c3410932": {
@@ -9168,11 +12405,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "64f001e958cb75886bced722d66d85ff",
         "PRO": "b98277cef56d8b14e8e694472ff0dddd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "54a4c3410932c862e3fcae53288bc46f"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -9203,11 +12440,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "ac168114f9af0e2a47558c34c91a6f7b",
         "PRO": "587728b545a741f4ea6183f0a7cafa66"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d3fefb7c954cbb3bdf620b064e1026c9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9215,10 +12452,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_48b089e35ec3": {
       "addresses": {
-        "LoD/PD2": "0x6FA8C986"
+        "LoD/PD2": "0x6FA8C96A"
       },
       "rvas": {
-        "LoD/PD2": "0xC986"
+        "LoD/PD2": "0xC96A"
       },
       "sizes": {
         "LoD/PD2": 28
@@ -9238,11 +12475,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e67ee52de705150869e2ef2baa9939af",
         "PRO": "f7a895c6b36ed86cdff413f81de6f388"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "48b089e35ec33e654b6d909f9cdbb713"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2gfx_ADDR_6FA8C986": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8C986"
+      },
+      "rvas": {
+        "LoD/PD2": "0xC986"
+      },
+      "sizes": {
+        "LoD/PD2": 28
+      },
+      "name": "_ValidateWrite",
+      "signature": "int _ValidateWrite(void * param_1, uint param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Multiple Matches With Different Base Names\n int __cdecl _ValidateRead(void const *,unsigned int)\n int __cdecl _ValidateWrite(void *,unsigned int)\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:48b089e35ec33e654b6d909f9cdbb713",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "48b089e35ec33e654b6d909f9cdbb713",
+        "CFG": "e67ee52de705150869e2ef2baa9939af",
+        "PRO": "9d0f370a6e194361e40d965c3605d582"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "48b089e35ec33e654b6d909f9cdbb713"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9273,11 +12545,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "35cb04bc19b2020a12670858f7d7ed27",
         "PRO": "ef1c6642ae13c92cce4949ae9292be06"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "226bd7b7660f7c129864f3453c504df2"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9308,11 +12580,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "3c75987e39b97bc2b3024d4209985471"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e65987029a330b525d706048fc12bba9"
       }
     },
     "D2gfx_MNE_2af2421e9adb": {
@@ -9340,11 +12612,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "7982cea02743e8ef27b2e318b1301c25",
         "PRO": "83e4b58e057f0a0002b98fe134d5c4c8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2af2421e9adbd50e4220f87768729b8e"
       }
     },
     "D2gfx_MNE_9ca8b994d17a": {
@@ -9372,11 +12644,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "e50b9784be465f73c57aef46a0af86d7",
         "PRO": "ce7f20cc8a910507d74f4a5b95a894d8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 39
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9ca8b994d17aa0674346136517490025"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9407,11 +12679,113 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": "7750d3e200f3a3c6416ddf41088bb841",
         "PRO": "3b3b4940fd9dcada562948a9b0a975b0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ced68f09048890319abe4e844972fc66"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8CB80": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8CB80"
+      },
+      "rvas": {
+        "LoD/PD2": "0xCB80"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "name": "Unwind@6fa8cb80",
+      "signature": "undefined Unwind@6fa8cb80(FrameNode * param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Tail-call thunk that passes frame node pointer to UnlinkFrameNode.\n\nAlgorithm:\n1. Load frame node pointer from stack parameter (EBP + 0x4) into EAX\n2. Jump to UnlinkFrameNode function for actual unlinking operation\n\nParameters:\npFrame (stack at EBP+4): Pointer to FrameNode structure to unlink\n\nReturns:\nvoid - Delegates to UnlinkFrameNode which performs the unlinking\n\nSpecial Cases:\nThis is a stub/thunk function implementing tail-call optimization. The actual node unlinking operation is performed by UnlinkFrameNode. All control flow jumps directly to UnlinkFrameNode without returning to this function.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:40903556bc57a4df1722c0a365e78b81",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "40903556bc57a4df1722c0a365e78b81",
+        "CFG": null,
+        "PRO": "c7520fe8637a936f310d8ed39d429de7"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "40903556bc57a4df1722c0a365e78b81"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8CBA0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8CBA0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xCBA0"
+      },
+      "sizes": {
+        "LoD/PD2": 5
+      },
+      "name": "Unwind@6fa8cba0",
+      "signature": "void Unwind@6fa8cba0(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Thunk/wrapper function that unconditionally jumps to the actual Unwind implementation.\n\nAlgorithm:\n1. Jump directly to StubFunction at 0x6fa81020\n\nParameters:\nNone\n\nReturns:\nvoid (no return value)\n\nSpecial Cases:\nThis is a thunk function commonly generated by compilers for C++ exception handling unwinding or name-decorated exports. It serves as an indirection point to the actual implementation at StubFunction.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": null,
+        "PRO": "0c4d082120a7575bd4552794a69f139d"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdad073544ac1586678f808b3470f76a"
+      }
+    },
+    "D2gfx_ADDR_6FA8CBA5": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8CBA5"
+      },
+      "rvas": {
+        "LoD/PD2": "0xCBA5"
+      },
+      "sizes": {
+        "LoD/PD2": 8
+      },
+      "name": "Unwind@6fa8cba5",
+      "signature": "undefined Unwind@6fa8cba5(FrameNode * param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Unwind and unlink a frame node from the frame chain.\\n\\nThis is a tail-call thunk that forwards execution to UnlinkFrameNode. It extracts the\\nsecond parameter (frame node pointer) from the stack and passes it to the unlink handler.\\n\\nAlgorithm:\\n1. Load frame node pointer from [EBP + 0xc] (second __stdcall parameter)\\n2. Move pointer to EAX register\\n3. Tail-call to UnlinkFrameNode for actual unlinking operation\\n\\nParameters:\\n  param_1 (__stdcall stack): First parameter (unused by this thunk)\\n  pFrame (__stdcall stack [EBP+0xc]): Pointer to FrameNode to unwind\\n    The FrameNode structure contains:\\n      +0: pPrevNode - pointer to previous/parent frame node\\n      +4: nodeOffset - signed offset for frame pointer calculation\\n\\nReturns:\\n  void - Returns to caller after UnlinkFrameNode completes\\n\\nSpecial Cases:\\n  - This function does not use standard prologue/epilogue (JMP thunk)\\n  - Parameter order follows __stdcall (right-to-left on stack, callee cleanup)\\n  - The actual unlinking logic is implemented in UnlinkFrameNode\\n  - Frame chain unlinking supports two offset interpretation modes (signed/unsigned)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:40903556bc57a4df1722c0a365e78b81",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "40903556bc57a4df1722c0a365e78b81",
+        "CFG": null,
+        "PRO": "5edf377dfb345c57d0ce8b6d5c6ed9df"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "40903556bc57a4df1722c0a365e78b81"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9419,10 +12793,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_ac5f29842510": {
       "addresses": {
-        "LoD/PD2": "0x6FA8CBE0"
+        "LoD/PD2": "0x6FA8CBC0"
       },
       "rvas": {
-        "LoD/PD2": "0xCBE0"
+        "LoD/PD2": "0xCBC0"
       },
       "sizes": {
         "LoD/PD2": 11
@@ -9442,11 +12816,46 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "4a3fff72420ecf28e59e96413916df1d"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ac5f298425102bd1e7190496a742e83e"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "D2gfx_ADDR_6FA8CBE0": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8CBE0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xCBE0"
+      },
+      "sizes": {
+        "LoD/PD2": 11
+      },
+      "name": "UnwindFrameAndJump",
+      "signature": "void UnwindFrameAndJump(FrameNode * pFrame)",
+      "calling_convention": "__stdcall",
+      "comment": "Unwind and jump to frame node unlinking.\n\nThis is a small thunk function that loads a frame pointer parameter from the stack and jumps directly to UnlinkFrameNode for execution. It serves as an indirect function pointer entry point for frame unwinding operations, commonly used in exception handling or context switching where the actual unlinking logic needs to be executed through a function pointer indirection.\n\nAlgorithm:\n1. Load frame pointer parameter from stack (passed via __stdcall convention at [EBP+4])\n2. Adjust pointer by +0x4 bytes (likely normalizing the frame reference)\n3. Jump to UnlinkFrameNode to execute the actual unlinking logic with the adjusted frame reference\n\nParameters:\n- pFrame: Pointer to FrameNode structure containing the frame to unwind. Passed via stack in __stdcall calling convention at [EBP+0x4]. The pointer is adjusted by +0x4 before being passed to UnlinkFrameNode.\n\nReturns:\n- Does not return directly; control transfers to UnlinkFrameNode, which handles the actual return via its RET instruction.\n\nSpecial Cases:\n- This function does not validate the pFrame pointer before use; UnlinkFrameNode performs all validation and null checks\n- The +0x4 adjustment suggests pFrame may reference a structure where offset +0x4 contains the actual node to unwind\n- Function is likely called through function pointer tables or exception handling dispatch code",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ac5f298425102bd1e7190496a742e83e",
+        "CFG": null,
+        "PRO": "bf6dbc6945b95c8d11770038b7bd1df2"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ac5f298425102bd1e7190496a742e83e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9454,10 +12863,10 @@ var FUNCTIONS_D2gfx_dll = {
     },
     "D2gfx_MNE_e83bd76a96c5": {
       "addresses": {
-        "LoD/PD2": "0x6FA8CC00"
+        "LoD/PD2": "0x6FA8CBEB"
       },
       "rvas": {
-        "LoD/PD2": "0xCC00"
+        "LoD/PD2": "0xCBEB"
       },
       "sizes": {
         "LoD/PD2": 10
@@ -9477,11 +12886,43 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "a2494c1dcd34b084a48ac917bbd658c0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e83bd76a96c575481d28f5927cfaf30f"
+      }
+    },
+    "D2gfx_ADDR_6FA8CC00": {
+      "addresses": {
+        "LoD/PD2": "0x6FA8CC00"
+      },
+      "rvas": {
+        "LoD/PD2": "0xCC00"
+      },
+      "sizes": {
+        "LoD/PD2": 10
+      },
+      "name": "Unwind@6fa8cc00",
+      "signature": "undefined Unwind@6fa8cc00(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Callback function to remove a LIST_ENTRY from its linked list during unwinding operations.\n\nAlgorithm:\n1. Load LIST_ENTRY pointer from EBP+0x4 (parameter passed via EBP-based calling convention)\n2. Dereference to get pointer to LIST_ENTRY structure\n3. Call RemoveListEntry to unlink the entry from its doubly-linked list\n4. Return to caller\n\nParameters:\n- EBP+0x4: Pointer to LIST_ENTRY pointer (LIST_ENTRY **pListNode)\n  This parameter is accessed via EBP register, indicating this callback uses a non-standard calling convention where the caller manages the stack frame through EBP.\n\nReturns:\n- void: No return value. Modifies the linked list in-place by removing the entry.\n\nSpecial Cases:\n- This is a callback function referenced from data (address 0x6fa8e868), likely used as a function pointer in exception handling or list iteration callbacks\n- The EBP-based parameter passing indicates this is designed as a generic callback that works within specific calling contexts\n- No parameters/locals beyond the implicit EBP register usage",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e83bd76a96c575481d28f5927cfaf30f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e83bd76a96c575481d28f5927cfaf30f",
+        "CFG": null,
+        "PRO": "aae819adc98bdb23bdce28ab651a2fae"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e83bd76a96c575481d28f5927cfaf30f"
       }
     },
     "D2gfx_MNE_ed28c98bc7b7": {
@@ -9509,11 +12950,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "358408013ddfb4e5b383ffb6e4656fec"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed28c98bc7b79f45de01cb2d7f8acda6"
       }
     },
     "D2gfx_MNE_a0296f3d619f": {
@@ -9541,11 +12982,11 @@ var FUNCTIONS_D2gfx_dll = {
         "CFG": null,
         "PRO": "b650814bda968cd043d06ee526f36455"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a0296f3d619ffd4307ef69ba5693f78e"
       }
     }
   }

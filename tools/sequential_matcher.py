@@ -2,28 +2,17 @@
 """
 Sequential Pairwise Matcher - Match functions between adjacent versions.
 
-This implements the Hybrid Sequential with Bidirectional Propagation approach:
+This implements sequential forward matching:
 
 Phase 1: Forward Pass (1.07 → 1.08 → ... → 1.14d)
    - Use multi-signal scoring between adjacent version pairs
    - Propagate identities forward
    - Track "new" functions (first seen in each version)
 
-Phase 2: Backward Pass (1.14d → 1.13d → ... → 1.07)
-   - Only process functions still unmatched
-   - Propagate identities backward
-   - Track "removed" functions (last seen in each version)
-
-Phase 3: Collision Resolution
-   - Handle cases where forward and backward paths disagree
-   - Use higher-confidence match as tiebreaker
-
-Phase 4: Gap Filling
-   - For any remaining unmatched functions, try cross-version matching
-   - Use anchor-based positioning as last resort
-
 Key insight: Adjacent versions are ~95% similar, making pairwise matching
 much more accurate than trying to match across all versions at once.
+
+Note: Backward pass was removed as it wasn't picking up additional matches.
 """
 
 import json
@@ -85,12 +74,14 @@ CLASSIC_VERSION_ORDER = [
 
 
 # Match method weights (higher = more reliable)
+# NOTE: export_ordinal demoted - ordinals change between D2 versions
 MATCH_WEIGHTS = {
-    "export_ordinal": 1.00,  # Export with ordinal - perfect match
+    "export_ordinal": 0.50,  # Export ordinal - NOT reliable across versions
     "mnemonic_hash": 0.98,  # Identical opcode sequence
+    "index_nop": 0.97,  # NOP index - normalized opcode hash (address-independent)
     "export_name": 0.95,  # Named export match
     "unique_string": 0.92,  # Unique string reference
-    "index_exp": 0.90,  # EXP index match
+    "index_exp": 0.50,  # EXP index - NOT reliable across versions
     "index_str": 0.88,  # STR index match
     "index_cal": 0.87,  # CAL index match (sorted callee names - very stable)
     "index_api": 0.85,  # API sequence match (order-dependent)
@@ -108,7 +99,101 @@ MATCH_WEIGHTS = {
 }
 
 # Minimum score to accept a match
-MIN_MATCH_SCORE = 0.45  # Lowered slightly to catch more edge cases
+MIN_MATCH_SCORE = 2.0  # Requires at least one strong signal or multiple medium signals
+
+# Higher threshold when no Tier 1 (hash-based) signal matches
+MIN_MATCH_SCORE_NO_TIER1 = 4.0  # Requires multiple strong Tier 2/3 signals
+
+# =============================================================================
+# Vector-Based Feature Matching
+# =============================================================================
+# Feature vector weights - each feature contributes to overall similarity
+# Higher weight = more important signal
+
+VECTOR_FEATURE_WEIGHTS = {
+    # Hash matches (binary 0/1) - strongest signals
+    "mnemonic_hash": 2.0,      # Identical opcode sequence
+    "export_ordinal": 0.2,     # Export ordinal - NOT reliable across versions
+    "export_name": 0.4,        # Named export match
+    "str_index": 1.0,          # String hash index
+    "cal_index": 1.0,          # Callee names index
+    "cfg_index": 0.6,          # CFG structure index
+    "api_index": 1.0,          # API sequence index
+    "con_index": 0.5,          # Constants index
+    "pro_index": 0.3,          # Prologue index (weak)
+
+    # Set overlaps (0.0-1.0) - Jaccard similarity
+    "callee_overlap": 0.7,     # Callee set overlap
+    "string_overlap": 0.8,     # String reference overlap
+    "constant_overlap": 0.4,   # Constant value overlap
+
+    # Numeric similarities (0.0-1.0)
+    "size_sim": 0.6,           # Size similarity
+    "callee_count_sim": 0.6,   # Callee count similarity
+    "string_count_sim": 0.8,   # String count similarity
+    "loop_count_sim": 0.4,     # Loop count similarity
+    "stack_frame_sim": 0.6,    # Stack frame size similarity
+    "param_count_sim": 1.0,    # Parameter count similarity
+    "caller_count_sim": 0.6,   # Caller count similarity
+}
+
+# Maximum possible score (sum of all weights)
+MAX_VECTOR_SCORE = sum(VECTOR_FEATURE_WEIGHTS.values())
+
+
+def jaccard_similarity(set_a: set, set_b: set) -> float:
+    """Compute Jaccard similarity between two sets: |A ∩ B| / |A ∪ B|"""
+    if not set_a and not set_b:
+        return 0.0
+    intersection = len(set_a & set_b)
+    union = len(set_a | set_b)
+    return intersection / union if union > 0 else 0.0
+
+
+def numeric_similarity(val_a: float, val_b: float, max_val: float = None) -> float:
+    """
+    Compute similarity between two numeric values.
+    Returns 1.0 if equal, decreasing toward 0.0 as they differ.
+    Uses ratio-based comparison to handle different scales.
+    """
+    if val_a == val_b:
+        return 1.0
+    if val_a == 0 or val_b == 0:
+        # One is zero - use absolute difference normalized by the non-zero value
+        non_zero = max(val_a, val_b)
+        if non_zero == 0:
+            return 1.0
+        return 0.0  # Zero vs non-zero is a poor match
+    # Ratio-based similarity: min/max gives 1.0 for equal, lower for different
+    ratio = min(val_a, val_b) / max(val_a, val_b)
+    return ratio
+
+
+def extract_name_from_item(item) -> str:
+    """Extract the name part from a callee/caller/string item."""
+    if isinstance(item, dict):
+        return item.get("name", "")
+    # Format: "name|address" or "name@suffix|address"
+    s = str(item)
+    if "|" in s:
+        s = s.split("|")[0]
+    if "@" in s:
+        s = s.split("@")[0]
+    return s
+
+
+def extract_value_from_item(item) -> str:
+    """Extract the value part from a string/constant item."""
+    if isinstance(item, dict):
+        return item.get("value", str(item))
+    # Format: "address|label|value" or "address||value"
+    s = str(item)
+    parts = s.split("|")
+    if len(parts) >= 3:
+        return parts[2]
+    elif len(parts) == 2:
+        return parts[1]
+    return s
 
 
 @dataclass
@@ -263,170 +348,322 @@ class SequentialMatcher:
         target_ver: str,
     ) -> MatchCandidate:
         """
-        Compute multi-signal match score between two functions.
+        Compute vector-based similarity score between two functions.
 
-        Returns a MatchCandidate with the total score and matched methods.
+        Uses a feature vector approach where each feature contributes a
+        weighted similarity value. Returns a MatchCandidate with the
+        total score, contributing methods, and confidence.
         """
         source_addr = source_func.get("address", "")
         target_addr = target_func.get("address", "")
 
-        score = 0.0
+        # Feature vector: {feature_name: similarity_value}
+        features = {}
         methods = []
         details = {}
 
-        # Check export ordinal match (highest confidence)
+        # Get indexes
         source_indexes = source_func.get("indexes", {})
         target_indexes = target_func.get("indexes", {})
 
-        source_exp = source_indexes.get("EXP")
-        target_exp = target_indexes.get("EXP")
-        if source_exp and target_exp and source_exp == target_exp:
-            score += MATCH_WEIGHTS["export_ordinal"]
-            methods.append("export_ordinal")
-            details["exp_match"] = source_exp
+        # =================================================================
+        # Hash-based features (binary: 1.0 if match, 0.0 if not)
+        # =================================================================
 
-        # Check mnemonic hash (very high confidence)
+        # Mnemonic hash - strongest signal
         source_mne = source_indexes.get("MNE")
         target_mne = target_indexes.get("MNE")
-        if source_mne and target_mne and source_mne == target_mne:
-            score += MATCH_WEIGHTS["mnemonic_hash"]
-            methods.append("mnemonic_hash")
+        if source_mne and target_mne:
+            features["mnemonic_hash"] = 1.0 if source_mne == target_mne else 0.0
+            if features["mnemonic_hash"] == 1.0:
+                methods.append("mnemonic_hash")
 
-        # Check named export match
+        # NOP index - normalized opcode hash (address-independent, very reliable)
+        source_nop = source_indexes.get("NOP")
+        target_nop = target_indexes.get("NOP")
+        if source_nop and target_nop:
+            match = source_nop == target_nop
+            if match:
+                key = f"NOP:{source_nop}"
+                collisions = len(self.index_lookup[dll_name][target_ver].get(key, []))
+                features["nop_index"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
+                methods.append("nop_index")
+            else:
+                features["nop_index"] = 0.0
+
+        # Export ordinal
+        source_exp = source_indexes.get("EXP")
+        target_exp = target_indexes.get("EXP")
+        if source_exp and target_exp:
+            features["export_ordinal"] = 1.0 if source_exp == target_exp else 0.0
+            if features["export_ordinal"] == 1.0:
+                methods.append("export_ordinal")
+                details["exp_match"] = source_exp
+
+        # Named export match
         source_name = source_func.get("name", "")
         target_name = target_func.get("name", "")
         source_has_human = source_func.get("has_human_name", False)
         target_has_human = target_func.get("has_human_name", False)
+        if source_has_human and target_has_human and source_name and not source_name.startswith("FUN_"):
+            features["export_name"] = 1.0 if source_name == target_name else 0.0
+            if features["export_name"] == 1.0:
+                methods.append("export_name")
 
-        if (
-            source_has_human
-            and target_has_human
-            and source_name
-            and target_name
-            and source_name == target_name
-            and not source_name.startswith("FUN_")
-        ):
-            score += MATCH_WEIGHTS["export_name"]
-            methods.append("export_name")
+        # String index (STR)
+        source_str = source_indexes.get("STR")
+        target_str = target_indexes.get("STR")
+        if source_str and target_str:
+            match = source_str == target_str
+            # Apply uniqueness penalty
+            if match:
+                key = f"STR:{source_str}"
+                collisions = len(self.index_lookup[dll_name][target_ver].get(key, []))
+                features["str_index"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
+                methods.append("str_index")
+            else:
+                features["str_index"] = 0.0
 
-        # Check unique string references
-        source_strings = set(source_func.get("string_refs", []) or [])
-        target_strings = set(target_func.get("string_refs", []) or [])
-        if source_strings and target_strings:
-            common_strings = source_strings & target_strings
-            if common_strings:
-                # Weight by uniqueness - single shared unique string is strong
-                string_score = min(len(common_strings) * 0.3, 0.9)
-                score += string_score * MATCH_WEIGHTS["unique_string"]
-                methods.append("unique_string")
-                details["common_strings"] = list(common_strings)[:3]
+        # Callee index (CAL)
+        source_cal = source_indexes.get("CAL")
+        target_cal = target_indexes.get("CAL")
+        if source_cal and target_cal:
+            match = source_cal == target_cal
+            if match:
+                key = f"CAL:{source_cal}"
+                collisions = len(self.index_lookup[dll_name][target_ver].get(key, []))
+                features["cal_index"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
+                methods.append("cal_index")
+            else:
+                features["cal_index"] = 0.0
 
-        # Check other index matches (with collision awareness)
-        # Include new indexes: CAL (callee names), CON (constants), APS (sorted APIs)
-        for method in ["STR", "CAL", "API", "APS", "CON"]:
-            source_idx = source_indexes.get(method)
-            target_idx = target_indexes.get(method)
-            if source_idx and target_idx and source_idx == target_idx:
-                # Verify uniqueness in target version
-                key = f"{method}:{source_idx}"
-                matches_in_target = self.index_lookup[dll_name][target_ver].get(key, [])
-                if len(matches_in_target) == 1:  # Unique match
-                    score += MATCH_WEIGHTS[f"index_{method.lower()}"]
-                    methods.append(f"index_{method.lower()}")
-                elif len(matches_in_target) <= 3:  # Few collisions, still useful
-                    score += MATCH_WEIGHTS[f"index_{method.lower()}"] * 0.5
-                    methods.append(f"index_{method.lower()}_ambig")
-
-        # Check CFG - improved weight, check uniqueness more carefully
+        # CFG index
         source_cfg = source_indexes.get("CFG")
         target_cfg = target_indexes.get("CFG")
-        if source_cfg and target_cfg and source_cfg == target_cfg:
-            key = f"CFG:{source_cfg}"
-            matches_in_target = self.index_lookup[dll_name][target_ver].get(key, [])
-            matches_in_source = self.index_lookup[dll_name][source_ver].get(key, [])
-            # Unique in both versions = very reliable
-            if len(matches_in_target) == 1 and len(matches_in_source) == 1:
-                score += MATCH_WEIGHTS["index_cfg"]
-                methods.append("index_cfg")
-            elif len(matches_in_target) <= 2:  # Slightly ambiguous but still useful
-                score += MATCH_WEIGHTS["index_cfg"] * 0.6
-                methods.append("index_cfg_ambig")
+        if source_cfg and target_cfg:
+            match = source_cfg == target_cfg
+            if match:
+                key = f"CFG:{source_cfg}"
+                collisions = len(self.index_lookup[dll_name][target_ver].get(key, []))
+                features["cfg_index"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
+                methods.append("cfg_index")
+            else:
+                features["cfg_index"] = 0.0
 
-        # Check PRO (prologue) - weaker signal
+        # API index
+        source_api = source_indexes.get("API") or source_indexes.get("APS")
+        target_api = target_indexes.get("API") or target_indexes.get("APS")
+        if source_api and target_api:
+            features["api_index"] = 1.0 if source_api == target_api else 0.0
+            if features["api_index"] == 1.0:
+                methods.append("api_index")
+
+        # Constants index (CON)
+        source_con = source_indexes.get("CON")
+        target_con = target_indexes.get("CON")
+        if source_con and target_con:
+            features["con_index"] = 1.0 if source_con == target_con else 0.0
+            if features["con_index"] == 1.0:
+                methods.append("con_index")
+
+        # Prologue index (PRO) - weak signal
         source_pro = source_indexes.get("PRO")
         target_pro = target_indexes.get("PRO")
-        if source_pro and target_pro and source_pro == target_pro:
-            key = f"PRO:{source_pro}"
-            matches_in_target = self.index_lookup[dll_name][target_ver].get(key, [])
-            if len(matches_in_target) == 1:  # Only if unique
-                score += MATCH_WEIGHTS["index_pro"]
-                methods.append("index_pro")
+        if source_pro and target_pro:
+            match = source_pro == target_pro
+            if match:
+                key = f"PRO:{source_pro}"
+                collisions = len(self.index_lookup[dll_name][target_ver].get(key, []))
+                features["pro_index"] = 1.0 if collisions <= 1 else 0.0
+                if features["pro_index"] > 0:
+                    methods.append("pro_index")
+            else:
+                features["pro_index"] = 0.0
 
-        # Check callee set + size match (exact)
-        # Support both 'callees' and 'api_calls' field names
+        # =================================================================
+        # Set-based features (Jaccard similarity: 0.0 - 1.0)
+        # =================================================================
+
+        # Build callee sets
         source_callees = set()
-        for c in source_func.get("callees", []) or source_func.get("api_calls", []):
-            name = c.get("name") if isinstance(c, dict) else c
+        for c in source_func.get("callees", []) or source_func.get("api_calls", []) or []:
+            name = extract_name_from_item(c)
             if name:
                 source_callees.add(name)
 
         target_callees = set()
-        for c in target_func.get("callees", []) or target_func.get("api_calls", []):
-            name = c.get("name") if isinstance(c, dict) else c
+        for c in target_func.get("callees", []) or target_func.get("api_calls", []) or []:
+            name = extract_name_from_item(c)
             if name:
                 target_callees.add(name)
 
-        source_size = source_func.get("size", 0)
-        target_size = target_func.get("size", 0)
+        callee_sim = jaccard_similarity(source_callees, target_callees)
+        features["callee_overlap"] = callee_sim
+        if callee_sim > 0.5:
+            methods.append(f"callee_overlap({callee_sim:.0%})")
 
-        if (
-            len(source_callees) >= 3
-            and source_callees == target_callees
-            and source_size > 0
-            and source_size == target_size
-        ):
-            score += MATCH_WEIGHTS["callee_set_size"]
-            methods.append("callee_set_size")
-        elif len(source_callees) >= 2 and len(target_callees) >= 2:
-            # Check callee overlap (not exact, but high similarity)
-            common_callees = source_callees & target_callees
-            all_callees = source_callees | target_callees
-            if all_callees:
-                overlap_ratio = len(common_callees) / len(all_callees)
-                if overlap_ratio >= 0.8:
-                    score += MATCH_WEIGHTS["callee_overlap"] * overlap_ratio
-                    methods.append("callee_overlap")
+        # Build string sets
+        source_strings = set()
+        for s in source_func.get("strings", []) or source_func.get("string_refs", []) or []:
+            val = extract_value_from_item(s)
+            if val:
+                source_strings.add(val)
 
-        # Check signature/prototype match
-        source_sig = source_func.get("signature", "")
-        target_sig = target_func.get("signature", "")
-        if source_sig and target_sig and source_sig == target_sig:
-            score += MATCH_WEIGHTS["signature_match"]
-            methods.append("signature_match")
+        target_strings = set()
+        for s in target_func.get("strings", []) or target_func.get("string_refs", []) or []:
+            val = extract_value_from_item(s)
+            if val:
+                target_strings.add(val)
 
-        # Size matching
-        if source_size > 0 and target_size > 0:
-            if source_size == target_size:
-                score += MATCH_WEIGHTS["size_exact"]
-                methods.append("size_exact")
-            else:
-                size_ratio = min(source_size, target_size) / max(
-                    source_size, target_size
+        string_sim = jaccard_similarity(source_strings, target_strings)
+        features["string_overlap"] = string_sim
+        if string_sim > 0.5:
+            methods.append(f"string_overlap({string_sim:.0%})")
+            details["common_strings"] = list(source_strings & target_strings)[:3]
+
+        # Build constant sets
+        source_constants = set()
+        for c in source_func.get("constants", []) or []:
+            val = extract_value_from_item(c)
+            if val:
+                source_constants.add(val)
+
+        target_constants = set()
+        for c in target_func.get("constants", []) or []:
+            val = extract_value_from_item(c)
+            if val:
+                target_constants.add(val)
+
+        const_sim = jaccard_similarity(source_constants, target_constants)
+        features["constant_overlap"] = const_sim
+        if const_sim > 0.5:
+            methods.append(f"const_overlap({const_sim:.0%})")
+
+        # =================================================================
+        # Numeric features (ratio similarity: 0.0 - 1.0)
+        # =================================================================
+
+        # Size similarity
+        source_size = source_func.get("size", 0) or 0
+        target_size = target_func.get("size", 0) or 0
+        size_sim = numeric_similarity(source_size, target_size)
+        features["size_sim"] = size_sim
+        if size_sim == 1.0:
+            methods.append("size_exact")
+        elif size_sim >= 0.9:
+            methods.append(f"size_sim({size_sim:.0%})")
+
+        # Callee count similarity
+        callee_count_sim = numeric_similarity(len(source_callees), len(target_callees))
+        features["callee_count_sim"] = callee_count_sim
+
+        # String count similarity
+        string_count_sim = numeric_similarity(len(source_strings), len(target_strings))
+        features["string_count_sim"] = string_count_sim
+
+        # Loop count similarity
+        source_loops = source_func.get("loop_count", 0) or 0
+        target_loops = target_func.get("loop_count", 0) or 0
+        loop_sim = numeric_similarity(source_loops, target_loops)
+        features["loop_count_sim"] = loop_sim
+
+        # Stack frame similarity
+        source_stack = source_func.get("stack_frame_size", 0) or 0
+        target_stack = target_func.get("stack_frame_size", 0) or 0
+        stack_sim = numeric_similarity(source_stack, target_stack)
+        features["stack_frame_sim"] = stack_sim
+
+        # Parameter count similarity
+        source_params = source_func.get("param_count", 0) or 0
+        target_params = target_func.get("param_count", 0) or 0
+        param_sim = numeric_similarity(source_params, target_params)
+        features["param_count_sim"] = param_sim
+
+        # Caller count similarity
+        source_caller_count = len(source_func.get("callers", []))
+        target_caller_count = len(target_func.get("callers", []))
+        caller_count_sim = numeric_similarity(source_caller_count, target_caller_count)
+        features["caller_count_sim"] = caller_count_sim
+
+        # =================================================================
+        # Hard Constraints - reject obviously wrong matches
+        # =================================================================
+
+        # Constraint 1: Parameter count must match (very reliable signal)
+        if source_params > 0 and target_params > 0 and source_params != target_params:
+            return MatchCandidate(
+                source_addr=source_addr,
+                target_addr=target_addr,
+                score=0.0,
+                methods=["rejected:param_mismatch"],
+                confidence=0.0,
+                details={"rejection": f"param_count {source_params} vs {target_params}"},
+            )
+
+        # Constraint 2: Extreme caller count mismatch
+        # If one function has many callers and the other has none, likely different functions
+        if (source_caller_count > 3 and target_caller_count == 0) or \
+           (target_caller_count > 3 and source_caller_count == 0):
+            return MatchCandidate(
+                source_addr=source_addr,
+                target_addr=target_addr,
+                score=0.0,
+                methods=["rejected:caller_mismatch"],
+                confidence=0.0,
+                details={"rejection": f"caller_count {source_caller_count} vs {target_caller_count}"},
+            )
+
+        # Constraint 3: Caller ratio check (when both have callers)
+        if source_caller_count > 0 and target_caller_count > 0:
+            caller_ratio = min(source_caller_count, target_caller_count) / max(source_caller_count, target_caller_count)
+            if caller_ratio < 0.2:  # 5× difference is too extreme
+                return MatchCandidate(
+                    source_addr=source_addr,
+                    target_addr=target_addr,
+                    score=0.0,
+                    methods=["rejected:caller_ratio"],
+                    confidence=0.0,
+                    details={"rejection": f"caller_ratio {caller_ratio:.2f} ({source_caller_count} vs {target_caller_count})"},
                 )
-                if size_ratio >= 0.9:
-                    score += MATCH_WEIGHTS["size_proximity"]
-                    methods.append("size_proximity")
 
-        # Compute confidence (normalized to 0-1)
-        # Maximum possible score if everything matches
-        max_possible = sum(
-            [
-                MATCH_WEIGHTS["export_ordinal"],
-                MATCH_WEIGHTS["mnemonic_hash"],
-                MATCH_WEIGHTS["export_name"],
-            ]
-        )
-        confidence = min(score / max_possible, 1.0)
+        # =================================================================
+        # Check for Tier 1 signal (hash-based matches)
+        # =================================================================
+        tier1_matched = any([
+            features.get("mnemonic_hash", 0) > 0,
+            features.get("export_ordinal", 0) > 0,
+            features.get("export_name", 0) > 0,
+            features.get("str_index", 0) > 0,
+            features.get("cal_index", 0) > 0,
+            features.get("api_index", 0) > 0,
+            features.get("cfg_index", 0) > 0,
+            features.get("con_index", 0) > 0,
+        ])
+
+        # =================================================================
+        # Compute weighted score
+        # =================================================================
+        score = 0.0
+        for feature_name, sim_value in features.items():
+            weight = VECTOR_FEATURE_WEIGHTS.get(feature_name, 0.1)
+            score += sim_value * weight
+
+        # Apply higher threshold if no Tier 1 signal
+        effective_min_score = MIN_MATCH_SCORE if tier1_matched else MIN_MATCH_SCORE_NO_TIER1
+
+        # Early rejection if score won't meet threshold
+        if score < effective_min_score:
+            return MatchCandidate(
+                source_addr=source_addr,
+                target_addr=target_addr,
+                score=0.0,
+                methods=["rejected:low_score"],
+                confidence=0.0,
+                details={"rejection": f"score {score:.2f} < threshold {effective_min_score:.2f}", "tier1": tier1_matched},
+            )
+
+        # Confidence is normalized score (0-1)
+        confidence = min(score / MAX_VECTOR_SCORE, 1.0)
 
         return MatchCandidate(
             source_addr=source_addr,
@@ -670,95 +907,6 @@ class SequentialMatcher:
                 f"{len(matches)} matched, {len(target_funcs) - len(matched_targets)} new"
             )
 
-    def backward_pass(self, dll_name: str, game_type: str) -> None:
-        """
-        Backward pass: find functions that exist in later versions but not earlier.
-        Only processes functions that weren't matched in forward pass.
-        """
-        version_order = (
-            LOD_VERSION_ORDER if game_type == "LoD" else CLASSIC_VERSION_ORDER
-        )
-        available_versions = [
-            v
-            for v in version_order
-            if f"{game_type}/{v}" in self.function_data[dll_name]
-        ]
-
-        if len(available_versions) < 2:
-            return
-
-        print(f"    Backward pass: {available_versions[-1]} -> {available_versions[0]}")
-
-        # Work backwards through version pairs
-        for i in range(len(available_versions) - 1, 0, -1):
-            source_ver = f"{game_type}/{available_versions[i]}"
-            target_ver = f"{game_type}/{available_versions[i-1]}"
-
-            # Only consider source functions that don't have a match in target yet
-            unmatched_source_funcs = []
-            for func in self.function_data[dll_name][source_ver]:
-                addr = func.get("address", "")
-                if not addr:
-                    continue
-
-                identity_id = self.addr_to_identity[dll_name][source_ver].get(addr)
-                if identity_id:
-                    identity = self.identities[dll_name][identity_id]
-                    # Skip if already has an address in target version
-                    if target_ver in identity.addresses:
-                        continue
-
-                unmatched_source_funcs.append(func)
-
-            if not unmatched_source_funcs:
-                continue
-
-            target_funcs = self.function_data[dll_name][target_ver]
-
-            # Already matched targets from forward pass
-            already_matched = set(self.addr_to_identity[dll_name][target_ver].keys())
-
-            # Find matches for unmatched functions
-            matches = self.find_best_matches(
-                unmatched_source_funcs,
-                target_funcs,
-                dll_name,
-                source_ver,
-                target_ver,
-                already_matched_targets=already_matched,
-            )
-
-            # Propagate identities backward
-            for source_addr, candidate in matches.items():
-                source_id = self.addr_to_identity[dll_name][source_ver].get(source_addr)
-                if source_id:
-                    identity = self.identities[dll_name][source_id]
-                    identity.addresses[target_ver] = candidate.target_addr
-                    target_func = self.addr_to_func[dll_name][target_ver].get(
-                        candidate.target_addr, {}
-                    )
-                    identity.rvas[target_ver] = target_func.get("rva", "")
-
-                    # Update first_version if this is earlier
-                    identity.first_version = (
-                        target_ver  # Target is earlier in backward pass
-                    )
-                    identity.match_chain.append(
-                        (source_ver, target_ver, candidate.confidence)
-                    )
-
-                    self.addr_to_identity[dll_name][target_ver][
-                        candidate.target_addr
-                    ] = source_id
-
-                    self.stats[dll_name]["backward_matches"] += 1
-
-            if matches:
-                print(
-                    f"      {available_versions[i]} -> {available_versions[i-1]}: "
-                    f"{len(matches)} backward matches"
-                )
-
     def process_dll(self, dll_name: str, game_type: str) -> Dict[str, FunctionIdentity]:
         """
         Process a single DLL through the full matching pipeline.
@@ -799,11 +947,8 @@ class SequentialMatcher:
             f"    Loaded {len(version_data)} versions, {total_funcs} total function instances"
         )
 
-        # Phase 1: Forward pass
+        # Forward pass - match functions between adjacent versions
         self.forward_pass(norm_name, game_type)
-
-        # Phase 2: Backward pass
-        self.backward_pass(norm_name, game_type)
 
         # Statistics
         unique_identities = len(self.identities[norm_name])
@@ -817,8 +962,7 @@ class SequentialMatcher:
             f"    Result: {unique_identities} unique functions ({named_identities} named)"
         )
         print(
-            f"    Stats: {self.stats[norm_name]['forward_matches']} forward, "
-            f"{self.stats[norm_name]['backward_matches']} backward, "
+            f"    Stats: {self.stats[norm_name]['forward_matches']} matched, "
             f"{self.stats[norm_name]['new_functions']} new"
         )
 

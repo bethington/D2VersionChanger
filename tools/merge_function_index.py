@@ -15,23 +15,40 @@ Configuration: config/function_index.json
   - output: Output file settings
 
 Index Matching Priority:
-  EXP: Export ordinal (100% reliable)
   STR: Unique string references (99% reliable)
-  API: API call sequence (95% reliable)
+  NOP: Normalized OPcode hash (98% reliable for unchanged functions)
+  CAL: Sorted callee names (95% reliable)
+  API: API call sequence (92% reliable)
+  APS: Sorted API calls, order-independent (90% reliable)
+  CON: Sorted constants/magic numbers (88% reliable)
   MNE: Mnemonic sequence + size (85% reliable)
   CFG: Control flow structure (80% reliable)
   PRO: Prologue + size (70% reliable)
+  EXP: Export ordinal (50% - NOT reliable across versions, ordinals change)
 
 Output: reports/function_registry_v2.json
 """
 
 import json
 import os
+import re
 import sys
 from pathlib import Path
 from collections import defaultdict
 from typing import Dict, List, Optional, Set, Tuple
 import hashlib
+
+
+def sanitize_json_string(content: str) -> str:
+    """Remove invalid control characters from JSON content.
+
+    JSON doesn't allow control characters (0x00-0x1F) in strings unless escaped.
+    This removes them to prevent parsing errors from Ghidra exports that contain
+    raw memory values with null bytes or other control characters.
+    """
+    # Remove control characters except tab, newline, carriage return (which are valid in JSON)
+    # \x00-\x08, \x0b-\x0c, \x0e-\x1f are the invalid ones
+    return re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', content)
 
 # Import fuzzy matcher
 try:
@@ -40,11 +57,20 @@ except ImportError:
     FuzzyMatcher = None
     HAS_DATASKETCH = False
 
+# Import callee matcher for resolving callee names across versions
+try:
+    from callee_matcher import CalleeMatcher, CalleeInfo
+    HAS_CALLEE_MATCHER = True
+except ImportError:
+    CalleeMatcher = None
+    CalleeInfo = None
+    HAS_CALLEE_MATCHER = False
+
 # Default config if no config file exists
 DEFAULT_CONFIG = {
     "enabled_game_types": {"LoD": True, "Classic": True},
     "enabled_versions": {},
-    "index_priority": ["EXP", "STR", "API", "MNE", "CFG", "PRO"],
+    "index_priority": ["STR", "NOP", "CAL", "API", "APS", "CON", "MNE", "CFG", "PRO", "EXP"],
     "output": {
         "registry_file": "reports/function_registry_v2.json",
         "include_unmatched": True,
@@ -98,13 +124,18 @@ VERSION_ORDER = [
 ]
 
 # Index method priority (higher = more reliable)
+# NOTE: EXP (export ordinal) is demoted because ordinals change between versions
 METHOD_PRIORITY = {
-    "EXP": 100,
     "STR": 99,
-    "API": 95,
+    "NOP": 98,  # Normalized OPcode hash - excellent for unchanged functions
+    "CAL": 95,  # Sorted callee names
+    "API": 92,
+    "APS": 90,  # Sorted API calls (order-independent)
+    "CON": 88,  # Sorted constants
     "MNE": 85,
     "CFG": 80,
     "PRO": 70,
+    "EXP": 50,  # Export ordinal - NOT reliable for cross-version matching
     "ADDR": 0,  # Address-based, won't match
 }
 
@@ -216,7 +247,6 @@ class FunctionMerger:
                             "param_count": func.get("param_count", 0),
                             # New enhanced fields for better matching
                             "stack_frame_size": func.get("stack_frame_size", 0),
-                            "basic_block_count": func.get("basic_block_count", 0),
                             "loop_count": func.get("loop_count", 0),
                             "mnemonic_hash": func.get("mnemonic_hash", ""),
                             "constants": func.get("constants", []),
@@ -329,7 +359,11 @@ class FunctionMerger:
 
                     try:
                         with open(json_file, "r", encoding="utf-8") as f:
-                            data = json.load(f)
+                            content = f.read()
+
+                        # Sanitize control characters before parsing
+                        content = sanitize_json_string(content)
+                        data = json.loads(content)
 
                         if dll_name not in exports:
                             exports[dll_name] = {}
@@ -509,6 +543,47 @@ class FunctionMerger:
 
         return f"{base_name}_{method}_{hash_part}"
 
+
+    def _create_fallback_canonical_id(
+        self, dll_name: str, func_data: dict
+    ) -> Optional[str]:
+        """Create a fallback canonical ID when version collision detected.
+
+        Uses API or MNE index if available, otherwise creates address-based ID.
+        Also registers the new canonical ID with its indexes.
+        """
+        indexes = func_data.get("indexes", {})
+        base_name = dll_name.replace(".dll", "").replace(".exe", "")
+
+        # Try API index first (most reliable for unique identification)
+        api_idx = indexes.get("API")
+        if api_idx:
+            canonical_id = f"{base_name}_API_{api_idx[:12]}"
+            if canonical_id not in self.functions:
+                # Register this new canonical ID
+                alt_key = f"{dll_name}:API:{api_idx}"
+                self.index_to_canonical[alt_key] = canonical_id
+                return canonical_id
+
+        # Try MNE index next
+        mne_idx = indexes.get("MNE")
+        if mne_idx:
+            canonical_id = f"{base_name}_MNE_{mne_idx[:12]}"
+            if canonical_id not in self.functions:
+                alt_key = f"{dll_name}:MNE:{mne_idx}"
+                self.index_to_canonical[alt_key] = canonical_id
+                return canonical_id
+
+        # Fallback to address-based ID (unique per address)
+        address = func_data.get("address", "")
+        if address:
+            addr_hash = address.replace("0x", "")[-8:]
+            canonical_id = f"{base_name}_ADDR_{addr_hash}"
+            if canonical_id not in self.functions:
+                return canonical_id
+
+        return None
+
     def merge_function_data(
         self,
         canonical_id: str,
@@ -543,8 +618,39 @@ class FunctionMerger:
 
         # Add version-specific address
         version_key = f"{game_type}/{version}"
+        new_address = func_data.get("address")
+
+        # COLLISION CHECK: If this version already exists with a different address,
+        # this is a merge conflict (likely from incorrectly assigned EXP indices).
+        # Don't overwrite - the function needs its own canonical entry.
+        existing_version = entry.get("versions", {}).get(version_key)
+        if existing_version:
+            existing_addr = existing_version.get("address", "")
+            if existing_addr and new_address and existing_addr != new_address:
+                # Same version, different address - this is a collision
+                # Create a new canonical entry for this function instead
+                func_name = func_data.get("name", "unknown")
+                print(
+                    f"  WARNING: Version collision in {canonical_id} for {version_key}"
+                )
+                print(f"    Existing: {existing_addr}")
+                print(f"    New:      {new_address} ({func_name})")
+                print(f"    Creating separate entry for {func_name}")
+
+                # Generate a new canonical ID based on API or MNE index instead
+                new_canonical_id = self._create_fallback_canonical_id(
+                    dll_name, func_data
+                )
+                if new_canonical_id and new_canonical_id != canonical_id:
+                    # Recursively merge into the new canonical entry
+                    self.merge_function_data(
+                        new_canonical_id, func_data, game_type, version, dll_name
+                    )
+                    return
+                # If we couldn't create a fallback, continue and overwrite (last resort)
+
         version_entry = {
-            "address": func_data.get("address"),
+            "address": new_address,
             "rva": func_data.get("rva"),
             "size": func_data.get("size"),
         }
@@ -552,7 +658,7 @@ class FunctionMerger:
         # Enhanced data - read directly from func_data (merged into function_index exports)
         # Also try legacy enhanced cache as fallback
         enhanced = self.get_enhanced_data(
-            dll_name, version_key, func_data.get("address", "")
+            dll_name, version_key, new_address or ""
         )
 
         # Prefer data from func_data (new merged format), fall back to enhanced cache
@@ -580,15 +686,14 @@ class FunctionMerger:
         version_entry["stack_frame_size"] = func_data.get(
             "stack_frame_size", enhanced.get("stack_frame_size", 0) if enhanced else 0
         )
-        version_entry["basic_block_count"] = func_data.get(
-            "basic_block_count", enhanced.get("basic_block_count", 0) if enhanced else 0
-        )
         version_entry["loop_count"] = func_data.get(
             "loop_count", enhanced.get("loop_count", 0) if enhanced else 0
         )
+        # Mnemonic hash: try indexes.MNE first (new format), then enhanced cache (legacy)
         version_entry["mnemonic_hash"] = (
-            enhanced.get("mnemonic_hash", "") if enhanced else ""
-        )  # Not in new format
+            func_data.get("indexes", {}).get("MNE", "")
+            or (enhanced.get("mnemonic_hash", "") if enhanced else "")
+        )
         version_entry["constants"] = func_data.get(
             "constants", enhanced.get("constants", []) if enhanced else []
         )
@@ -779,6 +884,78 @@ class FunctionMerger:
         self.stats[f"{dll_name}_functions"] = len(dll_functions)
         self.stats[f"{dll_name}_named"] = named
 
+    def resolve_callees(self):
+        """Resolve callee names to their canonical names across versions.
+
+        After all functions are matched to canonical IDs, this pass:
+        1. Builds address-to-canonical lookup for each version
+        2. For each function's callees, finds the canonical ID by address
+        3. If the canonical function has a human name, propagates it to callees
+        """
+        if not self.functions:
+            return
+
+        print("\nResolving callee names...")
+
+        # Build address-to-canonical lookup: {(dll, version_key, address) -> canonical_id}
+        address_to_canonical = {}
+        for canonical_id, func in self.functions.items():
+            dll = func.get("dll", "")
+            for version_key, version_data in func.get("versions", {}).items():
+                address = version_data.get("address", "")
+                if address:
+                    key = (dll, version_key, address)
+                    address_to_canonical[key] = canonical_id
+
+        # Track stats
+        resolved_count = 0
+        total_callees = 0
+
+        # Process each function's callees
+        for canonical_id, func in self.functions.items():
+            dll = func.get("dll", "")
+
+            for version_key, version_data in func.get("versions", {}).items():
+                callees = version_data.get("callees", [])
+                if not callees:
+                    continue
+
+                resolved_callees = []
+                for callee_str in callees:
+                    total_callees += 1
+
+                    # Parse "name|address" format
+                    if "|" in callee_str:
+                        callee_name, callee_addr = callee_str.rsplit("|", 1)
+                    else:
+                        # Just an address or name without separator
+                        resolved_callees.append(callee_str)
+                        continue
+
+                    # Look up canonical ID for this callee
+                    lookup_key = (dll, version_key, callee_addr)
+                    callee_canonical_id = address_to_canonical.get(lookup_key)
+
+                    if callee_canonical_id:
+                        callee_func = self.functions.get(callee_canonical_id)
+                        if callee_func:
+                            canonical_name = callee_func.get("name")
+                            if canonical_name and canonical_name != callee_name:
+                                # Replace with canonical name
+                                resolved_callees.append(f"{canonical_name}|{callee_addr}")
+                                resolved_count += 1
+                                continue
+
+                    # Keep original if no better name found
+                    resolved_callees.append(callee_str)
+
+                # Update callees list
+                version_data["callees"] = resolved_callees
+
+        print(f"  Resolved {resolved_count} callee names out of {total_callees} total")
+        self.stats["callees_resolved"] = resolved_count
+        self.stats["callees_total"] = total_callees
+
     def _merge_canonical_entries(self, keep_id: str, merge_id: str):
         """Merge one canonical entry into another."""
         if keep_id == merge_id:
@@ -839,29 +1016,75 @@ class FunctionMerger:
         for dll_name in sorted(exports.keys()):
             self.process_dll(dll_name, exports[dll_name])
 
+        # Post-processing: resolve callee names to canonical names
+        self.resolve_callees()
+
         # Generate output
         self.write_registry()
         self.write_summary()
 
-    def write_registry(self):
-        """Write the function registry to JSON file for generate_function_js.py."""
+    def generate_registry_in_memory(self) -> dict:
+        """Generate registry data without writing any files.
+
+        Returns the registry dict that would normally be written to
+        function_registry_v2.json. Used by generate_function_js.py.
+        """
+        print("=" * 70)
+        print("MERGING FUNCTION INDEXES (in-memory)")
+        print("=" * 70)
+
+        # Load enhanced exports first (callees, callers, strings, instructions)
+        self.load_enhanced_exports()
+
+        # Load all exports
+        exports = self.load_exports()
+        print(
+            f"\nLoaded {self.stats['files_loaded']} files with {self.stats['functions_loaded']} total function entries"
+        )
+
+        if not exports:
+            print("No exports found. Run ExportFunctionIndex.java in Ghidra first.")
+            return {"total_functions": 0, "total_named": 0, "dlls": {}}
+
+        # Process each DLL
+        for dll_name in sorted(exports.keys()):
+            self.process_dll(dll_name, exports[dll_name])
+
+        # Post-processing: resolve callee names to canonical names
+        self.resolve_callees()
+
+        # Return registry data without writing to disk
+        registry = self.get_registry_data()
+        print(f"\nGenerated registry with {registry['total_functions']} functions ({registry['total_named']} named)")
+        return registry
+
+    def get_registry_data(self) -> dict:
+        """Return the registry data structure without writing to disk.
+
+        Used by generate_function_js.py to get data directly in memory.
+        """
         # Group functions by DLL
         dlls = defaultdict(list)
         for func in self.functions.values():
             dlls[func["dll"]].append(func)
 
-        # Build registry output
-        registry = {
+        return {
             "total_functions": len(self.functions),
             "total_named": self.stats["named_functions"],
             "dlls": dict(dlls),
         }
 
-        output_file = self.output_path / "function_registry_v2.json"
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(registry, f, indent=2)
+    def write_registry(self, skip_file: bool = False):
+        """Write the function registry to JSON file for generate_function_js.py."""
+        registry = self.get_registry_data()
 
-        print(f"\nWrote registry to: {output_file}")
+        if not skip_file:
+            output_file = self.output_path / "function_registry_v2.json"
+            with open(output_file, "w", encoding="utf-8") as f:
+                json.dump(registry, f, indent=2)
+            print(f"\nWrote registry to: {output_file}")
+        else:
+            print(f"\nRegistry generated in memory (skipped writing to disk)")
         print(f"  Total canonical functions: {len(self.functions)}")
         print(f"  Total named: {self.stats['named_functions']}")
         if self.stats.get("verified_matches", 0) > 0:

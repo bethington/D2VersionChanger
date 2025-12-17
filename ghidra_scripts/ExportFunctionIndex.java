@@ -29,18 +29,25 @@ import java.security.*;
  * - Basic info (address, size, name if human-assigned)
  * - EXP index: Export ordinal (for exported functions)
  * - STR index: Hash of referenced unique strings
+ * - NOP index: Normalized OPcode hash (address-independent, like MCP)
+ * - CAL index: Hash of sorted callee function names
  * - API index: Hash of imported API call sequence
+ * - APS index: Hash of sorted API calls (order-independent)
+ * - CON index: Hash of sorted constants (magic numbers)
  * - MNE index: Hash of instruction mnemonic sequence + size
  * - CFG index: Hash of basic block count + edge structure
  * - PRO index: Hash of prologue bytes + size
  *
  * Index Selection Priority:
- * 1. EXP (100% reliable) - if function is exported
- * 2. STR (99% reliable) - if has unique string references
- * 3. API (95% reliable) - if calls 2+ imported APIs
- * 4. MNE (85% reliable) - default workhorse
- * 5. CFG (80% reliable) - for medium+ functions
- * 6. PRO (70% reliable) - fallback for tiny functions
+ * 1. STR (99% reliable) - if has unique string references
+ * 2. NOP (98% reliable) - normalized opcode hash for unchanged functions
+ * 3. CAL (95% reliable) - sorted callee names are stable
+ * 4. API (90% reliable) - if calls 2+ imported APIs
+ * 5. CON (85% reliable) - sorted magic numbers
+ * 6. MNE (80% reliable) - default workhorse
+ * 7. CFG (70% reliable) - for medium+ functions
+ * 8. PRO (60% reliable) - fallback for tiny functions
+ * 9. EXP (50% - NOT reliable) - ordinals change between versions
  *
  * Output path derived from program location:
  *   /F:/D2VersionChanger/VersionChanger/LoD/1.07/D2Client.dll
@@ -712,6 +719,120 @@ public class ExportFunctionIndex extends GhidraScript {
         }
     }
 
+    /**
+     * Compute a Normalized OPcode hash that ignores absolute addresses.
+     * This mimics the MCP get_function_hash normalization:
+     * - Internal jump/call targets → relative offset from function start
+     * - External calls → "CALL_EXT"
+     * - External data refs → "DATA_EXT"
+     * - Large immediates (>0x10000) → "IMM_LARGE"
+     * - Small immediates → kept as-is (likely constants)
+     * - Registers → kept as-is
+     */
+    private String computeNormalizedOpcodeHash(Function func) {
+        StringBuilder normalized = new StringBuilder();
+        long funcStart = func.getEntryPoint().getOffset();
+        long imageBase = activeProgram.getImageBase().getOffset();
+
+        try {
+            Listing listing = activeProgram.getListing();
+            AddressSetView body = func.getBody();
+            InstructionIterator instrIter = listing.getInstructions(body, true);
+
+            int instrCount = 0;
+            while (instrIter.hasNext() && instrCount < 1000) {
+                Instruction instr = instrIter.next();
+                instrCount++;
+
+                String mnemonic = instr.getMnemonicString();
+                normalized.append(mnemonic);
+
+                // Process operands
+                for (int op = 0; op < instr.getNumOperands(); op++) {
+                    int opType = instr.getOperandType(op);
+                    Object[] opObjs = instr.getOpObjects(op);
+
+                    for (Object obj : opObjs) {
+                        if (obj instanceof Scalar) {
+                            long val = ((Scalar) obj).getValue();
+
+                            // Check if this is an internal address (jump/call target)
+                            if (isInternalAddress(body, val)) {
+                                // Normalize to relative offset from function start
+                                long relOffset = val - funcStart;
+                                normalized.append("_REL_").append(relOffset);
+                            } else if (val > 0x10000 && val < 0xFFFFFFFFL) {
+                                // Large immediate - likely an address
+                                // Check if it's an external reference
+                                Address potentialAddr = activeProgram.getAddressFactory().getDefaultAddressSpace().getAddress(val);
+                                Function calledFunc = activeProgram.getFunctionManager().getFunctionAt(potentialAddr);
+
+                                if (calledFunc != null && calledFunc.isExternal()) {
+                                    normalized.append("_CALL_EXT");
+                                } else if (importMap.containsKey(potentialAddr)) {
+                                    normalized.append("_CALL_EXT");
+                                } else if (isDataReference(potentialAddr)) {
+                                    normalized.append("_DATA_EXT");
+                                } else {
+                                    normalized.append("_IMM_LARGE");
+                                }
+                            } else {
+                                // Small immediate - keep as constant
+                                normalized.append("_IMM_").append(val);
+                            }
+                        } else if (obj instanceof ghidra.program.model.lang.Register) {
+                            // Keep register names
+                            normalized.append("_REG_").append(((ghidra.program.model.lang.Register) obj).getName());
+                        } else if (obj instanceof Address) {
+                            Address addr = (Address) obj;
+                            if (body.contains(addr)) {
+                                // Internal address
+                                long relOffset = addr.getOffset() - funcStart;
+                                normalized.append("_REL_").append(relOffset);
+                            } else {
+                                // External address
+                                Function calledFunc = activeProgram.getFunctionManager().getFunctionAt(addr);
+                                if (calledFunc != null && (calledFunc.isExternal() || calledFunc.isThunk())) {
+                                    normalized.append("_CALL_EXT");
+                                } else if (importMap.containsKey(addr)) {
+                                    normalized.append("_CALL_EXT");
+                                } else {
+                                    normalized.append("_ADDR_EXT");
+                                }
+                            }
+                        }
+                    }
+                }
+                normalized.append("|");
+            }
+
+            // Hash the normalized sequence
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            return hashToHex(md.digest(normalized.toString().getBytes("UTF-8")), 32);
+
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    private boolean isInternalAddress(AddressSetView body, long addr) {
+        try {
+            Address potentialAddr = activeProgram.getAddressFactory().getDefaultAddressSpace().getAddress(addr);
+            return body.contains(potentialAddr);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private boolean isDataReference(Address addr) {
+        try {
+            Data data = activeProgram.getListing().getDataAt(addr);
+            return data != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     private void extractEnhancedInstructionData(Function func, FunctionData data, long imageBase) {
         final int MAX_INSTRUCTIONS = 15;
         final int MAX_CONSTANTS = 30;
@@ -756,11 +877,26 @@ public class ExportFunctionIndex extends GhidraScript {
                     }
                 }
 
-                // Track global/data references (exclude strings - they're captured separately)
+                // Track global/data references (exclude strings and stack refs)
                 Reference[] refs = instr.getReferencesFrom();
                 for (Reference ref : refs) {
                     if (ref.getReferenceType().isData() && data.globals.size() < MAX_GLOBALS) {
                         Address toAddr = ref.getToAddress();
+
+                        // Skip stack-space addresses (not real globals)
+                        // Check address space and filter out non-memory addresses
+                        if (toAddr.getAddressSpace().isStackSpace() ||
+                            toAddr.getAddressSpace().isRegisterSpace() ||
+                            !toAddr.getAddressSpace().isMemorySpace()) {
+                            continue;
+                        }
+                        // Also filter by raw address - stack refs have pattern 0xFFFFFFFF902A...
+                        // or negative addresses (high bit set in 32-bit context)
+                        long addrOffset = toAddr.getOffset();
+                        if (addrOffset < 0 || addrOffset > 0xFFFFFFFFL) {
+                            continue;
+                        }
+
                         if (!body.contains(toAddr)) {
                             Data globalData = listing.getDataAt(toAddr);
 
@@ -928,6 +1064,9 @@ public class ExportFunctionIndex extends GhidraScript {
             // Basic block count
             data.basicBlockCount = getBasicBlockCount(func);
 
+            // NOP (Normalized OPcode) index - computed before other indexes
+            data.nopIndex = computeNormalizedOpcodeHash(func);
+
             // Signature and metadata
             data.signature = func.getSignature().getPrototypeString();
             data.callingConvention = func.getCallingConventionName();
@@ -1043,6 +1182,8 @@ public class ExportFunctionIndex extends GhidraScript {
             data.mneIndex = hashToHex(md.digest(combined.getBytes("UTF-8")), 16);
         }
 
+        // NOP index (computed separately - stored in data.nopIndex already)
+
         // CFG index - Enhanced with more discriminators to reduce collisions
         // Includes: block count, loop count, instruction count, callee count,
         // param count, return type category, and branch pattern
@@ -1144,21 +1285,23 @@ public class ExportFunctionIndex extends GhidraScript {
         }
 
         // Select best index
-        // Priority: EXP > STR > CAL > API > CON > MNE > CFG > PRO > ADDR
-        // EXP: Export ordinal (100% reliable for exports)
+        // Priority: STR > NOP > CAL > API > CON > MNE > CFG > PRO > EXP > ADDR
+        // NOTE: EXP demoted to last because ordinals change between D2 versions
         // STR: Unique strings (99% reliable but rare)
+        // NOP: Normalized opcode hash (98% reliable for unchanged functions)
         // CAL: Sorted callee names (95% reliable - function names are stable)
         // API: API call sequence (90% reliable - order can change)
         // CON: Sorted constants (85% reliable - magic numbers are stable)
         // MNE: Mnemonic sequence (80% reliable - compiler variations)
         // CFG: Block count + size (70% reliable)
         // PRO: Prologue bytes (60% reliable)
-        if (data.expIndex != null) {
-            data.bestIndex = "EXP:" + data.expIndex;
-            data.bestMethod = "EXP";
-        } else if (data.strIndex != null) {
+        // EXP: Export ordinal (50% - NOT reliable for cross-version matching)
+        if (data.strIndex != null) {
             data.bestIndex = "STR:" + data.strIndex;
             data.bestMethod = "STR";
+        } else if (data.nopIndex != null) {
+            data.bestIndex = "NOP:" + data.nopIndex;
+            data.bestMethod = "NOP";
         } else if (data.calIndex != null) {
             data.bestIndex = "CAL:" + data.calIndex;
             data.bestMethod = "CAL";
@@ -1177,6 +1320,10 @@ public class ExportFunctionIndex extends GhidraScript {
         } else if (data.proIndex != null) {
             data.bestIndex = "PRO:" + data.proIndex;
             data.bestMethod = "PRO";
+        } else if (data.expIndex != null) {
+            // EXP last (before ADDR) - ordinals NOT reliable across versions
+            data.bestIndex = "EXP:" + data.expIndex;
+            data.bestMethod = "EXP";
         } else {
             data.bestIndex = "ADDR:" + String.format("%08X", data.rva);
             data.bestMethod = "ADDR";
@@ -1243,6 +1390,7 @@ public class ExportFunctionIndex extends GhidraScript {
                 writer.println("      \"indexes\": {");
                 writer.println("        \"EXP\": " + (f.expIndex != null ? "\"" + escapeJson(f.expIndex) + "\"" : "null") + ",");
                 writer.println("        \"STR\": " + (f.strIndex != null ? "\"" + escapeJson(f.strIndex) + "\"" : "null") + ",");
+                writer.println("        \"NOP\": " + (f.nopIndex != null ? "\"" + escapeJson(f.nopIndex) + "\"" : "null") + ",");
                 writer.println("        \"CAL\": " + (f.calIndex != null ? "\"" + escapeJson(f.calIndex) + "\"" : "null") + ",");
                 writer.println("        \"API\": " + (f.apiIndex != null ? "\"" + escapeJson(f.apiIndex) + "\"" : "null") + ",");
                 writer.println("        \"APS\": " + (f.apsIndex != null ? "\"" + escapeJson(f.apsIndex) + "\"" : "null") + ",");
@@ -1428,6 +1576,7 @@ public class ExportFunctionIndex extends GhidraScript {
         String calIndex;    // Sorted callee names hash (stable across versions)
         String conIndex;    // Sorted constants hash (magic numbers stable)
         String apsIndex;    // Sorted API calls hash (order-independent)
+        String nopIndex;    // Normalized OPcode hash (address-independent, like MCP)
 
         String bestIndex;
         String bestMethod;

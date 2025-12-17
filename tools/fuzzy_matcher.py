@@ -10,7 +10,6 @@ Key Principle: Match on COUNTS (structural properties) not NAMES (unreliable lab
 Feature Vector Components (in order of reliability):
 - instruction_count: Very stable - overall code complexity
 - size: Very stable - function byte size
-- basic_block_count: High stability - control flow structure
 - api_count: High stability - external API dependencies
 - param_count: High stability - function signature
 - callee_count: Medium stability - internal call structure
@@ -147,7 +146,6 @@ class VectorMatcher:
         'size': {'weight': 0.15, 'tolerance': 0.15},
 
         # High Confidence - control flow and signature
-        'basic_block_count': {'weight': 0.12, 'tolerance': 0.20},
         'api_count': {'weight': 0.12, 'tolerance': 0.25},
         'param_count': {'weight': 0.10, 'tolerance': 0.0},  # Must match exactly or very close
 
@@ -214,7 +212,7 @@ class VectorMatcher:
         vector = {}
 
         # Direct count fields
-        for field in ['instruction_count', 'basic_block_count', 'loop_count',
+        for field in ['instruction_count', 'loop_count',
                       'stack_frame_size', 'local_var_count', 'param_count',
                       'callee_count', 'caller_count', 'string_count',
                       'constant_count', 'global_count', 'api_count', 'size']:

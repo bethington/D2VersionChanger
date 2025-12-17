@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-15T15:44:29.888678
+// Generated: 2025-12-16T18:31:58.018344
 // Functions for D2sound.dll
 // Versions: LoD/PD2
 
@@ -33,11 +33,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "80845e7377749fe62fdfa1726193a977",
         "PRO": "9e2e540e31360157272f7aa405689cb9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "df0a04b7db34c5f035a394dc061ca513"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -45,10 +45,10 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_MNE_f23ef2b3a6cf": {
       "addresses": {
-        "LoD/PD2": "0x6F9B34F5"
+        "LoD/PD2": "0x6F9B1030"
       },
       "rvas": {
-        "LoD/PD2": "0x34F5"
+        "LoD/PD2": "0x1030"
       },
       "sizes": {
         "LoD/PD2": 9
@@ -68,11 +68,43 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "78fd821d620e779aa5b7fe30bc336370"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "D2sound_ADDR_6F9B1039": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B1039"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1039"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseCriticalSectionLock8",
+      "signature": "void ReleaseCriticalSectionLock8(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases critical section lock 8 for thread synchronization.\n\nAlgorithm:\n1. Push the critical section index (8) onto the stack as parameter\n2. Call the critical section release function (LeaveCriticalSection wrapper)\n3. Return to caller\n\nParameters:\nNone - operates on a static critical section at index 8\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- This function releases a hardcoded critical section (index 8), typically used for protecting shared game state\n- Part of the game's thread synchronization mechanism for exclusive access to protected resources\n- The actual LeaveCriticalSection call is delegated to FUN_6f9b1510 which indexes into the critical section array at DAT_6f9c5038\n\nRelated Functions:\n- FUN_6f9b1510: Generic critical section release for any index\n- Called by: FUN_6f9b16d0 (appears to be another lock release wrapper)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "d0ba2227d16de6f938cd1cc5b699e4d9"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2sound_MNE_996e3f0c6129": {
@@ -100,11 +132,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "4378837d3436e6162074a4fec1af3d10",
         "PRO": "56a3399a0dba94678e31baeedf1b1552"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "996e3f0c6129985d37a2b36d657b6892"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -135,11 +167,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e88749fdb0bfc0cf5a0e32fc67bb3506",
         "PRO": "31d17fab4fcbb9ba7d9530488da16428"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "28a1cba9ddfd9945ee3fec59104d67a8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -170,11 +202,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1acfc7f97d08d10f8d33e74e1c437d1e",
         "PRO": "ea4dc692ec66b17c3e9ba2a9d44541ca"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4a7687a1c80b4268254de38c80b8b1f6"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -205,19 +237,19 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f1596e7f5926afa1510db879e6d50457",
         "PRO": "d6f7f4a67072121666dd69b9320b7a31"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ca7f27832b0deaebe496b377f1c5001a"
       }
     },
     "D2sound_MNE_cd85d17a6b19": {
       "addresses": {
-        "LoD/PD2": "0x6F9B1198"
+        "LoD/PD2": "0x6F9B1187"
       },
       "rvas": {
-        "LoD/PD2": "0x1198"
+        "LoD/PD2": "0x1187"
       },
       "sizes": {
         "LoD/PD2": 17
@@ -237,11 +269,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "94a8097d6da98e139e076864648926cd"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd85d17a6b193c95680d3fdca645abba"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B1198": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B1198"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1198"
+      },
+      "sizes": {
+        "LoD/PD2": 17
+      },
+      "name": "__exit",
+      "signature": "void __exit(uint dwExitCode)",
+      "calling_convention": "__cdecl",
+      "comment": "Setting prototype: void __exit(uint dwExitCode)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:cd85d17a6b193c95680d3fdca645abba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cd85d17a6b193c95680d3fdca645abba",
+        "CFG": null,
+        "PRO": "f7825b23dde492455ea61a10ffbf72e2"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd85d17a6b193c95680d3fdca645abba"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -272,11 +339,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "1d21c427e7f311517e1da7c5ba81eadc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7a5e6ed384be31095abb7960c9f1d6d0"
       }
     },
     "D2sound_MNE_98eebec3741b": {
@@ -304,11 +371,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "df3b9c75908fd93f90f391f2ea02e0e6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "98eebec3741bc1addf7fafbeff16d621"
       }
     },
     "D2sound_MNE_1c48859ddf90": {
@@ -336,11 +403,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "08da3686eea5cee9f9b0724f005d7159",
         "PRO": "20e41f1deb32bcadcee45ae0c4b0c71b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1c48859ddf90d08dbf4d9d03c0c2a56a"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -367,11 +434,11 @@ var FUNCTIONS_D2sound_dll = {
         "PRO": "e8b9c98ae41cc715d5b88a982c971262"
       },
       "display_name": "MNE_e12afdedf65b4f2d",
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e12afdedf65b4f2d4ddeab4188a67460"
       }
     },
     "D2sound_MNE_dd1410dc737c": {
@@ -399,11 +466,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "bfa22c3fd387f22c29ee41d99ac17a74",
         "PRO": "86f1384b00925095d6ea62158c91779e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dd1410dc737c66ed6127a2f60f9bdf3c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -434,11 +501,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "dedcacb5022ec3081bf0e8026ad6b099",
         "PRO": "a2e3dac06aace346c193a595e3fce584"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "921d14ea2db8ace7085d489017738fb1"
       }
     },
     "D2sound_MNE_3d673ff0fb62": {
@@ -466,11 +533,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5aebfc50763de5123835153a8b5de875",
         "PRO": "606ba88400b742e38bc653f2b87a9d2a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3d673ff0fb622876ea58c1a43b2af6a0"
       }
     },
     "D2sound_MNE_e83d10405144": {
@@ -498,11 +565,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "6c35b63a3f2578184197730d3fe45557"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e83d104051445238b4510431aa98563d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -533,14 +600,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1b97c4c9ebb5e5f377a4d61d4467ef57",
         "PRO": "4f3d2ef19499efedf4d63ad6343b54a8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a51a9a5e7ceb2fab96b937dc9f784c13"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B15BC": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B15BC"
+      },
+      "rvas": {
+        "LoD/PD2": "0x15BC"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseMTLock",
+      "signature": "void ReleaseMTLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Release the multi-threaded initialization lock (lock #10).\n\nThis is a wrapper function that releases synchronization lock 10, which is used\nto protect multi-threaded initialization of critical sections in the Visual C++\nruntime library. Called during the initialization process to unlock resources\nafter critical section setup is complete.\n\nAlgorithm:\n1. Push argument 10 (lock number) onto stack\n2. Call ReleaseSynchronizationLock to release the lock\n3. Clean up stack with POP ECX (fastcall return)\n4. Return to caller\n\nReturns:\nvoid - No return value, performs cleanup only\n\nSpecial Cases:\n- Lock #10 is a reserved lock for multi-threaded initialization\n- Uses __stdcall calling convention with implied return value cleanup\n- Part of Visual C++ 2003 runtime initialization sequence",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "180d0dbb009b4d1e2113d2477fcba925"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2sound_MNE_a62c5e213216": {
@@ -568,11 +667,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "6c3b0aa07951c5e00ecf5c0f67c56cb3",
         "PRO": "ec1d8a845f40a9bea04792c0754871af"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a62c5e213216063061d4d1c8c7db89e8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -603,11 +702,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "4c747082602c7f76e5a0b6b31e0c33ed",
         "PRO": "0336ee3eab5ea5d3774cdae8723df292"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7a09c5a73235698eb35bf1fa40abce3a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -638,11 +737,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "074729d34b2ceac5cf54de1f1ab60b22",
         "PRO": "f748d84f2874060db8920051e88f79cc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "266baaaf79f230c6a6856a4a53b42d70"
       }
     },
     "D2sound_MNE_5d2d40297dfe": {
@@ -670,11 +769,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "37df6770e2b24dae8705aa111e96e769",
         "PRO": "2efc59fcf96ce5e5baea8a345e6dd6d7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5d2d40297dfe2be53beef9d63f51ef80"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -705,11 +804,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "befc6114fbdbedfb001aaf0cf99330b2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e7313d19d2f1b94221ec63dffd5562f1"
       }
     },
     "D2sound_MNE_2544af1d7a07": {
@@ -737,11 +836,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "ef9a4571e7167f6ca37ef06a54d91959"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2544af1d7a0712444106eb929de8e62d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -772,11 +871,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "8c955c77011f408ad9ffc78e365640e4",
         "PRO": "b6acc7381ea0fec5aba8bcbf14261324"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9882f49b46164551a852d0e5558c3763"
       }
     },
     "D2sound_MNE_aef9935d5818": {
@@ -804,11 +903,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "afc8e9a8a8b4db3c1ee2d10b72086d38"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aef9935d5818b16bbad0952f5da65380"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -839,11 +938,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "b9341e7a9c7fb15c0fd3b51f756cce6f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bb6caf8fa91f28d8c9b4f7822655fe6b"
       }
     },
     "D2sound_MNE_89d1b6190541": {
@@ -871,11 +970,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "204649768cb6aa7c9bb671be8e047b74"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "89d1b619054116ad559c7c543db397fd"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -906,11 +1005,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "d049b86b29eab418cb2f1b06ba813dfd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "03ce6e557a60cad10c5f167fdc7f4b70"
       }
     },
     "D2sound_MNE_aff5ecc93302": {
@@ -938,11 +1037,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e4d929dcade813bcfed0f23f20c25712",
         "PRO": "8fd7458c5d15db1d815a70cadba916d7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aff5ecc933020ea9f6660ca70cb9d16a"
       }
     },
     "D2sound_MNE_a1900c49d3b8": {
@@ -970,11 +1069,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "bcf63962c44d486b13b5a07284c2c86b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1900c49d3b847e69ff3bf21a94518de"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1005,11 +1104,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "0c8662126fe6ebdb099c385715f42fe6",
         "PRO": "aa34a27af0d21f4d0f7ac6a9bb19f753"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "04f1e6f173a4f00f5247db68bf412e5b"
       }
     },
     "D2sound_MNE_adafedc33ce1": {
@@ -1037,14 +1136,78 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "2da93e684001310322c3f0b023dc49fc",
         "PRO": "74dfdbbf9c8569982a859ac81f4da236"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 34
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "adafedc33ce199c85ef6d812cf9b5974"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B1AA1": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B1AA1"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1AA1"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseLock13OnThreadExit",
+      "signature": "void ReleaseLock13OnThreadExit(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Thread-local storage cleanup function that releases synchronization lock 13.\n\nAlgorithm:\n1. Push lock ID 0xd (13 decimal) onto stack as parameter\n2. Call ReleaseSynchronizationLock to release the lock\n3. Pop return address and return to caller\n\nParameters:\n  None - Lock ID is hardcoded to 0xd (13)\n\nReturns:\n  void - No return value\n\nSpecial Cases:\n  Lock ID 0xd is reserved for thread-local storage cleanup operations\n  Called during __freefls@4 thread cleanup sequence\n  Part of thread termination and resource deallocation\n\nCalling Convention:\n  __stdcall - Callee cleans stack (POP ECX)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "09b6baf941ec9872d72490b42052dbec"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "D2sound_ADDR_6F9B1AAD": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B1AAD"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1AAD"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseFreeListLock",
+      "signature": "void ReleaseFreeListLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the free list synchronization lock.\n\nAlgorithm:\n1. Push synchronization lock identifier (0xc) onto stack\n2. Call ReleaseSynchronizationLock to release the lock\n3. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Lock identifier 0xc is a constant value specific to free list management\n- Function uses __stdcall convention (callee cleans stack via RET instruction)\n- Called exclusively from __freefls@4 cleanup routine",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "87223806ddf292c574a8a5a56e4d769e"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2sound_MNE_c0a536e0e6da": {
@@ -1072,11 +1235,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "4e847b889984c71922568191fca6fba0",
         "PRO": "ecb306795c2360c8d8945ef22afcfe96"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c0a536e0e6dadcb5b945a8303814ecb3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1107,11 +1270,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "47193e95d9e3342a5a8c63a689eefe67",
         "PRO": "0da7e1daa5db21bdff74c967c34e6a2b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bcce8ed29924bac295ff5cc0516a2419"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1144,14 +1307,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "555d704848b8e783f7d263b7ca7bd009",
         "PRO": "97d8837264e19f00c4d8b6730c74aa2c"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d5c8453c3e2bb4ff6f437d3d747d2c97"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B1C27": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B1C27"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1C27"
+      },
+      "sizes": {
         "LoD/PD2": 9
+      },
+      "name": "ReleaseLockDuringCleanup",
+      "signature": "void ReleaseLockDuringCleanup(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases synchronization lock during deallocation cleanup.\n\nAlgorithm:\n1. Push lock ID (0x4) onto stack as parameter\n2. Call ReleaseSynchronizationLock to release the lock\n3. Clean up stack and return\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nThis function is called during the cleanup phase of _free deallocation\nto ensure proper synchronization lock release before memory is freed.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "ddcf581e280097cf036f0e48ae7c6e48"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2sound_MNE_43c1542ced67": {
@@ -1179,14 +1374,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "d59138f44100bd891d1023b7740338fc",
         "PRO": "f6d708446570358009ae4861602a4ae2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "43c1542ced67dd840c298e093699fef1"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2sound_ADDR_6F9B1D0B": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B1D0B"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1D0B"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseLockAfterAllocation",
+      "signature": "void ReleaseLockAfterAllocation(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases synchronization lock after memory allocation completes.\n\nAlgorithm:\n1. Push lock ID (4) onto stack as function parameter\n2. Call ReleaseSynchronizationLock to release the lock\n3. Return to caller\n\nParameters:\n(None - lock ID is hardcoded as 4)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nLock ID is hardcoded to 4, indicating a specific synchronization lock\nreserved for allocation operations. The caller\n(AllocateMemoryWithRetry) is responsible for acquiring the lock\nbefore memory allocation and calling this function to release it\nafter allocation completes.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "044a77509a7ef66c7bdd6810cdea99b8"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 2
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2sound_MNE_124a050f7896": {
@@ -1214,11 +1441,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "ce64ccb286409da41a70a80f89bb0d66",
         "PRO": "a6d048e3f30d9255b98140a30ca11a46"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 46
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "124a050f7896343631e89fc5722f0cb0"
       }
     },
     "D2sound_MNE_5c819fccbe8b": {
@@ -1246,11 +1473,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f586866415c40e4eaee67b5c40cac105",
         "PRO": "4a6e765732cab4b6c9002c487aa07aa9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5c819fccbe8be253acb13e92783cc438"
       }
     },
     "D2sound_MNE_d286a589c482": {
@@ -1278,11 +1505,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "60c2579aec5d4262b2bcbd8d56c31547",
         "PRO": "09eb1a65f098b698bb5f4753fc97fc2b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d286a589c48283a2eda13c52495cb951"
       }
     },
     "D2sound_MNE_5309cc011f44": {
@@ -1310,11 +1537,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "564d0f5af54e5f1993494d07b0660f28",
         "PRO": "36e0d78a3d023220332b738484bde0f4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 60
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5309cc011f4489e83a895a5a05ecc215"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1345,11 +1572,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "9d95d0d72ba3d0f8ca13ab2ea583953f",
         "PRO": "9e78a175bfb62b637180055faba76e50"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "457ecf3d8055d8e00a172b3d901a03ca"
       }
     },
     "D2sound_MNE_ba896e89d5b4": {
@@ -1377,11 +1604,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "ec3c1f7068f62fb700bdaa7f18e77973",
         "PRO": "7cb603b6462c84fc9800b7260231707a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 30
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ba896e89d5b4e319d02dcd31648ce3d9"
       }
     },
     "D2sound_MNE_02783607761b": {
@@ -1409,11 +1636,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5373f71b1fc67ec2016d5dcfe49dc588",
         "PRO": "750e7516b9201375ae6018ee308a5d8b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "02783607761bb7b7f3ed068e856f0ca2"
       }
     },
     "D2sound_MNE_057b2070bbbd": {
@@ -1441,11 +1668,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "99df254e8864ce84a96c669724d15346",
         "PRO": "257a468500b375b831be3ebb18dcd87a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "057b2070bbbdb5455d8d4d9018467770"
       }
     },
     "D2sound_MNE_43c0a0116a01": {
@@ -1473,11 +1700,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "79578de49aac4c106e2830a21ae26f42",
         "PRO": "16b352de6ab77dccc82833031ad0e592"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "43c0a0116a0179cd961980d35fb0c190"
       }
     },
     "D2sound_MNE_f17bdc134d98": {
@@ -1505,11 +1732,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "7da0b27075b2247a294f35dfce854614",
         "PRO": "c5d73ae9ae5134090ea4cb384ca72353"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f17bdc134d984988a231baad11399d03"
       }
     },
     "D2sound_MNE_79c576ae79b5": {
@@ -1537,11 +1764,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "0e61aef9e8eef9ae3e118bd261dba8e8",
         "PRO": "02e9d3da6e924c2bf96b1680a70d3b75"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 36
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "79c576ae79b525f94550b7e17b8f3e0b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1572,11 +1799,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
         "PRO": "1c492b7026a27fcdbb1290b69bddea3a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "179c969cc717d22841f18b89d2acdead"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1607,11 +1834,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e8a71e6d3baee0880eac96eab7835bdf",
         "PRO": "5fc73fb38dd265596e07d5b05ba4d2ec"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 66
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "907ddf19e9b559942986798c3a61049f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1642,11 +1869,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "285d09a7e9b985b0b82a1cfce0632509",
         "PRO": "9558de75c3320ac494d6c723ad6b3ebe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0686acda8daa87f807e8c4bf4d7ccee"
       }
     },
     "D2sound_MNE_b2a8f1a86586": {
@@ -1674,11 +1901,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "3a576438ea233acbc3eceb035b027804"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b2a8f1a86586c795d4e7ef4b4053c58e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1709,11 +1936,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5a6a1bad4884a279605e3598d136f1d3",
         "PRO": "1457f6c933b7d6f770f66fd1bc6adda4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f585ab7136accb11659a7703e402a24"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1744,11 +1971,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "a5fbc572c960f03280e29642cc235ae3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b1691d6b7b8ba065c3fc1a089e8db64e"
       }
     },
     "D2sound_MNE_8ac92c76a51a": {
@@ -1776,14 +2003,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "044e95a6511b64bf155bd4de5c12eeac",
         "PRO": "c9ab68bbfa2956914487e1c80f5fd42d"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8ac92c76a51a8b065a1fac94d719ae1f"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B28D3": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B28D3"
+      },
+      "rvas": {
+        "LoD/PD2": "0x28D3"
+      },
+      "sizes": {
         "LoD/PD2": 9
+      },
+      "name": "ReleaseHeapAllocationLock",
+      "signature": "void ReleaseHeapAllocationLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the heap allocation synchronization lock after block allocation attempt.\n\nALGORITHM:\n1. Push lock ID (4) onto stack as parameter for ReleaseSynchronizationLock\n2. Call ReleaseSynchronizationLock to release the heap management lock\n3. Pop return address from stack into ECX to restore stack alignment\n4. Return to caller\n\nPARAMETERS:\nNone - this is a leaf function with no parameters\n\nRETURNS:\nvoid - function has no return value, performs cleanup operation\n\nSPECIAL CASES:\n- Lock ID 4 is hardcoded for heap allocation lock management\n- Uses __stdcall convention requiring callee to cleanup stack\n- The POP ECX at 6f9b28da is used for stack correction before RET\n- Function is called by __heap_alloc after attempting small block allocation\n- Part of Visual Studio 2003 Release CRT heap management implementation\n\nUSAGE CONTEXT:\nCalled from __heap_alloc when heap lock 4 must be released after attempting\nto allocate from the small block heap (sbh_alloc_block). The lock is released\nwhether the allocation succeeded or failed to prevent deadlock.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "a1eacdac7b1066b4896f250294a6267d"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2sound_MNE_be05c38d951a": {
@@ -1811,11 +2070,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "55d660ebbef99c0baa319e016760b8fc",
         "PRO": "9e156ac1d112b1b5e33d82a16514e462"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "be05c38d951a724b98e30bc46956a8c1"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1823,10 +2082,10 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_MNE_301bd5440f60": {
       "addresses": {
-        "LoD/PD2": "0x6F9BB14E"
+        "LoD/PD2": "0x6F9B2908"
       },
       "rvas": {
-        "LoD/PD2": "0xB14E"
+        "LoD/PD2": "0x2908"
       },
       "sizes": {
         "LoD/PD2": 18
@@ -1846,11 +2105,14 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "70005a6486813b88cb95f671f978028c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "301bd5440f60703ca7a24a8fb30f1e56"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "D2sound_MNE_059e9bb2efc1": {
@@ -1878,11 +2140,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "d1fc49850f72ede5bf435c5b19233a24"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "059e9bb2efc1de93bfe21089d0ad96d3"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1918,11 +2180,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "d7e92aa36e4ea61ef8903512dfbaf1bc",
         "PRO": "96ff2a475070a6dab80c4327c6b30083"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd4ab8e23ed6997cd2e2434b8d375458"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1953,11 +2215,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "014d2069a1aece9d955ffb144dc9da61",
         "PRO": "ccb8254b66100df34362937db93881b0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed17ad9d511f6e330c2b6a62378d83cf"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1988,14 +2250,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f6198246dd10742dd31aa5cb380720a1",
         "PRO": "6b569ddd46dffe6a3187ce3ff084fa6a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 47
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "630b0e4f3169af3d32abd2ac2d1bf3c9"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2sound_ADDR_6F9B2B72": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B2B72"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2B72"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseMutexLock",
+      "signature": "void ReleaseMutexLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases synchronization lock for heap memory allocation operations.\n\nAlgorithm:\n1. Push lock ID (4) onto stack as parameter\n2. Call ReleaseSynchronizationLock() to release the mutex\n3. Pop return address into ECX (thiscall cleanup)\n4. Return to caller\n\nReturns:\n  void (no return value)\n\nSpecial Cases:\n  Lock ID 4 is used to synchronize access to the small block heap (SBH)\n  allocator during memory allocation and reallocation operations.\n  This function is called by ReallocateMemoryWithHeapBackoff after\n  completing SBH block searches and allocation attempts.\n\nSynchronization:\n  This function releases a Windows kernel mutex (HANDLE or ID 4) that\n  was previously acquired. Used in conjunction with heap memory operations\n  to ensure thread-safe access to allocation data structures.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "eaa75ebafe78d0556378c475ff882fe6"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 2
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2sound_MNE_7fa238a0d1fe": {
@@ -2023,14 +2317,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "8afe1dbf942c6c117dd7d41a44c33921",
         "PRO": "4d2f9b7faf94cbb786769c6085aaa9eb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7fa238a0d1fe5549fc522252a2120d78"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B2C29": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B2C29"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2C29"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseLockAtIndex4",
+      "signature": "void ReleaseLockAtIndex4(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases synchronization lock at fixed index 4.\n\nAlgorithm:\n1. Prepare parameter value 4 (lock index) on stack\n2. Call ReleaseSynchronizationLock with lock index 4\n3. Discard return value and return to caller\n\nReturns:\nNone (void return)\n\nSpecial Cases:\nThis is a convenience wrapper function that always releases the synchronization lock at index 4. The lock index is hardcoded as a constant, indicating this function has a specific synchronization responsibility in the codebase.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "e5038ffef0b4b86755c076c93524079f"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2sound_MNE_81bc6e282733": {
@@ -2058,11 +2384,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f9330eca16acc1a586f19080607b798c",
         "PRO": "34fd04205b8a444137721574d896b028"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 59
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "81bc6e2827332721bcd73a06db9fcb5a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2093,11 +2419,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "2a44c087b9d456adf3f7fe671334cd08",
         "PRO": "51affe9666153b68cd343cdc4ae41610"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1c8e05375765f5055ce29f9161a94626"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2128,11 +2454,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "392d205942cc2d85569365d80a19246a",
         "PRO": "4e7a131d13ef30e7810595bc6bc49f47"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "81fc8ecddc12cc08d3d848c0224bdeb0"
       }
     },
     "D2sound_MNE_202d2c66c8a5": {
@@ -2160,11 +2486,43 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "f14e33562e187291d4d9c6168fab11ad"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "202d2c66c8a5b404ad3bf64c94b499c1"
+      }
+    },
+    "D2sound_ADDR_6F9B301E": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B301E"
+      },
+      "rvas": {
+        "LoD/PD2": "0x301E"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseTlocInfoLock",
+      "signature": "void ReleaseTlocInfoLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the thread-local information (tlocinfo) synchronization lock.\n\nThis function is called at the end of critical sections that need thread-local\ninformation updates. It releases the lock with index 0xc (12) from the global\ncritical section array to allow other threads to access thread-local data.\n\nAlgorithm:\n1. Push the constant lock index 0xc (12) onto the stack\n2. Call ReleaseSynchronizationLock(0xc) to release the tlocinfo lock\n3. Pop the return value from the stack (EBX register cleanup)\n4. Return to caller\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Lock index 0xc is hardcoded for tlocinfo synchronization\n- Used in conjunction with __lock(0xc) calls in multi-threaded contexts\n- Part of the Visual Studio runtime thread-local storage mechanism\n- Typically called from ___updatetlocinfo after updating thread-local info",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "6be173b894c736cd0e39cddb1849d888"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2sound_MNE_ef80c025e383": {
@@ -2192,11 +2550,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "2a488c3194a25d9369db633e01c010f2",
         "PRO": "510c8731d2ed770a518dbde211133926"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ef80c025e3831b06764dc8da4f7409c0"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2227,11 +2585,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "e3454126f517547c159122c69595b92c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3586df3e31dd0bc0a688e61a43024ab7"
       }
     },
     "D2sound_MNE_9dba01f3a3f5": {
@@ -2259,11 +2617,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "ad4a19780b8be02c8fca99bc1df0158e",
         "PRO": "15f049e1ded264838bce3ab8d630b45d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9dba01f3a3f519a348d690b818dfa854"
       }
     },
     "D2sound_MNE_3b865c2f933c": {
@@ -2291,11 +2649,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e2269d40f31f586675d1d99f276d60c1",
         "PRO": "3bea418b16f69335f5d1b23c5a96dd39"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 36
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3b865c2f933cac7b684f56d2d74a981a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2326,14 +2684,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "d245bd9dbf65e94abcf0220b460866eb",
         "PRO": "5b9733bf23f697f3c1bba0fb0dd294d7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 27
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3d95938874732b844e73905e6c952bdf"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B34F5": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B34F5"
+      },
+      "rvas": {
+        "LoD/PD2": "0x34F5"
+      },
+      "sizes": {
+        "LoD/PD2": 9
+      },
+      "name": "ReleaseMBCPLock",
+      "signature": "void ReleaseMBCPLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the multibyte codepage synchronization lock (lock ID 0xd).\n\nAlgorithm:\n1. Push lock identifier (0xd) onto stack as parameter\n2. Call ReleaseSynchronizationLock to release the lock\n3. Clean up stack with POP ECX (stdcall cleanup)\n4. Return to caller\n\nReturns:\nvoid - No return value; performs synchronous lock release\n\nSpecial Cases:\nLock ID 0xd (13) - Specific synchronization lock tied to MBCP initialization\nCalling context: Invoked during __setmbcp initialization to ensure thread-safe codepage setup",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": null,
+        "PRO": "85ee04971d7bd852fb5e42e601e86750"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "D2sound_MNE_a4ba30fe4414": {
@@ -2361,11 +2751,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1abbbed88598ab76171d956e8b753f75",
         "PRO": "554e40cd06cfc61fcf4dd0b0f9a80203"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a4ba30fe4414581a89a628d047ff2406"
       }
     },
     "D2sound_MNE_288a4a209e47": {
@@ -2393,11 +2783,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e8304c2afda95740a391a275b6b161fd",
         "PRO": "f230b0cbeba844ede03ce48f393a637d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "288a4a209e4706fee9d14eabda44517a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2428,11 +2818,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "dc0623423d93fb21da8f1c1461d32590",
         "PRO": "3067e520a83fed024b1b141562b47539"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "565997ae4f137ad77dea012c57abbb1d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2463,11 +2853,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "481581f05882ccfc9daa8b7d80599503",
         "PRO": "af5ffc5fef388ef1fe1b032e30adfc61"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 50
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8b97ebec1e2ba4f1376a18655897a974"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2498,11 +2888,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "cb06ff47489f56c99a3330662b09491b",
         "PRO": "1a09800574f523b35e9c2e44eaa0adc0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8f7df14e6456cd93f8028b09582e6071"
       }
     },
     "D2sound_MNE_c41f2d1f421c": {
@@ -2530,11 +2920,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "9da21044a93ea42988ff0cc8748c8b85",
         "PRO": "24b3b60b3217878320538ab84b5a34c5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c41f2d1f421c471451958bea4a10fa66"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2565,11 +2955,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "44831bf0135800d99aae2e5c23264fe6",
         "PRO": "9d4530e9555e83f57626964e7f569fd3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 54
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "71e3adec86883da683f0e423eb14e485"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2600,11 +2990,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e7a6cc0f7e2b744a49f409c722178a75",
         "PRO": "525f3a108e1e63f879c0f76921501a7c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 63
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fdd552c17b8cb0117d531882b003b7d1"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2635,11 +3025,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "c514545fcce289b8241e149ad12d442a",
         "PRO": "acdc2d85c8b4b980a65bd4282fdf59fe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "45d24cae1027649da4393ef4c4f0d99b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2670,11 +3060,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f4bdde520e5b2b37a12d35e86743d21a",
         "PRO": "8f4a15c4b513a8fca512bba10b0d7d63"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cb39780517b1dd8e5312f6fce0a00812"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2705,11 +3095,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "c08d053e6ad00eb22c78950f79f8409b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "70593f43ea0b0d7692df2cd60ddf29e8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2740,11 +3130,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "70cbe8ffa88cf8c3027c9b733713e450",
         "PRO": "9507df991f535c513ad9f49c8a2bd9cf"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 30
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f1c393de2fac70496494aea734de5675"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2775,11 +3165,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "6f990822ff7ab6fc4a0354777e2d7dbb",
         "PRO": "d22f820629540bc8910916bef725460e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2b72785c7d09e5484d16dae5407e64ce"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2787,10 +3177,10 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_MNE_378e464c3884": {
       "addresses": {
-        "LoD/PD2": "0x6F9B5280"
+        "LoD/PD2": "0x6F9B4250"
       },
       "rvas": {
-        "LoD/PD2": "0x5280"
+        "LoD/PD2": "0x4250"
       },
       "sizes": {
         "LoD/PD2": 672
@@ -2810,11 +3200,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "79aa166d4e034da66a36436bb5eed9bd",
         "PRO": "7653a0379a0a6445458757cd7dbea6be"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 63
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "378e464c38840f3332fec8fa0fd86d30"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2845,11 +3235,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "48c4d3f6309b34670773430b1e53bf7f",
         "PRO": "aad7451aeda17fd5d003e1e5ad014f5c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "17ea33ac44dc56c9bc7a10bf336c7377"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2880,11 +3270,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "782ce5006ee7d6c9c45a4019c9674507",
         "PRO": "7512d896e852491c699dd1f38170f73e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 35
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c09a404c09b60148d7501f511aba84d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2915,11 +3305,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5ce001a4856ee460707e48535a6b9def",
         "PRO": "33a375b844e4f6035ed19393fa123f17"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9fd359b66679d8b6a2f1c57a264fe596"
       }
     },
     "D2sound_MNE_4efdd923a388": {
@@ -2947,11 +3337,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "74c44fff4d24f318587f22fc1085febb",
         "PRO": "d91907b6c5454ff9987e9d6f8b6455da"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4efdd923a388be710585d381cbbbfb83"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2982,11 +3372,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "16240859bdc7d7fab8ddae4522c26ec9",
         "PRO": "d51fa1ceb75b6d7c49689142454c789f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6b4ad6d2941b712fcff606229e9dd829"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3017,11 +3407,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "cbfd3d0c7425038f32cd25a3cfec4b02",
         "PRO": "26fc788b1ae3beb7f82fe27118071bf9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f70a35b7fba7d58d54c96ad387278a4c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3052,11 +3442,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "b6d31246179d73273008c43260a60774",
         "PRO": "0cd639647579e10fbedf1592f63f2f47"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "470047ed1f9244aa874a163facc5cee5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3087,11 +3477,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "cb9a1745964aa8636af8400620dcb79c",
         "PRO": "d667f0767f80378deb40a8a7c758135e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f5a2dadfb6e3cd7b350f3b00225ebe0"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3122,11 +3512,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "244d42c35cff0de8c78ffff48548cf5a",
         "PRO": "6827e29d467359e034ce8c9eee99ffe3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cf6e169535cd0b739256cb2ecfc119ba"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3157,11 +3547,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "dad2a753ae7c907198d5452c2cf5fedf",
         "PRO": "d63932be81b30027179e779219c52881"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 26
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7cec3aaa3bf000edc30666bb4980e176"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3192,11 +3582,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "57a1818e074489c73b5b752558048ce6",
         "PRO": "003893f021d848cb0600a963254c49bc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe7518f9cbcae43d3194d5d079593073"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -3227,11 +3617,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "528877bfebb6cb7dc053ab3dc2930fa1",
         "PRO": "5940e08b79208ce6bdcd2695dac293d6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1ca444181aa479bff1f1eb748b3a2663"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3262,11 +3652,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "fd48d6310d325d495db3e5b0dc4529ca",
         "PRO": "de907609c9ddaaea9fc64ebc489a583b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "262b55d4b1f21fd166621d0ca2135ed8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3297,14 +3687,49 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "2f1ef6c4c91c4ce0f83856db7c5571e4",
         "PRO": "5c1e22001557cee25a36bb9005334c9d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 74
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9202742c31e7fad9c07478efa934202a"
+      },
+      "param_counts": {
+        "LoD/PD2": 8
+      }
+    },
+    "D2sound_ADDR_6F9B5280": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5280"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5280"
+      },
+      "sizes": {
+        "LoD/PD2": 672
+      },
+      "name": "_memmove",
+      "signature": "void * _memmove(void * _Dst, void * _Src, size_t _Size)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _memmove\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "378e464c38840f3332fec8fa0fd86d30",
+        "CFG": "8ecba1ac6a00afb63bf2cb6376fc859d",
+        "PRO": "7653a0379a0a6445458757cd7dbea6be"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "378e464c38840f3332fec8fa0fd86d30"
+      },
       "param_counts": {
-        "LoD/PD2": 8
+        "LoD/PD2": 3
       }
     },
     "D2sound_MNE_4af6f4d1378e": {
@@ -3332,11 +3757,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "290674f0d3e957f3a47123ff526d6d59",
         "PRO": "19d0d56bf5e60c5b4636becc08ffd2e9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4af6f4d1378e3b27617b296b4a2b16cc"
       }
     },
     "D2sound_STR_6829c7e2ecf5": {
@@ -3364,11 +3789,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "b59fc8dea41603647db3006d4848a690",
         "PRO": "9847a57e2d9626d7f8209e2429fb7cec"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d2d722438be70fcaec7b53793ce6e797"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3399,11 +3824,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "714fe86794460a92b7c07cd2854276e8",
         "PRO": "8ae050135f8e08ab82bf616fcc905546"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cb7271f23b18085c633325272e533a6a"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3434,11 +3859,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "6a2c6063242729d398ada1dbe6ac7b2b",
         "PRO": "d705c06f0d6a39d4a9512f47e8f074d3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1bacf15d421243740ab5a96b430ce3dc"
       }
     },
     "D2sound_MNE_78a86de15981": {
@@ -3466,11 +3891,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f50e5479bfa840a829213102aed3c4ee",
         "PRO": "25bb0884bbaf4fb64f0ede52c46e5b73"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "78a86de15981e3f1c945cde9fbd4be9b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3501,11 +3926,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e6239802a5b3e3dd1f1be91f0d5c374d",
         "PRO": "d21e27d5496c8d58bc2cf35fc9850266"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "138cb9be9d7caeaaa6cff721ddf1f5fa"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3536,11 +3961,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "ee35662907c919a1a51f142533be2ef6",
         "PRO": "0e3c9e5587581167b1bfb8179043c90b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 39
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a82412e86c7e059d3af6ea9d376e2875"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -3571,11 +3996,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "3833f8519f41d53257998fecb01c68fd",
         "PRO": "bf5024923c95c0aa18c1f39dfc66e7c3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "99486f21581ce5ab9e85ee964f03efa4"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3606,11 +4031,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "2810824f15539fecf62c974504ed4bce",
         "PRO": "1518fa20b1487320532e955b8d319e70"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e1a55473b8c876366de891db323c13fa"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -3641,11 +4066,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "28d68ef41469e49f60578a0ac553bdfd",
         "PRO": "b54ac94869dbfac134a13bbaf1445d14"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5812d18894407ef6889050a4bd31c359"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3676,11 +4101,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "a95ce1e5c935a12a7db59114a37206ec",
         "PRO": "f17796a956061d33e2e5b4b89cdc049a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "93d0dc9fd8314e8d90414fa46b2e66d4"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -3711,11 +4136,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "8bbfe2737ef55f3a9a35ae1b43be54c6",
         "PRO": "3eabd37b619c8c857e7d42508a357bb6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d54b31472f74b078be31f20f65c7b2d3"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -3746,11 +4171,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "9d6ee55adf71a7a6ea890de91748a26f",
         "PRO": "416c862cdb184741475b23605c2c2d89"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ecf4fe5a7e473ceb70f30e35ac316045"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3781,11 +4206,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "835de6f5cc54ca26a9c8507d3599cd93",
         "PRO": "5d1977a5b94d5441fa3dfc6502a8e323"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6b07f716ad39855b07502ac9a8f75c79"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -3816,11 +4241,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "c81df70c1b97172a537e995055b0c6bd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3ecdb5e459e29b4117490dc114e98574"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3828,10 +4253,10 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_MNE_e3e7225badfc": {
       "addresses": {
-        "LoD/PD2": "0x6F9B5FDE"
+        "LoD/PD2": "0x6F9B5F0E"
       },
       "rvas": {
-        "LoD/PD2": "0x5FDE"
+        "LoD/PD2": "0x5F0E"
       },
       "sizes": {
         "LoD/PD2": 6
@@ -3851,11 +4276,544 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "5572d8b5f592768b786a5d674a8790a8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "D2sound_ADDR_6F9B5F14": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F14"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F14"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "VerQueryValueA",
+      "signature": "BOOL VerQueryValueA(LPCVOID pBlock, LPCSTR lpSubBlock, LPVOID * lplpBuffer, PUINT puLen)",
+      "calling_convention": "__stdcall",
+      "comment": "Version Information Query Thunk - forwards calls to actual VerQueryValueA implementation\n\nAlgorithm:\n1. Forward all parameters to actual VerQueryValueA implementation\n2. Return the result from the real implementation\n\nParameters:\n- pBlock (LPCVOID): Pointer to version information block data\n- lpSubBlock (LPCSTR): Subblock name to query (e.g., \"\\VarFileInfo\\Translation\")\n- lplpBuffer (LPVOID *): Receives pointer to requested information\n- puLen (PUINT): Receives length of requested information in bytes\n\nReturns:\n- TRUE (non-zero): Query successful, buffer contains requested data\n- FALSE (0): Query failed, invalid subblock or data not found\n\nSpecial Cases:\n- This is a thunk function that forwards to the actual implementation\n- Function body contains only a jump instruction to real VerQueryValueA\n- Used for API forwarding or DLL export redirection\n\nError Handling:\n- All error handling delegated to actual implementation\n- No local validation or processing performed",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "2376491dded7b42a420b66da644a00af"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "D2sound_ADDR_6F9B5F1A": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F1A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F1A"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "DirectSoundCreate",
+      "signature": "uint DirectSoundCreate(uint param_1, uint param_2, uint param_3)",
+      "calling_convention": "unknown",
+      "comment": "DirectSound creation thunk\n\nAlgorithm:\n1. Jump to actual DirectSoundCreate implementation\n\nParameters:\nIMPLICIT: Standard DirectSoundCreate parameters\n\nReturns:\nHRESULT: DirectSound result code",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "6f4ef97bcee2e96d6eb6791bad9cfdea"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2sound_ADDR_6F9B5F20": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F20"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F20"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "DirectSoundEnumerateA",
+      "signature": "undefined DirectSoundEnumerateA(void)",
+      "calling_convention": "unknown",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "57156ed7e7a6924613164223cdad25f9"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2sound_ADDR_6F9B5F32": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F32"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F32"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "DispatchViaFunctionPointer",
+      "signature": "void DispatchViaFunctionPointer(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Indirect function dispatch trampoline\n\nAlgorithm:\n1. Dereference function pointer at 0x6f9bf174\n2. Perform unconditional jump to target function address\n3. Control flow transfers to the target, no return to caller\n\nReturns:\nNone - control transfers to target function\n\nSpecial Cases:\n- This is a trampoline function used for dynamic dispatch\n- The target function address is stored at 0x6f9bf174 as a 32-bit pointer\n- Called from FUN_6f9b7cd0 which pre-loads EAX with a parameter value\n- The target function will receive the parameter via EAX register\n\nStructure Layout:\nFunction Pointer at 0x6f9bf174:\n  Offset  Size  Field Name           Type      Description\n  ------  ----  -----------------    -------   -------------------\n  0       4     target_function_ptr  void*     Address of function to dispatch to",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "ffb7b5c45e789d3768b3890aefde09b2"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2sound_ADDR_6F9B5F38": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F38"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F38"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "DispatchFinalCleanup",
+      "signature": "void DispatchFinalCleanup(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Indirect jump dispatcher for final cleanup operations.\n\nAlgorithm:\n1. Jump indirectly through function pointer at 0x6f9bf170\n2. This function is called as the final step in Ordinal_10031 cleanup\n3. Allows dynamic dispatch to cleanup handler code\n\nParameters:\nNone\n\nReturns:\nvoid - Does not return to caller (indirect jump to cleanup handler)\n\nSpecial Cases:\nThis is an indirect jump stub that provides dynamic dispatch to cleanup code.\nThe target address at 0x6f9bf170 contains a function pointer that determines\nthe actual cleanup handler to invoke. Used in shutdown sequences to invoke\ncontext-specific cleanup routines.\n\nCalling Context:\nCalled from Ordinal_10031 during final cleanup phase after all resources\nhave been released and critical sections have been exited.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "35933f4dcfad981f47d3063aeb93a828"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2sound_ADDR_6F9B5F3E": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F3E"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F3E"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "ProcessQueue",
+      "signature": "int ProcessQueue(void * this, void * pQueue, undefined4 param2, int flags, int param4, int param5, int param6, undefined4 param7)",
+      "calling_convention": "__thiscall",
+      "comment": "Function pointer thunk that indirectly calls ProcessQueue via ptr_ProcessQueue.\n\nThis function is a thunk that performs an indirect jump to the actual ProcessQueue\nimplementation stored at memory location 0x6f9bf16c. This is a common pattern for\ndynamic function resolution or virtual dispatch.\n\nAlgorithm:\n1. Load the function pointer from 0x6f9bf16c into a register\n2. Jump to the target address\n3. Execution continues in the resolved function (typically returns to caller via RET)\n\nParameters:\n- pQueue: Pointer to queue structure (passed in ECX - implicit this pointer)\n- param2: Queue field at offset +4 from pQueue\n- flags: Conditional flags (0x40000 if param2 != 0, else 0)\n- param4: param1 * 4 (typically array index or offset calculation)\n- param5: Maximum value 0x7fffffff\n- param6: Maximum value 0x7fffffff\n- param7: Queue field at offset +0 from pQueue\n\nReturns:\n- Non-zero on success (queue operation completed)\n- Zero on failure (operation could not complete)\n\nSpecial Cases:\n- This is a function pointer redirect; the actual implementation is at runtime address\n- Called within critical sections to ensure thread-safe queue operations\n- Caller holds LPCRITICAL_SECTION lock at DAT_6f9c6530 during execution",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "f81ac91a25db3b74bb94152c6bc605f5"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 8
+      }
+    },
+    "D2sound_ADDR_6F9B5F44": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F44"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F44"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "ImportThunk_257",
+      "signature": "void ImportThunk_257(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Import Address Table (IAT) thunk for Ordinal_257\n\nThis function serves as a dispatch mechanism for an ordinal-based DLL import. It contains a single indirect jump instruction that transfers execution to the actual imported function whose address is stored in the IAT at offset 0x6f9bf168.\n\nAlgorithm:\n1. Jump indirectly through IAT pointer at 0x6f9bf168\n2. Execute the imported function\n3. Return to caller\n\nPurpose:\nThis thunk acts as a stable call site for external DLL functions imported by ordinal. The actual function address is resolved at runtime and stored in the IAT, allowing the imported function to be updated without recompiling code that calls it.\n\nReturns:\nDepends on the actual imported function - this thunk is transparent to callers.\n\nSpecial Cases:\n- This is an ordinal-based import (function identified by number rather than name)\n- The actual function identity must be determined from the import table\n- Called once from Ordinal_10043 (another dispatch thunk)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "9d23ff508cb07082af353011dd98207b"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2sound_ADDR_6F9B5F4A": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F4A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F4A"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "InvokeIndirectCallback",
+      "signature": "int InvokeIndirectCallback(int callbackHandle, undefined4 * pOutBuffer, undefined1 * pOutFlags)",
+      "calling_convention": "__fastcall",
+      "comment": "Invokes an indirect callback function through a jump table entry.\n\nThis function serves as an indirect function pointer dispatch mechanism, retrieving\na callback function address from a jump table stored at 0x6f9bf164 and invoking it\nwith the provided parameters.\n\nAlgorithm:\n1. Load callback function pointer from jump table at 0x6f9bf164 using callbackHandle\n2. Invoke the retrieved function pointer with parameters callbackHandle, pOutBuffer, pOutFlags\n3. Return the function's result code (non-zero = success, 0 = failure/error)\n\nParameters:\n- callbackHandle: Identifier/index for the callback function to invoke\n- pOutBuffer: Pointer to output buffer for callback results\n- pOutFlags: Pointer to flags/options passed to the callback\n\nReturns:\n- int: Non-zero if callback executed successfully, 0 if callback failed or returned error\n\nSpecial Cases:\n- The jump table at 0x6f9bf164 contains function pointers indexed by callbackHandle\n- Called from critical sections (synchronized via EnterCriticalSection/LeaveCriticalSection)\n- Used for event handling and deferred callback execution",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "88dd5a71118d06396e79015f3374e7c2"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2sound_ADDR_6F9B5F50": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F50"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F50"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "CleanupAndAbort",
+      "signature": "undefined CleanupAndAbort(void)",
+      "calling_convention": "unknown",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "dc642d29a16ae461ab2e33e216206036"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2sound_ADDR_6F9B5F56": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F56"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F56"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "LogErrorOrProgressMessage",
+      "signature": "void LogErrorOrProgressMessage(void)",
+      "calling_convention": "unknown",
+      "comment": "Error/progress message handler - thunk to dynamically resolved function pointer\n\nAlgorithm:\n1. Jump to function pointer stored at 0x6f9bf038\n2. Called from DirectSound and file system initialization routines with error/progress messages\n3. Supports variable argument passing to logged handler function\n\nCalled from:\n- InitializeDirectSound: Error messages for device validation failures\n- InitializeDirectSoundAudio: Error messages for audio buffer setup failures\n- InitializeFogFileSystem: Error messages for file system initialization failures\n- Various initialization callbacks: Progress/status reporting\n\nReturns:\nvoid - No explicit return value, passes through to resolved function handler\n\nSpecial Cases:\n- This is a thunk/wrapper function - actual implementation resolved at runtime\n- Function pointer at 0x6f9bf038 determines actual handler behavior\n- Called with varying arguments (0-2+ parameters depending on context)\n- Used exclusively for error/progress reporting during system initialization",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "239d5b2b8954cef5fa45115371130314"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2sound_ADDR_6F9B5F5C": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F5C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F5C"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetReturnAddress",
+      "signature": "undefined GetReturnAddress(void)",
+      "calling_convention": "unknown",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "77909895f16474585b5ba04e6ed809fa"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2sound_ADDR_6F9B5F62": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F62"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F62"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "AllocateMemoryBlock",
+      "signature": "void * AllocateMemoryBlock(uint blockSize, uint param2)",
+      "calling_convention": "__stdcall",
+      "comment": "Memory allocation wrapper function that allocates blocks of memory.\n\nThis function is a thin wrapper around an external memory allocation routine,\nlikely part of a custom memory management system. It redirects all allocation\nrequests to an external function pointer stored at 0x6f9bf018.\n\nAlgorithm:\n1. Receive allocation parameters: blockSize (size of memory block) and param2\n2. Jump to external allocation function pointer at 0x6f9bf018\n3. Return allocated memory pointer or NULL on failure\n\nParameters:\n- blockSize [uint]: Size in bytes of the memory block to allocate\n- param2 [uint]: Secondary allocation parameter (purpose not yet determined, usually 0)\n\nReturns:\n- void *: Pointer to newly allocated memory block, or NULL if allocation fails\n\nSpecial Cases:\n- Common block sizes observed in callers:\n  0xcf (207 bytes) - Used for fog file system handles in InitializeFogFileSystem()\n  0x21b (539 bytes) - Used for version info structures in file processing\n  0xd4 (212 bytes) - Used for linked list node allocation in Ordinal_10034()\n  0x1d9 (473 bytes) - Used for large structure allocation in Ordinal_10065()\n  0x8a (138 bytes) - Used for game entity structures in Ordinal_10048()\n- All callers check return value for NULL before dereferencing\n- Function is called from 6 different functions with varying allocation sizes\n- This is an ordinal export from the main DLL, suggesting it's a critical utility function",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "1d2f611f3cbddf5a3182530bce568d6c"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2sound_ADDR_6F9B5F68": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F68"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F68"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "ReportError",
+      "signature": "void ReportError(int errorCode, int flags)",
+      "calling_convention": "__cdecl",
+      "comment": "Reports error or triggers resource cleanup based on error code.\n\nThis is an imported thunk function that redirects to an external implementation.\nCalled with error codes to signal failures during version checking, resource\nallocation, and critical section operations.\n\nParameters:\n  errorCode - Numeric error code (0x220, 0x228, 0xf0, 0x26e, 0x1e0 observed)\n              Values may represent resource IDs, error types, or cleanup codes\n  flags     - Flags parameter, typically 0 in all observed calls\n\nReturns:\n  void - Returns normally (no return value used by callers)\n\nSpecial Cases:\n  All observed calls pass 0 for flags parameter; meaning unclear but may\n  indicate synchronous vs asynchronous error handling, or different\n  reporting levels (e.g., log vs crash)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "2780af21aa06c7df711e8bdfe52295a5"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2sound_ADDR_6F9B5F6E": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F6E"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F6E"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "CheckFogInitializationStatus",
+      "signature": "int CheckFogInitializationStatus(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Checks if FOG.DLL initialization is complete.\n\nAlgorithm:\n1. Call external function to check FOG initialization status\n2. Return the initialization status to caller\n\nParameters:\n  (none)\n\nReturns:\n  Returns non-zero (TRUE) if FOG initialization is complete and ready\n  Returns zero (FALSE) if FOG initialization is pending or failed\n\nSpecial Cases:\n  This is a thunk function that delegates to an external FOG.DLL function.\n  The actual implementation resides in the FOG rendering module.\n  \nCross-References:\n  Called by ValidateFogInitialization, ProcessQueueWithLocking, \n  InitializeFogFileSystem, and InitializeFogFileResources to verify\n  that prerequisite FOG subsystems are ready before proceeding.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "b33d551737984ce1362601590f220b14"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2sound_ADDR_6F9B5F74": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F74"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F74"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "FlushFileBuffers",
+      "signature": "BOOL FlushFileBuffers(HANDLE hFile)",
+      "calling_convention": "__stdcall",
+      "comment": "Flush file buffers to disk - Windows API wrapper for FlushFileBuffers.\n\nAlgorithm:\n1. Call ReleaseResourceWrapper with the provided file handle\n2. Return the result directly to caller\n\nParameters:\n- hFile: Handle to the file whose buffers should be flushed to disk\n\nReturns:\n- BOOL: Non-zero (TRUE) if the flush operation succeeded\n- BOOL: Zero (FALSE) if the flush operation failed\n\nSpecial Cases:\n- Acts as a wrapper around ReleaseResourceWrapper function\n- Used throughout the binary for ensuring file data is written to disk\n- Critical for data integrity in cleanup and finalization operations\n\nError Handling:\n- Error conditions are handled by the underlying ReleaseResourceWrapper function\n- Return value directly indicates success or failure",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "e6db568afc8d15c014b12004d1344754"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B5F7A": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5F7A"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5F7A"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetWindowHandleValue",
+      "signature": "int GetWindowHandleValue(void)",
+      "calling_convention": "unknown",
+      "comment": "Setting prototype: int GetWindowHandleValue(void)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "0da3050eb624f22f66900286e560f0d3"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
     "D2sound_MNE_21a12b03112b": {
@@ -3883,14 +4841,323 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "7762a7f9dd9a3308b8630ce9a236979d",
         "PRO": "22a9bfbb5ca9778d7ffc2969df471ded"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "21a12b03112be7c0452f1f2140b0fec9"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2sound_ADDR_6F9B5FAE": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5FAE"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5FAE"
+      },
+      "sizes": {
         "LoD/PD2": 6
+      },
+      "name": "SFileOpenFile",
+      "signature": "int SFileOpenFile(void * pFileHandle, uint nFileIndex, uint nMode, void * pOutHandle)",
+      "calling_convention": "__cdecl",
+      "comment": "Import thunk for STORM.DLL::Ordinal_266 (SFileOpenFile)\n\nOpens or creates a file within a STORM archive (MPQ file).\n\nAlgorithm:\n1. Jump to the external SFileOpenFile function at STORM.DLL\n2. Function is called through indirect jump via pointer at 0x6f9bf180\n3. Returns result of STORM file operation\n\nParameters:\n- pFileHandle: Pointer to the archive/file context (typically from SFileOpenArchive)\n- nFileIndex: File identifier or index within the archive\n- nMode: File access mode (2=read, 3=write/create)\n- pOutHandle: Output pointer to receive file handle on success\n\nReturns:\n- Non-zero (true) on success, zero (false) on failure\n\nSpecial Cases:\n- Used for both reading and writing files within MPQ archives\n- Part of the STORM library's file abstraction layer\n- Callers expect non-zero return on success\n- Called with mode 2 for read operations and mode 3 for write operations\n\nNote: This is an import thunk that simply forwards calls to the external STORM.DLL implementation.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "8b56b77f8211d8ac5b30035e961d2ba4"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "D2sound_ADDR_6F9B5FB4": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5FB4"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5FB4"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "ReadFileData",
+      "signature": "int ReadFileData(int fileHandle, byte * pBuffer, int nSize)",
+      "calling_convention": "__stdcall",
+      "comment": "Reads file data into a buffer via indirect function pointer dispatch.\n\nThis is a thunk/trampoline function that jumps through an indirect pointer.\nIt dispatches to the actual implementation function stored at address 0x6f9bf184.\n\nAlgorithm:\n1. Loads the function pointer from address 0x6f9bf184\n2. Performs an indirect jump to that function\n3. Returns the result from the dispatched function\n\nParameters:\n  fileHandle - Handle or identifier for the file/data source (typically an integer ID)\n  pBuffer - Pointer to buffer where data will be read into\n  nSize - Number of bytes to read (typically 0x104 = 260 bytes)\n\nReturns:\n  Status code from the dispatched read function (0 for success in context of callers)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "5825d4d5d6795d009113613d5ea89a2f"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2sound_ADDR_6F9B5FBA": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5FBA"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5FBA"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "SFileSetLocale",
+      "signature": "int SFileSetLocale(void * hSFile, char * pszLocale, int nReserved)",
+      "calling_convention": "__cdecl",
+      "comment": "Storm library ordinal 503 - Set locale path for file operations\n\nPurpose: Indirect jump stub that delegates to the Storm library's SFileSetLocale \nfunction. This is an import stub that resolves the Storm.dll export at runtime.\n\nParameters:\n- hSFile (void*): File handle or archive context\n- pszLocale (char*): Locale/path string to set for file operations\n- nReserved (int): Reserved parameter (typically 0x7fffffff for max value)\n\nReturns:\n- int: Status code (0 for success, non-zero for failure)\n\nAlgorithm:\n1. Indirect jump through pointer at 0x6f9bf188\n2. Jumps to external STORM.DLL:Ordinal_503 implementation\n3. Returns result code in EAX\n\nUsage Context:\nThis function is called by file search and setup routines to set the current \nlocale/path context before opening Storm archive files. Used in conjunction \nwith SFileOpenFile (Ordinal_501) for path-aware file operations.\n\nCalled by:\n- FUN_6f9b6530 (file opening with fallback)\n- FUN_6f9b6230 (drive search and file location)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "cc2b0f61db7137f7c1101206f6ba0ca9"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2sound_ADDR_6F9B5FC0": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5FC0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5FC0"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "SStrChr",
+      "signature": "char * SStrChr(char * pString, int nChar)",
+      "calling_convention": "__cdecl",
+      "comment": "Find first occurrence of character in string.\n\nThunk function that wraps STORM.DLL Ordinal_571, which searches for a specified character in a null-terminated string.\n\nAlgorithm:\n1. Jump through pointer at 0x6f9bf18c to reach STORM.DLL implementation\n2. STORM.DLL implementation scans string byte-by-byte for target character\n3. Returns pointer to first match or NULL if not found\n\nParameters:\npString - Pointer to null-terminated string to search\nnChar - Character code to search for (e.g., 0x5c for backslash '\\\\')\n\nReturns:\nPointer to first occurrence of nChar in pString, or NULL if character not found\n\nSpecial Cases:\n- Used in path processing to locate path separators (backslash character 0x5c)\n- NULL input string will cause access violation in STORM.DLL implementation",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "544230dc55d82c96528ab154132ffec5"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
       "param_counts": {
         "LoD/PD2": 2
+      }
+    },
+    "D2sound_ADDR_6F9B5FC6": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5FC6"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5FC6"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "SFileSetLocale",
+      "signature": "int SFileSetLocale(void * hStormHandle, char * pszPath, uint dwFlags)",
+      "calling_convention": "__cdecl",
+      "comment": "Forwarding stub to STORM.DLL's SFileSetLocale ordinal (Ordinal 501).\n\nSets the base directory/locale for subsequent Storm File operations on a given handle.\nThis is a thin wrapper that directly jumps to the actual implementation in STORM.DLL.\n\nAlgorithm:\n1. Jump to the actual SFileSetLocale function at STORM.DLL+0x2b080\n2. The real function sets the file search path for the given storm handle\n\nParameters:\n  hStormHandle: Storm archive/file handle context pointer\n  pszPath: Path string to set as the base directory for file operations\n  dwFlags: Flags parameter (typically 0x7fffffff for maximum range)\n\nReturns:\n  int: Status code indicating success or failure of the locale set operation\n\nStructure Layout:\n  The hStormHandle parameter is typically a pointer to storm management context\n  with file handle and state information for archive operations.\n\nNotes:\n  This function is a common forwarding pattern in wrapper libraries where the\n  actual implementation is delegated to STORM.DLL for file archive operations.\n  See STORM.DLL documentation for Ordinal 501 (SFileSetLocale) for details.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "55d5caa310974d280e7d9171f4936bf0"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2sound_ADDR_6F9B5FCC": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5FCC"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5FCC"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "DispatchToStormOrdinal252",
+      "signature": "void DispatchToStormOrdinal252(void)",
+      "calling_convention": "unknown",
+      "comment": "Setting prototype: void DispatchToStormOrdinal252(void)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "ee8c32d46a0b487fb1bc370cf28418e1"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "D2sound_ADDR_6F9B5FD2": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5FD2"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5FD2"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "OpenFileAndValidateSize",
+      "signature": "int OpenFileAndValidateSize(int fileHandle, int * pFileSizeOut, int param3, int param4, int param5)",
+      "calling_convention": "__cdecl",
+      "comment": "Opens and validates file size through external function pointer\nAlgorithm:\n1. Indirect jump to external function via pointer table at 0x6f9bf02c\n2. Called with file handle and output size pointer\n3. Returns status code: 0 for success, non-zero for failure\n4. Used in file I/O operations with subsequent ReadFileData call\nParameters:\n- fileHandle: File handle or resource identifier\n- pFileSizeOut: Pointer to store validated file size\n- param3: Unused parameter (passed as 0)\n- param4: Unused parameter (passed as 0)\n- param5: Unused parameter (passed as 0)\nReturns:\n- 0: File opened and validated successfully\n- Non-zero: Error code indicating validation failure\nSpecial Cases:\n- This is a thunk function that jumps through an external function pointer\n- Used for validating file integrity before reading contents\n- Callers check return value before proceeding with file operations\n- External function pointer located at 0x6f9bf02c",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "a27ecaf9bf0bb6ce750fc8ce76934f31"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 5
+      }
+    },
+    "D2sound_ADDR_6F9B5FD8": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5FD8"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5FD8"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "CheckResourceValidity",
+      "signature": "int CheckResourceValidity(int resourceIndex, int flags)",
+      "calling_convention": "__cdecl",
+      "comment": "Validates resource validity through imported ordinal function.\n\nAlgorithm:\n1. Jump indirectly through pointer table at 0x6f9bf030\n2. Executes external function with resource index and flags\n3. Returns validation status code\n\nParameters:\n- resourceIndex: Index of the resource to validate\n- flags: Validation flags passed to external function\n\nReturns:\n- int: Validation status (-1 indicates failure, other values indicate success)\n\nSpecial Cases:\n- This is an import stub (thunk) for Ordinal_10106\n- Pointer dereference at 0x6f9bf030 determines actual target function\n- Callers check for -1 return value to detect validation failures",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "014d94d075f76b068431ba7de7a68e37"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2sound_ADDR_6F9B5FDE": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B5FDE"
+      },
+      "rvas": {
+        "LoD/PD2": "0x5FDE"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "CheckFogFileInitialization",
+      "signature": "uint CheckFogFileInitialization(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Checks fog file initialization status by retrieving default resource count\n\nAlgorithm:\n1. Call GetDefaultResourceCount() to retrieve the current resource count\n2. Return the count value as initialization status indicator\n\nParameters:\n  (none)\n\nReturns:\n  uint: Resource count value indicating initialization status\n        - Non-zero: Initialization successful, returns resource count\n        - Zero: Initialization failed or no resources available\n\nSpecial Cases:\n  Function serves as a wrapper/adapter for GetDefaultResourceCount()\n  Used by game initialization routines to verify fog file system readiness\n\nError Handling:\n  No explicit error handling - relies on GetDefaultResourceCount() behavior\n  Zero return value indicates potential initialization failure",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": null,
+        "PRO": "41c08105124c966c2fe7b7af0dae538e"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
     "D2sound_API_3f0b9faec72e": {
@@ -3918,11 +5185,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "dc566b7201dd86af8252efe5cb02fb0f",
         "PRO": "6faecdb622239b3b426927343f23de10"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "66acc54c9d7bd033827650bac1a5758e"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -3956,11 +5223,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "872df5e804b40f6897362396a43cb386",
         "PRO": "3de9acad91d4739f7355321db19b3335"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1ad3095eb47f7ae8ba584afb28677e29"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -3997,11 +5264,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5f64f01414d5033654d7f95e708d140a",
         "PRO": "965f87e259198b12dd60417585b757eb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1d2e62a8ba620b3c9f04bd6beb6c72ad"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4040,11 +5307,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "290674f0d3e957f3a47123ff526d6d59",
         "PRO": "e095af03ac867df0241b4ac37a9ea83c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "18daef3daaad0cf2ceb111a04873839a"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4083,11 +5350,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1315a0ca8dc8f6f0f8ce0a9336136505",
         "PRO": "041ddb6f0eb543f0f103cce8f42100cf"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "94eb28a01a03305bed306b129c7e8da2"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4126,11 +5393,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "a9c729cc86b83c7c1ad73572a77516e6",
         "PRO": "c5487eb9e5d243be5d8fadb71bb9294a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d09b06e32f895b2b1771e31ace9b4d08"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4168,11 +5435,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "528877bfebb6cb7dc053ab3dc2930fa1",
         "PRO": "e31eb31d8ee12f4cdf5b8c792e58bd5a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "15579ba3ab96e642c656a5401ec21d55"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4209,11 +5476,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "aed112a5007cb14f9fbb09b780d0f6b9",
         "PRO": "c8d947fc30d6667c5f264351b9f30ffe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d2da31e70923dbc86bdb13cb9ac9f5fa"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4254,11 +5521,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "9361c11c4498d9c5bce7170d46d5cdbd",
         "PRO": "3192fe8ac55b21f59eacb9e2b1a15306"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9e4f7baa1db97fd2d0171cf53e707202"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4304,11 +5571,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "d5601f252609504190ed90b23cb32f9e",
         "PRO": "e0ea7c30a2d5cc2a471c01910c278d30"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9c5e5dbe6b955d698d1436c429f52b86"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4350,11 +5617,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1c6cf79beb43c79d57fca67e0f96594f",
         "PRO": "42be04ec19999a781fdea12a98114eae"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "384d68ab1a3d65982d517362c769c1e5"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4370,10 +5637,10 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_MNE_5c73446e6da2": {
       "addresses": {
-        "LoD/PD2": "0x6F9B6670"
+        "LoD/PD2": "0x6F9B6660"
       },
       "rvas": {
-        "LoD/PD2": "0x6670"
+        "LoD/PD2": "0x6660"
       },
       "sizes": {
         "LoD/PD2": 1
@@ -4393,11 +5660,43 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "e1ef49ce6ed8909600367da1748e3fa9"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5c73446e6da2bc552d6d981beccb1347"
+      }
+    },
+    "D2sound_ADDR_6F9B6670": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B6670"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6670"
+      },
+      "sizes": {
         "LoD/PD2": 1
+      },
+      "name": "UnknownStub_10052",
+      "signature": "void UnknownStub_10052(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Ordinal import stub (10052)\n\nAlgorithm:\n1. Immediately returns to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nThis is a minimal stub function imported via ordinal from an external DLL. It contains only a RET instruction, suggesting it may be:\n- A placeholder or deprecated function\n- A thunk for forwarding calls elsewhere\n- A minimal stub used for function hooking or patching\n- An export stub that was compiled into the binary\n\nThe ordinal number (10052) indicates this was imported by ordinal number rather than by name from a DLL. The actual DLL and original function name are not directly visible in this binary.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c73446e6da2bc552d6d981beccb1347",
+        "CFG": null,
+        "PRO": "e1ef49ce6ed8909600367da1748e3fa9"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5c73446e6da2bc552d6d981beccb1347"
       }
     },
     "D2sound_API_1813b25d8837": {
@@ -4425,11 +5724,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "2a243539dd196277feb3e0d2576d58d9",
         "PRO": "4d0ec52cdce0bb241a255060866ea718"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8e3be0023ba3da7e5333c5d331394b2f"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4468,11 +5767,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "cbe58acf005e2d120794ec48f507ede6",
         "PRO": "cb45d929a378abf2b4457a87d2050ce1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c911f0e87cbf35905caade650857cef7"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4489,13 +5788,13 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_API_c01fa6e1a170": {
       "addresses": {
-        "LoD/PD2": "0x6F9B80A0"
+        "LoD/PD2": "0x6F9B67C0"
       },
       "rvas": {
-        "LoD/PD2": "0x80A0"
+        "LoD/PD2": "0x67C0"
       },
       "sizes": {
-        "LoD/PD2": 85
+        "LoD/PD2": 46
       },
       "name": "IsEntityValid",
       "signature": "bool IsEntityValid(void * pEntity)",
@@ -4512,17 +5811,102 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "6c3f0566df164baf42f457563e0b9bcf",
         "PRO": "3f9b1ad0bc80234181d476f1d5185326"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7727b77070060ce66f32b7e948b4d4f"
       },
       "api_calls": {
         "LoD/PD2": [
           "GetReturnAddress",
           "CleanupAndAbort"
         ]
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_MNE_11df4b5a5564": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B67F0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x67F0"
+      },
+      "sizes": {
+        "LoD/PD2": 39
+      },
+      "name": "SetStructFieldWithValidation",
+      "signature": "void SetStructFieldWithValidation(int * pBasePtr, undefined4 fieldValue)",
+      "calling_convention": "__fastcall",
+      "comment": "Stores a value at offset +0x44 (field index 0x11) within a structure with null pointer validation.\n\nAlgorithm:\n1. Test if pBasePtr (in ECX) is null\n2. If null, retrieve return address via GetReturnAddress(0x33a)\n3. Call CleanupAndAbort with error context and return address\n4. Exit with code -1 (non-returning)\n5. If not null, store fieldValue (in EDX) at pBasePtr[0x11] (+0x44 bytes)\n6. Return void\n\nParameters:\n  pBasePtr (int *) - Pointer to base structure, validated for null. If null triggers error handling.\n  fieldValue (int) - Value to store at offset +0x44 within the structure.\n\nReturns:\n  void - No return value. Function either stores the field or terminates process.\n\nSpecial Cases:\n  - Null pointer triggers error sequence: GetReturnAddress(0x33a) \u2192 CleanupAndAbort() \u2192 exit(-1)\n  - Error code 0x33a is passed to GetReturnAddress for logging/context\n  - Function uses __fastcall: ECX=pBasePtr, EDX=fieldValue\n  - CleanupAndAbort is non-returning, so exit(-1) acts as failsafe",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "11df4b5a55647da5d3738f182f2a73f5",
+        "CFG": "3faa1a24a3d4c996032f03064ca761f6",
+        "PRO": "a551eb55670ce10d9b4afc52aadd034e"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "11df4b5a55647da5d3738f182f2a73f5"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2sound_ADDR_6F9B6820": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B6820"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6820"
+      },
+      "sizes": {
+        "LoD/PD2": 39
+      },
+      "name": "ValidatePointerAndSetField",
+      "signature": "void ValidatePointerAndSetField(void * pObject, uint dwValue)",
+      "calling_convention": "__fastcall",
+      "comment": "Validates object pointer and stores a DWORD value at offset +0x40.\n\nAlgorithm:\n1. Test if pObject pointer is null (ECX register in __fastcall)\n2. If null, retrieve return address using GetReturnAddress(0x32f)\n3. Call CleanupAndAbort with error context data at 0x6f9c0684\n4. Call _exit(-1) to terminate process with error code\n5. If pointer valid, store dwValue (in EDX) at offset +0x40 from pObject base\n6. Return to caller\n\nParameters:\n  pObject: Pointer to object to validate and modify (first param in ECX, __fastcall)\n  dwValue: DWORD value to store at offset +0x40 (second param in EDX, __fastcall)\n\nReturns:\n  void - No return value. Terminates process on null pointer; returns normally if successful.\n\nSpecial Cases:\n  - Magic number 0x32f passed to GetReturnAddress indicates ordinal import 10038\n  - Error context data at 0x6f9c0684 shared across multiple validation functions\n  - Process terminates with exit code -1 on validation failure\n  - Offset +0x40 (64 bytes from base) is consistent target across related functions",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "11df4b5a55647da5d3738f182f2a73f5",
+        "CFG": "90c4f17418cec0d76ed106d2d34ca67f",
+        "PRO": "ee410d429ff82a8399e15364efd98905"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "11df4b5a55647da5d3738f182f2a73f5"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 2
       }
     },
     "D2sound_API_aba62c510a15": {
@@ -4550,11 +5934,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "83509a41426407ecef6d892433381bd2",
         "PRO": "4140994796246d4436dc92893f7d7477"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b7459f44d47822b734f030ca0e4cc00f"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4567,15 +5951,138 @@ var FUNCTIONS_D2sound_dll = {
         "LoD/PD2": 1
       }
     },
-    "D2sound_API_c345355fc1c5": {
+    "D2sound_MNE_7af59b7920d8": {
       "addresses": {
-        "LoD/PD2": "0x6F9B8020"
+        "LoD/PD2": "0x6F9B68D0"
       },
       "rvas": {
-        "LoD/PD2": "0x8020"
+        "LoD/PD2": "0x68D0"
       },
       "sizes": {
-        "LoD/PD2": 127
+        "LoD/PD2": 75
+      },
+      "name": "InvokeObjectCallback",
+      "signature": "void InvokeObjectCallback(void * this, void * pObject, uint dwCallbackParam1, uint dwCallbackParam2, uint dwCallbackParam3)",
+      "calling_convention": "__thiscall",
+      "comment": "Setting prototype: void InvokeObjectCallback(void * this, void * pObject, uint dwCallbackParam1, uint dwCallbackParam2, uint dwCallbackParam3)",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "7af59b7920d8493637fab9982fb6ea5f",
+        "CFG": "d4a4f7f07eed1fb0c24bfad08eb98295",
+        "PRO": "9e28843cc6bd376a54e36cd1904aa393"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7af59b7920d8493637fab9982fb6ea5f"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 5
+      }
+    },
+    "D2sound_ADDR_6F9B6920": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B6920"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6920"
+      },
+      "sizes": {
+        "LoD/PD2": 39
+      },
+      "name": "GetObjectField_0x38_OrAbort",
+      "signature": "uint GetObjectField_0x38_OrAbort(void * pObject)",
+      "calling_convention": "__fastcall",
+      "comment": "Safely retrieves a dword value from offset 0x38 within an object structure, validating the pointer first.\n\nAlgorithm:\n1. TEST ECX,ECX to check if pObject pointer is NULL\n2. If NULL (JNZ fails): retrieve return address via GetReturnAddress(0x2e4)\n3. Call CleanupAndAbort with return address and error data at 0x6f9c0684\n4. Call _exit(-1) to terminate process\n5. If pObject valid: MOV EAX, [ECX+0x38] to load field at offset +0x38\n6. RET to return the loaded value in EAX\n\nParameters:\n- pObject (ECX): Pointer to object structure with minimum size 0x3C bytes\n\nReturns:\n- EAX: Value of the dword field at offset +0x38 within the object\n- If pObject is NULL: Function terminates process and does not return\n\nSpecial Cases:\n- NULL pointer handling: Triggers error sequence and immediate process termination\n- Offset 0x38: Hardcoded offset suggests fixed structure layout\n- Return Address Magic: Uses offset 0x2e4 passed to GetReturnAddress for stack unwinding\n- Error Data: References static error data at 0x6f9c0684 (44 xrefs across binary)\n\nStructure Layout:\nThe function accesses a structure with:\nOffset  Size  Field Name             Type        Description\n------  ----  -----                  ----        -----------\n0x38    4     field_at_0x38          uint        Value returned on valid pointer",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "11df4b5a55647da5d3738f182f2a73f5",
+        "CFG": "90c4f17418cec0d76ed106d2d34ca67f",
+        "PRO": "285107c6c751daa87adb21b45705813b"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "11df4b5a55647da5d3738f182f2a73f5"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_MNE_234371c39429": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B6950"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6950"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "name": "ValidatePointerAndGetField",
+      "signature": "uint ValidatePointerAndGetField(void * pData)",
+      "calling_convention": "__fastcall",
+      "comment": "Validates pointer and retrieves field at offset 0x1c.\n\nAlgorithm:\n1. Validate that pData pointer is not NULL\n2. Validate that first dword at pData is not zero\n3. If both validations pass, load and return dword from offset 0x1c\n4. If validation fails, call GetReturnAddress() with parameter 0x2a5\n5. Call CleanupAndAbort() with address 0x6f9c0684 and return address\n6. Call _exit(-1) to terminate program\n\nParameters:\npData (ECX) - Pointer to data structure containing validation field at offset 0 and return value at offset 0x1c\n\nReturns:\nunsigned int - Value from offset 0x1c if validation succeeds\nIf validation fails: Function does not return (calls _exit)\n\nSpecial Cases:\n- pData NULL triggers validation failure\n- First dword at pData being zero triggers validation failure\n- Failure cases result in immediate program termination via CleanupAndAbort\n\nStructure Layout:\nOffset  Size  Field Name        Type      Description\n------  ----  ---------------   --------  ----------------------------------\n  0x00   0x04  validation_flag   uint      Must be non-zero to pass validation\n  0x1c   0x04  return_value      uint      Value returned on successful validation\n\nNote: returnAddress variable requires type change from undefined4 to void* for proper documentation. DAT_6f9c0684 global should be renamed with Hungarian notation.",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "234371c394297c5d1138265585799ca0",
+        "CFG": "4955fb5f7256e9d15042d1a65fae17a0",
+        "PRO": "1eec3ffc34392e5a8f52f1e427bbc9a9"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "234371c394297c5d1138265585799ca0"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_API_c345355fc1c5": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B6980"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6980"
+      },
+      "sizes": {
+        "LoD/PD2": 96
       },
       "name": "FinalizeContextCleanup",
       "signature": "void FinalizeContextCleanup(void * pContext)",
@@ -4592,11 +6099,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f1e7fa26e6f7c88689edf1f3f18e16b5",
         "PRO": "ceed63e870524e8d9f627c040b09bcc3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "017639e22377964540333b7e81961297"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4604,6 +6111,9 @@ var FUNCTIONS_D2sound_dll = {
           "GetReturnAddress",
           "CleanupAndAbort"
         ]
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "D2sound_MNE_580d47f99333": {
@@ -4631,16 +6141,57 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "3dca9ad0ec7cc11c0f6dee8f8725ad5f",
         "PRO": "73f8020b6b8cf783adbdd1207069ab2c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "580d47f99333e06cc4225fc7dd8b4b20"
       },
       "api_calls": {
         "LoD/PD2": [
           "call_finalize_cleanup"
         ]
+      }
+    },
+    "D2sound_MNE_32670fe22160": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B6A40"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6A40"
+      },
+      "sizes": {
+        "LoD/PD2": 173
+      },
+      "name": "ClearAudioBuffer",
+      "signature": "int ClearAudioBuffer(void * pAudioBuffer)",
+      "calling_convention": "__stdcall",
+      "comment": "Clears audio buffer memory and releases associated resources.\n\nAlgorithm:\n1. Validate pAudioBuffer is not NULL; abort with cleanup if NULL\n2. Enter critical section to serialize access\n3. Call virtual method at [pAudioBuffer + 0x2c] to get buffer size\n4. Return 0 immediately if size is negative (error condition)\n5. Zero buffer memory using STOSD (dword) and STOSB (byte) for alignment\n6. Call virtual method at [pAudioBuffer + 0x4c] to release/finalize resources\n7. Leave critical section\n8. Return 1 for success\n\nParameters:\n  pAudioBuffer (via ESI): Pointer to audio buffer object with vtable\n\nReturns:\n  1 if buffer cleared successfully\n  0 if buffer size is invalid (negative)\n\nSpecial Cases:\n  - Function aborts if pAudioBuffer is NULL\n  - Negative buffer size triggers error return\n  - REP STOSD/STOSB for efficient bulk zeroing\n  - Critical section protects concurrent access",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "32670fe22160decbe28f4d2e1fbb3de6",
+        "CFG": "d5585b0749df433944c3d439899d8172",
+        "PRO": "47552fdd6940d9170be0f3f1a20202da"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "32670fe22160decbe28f4d2e1fbb3de6"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "D2sound_MNE_7c44e2f3f2d9": {
@@ -4668,11 +6219,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "971923f45045cfb1fa7a76868deb7c00",
         "PRO": "b3457987855c64d9a75ca1132c64404a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7c44e2f3f2d9d26859d882a4bb49600b"
       }
     },
     "D2sound_MNE_af413c75688c": {
@@ -4700,22 +6251,63 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "2fc5c7ea4be0df8efb1f8738ac1c656f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "af413c75688c051388954706b235eefd"
+      }
+    },
+    "D2sound_MNE_17507b7151e0": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B6B80"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6B80"
+      },
+      "sizes": {
+        "LoD/PD2": 116
+      },
+      "name": "InitializeGameObjectTiming",
+      "signature": "void InitializeGameObjectTiming(void * pGameObject, uint dwTimeoutMs, int nUnknown)",
+      "calling_convention": "__fastcall",
+      "comment": "Initializes timing-related fields in a game object structure for synchronization.\n\nAlgorithm:\n1. Validate pGameObject pointer (check for null)\n2. If null, retrieve return address and abort with error code 0x39e\n3. Check if global synchronization flag (DAT_6f9c658c) is enabled\n4. If disabled, exit early without initializing\n5. Enter critical section to protect shared data\n6. Write magic value 1 to offset +0x4c (sync flag)\n7. Copy value from offset +0x38 to offset +0x50 (initialize from template)\n8. Store timeout parameter to offset +0x54\n9. Get current tick count via GetTickCount()\n10. Write tick count to offset +0x58 (sync start time)\n11. Calculate expiration time: tick count + timeout, store at offset +0x5c\n12. Call LeaveCriticalSection to release lock and exit\n\nParameters:\n  pGameObject: Pointer to game object structure requiring timing initialization\n  dwTimeoutMs: Timeout duration in milliseconds for sync operations\n  nUnknown: Unknown parameter purpose (possibly reserved/unused)\n\nReturns:\n  void - function does not return a value to caller\n\nSpecial Cases:\n  - Null pointer check triggers fatal error with code 0x39e\n  - Synchronization disabled (DAT_6f9c658c == 0) causes early exit without initialization\n  - Critical section ensures thread-safe access to shared data\n  - Uses system GetTickCount() for timing, may wrap after ~49.7 days\n\nOffset Layout (Game Object Structure):\n  Offset  Size  Field Name            Type      Description\n  0x38    4     sync_template_value   uint      Template value copied to offset 0x50\n  0x4c    4     sync_enabled_flag     uint      Set to 1 when sync initialized\n  0x50    4     sync_copy_value       uint      Initialized from template at 0x38\n  0x54    4     timeout_duration      uint      Stores dwTimeoutMs parameter\n  0x58    4     sync_start_time       uint      GetTickCount() at initialization\n  0x5c    4     sync_expiry_time      uint      Start time + timeout duration",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "17507b7151e023f2997bc2b953455a74",
+        "CFG": "d9946050ad34ddb0b8760198a469fd62",
+        "PRO": "29d6b69b067374dbb2e6104eb1940eda"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "17507b7151e023f2997bc2b953455a74"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 3
       }
     },
     "D2sound_API_0c63a2582d83": {
       "addresses": {
-        "LoD/PD2": "0x6F9B6CE0"
+        "LoD/PD2": "0x6F9B6C00"
       },
       "rvas": {
-        "LoD/PD2": "0x6CE0"
+        "LoD/PD2": "0x6C00"
       },
       "sizes": {
-        "LoD/PD2": 147
+        "LoD/PD2": 220
       },
       "name": "SetRenderStateIntensity",
       "signature": "void SetRenderStateIntensity(void * this, void * pRenderState, float intensityValue)",
@@ -4732,11 +6324,53 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "0891c074e5f494377db150f3da14bc50",
         "PRO": "a2615b53dc7ef6dd49e1d3a332b97ddd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "04aa5d7258a4257e2e1b0ea9cb3513ff"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ClampFloatValue"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "D2sound_MNE_69e7901095da": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B6CE0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6CE0"
+      },
+      "sizes": {
+        "LoD/PD2": 147
+      },
+      "name": "SetObjectProperty",
+      "signature": "void SetObjectProperty(void * this, float value)",
+      "calling_convention": "__thiscall",
+      "comment": "Sets a property value on an object and triggers vtable method if conditions are met.\n\nAlgorithm:\n1. Validate object pointer (this) - abort if NULL with error code 0x345\n2. Load vtable pointer from object offset 0x10\n3. Store property value at object offset 0x3c\n4. Check trigger conditions: vtable exists AND global mode flag equals 2\n5. Check secondary conditions: flag bit 2 set OR value equals global threshold\n6. If all conditions met: clamp value difference, convert to int64, call vtable method\n\nParameters:\n  this: Object pointer with vtable at offset 0x10 (void *)\n  value: Property value to set (float)\n\nReturns:\n  void - No return value\n\nSpecial Cases:\n  - NULL object pointer: Calls CleanupAndAbort with return address 0x345, exits with code -1\n  - Invalid vtable: Skips method call entirely\n  - Global mode != 2: Skips conditional processing\n  - Flag bit 2 clear AND value != threshold: Skips method call\n\nMagic Numbers:\n  0x10: Vtable pointer offset in object structure\n  0x3c: Property value storage offset in object structure\n  0x34: Flags byte offset in object structure\n  0x04: Bit mask for flag bit 2 (conditional trigger)\n  0x345: Error code passed to CleanupAndAbort for NULL object\n  0x10: Vtable method offset (method index 4, 4-byte pointers)\n  2: Required global mode value for conditional processing\n\nError Handling:\n  - NULL object validation with immediate abort and process exit\n  - No bounds checking on property value\n  - Graceful handling of NULL vtable (skips method call)\n\nStructure Layout:\nOffset | Size | Field Name | Type    | Description\n-------|------|------------|---------|----------------------------------\n0x10   | 4    | pVTable    | int *   | Virtual method table pointer\n0x34   | 1    | bFlags     | byte    | Object state flags (bit 2 = conditional trigger)\n0x3c   | 4    | flValue    | float   | Current property value storage\n\nFlag Bits (offset 0x34):\nBit | Hex  | Description\n----|------|------------------------------------------\n2   | 0x04 | Conditional trigger flag for vtable call",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:0c63a2582d8388ab3e18046a99121e04",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "0c63a2582d8388ab3e18046a99121e04",
+        "MNE": "69e7901095da830f1bbfb99739aeadd5",
+        "CFG": "d7905c8e8a8e6d05ceded444a342b415",
+        "PRO": "fbc31eb09cd62eaa97ebefc208da600a"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "69e7901095da830f1bbfb99739aeadd5"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4774,11 +6408,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "2dcc738904f88247a7adcf795a303ab4",
         "PRO": "1ccef818de8689828695b97ff06d6bfe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e49c953b2f7d54ca88a18efac53568a9"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4817,11 +6451,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "6cbd3ab203ef76b8dfec1c96555d3562",
         "PRO": "68151c996a118175272292589bc0e49f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "faf930aeb946a80831845374f74b8ffa"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4832,6 +6466,88 @@ var FUNCTIONS_D2sound_dll = {
       },
       "param_counts": {
         "LoD/PD2": 2
+      }
+    },
+    "D2sound_MNE_bb28d7e90cd8": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B6EC0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6EC0"
+      },
+      "sizes": {
+        "LoD/PD2": 105
+      },
+      "name": "ValidateObjectMethod",
+      "signature": "uint ValidateObjectMethod(void * pObject)",
+      "calling_convention": "__fastcall",
+      "comment": "Validates an object and invokes its virtual method at offset +0x24.\n\nAlgorithm:\n1. Validate that pObject pointer is not NULL\n2. Dereference pObject and check if dereferenced value is not NULL\n3. Enter critical section lock (0x6f9c6530)\n4. Retrieve virtual method from vtable at [pObject][0x24]\n5. Call virtual method with pObject and stack buffer as parameters\n6. Test if method return value is negative\n7. Leave critical section lock\n8. Return 1 if method succeeded (non-negative), 0 if failed\n9. If validation fails, retrieve return address and call CleanupAndAbort with error\n\nParameters:\n- pObject: void* - Pointer to object; must not be NULL and dereferenced value must be non-NULL. Must point to vtable with method at offset +0x24\n\nReturns:\n- uint: Returns 1 (true) if object validation passes and virtual method returns non-negative value, 0 (false) if method returns negative value or validation fails. If pObject is NULL, triggers fatal error handler.\n\nSpecial Cases:\n- If pObject is NULL or *pObject is NULL: calls CleanupAndAbort and terminates with _exit(-1)\n- If virtual method at [pObject][0x24] returns negative value: returns 0\n- Return value is masked with 0x1 to ensure boolean 0 or 1 result\n- Critical section 0x6f9c6530 is held during virtual method invocation",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "bb28d7e90cd8dd20307c808240a82993",
+        "CFG": "1b9fe5ef5362b7d2a891f265591a0cd0",
+        "PRO": "05abba31e70231e17559f4f0c556929d"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bb28d7e90cd8dd20307c808240a82993"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_MNE_2b79c90a5aad": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B6F30"
+      },
+      "rvas": {
+        "LoD/PD2": "0x6F30"
+      },
+      "sizes": {
+        "LoD/PD2": 102
+      },
+      "name": "ActivateGameObject",
+      "signature": "int ActivateGameObject(void * pGameObject)",
+      "calling_convention": "__fastcall",
+      "comment": "Activates a game object by calling its activation virtual method and setting an active flag.\\n\\nAlgorithm:\\n1. Validates input parameter (pGameObject) is not null, aborts if null with error 0x279\\n2. Acquires critical section lock at DAT_6f9c6530 to ensure thread-safe access\\n3. Calls the virtual method at offset +0x30 in the object's vtable with parameters (object, 0, 0, 1)\\n4. Checks activation result; returns 0 (failure) if result < 0 and releases lock\\n5. Sets activation flag at object offset +0x1c to 1 if activation succeeded\\n6. Releases critical section lock\\n7. Returns 1 (success) if activation succeeded, 0 (failure) otherwise\\n\\nParameters:\\n  pGameObject: Pointer to game object with vtable at offset +0x0 and active flag at offset +0x1c\\n\\nReturns:\\n  1 if object was successfully activated\\n  0 if object pointer was null or activation virtual method returned error\\n\\nStructure Layout:\\n  Offset  Size  Field                Type    Description\\n  ------  ----  -----                ----    -----------\\n  +0x00   4     vtable_ptr           void*   Pointer to virtual method table\\n  +0x30   4     activate_vmethod     func    Virtual method for activation (3rd entry in vtable)\\n  +0x1c   4     is_active_flag       dword   Active state flag (0=inactive, 1=active)\\n\\nSpecial Cases:\\n  - If pGameObject is null, calls GetReturnAddress(0x279) and CleanupAndAbort(), never returns\\n  - Synchronization: Uses critical section (DAT_6f9c6530) to serialize access\\n  - Virtual method returns negative value on failure",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "2b79c90a5aad8f36110f0cef7630246f",
+        "CFG": "2482a870273702f3bdc5b197d1d06a89",
+        "PRO": "b33912ebebf8816ec00067b56137e7bb"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2b79c90a5aad8f36110f0cef7630246f"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 1
       }
     },
     "D2sound_API_48c5b050028b": {
@@ -4859,11 +6575,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5685c5e8c024da864cd5bcbcafedf464",
         "PRO": "979a71cab8e77449dd91bc2c791a51cd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "43219a6dded180ceaff4d46f86f1e9b4"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4903,11 +6619,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "79cda752eec7caa49b86e781cdac3dd8",
         "PRO": "abaf4f4feb34d32c126d46c963fced17"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f733008cfaebc4a8c5e5a4ac5e318747"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4938,11 +6654,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "50f8eedfa7f092ceacf7d5bc67684c73",
         "PRO": "295dfeda689f8b0875dd3f0b74d1a8b3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "55f915b52c3a00ebe2f8aa440b90430f"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -4950,6 +6666,47 @@ var FUNCTIONS_D2sound_dll = {
           "CleanupAndAbort",
           "call_finalize_cleanup"
         ]
+      }
+    },
+    "D2sound_MNE_385fa249d026": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B72D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x72D0"
+      },
+      "sizes": {
+        "LoD/PD2": 418
+      },
+      "name": "ReadCircularBuffer",
+      "signature": "uint ReadCircularBuffer(uint bufferOffset, uint bytesToRead, void * pOutputBuffer)",
+      "calling_convention": "__stdcall",
+      "comment": "Reads data from a circular buffer into an output buffer with thread-safe synchronization.\\nThis function implements circular buffer read operations, handling wraparound logic\\nand boundary conditions for reading arbitrary amounts of data from a managed buffer.\\n\\nAlgorithm:\\n1. Validate critical preconditions: object pointer (EBX), buffer base (EBX[5]), output buffer\\n2. Acquire critical section lock for thread-safe buffer access\\n3. Call virtual method at offset 0x2c to execute initial read operation\\n4. If read fails (negative return), release lock and return 0\\n5. Enter main loop to process read data:\\n   a. If bufferOffset >= buffer end, apply modulo to wrap around to valid range\\n   b. Calculate available contiguous bytes from current offset to end\\n   c. Cap read to available bytes or requested size, whichever is smaller\\n   d. Copy data in 4-byte chunks (DWORD) using REP MOVSD for efficiency\\n   e. Copy remaining 0-3 bytes individually using REP MOVSB\\n   f. Advance output buffer pointer and counters\\n   g. Check if more reads needed (EBX[0x10] indicates multi-read scenario)\\n6. Call virtual method at offset 0x4c to finalize read operation\\n7. If no pending reads and buffer full, set completion flag (EBX[0xb] = 1)\\n8. If bytes remain to fill and limit specified (EBX[0xc] != -1), zero-fill remaining space\\n9. Release critical section lock and return 1 (success)\\n\\nParameters:\\n  bufferOffset (uint): Starting position in circular buffer to read from\\n  bytesToRead (uint): Number of bytes to read from buffer into output\\n  pOutputBuffer (void *): Destination buffer where read data is copied\\n\\nReturns:\\n  uint: 1 if operation succeeded and completed, 0 if read operation failed\\n\\nSpecial Cases:\\n  - Wraparound: When bufferOffset exceeds buffer end, modulo wrapping applies\\n  - Zero-fill: If buffer limit (EBX[0xc]) specified and unread space exists\\n  - Multi-read: Flag at EBX[0x10] indicates whether more reads required\\n  - Thread Safety: Critical section lock (DAT_6f9c6530) protects all buffer access\\n\\nStructure Layout:\\n  Offset  Size  Field Name        Type      Description\\n  ------  ----  ----------------  --------  ------\\n  +0x00   4     vftable           pointer   Virtual function table\\n  +0x04   4     unknown_1         uint      Unknown field\\n  +0x14   4     bufferBase        pointer   Base address of data buffer\\n  +0x18   4     bufferEnd         uint      End position of circular buffer\\n  +0x24   4     readOffset        uint      Current read position counter\\n  +0x30   4     readLimit         uint      Maximum bytes to read (-1 = unlimited)\\n  +0x40   4     continueRead      uint      Flag: more reads needed\\n  +0x44   4     wrapStart         uint      Wraparound start offset\\\"",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "385fa249d0263b86ff0856b08fb77a84",
+        "CFG": "7dc396ce0d0ae3209014a19c90358d6e",
+        "PRO": "cddd815f23e88c96ab7b7af4dd924f63"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "385fa249d0263b86ff0856b08fb77a84"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 3
       }
     },
     "D2sound_API_13d2012fc7c4": {
@@ -4977,15 +6734,56 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f4db238b7f5bd7bc43df45f30a79ad3b",
         "PRO": "b2f8aee909b47ed8424d776f4bef395e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3bfdc8d4521fb5b6a9cb5647abc84367"
       },
       "api_calls": {
         "LoD/PD2": [
           "SetAudioParameterValue",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_MNE_c7342149fd99": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B7510"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7510"
+      },
+      "sizes": {
+        "LoD/PD2": 49
+      },
+      "name": "FadeOutAudioParameter",
+      "signature": "void FadeOutAudioParameter(uint durationMs)",
+      "calling_convention": "__fastcall",
+      "comment": "Gradually fades out the current audio parameter to zero over a specified duration.\n\nAlgorithm:\n1. Check if audio system is enabled (DAT_6f9c658c != 0)\n2. Validate duration parameter is at least 1 (checks if ECX > 0 after fastcall)\n3. If invalid duration, retrieve return address via GetReturnAddress(0x387) and abort with CleanupAndAbort\n4. Calculate decrementPerSleep as (totalValue * 20) / duration, where 20ms is the sleep interval\n5. Initialize currentParameter to totalValue (DAT_6f9c5994)\n6. While currentParameter is not zero:\n   a. Sleep for 20 milliseconds\n   b. Subtract decrementPerSleep from currentParameter (bounds check prevents negative values)\n   c. Call SetGlobalAudioParameter with updated currentParameter value\n7. Return to caller\n\nParameters:\ndwDurationMs (ECX): Duration in time units for the fade-out operation. Must be greater than 0. Used to calculate the rate of parameter decrease. Invalid durations (<=0) trigger immediate abort.\n\nReturns:\nvoid - Function does not return a value. Calls _exit(-1) on validation failure.\n\nSpecial Cases:\n- If audio system is disabled (DAT_6f9c658c == 0), function returns immediately without doing anything\n- If duration is <= 0, function calls CleanupAndAbort and _exit, terminating the process\n- If totalValue is 0, the loop is skipped entirely\n- Each iteration sleeps for exactly 20ms (0x14 milliseconds)\n- Decrements are rounded down due to integer division\n- When decrementPerSleep > currentParameter, currentParameter is set to 0 instead of going negative\n\nMagic Numbers Reference:\n0x387 - Error code passed to GetReturnAddress for duration validation failure\n0x14 - Sleep interval in milliseconds (20ms) for fade stepping\n-1 - Exit code used when terminating on invalid duration\n\nError Handling:\n- Invalid duration (<=0): GetReturnAddress(0x387), CleanupAndAbort, _exit(-1)\n- Audio system disabled: Silent early return\n- Underflow protection: Set currentParameter to 0 when decrement would cause negative value",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "c7342149fd992105040af106150ced41",
+        "CFG": "6c3b0aa07951c5e00ecf5c0f67c56cb3",
+        "PRO": "d2d25b459a503d9214b828869328e2b1"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c7342149fd992105040af106150ced41"
+      },
+      "api_calls": {
+        "LoD/PD2": [
           "GetReturnAddress",
           "CleanupAndAbort"
         ]
@@ -5019,11 +6817,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5336196579c4dc79ca84dd3c6dccbcc0",
         "PRO": "a55c3d20511417c403a74f100af438a7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "93806dcab8ba79a416bb8864dda68429"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5059,11 +6857,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "b1f8968cc2b4f04e3a072e3287861a54",
         "PRO": "1078ce7b158af7e639de7bc23e97dd0a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3e9b021456f07010b33e3adb8ffdffa2"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5101,11 +6899,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "85bd82f7b594b447914b08f2017160e0",
         "PRO": "b41199760ffed5469a47d2380b27b528"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8e25d66e868cb23f4377c4503828e97e"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5145,11 +6943,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "fe1d406d564ccf69c2f97473c3dfa2e5",
         "PRO": "124b2411dbd3052a6fe578eb38b3104b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 42
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c2344e363c5ee7617b47fcb5c652f48f"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5187,11 +6985,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "38e18735120a689997ce2c221e9a0134",
         "PRO": "cc4f78f87181c2821765c7cfe588b13b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 57
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3bee71710045c958b3258ff800fec4ac"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5208,12 +7006,50 @@ var FUNCTIONS_D2sound_dll = {
         ]
       }
     },
-    "D2sound_MNE_7b4de9f0cf35": {
+    "D2sound_MNE_b21f881c7f32": {
       "addresses": {
-        "LoD/PD2": "0x6F9B9B20"
+        "LoD/PD2": "0x6F9B7AA0"
       },
       "rvas": {
-        "LoD/PD2": "0x9B20"
+        "LoD/PD2": "0x7AA0"
+      },
+      "sizes": {
+        "LoD/PD2": 90
+      },
+      "name": "InitializeAudioContextQueue",
+      "signature": "void InitializeAudioContextQueue(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initializes the audio context queue processing system with thread and event management.\n\nAlgorithm:\n1. Check if thread wait handle is already initialized (g_threadWaitHandle != NULL)\n2. If already initialized, get return address using GetReturnAddress(0xbc)\n3. Call CleanupAndAbort with error message and return address, then exit(-1)\n4. Create manual-reset event using CreateEventA(NULL, bManualReset=1, bInitialState=0, NULL)\n5. Store event handle in g_eventSignalHandle global variable\n6. Create worker thread using CreateThread with ProcessAudioContextQueue as entry point\n7. Store thread handle in g_threadWaitHandle global variable\n\nParameters:\nNone\n\nReturns:\nvoid - No return value, function initializes global state\n\nSpecial Cases:\n- If called multiple times, terminates process with error code -1\n- Thread ID is stored in local stack variable dwThreadId\n- Event object created with manual reset mode for persistent signaling\n- Uses __stdcall calling convention\n\nError Handling:\n- Double initialization triggers cleanup and process termination\n- CleanupAndAbort called with error message pointer and return address\n- Process exits with code -1 after cleanup\n\nMagic Numbers Reference:\n0xbc - Parameter passed to GetReturnAddress for stack frame calculation\n1 - bManualReset=TRUE for event creation (manual reset mode)\n0 - bInitialState=FALSE for event creation (initially non-signaled)\n-1 - Exit code for double initialization error",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "b21f881c7f3216efb485bfffb98c01f0",
+        "CFG": "c5d962dcda6c5eaa07bed312c848de2f",
+        "PRO": "37f1be870f6fd1e3d992bc5f986a0b66"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b21f881c7f3216efb485bfffb98c01f0"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      }
+    },
+    "D2sound_MNE_7b4de9f0cf35": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B7B00"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7B00"
       },
       "sizes": {
         "LoD/PD2": 6
@@ -5233,11 +7069,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "82c96f3a470b96e1792c6ab5af77b425"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "D2sound_MNE_38478acf8bac": {
@@ -5265,11 +7101,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "b4e746256717b4b06ffccfb298eb390e",
         "PRO": "f2a43915327f01b23b4b25b42a9fd693"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "38478acf8bac1550b76702ba8d8e9b34"
       }
     },
     "D2sound_API_13c909aa35a0": {
@@ -5297,16 +7133,54 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1abbbed88598ab76171d956e8b753f75",
         "PRO": "5adb7e403fc95e56421d58c8c6dafe9b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7af578b6e6fc9b145cededb9595ea246"
       },
       "api_calls": {
         "LoD/PD2": [
           "DestroyGameContext",
           "DestroyAllGameObjects"
+        ]
+      }
+    },
+    "D2sound_MNE_b40e163105ac": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B7BC0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7BC0"
+      },
+      "sizes": {
+        "LoD/PD2": 158
+      },
+      "name": "InitializeMusicData",
+      "signature": "void InitializeMusicData(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initializes music data structures by clearing flag fields in array elements.\n\nAlgorithm:\n1. Load configuration value from global flag (DAT_6f9c65b4)\n2. Load item count from global counter (DAT_6f9c5948)\n3. Initialize loop counter to 0\n4. Return early if item count <= 0\n5. For each item in array:\n   a. Check if initialization flag (DAT_6f9c65e0) is set\n   b. If not set, set flag to 1 and store config value (DAT_6f9c65dc)\n   c. Validate item count hasn't changed during processing (DAT_6f9c5990)\n   d. If count mismatch, call error handler with code 0x52\n   e. Validate loop index is within bounds\n   f. If index >= count, call error handler with code 0x53\n   g. Select array based on config flag:\n      - If DAT_6f9c65dc == 0: use common_options array (0x6f9c5908)\n      - Else: use introedit array (0x6f9c5950)\n   h. Calculate entry address: base + (index * 2 * sizeof(pointer))\n   i. Clear flag field at offset +4 (second element of entry)\n   j. Increment loop counter\n6. Return normally when all items processed\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\nOn error: Calls CleanupAndAbort() and _exit(-1), does not return\n\nSpecial Cases:\nEmpty array (count <= 0): Returns immediately without processing\nCount validation failure: Calls error handler with code 0x52 (count mismatch)\nIndex bounds violation: Calls error handler with code 0x53 (bounds failed)\n\nMagic Numbers Reference:\n0x52 (82 decimal) - Error code for item count mismatch validation\n0x53 (83 decimal) - Error code for array index bounds violation\n0x6f9c5908 - Base address of common_options array\n0x6f9c5950 - Base address of introedit array\n2 - Array stride multiplier (each entry is 2 pointers: data + flags)\n-1 - Exit code passed to _exit() on fatal error\n\nError Handling:\nCount mismatch during processing triggers error code 0x52\nArray bounds violation triggers error code 0x53\nBoth errors call GetReturnAddress() for debugging info\nErrors call CleanupAndAbort() with error string and return address\nFatal errors call _exit(-1) - function never returns on error\n\nStructure Layout:\nMusic data arrays contain entries with 2-element structure:\nOffset  Size  Field Name  Type       Description\n0x00    4     pData       void*      Pointer to music data\n0x04    4     dwFlags     uint       Status/initialization flags\n\nFlag Bits:\nThe flag field at offset +4 is cleared to 0 during initialization\nPurpose appears to be reset/initialization state tracking",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "b40e163105ac1e681f80641c630009a1",
+        "CFG": "c53fc15315e1bf97c60bf976631deab8",
+        "PRO": "34821bae2f2ca8015fe63f7ac72c26dd"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b40e163105ac1e681f80641c630009a1"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
         ]
       }
     },
@@ -5335,11 +7209,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "9ddb4d9027f5333831a62fb85fa25472",
         "PRO": "e0929f65c3c7f879f93df5cc43653ef0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a24a321b9aaacf167f743eea115b9739"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5377,11 +7251,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "0456a1891aaf159e049c06a7073de180"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2b972db7e0cd700c35c8083f2d891d9a"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5415,11 +7289,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f155d0c44892482ddc4c2438493b4162",
         "PRO": "e29f266278dc8a786d879de42efbd0d9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "18f8665436216dac905dc56ae0dd71d9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5450,11 +7324,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "a9c264a47bdb929b64904979f5dab4a9",
         "PRO": "36900256318c77fe3a5dd93b695a43db"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 59
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0df12f066171bef43519ac1c37ec20a0"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5490,11 +7364,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "59064043b32d878adeb9b6c7844d59e3",
         "PRO": "5135108793f2f2e56c2a453307694d9a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d1d0fb2372e940a8d9d2992f409beb25"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5527,15 +7401,124 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5ac69ddc4dc620d0fa43b9c6ebcc7e34",
         "PRO": "cfa4f3e7f062dc7226418fc41b940a2e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8435bc0f12a8928fbaef24ebbfcdad2a"
       },
       "api_calls": {
         "LoD/PD2": [
           "call_finalize_cleanup"
+        ]
+      }
+    },
+    "D2sound_ADDR_6F9B8010": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B8010"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8010"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetGameInitializationFlag",
+      "signature": "uint GetGameInitializationFlag(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves the current game initialization flag value from global memory.\n\nAlgorithm:\n\n1. Load the global initialization flag value from memory address 0x6f9c65b8\n2. Return the flag value to the caller\n\nParameters:\n    None\n\nReturns:\n    uint: The current game initialization flag value\n          - Non-zero indicates game is initialized/ready\n          - Zero indicates game is not yet initialized\n\nSpecial Cases:\n    Direct memory read operation with no validation or error handling.\n    Always returns the current state of the global initialization flag.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "27e26c748504e5d0c43a72ba7996b1dc"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2sound_MNE_03dd7fceaa94": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B8020"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8020"
+      },
+      "sizes": {
+        "LoD/PD2": 127
+      },
+      "name": "ProcessAllContextsCleanup",
+      "signature": "void ProcessAllContextsCleanup(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Processes cleanup operations for all active game contexts.\n\nAlgorithm:\n1. Check if game is initialized (DAT_6f9c65b8 != 0)\n   - If not initialized, return immediately\n2. Save non-volatile registers (EBX, EDI, ESI)\n3. Load critical section address from DAT_6f9c6530\n4. Initialize pointer to context array base (0x6f9c6560)\n5. Loop through all context array slots (up to 0x6f9c6580):\n   a. Load context pointer from current array slot\n   b. Validate context pointer (not null)\n   c. Check context header (offset +0x0)\n   d. If invalid context: report fatal error and call _exit(-1)\n   e. Enter critical section lock\n   f. Check if cleanup flag set (offset +0x48)\n   g. If cleanup needed: call ProcessContextCleanup(context)\n   h. Call context vtable method at [vtable + 0x48]\n   i. Clear context field at offset +0x1c to 0\n   j. Leave critical section lock\n   k. Advance to next array slot and continue\n6. Return to caller\n\nParameters:\nNone (accesses global state via:\n  - DAT_6f9c65b8: Game initialization flag\n  - DAT_6f9c6530: Critical section lock\n  - DAT_6f9c6560: Start of context array\n  - 0x6f9c6580: End of context array)\n\nReturns:\nvoid (terminates with _exit(-1) on fatal error)\n\nStructure Layout:\nContext Object Header:\nOffset  Size  Field Name      Type      Description\n+0x00   4     pVTable         void*     Virtual method table pointer\n+0x1c   4     cleanup_state   uint      Cleanup tracking field\n+0x48   4     cleanup_flag    uint      Non-zero indicates cleanup needed\n\nArray Layout:\nBase:    0x6f9c6560 (context array)\nEnd:     0x6f9c6580\nStride:  4 bytes per slot\nSlots:   8 (32 bytes / 4 bytes per entry)\n\nError Codes:\n0x292 (658): Offset/line number where error originated\nError message address: 0x6f9c0684\n\nSpecial Cases:\n- Function is called from CleanupGameResources during shutdown\n- Validates critical context objects before cleanup\n- Fatal error if context array contains null/invalid pointers\n- Unconditional _exit(-1) on validation failure (no recovery)",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c345355fc1c5a5280351897d7124e0a2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c345355fc1c5a5280351897d7124e0a2",
+        "MNE": "03dd7fceaa94aaeca0af9608babc5c4b",
+        "CFG": "255f3e5d7f45b64b73ce459d3401e54e",
+        "PRO": "9d7ca967d0bf89da7e032eebe440f2c9"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "03dd7fceaa94aaeca0af9608babc5c4b"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "ProcessContextCleanup",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      }
+    },
+    "D2sound_MNE_dd4822909025": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B80A0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x80A0"
+      },
+      "sizes": {
+        "LoD/PD2": 85
+      },
+      "name": "CheckUnitActAssignment",
+      "signature": "int CheckUnitActAssignment(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Checks if any unit in the unit array has an assigned Act structure.\n\nAlgorithm:\n1. Check if global unit array pointer (DAT_6f9c65b8) is initialized\n2. If not initialized, return 0 (no act assignment found)\n3. Iterate through unit pointer array starting at DAT_6f9c6560\n4. For each unit pointer entry:\n   a. Dereference pointer to get UnitAny structure\n   b. Validate pointer is non-null and first field (dwType) is non-zero\n   c. If validation fails, trigger assertion and exit process\n   d. Check if Act pointer field (offset 0x1C / piVar1[7]) is non-null\n   e. If Act pointer is assigned, return 1 (found)\n   f. Move to next array entry (+4 bytes for next pointer)\n5. Continue until reaching array boundary at 0x6f9c6580\n6. If no unit has assigned Act, return 0\n\nParameters:\nNone - function uses global unit array pointers\n\nReturns:\nEAX = 1 if any unit has non-null pAct field\nEAX = 0 if no units found or all have null pAct\n\nSpecial Cases:\n- Array length determined by boundary 0x6f9c6580 - 0x6f9c6560 = 32 bytes = 8 unit pointers\n- Assertion failure (0x2a5) triggers if unit pointer is null or dwType field is zero\n- Function appears to check Act assignment status on startup or initialization\n- Calls CleanupAndAbort (0x6f9b5f50) on validation failure, which triggers fatal error\n\nStructure Layout (UnitAny at unit pointer):\nOffset | Size | Field      | Type    | Description\n0x00   | 4    | dwType     | DWORD   | Unit type (checked for non-zero)\n0x04   | 4    | dwTxtFileNo| DWORD   | Txt file index\n...    | ...  | ...        | ...     | ...\n0x1C   | 4    | pAct       | Act*    | Pointer to Act structure (checked here)",
+      "name_source": "LoD/PD2",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "dd4822909025236612fa4e9e7bba8c2c",
+        "CFG": "e5e3123a5bb8e17a31d8df3762047d21",
+        "PRO": "c9b4bf2e614a0990808455e6ce68d480"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dd4822909025236612fa4e9e7bba8c2c"
+      },
+      "api_calls": {
+        "LoD/PD2": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
         ]
       }
     },
@@ -5564,11 +7547,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "ba458a7f801502d026de08a8634129bf",
         "PRO": "f1fc7dd10cc32fb9fae28abb2b469285"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5726543c8e344ef3da3a58c01ec6a38e"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5603,11 +7586,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "36bc2ca7589eb932eec59014ebd32f6c",
         "PRO": "a38bbc513024c56a1d371f048ea091bc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fa95752d1de3654e235fc2ee3fc0d89f"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5643,11 +7626,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1bf665b44fdc29afd36c04d9186793f2",
         "PRO": "1905600a5e86ba906b1c0c28166ccc44"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 25
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f63ac7f9bb1eea2766e25f9b56fb7935"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5687,11 +7670,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "8f478ae3bc117d32a57725db761b21b6",
         "PRO": "e8841a67ea3fbee0e5da2b1fe6a67e72"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7640872c4218006941d1b0b467dbe6ed"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5728,11 +7711,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "969fba09e3e9b3aca52f01e3d048e095",
         "PRO": "5a750ebca3452dfccff7c402d86cbbe5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "834faf2dd7b56c69f6a5f32fd58386ee"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5768,11 +7751,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f4d23a0900f4a88be7538791ca514b88",
         "PRO": "75b4da4b2897fdd301ba54515ae9ddae"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 32
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d49921eb65284491dea0b481d719ae17"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -5803,11 +7786,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "cb0ccd43c2f8c8fb04bb31ae73008898",
         "PRO": "93287f2f1ba13bd7c14f6081302bcc24"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bee00e2ec60427e00e37908e271e0e5e"
       }
     },
     "D2sound_MNE_d8abc9a98c95": {
@@ -5835,11 +7818,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "fc21cabc67a11d2e1d34c83d9134404c",
         "PRO": "d1f4168924e2b443af33ed423705b18e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d8abc9a98c954e3788bf78008fca3ac3"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5875,11 +7858,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "cb2814c48701378c41d6e249e987ddd8",
         "PRO": "4929834e708207430558cca89710ef99"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8df9bf85cb3834dff82ac22642075af4"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5910,11 +7893,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "c8b2c10b1a428d31cc06d2116a66fa61",
         "PRO": "f076f70bbb1273e26b96a8861a4fb656"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd3e0e3d5945ee49f3ee4389bbca98c5"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -5945,11 +7928,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "a447ffc16017efea167ec23947d72285",
         "PRO": "3581351f2874d36914a7ca498f24b3ae"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "434c103c261c2cdfa42448e719eb1e9a"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5985,11 +7968,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "fb7662d05323d9316219284b227179e7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9845504193811cd2c8b7b6a6e12f19af"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6025,11 +8008,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "ee0e96857da8b32ab6bcdead1e5c43d3",
         "PRO": "c3d1544f7ead16dd2387b9cd999ee789"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f109e69488b45438b5d97489405e11cd"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6060,11 +8043,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "92668eb71f8acb9bf24d85d838b9d451",
         "PRO": "157321d51ccd064b2202da03a4f1ee44"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7034d0510ba0bbf777bfb352a039bd63"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -6095,11 +8078,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "cb6c24d071f5a1a76901ac19df773e07",
         "PRO": "8f537aea6a1a2941ab2421d319437ef7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a641d892bce52e4f5289cf37402f9a07"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6130,11 +8113,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "b7ff7beabc3fd16292d6dcc232a141d9",
         "PRO": "4ca125c65ef3a42b243b81b73d3fc3c6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3356f04dbb4e770ecb40d0c0ae832d31"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -6165,11 +8148,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "0e606810ebee72dddcc26bdb38d953ac"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "24f4aca7539f2a1d36434afbb764cdb2"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -6200,11 +8183,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "ca23919de44270d5b1b63fd0ce96261f",
         "PRO": "81fb2365e18242db11bce5b51a8d52fb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fd95113b339df892fd97512c7a730ad6"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6235,11 +8218,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "d7d1b7fe24361999d50a0c17021b3c79",
         "PRO": "7842bafa76bc744a94e0f843b5d93355"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8654893ce88505f3b95c44d8d920c1c7"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6275,11 +8258,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "ddb47e344e263f0bf6eb8098227acf55",
         "PRO": "e441b38a8b8a0225ee9dabdf35c14462"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dcf7292fc82def356ee584667c8ace98"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -6310,11 +8293,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "3b12f33a615d48ebe014acc003718f1e",
         "PRO": "42fcd27a1729fcb0cb5af49ae44a8352"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3145a99f5f3b16ea7f21ae52926fe4d7"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6353,11 +8336,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "4fb9c2bacdfdc579d5b0db65b255b69b",
         "PRO": "e7b6561404142adcb9a8a75c3fc74760"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "66bcc29f617dcb3476083d3b1c436bb8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6388,11 +8371,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "f2715adc6ba6377266918519727fa91f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7897101f3cb99eb3b89274dfb087bc9"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -6423,11 +8406,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "84a00cde85a81f54e5765e2132b89f93",
         "PRO": "87cc44c03a1de748312f1243466aecda"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 38
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b79dde5b6107d0a69f3a3b0e18bc19b1"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6458,22 +8441,86 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "cb52e141c929b90f9389304b863f6b88",
         "PRO": "3b18039bc63135780ec3a74c10e71c63"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "80bc04ae4eba7401881d17b2dc634ea0"
       },
       "param_counts": {
         "LoD/PD2": 1
       }
     },
-    "D2sound_MNE_acbc2c857bf1": {
+    "D2sound_ADDR_6F9B8E50": {
       "addresses": {
-        "LoD/PD2": "0x6F9BDA83"
+        "LoD/PD2": "0x6F9B8E50"
       },
       "rvas": {
-        "LoD/PD2": "0xDA83"
+        "LoD/PD2": "0x8E50"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "Get3DAudioSupportStatus",
+      "signature": "uint Get3DAudioSupportStatus(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves the current status of 3D audio support in the DirectSound audio subsystem.\n\nAlgorithm:\n1. Load global 3D audio flag from DAT_6f9c659c\n2. Return loaded flag value (1 if 3D audio active, 0 otherwise)\n\nParameters:\nNone\n\nReturns:\nuint - 1 if 3D audio is currently enabled and functional, 0 if disabled or unavailable\n\nSpecial Cases:\n- Flag is set to 1 when 3D audio support is successfully initialized in InitializeDirectSoundAudio()\n- Flag is set during recovery routines (FUN_6f9b8db0, ProcessMessageParameters) when 3D mode is activated\n- Acts as a simple getter for the global audio capability flag\n- Used by audio system to determine which audio processing path to use",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "b3954456e36c956d6dd5655a544c7414"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2sound_ADDR_6F9B8E60": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B8E60"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8E60"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetAudioMessageState",
+      "signature": "uint GetAudioMessageState(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Returns the current audio message processing state.\n\nAlgorithm:\n1. Load the global audio message state variable from address 0x6f9c6598\n2. Return the loaded value in EAX\n\nParameters:\nNone\n\nReturns:\n- uint: Current audio message state value\n  * 0 = Uninitialized / idle state\n  * 1 = Initial notification phase (notification sent, waiting for handler callback)\n  * 2 = Message marshaling phase (all 12 message fields processed through handler)\n\nSpecial Cases:\n- This getter is called from ProcessMessageParameters and InitializeDirectSoundAudio\n- The state value determines which handler processing path is executed\n- State transitions occur during audio subsystem initialization\n- Used to track progress through the audio message initialization sequence",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "e46c275abf281c7b41ba308704da96d5"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2sound_MNE_acbc2c857bf1": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B8E70"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8E70"
       },
       "sizes": {
         "LoD/PD2": 3
@@ -6493,11 +8540,107 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "7206840be1be8fa373a01e5868c0863f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "acbc2c857bf1a8401ca8fe5de1c0ec70"
+      }
+    },
+    "D2sound_ADDR_6F9B8E80": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B8E80"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8E80"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetDirectSoundMode2Flag",
+      "signature": "int GetDirectSoundMode2Flag(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Get the second DirectSound initialization mode configuration flag\n\nAlgorithm:\n1. Load the second DirectSound mode parameter from global DAT_6f9c6594\n2. Return the loaded value in EAX\n\nParameters:\n   (none) - Function is a simple global state accessor\n\nReturns:\n   int - DirectSound mode2 parameter value (0 or 1)\n   - 1 = Use second initialization mode configuration\n   - 0 = Do not use second mode configuration\n\nSpecial Cases:\n   - This is a simple getter for global state set by InitializeDirectSound\n   - The value is configured during DirectSound initialization fallback attempts\n   - Accessed by InitializeDirectSoundAudio to determine audio subsystem configuration\n   - Set to 1 for mode1 attempt, then 0 for mode2 attempt, then 0 for mode3 attempt",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "288bfd67f7a1ff23db08f78097c1310a"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2sound_ADDR_6F9B8E90": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B8E90"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8E90"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetAudioMode1Parameter",
+      "signature": "uint GetAudioMode1Parameter(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves the current audio initialization mode parameter 1 from global state.\n\nAlgorithm:\n1. Load the global audio mode1 configuration flag from DAT_6f9c6590\n2. Return the value in EAX register\n\nParameters:\n  None\n\nReturns:\n  unsigned int - Audio mode1 parameter value (0 or 1):\n    - 1 = Enable 3D audio processing / Use mode 1 configuration\n    - 0 = Disable 3D audio processing / Use minimal configuration\n\nSpecial Cases:\n  - This is a simple accessor function used during DirectSound initialization fallback chain\n  - The value is set by InitializeDirectSound and read by InitializeDirectSoundAudio\n  - Mode progression: (1,1) then (1,0) then (0,0) if initialization fails\n  \nStructure Layout:\n  Global State Variable:\n  Offset  Size  Name                  Type     Description\n  ------  ----  -------------------   -------  -----------------------------------\n  6f9c6590 4    DAT_6f9c6590         uint     Audio mode1 config flag (0 or 1)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "12d781781be5e5e7388891c4da909c94"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2sound_ADDR_6F9B8EA0": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B8EA0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8EA0"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetGameState",
+      "signature": "uint GetGameState(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves the current game state value from global storage.\n\nAlgorithm:\n1. Load the global state value from memory address 0x6f9c658c into EAX\n2. Return the loaded value to the caller\n\nReturns:\nuint - The current game state value stored at address 0x6f9c658c\n\nNotes:\nThis is a simple accessor function that provides read-only access to a global\ngame state variable. The actual state value is maintained elsewhere in the\nbinary and accessed through this getter function. Called frequently by multiple\nfunctions for state inspection and conditional logic.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "e3ac026707246119be860314a2484370"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "D2sound_MNE_5b951ce55cbc": {
@@ -6525,11 +8668,43 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "92a4bfab0fc7a41edd95f045db6bec51",
         "PRO": "d3f10aca36e378bb7dcfc308d1c00291"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5b951ce55cbcc4370add941772917d85"
+      }
+    },
+    "D2sound_ADDR_6F9B8F00": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B8F00"
+      },
+      "rvas": {
+        "LoD/PD2": "0x8F00"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetAudioTimeoutConfig",
+      "signature": "uint GetAudioTimeoutConfig(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Returns the current audio timeout configuration value.\n\nAlgorithm:\n1. Load the global audio timeout configuration value from DAT_6f9c65b4\n2. Return the value in EAX\n\nReturns:\n- EAX: Audio timeout configuration value (uint)\n\nSpecial Cases:\n- This is a simple accessor function with no parameters or error handling\n- The global value is initialized by the audio subsystem during startup",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "494e56077a0fa8cb6a34c822a4cdd0c6"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "D2sound_STR_22ef6ba6c5e2": {
@@ -6557,11 +8732,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "3d14ae325bd5b1e342b3d6c1b8c9f451",
         "PRO": "9bc102aeeb2befe3b0bc7dc845687f48"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7c87977d67a6610e80a74baf6ae19137"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -6592,11 +8767,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f252eb9d8f7b7396f0f6845e8aa2f5d1",
         "PRO": "18f496eed1f704ec8ac202ce5bda64a9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c405d7ab0b432093d2ccff251cdf3499"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6632,11 +8807,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "2d5ab15472d87596d6c1ea32e688e9b1",
         "PRO": "90b8485df7b407dd3b15195cdd5acbb7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 25
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0b1b796bbded2ed4c9aea0fa39046eb9"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6673,11 +8848,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "576700df3307940cbd3895742d9bbaaf",
         "PRO": "cdd181f79c4c36ecdf08d903ded44b82"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 40
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2ba84a345043601d4bab86316bbb7870"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6720,11 +8895,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "05f7b845a5acd90e699189c992511e1a",
         "PRO": "b218216336d3d1d62079e44e6816433d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 37
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "49df1806eb8ac9c7a08b65d765d791c0"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6738,10 +8913,10 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_MNE_d14addc7929a": {
       "addresses": {
-        "LoD/PD2": "0x6F9B9B00"
+        "LoD/PD2": "0x6F9B9A10"
       },
       "rvas": {
-        "LoD/PD2": "0x9B00"
+        "LoD/PD2": "0x9A10"
       },
       "sizes": {
         "LoD/PD2": 31
@@ -6761,14 +8936,381 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "63bb3fd330e71edb2aadc1e02cb3b9e6"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d14addc7929abe91957b0bc29e051997"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B9A30": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9A30"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9A30"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetAudioOptionFlag",
+      "signature": "uint GetAudioOptionFlag(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Returns the audio option flag configuration value.\n\nAlgorithm:\n1. Load the audio option flag value from global config storage (0x6f9c64b4)\n2. Return the loaded value to caller\n\nReturns:\nuint - Audio option flag value (0 or 1), where 1 indicates option enabled\n\nSpecial Cases:\n- Value is initialized to 1 by InitializeAudioConfig and can be modified by external config reader\n- Option flag is stored as a 4-byte value at 0x6f9c64b4\n- This is a simple accessor function with no validation",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "997101b029dbe63c83442e66b3f7f0fc"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2sound_ADDR_6F9B9A40": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9A40"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9A40"
+      },
+      "sizes": {
+        "LoD/PD2": 31
+      },
+      "name": "InitializeNPCSpeech",
+      "signature": "uint InitializeNPCSpeech(uint resourceId)",
+      "calling_convention": "__fastcall",
+      "comment": "Initializes NPC speech system with the specified resource ID.\n\nAlgorithm:\n1. Receive resource ID in ECX (fastcall convention)\n2. Push resource ID onto stack as 4th argument\n3. Push string pointer \"NPC_Speech\" as 3rd argument\n4. Push zero (0) as 2nd argument\n5. Push string pointer \"Diablo II\" as 1st argument\n6. Call initialization function at 0x1018bec0\n7. Store resource ID to global variable at 0x6f9c64b0\n8. Move resource ID into EAX as return value\n9. Pop ESI and return\n\nParameters:\n  resourceId (uint ECX): Resource ID to initialize for NPC speech subsystem\n\nReturns:\n  uint (EAX): The same resource ID that was passed in\n\nSpecial Cases:\n  - Resource ID is stored in global variable 0x6f9c64b0 for external access\n  - Function acts as a pass-through wrapper around the initialization routine\n  - Part of Diablo II game engine initialization sequence",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d14addc7929abe91957b0bc29e051997",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d14addc7929abe91957b0bc29e051997",
+        "CFG": null,
+        "PRO": "7ba190f3181a17d660ff375f27516ee1"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d14addc7929abe91957b0bc29e051997"
+      },
       "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B9A60": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9A60"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9A60"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetAudioModeValue",
+      "signature": "uint GetAudioModeValue(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Returns the current audio mode configuration value (NPC Speech setting).\n\nAlgorithm:\n1. Load audio mode value from global config structure at offset 0x6f9c64b0\n2. Return the value in EAX to caller\n\nParameters:\nNone\n\nReturns:\nuint - Audio mode configuration value (0-3). Valid values:\n  0 = Mode 0\n  1 = Mode 1\n  2 = Mode 2 (Default)\n  3 = Mode 3\n\nSpecial Cases:\n- This is a simple getter for the audio mode field\n- The value is initialized to 2 by InitializeAudioConfig()\n- Can be modified via SetAudioModeValue() (Ordinal_10040)\n- Used by audio initialization and configuration routines\n\nRelated Functions:\n- InitializeAudioConfig() - Reads and validates audio configuration from external source\n- SetAudioModeValue() (Ordinal_10040) - Writes new mode value to global config",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "6648f993cd619b7c830788875aad02d1"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2sound_ADDR_6F9B9A70": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9A70"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9A70"
+      },
+      "sizes": {
+        "LoD/PD2": 31
+      },
+      "name": "SetPositionalBiasLevel",
+      "signature": "uint SetPositionalBiasLevel(uint biasLevel)",
+      "calling_convention": "__fastcall",
+      "comment": "Sets the positional bias level for Diablo II audio configuration.\n\nAlgorithm:\n1. Save the input bias level to ECX register (fastcall parameter)\n2. Call audio configuration function with:\n   - \"Diablo II\" identifier string\n   - \"Positional Bias\" configuration key\n   - Value 0 (third parameter)\n   - Bias level value (stored in ECX, param_1)\n3. Store the bias level in global variable DAT_6f9c64ac\n4. Load bias level into EAX for return\n5. Restore ESI and return to caller\n\nParameters:\n- biasLevel (ECX): Audio positional bias level (0-100 or similar range)\n\nReturns:\n- EAX: Returns the bias level value that was set\n\nSpecial Cases:\n- Global variable DAT_6f9c64ac is used to cache the current bias level\n- The external function at 0x1018bec0 handles actual configuration application\n- This is a simple wrapper that calls the audio config handler with fixed strings\n\nAudio Configuration Details:\n- \"Positional Bias\" affects how audio panning is applied in 3D space\n- \"Diablo II\" indicates this is Diablo II audio system configuration\n- The bias level parameter is passed through to the configuration handler",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d14addc7929abe91957b0bc29e051997",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d14addc7929abe91957b0bc29e051997",
+        "CFG": null,
+        "PRO": "edcfd527170d52ffb84538c53bc90489"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d14addc7929abe91957b0bc29e051997"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B9A90": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9A90"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9A90"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetPositionalBiasLevel",
+      "signature": "uint GetPositionalBiasLevel(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Returns the current positional bias audio configuration level.\n\nAlgorithm:\n1. Load audio config positional bias value from global data at 0x6f9c64ac\n2. Return value in EAX register\n\nParameters:\nNone\n\nReturns:\nuint - Positional bias level (typically 0-100 range, validated during initialization)\n\nSpecial Cases:\n- Value is initialized by InitializeAudioConfig during startup\n- Can be modified by SetPositionalBiasLevel (Ordinal_10022)\n- Default/fallback value is 0x32 (50 decimal)\n- Part of global audio configuration structure at 0x6f9c64a0\n\nAudio Configuration Structure Layout:\n  Offset  Size  Field Name      Type    Description\n  0x00    4     timeout_secs    uint    Timeout duration (0-3 seconds)\n  0x04    4     volume_level    uint    Volume percentage (0-100)\n  0x08    4     quality_level   uint    Sound quality (0-2)\n  0x0c    4     enabled_flag    uint    Audio enabled (0/1)\n  0x10    4     mode_value      uint    Audio mode (0-3)\n  0x14    4     positional_bias uint    Positional bias level (0-100)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "6f6a2fe96eb606f6f4ed61e533795575"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2sound_ADDR_6F9B9AA0": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9AA0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9AA0"
+      },
+      "sizes": {
+        "LoD/PD2": 31
+      },
+      "name": "SetDiabloMusicVolume",
+      "signature": "uint SetDiabloMusicVolume(uint volumeValue)",
+      "calling_convention": "__fastcall",
+      "comment": "Sets the music volume level for Diablo II.\\n\\nAlgorithm:\\n1. Save ESI register for later restoration\\n2. Copy input volume value from ECX to ESI\\n3. Call volume configuration function with:\\n   - \\\"Diablo II\\\" application identifier (0x6f9c0294)\\n   - \\\"Music Volume\\\" configuration key (0x6f9c0274)\\n   - 0 as configuration flags\\n   - volumeValue as the new volume setting\\n4. Store the volume value to global variable at 0x6f9c64a8\\n5. Return the volume value in EAX\\n\\nParameters:\\n- volumeValue: uint in ECX, the new music volume level to set\\n\\nReturns:\\n- uint in EAX: the volume value that was set\\n\\nSpecial Cases:\\n- The function uses __fastcall convention with first parameter in ECX\\n- The volume value is stored in a global location (0x6f9c64a8) for later retrieval\\n- Configuration call is made to external function at 0x1018bec0",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d14addc7929abe91957b0bc29e051997",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d14addc7929abe91957b0bc29e051997",
+        "CFG": null,
+        "PRO": "2272b86d96825ed075b6954a840088c5"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d14addc7929abe91957b0bc29e051997"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B9AC0": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9AC0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9AC0"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetMusicVolume",
+      "signature": "uint GetMusicVolume(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves the current music volume configuration value.\n\nThis function reads the music/quality volume level from the global audio configuration structure. The value represents the current audio quality setting (0-100) that was previously set during audio initialization or configuration updates.\n\nAlgorithm:\n1. Load the music volume value from global memory address 0x6f9c64a8\n2. Return the value in EAX\n3. Return to caller\n\nParameters:\nNone\n\nReturns:\nuint - The current music volume level (0-100). Value of 0 indicates minimum/muted, 100 indicates maximum quality.\n\nSpecial Cases:\n- Initial value is 2 (low quality) if not explicitly set during initialization\n- The returned value is always within 0-100 range due to validation in InitializeAudioConfig\n- Called by external initialization code at Entry Point (likely part of module initialization sequence)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "cdad2d26b39052377fcca57a0c1a2642"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2sound_ADDR_6F9B9AD0": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9AD0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9AD0"
+      },
+      "sizes": {
+        "LoD/PD2": 31
+      },
+      "name": "InitializeSoundMixer",
+      "signature": "void InitializeSoundMixer(void * pSoundContext)",
+      "calling_convention": "__fastcall",
+      "comment": "Initializes the Diablo II Sound Mixer system.\n\nAlgorithm:\n1. Save ESI register (callee-saved in fastcall)\n2. Load sound context pointer from ECX parameter\n3. Push four arguments for initialization:\n   - pSoundContext (the context pointer)\n   - NULL (terminator)\n   - Address of \"Master Volume\" string (0x6f9c0284)\n   - Address of \"Diablo II Sound Mixer\" string (0x6f9c0294)\n4. Call external initialization function at 0x1018bec0\n5. Store the returned mixer context at global address 0x6f9c64a4\n6. Load context pointer into EAX as return value\n7. Restore ESI and return\n\nParameters:\n  pSoundContext (ECX): Pointer to sound context structure\n\nReturns:\n  EAX: Pointer to sound context (echoes input parameter)\n\nSpecial Cases:\n  - Uses fastcall convention: first parameter in ECX, cleanup by caller\n  - Stores result globally at 0x6f9c64a4 for singleton access\n  - Magic numbers: 0x6f9c0284 = \"Master Volume\", 0x6f9c0294 = \"Diablo II Sound Mixer\"\n  - External function at 0x1018bec0 likely initializes DirectSound or similar audio system",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d14addc7929abe91957b0bc29e051997",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d14addc7929abe91957b0bc29e051997",
+        "CFG": null,
+        "PRO": "a0738aa045349aca10b1857bc6258e6e"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d14addc7929abe91957b0bc29e051997"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B9AF0": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9AF0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9AF0"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetAudioMixerState",
+      "signature": "dword GetAudioMixerState(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Returns the current audio mixer configuration state.\n\nThis function provides read-only access to a static audio mixer state value that is initialized and maintained by the audio subsystem initialization functions (InitializeAudioConfig and InitializeSoundMixer). The state value indicates the configuration of the audio mixing system.\n\nAlgorithm:\n1. Load the audio mixer state value from the global data location (0x6f9c64a4)\n2. Return the loaded state value in EAX\n\nParameters:\nNone\n\nReturns:\ndword - The current audio mixer configuration state value\n\nSpecial Cases:\n- The state value is initialized by InitializeAudioConfig and InitializeSoundMixer\n- Multiple readers access this state for validation (called from Entry Point and function 0x6f9c4dac)\n- The state is written to by audio initialization routines and read-only in normal operation\n\nData References:\n- 0x6f9c64a4: Global audio mixer state (dword, 4 bytes)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "d6ef5ce095bd6e7a9bdaeb664801955b"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "D2sound_ADDR_6F9B9B00": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9B00"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9B00"
+      },
+      "sizes": {
+        "LoD/PD2": 31
+      },
+      "name": "InitializeAudioTimeoutConfig",
+      "signature": "int InitializeAudioTimeoutConfig(int timeoutMs)",
+      "calling_convention": "__fastcall",
+      "comment": "Initializes the audio system timeout configuration.\n\nThis function initializes the sound mixer with a timeout configuration value and\nstores it in the global audio timeout config. The timeout value is passed to the\naudio initialization routine along with domain-specific strings identifying the\nDiablo II audio system and Sound Mixer component.\n\nAlgorithm:\n1. Store input timeout parameter in ESI register (parameter from ECX in __fastcall)\n2. Push timeout parameter as fourth argument to initialization function\n3. Push Sound Mixer component string address (0x6f9c02a0)\n4. Push Diablo II domain string address (0x6f9c0294)\n5. Push zero as third argument (reserved/unused)\n6. Call audio initialization function at 0x1018bec0\n7. Store timeout value in global config at 0x6f9c64a0\n8. Move timeout value to EAX and return it\n\nParameters:\n  timeoutMs (int) - Audio timeout duration in milliseconds, passed via ECX\n                    register (fastcall convention)\n\nReturns:\n  int - The timeout value that was set (echo return for confirmation)\n\nSpecial Cases:\n  - Function returns input value unchanged\n  - Global storage at 0x6f9c64a0 persists configuration across calls",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d14addc7929abe91957b0bc29e051997",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d14addc7929abe91957b0bc29e051997",
+        "CFG": null,
+        "PRO": "b8ddaa7f9b3700da3ddf2b9377458aa8"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d14addc7929abe91957b0bc29e051997"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9B9B20": {
+      "addresses": {
+        "LoD/PD2": "0x6F9B9B20"
+      },
+      "rvas": {
+        "LoD/PD2": "0x9B20"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "GetAudioTimeoutConfig",
+      "signature": "undefined4 GetAudioTimeoutConfig(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Setting prototype: undefined4 GetAudioTimeoutConfig(void)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "760b0eb2c0836c96db7276d8827eec5a"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "D2sound_MNE_24edb7dc41bc": {
@@ -6796,11 +9338,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "a38174bd4681a236fef388874564b67c",
         "PRO": "9fcaf715e30daa91ddbc45d2d1435ef3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 48
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "24edb7dc41bcee00376d97055f349061"
       }
     },
     "D2sound_MNE_bfc3ed25e915": {
@@ -6828,11 +9370,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "611ac7249e4fd351e25449da4ac291fb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bfc3ed25e9152f457419d9112a775bc2"
       }
     },
     "D2sound_MNE_4d560490b77b": {
@@ -6860,11 +9402,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1abbbed88598ab76171d956e8b753f75",
         "PRO": "d363ca85f8be91780d088860a401b175"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4d560490b77bf3b5146b14c1413f0461"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6895,11 +9437,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "fc21cabc67a11d2e1d34c83d9134404c",
         "PRO": "5797c75fe222e703988dae66cdd7a463"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c6e7054733fc415fff96379f6df31fce"
       }
     },
     "D2sound_MNE_8f8d52afaf5c": {
@@ -6927,11 +9469,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "9aca51d6d40a701b7777aecaf9165326",
         "PRO": "5abbe9f2bf93ec5650712c7f40b9c2a2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8f8d52afaf5cc45db77870ad7f38a3fe"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6962,11 +9504,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "c3cb0faaba76766a06657604ccd9d1b2",
         "PRO": "49d2ff4c0ac233aeed12bf0f610a5b33"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 42
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "22a1b6cd439e027651f376812a9ce3b4"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -6997,11 +9539,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "2c30d1f57bc306ed0da51afaa69f5e4d",
         "PRO": "c4bcc9c1cfeb654811107e7f522425c9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "634f5fd2b38b5a9728c3cfaee438889f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7032,11 +9574,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1a3388253df0a960af50e45b8ff4dc92",
         "PRO": "300be42ef56768e549e94c0165d887a4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "35a926809c02214f1c021da8fe53c5e6"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -7067,11 +9609,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "b9511acf21e58204725cef99cec38995",
         "PRO": "f15a95e3051cb6d335ff7de586643ba2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 66
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e1ee6679146d52a0e385275fed0f7c10"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7079,10 +9621,10 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_MNE_0e6c60682690": {
       "addresses": {
-        "LoD/PD2": "0x6F9BA509"
+        "LoD/PD2": "0x6F9BA4F6"
       },
       "rvas": {
-        "LoD/PD2": "0xA509"
+        "LoD/PD2": "0xA4F6"
       },
       "sizes": {
         "LoD/PD2": 19
@@ -7102,19 +9644,51 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "5e3d6b547736cbf79162cdb201a0ed7d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0e6c60682690c227c51e43c33045f40b"
+      }
+    },
+    "D2sound_ADDR_6F9BA509": {
+      "addresses": {
+        "LoD/PD2": "0x6F9BA509"
+      },
+      "rvas": {
+        "LoD/PD2": "0xA509"
+      },
+      "sizes": {
+        "LoD/PD2": 19
+      },
+      "name": "__fdivrp_sti_st",
+      "signature": "void __fdivrp_sti_st(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Setting prototype: void __fdivrp_sti_st(void)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0e6c60682690c227c51e43c33045f40b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0e6c60682690c227c51e43c33045f40b",
+        "CFG": null,
+        "PRO": "52ce292337931b43073afd0536484568"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0e6c60682690c227c51e43c33045f40b"
       }
     },
     "D2sound_MNE_fa9a30d8df14": {
       "addresses": {
-        "LoD/PD2": "0x6F9BA568"
+        "LoD/PD2": "0x6F9BA51C"
       },
       "rvas": {
-        "LoD/PD2": "0xA568"
+        "LoD/PD2": "0xA51C"
       },
       "sizes": {
         "LoD/PD2": 76
@@ -7134,11 +9708,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "19b5aac2d60824e43b0a3ed47c9722dc",
         "PRO": "bf5ac01cb789fcf613241922fae2d14f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fa9a30d8df145c43da3992fb15aef931"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9BA568": {
+      "addresses": {
+        "LoD/PD2": "0x6F9BA568"
+      },
+      "rvas": {
+        "LoD/PD2": "0xA568"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "DivideDoubleWithExceptionHandling",
+      "signature": "double DivideDoubleWithExceptionHandling(double dividend, double divisor)",
+      "calling_convention": "__stdcall",
+      "comment": "Performs floating-point division with special case handling for NaN/infinity and FPU exceptions.\n\nAlgorithm:\n1. Extract exponent bits from divisor using mask 0x7ff00000\n2. Compare exponent to 0x7ff00000 (indicates NaN or infinity)\n3. If divisor is special value (NaN/infinity), perform direct FDIV and return result\n4. If divisor is normal, read FPU status word using FNSTSW\n5. Check FPU exception flags using mask 0x3800 (invalid operation, denormalized, etc.)\n6. If FPU has exceptions set, load dividend from stack, call exception handler at 0x6f9ba4f6\n7. If FPU clean, exchange ST0/ST1, allocate 12-byte stack buffer\n8. Store ST0 (divisor) as extended double to buffer, load dividend from stack\n9. Call exception handler at 0x6f9ba4f6 with dividend on FPU stack\n10. Load extended result from buffer, exchange with divisor, deallocate buffer\n11. Return result in ST0 via __stdcall (caller cleans 8 bytes of parameters)\n\nParameters:\n  dividend (double, [ESP+0x8]): First operand for division\n  divisor (double, [ESP+0xc]): Second operand for division\n\nReturns:\n  ST0 (double): Result of dividend / divisor, or NaN/infinity if divisor is special\n\nSpecial Cases:\n  - Divisor is NaN or infinity (exponent 0x7ff): returns NaN or infinity directly\n  - FPU exception flags set (mask 0x3800): calls exception handler for error recovery\n  - Normal division: exception handler ensures proper result even with denormalized inputs\n\nNote: Function uses 1 stack-allocated temporary variable (local_10 - 12-byte extended precision buffer) optimized away by decompiler",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fa9a30d8df145c43da3992fb15aef931",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fa9a30d8df145c43da3992fb15aef931",
+        "CFG": "9507edb72158a2a748bebdf37e4cfd3c",
+        "PRO": "230b19190121aa2fdec58f20825c2037"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fa9a30d8df145c43da3992fb15aef931"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7146,10 +9755,10 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_MNE_269b7d5856cd": {
       "addresses": {
-        "LoD/PD2": "0x6F9BA668"
+        "LoD/PD2": "0x6F9BA61C"
       },
       "rvas": {
-        "LoD/PD2": "0xA668"
+        "LoD/PD2": "0xA61C"
       },
       "sizes": {
         "LoD/PD2": 76
@@ -7169,11 +9778,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "19b5aac2d60824e43b0a3ed47c9722dc",
         "PRO": "bf5ac01cb789fcf613241922fae2d14f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "269b7d5856cdb9005a57b4cc52158551"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "D2sound_ADDR_6F9BA668": {
+      "addresses": {
+        "LoD/PD2": "0x6F9BA668"
+      },
+      "rvas": {
+        "LoD/PD2": "0xA668"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "__adj_fdivr_m64",
+      "signature": "uint __adj_fdivr_m64(double * pdDoubleValue, uint dwHighOrder)",
+      "calling_convention": "__stdcall",
+      "comment": "Adjusts floating-point division for 64-bit double precision values with special case handling.\n\nAlgorithm:\n1. Check if input value is infinity or NaN by testing exponent bits (0x7ff00000 mask)\n2. If special value detected, return immediately with EAX register value\n3. Check FPU status word for exception conditions (0x3800 mask for precision, underflow, overflow)\n4. If FPU exceptions detected, call __fdivrp_sti_st to handle division with pop\n5. If no exceptions, perform normal division via __fdivrp_sti_st\n6. Return result in EAX register\n\nParameters:\n- pdDoubleValue: Pointer to 64-bit double precision floating point dividend\n- dwHighOrder: High-order 32 bits of double precision divisor for special value detection\n\nReturns:\n- uint: Status code or adjusted result value in EAX\n- Returns immediately if input is infinity/NaN (0x7ff00000 in exponent)\n- Returns after FPU division adjustment for normal values\n\nSpecial Cases:\n- 0x7ff00000: IEEE 754 double precision infinity/NaN exponent pattern\n- 0x3800: FPU status word mask for precision, underflow, overflow exceptions\n- Handles both exceptional and normal division cases through unified __fdivrp_sti_st call\n\nMagic Numbers Reference:\n- 0x7ff00000: IEEE 754 double precision exponent mask for special values (infinity/NaN)\n- 0x3800: FPU status word exception mask (bits 11,12,13 for precision/underflow/overflow)\n\nError Handling:\n- Early return on infinity/NaN detection prevents invalid FPU operations\n- FPU status checking ensures proper exception handling during division\n- Unified division routine handles both normal and exceptional cases",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:269b7d5856cdb9005a57b4cc52158551",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "269b7d5856cdb9005a57b4cc52158551",
+        "CFG": "19b5aac2d60824e43b0a3ed47c9722dc",
+        "PRO": "230b19190121aa2fdec58f20825c2037"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "269b7d5856cdb9005a57b4cc52158551"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7204,11 +9848,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "4174b02bd8ca39f9fb30e0a24a42e84d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d9fc9881c66fc4db9c90a259ff286a44"
       }
     },
     "D2sound_MNE_c70484661a7b": {
@@ -7236,11 +9880,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "aac193f62447e0149063d8cbfe725891",
         "PRO": "a69a7d0355f70bc5a84a52904bc4615c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 39
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c70484661a7b6b9a5f1519c92e672da0"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7271,11 +9915,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "d048fe12ac70ddbdf57720d2e0dd8b92",
         "PRO": "17312f85a67e8a2854c6ee6d1fff66ea"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ba64e7d70c2bcd8b3838963a89363cf4"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -7306,11 +9950,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "fa4f6b901d2c4b42a9cd8692b2f1a3c1",
         "PRO": "a69a7d0355f70bc5a84a52904bc4615c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 25
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e28850ae7dbb08bbb7fa3d1ca4ff2803"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7341,11 +9985,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1acfc7f97d08d10f8d33e74e1c437d1e",
         "PRO": "47d977a1d49e34cbda811ff40c8e1a77"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "15fd41782864ffd4b958e0ed4ed4dea9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7376,11 +10020,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "fbc4d97448b0d304e481d5d0a17a30e7",
         "PRO": "f006c300992eb020d9c256bc3fdb393b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0be5866c35abc0fb59235d2363df563a"
       }
     },
     "D2sound_MNE_7ee678edebf0": {
@@ -7408,11 +10052,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "eedaec691a4b94e5a795ce955c5fac49",
         "PRO": "b2674a8ef7b84fc742ebdb7ed6679b4e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7ee678edebf04632b65afdb541cebe3a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7443,11 +10087,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "ad60745e7a538a03b6fca85abc2d64ca",
         "PRO": "a9f2908cd858fee16e0500c0e527d630"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ce3e17d01f8a4102c772a8dc6bdc555d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -7478,11 +10122,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e4d929dcade813bcfed0f23f20c25712",
         "PRO": "7486603bcf02da672eaf7f0d4e702110"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "80bedbb0a206021561883be0c11d6af7"
       }
     },
     "D2sound_STR_16032f476aba": {
@@ -7510,11 +10154,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "c5b39aa30eb73d7ab6487045fd767833",
         "PRO": "30bc0e315b6e570515faf5a2d170d3c6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "968971b61fab7a3d5eab169ac4db17ac"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -7545,11 +10189,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "235509b36354db546ac99e5f88e8d245",
         "PRO": "877799b56e30bfba8b144c8c24c6b83c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6426717c049ff49b2b81b64802cbd366"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7580,11 +10224,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "9fa083bedf05c37fb363ad89f53f0377",
         "PRO": "617e74b1865b4753a5ac47ff6172c8fb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "21ec1ce544b50687ae2fb7f68cea8807"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -7615,11 +10259,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5a6a1bad4884a279605e3598d136f1d3",
         "PRO": "72272168e8bf943453339b0c021a1492"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fd5b33dc54aadb52ffc0a2fd4afb6504"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -7650,11 +10294,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "67f3f1f2dfbf8f1f142eb07aaeca410b",
         "PRO": "80af48a31f979afdd55f70ea273d67e5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "03455c508a72225478b465bc4da0dc85"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7685,14 +10329,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "0ba32f22434d5de97af5dabc5af8a9aa",
         "PRO": "01a513091671607b2f3ca269c59b4680"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f50494c5982aa77d2240c41fce332436"
+      },
+      "param_counts": {
+        "LoD/PD2": 6
+      }
+    },
+    "D2sound_ADDR_6F9BB14E": {
+      "addresses": {
+        "LoD/PD2": "0x6F9BB14E"
+      },
+      "rvas": {
+        "LoD/PD2": "0xB14E"
+      },
+      "sizes": {
+        "LoD/PD2": 18
+      },
+      "name": "__setdefaultprecision",
+      "signature": "void __setdefaultprecision(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Sets the default floating-point precision to 53-bit mantissa for double precision arithmetic.\n\nAlgorithm:\n1. Call __controlfp to configure floating-point control register\n2. Set precision control to 53-bit mantissa (PC_53) \n3. Apply precision mask to only modify precision bits\n4. Return without status checking\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nMagic Numbers Reference:\n0x10000 - PC_53 precision control flag (53-bit mantissa for double precision)\n0x30000 - _MCW_PC precision control mask (bits affecting precision control)\n\nSpecial Cases:\nFunction assumes __controlfp succeeds and performs no error checking.\nSets Visual Studio 2003 default precision for consistent floating-point behavior.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:301bd5440f60703ca7a24a8fb30f1e56",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "301bd5440f60703ca7a24a8fb30f1e56",
+        "CFG": null,
+        "PRO": "eaa5d7a2f93c31bc8cf63158f4c5e9cb"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 6
+      "mnemonic_hashes": {
+        "LoD/PD2": "301bd5440f60703ca7a24a8fb30f1e56"
       }
     },
     "D2sound_MNE_7ae8facd2848": {
@@ -7720,11 +10396,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "c00675d81848e1dfbe5c607ffe90e6ab",
         "PRO": "e95b46ff04a69a89c0abbd95548bc5c0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7ae8facd28484655a18ca60b688001a6"
       }
     },
     "D2sound_STR_28768683ecd1": {
@@ -7752,11 +10428,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e6f5aaef1039a61daa103ba7f60faedc",
         "PRO": "32a069cdd010b8edea48de6aa3ef8c02"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f8699cbba1b01584e66dc48ae13d6b14"
       }
     },
     "D2sound_MNE_6694b257f30e": {
@@ -7784,11 +10460,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "093f36e40cc4a7861754e4e870ef1391",
         "PRO": "3a83795c4f86f8950336f294a8b66446"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6694b257f30e581cdcdc8a268e857976"
       }
     },
     "D2sound_MNE_44f4f246fc7b": {
@@ -7816,11 +10492,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "648c4753ec9d6b9b2fad29d2a5e5af8d",
         "PRO": "0b3fa50fdd3a1dc2f96f8b826e4de7c8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "44f4f246fc7b0dfe7a4c27a8f0c38630"
       }
     },
     "D2sound_MNE_f21ef051543e": {
@@ -7848,11 +10524,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "e94d86c0f5836b956740a50bf2ccf356"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f21ef051543eddd7d8d7d19f4681593d"
       }
     },
     "D2sound_MNE_64cc1ab4b078": {
@@ -7880,11 +10556,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "71dbbc22767f1a8619d40503063424ab",
         "PRO": "2576d252effbb472fe29c4c7f418ba3c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 81
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "64cc1ab4b07817fcc1a495a7dd4f85f3"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7915,11 +10591,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "97543a482edce26b5d1274d6a4ca10c7",
         "PRO": "c46ec55b50403c196115302785682712"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d5f0d2733adf4d1dce64e7fb83efd1d4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7950,11 +10626,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f6ba15919494a6e0de51957ffb31b089",
         "PRO": "b5ba49bd58125ef109dd1a838e946bc1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "df587a37c8639f83cd433c3a3fbdafc4"
       }
     },
     "D2sound_MNE_1e5021910108": {
@@ -7982,11 +10658,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e9864efb0914fe644077aff049229b5b",
         "PRO": "5f44c9d706744ea9e2ce14e025e6412f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1e502191010869fca5d6ea71e353f408"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8017,11 +10693,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "0345c8892098e4ce43dca763d1e8ec63",
         "PRO": "cb03b749cfb5a6cb7850eed4c81c641f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2efd2f634b43779c5726887ddad8796b"
       }
     },
     "D2sound_MNE_038f21ccadf0": {
@@ -8049,11 +10725,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "c3c38319caaa90934e927a5b8cadf44b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "038f21ccadf05fbd1bec4c0181e46e90"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8084,11 +10760,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "82ab21280f7756b94aebf888fcf167cf",
         "PRO": "b92f53eeaeabab194d9e5084e2cb23a3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "58c3c7e175be8c196c57976e375f315f"
       }
     },
     "D2sound_MNE_3c4be6dbcf12": {
@@ -8116,11 +10792,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "80158248b60f953891e8fc7e6daa7eff",
         "PRO": "07e743cd59663008aa355e28886b82e5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c4be6dbcf1260e7f12c4f60862ff7d6"
       }
     },
     "D2sound_MNE_d63502919c4c": {
@@ -8148,11 +10824,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "7aacd61a1d81f3299fa55646a3677b47",
         "PRO": "dbecc4592f372f116866c3eeaf6ab0c7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d63502919c4c985cfbdccf3184dd15d0"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -8183,11 +10859,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "19c71a436cd9b62cd94468fdd6017761",
         "PRO": "d4534ea44172405569ef7c69e3511570"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9215dd17545429f5a2114f3f9c06e96c"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -8218,11 +10894,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "d88336b08af1715c644e9a02a67eb019"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f015c1c75c5efb05d68ef52e0407e8b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8253,11 +10929,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "6ac2b36b650e9421f95685b6edc12d6e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2499e8fc59692f6e5479749bdf8573b2"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8288,11 +10964,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "51d5ddd4ecc1dafccdeb273dae1d2adf",
         "PRO": "9f8021330ca888b56e19c20ebdb2b790"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7e73328c30de0e16ec37226d5c0fbaeb"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8323,11 +10999,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "7750d3e200f3a3c6416ddf41088bb841",
         "PRO": "8cb32a0d56a2452e759161b6ffdb7e9f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "118a84069540ef5bdaff27e56dcaadec"
       }
     },
     "D2sound_MNE_0c71b5715e2e": {
@@ -8355,11 +11031,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "1d927b07221b2d93b8f37eb335ea758e",
         "PRO": "456d89e7bb0dbf9148c82d622f3167e8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0c71b5715e2e7c5f22ef70735f27ff6f"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -8390,11 +11066,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "2a243539dd196277feb3e0d2576d58d9",
         "PRO": "95b801d8d6037d2c6a83a97f076feca4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a73632a203a909b26ae754b1694e766c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8425,11 +11101,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "363c3b3e5522660d364c8efb5c45b90a",
         "PRO": "1cd40860b5085be3a8f29d67a357b9c4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 35
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "953b88fcc92998ca7186d4cbec68693d"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8460,11 +11136,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "cb8eff8eb27b04d335095ce75c22ce5f",
         "PRO": "217443a6ab0b2833f2937bf021aaf5cd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6fccd9d03ed4f3aec03022e6df14f4f5"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8495,11 +11171,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "6b04914845343aef842ac72ada5146ad",
         "PRO": "ec80bbce0ebae89ca3c161c42bfaf671"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "28413b8bd9ddfb3032353a0938531af3"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8530,11 +11206,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "97543a482edce26b5d1274d6a4ca10c7",
         "PRO": "7365ce6234d1c82258fcb77a49f826af"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d1605fa863a6daa5441d188cba14b16b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8565,11 +11241,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
         "PRO": "e28c28e73495db16cbdecab1ac63d34c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "549d5b8046a6f807c0249d1d16a7d887"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8600,11 +11276,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "722628398da33b1109acda7d875be5d4",
         "PRO": "a04f218dc6e4eddbc8409f96e66483a5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4325b0f74a7ab70f3912235413ec786a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8635,11 +11311,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "349c77f53c00e5d2b17a0ac8dc3f06b3",
         "PRO": "aae200d257dfcc5dba17b6b52c6da243"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2c7cab825b88bfd42a85feb377dd1d15"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8670,11 +11346,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "442586d9f6169fcc4a7c39483eabd545",
         "PRO": "ee24a9f04c93ba392409927f8f51060b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 20
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7eeb91add89e62104683a18ab6e9d675"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8682,10 +11358,10 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_MNE_09d6403e834e": {
       "addresses": {
-        "LoD/PD2": "0x6F9BC8CA"
+        "LoD/PD2": "0x6F9BC8B4"
       },
       "rvas": {
-        "LoD/PD2": "0xC8CA"
+        "LoD/PD2": "0xC8B4"
       },
       "sizes": {
         "LoD/PD2": 22
@@ -8705,11 +11381,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "81d5ba5a009abbe91f9495cf2d526c51"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "09d6403e834e217532debf7a54bafa14"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2sound_ADDR_6F9BC8CA": {
+      "addresses": {
+        "LoD/PD2": "0x6F9BC8CA"
+      },
+      "rvas": {
+        "LoD/PD2": "0xC8CA"
+      },
+      "sizes": {
+        "LoD/PD2": 22
+      },
+      "name": "FID_conflict:__ld12tod",
+      "signature": "INTRNCVT_STATUS FID_conflict:__ld12tod(_LDBL12 * _Ifp, _CRT_DOUBLE * _D)",
+      "calling_convention": "__cdecl",
+      "comment": "Convert 12-byte long double format to standard double format.\n\nAlgorithm:\n1. Validate input parameters _Ifp (source 12-byte long double) and _D (destination double)\n2. Call __ld12cvt core conversion function with parameters:\n   - (ushort *)_Ifp: Source 12-byte long double cast to ushort array\n   - (uint *)_D: Destination double cast to uint array  \n   - (int *)&DAT_6f9c5bd0: Conversion control/format descriptor table\n3. Return conversion status from __ld12cvt\n\nParameters:\n- _Ifp (_LDBL12 *): Pointer to source 12-byte long double format\n- _D (_CRT_DOUBLE *): Pointer to destination standard double format\n\nReturns:\n- INTRNCVT_STATUS: Conversion status (SUCCESS=0, various error codes for overflow/underflow/invalid)\n\nSpecial Cases:\n- Function is simple wrapper around __ld12cvt core implementation\n- Uses shared conversion descriptor table at DAT_6f9c5bd0\n- Part of Visual Studio 2003 CRT math library (multiple base names __ld12tod/__ld12tof)\n\nMagic Numbers Reference:\n- DAT_6f9c5bd0: Conversion format descriptor table for double precision target",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:09d6403e834e217532debf7a54bafa14",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "09d6403e834e217532debf7a54bafa14",
+        "CFG": null,
+        "PRO": "143ba4873a2092ec93df008aa9663d4b"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "09d6403e834e217532debf7a54bafa14"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8717,10 +11428,10 @@ var FUNCTIONS_D2sound_dll = {
     },
     "D2sound_MNE_d0108701376b": {
       "addresses": {
-        "LoD/PD2": "0x6F9BC925"
+        "LoD/PD2": "0x6F9BC8E0"
       },
       "rvas": {
-        "LoD/PD2": "0xC925"
+        "LoD/PD2": "0xC8E0"
       },
       "sizes": {
         "LoD/PD2": 69
@@ -8740,11 +11451,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "a2d093ef31cc49add33192fa15612d47"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d0108701376b16ac6499325944a4e45e"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "D2sound_ADDR_6F9BC925": {
+      "addresses": {
+        "LoD/PD2": "0x6F9BC925"
+      },
+      "rvas": {
+        "LoD/PD2": "0xC925"
+      },
+      "sizes": {
+        "LoD/PD2": 69
+      },
+      "name": "ConvertStringToDouble",
+      "signature": "void ConvertStringToDouble(_CRT_DOUBLE * pDoubleOut, byte * pDecimalString)",
+      "calling_convention": "__cdecl",
+      "comment": "Converts a decimal string representation to a double-precision floating point value with stack buffer overflow protection.\n\nAlgorithm:\n1. Load global stack canary value from DAT_6f9c56c0 and XOR with stack frame pointer to create a per-call canary\n2. Store the canary in stack slot [EBP-4] for verification at function exit\n3. Call ParseDecimalString to parse the input decimal string (pDecimalString) into long double format (longDoubleValue) and extract exponent (decimalExponent)\n4. Call __ld12tod to convert the 12-byte long double value to 8-byte double-precision format, storing result at pDoubleOut\n5. Verify stack canary by XORing stored canary with current stack frame pointer - if mismatch detected, jump to error handler\n6. Call FUN_6f9b47e5 with XORed canary value for cleanup/verification\n7. Return to caller\n\nParameters:\n- pDoubleOut (_CRT_DOUBLE *): Output parameter, pointer to CRT_DOUBLE where converted value is stored\n- pDecimalString (byte *): Input parameter, pointer to null-terminated decimal string to parse (e.g., \"3.14159\")\n\nReturns:\n- void: Function returns no value; result is stored via pDoubleOut pointer\n\nSpecial Cases:\n- Stack canary mismatch indicates buffer overflow attempt; calls error handler (FUN_6f9b47e5)\n- Handles extreme exponents through ParseDecimalString delegation\n- Requires global canary seed at DAT_6f9c56c0 to be initialized",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:d0108701376b16ac6499325944a4e45e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d0108701376b16ac6499325944a4e45e",
+        "CFG": null,
+        "PRO": "a2d093ef31cc49add33192fa15612d47"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d0108701376b16ac6499325944a4e45e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8775,11 +11521,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "d07cb40aeb07237476d52676c927435a",
         "PRO": "865b14b419b1a6f9a5981b0a9ec610d4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f7937fb067350d139a4f89ae55a00917"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8810,11 +11556,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "fc5d450afd52ad404d439019afee5207",
         "PRO": "5d2b83b0034359c3b23c6dba310d5a9e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "019950436ea0c15cb62fdba8ce181372"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8845,11 +11591,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "0deb23a0825f9d852d60b8316eebe252"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "91e85de7f1df15bac4c74b0caf518a31"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8880,11 +11626,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "30497491f77bd5f594f7bc3b4d751710",
         "PRO": "d7747158697a2b9b9c62ab34cb2090d5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 26
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4ccc97743d9837257b044f8cb70aafb7"
       }
     },
     "D2sound_MNE_573ef52db1c0": {
@@ -8912,11 +11658,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5e9cf973cf6c6a6c6fd62abfd520d057",
         "PRO": "c929b45524c8dcacc1c64778a74bb7de"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 26
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "573ef52db1c0502425f5c4477c52e1c6"
       }
     },
     "D2sound_MNE_d0e2b07b7895": {
@@ -8944,11 +11690,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "6c88070a9d1b3bf10cd919663a9c03e2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d0e2b07b7895a0cd732f2691caec5399"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8979,11 +11725,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "1d8ceb55870a92a5d13ad99654078b9d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "03d2d9a1894bad6481c3d75928ae7b95"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9014,11 +11760,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "ca4b3470541a7f1b4af2350254cd4523",
         "PRO": "5f747f85b3a5188536b2daa855966508"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 71
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d52f75ee99221e82332ba1e2c1d2bafa"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -9049,11 +11795,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "68ba03bdb68dfed29f9a239223d5f39b",
         "PRO": "58a0a97d65f99e60005970b0d73b1e03"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 32
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8193641d08c8ae704d69d5b8c671a293"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -9084,11 +11830,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "ad394f0243f0259f439ca5dfcaed752f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5b53deeaee2f2e36d1b6e935bca6b0ee"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9119,11 +11865,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "65e7da282a57368285623946497912d5",
         "PRO": "b05dea8c225bd5ec0b6e686bb0d96923"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "524fd89ddf8cd302152cccf17782ec81"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9154,11 +11900,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "a9df541ebd1c78a9489ce2fd30a9b726"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c2d88561bc66a9a3fa3664be1df6f9e8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9189,11 +11935,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "cca987bf92bb6ff6c3156fd073775652",
         "PRO": "614e71bfd9f37d6578ef0d371da967f9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2ec5ac5ebb611e5364351abf011810d6"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9224,11 +11970,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "e79118e273ac7d5c9c6df16f78e099a8",
         "PRO": "03dbab0725c0461c6cba45e54ad6929f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9e04031ea01b653d189e39211f9b145c"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -9259,11 +12005,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "5ac69ddc4dc620d0fa43b9c6ebcc7e34",
         "PRO": "4788371aeb00092042a82d0f103cc412"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c4400c8562aa84099781d0cf50c17c5c"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -9294,11 +12040,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "8de88aa5a2ff6c2a27fe35242cac67b4",
         "PRO": "592cde8777105acd14104e1a687e5fa8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8d620fa2863768144d8aebe01f0829de"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9329,11 +12075,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "636133735ea2668356c76a7d7c718ca0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ecf23adbf69da5c45f5232ddf63ff9c3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9364,11 +12110,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "23addef651b78e84b59c048c86318797"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "df39be31c90d40388c4132cbde70d848"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9399,11 +12145,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "722ed1e82370bd3730433905371ea209",
         "PRO": "f3f02189f026b250f7c2eeea015b9547"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6dd9e098c401c5314529c240c6cfca58"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -9434,11 +12180,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "3ef5ce516ea11458619b625f0d5cf9a8",
         "PRO": "f1b6c4b656c56680d445da3c5e3dcccd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 123
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "51067a812fadc7d24e800d427a3a129f"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -9469,14 +12215,46 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "231080f647c368f267ab09a722998c2d",
         "PRO": "bb6ad5a9cc343c0507e3a029e38be7ea"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 59
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0388957b0fc3482b6c2688de750f3211"
+      },
+      "param_counts": {
+        "LoD/PD2": 6
+      }
+    },
+    "D2sound_ADDR_6F9BDA83": {
+      "addresses": {
+        "LoD/PD2": "0x6F9BDA83"
+      },
+      "rvas": {
+        "LoD/PD2": "0xDA83"
+      },
+      "sizes": {
+        "LoD/PD2": 3
+      },
+      "name": "InitializeFloatingPointMode",
+      "signature": "int InitializeFloatingPointMode(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initializes floating-point control mode and returns success status.\n\nThis function is called during floating-point environment setup and error handling\nto initialize the floating-point control state. It returns 0 to indicate successful\ninitialization.\n\nAlgorithm:\n1. Clear EAX register (XOR EAX, EAX) to set return value to 0\n2. Return from function with success status\n\nReturns:\nint - 0 on successful initialization, used as status code by caller\n\nContext:\nCalled from FUN_6f9bcefb during error handling when floating-point state needs\nto be checked or initialized before further floating-point operations.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:acbc2c857bf1a8401ca8fe5de1c0ec70",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "acbc2c857bf1a8401ca8fe5de1c0ec70",
+        "CFG": null,
+        "PRO": "7206840be1be8fa373a01e5868c0863f"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 6
+      "mnemonic_hashes": {
+        "LoD/PD2": "acbc2c857bf1a8401ca8fe5de1c0ec70"
       }
     },
     "D2sound_MNE_2dfd4c619a53": {
@@ -9504,11 +12282,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "77fdd9a1bb838a20e4385f5adcb4eb4b",
         "PRO": "11274a8dcbbf42a927f9736d216d5dd8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 63
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2dfd4c619a532db9b09184566755e39d"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -9539,11 +12317,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "01a003f325b3ae724802a4081f0dcedd",
         "PRO": "4bec92df8ddf778f0a31570481018d91"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 58
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bd26660a5c3bb450be04aed223c70830"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -9574,11 +12352,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "9f0e6dcc6217912767c0e6d0aa226117",
         "PRO": "578823ea30c16b638421af32d6eb9ab3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "292f205a8ae52b2efacb41fa43053bdd"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9609,11 +12387,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "198ed6423479e7e841c8d783de210331"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "58d1fb148bc62cfcf756bcba05f86ccf"
       }
     },
     "D2sound_MNE_42778b58dd0d": {
@@ -9641,11 +12419,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "79fce4ef20d93f024d9b1d693ae98a5e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "42778b58dd0d14715b1955d2e17baad3"
       }
     },
     "D2sound_MNE_80c2e5debd16": {
@@ -9673,11 +12451,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": null,
         "PRO": "ea5c247f03dba2e563587ca1c755f21e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "80c2e5debd168e4e0485e934e71a955d"
       }
     },
     "D2sound_MNE_ea28d68d4b7c": {
@@ -9705,11 +12483,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "7502e22954c3d2f1a19df576ed7ccc51",
         "PRO": "9ecec5cf4c4f38ad1a2615a7166f24cc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ea28d68d4b7ce7d535c6ca874aba9cdf"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9740,11 +12518,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "f7ce5b6b8fca87572460b08b83d6e995",
         "PRO": "f25d4b9f3905f403a4f0f3f36506a848"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 48
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e57f9b957e5ffdb4b85cc387a6cef2b2"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9775,11 +12553,11 @@ var FUNCTIONS_D2sound_dll = {
         "CFG": "a9a3f776447da6b72fc11c4aab1f0885",
         "PRO": "b8d3f5fb333344c51f5ead0fa838674b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6cc300b1da5eeec1802d54785701cebf"
       },
       "param_counts": {
         "LoD/PD2": 3

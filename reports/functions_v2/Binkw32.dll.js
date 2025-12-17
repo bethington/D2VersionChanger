@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-15T15:44:29.888678
+// Generated: 2025-12-16T18:31:58.018344
 // Functions for binkw32.dll
 // Versions: LoD/PD2
 
@@ -33,11 +33,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "8cc6ad9b5e9270959ff0e809933480e7",
         "PRO": "6794e00ecab07d376a641171904c0877"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ccf71b7c6bd67f4220ac02d284da0560"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -68,11 +68,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "c28d843778d6313eca5e15ea77ffbb3e",
         "PRO": "62e81e4974f36d793731d84b609054f2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ce7b7bb0113fd49b4bbcff6f485c13e8"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -103,11 +103,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f641a76fc092a259b0952767ed53bb71",
         "PRO": "48652219fb5ceef43a9902f66a3963ce"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8a158e28828156dcb58ea62c4cc81c4f"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -138,11 +138,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "475c0c4b0ae1fd09c8f312cdf6dbcc7a",
         "PRO": "9917dffabd88c4e4ae91db0a91066bce"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8941e8b912ae2ef8e03da6f313394db0"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -173,11 +173,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "3c2c2a488caa49d997b99da92039569f",
         "PRO": "4579dbd1be34c135b618b15641603643"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "70e19c34028b2fb63cd0f4868863792f"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -213,11 +213,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "191f77019e84df1cff29622c5f75f5a6",
         "PRO": "25926f17c86edf710ca7563c809c015a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 55
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fbd16f78809eb1e67dde550b7e2fcb7e"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -254,11 +254,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ca13b0936d7d2a42bfa9fd47b995589c",
         "PRO": "a90d819a6ae1fb410ac90d35417230bb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0b5d66b3662b4610e5335569925079fb"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -294,11 +294,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "214332a222f1a5a253220cd69ccebffe",
         "PRO": "5e5983c62b5d4103b1195b0a4dcdc59e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b44c1e185c2c0726e0d35b2a2760d526"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -334,11 +334,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "08d8b4f09c7ccfc6dedc603174452543",
         "PRO": "24e881c66cbfac424d938e1764f6493b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "02a4d84f0677d99c67e86a8e3a1e4a0f"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -374,11 +374,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7d211539dae80d28a7ea6f9850cdc7fb",
         "PRO": "5ca8448311cf83f64a4cd318d83a3c03"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bb60d25eda889adae0739398f3eb5ece"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -409,11 +409,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "6cc6399cc0ad2eaa3646b7e25e576b8a",
         "PRO": "55ee6e8ec8917f1b0c0cca18e8e57baa"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5ca552f677d9d85d47471669a71b39b"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -421,10 +421,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_c1c99cf2421b": {
       "addresses": {
-        "LoD/PD2": "0x03821C50"
+        "LoD/PD2": "0x03821C20"
       },
       "rvas": {
-        "LoD/PD2": "0x1C50"
+        "LoD/PD2": "0x1C20"
       },
       "sizes": {
         "LoD/PD2": 39
@@ -444,11 +444,46 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "912c17003ec1e8560f7b788a74738fe3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c1c99cf2421bbca4d93b6ed9360dc2ea"
+      },
+      "param_counts": {
+        "LoD/PD2": 4
+      }
+    },
+    "binkw32_ADDR_03821C50": {
+      "addresses": {
+        "LoD/PD2": "0x03821C50"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1C50"
+      },
+      "sizes": {
+        "LoD/PD2": 39
+      },
+      "name": "ApplyDCTTransformBlock",
+      "signature": "void ApplyDCTTransformBlock(uchar * pSourceBuffer, int nStride, short * pDCTCoefficients, int nBlockIndex)",
+      "calling_convention": "__stdcall",
+      "comment": "Applies 8x8 block Discrete Cosine Transform (DCT) to video/image plane data.\n\nAlgorithm:\n1. Retrieve block index from stack at ESP+0x10\n2. Shift block index left by 8 bits (multiply by 0x100)\n3. Add base address 0x38431dc to compute output buffer offset\n4. Load all parameters from stack (source buffer, stride, coefficients)\n5. Push calculated output buffer pointer as 4th parameter\n6. Call DCT_Forward8x8 function with all parameters\n7. Clean stack (add 0x10 to ESP) and return to caller\n\nParameters:\n- pSourceBuffer (ESP+0x4): Pointer to 8x8 source pixel block to be transformed\n- nStride (ESP+0x8): Byte stride between rows in source buffer\n- pDCTCoefficients (ESP+0xc): Pointer to short array for output DCT coefficients\n- nBlockIndex (ESP+0x10): Block index used to calculate output buffer offset\n\nReturns:\n- void: DCT coefficients written to memory location computed from base 0x38431dc + (nBlockIndex * 0x100)\n\nSpecial Cases:\n- Output buffer is allocated dynamically at address: (&DAT_038431dc) + (nBlockIndex * 0x100)\n- Each block gets exactly 0x100 (256) bytes for output coefficients\n- Supports multiple sequential blocks by incrementing block index\n- DCT output stored as short integers (2-byte format)\n- Function acts as dispatcher/wrapper for DCT_Forward8x8 implementation",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:c1c99cf2421bbca4d93b6ed9360dc2ea",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c1c99cf2421bbca4d93b6ed9360dc2ea",
+        "CFG": null,
+        "PRO": "912c17003ec1e8560f7b788a74738fe3"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c1c99cf2421bbca4d93b6ed9360dc2ea"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -479,11 +514,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ec6e997f33c72bf964ac0f1c9aa25cd7",
         "PRO": "136da23c181ec3ab3efd35d44e1a4fdc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "739481209f0d2341ed11618a070c0e2e"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -514,11 +549,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f457eff5dbde5cc2305d55b5bed28ded",
         "PRO": "364571e63c0b42ac03e1f41176278560"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "949a12f407cde85adcd110a6d2c8a5f2"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -548,11 +583,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "4e76c81470e2988ecc180e10cfbc4c5c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7a890653f21270c876da2530f1ef2d3f"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -583,11 +618,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "9f1e400507e0bab22bb89a5ad7e2b31b",
         "PRO": "5b45d71d48c825abf1275e223f921683"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "eb628dcd19798960da45ec68c6e0c23f"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -617,11 +652,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b6de094d92e1deecea4b76620b4bcb0b",
         "PRO": "4ed31ddeefe8731151d7fb9ded6db19d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 97
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "67b04c28fb1d13a20830188d10278eff"
       },
       "param_counts": {
         "LoD/PD2": 11
@@ -652,11 +687,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "99da5d1d8dd85d80961dc92b0df1e605",
         "PRO": "d6e9ccfe2a0e1ee0f6544b1d0fcc0d37"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "623afa8601b5f4e2ac2f66474834215c"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -687,11 +722,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "b4b69e6f9be303b5b22f85032ea32d1f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7402afe48fd7d64081795b95537a3127"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -722,11 +757,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "74a3da7a40b59a6a457ab45cdd33965d",
         "PRO": "bfdd83aa11e64245295e1fe5b9cfe896"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 50
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2dea06d4d687b9f440221e864c9a45ba"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -757,11 +792,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "9a72b0c192370ccb948ef9235f58c4d1",
         "PRO": "a386898ce9dd2428c236b7933e0a06e5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9190a8f0423f5acc2bb744a488828fbe"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -792,11 +827,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "d69bc82e329d76c21526cdfbd9e8cc3d",
         "PRO": "0ff171db1d83b8c977a80293e0b1e922"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "14974876f08ffa831008244a8c8d48c9"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -827,11 +862,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "69650437e974d15647c5ae1e7b6c05ac",
         "PRO": "3d7da7797c030259f08d7eba5f463007"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 30
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0b7a148de08163aa410dc31152a2532"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -862,11 +897,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "dd3685d1a245a42f1ad16e6e6658afc7",
         "PRO": "5c126b0a3303b9d27cf287f3752cc615"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 30
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "06e714ce5919b22cb5e48dcfdb7a6503"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -897,11 +932,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a305d90eb9f6c64572135e4dfac9363d",
         "PRO": "2234a1da0aaf1d2b54e8ad87e76d676f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4fd2aec4b21046bea8d79c8ef86e684c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -932,11 +967,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "3eb597ca82d9d96318a0a97e56a7a23e",
         "PRO": "e99d8f1f02e921d93584d751baefed57"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e69065048e9aee8805e8c120c828f6b0"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -967,11 +1002,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7a884a56c92f906859b44d439ed7682f",
         "PRO": "20302f4d51abc3b562e1fc765fc8fe06"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 42
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "84ef8a248f891afc5fc0a161769e08c4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1002,11 +1037,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e9c3a82d42e8255973e2c79ce08c39ef",
         "PRO": "14a3409b9826c1f19a28f450574d16a9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 47
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ae27250c0070ffb873a0b864b76271aa"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1036,11 +1071,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "4b2c885de0683f18c63b0a7a3519bb1b",
         "PRO": "9ea5af00da8e8f8446c2b857dbce46db"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1b461d798425509cecc8809d0678be7a"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1078,11 +1113,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "59fda47cda35dae8080ac5e7e31b8139",
         "PRO": "da20f26a9a119390d2620f21f953bb8c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9b926041d7cdcd37a78048a3908ae189"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1113,11 +1148,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "8e9ab774104400fef7eefd54616caaf8",
         "PRO": "b39dfc10b80388501346a68ac2cf54d3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 59
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b1984582b1216fb7cd1ad1549ffa41c6"
       }
     },
     "binkw32_MNE_8d037910f675": {
@@ -1145,11 +1180,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "aeffd579fa895787f9ca9e48433de620",
         "PRO": "cb86acbaf99dac3c51cb3271895e8e14"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8d037910f675db1b341455807d56a33e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1179,11 +1214,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "5e517dd0aeff4d498e74bb1c0eec8eaa",
         "PRO": "7660228653f386edda993b4aa5654a75"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 26
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a303d3997501b7b17458422718b5241d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1213,11 +1248,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f21fdeff545ddbe0443e0b148078084a",
         "PRO": "ac20e03bb00ed271f9397b75e8d23d29"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5273b47c7bff4b543c31331d1d2faf1f"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -1247,11 +1282,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7cb574b35dda7037811ad1bca9b700a0",
         "PRO": "d7dc4e0086b2dd72f2535b645d3ffc2e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "99a9ecebfd6d0b64f3d9054ca75ff273"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -1281,11 +1316,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "ed43bd10a6108c31b53e3d4253e1f6be"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c317bcdd0a1727fec1a7cacd7d0f50fc"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1315,11 +1350,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "56a9270b549732b122e9b7de5469bc93",
         "PRO": "046dc639cefaa62982dbf1c7227122c1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3ccc82b1da50b1f334d3687367fef8f7"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1349,11 +1384,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "78789e0509aad56bc67016dcf4bf9b69",
         "PRO": "2e65823b3c6f48c5edb92c2b5eb284bd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c40040f787cbbcc5e7ed1ba48d32d893"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1384,11 +1419,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a4ac809d04d1bc6ef1c54e7d0d97435d",
         "PRO": "3e3fcf60e7cbfce8f5b99c952b423a80"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e46b8cd4e3654510815acfb607ea499e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1418,11 +1453,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "77d4e2fd461a0e3bec2e851d748ad985",
         "PRO": "14b5df030de8f43c9583c1c5837559f7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 72
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "34f6e5ceb0b7c0aa5b0ba959e3e93149"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1468,11 +1503,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "1396f07c9721d75e35b10c38e6b3602e",
         "PRO": "818e0223fa5c45002640a4b85908830c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9dbe11483c0e42ddf5d87ee4d23fa5ba"
       }
     },
     "binkw32_STR_60b786edb4e1": {
@@ -1500,11 +1535,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "8f87c31656cb4d867ca492e31cb2d365",
         "PRO": "c535d27e15fa1ca427c2cab3cae93bcc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9530209639a085768537dbf85108ca35"
       }
     },
     "binkw32_MNE_8646e65f8660": {
@@ -1532,11 +1567,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "373ab06ce4995b11aa294c119b308ebf",
         "PRO": "9ae8734658c70d042163597d4048c519"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8646e65f86602832ca832a9077dd6dc8"
       }
     },
     "binkw32_MNE_286ffbb1c957": {
@@ -1564,11 +1599,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ef6b559f818d68391151c9c48a9482dc",
         "PRO": "b10535ee983cd575b8e68ebf6e1451e0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "286ffbb1c957324283eefc5784bd7a18"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1599,11 +1634,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "90d60dbdb3100bc570ed25ac0c839313",
         "PRO": "b0ac7848f969db07e06a5c6ce8a63f2c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "abb7627d3872c2d00a8002ae54abcc62"
       }
     },
     "binkw32_MNE_df772668f478": {
@@ -1631,11 +1666,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a69d5482d3c4cb1f553fa82757dac7ff",
         "PRO": "bc813ebc77b0d5f789264b5855195133"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "df772668f4787d715c93166d2a6804d1"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1666,11 +1701,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b0373c928dbbca10ee1e4a199fbe7fb7",
         "PRO": "0f3746fb55e597abe90fc385f606d74b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 31
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "faf5bb396f76b407fd98719b3b34ce15"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -1701,11 +1736,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "74c9721c48af8c6d40023ee593e51e52",
         "PRO": "f5f6eef471c2e4f00609d31a5cd6739b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "125118f786fd1c6dc08dec1e9cc3f598"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1736,11 +1771,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "623be3cb097db681b60f8163df44d258",
         "PRO": "79521cab5adcdfd77a4f22b1b0e17c4d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c5ea813d5c3f8da4e4d3367fba747141"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -1770,11 +1805,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "48fb537a52b8e67306ca41f7784e5633",
         "PRO": "11d07ac556097f9fad31fa6b51a25243"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e0b9a405a9d25d7e0de5fcd64576c951"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1810,11 +1845,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "1d3f4c3e8d569fdf49ee3db24bc3009a",
         "PRO": "cc179bf40862fe5554c887a37070dbb4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "21005134343d54da28a8166b388f2921"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1850,11 +1885,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "cb0ff409c6c417241ca55c6e4c444bac",
         "PRO": "8324a4b6421804d6e2db35b23f3825eb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ecef6e0b279551dbbcf95cc18e5c85a1"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -1889,11 +1924,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "25b12c037008ce74e860020335ed040b",
         "PRO": "35660c5064f2d3c597f075897c0a1d0d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f1f35b242519577ce4e15a92fcf599d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1923,11 +1958,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7d2305e036591e793dcefee8a9e3e4ed",
         "PRO": "b1066d20272dbe76a036c9f3d51d1638"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "35f2f3033ded8cf8e3da0f673cf18137"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -1957,11 +1992,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "86ffe9e76e720076fa0a9a543035b74c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f5b0d4999cef381bea9a054131983f79"
       }
     },
     "binkw32_STR_b6d60490f87d": {
@@ -1988,11 +2023,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e9e3238573fb8758cb6dacb6540ea203",
         "PRO": "e269f50f7a4ab75a284cf6739f69fc24"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "96cc9aefc1f81e382ad7e74816c06f8d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2000,10 +2035,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_7b4de9f0cf35": {
       "addresses": {
-        "LoD/PD2": "0x0382A660"
+        "LoD/PD2": "0x03827800"
       },
       "rvas": {
-        "LoD/PD2": "0xA660"
+        "LoD/PD2": "0x7800"
       },
       "sizes": {
         "LoD/PD2": 6
@@ -2022,11 +2057,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "d16ac494b9b96b2951092563cd8d4040"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "binkw32_API_7f9bbd97ca85": {
@@ -2053,11 +2088,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "d01e5563fdbdd888c84d483857608197",
         "PRO": "02f93fae42b03fd546077fbbca3f1f68"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a2e98173ea0fa30efee842e6d4858d83"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2093,11 +2128,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7ccaf72ab6a00908b4fc1bafcb79ee76",
         "PRO": "d07cdbd9723f92257a889186a065bafa"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "130e7ed55ea40ac920c81c59ca0445bf"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2128,11 +2163,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "c1209678b27e2a424c8b88709fd14908"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2e320bf81519acea38e6c31a9369e455"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2163,11 +2198,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "29d1b72a82f1b0dbac02e80eac7d3bb3",
         "PRO": "07db882c0300e099fb2003a85ff09960"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "61ec8fae9fdcc46d6b969bf474620d41"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2202,14 +2237,45 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "63639c8fbd0979c26ae2c7987109d363"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "15cee131277731f5e0a95b64c1426a2e"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "binkw32_ADDR_03827AA0": {
+      "addresses": {
+        "LoD/PD2": "0x03827AA0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7AA0"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "_BinkGetError@0",
+      "signature": "undefined4 * _BinkGetError@0(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "38ac63cccb56e39f021198f8646bf50f"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
-      "param_counts": {
-        "LoD/PD2": 1
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "binkw32_MNE_bf26ed235a61": {
@@ -2236,11 +2302,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ddc31928774f965d54ee468a9096d228",
         "PRO": "12c65cb6acb1f788702801732fb630ee"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bf26ed235a61e8de1341117d5e0162b9"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2270,11 +2336,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "a055e00af2361ee5d187f7c04a335d89"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6c6168eac6c7759f12c8ffc4e8b125b9"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2282,10 +2348,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_0f26f5ebbb65": {
       "addresses": {
-        "LoD/PD2": "0x03827B40"
+        "LoD/PD2": "0x03827B20"
       },
       "rvas": {
-        "LoD/PD2": "0x7B40"
+        "LoD/PD2": "0x7B20"
       },
       "sizes": {
         "LoD/PD2": 12
@@ -2304,11 +2370,79 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "d1c4e91458b43294493df53b1ba4fa13"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f26f5ebbb6562741331dd6e6bdd0342"
+      },
+      "param_counts": {
         "LoD/PD2": 1
+      }
+    },
+    "binkw32_ADDR_03827B30": {
+      "addresses": {
+        "LoD/PD2": "0x03827B30"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7B30"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "_BinkSetSimulate@4",
+      "signature": "undefined _BinkSetSimulate@4(undefined4 param_1)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0f26f5ebbb6562741331dd6e6bdd0342",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0f26f5ebbb6562741331dd6e6bdd0342",
+        "CFG": null,
+        "PRO": "c1e62e8527cbb760328e0c7c04db6170"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f26f5ebbb6562741331dd6e6bdd0342"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "binkw32_ADDR_03827B40": {
+      "addresses": {
+        "LoD/PD2": "0x03827B40"
+      },
+      "rvas": {
+        "LoD/PD2": "0x7B40"
+      },
+      "sizes": {
+        "LoD/PD2": 12
+      },
+      "name": "_BinkSetSoundTrack@4",
+      "signature": "undefined _BinkSetSoundTrack@4(undefined4 param_1)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0f26f5ebbb6562741331dd6e6bdd0342",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0f26f5ebbb6562741331dd6e6bdd0342",
+        "CFG": null,
+        "PRO": "5c1d539cc0f07c1a9d071e5b1bfe927d"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0f26f5ebbb6562741331dd6e6bdd0342"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2338,11 +2472,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "95d14828d626134188340e0df2dd5a1e",
         "PRO": "f1a4646b67b2741f0bc19f17f5d702b6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 61
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9949f33e28435d2f3cd2e5a9bf170681"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2381,11 +2515,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e853d95f7990eb96e0540c062176ae54",
         "PRO": "593454c9fb0e4425265599a7b9b6e8f0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 56
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "242ca02abdecdce7a2a08f04da7e34d4"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2424,11 +2558,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "663aa8489587b8064a31bfbcedfe7b3a",
         "PRO": "f687c39185d4023c5f79f1a124702955"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5b0f449f369105e479fccbee12de942d"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2465,11 +2599,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f1998d4791e6e0733fee14d197c5000f",
         "PRO": "d509d34bd5ad929698ffe49e069f8b8d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 53
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8ba509241f4faa2cef023d14fc340a90"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2500,11 +2634,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "3faa1a24a3d4c996032f03064ca761f6",
         "PRO": "8faf15f2547cd16a3e97bff58dd31528"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9a541bcc903ff4ee859ac8534df3ddeb"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2535,11 +2669,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e6d4cfc732ebcb5ddd2e9b3cce6f93b9",
         "PRO": "dbb846f726ed4e0d260927213b10d464"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7ad93d1a555bb9d08862b095b2fc464c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2570,11 +2704,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ad859d86f55ca2cb4c494a69c35e689c",
         "PRO": "ae6443e0c6df33d2bd18fe3ed3cdf726"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6980d730e4de9a5b6aaea3e0ef269ee0"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -2605,11 +2739,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "d5601f252609504190ed90b23cb32f9e",
         "PRO": "f9790682257180ec93880de333a135c1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ccce9ff8629e688eacc62c769377bdf3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2639,11 +2773,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e67e2ba0656f198f5e6c3506d1f2a42c",
         "PRO": "0fb37b2725ad2a7f95fbd91d45986cbf"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 53
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8eed9034e584c58152b45874152708b1"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2689,11 +2823,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "bc042e4f56c5c862716dd36277cac9ef",
         "PRO": "d5422ce8f943c3d30f2d46592bb199ae"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4c594ffa40cc6011fbd055a26c7a7a9c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2723,11 +2857,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "26c298de73630e3611820f5a2aabb4a7",
         "PRO": "c7aace89c1f080073f9cf247ca92d833"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 41
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "828ddfda5cf60ee581badbb279450a28"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2762,11 +2896,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "71e03f35ef22feb1ba4d33deb41cb9e0",
         "PRO": "658d6958999c0dce4d6844cc8641455d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9911d36575de29f20d789acc2c19c5d5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2797,11 +2931,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "dc31fd8ae2ce6da459435b7f021fe995",
         "PRO": "d8efdb342cf5d9a5148d1f3e79a05dcd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a8c7f43cc1a5ca6057d221f2392511d8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -2831,11 +2965,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "8395f00fb8dca3d19e6a735b1f35d9c7",
         "PRO": "72a948b62cd39ce47fd399770a908bf9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2cb7d265593b6b868b6ca3a78e9b29d7"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -2865,11 +2999,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "17f8376618709a6e13b6463b98009a5f",
         "PRO": "19afb8a02d63608342e5ce7cc8f4a733"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "72bb3023b5ef1797716aa30825bc7079"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2910,11 +3044,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "fcda30d22389bad49144e13092711d40",
         "PRO": "821835b13ddd0636c9921e0385cf38b1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d93ddd2689b7904ae5b60a7c2f81d7d7"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -2952,11 +3086,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "637ce8076bc4c8adc4fb3ba50e9b73b8",
         "PRO": "10e907120144a212d58219f04899d312"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "baf7485d9fbb8902d593b1851d7fdc18"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -2987,11 +3121,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "473d086ee94878b8f6ec467e2de64aec",
         "PRO": "776b79b836ccdccc0aedbd4d4c6a70c7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a5662b9be7573145add48449989b505f"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3021,11 +3155,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e0b55856203a0ea509c868c075a69d8e",
         "PRO": "f67c661d6323541884aa145a8a4df243"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "03eb0f650679304c0b14b943b0e85b26"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3055,11 +3189,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "41dc7fc5c9dabdfa01f5e854eaaaa0ee",
         "PRO": "ec4d7cc68b3efa95a2e3c1fae3be6e16"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "74fe75352684d4f6556e8b894e057e9d"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3089,11 +3223,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "9e38f54eb90ee713dc939c4cd421835b",
         "PRO": "a9c6341a6a9793f629349c484c1c04b0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "671864590936673a7354683953b975ca"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -3123,11 +3257,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "24cce061d242445b922ba57b4178acf1",
         "PRO": "2e1eeefa93bc2767efe91596f2faa625"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 42
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ba21fdd131c02a68df11256a5a4c5252"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3158,11 +3292,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a0691b32944850c009606c768252d880",
         "PRO": "23f49d372e0695e0c1d8f1994380f243"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 38
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b321489c43a17c8bc653c7614c1dc777"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -3193,11 +3327,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b29679b569548e8f213e34d2fa57f945",
         "PRO": "0a310b734bb095fac0531154ab631b08"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8afa61c73dfdfb6b182e4cae2c97a28d"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -3227,11 +3361,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b70e7b162a9ff701225259b587af782d",
         "PRO": "40d982bbe7b681b825a61646608b141e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "02f60b998423d792b7f03ffb0e2dbed3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3239,10 +3373,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_27d9eae3fe39": {
       "addresses": {
-        "LoD/PD2": "0x0382A630"
+        "LoD/PD2": "0x0382A600"
       },
       "rvas": {
-        "LoD/PD2": "0xA630"
+        "LoD/PD2": "0xA600"
       },
       "sizes": {
         "LoD/PD2": 44
@@ -3261,22 +3395,87 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "2bea3eb19dd06b49df098eed6ded289c",
         "PRO": "1b552ecc44522cc0012633c7ddf6eb43"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "27d9eae3fe39b46611cc1e4571db6907"
       },
       "param_counts": {
         "LoD/PD2": 2
       }
     },
-    "binkw32_MNE_a7220ac22854": {
+    "binkw32_ADDR_0382A630": {
       "addresses": {
-        "LoD/PD2": "0x0382A6B0"
+        "LoD/PD2": "0x0382A630"
       },
       "rvas": {
-        "LoD/PD2": "0xA6B0"
+        "LoD/PD2": "0xA630"
+      },
+      "sizes": {
+        "LoD/PD2": 44
+      },
+      "name": "_BinkSetPan@8",
+      "signature": "undefined _BinkSetPan@8(int param_1, undefined4 param_2)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:27d9eae3fe39b46611cc1e4571db6907",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "27d9eae3fe39b46611cc1e4571db6907",
+        "CFG": "2bea3eb19dd06b49df098eed6ded289c",
+        "PRO": "1b552ecc44522cc0012633c7ddf6eb43"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "27d9eae3fe39b46611cc1e4571db6907"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "binkw32_ADDR_0382A660": {
+      "addresses": {
+        "LoD/PD2": "0x0382A660"
+      },
+      "rvas": {
+        "LoD/PD2": "0xA660"
+      },
+      "sizes": {
+        "LoD/PD2": 6
+      },
+      "name": "_BinkLogoAddress@0",
+      "signature": "undefined * _BinkLogoAddress@0(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": null,
+        "PRO": "994fa0387d62a90cf97efee68752d22d"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "binkw32_MNE_a7220ac22854": {
+      "addresses": {
+        "LoD/PD2": "0x0382A670"
+      },
+      "rvas": {
+        "LoD/PD2": "0xA670"
       },
       "sizes": {
         "LoD/PD2": 29
@@ -3295,11 +3494,79 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e4d929dcade813bcfed0f23f20c25712",
         "PRO": "ea219bdd55ab593fa4c5bb6064239c2d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7220ac2285460f515b72dab5562d1b6"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "binkw32_ADDR_0382A690": {
+      "addresses": {
+        "LoD/PD2": "0x0382A690"
+      },
+      "rvas": {
+        "LoD/PD2": "0xA690"
+      },
+      "sizes": {
+        "LoD/PD2": 29
+      },
+      "name": "_BinkGetTrackMaxSize@8",
+      "signature": "undefined4 _BinkGetTrackMaxSize@8(int param_1, int param_2)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:a7220ac2285460f515b72dab5562d1b6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a7220ac2285460f515b72dab5562d1b6",
+        "CFG": "e4d929dcade813bcfed0f23f20c25712",
+        "PRO": "6e04976b4f73f3a28790c4c6fcb305fe"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7220ac2285460f515b72dab5562d1b6"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "binkw32_ADDR_0382A6B0": {
+      "addresses": {
+        "LoD/PD2": "0x0382A6B0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xA6B0"
+      },
+      "sizes": {
+        "LoD/PD2": 29
+      },
+      "name": "_BinkGetTrackID@8",
+      "signature": "undefined4 _BinkGetTrackID@8(int param_1, int param_2)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:a7220ac2285460f515b72dab5562d1b6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a7220ac2285460f515b72dab5562d1b6",
+        "CFG": "e4d929dcade813bcfed0f23f20c25712",
+        "PRO": "350be01073b3f87f16ab9e27fff06ce0"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7220ac2285460f515b72dab5562d1b6"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3329,11 +3596,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e2002b5bdbe94d35105e723f2367ff33",
         "PRO": "2beea65a0d0709ca9662b5e043af34b8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a12c2c16e6534ee1fb1913cb480c01a8"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -3368,11 +3635,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "4583fb81bcbb65d398ef64df6f5a37f7",
         "PRO": "bac16610341554761324ca18a1ba5a3f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "de598d52c0612751d3d66fac812e7e95"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -3407,11 +3674,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "c4ef4f4c69ee189e061fdfcf4aa08a56",
         "PRO": "cc852635856803ae62cf652f13d9ca93"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3fc74eacdf995fcb13a48e5d23da57bb"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3441,11 +3708,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "185a13320262684e11525fe4d9449cba",
         "PRO": "3f60cd43786502744e9c652616842db4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d93979ee509812b79548e80a1d5ed0c9"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3475,11 +3742,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b7c67ba43236be10d5c4da9e4f92c77b",
         "PRO": "15a96686c98e858f5dd689248c48890d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4ebb33337bd8444af3fc770818752cc7"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3510,11 +3777,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a5a0331dc24c0c358b55661d564e7637",
         "PRO": "8c5f8dffe43a7478b225620bc2f54ab2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e60cdc166688190c40d25749a944e762"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -3551,11 +3818,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "4acc71aeabdee03873d6f4cf1d84c281",
         "PRO": "df0515a4481223ff02d7ca5ed81f5fdc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "02819bb1b587ed4caef76373a64224b6"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3586,11 +3853,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e4d929dcade813bcfed0f23f20c25712",
         "PRO": "73eec923ea90dddcdf5671f96b32d4bc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7f662ad0ee6f8dabb307791a233ec837"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -3625,11 +3892,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "29a739e94f64e8f8826907da580e4fc2",
         "PRO": "c8afdb1fe11bf33044066f591b8cbd5a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 30
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "60a3cff6f83a208b2ba23755bfe502a1"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3660,11 +3927,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a86bf6f0193967be873d7ae76cd141bb",
         "PRO": "08e24923f3c70cb01e13fa71a6379b82"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "548267d6275b00d05d07d52d34b221dc"
       }
     },
     "binkw32_MNE_bb371b5dcf86": {
@@ -3692,11 +3959,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ac9aad99255a025ce7e86ca738667c82",
         "PRO": "b95ef7378b970a6c4af27b17122f72d9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bb371b5dcf86ffac445d42186118143d"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3704,10 +3971,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_512206a0524f": {
       "addresses": {
-        "LoD/PD2": "0x038312A0"
+        "LoD/PD2": "0x0382BEA0"
       },
       "rvas": {
-        "LoD/PD2": "0x112A0"
+        "LoD/PD2": "0xBEA0"
       },
       "sizes": {
         "LoD/PD2": 76
@@ -3726,11 +3993,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "4aa7612d48544b1683e2715d82b72345"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "512206a0524f73d7cb6b767324468599"
       },
       "param_counts": {
         "LoD/PD2": 12
@@ -3761,11 +4028,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "976c8d2932b9b87dabcefc705c348065",
         "PRO": "53a2ac81bb5385be0ace5cdcab5f718e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 73
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a8b1898d0a64cb0315f8c47c3af5498b"
       },
       "param_counts": {
         "LoD/PD2": 13
@@ -3796,11 +4063,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "7e9a5b205daa1bf0dc51b4f20f91c62e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4cb972de0acf295942e7ba45ebb29f6"
       }
     },
     "binkw32_MNE_95962302f71f": {
@@ -3828,11 +4095,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "c9a456ba29e8cd7f5e8a64a2cf75660f",
         "PRO": "9ae0f00e37471092998bc8058765c552"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 61
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "95962302f71f14243137ff3100c3ee5f"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -3863,11 +4130,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "2905a5f71956f3ea8f8249f7e990e9c6",
         "PRO": "774eef3a2193c12c7a5331bb63fb31ca"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "470a4fa36be53ee478bf1f3a6d746fe2"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -3904,11 +4171,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "26548ac02979c119983816c26e2f0026",
         "PRO": "9485001954d74355f246a39258d54566"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2e8babe0f59f307a579e33f2393270b9"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -3916,10 +4183,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_66278f4839da": {
       "addresses": {
-        "LoD/PD2": "0x0382CFC0"
+        "LoD/PD2": "0x0382CE90"
       },
       "rvas": {
-        "LoD/PD2": "0xCFC0"
+        "LoD/PD2": "0xCE90"
       },
       "sizes": {
         "LoD/PD2": 64
@@ -3939,11 +4206,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "8c738c6cf4769bab23cdde57147be240"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "66278f4839da28ded1eaf5e21045b2e5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -3974,11 +4241,46 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "eec9cbedd5ea7f97847323d74f1b9dd7",
         "PRO": "ac0728b2619e1468f756d5aa95ebc08f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bd480b198928a9bc8a7b26d75a6b65d7"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "binkw32_ADDR_0382CFC0": {
+      "addresses": {
+        "LoD/PD2": "0x0382CFC0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xCFC0"
+      },
+      "sizes": {
+        "LoD/PD2": 64
+      },
+      "name": "MeasureCallbackExecutionTime",
+      "signature": "void MeasureCallbackExecutionTime(void * pCallbackContext)",
+      "calling_convention": "__stdcall",
+      "comment": "Setting prototype: void MeasureCallbackExecutionTime(void *pCallbackContext)",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:66278f4839da28ded1eaf5e21045b2e5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "66278f4839da28ded1eaf5e21045b2e5",
+        "CFG": null,
+        "PRO": "8c738c6cf4769bab23cdde57147be240"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "66278f4839da28ded1eaf5e21045b2e5"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4009,11 +4311,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "67b598c16f9fc8abdd20beaf44e45be0",
         "PRO": "4d53901063ca37b765b99d85c6382342"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d4c428924d7fef684ebc213f4fc0eed1"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -4044,11 +4346,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "3ba11ddfead1377e35d1cda9c88fdc26",
         "PRO": "24946692be46a95caeed242c940336ea"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f1b0856acf5d358573d7e9dbd470c8df"
       }
     },
     "binkw32_MNE_5045c13907c1": {
@@ -4076,11 +4378,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "79a7345a55f92761cfc038fd48ef9eda",
         "PRO": "d3b7c4f05c8574ae41caef7e2c1744ed"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5045c13907c17820d5a96145cb44c188"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4111,14 +4413,48 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "47d49df4522ed740497b07eab08cf39b",
         "PRO": "73bfb064b99333b6e06581a3c8bb8165"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "26dd36043da0cff4c91026ae63a6efc0"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "binkw32_ADDR_0382E1D0": {
+      "addresses": {
+        "LoD/PD2": "0x0382E1D0"
+      },
+      "rvas": {
+        "LoD/PD2": "0xE1D0"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "_YUV_blit_24bpp@48",
+      "signature": "undefined _YUV_blit_24bpp@48(uint param_1, uint param_2, int param_3, uint param_4, uint param_5, uint param_6, uint param_7, uint param_8, uint param_9, uint param_10, uint param_11, uint param_12)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:512206a0524f73d7cb6b767324468599",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "512206a0524f73d7cb6b767324468599",
+        "CFG": null,
+        "PRO": "eb5f6ebd5d95d77cc7748b54b0bc6484"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "512206a0524f73d7cb6b767324468599"
+      },
       "param_counts": {
-        "LoD/PD2": 2
+        "LoD/PD2": 12
       }
     },
     "binkw32_MNE_0e65e1fb8532": {
@@ -4146,11 +4482,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "1ec639e3efbd134193ea8af7eddac8d0",
         "PRO": "075503457a49d513409619cf73033b45"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0e65e1fb8532f9049d3b376601889169"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4181,14 +4517,48 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a99ce5cedb9ebbfcbc1dfb8ad73c4156",
         "PRO": "af495b37950e6b85679f6c2b971738da"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "91a5e847d365e396cb4038029fe26f37"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "binkw32_ADDR_0382EF60": {
+      "addresses": {
+        "LoD/PD2": "0x0382EF60"
+      },
+      "rvas": {
+        "LoD/PD2": "0xEF60"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "_YUV_blit_16bpp@48",
+      "signature": "undefined _YUV_blit_16bpp@48(uint param_1, uint param_2, int param_3, uint param_4, uint param_5, uint param_6, uint param_7, uint param_8, uint param_9, uint param_10, uint param_11, uint param_12)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:512206a0524f73d7cb6b767324468599",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "512206a0524f73d7cb6b767324468599",
+        "CFG": null,
+        "PRO": "b5c3a1381e50335b52b6bd74760d3531"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "512206a0524f73d7cb6b767324468599"
+      },
       "param_counts": {
-        "LoD/PD2": 2
+        "LoD/PD2": 12
       }
     },
     "binkw32_MNE_e8938b232dc4": {
@@ -4216,11 +4586,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a993af83fa4236bf6762e2f9d6102cc5",
         "PRO": "36296e117c5233a3a2aa23797e07fd91"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e8938b232dc428549f2aa90498091d98"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4251,11 +4621,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e2bfa9d93258b5cddcca01353a935a20",
         "PRO": "b2618b24c832d470805b7958ff50e5bb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dcbfd1c41ddd2aaf0aedbc35b0095aeb"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4286,11 +4656,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "6b1c5ae88892b84e999104ec691c99dc",
         "PRO": "1982a10535e065667a8d7fdd5942e8d1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "70c8495648c376804f0b7cc1fe2e35a1"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4321,11 +4691,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "c4e9ee79836eded9bb4b79e6b6ec8cee",
         "PRO": "31ca9459358f4ac9b83e40f38ed5d50f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c58cd330e598080efbebd364b324fdca"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4356,11 +4726,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "c6efb996ba98e455318ff833a2c7957e",
         "PRO": "265bbbaff379d658ae358197f46a4968"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "318b70d6d43949299437c73a152ea9c6"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4368,10 +4738,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_9ed9704ca96c": {
       "addresses": {
-        "LoD/PD2": "0x03830720"
+        "LoD/PD2": "0x0382FAE0"
       },
       "rvas": {
-        "LoD/PD2": "0x10720"
+        "LoD/PD2": "0xFAE0"
       },
       "sizes": {
         "LoD/PD2": 130
@@ -4390,11 +4760,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "336a2b3e7597c88bd3b0149498cccd97",
         "PRO": "d62a3ba6e17bb63145005c4853bb8d8b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 12
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9ed9704ca96cf7275d6354269c1858eb"
       },
       "param_counts": {
         "LoD/PD2": 12
@@ -4425,11 +4795,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e8cf67d206ddcb445da6431dbd1e9087",
         "PRO": "4a9cf3541b4f3baf3e06b30d8f38de5f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2355c45e8b92e7ad55b52977f56cb34d"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -4460,14 +4830,48 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "0d55f5b05a975e00c17a29b0feb4bd3e",
         "PRO": "2fd8fd674803f1e221e928ff33794394"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "21d6d963cebc49c3c99741464ca092e5"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "binkw32_ADDR_03830720": {
+      "addresses": {
+        "LoD/PD2": "0x03830720"
+      },
+      "rvas": {
+        "LoD/PD2": "0x10720"
+      },
+      "sizes": {
+        "LoD/PD2": 130
+      },
+      "name": "_YUV_blit_UYVY@48",
+      "signature": "undefined _YUV_blit_UYVY@48(uint param_1, uint param_2, int param_3, uint param_4, uint param_5, uint param_6, uint param_7, uint param_8, uint param_9, uint param_10, uint param_11, uint param_12)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:9ed9704ca96cf7275d6354269c1858eb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9ed9704ca96cf7275d6354269c1858eb",
+        "CFG": "336a2b3e7597c88bd3b0149498cccd97",
+        "PRO": "d62a3ba6e17bb63145005c4853bb8d8b"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9ed9704ca96cf7275d6354269c1858eb"
+      },
       "param_counts": {
-        "LoD/PD2": 2
+        "LoD/PD2": 12
       }
     },
     "binkw32_MNE_5bfa435de8fb": {
@@ -4494,14 +4898,48 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "0f39c8bc2c1a31b4f2b90a8d802cc88d",
         "PRO": "40e4c93496148f99101bf7d0f8129670"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 46
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5bfa435de8fb023aabdb7f9c8fef7179"
+      },
+      "param_counts": {
+        "LoD/PD2": 13
+      }
+    },
+    "binkw32_ADDR_03830A60": {
+      "addresses": {
+        "LoD/PD2": "0x03830A60"
+      },
+      "rvas": {
+        "LoD/PD2": "0x10A60"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "_YUV_blit_32bpp_mask@48",
+      "signature": "undefined _YUV_blit_32bpp_mask@48(uint param_1, uint param_2, int param_3, uint param_4, byte * param_5, int param_6, uint param_7, uint param_8, uint param_9, byte * param_10, uint param_11, uint param_12)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:512206a0524f73d7cb6b767324468599",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "512206a0524f73d7cb6b767324468599",
+        "CFG": null,
+        "PRO": "4aa7612d48544b1683e2715d82b72345"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "512206a0524f73d7cb6b767324468599"
+      },
       "param_counts": {
-        "LoD/PD2": 13
+        "LoD/PD2": 12
       }
     },
     "binkw32_MNE_bedff1fe28c0": {
@@ -4529,14 +4967,150 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "66904f07065bb926c987351faad467e6",
         "PRO": "177000c860c9488ef160e13232439156"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 52
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bedff1fe28c087736f7a1ea8cb6a92da"
+      },
+      "param_counts": {
+        "LoD/PD2": 13
+      }
+    },
+    "binkw32_ADDR_038311B0": {
+      "addresses": {
+        "LoD/PD2": "0x038311B0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x111B0"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "_YUV_blit_24bpp_mask@48",
+      "signature": "undefined _YUV_blit_24bpp_mask@48(uint param_1, uint param_2, int param_3, uint param_4, byte * param_5, int param_6, uint param_7, uint param_8, uint param_9, byte * param_10, uint param_11, uint param_12)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:512206a0524f73d7cb6b767324468599",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "512206a0524f73d7cb6b767324468599",
+        "CFG": null,
+        "PRO": "eb5f6ebd5d95d77cc7748b54b0bc6484"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "512206a0524f73d7cb6b767324468599"
+      },
       "param_counts": {
-        "LoD/PD2": 13
+        "LoD/PD2": 12
+      }
+    },
+    "binkw32_ADDR_03831200": {
+      "addresses": {
+        "LoD/PD2": "0x03831200"
+      },
+      "rvas": {
+        "LoD/PD2": "0x11200"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "_YUV_blit_16bpp_mask@48",
+      "signature": "undefined _YUV_blit_16bpp_mask@48(uint param_1, uint param_2, int param_3, uint param_4, byte * param_5, int param_6, uint param_7, uint param_8, uint param_9, byte * param_10, uint param_11, uint param_12)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:512206a0524f73d7cb6b767324468599",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "512206a0524f73d7cb6b767324468599",
+        "CFG": null,
+        "PRO": "b5c3a1381e50335b52b6bd74760d3531"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "512206a0524f73d7cb6b767324468599"
+      },
+      "param_counts": {
+        "LoD/PD2": 12
+      }
+    },
+    "binkw32_ADDR_03831250": {
+      "addresses": {
+        "LoD/PD2": "0x03831250"
+      },
+      "rvas": {
+        "LoD/PD2": "0x11250"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "_YUV_blit_YUY2_mask@48",
+      "signature": "undefined _YUV_blit_YUY2_mask@48(uint param_1, uint param_2, int param_3, uint param_4, byte * param_5, int param_6, uint param_7, uint param_8, uint param_9, byte * param_10, uint param_11, uint param_12)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:512206a0524f73d7cb6b767324468599",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "512206a0524f73d7cb6b767324468599",
+        "CFG": null,
+        "PRO": "cc5382a7984888dd84a00ee419d1e2ae"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "512206a0524f73d7cb6b767324468599"
+      },
+      "param_counts": {
+        "LoD/PD2": 12
+      }
+    },
+    "binkw32_ADDR_038312A0": {
+      "addresses": {
+        "LoD/PD2": "0x038312A0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x112A0"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "_YUV_blit_UYVY_mask@48",
+      "signature": "undefined _YUV_blit_UYVY_mask@48(uint param_1, uint param_2, int param_3, uint param_4, byte * param_5, int param_6, uint param_7, uint param_8, uint param_9, byte * param_10, uint param_11, uint param_12)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:512206a0524f73d7cb6b767324468599",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "512206a0524f73d7cb6b767324468599",
+        "CFG": null,
+        "PRO": "ebc2fc9c1dbb4fd6fa6dc4d7e995e7df"
+      },
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "512206a0524f73d7cb6b767324468599"
+      },
+      "param_counts": {
+        "LoD/PD2": 12
       }
     },
     "binkw32_MNE_10ceae1bef0f": {
@@ -4564,11 +5138,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "58f038befe5bbad46706be039b30588a",
         "PRO": "8525b137a12098d77c8670d11e1330bd"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "10ceae1bef0fbe6e4b4da5621e81890e"
       }
     },
     "binkw32_MNE_24b3231d8bf5": {
@@ -4596,11 +5170,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "331ace91c8846c1e4dbf373cce8c824c",
         "PRO": "396553c84aa97fcbfc5fcd8b98d510ee"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "24b3231d8bf59c06fa0dcd294a5f6243"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4631,11 +5205,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "30afca8ba517008cbdf781f5906422b7",
         "PRO": "9b50e0e47e573f633d55332b80628e66"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6543be2c1e3e5aeacbb519a16b7bb53d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4666,11 +5240,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "3b3958a37c1f83abe553e598c41c9395",
         "PRO": "4dc78847c0ea86dbfa04bdf38383d51b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "56e72c5d93f196aa638c908c9d1df10c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4701,11 +5275,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "fa1a7b49fa7288a7779bdbd3388bb741",
         "PRO": "0f8f42973bca75185994eadd8b2ec216"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c40f3b4483cb840f36a191338aaef338"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4736,11 +5310,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f099fb52b68b0dd244eea8d33968d2e4",
         "PRO": "3e75bf95d52c521270d3abc5fc8dc2f0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "759dfa7d72a79b9135f206da0f44ca24"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4771,11 +5345,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f1ea396cda4bf67080ca5306fc2fb37e",
         "PRO": "ad33a2e747fc45b84bafff94d48220b9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e2e05e7054807f758517605ca4d57309"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4806,11 +5380,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "c6efb996ba98e455318ff833a2c7957e",
         "PRO": "d7d171c628b0ad811e8cda6f1d785900"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4a0cee88ebe08228c4d878d807fe78db"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4841,11 +5415,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7e9e85dea00054f2886a31b34ce7f1a1",
         "PRO": "3341ded775a7ef3e5849eeea4c39611c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b197c3b286320fcb4f506a2fee1b3ae7"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4876,11 +5450,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b2cc85b12cd01ea50f0e2af838c054cb",
         "PRO": "4a90d60ee686132285b48e23f54fe72a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "39d5c5cc5785a8f4441850cf89bcbd0a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4911,11 +5485,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "56fdedfa32208132eb56a588ae9db861",
         "PRO": "e182a3028c31248c787d4acee2507f9c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d347d96ec0d94dfddf3ae8c909f6ed5f"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4946,11 +5520,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "0d16a01b8731061989e87ef7cb6e3da8",
         "PRO": "a5580c8bb8e3d334b215fc9550d58be9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "73c62f1663200aecfb788e7dc59c4c20"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -4981,11 +5555,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "5847b0e258d9154f07c1e68ea2e310d5",
         "PRO": "ad33a2e747fc45b84bafff94d48220b9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "83e334a5e7daaaacc1cfeb45b9bc65ce"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5016,11 +5590,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "471b60bec83cbd7fbcac2a3f4dad588c",
         "PRO": "fa92051e8f327a744bd75ed61d5fc616"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "51afc5d553be81e899e30ec6a6f37698"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5051,11 +5625,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "1b8d9cec6baebaaf25589b6a1ae54ab8",
         "PRO": "227a7edeba9d2f92128be1f642c330a7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6e04e3701d88dc41ad988771d46e4b5d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5086,11 +5660,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "740225930eaec1e689fe7bf9a726713d",
         "PRO": "954c845cd8fc25114344554abdb67564"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8e4f9fa7327245247e1f7aa8c484f3ef"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5121,11 +5695,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "07af7631dd984d18ae732ae7a8986d4c",
         "PRO": "2524eafe11b7334e01bd9c0ffb5291f2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0827e2f12ae641d0e898a13549be0488"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5156,11 +5730,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "36af609be59150a2703da74a590941a8",
         "PRO": "10395645a8f04b4fcd301e123ff41df9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a67df02b5f56b4265404723e57bd78f3"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5191,11 +5765,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7ddaa40ddf3cf9d7ea1ef8d34262c1f7",
         "PRO": "c1c3a0e4640be7b29f5d5f42efc33d1d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3aefa5b0160e725b5f48983b69008d0c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5226,11 +5800,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "c64170fb5e0e630810847bf0d721e25a",
         "PRO": "72f8d5b065fe1e2564c38f9d1410e616"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "60b4aa5bfc3923f4ecac744acc69dc2a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5261,11 +5835,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "10fb45aa849b1660df71d176e9502647",
         "PRO": "27b4b4dee76897c69d26ac374a2f2d47"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "13beb94eea53a11a16554a8a15f02c75"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5296,11 +5870,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "75db3859b18a7cf4edfc15212ce3d72b",
         "PRO": "0376d2c447b9994358fc4f25300f3984"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "36dbf067cd1cc8455ecabee2e6454057"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5331,11 +5905,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "0e6962363b6bed9836da775f4a8e2fbe",
         "PRO": "d9becd2da52551bd0fad69f26e0cb725"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3e954fc91b35aecb4cbd284d72a6d689"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5343,10 +5917,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_ab123c1c9af7": {
       "addresses": {
-        "LoD/PD2": "0x03837280"
+        "LoD/PD2": "0x038370D0"
       },
       "rvas": {
-        "LoD/PD2": "0x17280"
+        "LoD/PD2": "0x170D0"
       },
       "sizes": {
         "LoD/PD2": 220
@@ -5366,11 +5940,46 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "848659e8af920bdcf4542618871483e6",
         "PRO": "6e9103f3735b0ce251fd018b314765b4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ab123c1c9af789e56861cac17cfe8edd"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "binkw32_ADDR_03837280": {
+      "addresses": {
+        "LoD/PD2": "0x03837280"
+      },
+      "rvas": {
+        "LoD/PD2": "0x17280"
+      },
+      "sizes": {
+        "LoD/PD2": 220
+      },
+      "name": "InterleavePixelDataMMX",
+      "signature": "uint InterleavePixelDataMMX(uint pixelCount)",
+      "calling_convention": "__stdcall",
+      "comment": "Interleaves pixel bytes from two source buffers using MMX SIMD operations.\n\nThis function performs parallel pixel byte reordering by reading from two 32-bit source\npixels and writing interleaved byte patterns to two 64-bit destination locations. It uses\nMMX unpacking instructions (PUNPCKLBW/PUNPCKHBW) to rearrange pixel color channels for\nformat conversion or data layout optimization.\n\nAlgorithm:\n1. Load pixelCount parameter (count * 8 bytes of data to process)\n2. Calculate destination end pointer for first buffer as dest1 + pixelCount*8 - 16\n3. Load source pointers and destination pointer from global variables\n4. First loop: Process pixels from source buffers 0x38532f0/0x38532f4 to dest 0x38532e0\n   - Read 4-byte pixels from srcPtrB and srcPtrA\n   - Read 8-byte pixel data from 0x38532e8 source\n   - Use PUNPCKLBW to unpack low bytes, PUNPCKHBW for high bytes\n   - Write 16 bytes (two 8-byte results) to destination buffer\n   - Continue until destPtr >= destEndPtr\n5. Update global pointers after first loop\n6. Repeat same process for second buffer pair (0x38532f0/0x38532f4 \u2192 0x38532e4)\n7. Return value in EAX (preserved from function entry)\n\nParameters:\n  pixelCount: Number of pixels to process (multiplied by 8 for byte count)\n\nReturns:\n  Value preserved in EAX register at function entry (typically status or count)\n\nSpecial Cases:\n  - Magic number: -0x10 (subtract 16) adjusts destination end calculation for final 16-byte write\n  - Carry flag (JC) used as loop terminator for unsigned comparison\n  - Global variable access: Accesses 8 global pointers for source/dest buffer management\n  - MMX registers: Uses MM1, MM2, MM6 for packed byte operations\n  - No validation: Assumes valid pixelCount and buffer pointers",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:ab123c1c9af789e56861cac17cfe8edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ab123c1c9af789e56861cac17cfe8edd",
+        "CFG": "848659e8af920bdcf4542618871483e6",
+        "PRO": "6e9103f3735b0ce251fd018b314765b4"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ab123c1c9af789e56861cac17cfe8edd"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5401,11 +6010,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "39d10b745040e489c91a7b7222f1714b",
         "PRO": "50cc66d1f2987320f304866916043881"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a6afb995e05ed8b4949ab7c47b1a1096"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5436,11 +6045,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e7e0be74d27bf487e1de1b1227fbfc76",
         "PRO": "063a1f4c4317492afde1a445301475a4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2fa7de2c7354176ce7249452610adecf"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5471,11 +6080,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "31583aa057651ebe75e90088c16b509e",
         "PRO": "146cb7ec808eefb7beaa7a1f55222a8d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a8db7f6923ceeb2faef0958847dff7ed"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5506,11 +6115,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a90da09c5f996c084264596427201a9f",
         "PRO": "0b5417a85e84363f1acc0bf87369df97"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "218251a95872327c4c9521d75c6c0d4b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5541,11 +6150,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "296c973b6099cf5e37a1afccb008c828",
         "PRO": "6ebd5c41ddf79395a0653a81874d5721"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a29c6f6b8852ae51ffee703d5020b178"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5576,11 +6185,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "9beea34542ffda67ce220aa5425847c5",
         "PRO": "42e6a38e2a5a0728776770047851c35c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "27f8216ed3d05dbba3a5ee80528537a9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -5611,11 +6220,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "671604d04112667648946b8cbd957bb7",
         "PRO": "635b1d992f370bad34200be66a5f368e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "84496cc2c0783229f3d1137e0181356d"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -5646,11 +6255,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ffa55fbc031f36713c20c057f05d9937",
         "PRO": "8e47e9907f46a3b4449baa41b970f877"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ce2cfe540a9cebc3ca11931145d2bb88"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5681,11 +6290,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "2579cec2f377ae3df36f988c7bf80f4f",
         "PRO": "ec2c188327c427212f855c719f6821c0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6d594acde8ddc54df55a8bd26d568037"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5716,11 +6325,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f73931ed23ac75b4cfb12cc4176e38c7",
         "PRO": "ba64ead09b43fdaa4b53d079bf1e2197"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 26
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6531cfccbbb21b1dc38462acc36d9996"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5751,11 +6360,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "bb28c8709c2470002aef7003d0f248bd",
         "PRO": "f326e25e48136e3d00f9904198614782"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "75c635154499e74b2fac028cc68f00c7"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5786,11 +6395,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "dce73cdc838a8698289ea193249a7670",
         "PRO": "f437044b8194178cd28213525bb364f6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "44239be557eccfb60e886d0349f6f3db"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5821,11 +6430,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "9954f97af7330b582b809687bbece937",
         "PRO": "678dae85dbacb6d983c909b53111229d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "38e7e4d94382f9b6f32d4b3a75691f45"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -5856,11 +6465,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "1277007fc73f503c75b76ed0803582c0",
         "PRO": "8248610b0aec6abad2755255637e6985"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 24
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ce7f840a567f085fab3cae25d53c484a"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -5891,11 +6500,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "39626882d653097e57ff24aa5cf3bbbd",
         "PRO": "d21142fb4b5c5ea5792f419196a77aff"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0512e960352bad47e61560d4b5ee5454"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -5931,11 +6540,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "cf5756a8edcf1fd56ea9ae714bcff82b",
         "PRO": "1926108d00ea9ba42f193f5d3fe60efa"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "21fdab438fe32ef8c4b6dfc3b7b3eaab"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -5966,11 +6575,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b77cea7b452df4f7fce22a3f505777b2",
         "PRO": "9e9e1f73e50ff7fa2c88cfb8c2843d33"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 47
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4469e6447e7d46e81b58caa114d02744"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -6001,11 +6610,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "3d7ac2c2df8a331cdbb21fa9dd404d13",
         "PRO": "f44c643bee20247ad585b5d77c309b53"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c2334ba4711eca8795eac9c89c0e129c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6036,11 +6645,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "67efe5b1b93a9ab18cc7297fbad7cc8e",
         "PRO": "dfb4e09d8b884fdb94d27d021eabda06"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "13734d19830c36b4b1fbb8448df24608"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -6071,11 +6680,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "e6f0f34f164f91b76e981de330143430"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ea61922022cb536d70448a5259bdd7e0"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -6110,11 +6719,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "d521a85818442ba49515990eecd1f899",
         "PRO": "181d8a583a5631fd6044fe64c05a0075"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "567fd1c3cc7f045e29ae1161afbbb105"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6145,11 +6754,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "49ae7d019e96c812ee59ec10cfbc9e48",
         "PRO": "ca391fbfa6030aa706dc6ec0f5da0c81"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d796dc09ec02c25695faea053e423707"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6180,11 +6789,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ae5a7295f41b2cc6d381601031fd744e",
         "PRO": "ca9145a8a6125e033c074b6d433f1406"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "37f80ee4d2eb27099162b10fa8e56585"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6215,11 +6824,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "1f402f1fdc7380554654155b8422fe79",
         "PRO": "336d4117e512a6c5db9f987b15f798e4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5fd74780c7fe017abf9e88ab4bc4a0a7"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6250,11 +6859,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "0a3586054bbacc4e01d98943cd235cc6",
         "PRO": "6b043dd3c97f9d7b37fdad1ead5ddca6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "aa6941d4ba4270d4f931ca2477744b70"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6285,11 +6894,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7198471cfb35f6111a05eaa92cf48bd4",
         "PRO": "f817112f82428f6a389ec4dc01efff4f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3115f038870e26653ab1e4d31011ea6a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6320,11 +6929,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "611b0a2738bc697e80a73ce4243ca126",
         "PRO": "83c97abfeb661908dcdc39c4780e3b8a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "dacbd34b4e32cc2e46f4421b33173dac"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6355,11 +6964,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "49ff440b8780376a7ab14f20d20d4a19"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8f626c192d0a356f6953a0b8c9f334ee"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6390,11 +6999,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "9e2df808a8a9e5ec0c3198d52ac00132",
         "PRO": "27f38dacea82ad0c343a64038354f727"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 148
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4f731b1395511d61e724f9f85ddfb70e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6425,11 +7034,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b953153073119b3d8168e13635cf73b7",
         "PRO": "64ec79867925094559b6d2040bf818a7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 85
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5c44af704ef34d2f7ac3eeb99f26e7fd"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -6460,11 +7069,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "1a49c223c73aa26c6ba9ce720aaeeb8a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bef3a80cb1c292d751cc67a95746c0ea"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -6495,11 +7104,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "3b17a520b61243785c7be6a1fd9f1432",
         "PRO": "d89af3574846fd504153e46bf01e8cde"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "44f2e488e61bfa0e0e1868351529e08b"
       }
     },
     "binkw32_STR_fabd94e72423": {
@@ -6526,11 +7135,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "feb3304a49551e46ae5ffc6eb3820e65",
         "PRO": "9e4a5a65d1cf679303b16c2528ea36dc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c2d8c82a224ae31858aec44d3b1ed149"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6561,11 +7170,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "77e8defb9e2a0a81fe6e343213e5eec2",
         "PRO": "a4e1e33881ecff6efe940e6f5e1820f8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 33
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "456eb52a137afb45d56d48d17f5aacf2"
       }
     },
     "binkw32_MNE_2ae41d0a48ef": {
@@ -6593,11 +7202,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "88809e4ef037bedf4711ca1d73363eab",
         "PRO": "844270ae62dc7c8dc523a153b7a0a6ec"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2ae41d0a48effc5672a1611866c4811c"
       }
     },
     "binkw32_MNE_7701dbbda37c": {
@@ -6625,11 +7234,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "76d290637670640f102400b24c193d98",
         "PRO": "262360de52711b2847eb7c1ad9771c18"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7701dbbda37c6e0f92f43cd6fd834dd8"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -6660,11 +7269,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "1184ab72a8247641f4d82504b9958b11",
         "PRO": "f0a8746dc4c851f27aa3efb613926566"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "17cdafd82d7bde2dd2169e5fa2c76410"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6695,11 +7304,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ca4b01082a0db3827c8ee0f7eccf8748",
         "PRO": "531d1cd40fc6b0c5d857860d958db9e3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "43b18e3922536636b2812d8e4d4d2d2b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6730,11 +7339,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "2d9cf657078f922ce0b30762cead926e",
         "PRO": "b8ce313082d5280a8892c191680c49ca"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5094260ea32ccc534b208448eef4b13d"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6765,11 +7374,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "dad8b4a3132035330fd0ba94d7106234"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fe822583783b9eaacef7818446dba589"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6800,11 +7409,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "285d09a7e9b985b0b82a1cfce0632509",
         "PRO": "9d89068245fb7fca2ec7af5997772eec"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5be5c6d3e5794ca8d7bdee513ab9939a"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6835,11 +7444,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "093f36e40cc4a7861754e4e870ef1391",
         "PRO": "eea0b25140867bc9a90dae5eb3655302"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "248e0fc309e1113605b11ca892cc4e6c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6870,11 +7479,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "adc640a3489c603170b20e3511a8313a",
         "PRO": "8dadf365bdf479fd28e8b8981f833f40"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "73e7d62334998be2018eeed2e05edf34"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -6905,11 +7514,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "81cab27cecd1d60d77975c0a7ed82460",
         "PRO": "fb4eadfbb3f4323b662387f057a99b40"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a91db643414f481392dcb29900bab08a"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -6940,11 +7549,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "1796ab06f5fb0fee2ae315488432bedc"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5f6597f6534112837359ef16de154638"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -6952,10 +7561,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_301bd5440f60": {
       "addresses": {
-        "LoD/PD2": "0x0383DDE5"
+        "LoD/PD2": "0x0383C960"
       },
       "rvas": {
-        "LoD/PD2": "0x1DDE5"
+        "LoD/PD2": "0x1C960"
       },
       "sizes": {
         "LoD/PD2": 18
@@ -6975,11 +7584,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "7e9088f68695e390e3d3eb2a96d52b44"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "301bd5440f60703ca7a24a8fb30f1e56"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7010,11 +7619,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "55d660ebbef99c0baa319e016760b8fc",
         "PRO": "c23a96deea647357438db7500c249a64"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "be05c38d951a724b98e30bc46956a8c1"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7045,11 +7654,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "92278232420090a1495e8a6ef63d1827",
         "PRO": "915bad49c431c4381036e0d7737fb812"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4e5e59b9a63f832f54b3dcf90c4a63d7"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7080,11 +7689,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "4e847b889984c71922568191fca6fba0",
         "PRO": "47188dfb919d357b42c261e8dba56040"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b18de4e8dfaa1ea94be3de3b62f2adf9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7115,11 +7724,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "045d072095aa0590f457075a5c76c09c",
         "PRO": "c696608c00b23b4a16ca3d1d8bf60dac"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9385a39014977010e096b1b65a9621a6"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7127,10 +7736,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_bff09423b51f": {
       "addresses": {
-        "LoD/PD2": "0x038417E0"
+        "LoD/PD2": "0x0383CAA0"
       },
       "rvas": {
-        "LoD/PD2": "0x217E0"
+        "LoD/PD2": "0x1CAA0"
       },
       "sizes": {
         "LoD/PD2": 664
@@ -7150,11 +7759,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "6140b24f34cd85599ad606b05441e9d1",
         "PRO": "ff38c497c82643f818ac8c3950b7223d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 74
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bff09423b51fd121ea30afec957819f4"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -7185,11 +7794,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "09ddda4df0a4b94968d66dcfc3cca519"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "059e9bb2efc1de93bfe21089d0ad96d3"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -7225,11 +7834,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "d7e92aa36e4ea61ef8903512dfbaf1bc",
         "PRO": "8991fb038676265817639d7b30841cdb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd4ab8e23ed6997cd2e2434b8d375458"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7260,11 +7869,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "014d2069a1aece9d955ffb144dc9da61",
         "PRO": "39d6b544182fe623338211af29a3f3a9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed17ad9d511f6e330c2b6a62378d83cf"
       }
     },
     "binkw32_MNE_89d1b6190541": {
@@ -7292,11 +7901,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "204649768cb6aa7c9bb671be8e047b74"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "89d1b619054116ad559c7c543db397fd"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7327,11 +7936,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "4525054fad93c609ecb58b050b01a717"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cb09f6b5d9797072e6568a27cb29dcdf"
       }
     },
     "binkw32_MNE_bfc3ed25e915": {
@@ -7359,11 +7968,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "c55a401edca1b8e4cfe9fcc831da2da0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bfc3ed25e9152f457419d9112a775bc2"
       }
     },
     "binkw32_MNE_2a518bd4b0b9": {
@@ -7391,11 +8000,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "4e847b889984c71922568191fca6fba0",
         "PRO": "c71205845eb17fcc2718f716924d07ee"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6"
       }
     },
     "binkw32_MNE_73c3f7bd7828": {
@@ -7423,11 +8032,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "c9e7cc5db24167bf45f1b93a01a6754c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "73c3f7bd7828903a97f293ba1dae2fe1"
       }
     },
     "binkw32_MNE_f4e79a937471": {
@@ -7455,11 +8064,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "a93c7dfdf9a2c8dea1976762e7b22479"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f4e79a9374712478a96f5f0af7ec0c2f"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7490,11 +8099,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f87d33bf25c2c522a948bc1ac422ee48",
         "PRO": "c77f6039960f14bd3c8539ec4bc44851"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 79
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "512beb3274e38dd5f9dc6106693805f5"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -7525,11 +8134,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "9f0e6dcc6217912767c0e6d0aa226117",
         "PRO": "c4bcc9c1cfeb654811107e7f522425c9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "634f5fd2b38b5a9728c3cfaee438889f"
       }
     },
     "binkw32_MNE_83b97549df2e": {
@@ -7557,11 +8166,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "84722a843568370bfd19dcc25ae78914",
         "PRO": "7a8c1eb4b5a4d5058be2a1dc83392475"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 19
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "83b97549df2e40c28a16c5f86c2df6f2"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7588,11 +8197,11 @@ var FUNCTIONS_binkw32_dll = {
         "PRO": "3ff0ec10389d92e20dc3ad6e9f1601ba"
       },
       "display_name": "MNE_bafce56213ce6cb4",
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bafce56213ce6cb4a7088c594df572ea"
       }
     },
     "binkw32_MNE_bed936c73fe1": {
@@ -7620,11 +8229,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "2555e203409cbc2d4a46fa3a51b3c448",
         "PRO": "7f98f9063b4c10fd5f6e7a2cdf4f00a0"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bed936c73fe1864937225129603e250c"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7655,11 +8264,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "c514545fcce289b8241e149ad12d442a",
         "PRO": "02248df169c3cca2531f062388b6e93d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ee4facdaccbd6fc5f3297fd5b85b73c2"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7690,11 +8299,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "d7e96f9927eb9ca21b2899c502c7f39a",
         "PRO": "16847fa79110f65f85652b26f0a066ad"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e33a4c6c562d51a2fcc8e07bee94f1d6"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7725,11 +8334,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "664846e500463189314de1dac1cecd37",
         "PRO": "201b839f6defbaba2f2197cfd953f4f7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "95a95faa5abab405c460e2774e3dc41a"
       }
     },
     "binkw32_MNE_9714d3ad2dee": {
@@ -7757,11 +8366,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ad60745e7a538a03b6fca85abc2d64ca",
         "PRO": "5fdc9a2f8d2f549aedf82c9ea60b86b9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9714d3ad2deea30ac943f1376fae33d4"
       }
     },
     "binkw32_MNE_2a0dd1f395da": {
@@ -7789,11 +8398,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "dc0623423d93fb21da8f1c1461d32590",
         "PRO": "80248ac75e5b09a45fe6a50c97e1db89"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2a0dd1f395da0f8e13609d337843c676"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7824,11 +8433,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b0c977cba6daa99c8a216043b57a2ddc",
         "PRO": "00e2fa60d81eb194d407fbc1353f620d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 48
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9bfd98dbbd3e5d7edb553bd7666739e4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -7859,11 +8468,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "8bfb5a50412c4903afd2744f0435c9df",
         "PRO": "3d32d6fc38dd51790c04146c3d4bbac6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 85
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ff64648b3e6e32bc28a5e4bc8d984c1e"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7894,11 +8503,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "72afefb82939fd195fb2c24c9e65a427",
         "PRO": "b541c99359abd6a546d3b544ec8b1a16"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b59a8a7d2c8fdcc2aac183f01f99a847"
       }
     },
     "binkw32_MNE_0002c858ef39": {
@@ -7926,11 +8535,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "578171bf058641c3b5e7f1cef37bba9b",
         "PRO": "dea8c343a18f51e1084181af8b8e840f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0002c858ef3942a0b403454c72674bfe"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -7961,14 +8570,49 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "d59138f44100bd891d1023b7740338fc",
         "PRO": "840d24f650e292ac52bddcf9684888d0"
       },
-      "basic_block_counts": {
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cc0e19248bdb90cb6bf790db102f9ddf"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "binkw32_ADDR_0383DDE5": {
+      "addresses": {
+        "LoD/PD2": "0x0383DDE5"
+      },
+      "rvas": {
+        "LoD/PD2": "0x1DDE5"
+      },
+      "sizes": {
         "LoD/PD2": 18
+      },
+      "name": "ClearFlagsMaskWrapper",
+      "signature": "void ClearFlagsMaskWrapper(void * pObject)",
+      "calling_convention": "__fastcall",
+      "comment": "Clears and sets bit flags on an object through a wrapper function.\n\nAlgorithm:\n1. Accept object pointer in ECX (fastcall convention)\n2. Push clearMask value 0x30000 onto stack\n3. Push setMask value 0x10000 onto stack\n4. Call ClearBitMaskFlags with object pointer and mask parameters\n5. Clean up stack and return to caller\n\nParameters:\npObject (ECX): Pointer to object whose flags will be modified\n\nReturns:\nvoid - No return value; modifies object state in-place\n\nSpecial Cases:\nMagic Numbers:\n- 0x10000 = setMask value (bit 16) - bits to enable in flag operation\n- 0x30000 = clearMask value (bits 16-17) - bits to disable in flag operation\nThese specific mask values are passed through to ClearBitMaskFlags for processing,\nwhich further masks them before applying the bit operations.\n\nFunction Purpose:\nThis is a thin wrapper that handles the __fastcall convention translation by pushing\npredefined mask constants onto the stack before delegating to ClearBitMaskFlags.\nThe function is used as part of a game state management system for flag manipulation.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:301bd5440f60703ca7a24a8fb30f1e56",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "301bd5440f60703ca7a24a8fb30f1e56",
+        "CFG": null,
+        "PRO": "9fdc1640ba42e4f0cd00e306b4e805b5"
       },
       "loop_counts": {
         "LoD/PD2": 0
       },
+      "mnemonic_hashes": {
+        "LoD/PD2": "301bd5440f60703ca7a24a8fb30f1e56"
+      },
       "param_counts": {
-        "LoD/PD2": 3
+        "LoD/PD2": 1
       }
     },
     "binkw32_MNE_49e318c9f118": {
@@ -7996,11 +8640,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f16ee01fce64ac425fc77137800a8352",
         "PRO": "7202d1af3f26d2661651e373a06d35d2"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "49e318c9f11868b2ccda0cc5be0e6fb1"
       }
     },
     "binkw32_STR_28768683ecd1": {
@@ -8028,11 +8672,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e6f5aaef1039a61daa103ba7f60faedc",
         "PRO": "80d75c4001ec5f04da5248e958258154"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f8699cbba1b01584e66dc48ae13d6b14"
       }
     },
     "binkw32_MNE_76bcdc60e227": {
@@ -8060,11 +8704,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f7a480f5087b3f579d153b9201ef810a",
         "PRO": "154d618ad49076728347c7861daea7d1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "76bcdc60e2279c3182537e650d7ffd3e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8095,11 +8739,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ad60745e7a538a03b6fca85abc2d64ca",
         "PRO": "a9f2908cd858fee16e0500c0e527d630"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ce3e17d01f8a4102c772a8dc6bdc555d"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8130,11 +8774,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a92b3bc7b13f790b383332d843be644f",
         "PRO": "abc5addcf6c6da37acebb44a52ff3fa9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3450d1940496a7a0a18b4e9e94121a01"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8165,11 +8809,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "fc5872668649714cc9f5756d0001db11",
         "PRO": "c60243c16a316975027d0a18c1b7e586"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d6754fcc5d62e9f41e8fd2908ff905da"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8200,11 +8844,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "affbf7be97762a304498c1314bdbae8d",
         "PRO": "c6525c37d7d6ca91ce78b772ed4bdb6e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a21e46af6ec4270dfffa0986c67abd1a"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8235,11 +8879,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "cc70a1fd6d792f63eab260f0b6b93c6f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fd1d6842ea7fc60309d2fe367f862d42"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8270,11 +8914,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "bb733e16f7c97d4917fdc04028ef3960"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2668ddf225e6573817b0d0cf649daaf6"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8305,11 +8949,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "0ba32f22434d5de97af5dabc5af8a9aa",
         "PRO": "01a513091671607b2f3ca269c59b4680"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f50494c5982aa77d2240c41fce332436"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -8340,11 +8984,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "dc31fd8ae2ce6da459435b7f021fe995",
         "PRO": "9eadceaeb70106b350bf4863bfe68181"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b7d4a5a4939b00399701a93fe243a594"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8375,11 +9019,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ca4a9f948f3bb20265440a9288a64a07",
         "PRO": "b6bce4d220af312c813d737e90762c42"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 63
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a4fde7ab66242cc6a0f98892cc769636"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -8410,11 +9054,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "98d3612bca667bf3f47977c0930d5370",
         "PRO": "b64cdae7247af72de9992991263dbbbe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 66
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "21ebbf809f077a14550cdc7271d10c0f"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -8445,11 +9089,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "76db6c382c26eeeef0f0e1f77aac8844",
         "PRO": "0e5444a3561cbeb8bd411ae77c0d4ff3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ed5d8332b54d28b982dbc31e264d087d"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8480,11 +9124,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "4fc837b503f893d099417b020b7b63a7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "afa3defe2b24d87908c421b2ad8a6bd9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8515,11 +9159,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "6000cc2182a7cdfbcad0aae8c6ee83e4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "96ef86ea161c5c47c2f79058ef6d533b"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8550,11 +9194,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7deeaa169c40e9b69717ce2c9b0cb0ef",
         "PRO": "9f8e71d80a5d8c4c03ac9d4ac51f44a7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "05d8e97733e4c41533ceefe44bc4bac2"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8585,11 +9229,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "0fc4f5d435361cb894376c39e50ebc79",
         "PRO": "3e4a1c70fc31a3a9760c942953b5e796"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "07c53c70ca23fa302c00136544982339"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -8620,11 +9264,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "43c7dafc2e66435e98c2739ed2be47fe"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f75de985f89ec0796fb5e3ad0eeb7130"
       }
     },
     "binkw32_MNE_ae75ffc6ea20": {
@@ -8652,11 +9296,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "b6f4823b79c490a44815cccef2312035"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ae75ffc6ea20c40cb82d5b28aa748d3f"
       }
     },
     "binkw32_MNE_e652a465dd7d": {
@@ -8684,11 +9328,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "0a45eea177801f01b05268df3f748301"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e652a465dd7d9cb07580972eb3eb0f96"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8719,11 +9363,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7502e22954c3d2f1a19df576ed7ccc51",
         "PRO": "a453fef7ed5b6d07425c8db5d5eff38f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d2372372c4179c2cdb1a710877220f60"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8754,11 +9398,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ffe48a55e9f191d3c956c5f40dadbeab",
         "PRO": "112c6879ca5f69c40baa1caeb058c865"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f0a75c57169f7149d74a2236cce98a2e"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8789,11 +9433,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e207c01523be4d9e2ab842a571789cac",
         "PRO": "d03c0d1699b8180175a0622a5be7c601"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 16
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d5f0d2733adf4d1dce64e7fb83efd1d4"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8824,11 +9468,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "f6ba15919494a6e0de51957ffb31b089",
         "PRO": "b5ba49bd58125ef109dd1a838e946bc1"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "df587a37c8639f83cd433c3a3fbdafc4"
       }
     },
     "binkw32_MNE_1e5021910108": {
@@ -8856,11 +9500,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "37d38e63f6ee4a3a988685613c81cb30",
         "PRO": "5f44c9d706744ea9e2ce14e025e6412f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1e502191010869fca5d6ea71e353f408"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -8891,11 +9535,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "0345c8892098e4ce43dca763d1e8ec63",
         "PRO": "cb03b749cfb5a6cb7850eed4c81c641f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2efd2f634b43779c5726887ddad8796b"
       }
     },
     "binkw32_MNE_038f21ccadf0": {
@@ -8923,11 +9567,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "c3c38319caaa90934e927a5b8cadf44b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "038f21ccadf05fbd1bec4c0181e46e90"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -8958,11 +9602,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "82ab21280f7756b94aebf888fcf167cf",
         "PRO": "001b5f551e3eec8ec8df7053021c5bad"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "58c3c7e175be8c196c57976e375f315f"
       }
     },
     "binkw32_MNE_3c4be6dbcf12": {
@@ -8990,11 +9634,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "80158248b60f953891e8fc7e6daa7eff",
         "PRO": "07e743cd59663008aa355e28886b82e5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3c4be6dbcf1260e7f12c4f60862ff7d6"
       }
     },
     "binkw32_MNE_d63502919c4c": {
@@ -9022,11 +9666,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "dbecc4592f372f116866c3eeaf6ab0c7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d63502919c4c985cfbdccf3184dd15d0"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -9057,11 +9701,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "19c71a436cd9b62cd94468fdd6017761",
         "PRO": "d4534ea44172405569ef7c69e3511570"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9215dd17545429f5a2114f3f9c06e96c"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -9092,11 +9736,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "d88336b08af1715c644e9a02a67eb019"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "3f015c1c75c5efb05d68ef52e0407e8b"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9127,11 +9771,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "6ac2b36b650e9421f95685b6edc12d6e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2499e8fc59692f6e5479749bdf8573b2"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9162,11 +9806,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "51d5ddd4ecc1dafccdeb273dae1d2adf",
         "PRO": "9f8021330ca888b56e19c20ebdb2b790"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7e73328c30de0e16ec37226d5c0fbaeb"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9197,11 +9841,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "8c35684bf37f290ed4e35e4eb8e7fd2a",
         "PRO": "8cb32a0d56a2452e759161b6ffdb7e9f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "118a84069540ef5bdaff27e56dcaadec"
       }
     },
     "binkw32_MNE_0c71b5715e2e": {
@@ -9229,11 +9873,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "1d927b07221b2d93b8f37eb335ea758e",
         "PRO": "456d89e7bb0dbf9148c82d622f3167e8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0c71b5715e2e7c5f22ef70735f27ff6f"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -9264,11 +9908,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "1cc4dcab1ccdfe407dc1ef8869f71be8",
         "PRO": "f240cca4eed4bb749aa8c96868b9ff7b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 32
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "196c90d967af5bf2d30c255ccea793be"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -9299,11 +9943,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "23a0f299cbbbcc6ee256176a35d753f3",
         "PRO": "836d20515ffabe338a5e702391938d03"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "1252459d5bf6fc7fa6bd21d0f60e6017"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9334,11 +9978,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7db700d6fea6bf8bb6e1c45f4f727c0d",
         "PRO": "2dccca79d6cd4d2e0d533b711200f4bb"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "91b5192dddb89e963abc2be4471149da"
       }
     },
     "binkw32_MNE_cd85d17a6b19": {
@@ -9366,11 +10010,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "c80ea614abfd3bcd1af49cec01e55660"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "cd85d17a6b193c95680d3fdca645abba"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9401,11 +10045,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "ece079ef0dcc93f72e43c57c565dc1c3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7a5e6ed384be31095abb7960c9f1d6d0"
       }
     },
     "binkw32_MNE_45d9b348a966": {
@@ -9433,11 +10077,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e0f0d2c411c7f078ad0625f7753a8d48",
         "PRO": "1a126880d04a560e03bb1a74fb405590"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "45d9b348a966df89d3a7165f288b5d47"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -9468,11 +10112,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "8df2c0dc7c783306593f4d1d07d16756",
         "PRO": "c5843f3db205987ea5094c55a1bdaf18"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f1060dff4c8b86b7cd32c42f8f136fb6"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9503,11 +10147,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "dbd056a7491ee7a8893ba932b320d4b9",
         "PRO": "eda085c40c24f83fea7f5bc20f13125b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 39
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b09f16c0e6a5014f6b150653e76f58a2"
       }
     },
     "binkw32_MNE_299148f3d45b": {
@@ -9535,11 +10179,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a76e0273b3e592eaee672793f78290ba",
         "PRO": "cbb085d4d1ba936a78e0f2cc167f82a6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "299148f3d45b20053c668d97232dffbf"
       }
     },
     "binkw32_MNE_6e538b3bbbee": {
@@ -9567,11 +10211,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "48cfb634102b5d72e404e02e44594130",
         "PRO": "a47efe5f4c663f1619a88951652b5ac7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6e538b3bbbeec8f94bef058bdad701fe"
       }
     },
     "binkw32_STR_ef8d6b30e6f2": {
@@ -9599,11 +10243,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "cea6ce415732f40bbae9c1758ccf2bd8",
         "PRO": "929753114515822faefe826ebb9d3704"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "78c0be793b204c577b78460711bf70fb"
       }
     },
     "binkw32_MNE_50cd6b6fd69b": {
@@ -9631,11 +10275,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "fb29ae4ee2676389ff0892a75897cdce",
         "PRO": "298c11e8b7f6fb45479beaa4f4f2c6d3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 73
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "50cd6b6fd69b78c0380659763fce7ea0"
       },
       "param_counts": {
         "LoD/PD2": 5
@@ -9666,11 +10310,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "251ad66a10e4d45c7bcd5b4f701e532d",
         "PRO": "8c696976331480e2abbece2421ba0f43"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 29
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ee22dcb18299b51eb994a57f32a5df1d"
       }
     },
     "binkw32_MNE_9765460a3049": {
@@ -9698,11 +10342,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "285d09a7e9b985b0b82a1cfce0632509",
         "PRO": "7502cce0f0faed280fe9470193f6a18b"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9765460a30498931557fab10cfc0be00"
       }
     },
     "binkw32_STR_ff7880d11813": {
@@ -9730,11 +10374,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e9e3238573fb8758cb6dacb6540ea203",
         "PRO": "48c6f07dea88f11565b2c007fb6d275c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 15
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "6bfb7faf8650903f50cd7e2ef7eba7fe"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9765,11 +10409,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "d8a6049770e510e2f27b5ad4175a1524",
         "PRO": "2a00c56a0c52d5b18e3fd28db487dfab"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 60
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c1d05e132bc8c3bc87e7a971916e9b9b"
       },
       "param_counts": {
         "LoD/PD2": 8
@@ -9800,11 +10444,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "dc0623423d93fb21da8f1c1461d32590",
         "PRO": "44eb51cb2190f284eca0a4e49c8cfa09"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c365f0335b7bc4452623cbc78de16e67"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -9835,11 +10479,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b2617940305b6e1d0cf3c25e221e2cae",
         "PRO": "c8d89ad94f3c34809611625b9d2466f5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d858691b25ff9d68f1965dc04bb2a9aa"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -9870,11 +10514,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "17e4599fad4ffc1e4e07e516b86e9d30"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "01839c0631f6879602250d0f45268558"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -9905,11 +10549,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "db7f065a3a0aff847bc45b0698d2699f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "03d2d9a1894bad6481c3d75928ae7b95"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -9940,11 +10584,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7c92d5ce9ce96a5b20c1e87fc6aa8353",
         "PRO": "5ce4766fb84912d00337fe9e8e4c4a28"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 35
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2d415c643620c5a6b5394f7144cab162"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -9975,11 +10619,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "de7abdfcc72b5526895c38f13ff7f424",
         "PRO": "b6fee50c54d338862b5fb8893da15032"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "13aed512c644fb08ccd536c95b2ae182"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10010,11 +10654,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "cdc070696849588c280e846bd6455d11",
         "PRO": "0eb08426ce3c35a25f65cd11e4f89b2a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 8
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "546b5c43c0effce0a0403e1069ea2e2c"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10045,11 +10689,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "971923f45045cfb1fa7a76868deb7c00",
         "PRO": "f97182f02d4310098ac617e17342d491"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a1fd1f83ab5d96b4bef4e8817dd3ae88"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10080,11 +10724,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "3af0887aa0a5e14bc546ff8d3e498545",
         "PRO": "7bf1802f382071d29458abf1515ec23e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ef6cff05ab48173ef496ad6dbe48e5ef"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10115,11 +10759,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "c514545fcce289b8241e149ad12d442a",
         "PRO": "51d638096a06d3d432396f8b50483296"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 4
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "15ec667135b11a0873a61b429d37dd78"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10150,11 +10794,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "18a54f4e6e70cf9d99acaff0ebb9cc96"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "06356139b9d27a571ec4e5eae9a16f67"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10185,11 +10829,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "2eedfb88a02f888dd480b53d641d0184",
         "PRO": "ba2f402be6d43c400b181e901a2b0ba9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7ef9c351fc7bceec813ab833e5911666"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10220,11 +10864,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "42b841fbe75f0c0c5d8bf9ab5b91a778",
         "PRO": "21cae60e2eb8edab6a4a6c00021e1e37"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b5aa33b0420f2d311658da83496527f7"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10255,11 +10899,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ade70882ac03ce3f609657714a7f6db8",
         "PRO": "0b059f9828ad4bc5476b0b06b812187c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "7af322ad22a8e231117c7fe6d2adf33c"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -10267,10 +10911,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_09d6403e834e": {
       "addresses": {
-        "LoD/PD2": "0x03840119"
+        "LoD/PD2": "0x03840103"
       },
       "rvas": {
-        "LoD/PD2": "0x20119"
+        "LoD/PD2": "0x20103"
       },
       "sizes": {
         "LoD/PD2": 22
@@ -10290,11 +10934,46 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "7eb86d6edc84dd81c49d4f208d19826f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "09d6403e834e217532debf7a54bafa14"
+      },
+      "param_counts": {
+        "LoD/PD2": 2
+      }
+    },
+    "binkw32_ADDR_03840119": {
+      "addresses": {
+        "LoD/PD2": "0x03840119"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20119"
+      },
+      "sizes": {
+        "LoD/PD2": 22
+      },
+      "name": "ApplyDecimalComponents",
+      "signature": "void ApplyDecimalComponents(ushort * pComponentBuffer, uint * pOutputMantissa)",
+      "calling_convention": "__cdecl",
+      "comment": "Applies parsed decimal components to construct floating-point output.\n\nThis is a wrapper function that applies previously parsed decimal number\ncomponents (mantissa, exponent, and sign information) to generate a floating-\npoint or extended-precision representation. It delegates the core conversion\nlogic to ApplyComponentsInternal with a reference to the conversion parameters\ntable (DAT_0384e938).\n\nAlgorithm:\n1. Push conversion parameters table address (DAT_0384e938) to stack\n2. Push component buffer pointer (pComponentBuffer) to stack\n3. Push output pointer (pOutputMantissa) to stack\n4. Call ApplyComponentsInternal to perform conversion\n5. Clean up 12 bytes from stack (3 parameters)\n6. Return to caller with result in EAX\n\nParameters:\npComponentBuffer (param_1): Pointer to component structure (12 bytes) containing:\n  - mantissa bits (uint at offset +0)\n  - exponent value (ushort at offset +4)\n  - sign/flags (ushort at offset +6)\npOutputMantissa (param_2): Pointer to output buffer (8 bytes) for result:\n  - low dword (offset +0): mantissa bits\n  - high dword (offset +4): exponent and sign\n\nReturns:\nEAX: Status code from ApplyComponentsInternal\n  - 0: Normal completion (zero or normal result)\n  - 1: Overflow occurred (result clamped to max value)\n  - 2: Invalid/subnormal input (result set to zero)\n\nSpecial Cases:\n- Zero exponent: Component buffer is treated as zero/denormal\n- Overflow: Overflow flag set, magnitude clamped to max representable value\n- Underflow: Result set to zero, no underflow flag generated\n- Parameters table at DAT_0384e938 contains precision/rounding config\n\nRelated Functions:\n- ParseDecimalString: Parses text into component buffer (called before this)\n- ApplyComponentsInternal (FUN_0383ff97): Performs actual component application\n- ParseAndApplyDecimalComponents: High-level wrapper for both functions",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:09d6403e834e217532debf7a54bafa14",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "09d6403e834e217532debf7a54bafa14",
+        "CFG": null,
+        "PRO": "8623e353967d1f4f4e6ab6f785ef086d"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "09d6403e834e217532debf7a54bafa14"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10302,10 +10981,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_e78d3e11a492": {
       "addresses": {
-        "LoD/PD2": "0x0384015C"
+        "LoD/PD2": "0x0384012F"
       },
       "rvas": {
-        "LoD/PD2": "0x2015C"
+        "LoD/PD2": "0x2012F"
       },
       "sizes": {
         "LoD/PD2": 45
@@ -10325,11 +11004,46 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "0ba2b7323206503e54061e49d8c46fee"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e78d3e11a4929c0669f2164a27decb87"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
+      }
+    },
+    "binkw32_ADDR_0384015C": {
+      "addresses": {
+        "LoD/PD2": "0x0384015C"
+      },
+      "rvas": {
+        "LoD/PD2": "0x2015C"
+      },
+      "sizes": {
+        "LoD/PD2": 45
+      },
+      "name": "ParseAndApplyDecimalComponents",
+      "signature": "void ParseAndApplyDecimalComponents(void * this, uint * pOutputMantissa, byte * pInputString)",
+      "calling_convention": "__thiscall",
+      "comment": "Parses decimal string and applies parsed components to output.\n\nHelper function in Visual Studio CRT that parses a decimal number string\n(e.g., \"3.14159\") into binary mantissa and exponent components, then applies\nthose components to construct a floating-point or extended-precision number\nrepresentation. Used by __fassign for float assignment operations.\n\nAlgorithm:\n1. Allocate 12 bytes on stack for temporary component structure\n2. Call ParseDecimalString to parse input string into mantissa/exponent\n3. Call FUN_03840119 to apply parsed components to output\n4. Return after stack cleanup\n\nParameters:\nthis (ECX): Instance pointer, context object for parsing\npOutputMantissa (param_1): Pointer to receive mantissa output value\npInputString (param_2): Pointer to input decimal number string\n\nReturns:\nvoid - Output stored via pOutputMantissa parameter\n\nSpecial Cases:\n- Stack-allocated component buffer (12 bytes) is temporary\n- Both ParseDecimalString and FUN_03840119 operate on same buffer\n- Component structure layout: offsets 0-10 for mantissa/exponent/flags",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:e78d3e11a4929c0669f2164a27decb87",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e78d3e11a4929c0669f2164a27decb87",
+        "CFG": null,
+        "PRO": "0ba2b7323206503e54061e49d8c46fee"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e78d3e11a4929c0669f2164a27decb87"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -10360,11 +11074,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "0893ef4135ff92704b4a57726c2e8b67"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "70593f43ea0b0d7692df2cd60ddf29e8"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10395,11 +11109,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "aeb55b4783665a2e303e9caef603a1f6",
         "PRO": "91a93f07a9ad6d3f1f33172e65653a41"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 28
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "845fc5044ff181fe96e2ae868d3aa1f6"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10430,11 +11144,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "d07cb40aeb07237476d52676c927435a",
         "PRO": "c48e90df8b8c809a024c282082382895"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 17
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "91502dc0968a39359be974ca352b925c"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -10465,11 +11179,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "cf1ec2f32156f561350bce94c3a89bc2",
         "PRO": "0a08b3b35d1bd6969cd20f7147842fd9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5a025588439cc101ffb982cfa5323a2c"
       }
     },
     "binkw32_MNE_d7ddf3c1b7f3": {
@@ -10497,11 +11211,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "0a8625eed7b581f4049c6ac7cb8f285a",
         "PRO": "e7568cac4ee06fffdda0d126cce6927f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d7ddf3c1b7f31503b888765ebbb66d57"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10532,11 +11246,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "5bee1cd61f1c7a0889c4c4c9d42b3ffe",
         "PRO": "e29656b1d5576c12f534a0f00ea1c858"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 10
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b99d3962c0b26901db87269607fbf85a"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -10567,11 +11281,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e856537001a175bb721e73bd5fbf24f7",
         "PRO": "218e20f78ff67609d741b817a576974e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 14
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "2e762c1c6c457f4a0349d0f895009434"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10602,11 +11316,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "7206840be1be8fa373a01e5868c0863f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "acbc2c857bf1a8401ca8fe5de1c0ec70"
       }
     },
     "binkw32_MNE_35a926809c02": {
@@ -10634,11 +11348,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "4046beb47bc7613c200bb164d32efb47",
         "PRO": "300be42ef56768e549e94c0165d887a4"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 21
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "35a926809c02214f1c021da8fe53c5e6"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -10646,10 +11360,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_0e6c60682690": {
       "addresses": {
-        "LoD/PD2": "0x03840AD9"
+        "LoD/PD2": "0x03840AC6"
       },
       "rvas": {
-        "LoD/PD2": "0x20AD9"
+        "LoD/PD2": "0x20AC6"
       },
       "sizes": {
         "LoD/PD2": 19
@@ -10669,19 +11383,51 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "5e3d6b547736cbf79162cdb201a0ed7d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0e6c60682690c227c51e43c33045f40b"
+      }
+    },
+    "binkw32_ADDR_03840AD9": {
+      "addresses": {
+        "LoD/PD2": "0x03840AD9"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20AD9"
+      },
+      "sizes": {
+        "LoD/PD2": 19
+      },
+      "name": "DivideExtendedFloatsWrapper",
+      "signature": "void DivideExtendedFloatsWrapper(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Wrapper for x87 FPU extended floating-point division operation.\n\nExtracts extended double operands from x87 FPU stack, stores them on the stack,\nand calls DivideExtendedFloats to perform the actual division. Result is returned\non the FPU stack.\n\nAlgorithm:\n1. Allocate 44 bytes (0x2c) of stack space for extended double storage\n2. Pop ST0 (divisor) from FPU stack and store at [ESP + 0x0]\n3. Pop ST1 (dividend) from FPU stack and store at [ESP + 0xc]\n4. Call DivideExtendedFloats with stack-based extended double operands\n5. Clean stack (deallocate 44 bytes) and return to caller\n\nParameters (Implicit):\n- ST0 (extendedDivisor): Extended 80-bit divisor value on x87 FPU stack\n- ST1 (extendedDividend): Extended 80-bit dividend value on x87 FPU stack\n\nReturns:\n- void: Division result left on x87 FPU stack at ST0\n\nSpecial Cases:\n- Uses __stdcall convention where callee cleans stack on return\n- Works exclusively with x87 FPU stack for parameter passing\n- Extended doubles are 10 bytes (80-bit format: 1 sign + 15 exp + 64 mantissa)\n- Called during FPU exception handling in HandleFloatOperation\n- Stack space allocated provides temporary storage for operand extraction\n\nStructure Layout (FPU Stack Extended Double):\nOffset | Size | Field       | Type    | Description\n-------|------|-------------|---------|---------------------------\n+0x0   | 10   | divisor     | ext80   | Divisor on FPU stack ST0\n+0xc   | 10   | dividend    | ext80   | Dividend on FPU stack ST1",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:0e6c60682690c227c51e43c33045f40b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0e6c60682690c227c51e43c33045f40b",
+        "CFG": null,
+        "PRO": "52ce292337931b43073afd0536484568"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "0e6c60682690c227c51e43c33045f40b"
       }
     },
     "binkw32_MNE_fa9a30d8df14": {
       "addresses": {
-        "LoD/PD2": "0x03840B38"
+        "LoD/PD2": "0x03840AEC"
       },
       "rvas": {
-        "LoD/PD2": "0x20B38"
+        "LoD/PD2": "0x20AEC"
       },
       "sizes": {
         "LoD/PD2": 76
@@ -10701,11 +11447,46 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "9ee740eae2758b00f904633bf0c5e501",
         "PRO": "bf5ac01cb789fcf613241922fae2d14f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fa9a30d8df145c43da3992fb15aef931"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "binkw32_ADDR_03840B38": {
+      "addresses": {
+        "LoD/PD2": "0x03840B38"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20B38"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "HandleFloatOperation",
+      "signature": "double HandleFloatOperation(double value, uint exponentBits)",
+      "calling_convention": "__stdcall",
+      "comment": "Handles special cases and FPU exception checking for floating-point division operations.\n\nAlgorithm:\n1. Check if exponentBits represents a special IEEE 754 value (NaN or Infinity) by testing if all exponent bits are set (0x7ff00000)\n2. If special value detected, perform direct division operation and return result immediately\n3. If normal value, check FPU status word (bits 11-13, mask 0x3800) for floating-point exceptions\n4. If FPU exception flags are set, call DivideExtendedFloatsWrapper() to handle exception case\n5. If no exceptions detected, also call DivideExtendedFloatsWrapper() for normal computation\n6. Return the computed extended-precision floating-point result as a double\n\nParameters:\n- value (double): The dividend value for the division operation\n- exponentBits (uint): The upper 32 bits of the double value containing IEEE 754 exponent and sign fields\n\nReturns:\n- double: The result of the floating-point division operation\n\nSpecial Cases:\n- When exponentBits & 0x7ff00000 == 0x7ff00000: Input is NaN or Infinity, performs direct hardware division\n- FPU status bits (0x3800) indicate: bit 11=invalid operation, bit 12=denormalized, bit 13=zero divide\n- Function works with both 64-bit doubles and 80-bit extended precision FPU format\n\nStructure Layout:\nIEEE 754 Double (64-bit):\nOffset  Size  Field Name    Type      Description\n0x0     4     sign_exp      uint      Sign (bit 31) + Exponent (bits 30-20)\n0x4     4     mantissa      uint      Mantissa high 32 bits\n0x8     8     full_value    double    Complete 64-bit IEEE 754 value",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:fa9a30d8df145c43da3992fb15aef931",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fa9a30d8df145c43da3992fb15aef931",
+        "CFG": "19b5aac2d60824e43b0a3ed47c9722dc",
+        "PRO": "230b19190121aa2fdec58f20825c2037"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fa9a30d8df145c43da3992fb15aef931"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10713,10 +11494,10 @@ var FUNCTIONS_binkw32_dll = {
     },
     "binkw32_MNE_269b7d5856cd": {
       "addresses": {
-        "LoD/PD2": "0x03840C38"
+        "LoD/PD2": "0x03840BEC"
       },
       "rvas": {
-        "LoD/PD2": "0x20C38"
+        "LoD/PD2": "0x20BEC"
       },
       "sizes": {
         "LoD/PD2": 76
@@ -10736,11 +11517,46 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "92a4bfab0fc7a41edd95f045db6bec51",
         "PRO": "bf5ac01cb789fcf613241922fae2d14f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "269b7d5856cdb9005a57b4cc52158551"
+      },
+      "param_counts": {
+        "LoD/PD2": 1
+      }
+    },
+    "binkw32_ADDR_03840C38": {
+      "addresses": {
+        "LoD/PD2": "0x03840C38"
+      },
+      "rvas": {
+        "LoD/PD2": "0x20C38"
+      },
+      "sizes": {
+        "LoD/PD2": 76
+      },
+      "name": "CheckFloatingPointValue",
+      "signature": "int CheckFloatingPointValue(int fpValue_Low, uint fpValue_High)",
+      "calling_convention": "__stdcall",
+      "comment": "Validates and processes floating-point values with special case handling\n\nAlgorithm:\n1. Extract high word (exponent/mantissa bits) from second parameter\n2. Check if value represents NaN or Infinity (exponent all 1s: 0x7ff00000 mask)\n3. If NaN/Infinity detected: FDIVR with value to raise exception, return\n4. Check FPU status word for pending exceptions (invalid op, denormalized, div-by-zero)\n5. If exceptions pending: Load value from stack, call handler, return\n6. If no exceptions: Perform FXCH, save extended value to temp, load param1, call handler, restore temp, return\n\nParameters:\n- fpValue_Low: Low 32-bits (mantissa) of IEEE 754 double-precision value\n- fpValue_High: High 32-bits (sign and exponent) of IEEE 754 double-precision value\n\nReturns:\n- Result in EAX (return value from handler or error code)\n\nSpecial Cases:\n- Exponent field 0x7ff00000 indicates NaN or Infinity\n- FPU exception bits (0x3800) check: invalid op (0x0001), denormalized (0x0200), div-by-zero (0x0400)\n- Uses __stdcall convention: callee cleans 8 bytes (two 32-bit params) from stack\n- Extended precision (10-byte) values used for intermediate calculation",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:269b7d5856cdb9005a57b4cc52158551",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "269b7d5856cdb9005a57b4cc52158551",
+        "CFG": "16f53664428f8c91348299558b4d8bd3",
+        "PRO": "230b19190121aa2fdec58f20825c2037"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "269b7d5856cdb9005a57b4cc52158551"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10771,11 +11587,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "661de8ddac683e46dfc1f93e05a5a83e",
         "PRO": "4174b02bd8ca39f9fb30e0a24a42e84d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 2
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d9fc9881c66fc4db9c90a259ff286a44"
       }
     },
     "binkw32_MNE_c70484661a7b": {
@@ -10803,11 +11619,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "06d59bed9002b942f2e7dbe6cd8c0de6",
         "PRO": "a69a7d0355f70bc5a84a52904bc4615c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 27
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "c70484661a7b6b9a5f1519c92e672da0"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -10838,11 +11654,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "1d8e900f76ef1de91ec9c1d3963a2928",
         "PRO": "17312f85a67e8a2854c6ee6d1fff66ea"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ba64e7d70c2bcd8b3838963a89363cf4"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -10873,11 +11689,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ec4f3bf43992ba671e1747e895d617e7",
         "PRO": "a69a7d0355f70bc5a84a52904bc4615c"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 38
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e28850ae7dbb08bbb7fa3d1ca4ff2803"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -10908,11 +11724,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7e6a8c0afd1d5370cdabc91d81b24ded",
         "PRO": "47d977a1d49e34cbda811ff40c8e1a77"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 22
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "15fd41782864ffd4b958e0ed4ed4dea9"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -10943,11 +11759,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "ce7ec282051a6cfc0cdf10b84b9dd8ff",
         "PRO": "7807631519558ab1e5fb13b4cf30170a"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 25
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "fd9902cfddcce5a55494181fb300821e"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -10978,11 +11794,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "7b5e3ff2355b8bffe8d8a28bc8d88d4d",
         "PRO": "56d8754a5951a0cf26ee8a3a85d871d7"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 23
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "051b6ba20f4f945c367717acc576ceaa"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11013,11 +11829,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "3629d20d4f6f5d9956e445b6752288cf",
         "PRO": "fccb21a6a871c7122e2713f7dcd5a6af"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 42
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "4a5a68bf41640182f32d03a3c91e5fdc"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11048,11 +11864,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "bec558cea24edd749490288e03df1fe4",
         "PRO": "935d56f816bfea96f64f6858b849d467"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8f2a733057dd5a290f0e17d077c53986"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11083,11 +11899,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a69d19b675e647b533e35dc736d86ba6",
         "PRO": "252bd71e2f7f97e91ef40be3ccbd06e8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 9
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "f31c6439952ca9c3e10694cce3d833df"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11118,11 +11934,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "9f808fc97e6513c540fcfdcca05bacf6"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "05d3556ba26e52c51954a1255d97c525"
       }
     },
     "binkw32_MNE_63906d1f35f7": {
@@ -11150,11 +11966,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "5fe797495a41ff625bd07a8c3e071a53",
         "PRO": "9f903305dac24c951f3cebb45cf66933"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 34
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "63906d1f35f7842042066a6643d2050c"
       }
     },
     "binkw32_MNE_750c71b47c1a": {
@@ -11182,11 +11998,46 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "e67ee52de705150869e2ef2baa9939af",
         "PRO": "7609b42820c9bebb1ae281ab657ae348"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 3
+      "loop_counts": {
+        "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "750c71b47c1aaa7e04385ca0c70f7831"
+      }
+    },
+    "binkw32_ADDR_038417E0": {
+      "addresses": {
+        "LoD/PD2": "0x038417E0"
+      },
+      "rvas": {
+        "LoD/PD2": "0x217E0"
+      },
+      "sizes": {
+        "LoD/PD2": 664
+      },
+      "name": "MemMove",
+      "signature": "void * MemMove(void * pDest, void * pSrc, uint numBytes)",
+      "calling_convention": "__cdecl",
+      "comment": "Optimized memory mover that copies memory regions efficiently, handling overlapping regions with forward or backward copying to prevent data corruption.\n\nAlgorithm:\n1. Check if source and destination overlap: if (pSrc < pDest < pSrc+numBytes) then copy backward, else copy forward\n2. For backward copy: calculate end pointers, then copy from end to start using STD flag for descending order\n3. For forward copy: copy from start to end\n4. Check destination alignment: if ((pDest & 3) == 0) then use fast aligned DWORD copying, else use byte-by-byte alignment\n5. For aligned copy: divide numBytes by 4 to get DWORD count, remainder bytes handled separately\n6. Use REP MOVSD for bulk copying when dwordCount >= 8, unroll smaller copies\n7. Handle remainder bytes (1-3 bytes) with individual byte moves using jump table dispatch\n8. Return original pDest pointer\n\nParameters:\n- pDest: void* Destination buffer to receive copied data\n- pSrc: void* Source buffer containing data to copy\n- numBytes: uint Number of bytes to copy\n\nReturns:\n- void* Original pDest pointer (same as input)\n\nSpecial Cases:\n- Overlapping regions: when source overlaps destination, backward copy is used to prevent data loss\n- Alignment optimization: 4-byte aligned destinations use fast DWORD bulk copy with REP MOVSD\n- Unaligned destinations: handled by aligning to 4-byte boundary then bulk copying, with byte remainder handling\n- Small copies: less than 8 DWORDs use unrolled loops to avoid REP MOVSD overhead\n- Remainder bytes: 1-3 byte tails handled via jump table dispatch for efficiency\n\nStructure Layout:\nThis function operates on raw memory buffers without structured data access.",
+      "name_source": "LoD/PD2",
+      "method": "MNE",
+      "index": "MNE:bff09423b51fd121ea30afec957819f4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bff09423b51fd121ea30afec957819f4",
+        "CFG": "c161df564c60311b16227fed31b88e66",
+        "PRO": "ff38c497c82643f818ac8c3950b7223d"
       },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bff09423b51fd121ea30afec957819f4"
+      },
+      "param_counts": {
+        "LoD/PD2": 3
       }
     },
     "binkw32_STR_1d436b74681e": {
@@ -11214,11 +12065,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "a667fa7e4ef51e6c972e43d39bb1aee4",
         "PRO": "30fa94c5195763c3c72f163e796620b9"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 11
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "d28466b802ff41201d4ac81308d22266"
       },
       "param_counts": {
         "LoD/PD2": 4
@@ -11249,11 +12100,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "718f85c40159f96fda1115fa8c7ee616",
         "PRO": "5dfddeed7b00a61835a5cf192d4d7c3e"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 35
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "60fb4369558c571ee3e9892006835a82"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11284,11 +12135,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "bd1baf3c10f4c38ee5897833f12342fb",
         "PRO": "9c5def42369082df4fbc7ae0b1af7e49"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 26
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "a7046d73bbd286a50d5e7204509858d2"
       },
       "param_counts": {
         "LoD/PD2": 7
@@ -11319,11 +12170,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b60f21f7bfb012dbc03ce5de63df71ff",
         "PRO": "80902d476b18e9c5470aec96bcc26d6d"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 7
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "bff073652f00cbfc0b0f227bb7a313e1"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11354,11 +12205,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "8de88aa5a2ff6c2a27fe35242cac67b4",
         "PRO": "592cde8777105acd14104e1a687e5fa8"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 6
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "8d620fa2863768144d8aebe01f0829de"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11389,11 +12240,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "42bdec2f11c73aa6056b6c694ab2bc19",
         "PRO": "b6a962e4ef395dd7722b24cf1670d2f3"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 5
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "58ce78ec7b76961d09886d9a93b93cae"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11424,11 +12275,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "b94ad2a12c7a850745434420db9ece86"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "31be27c1480e9c363bab7437010362e2"
       },
       "param_counts": {
         "LoD/PD2": 1
@@ -11459,11 +12310,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "b29a4a023562483ad0c5eb096d7fb0dd",
         "PRO": "85fb6b8719deac8650a5d5c59f6456a5"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 13
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "b41de5b81e6f5c290111b6d697b33467"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11494,11 +12345,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "3de5e9c1cf4a6912df37112a9ddffafb",
         "PRO": "fd4734235db9a43145b5c1c355253f58"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 140
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "ab787578be0f52440df577da55f0ef97"
       },
       "param_counts": {
         "LoD/PD2": 9
@@ -11529,11 +12380,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "742f28ffe8e24534d1d3322e4ed545cf",
         "PRO": "b0d95e97f9d77fff349e76b44758be34"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 57
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "26994a8b2417d3844158a85646dcdf3d"
       },
       "param_counts": {
         "LoD/PD2": 6
@@ -11564,11 +12415,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "c6de2c84cf9c53ce02390cbcc001c60c",
         "PRO": "52465f99954b9b1250f9c31f27370e89"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 48
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "9164e08642353fc9b6a5a942bb4e12cf"
       },
       "param_counts": {
         "LoD/PD2": 2
@@ -11599,11 +12450,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": "93f34182cfdc2bfa690949baa08688cf",
         "PRO": "0516b207b87d20782e29c1b84f00cd35"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 18
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "5da54fa8fcd8f9f672e8d39458e0992c"
       },
       "param_counts": {
         "LoD/PD2": 3
@@ -11633,11 +12484,11 @@ var FUNCTIONS_binkw32_dll = {
         "CFG": null,
         "PRO": "79ac4b165d48389ac586a56822b7ed6f"
       },
-      "basic_block_counts": {
-        "LoD/PD2": 1
-      },
       "loop_counts": {
         "LoD/PD2": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/PD2": "e3e7225badfcf3c2e051c42d71d7237a"
       },
       "param_counts": {
         "LoD/PD2": 4

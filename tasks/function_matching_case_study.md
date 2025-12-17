@@ -257,6 +257,32 @@ Ghidra MCP (verification)
 
 ---
 
+## Implementation Summary
+
+### Changes Made
+
+1. **Enhanced ExportFunctionIndex.java** with NOP (Normalized OPcode) index:
+   - Computes address-independent hash similar to MCP's `get_function_hash`
+   - Normalizes internal jumps to relative offsets
+   - Replaces external calls/data with placeholders
+   - Added as 3rd priority (after EXP, STR)
+
+2. **Updated merge_function_index.py** to support all indexes:
+   - EXP (100%) > STR (99%) > NOP (98%) > CAL (95%) > API (92%) > APS (90%) > CON (88%) > MNE (85%) > CFG (80%) > PRO (70%)
+
+3. **Created compare_versions.py** tool for quick version comparison:
+   ```bash
+   python tools/compare_versions.py --source LoD/1.10 --target LoD/1.07 --dll D2Common.dll -v
+   ```
+
+### Workflow
+
+1. Run `ExportFunctionIndex.java` in Ghidra (batch mode) to export all versions
+2. Run `compare_versions.py` to find matching functions between versions
+3. Run `merge_function_index.py` to build unified registry
+
+---
+
 ## Sources
 
 - [ghidriff - Ghidra Binary Diffing Engine](https://github.com/clearbluejar/ghidriff)
