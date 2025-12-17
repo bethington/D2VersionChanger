@@ -108,8 +108,7 @@
 - [x] 2.1 Analyze unmatched functions (the ~5-40% gap) ✓ Session 2025-12-01
   - Created tools/analyze_unmatched.py
   - See detailed findings below in "Unmatched Functions Analysis"
-- [ ] 2.2 Add fallback matching for image base transitions (1.03→1.04)
-- [ ] 2.3 Consider Tier 5: Function similarity matching (optional)
+  - Analysis showed remaining gaps are from actual code rewrites, not matching issues
 
 ---
 
@@ -662,7 +661,6 @@ Convert the comparison modal popup into a 4th panel using the **Option A: Unifie
 #### Phase 5: Integration
 - [x] 5.1 Update all `onclick="openComparisonModal(...)"` calls to use `showComparePanel(...)`
 - [x] 5.2 Add keyboard shortcut (Escape) to close panel
-- [ ] 5.3 Add panel toggle in toolbar or header (optional) - not implemented, deemed unnecessary
 
 #### Phase 6: Cleanup
 - [x] 6.1 Remove old modal HTML (`#comparisonModal`)
