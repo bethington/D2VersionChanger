@@ -1,0 +1,9 @@
+{
+  "binary": "D2Sound.dll",
+  "game_type": "Classic",
+  "version": "1.08",
+  "image_base": "0x6F9E0000",
+  "total_functions": 0,
+  "source_file": "F:\\D2VersionChanger\\data\\function_index\\Classic\\1.08\\D2Sound.dll.json",
+  "functions": {}
+}

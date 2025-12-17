@@ -1,0 +1,9 @@
+{
+  "binary": "D2Win.dll",
+  "game_type": "Classic",
+  "version": "1.08",
+  "image_base": "0x6F900000",
+  "total_functions": 0,
+  "source_file": "F:\\D2VersionChanger\\data\\function_index\\Classic\\1.08\\D2Win.dll.json",
+  "functions": {}
+}

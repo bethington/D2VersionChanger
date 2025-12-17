@@ -64,7 +64,12 @@
       "mcp__ghidra__get_function_labels",
       "Bash(ls:*)",
       "Bash(tee:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "WebFetch(domain:www.pinecone.io)",
+      "mcp__ghidra__get_xrefs_from",
+      "mcp__ghidra__disassemble_function",
+      "mcp__ghidra__get_function_callees",
+      "mcp__ghidra__get_bulk_function_hashes"
     ],
     "deny": [],
     "ask": []

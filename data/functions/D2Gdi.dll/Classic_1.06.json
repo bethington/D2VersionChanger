@@ -1,0 +1,9 @@
+{
+  "binary": "D2Gdi.dll",
+  "game_type": "Classic",
+  "version": "1.06",
+  "image_base": "0x6F930000",
+  "total_functions": 0,
+  "source_file": "F:\\D2VersionChanger\\data\\function_index\\Classic\\1.06\\D2Gdi.dll.json",
+  "functions": {}
+}

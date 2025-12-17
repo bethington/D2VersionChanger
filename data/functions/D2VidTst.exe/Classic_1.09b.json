@@ -1,0 +1,9 @@
+{
+  "binary": "D2VidTst.exe",
+  "game_type": "Classic",
+  "version": "1.09b",
+  "image_base": "0x00400000",
+  "total_functions": 0,
+  "source_file": "F:\\D2VersionChanger\\data\\function_index\\Classic\\1.09b\\D2VidTst.exe.json",
+  "functions": {}
+}

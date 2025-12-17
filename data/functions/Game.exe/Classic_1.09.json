@@ -1,0 +1,9 @@
+{
+  "binary": "Game.exe",
+  "game_type": "Classic",
+  "version": "1.09",
+  "image_base": "0x00400000",
+  "total_functions": 0,
+  "source_file": "F:\\D2VersionChanger\\data\\function_index\\Classic\\1.09\\Game.exe.json",
+  "functions": {}
+}

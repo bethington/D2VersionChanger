@@ -1,0 +1,9 @@
+{
+  "binary": "Binkw32.dll",
+  "game_type": "Classic",
+  "version": "1.06",
+  "image_base": "0x10000000",
+  "total_functions": 0,
+  "source_file": "F:\\D2VersionChanger\\data\\function_index\\Classic\\1.06\\Binkw32.dll.json",
+  "functions": {}
+}

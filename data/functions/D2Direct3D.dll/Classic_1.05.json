@@ -1,0 +1,9 @@
+{
+  "binary": "D2Direct3D.dll",
+  "game_type": "Classic",
+  "version": "1.05",
+  "image_base": "0x6F940000",
+  "total_functions": 0,
+  "source_file": "F:\\D2VersionChanger\\data\\function_index\\Classic\\1.05\\D2Direct3D.dll.json",
+  "functions": {}
+}
