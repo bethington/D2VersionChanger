@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-16T18:31:58.018344
+// Generated: 2025-12-16T20:37:06.337995
 // Functions for ddraw.dll
 // Versions: LoD/PD2
 
@@ -8010,40 +8010,6 @@ var FUNCTIONS_ddraw_dll = {
         "LoD/PD2": "eef7065498931d2f71bdf5aca7c50c77"
       }
     },
-    "ddraw_MNE_47a9e8ff7b6b": {
-      "addresses": {
-        "LoD/PD2": "0x7B5D8440"
-      },
-      "rvas": {
-        "LoD/PD2": "0x18440"
-      },
-      "sizes": {
-        "LoD/PD2": 133
-      },
-      "method": "API",
-      "index": "API:8afc98d71d9e262a24585ad2c4191ca2",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "8afc98d71d9e262a24585ad2c4191ca2",
-        "MNE": "47a9e8ff7b6b1d02655f47bbeaa7cd96",
-        "CFG": "cdbcbd0dc6681073025d79ee47f03454",
-        "PRO": "7e975c76a9242682db5b6302f2c708c2"
-      },
-      "display_name": "API_8afc98d71d9e262a",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "47a9e8ff7b6b1d02655f47bbeaa7cd96"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetWindowRect",
-          "GetWindowRect"
-        ]
-      }
-    },
     "ddraw_MNE_6de80315a5a2": {
       "addresses": {
         "LoD/PD2": "0x7B5D84D0"
@@ -8098,40 +8064,6 @@ var FUNCTIONS_ddraw_dll = {
       },
       "mnemonic_hashes": {
         "LoD/PD2": "3fae65075a233810c86395ae8d84a099"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "ClientToScreen",
-          "ScreenToClient"
-        ]
-      }
-    },
-    "ddraw_MNE_e8e735455ed3": {
-      "addresses": {
-        "LoD/PD2": "0x7B5D8570"
-      },
-      "rvas": {
-        "LoD/PD2": "0x18570"
-      },
-      "sizes": {
-        "LoD/PD2": 68
-      },
-      "method": "API",
-      "index": "API:3f068f383b187e463749081302b83d4f",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "3f068f383b187e463749081302b83d4f",
-        "MNE": "e8e735455ed38d8192748da2bd38c799",
-        "CFG": "d88ad4fd190e65fc3b89c41b36615b62",
-        "PRO": "2faf3606005306f2e42eb24ea740dcf2"
-      },
-      "display_name": "API_3f068f383b187e46",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "e8e735455ed38d8192748da2bd38c799"
       },
       "api_calls": {
         "LoD/PD2": [

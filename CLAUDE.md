@@ -23,12 +23,35 @@ D2VersionChanger is a tool for switching between all patch versions of Diablo 2,
 
 Located in `tools/`:
 
+### Core Tools (Active)
+
 | Script | Purpose |
 |--------|---------|
-| `d2_hash_tool.py` | Core library: SHA256 hashing, PE version extraction, folder scanning, NoCD detection |
-| `gen_viewer_data.py` | Generates `reports/d2_data.js` for the HTML viewer (hash data) |
+| `refresh_viewer.py` | **One-command refresh**: runs merge + generate steps |
 | `merge_function_index.py` | Merges Ghidra function exports into unified registry |
-| `generate_function_js.py` | Generates JS files for the function viewer from registry |
+| `generate_function_js.py` | Generates JS files for the function viewer |
+| `registry_loader.py` | Load unified registry from split functions_v2 files |
+| `sequential_matcher.py` | Primary function matching across versions |
+| `fuzzy_matcher.py` | Fuzzy matching with MinHash/LSH |
+| `tiered_matcher.py` | Tiered confidence matching |
+| `d2_hash_tool.py` | SHA256 hashing, PE version extraction |
+
+### Analysis Tools
+
+| Script | Purpose |
+|--------|---------|
+| `analyze_unmatched.py` | Analyze functions that only exist in one version |
+| `analyze_function_signatures.py` | Signature analysis |
+| `build_api_reference.py` | Build API documentation |
+| `compare_versions.py` | Compare function data across versions |
+| `query_functions.py` | Query function database |
+
+### Archived Tools
+
+Old/superseded scripts are in `tools/archive/`. These include:
+- CSV workflow scripts (old renaming system)
+- Debug/investigation scripts
+- One-off analysis scripts
 
 ### Refreshing the Report Viewer
 
@@ -58,10 +81,12 @@ This runs both steps automatically:
 ```
 data/function_index/{LoD,Classic}/{version}/*.json  (Ghidra exports)
     ↓ merge_function_index.py
-reports/function_registry_v2.json                    (unified registry)
     ↓ generate_function_js.py
-reports/functions_v2/*.js                            (viewer data)
+reports/functions_v2/*.js                            (viewer data - split by DLL)
 ```
+
+Note: The monolithic `function_registry_v2.json` is no longer generated. 
+Use `registry_loader.py` to load data from split `functions_v2/*.js` files.
 
 **Configuration:** `config/function_index.json`
 - `enabled_game_types`: Enable/disable Classic or LoD processing

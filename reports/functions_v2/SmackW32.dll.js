@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-16T18:31:58.018344
+// Generated: 2025-12-16T20:37:06.337995
 // Functions for SmackW32.dll
 // Versions: Classic/1.00, Classic/1.01, Classic/1.02, Classic/1.03, Classic/1.04c, LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d, LoD/PD2
 
@@ -28,7 +28,7 @@ var FUNCTIONS_SmackW32_dll = {
     "LoD/PD2"
   ],
   "functions": {
-    "SmackW32_EXP_61": {
+    "SmackW32_NOP_f44798280d73": {
       "addresses": {
         "Classic/1.00": "0x10001000",
         "Classic/1.01": "0x10001000",
@@ -104,8 +104,8 @@ var FUNCTIONS_SmackW32_dll = {
       "return_type": "int",
       "comment": "__stdcall radmalloc,4",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:61",
+      "method": "NOP",
+      "index": "NOP:f44798280d731091aaa086908205d1f9b628446c18ab13ea9d33eeadd3ef7f53",
       "indexes": {
         "EXP": "61",
         "STR": null,
@@ -182,184 +182,184 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_10004c80|0x10004C80",
-          "_SmackBlitOpen@4|0x1000A860",
+          "FUN_10008780|0x10008780",
           "_SmackOpen@12|0x100043A0",
-          "FUN_100082b0|0x100082B0",
-          "_SmackBufferOpen@24|0x100012F0",
           "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "FUN_10008780|0x10008780"
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBlitOpen@4|0x1000A860",
+          "FUN_100082b0|0x100082B0",
+          "FUN_10004c80|0x10004C80"
         ],
         "Classic/1.01": [
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_100082b0|0x100082B0",
           "FUN_10008780|0x10008780",
+          "_SmackOpen@12|0x100043A0",
           "FUN_10004c80|0x10004C80",
           "_SmackBufferStartMultipleBlits@4|0x10003370",
           "_SmackBlitOpen@4|0x1000A860",
-          "_SmackOpen@12|0x100043A0"
+          "FUN_100082b0|0x100082B0",
+          "_SmackBufferOpen@24|0x100012F0"
         ],
         "Classic/1.02": [
-          "FUN_100082b0|0x100082B0",
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackBlitOpen@4|0x1000A860",
           "FUN_10008780|0x10008780",
-          "_SmackOpen@12|0x100043A0",
+          "_SmackBlitOpen@4|0x1000A860",
           "_SmackBufferStartMultipleBlits@4|0x10003370",
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_100082b0|0x100082B0",
+          "_SmackOpen@12|0x100043A0",
           "FUN_10004c80|0x10004C80"
         ],
         "Classic/1.03": [
-          "_SmackOpen@12|0x100043A0",
           "_SmackBufferOpen@24|0x100012F0",
           "_SmackBufferStartMultipleBlits@4|0x10003370",
           "FUN_10004c80|0x10004C80",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackBlitOpen@4|0x1000A860",
           "FUN_100082b0|0x100082B0",
-          "FUN_10008780|0x10008780",
-          "_SmackBlitOpen@4|0x1000A860"
+          "FUN_10008780|0x10008780"
         ],
         "Classic/1.04c": [
-          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBlitOpen@4|0x1000A860",
           "FUN_100082b0|0x100082B0",
           "FUN_10008780|0x10008780",
           "_SmackOpen@12|0x100043A0",
-          "_SmackBlitOpen@4|0x1000A860",
           "FUN_10004c80|0x10004C80",
-          "_SmackBufferStartMultipleBlits@4|0x10003370"
+          "_SmackBufferStartMultipleBlits@4|0x10003370",
+          "_SmackBufferOpen@24|0x100012F0"
         ],
         "LoD/1.07": [
+          "_SmackBlitOpen@4|0x1000A860",
+          "SmackSoundInitialize|0x10008780",
           "FUN_10004c80|0x10004C80",
           "_SmackOpen@12|0x100043A0",
-          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBufferOpen@24|0x100012F0",
           "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "SmackSoundInitialize|0x10008780",
-          "InitializeLinkedListNode|0x100082B0",
-          "_SmackBufferOpen@24|0x100012F0"
+          "InitializeLinkedListNode|0x100082B0"
         ],
         "LoD/1.08": [
           "_SmackBufferOpen@24|0x100012F0",
           "_SmackBlitOpen@4|0x1000A860",
           "_SmackOpen@12|0x100043A0",
-          "FUN_10004c80|0x10004C80",
+          "_SmackBufferStartMultipleBlits@4|0x10003370",
           "FUN_100082b0|0x100082B0",
-          "FUN_10008780|0x10008780",
-          "_SmackBufferStartMultipleBlits@4|0x10003370"
+          "FUN_10004c80|0x10004C80",
+          "FUN_10008780|0x10008780"
         ],
         "LoD/1.09": [
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "FUN_100082b0|0x100082B0",
-          "FUN_10008780|0x10008780",
           "FUN_10004c80|0x10004C80",
-          "_SmackBlitOpen@4|0x1000A860"
-        ],
-        "LoD/1.09b": [
-          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBufferOpen@24|0x100012F0",
           "_SmackBufferStartMultipleBlits@4|0x10003370",
           "_SmackOpen@12|0x100043A0",
-          "FUN_100082b0|0x100082B0",
-          "_SmackBufferOpen@24|0x100012F0",
           "FUN_10008780|0x10008780",
-          "FUN_10004c80|0x10004C80"
-        ],
-        "LoD/1.09d": [
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10004c80|0x10004C80",
-          "FUN_100082b0|0x100082B0",
           "_SmackBlitOpen@4|0x1000A860",
-          "FUN_10008780|0x10008780",
-          "_SmackBufferStartMultipleBlits@4|0x10003370"
-        ],
-        "LoD/1.10": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackBlitOpen@4|0x1000A860",
-          "FUN_10004c80|0x10004C80",
-          "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "FUN_10008780|0x10008780",
           "FUN_100082b0|0x100082B0"
         ],
-        "LoD/1.11": [
+        "LoD/1.09b": [
           "FUN_100082b0|0x100082B0",
+          "_SmackBufferStartMultipleBlits@4|0x10003370",
+          "FUN_10008780|0x10008780",
+          "FUN_10004c80|0x10004C80",
+          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackOpen@12|0x100043A0"
+        ],
+        "LoD/1.09d": [
+          "FUN_10004c80|0x10004C80",
+          "_SmackBufferStartMultipleBlits@4|0x10003370",
+          "_SmackOpen@12|0x100043A0",
           "_SmackBufferOpen@24|0x100012F0",
           "_SmackBlitOpen@4|0x1000A860",
+          "FUN_100082b0|0x100082B0",
+          "FUN_10008780|0x10008780"
+        ],
+        "LoD/1.10": [
+          "FUN_10008780|0x10008780",
+          "_SmackBufferStartMultipleBlits@4|0x10003370",
           "_SmackOpen@12|0x100043A0",
+          "_SmackBufferOpen@24|0x100012F0",
           "FUN_10004c80|0x10004C80",
+          "FUN_100082b0|0x100082B0",
+          "_SmackBlitOpen@4|0x1000A860"
+        ],
+        "LoD/1.11": [
+          "FUN_10004c80|0x10004C80",
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_100082b0|0x100082B0",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackBlitOpen@4|0x1000A860",
           "_SmackBufferStartMultipleBlits@4|0x10003370",
           "FUN_10008780|0x10008780"
         ],
         "LoD/1.11b": [
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10008780|0x10008780",
           "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "FUN_10004c80|0x10004C80",
-          "FUN_100082b0|0x100082B0",
           "_SmackBufferOpen@24|0x100012F0",
-          "_SmackBlitOpen@4|0x1000A860"
+          "FUN_100082b0|0x100082B0",
+          "FUN_10008780|0x10008780",
+          "FUN_10004c80|0x10004C80",
+          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackOpen@12|0x100043A0"
         ],
         "LoD/1.12a": [
-          "FUN_10004c80|0x10004C80",
-          "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "_SmackBufferOpen@24|0x100012F0",
           "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_10008780|0x10008780",
+          "_SmackBufferStartMultipleBlits@4|0x10003370",
           "FUN_100082b0|0x100082B0",
           "_SmackOpen@12|0x100043A0",
-          "FUN_10008780|0x10008780"
+          "FUN_10004c80|0x10004C80"
         ],
         "LoD/1.13c": [
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_100082b0|0x100082B0",
-          "FUN_10004c80|0x10004C80",
-          "FUN_10008780|0x10008780",
-          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBufferStartMultipleBlits@4|0x10003370",
           "_SmackOpen@12|0x100043A0",
-          "_SmackBufferStartMultipleBlits@4|0x10003370"
+          "FUN_10004c80|0x10004C80",
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBlitOpen@4|0x1000A860",
+          "FUN_10008780|0x10008780",
+          "FUN_100082b0|0x100082B0"
         ],
         "LoD/1.13d": [
-          "_SmackOpen@12|0x100043A0",
           "_SmackBlitOpen@4|0x1000A860",
-          "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "FUN_10004c80|0x10004C80",
           "FUN_100082b0|0x100082B0",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackBufferOpen@24|0x100012F0",
           "FUN_10008780|0x10008780",
-          "_SmackBufferOpen@24|0x100012F0"
+          "_SmackBufferStartMultipleBlits@4|0x10003370",
+          "FUN_10004c80|0x10004C80"
         ],
         "LoD/1.14a": [
-          "_SmackBlitOpen@4|0x1000A860",
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "FUN_10004c80|0x10004C80",
           "FUN_10008780|0x10008780",
-          "FUN_100082b0|0x100082B0"
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10004c80|0x10004C80",
+          "FUN_100082b0|0x100082B0",
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBufferStartMultipleBlits@4|0x10003370"
         ],
         "LoD/1.14b": [
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10008780|0x10008780",
-          "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "FUN_10004c80|0x10004C80",
-          "_SmackBlitOpen@4|0x1000A860",
           "_SmackBufferOpen@24|0x100012F0",
-          "FUN_100082b0|0x100082B0"
-        ],
-        "LoD/1.14c": [
           "_SmackOpen@12|0x100043A0",
-          "FUN_10008780|0x10008780",
           "FUN_10004c80|0x10004C80",
-          "_SmackBlitOpen@4|0x1000A860",
           "FUN_100082b0|0x100082B0",
           "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "_SmackBufferOpen@24|0x100012F0"
+          "_SmackBlitOpen@4|0x1000A860",
+          "FUN_10008780|0x10008780"
+        ],
+        "LoD/1.14c": [
+          "_SmackBufferStartMultipleBlits@4|0x10003370",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_10004c80|0x10004C80",
+          "FUN_100082b0|0x100082B0",
+          "FUN_10008780|0x10008780"
         ],
         "LoD/1.14d": [
           "_SmackBufferOpen@24|0x100012F0",
-          "FUN_10004c80|0x10004C80",
-          "_SmackBlitOpen@4|0x1000A860",
-          "FUN_100082b0|0x100082B0",
           "FUN_10008780|0x10008780",
           "_SmackBufferStartMultipleBlits@4|0x10003370",
-          "_SmackOpen@12|0x100043A0"
+          "FUN_100082b0|0x100082B0",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10004c80|0x10004C80",
+          "_SmackBlitOpen@4|0x1000A860"
         ]
       },
       "instructions": {
@@ -946,7 +946,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_60": {
+    "SmackW32_NOP_ccc94bceb0a4": {
       "addresses": {
         "Classic/1.00": "0x10001040",
         "Classic/1.01": "0x10001040",
@@ -1022,8 +1022,8 @@ var FUNCTIONS_SmackW32_dll = {
       "return_type": "undefined",
       "comment": "__stdcall radfree,4",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:60",
+      "method": "NOP",
+      "index": "NOP:ccc94bceb0a43bc93f7da1cecc0ba51a444911d2c8e3d64ab1c56d03f62e7085",
       "indexes": {
         "EXP": "60",
         "STR": null,
@@ -1100,262 +1100,262 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_100083b0|0x100083B0",
-          "_SmackClose@4|0x10005B20",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10005670|0x10005670",
-          "_SmackToScreen@28|0x100064E0",
           "_SmackToBuffer@28|0x10006B00",
+          "FUN_10008780|0x10008780",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackToScreen@28|0x100064E0",
           "_SmackBufferClose@4|0x10003750",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "_SmackBufferOpen@24|0x100012F0",
+          "FUN_100083b0|0x100083B0",
           "FUN_10008c10|0x10008C10",
-          "FUN_10008780|0x10008780"
+          "FUN_10005670|0x10005670",
+          "_SmackClose@4|0x10005B20",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
         ],
         "Classic/1.01": [
-          "_SmackBufferClose@4|0x10003750",
-          "_SmackBufferOpen@24|0x100012F0",
           "FUN_10008780|0x10008780",
-          "FUN_10005670|0x10005670",
+          "_SmackBufferClose@4|0x10003750",
+          "_SmackOpen@12|0x100043A0",
           "_SmackToScreen@28|0x100064E0",
-          "FUN_100083b0|0x100083B0",
           "_SmackClose@4|0x10005B20",
           "FUN_10008c10|0x10008C10",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_10005670|0x10005670",
+          "FUN_100083b0|0x100083B0"
         ],
         "Classic/1.02": [
-          "FUN_10008c10|0x10008C10",
-          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackClose@4|0x10005B20",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00",
           "FUN_100083b0|0x100083B0",
           "FUN_10008780|0x10008780",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackClose@4|0x10005B20",
           "_SmackBufferClose@4|0x10003750",
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackOpen@12|0x100043A0",
           "FUN_10005670|0x10005670",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
+          "FUN_10008c10|0x10008C10",
+          "_SmackToBuffer@28|0x10006B00"
         ],
         "Classic/1.03": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackToScreen@28|0x100064E0",
-          "FUN_100083b0|0x100083B0",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "FUN_10008780|0x10008780",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackClose@4|0x10005B20",
-          "_SmackBufferClose@4|0x10003750",
           "FUN_10005670|0x10005670",
-          "FUN_10008c10|0x10008C10"
+          "_SmackBufferOpen@24|0x100012F0",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "_SmackBufferClose@4|0x10003750",
+          "_SmackToBuffer@28|0x10006B00",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10008780|0x10008780",
+          "_SmackClose@4|0x10005B20",
+          "FUN_10008c10|0x10008C10",
+          "FUN_100083b0|0x100083B0",
+          "_SmackToScreen@28|0x100064E0"
         ],
         "Classic/1.04c": [
           "FUN_10008c10|0x10008C10",
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackToBuffer@28|0x10006B00",
+          "FUN_10008780|0x10008780",
+          "FUN_10005670|0x10005670",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackToScreen@28|0x100064E0",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "_SmackBufferClose@4|0x10003750",
           "FUN_100083b0|0x100083B0",
-          "FUN_10008780|0x10008780",
-          "_SmackOpen@12|0x100043A0",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "_SmackBufferOpen@24|0x100012F0",
           "_SmackClose@4|0x10005B20",
-          "_SmackToScreen@28|0x100064E0",
-          "FUN_10005670|0x10005670"
+          "_SmackToBuffer@28|0x10006B00"
         ],
         "LoD/1.07": [
-          "_SmackBufferClose@4|0x10003750",
-          "_SmackClose@4|0x10005B20",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "_SmackToScreen@28|0x100064E0",
           "SmackSoundInitialize|0x10008780",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackToBuffer@28|0x10006B00",
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBufferClose@4|0x10003750",
           "InitializeSmackAudioBuffer|0x10005670",
-          "_SmackBufferOpen@24|0x100012F0"
+          "_SmackToScreen@28|0x100064E0",
+          "_SmackClose@4|0x10005B20"
         ],
         "LoD/1.08": [
-          "_SmackClose@4|0x10005B20",
+          "_SmackToScreen@28|0x100064E0",
           "_SmackBufferOpen@24|0x100012F0",
-          "FUN_10005670|0x10005670",
+          "_SmackBufferClose@4|0x10003750",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "FUN_10008c10|0x10008C10",
-          "FUN_100083b0|0x100083B0",
           "_SmackOpen@12|0x100043A0",
+          "FUN_10005670|0x10005670",
+          "_SmackClose@4|0x10005B20",
           "_SmackToBuffer@28|0x10006B00",
-          "_SmackBufferClose@4|0x10003750",
-          "_SmackToScreen@28|0x100064E0",
+          "FUN_100083b0|0x100083B0",
           "FUN_10008780|0x10008780"
         ],
         "LoD/1.09": [
-          "_SmackToScreen@28|0x100064E0",
+          "_SmackClose@4|0x10005B20",
           "_SmackBufferOpen@24|0x100012F0",
-          "_SmackBufferClose@4|0x10003750",
-          "FUN_10008c10|0x10008C10",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "_SmackOpen@12|0x100043A0",
           "_SmackToBuffer@28|0x10006B00",
-          "FUN_10005670|0x10005670",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "FUN_10008780|0x10008780",
           "FUN_100083b0|0x100083B0",
-          "_SmackClose@4|0x10005B20"
+          "FUN_10008780|0x10008780",
+          "_SmackBufferClose@4|0x10003750",
+          "FUN_10005670|0x10005670",
+          "FUN_10008c10|0x10008C10",
+          "_SmackToScreen@28|0x100064E0"
         ],
         "LoD/1.09b": [
-          "FUN_100083b0|0x100083B0",
+          "_SmackToBuffer@28|0x10006B00",
+          "FUN_10008780|0x10008780",
           "_SmackToScreen@28|0x100064E0",
           "FUN_10008c10|0x10008C10",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToBuffer@28|0x10006B00",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "_SmackBufferClose@4|0x10003750",
           "_SmackBufferOpen@24|0x100012F0",
-          "FUN_10005670|0x10005670",
+          "_SmackOpen@12|0x100043A0",
           "_SmackClose@4|0x10005B20",
-          "FUN_10008780|0x10008780",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
+          "FUN_100083b0|0x100083B0",
+          "FUN_10005670|0x10005670"
         ],
         "LoD/1.09d": [
-          "FUN_10005670|0x10005670",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0",
           "_SmackClose@4|0x10005B20",
           "_SmackToScreen@28|0x100064E0",
-          "FUN_100083b0|0x100083B0",
           "FUN_10008c10|0x10008C10",
           "_SmackBufferClose@4|0x10003750",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_100083b0|0x100083B0",
+          "FUN_10005670|0x10005670",
+          "_SmackToBuffer@28|0x10006B00",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "FUN_10008780|0x10008780"
         ],
         "LoD/1.10": [
-          "FUN_10008c10|0x10008C10",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackBufferClose@4|0x10003750",
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackClose@4|0x10005B20",
-          "FUN_100083b0|0x100083B0",
           "FUN_10008780|0x10008780",
-          "FUN_10005670|0x10005670",
+          "FUN_100083b0|0x100083B0",
+          "_SmackClose@4|0x10005B20",
+          "_SmackOpen@12|0x100043A0",
           "_SmackToBuffer@28|0x10006B00",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
+          "FUN_10005670|0x10005670",
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_10008c10|0x10008C10",
+          "_SmackBufferClose@4|0x10003750",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "_SmackToScreen@28|0x100064E0"
         ],
         "LoD/1.11": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackBufferClose@4|0x10003750",
-          "_SmackClose@4|0x10005B20",
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_10005670|0x10005670",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_10008c10|0x10008C10",
+          "_SmackBufferClose@4|0x10003750",
           "_SmackOpen@12|0x100043A0",
+          "FUN_10005670|0x10005670",
           "_SmackToBuffer@28|0x10006B00",
-          "FUN_100083b0|0x100083B0",
+          "_SmackClose@4|0x10005B20",
+          "_SmackToScreen@28|0x100064E0",
           "FUN_10008780|0x10008780",
-          "FUN_10008c10|0x10008C10"
+          "FUN_100083b0|0x100083B0"
         ],
         "LoD/1.11b": [
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "FUN_10008780|0x10008780",
-          "FUN_10008c10|0x10008C10",
-          "FUN_100083b0|0x100083B0",
           "_SmackBufferOpen@24|0x100012F0",
-          "_SmackToScreen@28|0x100064E0",
+          "_SmackToBuffer@28|0x10006B00",
+          "FUN_10008780|0x10008780",
+          "_SmackBufferClose@4|0x10003750",
           "FUN_10005670|0x10005670",
+          "FUN_10008c10|0x10008C10",
+          "_SmackToScreen@28|0x100064E0",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "_SmackOpen@12|0x100043A0",
           "_SmackClose@4|0x10005B20",
-          "_SmackBufferClose@4|0x10003750"
+          "FUN_100083b0|0x100083B0"
         ],
         "LoD/1.12a": [
           "FUN_10005670|0x10005670",
-          "FUN_100083b0|0x100083B0",
-          "FUN_10008c10|0x10008C10",
           "_SmackBufferClose@4|0x10003750",
+          "_SmackClose@4|0x10005B20",
           "_SmackToBuffer@28|0x10006B00",
           "_SmackBufferOpen@24|0x100012F0",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackClose@4|0x10005B20",
-          "_SmackToScreen@28|0x100064E0",
+          "FUN_10008780|0x10008780",
+          "FUN_10008c10|0x10008C10",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "FUN_10008780|0x10008780"
+          "_SmackOpen@12|0x100043A0",
+          "FUN_100083b0|0x100083B0",
+          "_SmackToScreen@28|0x100064E0"
         ],
         "LoD/1.13c": [
           "_SmackClose@4|0x10005B20",
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_10008c10|0x10008C10",
-          "FUN_100083b0|0x100083B0",
           "_SmackBufferClose@4|0x10003750",
-          "_SmackToScreen@28|0x100064E0",
-          "FUN_10008780|0x10008780",
-          "FUN_10005670|0x10005670",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "_SmackOpen@12|0x100043A0",
-          "_SmackToBuffer@28|0x10006B00"
+          "FUN_10008c10|0x10008C10",
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackToScreen@28|0x100064E0",
+          "_SmackToBuffer@28|0x10006B00",
+          "FUN_100083b0|0x100083B0",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "FUN_10008780|0x10008780",
+          "FUN_10005670|0x10005670"
         ],
         "LoD/1.13d": [
+          "_SmackToScreen@28|0x100064E0",
+          "_SmackBufferClose@4|0x10003750",
+          "FUN_100083b0|0x100083B0",
+          "FUN_10005670|0x10005670",
           "_SmackOpen@12|0x100043A0",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "_SmackToScreen@28|0x100064E0",
-          "FUN_100083b0|0x100083B0",
-          "_SmackBufferClose@4|0x10003750",
           "_SmackClose@4|0x10005B20",
-          "FUN_10008c10|0x10008C10",
           "_SmackToBuffer@28|0x10006B00",
-          "FUN_10005670|0x10005670",
+          "_SmackBufferOpen@24|0x100012F0",
           "FUN_10008780|0x10008780",
-          "_SmackBufferOpen@24|0x100012F0"
+          "FUN_10008c10|0x10008C10"
         ],
         "LoD/1.14a": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackClose@4|0x10005B20",
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_100083b0|0x100083B0",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10008c10|0x10008C10",
           "FUN_10008780|0x10008780",
-          "_SmackBufferClose@4|0x10003750",
+          "FUN_100083b0|0x100083B0",
+          "_SmackClose@4|0x10005B20",
+          "_SmackToScreen@28|0x100064E0",
+          "_SmackOpen@12|0x100043A0",
           "FUN_10005670|0x10005670",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
+          "FUN_10008c10|0x10008C10",
+          "_SmackBufferOpen@24|0x100012F0",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "_SmackToBuffer@28|0x10006B00",
+          "_SmackBufferClose@4|0x10003750"
         ],
         "LoD/1.14b": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackBufferClose@4|0x10003750",
-          "FUN_10008c10|0x10008C10",
-          "_SmackToScreen@28|0x100064E0",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "_SmackClose@4|0x10005B20",
-          "FUN_10008780|0x10008780",
-          "FUN_100083b0|0x100083B0",
-          "_SmackToBuffer@28|0x10006B00",
+          "_SmackBufferOpen@24|0x100012F0",
           "FUN_10005670|0x10005670",
-          "_SmackBufferOpen@24|0x100012F0"
+          "_SmackClose@4|0x10005B20",
+          "FUN_10008c10|0x10008C10",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackToBuffer@28|0x10006B00",
+          "_SmackBufferClose@4|0x10003750",
+          "FUN_100083b0|0x100083B0",
+          "_SmackToScreen@28|0x100064E0",
+          "FUN_10008780|0x10008780"
         ],
         "LoD/1.14c": [
-          "FUN_10008c10|0x10008C10",
+          "FUN_10005670|0x10005670",
+          "_SmackToScreen@28|0x100064E0",
           "FUN_100083b0|0x100083B0",
           "_SmackOpen@12|0x100043A0",
-          "FUN_10005670|0x10005670",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "FUN_10008780|0x10008780",
-          "_SmackToScreen@28|0x100064E0",
+          "_SmackBufferOpen@24|0x100012F0",
           "_SmackBufferClose@4|0x10003750",
+          "FUN_10008c10|0x10008C10",
           "_SmackToBuffer@28|0x10006B00",
-          "_SmackClose@4|0x10005B20",
-          "_SmackBufferOpen@24|0x100012F0"
+          "FUN_10008780|0x10008780",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "_SmackClose@4|0x10005B20"
         ],
         "LoD/1.14d": [
+          "FUN_10005670|0x10005670",
+          "_SmackToBuffer@28|0x10006B00",
           "_SmackBufferOpen@24|0x100012F0",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "FUN_10008c10|0x10008C10",
-          "_SmackToScreen@28|0x100064E0",
+          "FUN_10008780|0x10008780",
           "_SmackClose@4|0x10005B20",
           "FUN_100083b0|0x100083B0",
-          "_SmackBufferClose@4|0x10003750",
-          "FUN_10008780|0x10008780",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "_SmackOpen@12|0x100043A0",
-          "FUN_10005670|0x10005670",
-          "_SmackToBuffer@28|0x10006B00"
+          "_SmackBufferClose@4|0x10003750",
+          "_SmackToScreen@28|0x100064E0",
+          "FUN_10008c10|0x10008C10"
         ]
       },
       "instructions": {
@@ -1862,7 +1862,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_1": {
+    "SmackW32_NOP_864ac812e1ff": {
       "addresses": {
         "Classic/1.00": "0x10001060",
         "Classic/1.01": "0x10001060",
@@ -1937,8 +1937,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:1",
+      "method": "NOP",
+      "index": "NOP:864ac812e1ffe3bfa8d2899c021bd9ad9a393cdb924a50f74d35c48f6e47a311",
       "indexes": {
         "EXP": "1",
         "STR": null,
@@ -2015,18 +2015,18 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
+          "FUN_100036f0|0x100036F0",
+          "FUN_100012c0|0x100012C0",
+          "_SmackBufferOpen@24|0x100012F0"
+        ],
+        "Classic/1.01": [
           "FUN_100012c0|0x100012C0",
           "FUN_100036f0|0x100036F0",
           "_SmackBufferOpen@24|0x100012F0"
         ],
-        "Classic/1.01": [
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_100012c0|0x100012C0",
-          "FUN_100036f0|0x100036F0"
-        ],
         "Classic/1.02": [
-          "FUN_100012c0|0x100012C0",
           "_SmackBufferOpen@24|0x100012F0",
+          "FUN_100012c0|0x100012C0",
           "FUN_100036f0|0x100036F0"
         ],
         "Classic/1.03": [
@@ -2035,54 +2035,54 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_100036f0|0x100036F0"
         ],
         "Classic/1.04c": [
-          "_SmackBufferOpen@24|0x100012F0",
           "FUN_100036f0|0x100036F0",
-          "FUN_100012c0|0x100012C0"
-        ],
-        "LoD/1.07": [
-          "CopyDataToWindow|0x100012C0",
-          "InitializePaletteBuffer|0x100036F0",
+          "FUN_100012c0|0x100012C0",
           "_SmackBufferOpen@24|0x100012F0"
         ],
-        "LoD/1.08": [
+        "LoD/1.07": [
           "_SmackBufferOpen@24|0x100012F0",
+          "CopyDataToWindow|0x100012C0",
+          "InitializePaletteBuffer|0x100036F0"
+        ],
+        "LoD/1.08": [
           "FUN_100036f0|0x100036F0",
+          "_SmackBufferOpen@24|0x100012F0",
           "FUN_100012c0|0x100012C0"
         ],
         "LoD/1.09": [
-          "FUN_100036f0|0x100036F0",
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_100012c0|0x100012C0"
-        ],
-        "LoD/1.09b": [
           "FUN_100012c0|0x100012C0",
           "_SmackBufferOpen@24|0x100012F0",
           "FUN_100036f0|0x100036F0"
         ],
-        "LoD/1.09d": [
-          "_SmackBufferOpen@24|0x100012F0",
+        "LoD/1.09b": [
           "FUN_100036f0|0x100036F0",
-          "FUN_100012c0|0x100012C0"
+          "FUN_100012c0|0x100012C0",
+          "_SmackBufferOpen@24|0x100012F0"
+        ],
+        "LoD/1.09d": [
+          "FUN_100012c0|0x100012C0",
+          "FUN_100036f0|0x100036F0",
+          "_SmackBufferOpen@24|0x100012F0"
         ],
         "LoD/1.10": [
+          "FUN_100012c0|0x100012C0",
           "_SmackBufferOpen@24|0x100012F0",
-          "FUN_100036f0|0x100036F0",
-          "FUN_100012c0|0x100012C0"
+          "FUN_100036f0|0x100036F0"
         ],
         "LoD/1.11": [
           "_SmackBufferOpen@24|0x100012F0",
-          "FUN_100012c0|0x100012C0",
-          "FUN_100036f0|0x100036F0"
+          "FUN_100036f0|0x100036F0",
+          "FUN_100012c0|0x100012C0"
         ],
         "LoD/1.11b": [
           "FUN_100012c0|0x100012C0",
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_100036f0|0x100036F0"
+          "FUN_100036f0|0x100036F0",
+          "_SmackBufferOpen@24|0x100012F0"
         ],
         "LoD/1.12a": [
           "_SmackBufferOpen@24|0x100012F0",
-          "FUN_100012c0|0x100012C0",
-          "FUN_100036f0|0x100036F0"
+          "FUN_100036f0|0x100036F0",
+          "FUN_100012c0|0x100012C0"
         ],
         "LoD/1.13c": [
           "_SmackBufferOpen@24|0x100012F0",
@@ -2090,29 +2090,29 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_100036f0|0x100036F0"
         ],
         "LoD/1.13d": [
-          "FUN_100012c0|0x100012C0",
           "FUN_100036f0|0x100036F0",
-          "_SmackBufferOpen@24|0x100012F0"
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_100012c0|0x100012C0"
         ],
         "LoD/1.14a": [
           "FUN_100036f0|0x100036F0",
-          "FUN_100012c0|0x100012C0",
-          "_SmackBufferOpen@24|0x100012F0"
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_100012c0|0x100012C0"
         ],
         "LoD/1.14b": [
-          "FUN_100036f0|0x100036F0",
-          "FUN_100012c0|0x100012C0",
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.14c": [
-          "FUN_100036f0|0x100036F0",
-          "FUN_100012c0|0x100012C0",
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.14d": [
           "_SmackBufferOpen@24|0x100012F0",
           "FUN_100012c0|0x100012C0",
           "FUN_100036f0|0x100036F0"
+        ],
+        "LoD/1.14c": [
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_100012c0|0x100012C0",
+          "FUN_100036f0|0x100036F0"
+        ],
+        "LoD/1.14d": [
+          "FUN_100036f0|0x100036F0",
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_100012c0|0x100012C0"
         ]
       },
       "instructions": {
@@ -2863,7 +2863,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_23": {
+    "SmackW32_STR_ed8855673ec2": {
       "addresses": {
         "Classic/1.00": "0x100010A0",
         "Classic/1.01": "0x100010A0",
@@ -2938,8 +2938,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "char *",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:23",
+      "method": "STR",
+      "index": "STR:ed8855673ec21b917fb4fee869577813",
       "indexes": {
         "EXP": "23",
         "STR": "ed8855673ec21b917fb4fee869577813",
@@ -4238,24 +4238,24 @@ var FUNCTIONS_SmackW32_dll = {
       "display_name": "NOP_a85c08f6f487d710",
       "callees": {
         "Classic/1.00": [
-          "SetFocus|0x19",
-          "CallWindowProcA|0x1A"
+          "CallWindowProcA|0x1A",
+          "SetFocus|0x19"
         ],
         "Classic/1.01": [
           "SetFocus|0x19",
           "CallWindowProcA|0x1A"
         ],
         "Classic/1.02": [
-          "CallWindowProcA|0x1A",
-          "SetFocus|0x19"
-        ],
-        "Classic/1.03": [
-          "CallWindowProcA|0x1A",
-          "SetFocus|0x19"
-        ],
-        "Classic/1.04c": [
           "SetFocus|0x19",
           "CallWindowProcA|0x1A"
+        ],
+        "Classic/1.03": [
+          "SetFocus|0x19",
+          "CallWindowProcA|0x1A"
+        ],
+        "Classic/1.04c": [
+          "CallWindowProcA|0x1A",
+          "SetFocus|0x19"
         ],
         "LoD/1.08": [
           "SetFocus|0x19",
@@ -4270,48 +4270,48 @@ var FUNCTIONS_SmackW32_dll = {
           "SetFocus|0x19"
         ],
         "LoD/1.09d": [
-          "CallWindowProcA|0x1A",
-          "SetFocus|0x19"
+          "SetFocus|0x19",
+          "CallWindowProcA|0x1A"
         ],
         "LoD/1.10": [
-          "CallWindowProcA|0x1A",
-          "SetFocus|0x19"
+          "SetFocus|0x19",
+          "CallWindowProcA|0x1A"
         ],
         "LoD/1.11": [
-          "SetFocus|0x19",
-          "CallWindowProcA|0x1A"
-        ],
-        "LoD/1.11b": [
-          "SetFocus|0x19",
-          "CallWindowProcA|0x1A"
-        ],
-        "LoD/1.12a": [
           "CallWindowProcA|0x1A",
           "SetFocus|0x19"
+        ],
+        "LoD/1.11b": [
+          "CallWindowProcA|0x1A",
+          "SetFocus|0x19"
+        ],
+        "LoD/1.12a": [
+          "SetFocus|0x19",
+          "CallWindowProcA|0x1A"
         ],
         "LoD/1.13c": [
           "SetFocus|0x19",
           "CallWindowProcA|0x1A"
         ],
         "LoD/1.13d": [
-          "CallWindowProcA|0x1A",
-          "SetFocus|0x19"
+          "SetFocus|0x19",
+          "CallWindowProcA|0x1A"
         ],
         "LoD/1.14a": [
           "SetFocus|0x19",
           "CallWindowProcA|0x1A"
         ],
         "LoD/1.14b": [
+          "CallWindowProcA|0x1A",
+          "SetFocus|0x19"
+        ],
+        "LoD/1.14c": [
           "SetFocus|0x19",
           "CallWindowProcA|0x1A"
         ],
-        "LoD/1.14c": [
-          "CallWindowProcA|0x1A",
-          "SetFocus|0x19"
-        ],
         "LoD/1.14d": [
-          "CallWindowProcA|0x1A",
-          "SetFocus|0x19"
+          "SetFocus|0x19",
+          "CallWindowProcA|0x1A"
         ]
       },
       "instructions": {
@@ -5225,63 +5225,63 @@ var FUNCTIONS_SmackW32_dll = {
       "callees": {
         "Classic/1.00": [
           "CallWindowProcA|0x1A",
-          "CopyDataToWindow|0x100012C0",
-          "SendMessageA|0x1"
+          "SendMessageA|0x1",
+          "CopyDataToWindow|0x100012C0"
         ],
         "Classic/1.01": [
-          "CallWindowProcA|0x1A",
+          "CopyDataToWindow|0x100012C0",
           "SendMessageA|0x1",
-          "CopyDataToWindow|0x100012C0"
+          "CallWindowProcA|0x1A"
         ],
         "Classic/1.02": [
+          "SendMessageA|0x1",
           "CopyDataToWindow|0x100012C0",
-          "CallWindowProcA|0x1A",
-          "SendMessageA|0x1"
+          "CallWindowProcA|0x1A"
         ],
         "Classic/1.03": [
-          "CallWindowProcA|0x1A",
+          "CopyDataToWindow|0x100012C0",
           "SendMessageA|0x1",
-          "CopyDataToWindow|0x100012C0"
+          "CallWindowProcA|0x1A"
         ],
         "Classic/1.04c": [
-          "CallWindowProcA|0x1A",
           "SendMessageA|0x1",
+          "CallWindowProcA|0x1A",
           "CopyDataToWindow|0x100012C0"
         ],
         "LoD/1.08": [
-          "CopyDataToWindow|0x100012C0",
-          "CallWindowProcA|0x1A",
-          "SendMessageA|0x1"
-        ],
-        "LoD/1.09": [
           "SendMessageA|0x1",
           "CopyDataToWindow|0x100012C0",
+          "CallWindowProcA|0x1A"
+        ],
+        "LoD/1.09": [
+          "CopyDataToWindow|0x100012C0",
+          "SendMessageA|0x1",
           "CallWindowProcA|0x1A"
         ],
         "LoD/1.09b": [
+          "SendMessageA|0x1",
+          "CopyDataToWindow|0x100012C0",
+          "CallWindowProcA|0x1A"
+        ],
+        "LoD/1.09d": [
+          "SendMessageA|0x1",
+          "CopyDataToWindow|0x100012C0",
+          "CallWindowProcA|0x1A"
+        ],
+        "LoD/1.10": [
           "CopyDataToWindow|0x100012C0",
           "CallWindowProcA|0x1A",
           "SendMessageA|0x1"
         ],
-        "LoD/1.09d": [
-          "CallWindowProcA|0x1A",
-          "SendMessageA|0x1",
-          "CopyDataToWindow|0x100012C0"
-        ],
-        "LoD/1.10": [
-          "SendMessageA|0x1",
-          "CallWindowProcA|0x1A",
-          "CopyDataToWindow|0x100012C0"
-        ],
         "LoD/1.11": [
-          "CopyDataToWindow|0x100012C0",
+          "CallWindowProcA|0x1A",
           "SendMessageA|0x1",
-          "CallWindowProcA|0x1A"
+          "CopyDataToWindow|0x100012C0"
         ],
         "LoD/1.11b": [
-          "SendMessageA|0x1",
           "CopyDataToWindow|0x100012C0",
-          "CallWindowProcA|0x1A"
+          "CallWindowProcA|0x1A",
+          "SendMessageA|0x1"
         ],
         "LoD/1.12a": [
           "SendMessageA|0x1",
@@ -5289,9 +5289,9 @@ var FUNCTIONS_SmackW32_dll = {
           "CopyDataToWindow|0x100012C0"
         ],
         "LoD/1.13c": [
+          "SendMessageA|0x1",
           "CallWindowProcA|0x1A",
-          "CopyDataToWindow|0x100012C0",
-          "SendMessageA|0x1"
+          "CopyDataToWindow|0x100012C0"
         ],
         "LoD/1.13d": [
           "SendMessageA|0x1",
@@ -5304,19 +5304,19 @@ var FUNCTIONS_SmackW32_dll = {
           "CopyDataToWindow|0x100012C0"
         ],
         "LoD/1.14b": [
-          "CallWindowProcA|0x1A",
           "SendMessageA|0x1",
+          "CallWindowProcA|0x1A",
           "CopyDataToWindow|0x100012C0"
         ],
         "LoD/1.14c": [
-          "SendMessageA|0x1",
+          "CopyDataToWindow|0x100012C0",
           "CallWindowProcA|0x1A",
-          "CopyDataToWindow|0x100012C0"
+          "SendMessageA|0x1"
         ],
         "LoD/1.14d": [
-          "CallWindowProcA|0x1A",
+          "CopyDataToWindow|0x100012C0",
           "SendMessageA|0x1",
-          "CopyDataToWindow|0x100012C0"
+          "CallWindowProcA|0x1A"
         ]
       },
       "instructions": {
@@ -6513,16 +6513,16 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_100011c0|0x100011C0"
         ],
         "Classic/1.01": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "FUN_100011c0|0x100011C0"
+          "FUN_100011c0|0x100011C0",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "Classic/1.02": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "FUN_100011c0|0x100011C0"
+          "FUN_100011c0|0x100011C0",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "Classic/1.03": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "FUN_100011c0|0x100011C0"
+          "FUN_100011c0|0x100011C0",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "Classic/1.04c": [
           "_SmackBufferBlit@32|0x10001F60",
@@ -6532,16 +6532,16 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.08": [
-          "FUN_100011c0|0x100011C0",
-          "_SmackBufferBlit@32|0x10001F60"
+          "_SmackBufferBlit@32|0x10001F60",
+          "FUN_100011c0|0x100011C0"
         ],
         "LoD/1.09": [
           "FUN_100011c0|0x100011C0",
           "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.09b": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "FUN_100011c0|0x100011C0"
+          "FUN_100011c0|0x100011C0",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.09d": [
           "FUN_100011c0|0x100011C0",
@@ -6556,36 +6556,36 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.11b": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "FUN_100011c0|0x100011C0"
+          "FUN_100011c0|0x100011C0",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.12a": [
           "_SmackBufferBlit@32|0x10001F60",
           "FUN_100011c0|0x100011C0"
         ],
         "LoD/1.13c": [
-          "FUN_100011c0|0x100011C0",
-          "_SmackBufferBlit@32|0x10001F60"
+          "_SmackBufferBlit@32|0x10001F60",
+          "FUN_100011c0|0x100011C0"
         ],
         "LoD/1.13d": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "FUN_100011c0|0x100011C0"
-        ],
-        "LoD/1.14a": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "FUN_100011c0|0x100011C0"
-        ],
-        "LoD/1.14b": [
           "FUN_100011c0|0x100011C0",
           "_SmackBufferBlit@32|0x10001F60"
+        ],
+        "LoD/1.14a": [
+          "FUN_100011c0|0x100011C0",
+          "_SmackBufferBlit@32|0x10001F60"
+        ],
+        "LoD/1.14b": [
+          "_SmackBufferBlit@32|0x10001F60",
+          "FUN_100011c0|0x100011C0"
         ],
         "LoD/1.14c": [
           "FUN_100011c0|0x100011C0",
           "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.14d": [
-          "FUN_100011c0|0x100011C0",
-          "_SmackBufferBlit@32|0x10001F60"
+          "_SmackBufferBlit@32|0x10001F60",
+          "FUN_100011c0|0x100011C0"
         ]
       },
       "instructions": {
@@ -7402,7 +7402,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_20": {
+    "SmackW32_STR_038ba4be67f3": {
       "addresses": {
         "Classic/1.00": "0x100012F0",
         "Classic/1.01": "0x100012F0",
@@ -7477,8 +7477,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "uint *",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:20",
+      "method": "STR",
+      "index": "STR:038ba4be67f3c71e1a1c68e3e9a8936e",
       "indexes": {
         "EXP": "20",
         "STR": "038ba4be67f3c71e1a1c68e3e9a8936e",
@@ -7493,463 +7493,463 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "_SmackIsSoftwareCursor@8|0x10003F90",
-          "_SmackBlitOpen@4|0x1000A860",
-          "SetWindowLongA|0x15",
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "LoadDirectDrawLibrary|0x10001E70",
+          "InitializeDibSupport|0x10001D50",
+          "GetWindowLongA|0xF",
           "GetDC|0x11",
-          "CreateCompatibleDC|0x71",
-          "GetSystemPaletteUse|0x6F",
+          "InitializeWinGLibrary|0x10001DB0",
           "CreatePalette|0x6B",
-          "InitSmackBufferGlobals|0x10001F20",
-          "GetDeviceCaps|0x6A",
-          "_CopyData@20|0x10001060",
-          "SelectObject|0x72",
-          "RealizePalette|0x6D",
-          "ShowWindow|0x16",
-          "radmalloc|0x10001000",
-          "SelectPalette|0x6C",
-          "GetSystemPaletteEntries|0x70",
+          "InitDisplayDibWindowClass|0x10001EC0",
           "_SmackBufferClear@8|0x10003CF0",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "GetVersion|0x49",
+          "ShowWindow|0x16",
+          "CreateCompatibleDC|0x71",
+          "GetSystemMetrics|0x17",
+          "GetClassLongA|0x13",
+          "GetDeviceCaps|0x6A",
+          "SetWindowLongA|0x15",
+          "SelectPalette|0x6C",
+          "RealizePalette|0x6D",
+          "_SmackBlitOpen@4|0x1000A860",
+          "radmalloc|0x10001000",
+          "_CopyData@20|0x10001060",
+          "GetSystemPaletteEntries|0x70",
           "...+13 more"
         ],
         "Classic/1.01": [
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "InitDisplayDibWindowClass|0x10001EC0",
-          "InitializeDibSupport|0x10001D50",
-          "DeleteObject|0x6E",
-          "radmalloc|0x10001000",
-          "CreatePalette|0x6B",
-          "_SmackBlitOpen@4|0x1000A860",
-          "SelectPalette|0x6C",
-          "LoadDirectDrawLibrary|0x10001E70",
-          "_SmackBufferClear@8|0x10003CF0",
-          "DeleteDC|0x69",
-          "GetDC|0x11",
-          "_CopyData@20|0x10001060",
-          "GetWindowLongA|0xF",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "SetWindowLongA|0x15",
+          "RealizePalette|0x6D",
           "GetDeviceCaps|0x6A",
-          "GetVersion|0x49",
-          "_SmackIsSoftwareCursor@8|0x10003F90",
-          "GetSystemMetrics|0x17",
+          "GetClassLongA|0x13",
+          "_SmackBufferClear@8|0x10003CF0",
+          "InitializeWinGLibrary|0x10001DB0",
+          "LoadCursorA|0x14",
+          "InitSmackBufferGlobals|0x10001F20",
+          "GetDC|0x11",
+          "SetWindowPos|0x18",
+          "_SmackBlitOpen@4|0x1000A860",
+          "ShowWindow|0x16",
+          "SetWindowLongA|0x15",
+          "GetSystemPaletteUse|0x6F",
+          "GetWindowLongA|0xF",
+          "radmalloc|0x10001000",
+          "CreateWindowExA|0x10",
+          "CreatePalette|0x6B",
+          "InitializeDibSupport|0x10001D50",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "DeleteObject|0x6E",
           "...+13 more"
         ],
         "Classic/1.02": [
+          "SetWindowLongA|0x15",
+          "CreateCompatibleDC|0x71",
+          "ReleaseDC|0x12",
+          "GetSystemPaletteEntries|0x70",
+          "InitDisplayDibWindowClass|0x10001EC0",
+          "RealizePalette|0x6D",
+          "InitializeDibSupport|0x10001D50",
+          "SelectPalette|0x6C",
           "GetWindowLongA|0xF",
-          "GetDeviceCaps|0x6A",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "CreateWindowExA|0x10",
+          "GetSystemPaletteUse|0x6F",
           "GetVersion|0x49",
           "_SmackBlitOpen@4|0x1000A860",
-          "GetSystemPaletteUse|0x6F",
           "GetClassLongA|0x13",
-          "LoadDirectDrawLibrary|0x10001E70",
+          "_SmackDDSurfaceType@4|0x10003E70",
           "_SmackBufferClear@8|0x10003CF0",
-          "DeleteDC|0x69",
-          "InitSmackBufferGlobals|0x10001F20",
-          "ShowWindow|0x16",
-          "SetWindowPos|0x18",
-          "InitializeDibSupport|0x10001D50",
-          "_CopyData@20|0x10001060",
-          "RealizePalette|0x6D",
-          "GetSystemPaletteEntries|0x70",
-          "CreateCompatibleDC|0x71",
-          "SelectObject|0x72",
+          "GetDC|0x11",
+          "CreatePalette|0x6B",
+          "GetDeviceCaps|0x6A",
+          "radmalloc|0x10001000",
+          "CreateWindowExA|0x10",
           "...+13 more"
         ],
         "Classic/1.03": [
-          "CreateWindowExA|0x10",
-          "SelectPalette|0x6C",
-          "GetVersion|0x49",
-          "InitializeDibSupport|0x10001D50",
           "GetDC|0x11",
-          "GetClassLongA|0x13",
-          "ShowWindow|0x16",
+          "GetSystemPaletteUse|0x6F",
+          "CreatePalette|0x6B",
+          "radmalloc|0x10001000",
+          "CreateWindowExA|0x10",
           "DeleteDC|0x69",
-          "SetWindowPos|0x18",
-          "GetSystemPaletteEntries|0x70",
-          "GetWindowLongA|0xF",
+          "LoadCursorA|0x14",
+          "SetWindowLongA|0x15",
+          "_SmackBufferClear@8|0x10003CF0",
+          "SelectPalette|0x6C",
           "ReleaseDC|0x12",
+          "LoadDirectDrawLibrary|0x10001E70",
+          "InitDisplayDibWindowClass|0x10001EC0",
+          "CreateCompatibleDC|0x71",
+          "InitSmackBufferGlobals|0x10001F20",
+          "DeleteObject|0x6E",
+          "_SmackDDSurfaceType@4|0x10003E70",
+          "_SmackBlitOpen@4|0x1000A860",
           "InitializeWinGLibrary|0x10001DB0",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "InitDisplayDibWindowClass|0x10001EC0",
-          "SetWindowLongA|0x15",
-          "GetSystemPaletteUse|0x6F",
-          "GetSystemMetrics|0x17",
-          "_SmackBufferClear@8|0x10003CF0",
-          "CreateCompatibleDC|0x71",
           "...+13 more"
         ],
         "Classic/1.04c": [
-          "LoadDirectDrawLibrary|0x10001E70",
-          "ReleaseDC|0x12",
-          "SelectPalette|0x6C",
-          "InitializeDibSupport|0x10001D50",
-          "InitSmackBufferGlobals|0x10001F20",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "DeleteDC|0x69",
+          "CreateCompatibleDC|0x71",
           "_SmackDDSurfaceType@4|0x10003E70",
-          "SetWindowPos|0x18",
-          "GetWindowLongA|0xF",
-          "GetVersion|0x49",
           "GetDC|0x11",
+          "DeleteObject|0x6E",
           "CreatePalette|0x6B",
-          "GetClassLongA|0x13",
-          "SetWindowLongA|0x15",
+          "_SmackIsSoftwareCursor@8|0x10003F90",
+          "GetSystemPaletteEntries|0x70",
           "_SmackBlitOpen@4|0x1000A860",
-          "CreateWindowExA|0x10",
-          "GetSystemPaletteUse|0x6F",
-          "_SmackBufferClear@8|0x10003CF0",
+          "GetVersion|0x49",
+          "InitDisplayDibWindowClass|0x10001EC0",
+          "LoadDirectDrawLibrary|0x10001E70",
+          "SelectObject|0x72",
+          "GetWindowLongA|0xF",
+          "ReleaseDC|0x12",
           "RealizePalette|0x6D",
+          "LoadCursorA|0x14",
+          "radmalloc|0x10001000",
+          "GetClassLongA|0x13",
+          "GetSystemMetrics|0x17",
+          "CreateWindowExA|0x10",
           "...+13 more"
         ],
         "LoD/1.07": [
+          "GetClassLongA|0x13",
+          "GetSystemPaletteUse|0x6F",
+          "SelectObject|0x72",
+          "_SmackBlitOpen@4|0x1000A860",
+          "SelectPalette|0x6C",
           "_SmackDDSurfaceType@4|0x10003E70",
           "_SmackBufferClear@8|0x10003CF0",
-          "DeleteDC|0x69",
-          "CreatePalette|0x6B",
           "_CopyData@20|0x10001060",
-          "GetSystemPaletteUse|0x6F",
-          "InitSmackBufferGlobals|0x10001F20",
-          "GetWindowLongA|0xF",
-          "GetSystemPaletteEntries|0x70",
-          "SelectPalette|0x6C",
+          "GetSystemMetrics|0x17",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "DeleteObject|0x6E",
           "SetWindowLongA|0x15",
-          "SetWindowPos|0x18",
+          "InitializeWinGLibrary|0x10001DB0",
           "GetDeviceCaps|0x6A",
           "radmalloc|0x10001000",
-          "GetClassLongA|0x13",
+          "GetWindowLongA|0xF",
+          "CreatePalette|0x6B",
+          "LoadDirectDrawLibrary|0x10001E70",
+          "InitSmackBufferGlobals|0x10001F20",
           "ShowWindow|0x16",
-          "InitializeWinGLibrary|0x10001DB0",
-          "InitializeDibSupport|0x10001D50",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "ReleaseDC|0x12",
           "...+13 more"
         ],
         "LoD/1.08": [
-          "DeleteDC|0x69",
-          "SelectObject|0x72",
-          "InitDisplayDibWindowClass|0x10001EC0",
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "LoadDirectDrawLibrary|0x10001E70",
           "_SmackDDSurfaceType@4|0x10003E70",
-          "radmalloc|0x10001000",
-          "DeleteObject|0x6E",
-          "_SmackIsSoftwareCursor@8|0x10003F90",
-          "InitSmackBufferGlobals|0x10001F20",
-          "GetWindowLongA|0xF",
-          "InitializeWinGLibrary|0x10001DB0",
-          "GetSystemPaletteUse|0x6F",
-          "_SmackBlitOpen@4|0x1000A860",
-          "GetDC|0x11",
-          "RealizePalette|0x6D",
-          "SetWindowPos|0x18",
-          "ReleaseDC|0x12",
           "_CopyData@20|0x10001060",
-          "CreatePalette|0x6B",
+          "CreateWindowExA|0x10",
+          "LoadCursorA|0x14",
+          "ReleaseDC|0x12",
+          "InitializeWinGLibrary|0x10001DB0",
+          "GetWindowLongA|0xF",
+          "_SmackIsSoftwareCursor@8|0x10003F90",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "_SmackBufferClear@8|0x10003CF0",
+          "_SmackBlitOpen@4|0x1000A860",
+          "SelectPalette|0x6C",
+          "RealizePalette|0x6D",
+          "SetWindowLongA|0x15",
+          "GetVersion|0x49",
+          "SetWindowPos|0x18",
+          "GetDeviceCaps|0x6A",
+          "SelectObject|0x72",
+          "GetSystemPaletteEntries|0x70",
           "...+13 more"
         ],
         "LoD/1.09": [
           "GetDeviceCaps|0x6A",
-          "GetSystemPaletteUse|0x6F",
-          "_CopyData@20|0x10001060",
-          "CreatePalette|0x6B",
-          "SetWindowLongA|0x15",
-          "SetWindowPos|0x18",
-          "CreateWindowExA|0x10",
-          "_SmackBlitOpen@4|0x1000A860",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "GetSystemPaletteEntries|0x70",
-          "GetClassLongA|0x13",
-          "GetSystemMetrics|0x17",
-          "LoadCursorA|0x14",
-          "InitializeDibSupport|0x10001D50",
-          "SelectPalette|0x6C",
+          "InitSmackBufferGlobals|0x10001F20",
+          "DeleteObject|0x6E",
+          "ReleaseDC|0x12",
           "_SmackIsSoftwareCursor@8|0x10003F90",
-          "InitializeWinGLibrary|0x10001DB0",
-          "_SmackBufferClear@8|0x10003CF0",
           "CreateCompatibleDC|0x71",
-          "LoadDirectDrawLibrary|0x10001E70",
+          "DeleteDC|0x69",
+          "GetSystemPaletteUse|0x6F",
+          "_SmackBlitOpen@4|0x1000A860",
+          "GetSystemPaletteEntries|0x70",
+          "_SmackBufferClear@8|0x10003CF0",
+          "_SmackDDSurfaceType@4|0x10003E70",
+          "SetWindowLongA|0x15",
+          "GetSystemMetrics|0x17",
+          "SetWindowPos|0x18",
+          "ShowWindow|0x16",
+          "CreatePalette|0x6B",
+          "RealizePalette|0x6D",
+          "GetDC|0x11",
+          "LoadCursorA|0x14",
           "...+13 more"
         ],
         "LoD/1.09b": [
-          "GetSystemPaletteUse|0x6F",
-          "_CopyData@20|0x10001060",
-          "_SmackBufferClear@8|0x10003CF0",
-          "_SmackIsSoftwareCursor@8|0x10003F90",
-          "CreateWindowExA|0x10",
-          "GetSystemPaletteEntries|0x70",
-          "_SmackBlitOpen@4|0x1000A860",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "DeleteDC|0x69",
-          "InitSmackBufferGlobals|0x10001F20",
-          "SelectPalette|0x6C",
-          "CreatePalette|0x6B",
-          "GetClassLongA|0x13",
-          "GetSystemMetrics|0x17",
-          "ReleaseDC|0x12",
-          "CreateCompatibleDC|0x71",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "DeleteObject|0x6E",
-          "LoadDirectDrawLibrary|0x10001E70",
           "RealizePalette|0x6D",
+          "_SmackBufferClear@8|0x10003CF0",
+          "CreateWindowExA|0x10",
+          "CreatePalette|0x6B",
+          "DeleteObject|0x6E",
+          "GetVersion|0x49",
+          "InitializeWinGLibrary|0x10001DB0",
+          "InitializeDibSupport|0x10001D50",
+          "GetSystemMetrics|0x17",
+          "DeleteDC|0x69",
+          "_CopyData@20|0x10001060",
+          "LoadDirectDrawLibrary|0x10001E70",
+          "GetClassLongA|0x13",
+          "SetWindowLongA|0x15",
+          "ShowWindow|0x16",
+          "GetSystemPaletteEntries|0x70",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "SetWindowPos|0x18",
+          "GetDC|0x11",
+          "_SmackIsSoftwareCursor@8|0x10003F90",
           "...+13 more"
         ],
         "LoD/1.09d": [
-          "GetVersion|0x49",
-          "ShowWindow|0x16",
-          "ReleaseDC|0x12",
-          "InitDisplayDibWindowClass|0x10001EC0",
+          "CreateWindowExA|0x10",
           "radmalloc|0x10001000",
-          "GetDeviceCaps|0x6A",
-          "_CopyData@20|0x10001060",
-          "GetClassLongA|0x13",
-          "LoadCursorA|0x14",
-          "GetSystemPaletteEntries|0x70",
-          "GetDC|0x11",
+          "SetWindowPos|0x18",
           "GetSystemMetrics|0x17",
-          "RealizePalette|0x6D",
-          "InitializeDibSupport|0x10001D50",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "LoadDirectDrawLibrary|0x10001E70",
-          "InitializeWinGLibrary|0x10001DB0",
-          "_SmackBufferClear@8|0x10003CF0",
-          "DeleteObject|0x6E",
+          "ReleaseDC|0x12",
+          "DeleteDC|0x69",
+          "ShowWindow|0x16",
+          "InitSmackBufferGlobals|0x10001F20",
+          "CreateCompatibleDC|0x71",
+          "GetClassLongA|0x13",
           "_SmackBlitOpen@4|0x1000A860",
+          "SelectObject|0x72",
+          "_SmackDDSurfaceType@4|0x10003E70",
+          "GetDeviceCaps|0x6A",
+          "GetWindowLongA|0xF",
+          "_SmackIsSoftwareCursor@8|0x10003F90",
+          "GetSystemPaletteUse|0x6F",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "DeleteObject|0x6E",
+          "_SmackBufferClear@8|0x10003CF0",
           "...+13 more"
         ],
         "LoD/1.10": [
-          "_SmackBufferClear@8|0x10003CF0",
-          "_CopyData@20|0x10001060",
-          "DeleteDC|0x69",
-          "GetDeviceCaps|0x6A",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "LoadDirectDrawLibrary|0x10001E70",
-          "GetVersion|0x49",
-          "SelectObject|0x72",
-          "GetWindowLongA|0xF",
+          "_SmackDDSurfaceType@4|0x10003E70",
+          "ShowWindow|0x16",
+          "LoadCursorA|0x14",
+          "InitializeWinGLibrary|0x10001DB0",
           "InitSmackBufferGlobals|0x10001F20",
-          "InitializeDibSupport|0x10001D50",
-          "GetClassLongA|0x13",
-          "SetWindowLongA|0x15",
-          "radmalloc|0x10001000",
+          "SetWindowPos|0x18",
+          "CreateCompatibleDC|0x71",
+          "GetSystemPaletteEntries|0x70",
+          "DeleteObject|0x6E",
+          "GetWindowLongA|0xF",
+          "GetSystemPaletteUse|0x6F",
           "GetSystemMetrics|0x17",
           "CreatePalette|0x6B",
-          "RealizePalette|0x6D",
-          "GetSystemPaletteUse|0x6F",
-          "ReleaseDC|0x12",
-          "InitializeWinGLibrary|0x10001DB0",
+          "GetClassLongA|0x13",
+          "GetVersion|0x49",
+          "SelectObject|0x72",
+          "SetWindowLongA|0x15",
+          "GetDeviceCaps|0x6A",
+          "_CopyData@20|0x10001060",
           "...+13 more"
         ],
         "LoD/1.11": [
-          "GetSystemPaletteEntries|0x70",
-          "DeleteObject|0x6E",
-          "GetSystemMetrics|0x17",
-          "InitDisplayDibWindowClass|0x10001EC0",
-          "DeleteDC|0x69",
-          "SelectPalette|0x6C",
-          "_SmackIsSoftwareCursor@8|0x10003F90",
-          "GetVersion|0x49",
-          "RealizePalette|0x6D",
-          "GetSystemPaletteUse|0x6F",
-          "GetWindowLongA|0xF",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "InitializeWinGLibrary|0x10001DB0",
-          "SelectObject|0x72",
+          "GetClassLongA|0x13",
+          "GetDeviceCaps|0x6A",
+          "GetDC|0x11",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "_SmackBufferClear@8|0x10003CF0",
           "InitSmackBufferGlobals|0x10001F20",
-          "SetWindowLongA|0x15",
-          "CreateWindowExA|0x10",
-          "_CopyData@20|0x10001060",
+          "GetWindowLongA|0xF",
+          "InitDisplayDibWindowClass|0x10001EC0",
           "SetWindowPos|0x18",
-          "ReleaseDC|0x12",
+          "ShowWindow|0x16",
+          "LoadDirectDrawLibrary|0x10001E70",
+          "SelectObject|0x72",
+          "CreatePalette|0x6B",
+          "RealizePalette|0x6D",
+          "SetWindowLongA|0x15",
+          "CreateCompatibleDC|0x71",
+          "DeleteObject|0x6E",
+          "DeleteDC|0x69",
+          "InitializeWinGLibrary|0x10001DB0",
+          "_SmackBlitOpen@4|0x1000A860",
           "...+13 more"
         ],
         "LoD/1.11b": [
-          "InitDisplayDibWindowClass|0x10001EC0",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "DeleteDC|0x69",
           "GetSystemMetrics|0x17",
-          "radmalloc|0x10001000",
-          "GetSystemPaletteUse|0x6F",
-          "GetVersion|0x49",
-          "GetClassLongA|0x13",
-          "SelectPalette|0x6C",
-          "InitSmackBufferGlobals|0x10001F20",
-          "InitializeWinGLibrary|0x10001DB0",
-          "CreateWindowExA|0x10",
           "CreateCompatibleDC|0x71",
-          "GetDeviceCaps|0x6A",
-          "SetWindowPos|0x18",
           "_SmackIsSoftwareCursor@8|0x10003F90",
-          "SetWindowLongA|0x15",
+          "InitDisplayDibWindowClass|0x10001EC0",
+          "GetDC|0x11",
+          "CreateWindowExA|0x10",
           "SelectObject|0x72",
+          "LoadCursorA|0x14",
+          "_SmackDDSurfaceType@4|0x10003E70",
+          "GetClassLongA|0x13",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "_SmackBufferClear@8|0x10003CF0",
-          "CreatePalette|0x6B",
+          "InitializeDibSupport|0x10001D50",
+          "GetWindowLongA|0xF",
+          "LoadDirectDrawLibrary|0x10001E70",
+          "_SmackBlitOpen@4|0x1000A860",
+          "ShowWindow|0x16",
+          "InitializeWinGLibrary|0x10001DB0",
+          "ReleaseDC|0x12",
           "...+13 more"
         ],
         "LoD/1.12a": [
-          "GetDC|0x11",
-          "InitDisplayDibWindowClass|0x10001EC0",
-          "InitSmackBufferGlobals|0x10001F20",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "DeleteDC|0x69",
-          "InitializeWinGLibrary|0x10001DB0",
-          "LoadDirectDrawLibrary|0x10001E70",
-          "_SmackBufferClear@8|0x10003CF0",
-          "InitializeDibSupport|0x10001D50",
-          "DeleteObject|0x6E",
-          "GetWindowLongA|0xF",
-          "_SmackBlitOpen@4|0x1000A860",
-          "SelectObject|0x72",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "GetClassLongA|0x13",
-          "GetDeviceCaps|0x6A",
-          "GetSystemPaletteUse|0x6F",
           "GetSystemPaletteEntries|0x70",
+          "_SmackDDSurfaceType@4|0x10003E70",
+          "GetDeviceCaps|0x6A",
+          "_CopyData@20|0x10001060",
+          "_SmackIsSoftwareCursor@8|0x10003F90",
           "LoadCursorA|0x14",
+          "_SmackBlitOpen@4|0x1000A860",
+          "SetWindowLongA|0x15",
+          "_SmackBufferClear@8|0x10003CF0",
+          "DeleteObject|0x6E",
+          "ReleaseDC|0x12",
+          "SelectObject|0x72",
+          "CreatePalette|0x6B",
+          "GetClassLongA|0x13",
+          "radmalloc|0x10001000",
+          "LoadDirectDrawLibrary|0x10001E70",
+          "GetSystemPaletteUse|0x6F",
+          "DeleteDC|0x69",
+          "RealizePalette|0x6D",
           "GetVersion|0x49",
           "...+13 more"
         ],
         "LoD/1.13c": [
-          "_SmackBufferClear@8|0x10003CF0",
-          "DeleteObject|0x6E",
-          "SelectObject|0x72",
-          "SetWindowPos|0x18",
-          "DeleteDC|0x69",
-          "CreatePalette|0x6B",
+          "GetVersion|0x49",
           "SelectPalette|0x6C",
-          "CreateWindowExA|0x10",
-          "LoadDirectDrawLibrary|0x10001E70",
           "radmalloc|0x10001000",
-          "CreateCompatibleDC|0x71",
-          "_CopyData@20|0x10001060",
+          "CreateWindowExA|0x10",
+          "LoadCursorA|0x14",
+          "_SmackBlitOpen@4|0x1000A860",
+          "SetWindowPos|0x18",
+          "ShowWindow|0x16",
+          "InitializeDibSupport|0x10001D50",
           "ReleaseDC|0x12",
-          "GetSystemPaletteEntries|0x70",
-          "GetDC|0x11",
-          "InitializeWinGLibrary|0x10001DB0",
+          "LoadDirectDrawLibrary|0x10001E70",
+          "GetClassLongA|0x13",
+          "InitDisplayDibWindowClass|0x10001EC0",
           "ApplyPresetUnitTileAttributes|0x10001040",
+          "GetWindowLongA|0xF",
+          "GetSystemMetrics|0x17",
           "_SmackDDSurfaceType@4|0x10003E70",
-          "SetWindowLongA|0x15",
-          "GetSystemPaletteUse|0x6F",
+          "CreateCompatibleDC|0x71",
+          "RealizePalette|0x6D",
+          "InitializeWinGLibrary|0x10001DB0",
           "...+13 more"
         ],
         "LoD/1.13d": [
-          "_SmackIsSoftwareCursor@8|0x10003F90",
-          "GetSystemPaletteUse|0x6F",
-          "SelectPalette|0x6C",
-          "LoadCursorA|0x14",
+          "SelectObject|0x72",
           "GetClassLongA|0x13",
-          "CreateCompatibleDC|0x71",
-          "ShowWindow|0x16",
-          "SetWindowLongA|0x15",
-          "_CopyData@20|0x10001060",
-          "GetSystemPaletteEntries|0x70",
+          "GetSystemPaletteUse|0x6F",
+          "DeleteDC|0x69",
           "GetSystemMetrics|0x17",
-          "GetWindowLongA|0xF",
-          "_SmackBlitOpen@4|0x1000A860",
-          "GetDeviceCaps|0x6A",
-          "CreateWindowExA|0x10",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "InitDisplayDibWindowClass|0x10001EC0",
+          "CreatePalette|0x6B",
+          "InitializeWinGLibrary|0x10001DB0",
           "radmalloc|0x10001000",
           "InitializeDibSupport|0x10001D50",
-          "ReleaseDC|0x12",
+          "ShowWindow|0x16",
+          "_SmackBlitOpen@4|0x1000A860",
+          "SelectPalette|0x6C",
+          "_CopyData@20|0x10001060",
+          "GetDC|0x11",
+          "_SmackBufferClear@8|0x10003CF0",
+          "GetDeviceCaps|0x6A",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "CreateWindowExA|0x10",
+          "GetVersion|0x49",
+          "RealizePalette|0x6D",
           "...+13 more"
         ],
         "LoD/1.14a": [
-          "GetDeviceCaps|0x6A",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "LoadDirectDrawLibrary|0x10001E70",
-          "InitializeDibSupport|0x10001D50",
-          "SelectObject|0x72",
-          "GetSystemMetrics|0x17",
-          "GetSystemPaletteEntries|0x70",
-          "ShowWindow|0x16",
-          "SetWindowPos|0x18",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "_CopyData@20|0x10001060",
-          "InitSmackBufferGlobals|0x10001F20",
           "DeleteObject|0x6E",
-          "GetWindowLongA|0xF",
-          "_SmackBufferClear@8|0x10003CF0",
+          "GetSystemMetrics|0x17",
+          "DeleteDC|0x69",
+          "GetSystemPaletteEntries|0x70",
+          "SetWindowLongA|0x15",
           "CreateWindowExA|0x10",
+          "SetWindowPos|0x18",
+          "CreatePalette|0x6B",
+          "LoadCursorA|0x14",
+          "radmalloc|0x10001000",
+          "GetDeviceCaps|0x6A",
+          "InitializeDibSupport|0x10001D50",
+          "CreateCompatibleDC|0x71",
           "SelectPalette|0x6C",
+          "ReleaseDC|0x12",
+          "InitDisplayDibWindowClass|0x10001EC0",
+          "_SmackIsSoftwareCursor@8|0x10003F90",
           "GetClassLongA|0x13",
-          "GetSystemPaletteUse|0x6F",
-          "InitializeWinGLibrary|0x10001DB0",
+          "_SmackDDSurfaceType@4|0x10003E70",
           "...+13 more"
         ],
         "LoD/1.14b": [
-          "GetDeviceCaps|0x6A",
-          "SelectPalette|0x6C",
-          "GetSystemPaletteUse|0x6F",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "LoadDirectDrawLibrary|0x10001E70",
-          "CreatePalette|0x6B",
-          "ShowWindow|0x16",
-          "CreateWindowExA|0x10",
-          "ReleaseDC|0x12",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "RealizePalette|0x6D",
-          "SelectObject|0x72",
-          "LoadCursorA|0x14",
-          "SetWindowPos|0x18",
-          "_SmackBlitOpen@4|0x1000A860",
+          "GetVersion|0x49",
+          "ReleaseDC|0x12",
+          "GetClassLongA|0x13",
+          "InitSmackBufferGlobals|0x10001F20",
+          "GetSystemMetrics|0x17",
+          "InitializeWinGLibrary|0x10001DB0",
           "DeleteDC|0x69",
+          "ShowWindow|0x16",
           "_SmackBufferClear@8|0x10003CF0",
           "radmalloc|0x10001000",
-          "InitSmackBufferGlobals|0x10001F20",
+          "_CopyData@20|0x10001060",
+          "CreateCompatibleDC|0x71",
+          "LoadDirectDrawLibrary|0x10001E70",
           "GetSystemPaletteEntries|0x70",
+          "LoadCursorA|0x14",
+          "SelectPalette|0x6C",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "CreatePalette|0x6B",
+          "_SmackIsSoftwareCursor@8|0x10003F90",
           "...+13 more"
         ],
         "LoD/1.14c": [
-          "radmalloc|0x10001000",
-          "InitializeDibSupport|0x10001D50",
-          "_SmackBlitOpen@4|0x1000A860",
-          "RealizePalette|0x6D",
-          "_SmackBufferClear@8|0x10003CF0",
-          "CreateWindowExA|0x10",
+          "LoadCursorA|0x14",
+          "DeleteObject|0x6E",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "ReleaseDC|0x12",
-          "SelectObject|0x72",
-          "GetDC|0x11",
-          "LoadDirectDrawLibrary|0x10001E70",
-          "InitSmackBufferGlobals|0x10001F20",
-          "SetWindowPos|0x18",
-          "InitDisplayDibWindowClass|0x10001EC0",
-          "GetClassLongA|0x13",
-          "GetVersion|0x49",
-          "GetSystemMetrics|0x17",
-          "GetWindowLongA|0xF",
-          "ShowWindow|0x16",
+          "_SmackIsSoftwareCursor@8|0x10003F90",
           "InitializeWinGLibrary|0x10001DB0",
+          "CreatePalette|0x6B",
+          "ReleaseDC|0x12",
+          "ShowWindow|0x16",
+          "_CopyData@20|0x10001060",
+          "GetClassLongA|0x13",
+          "SelectPalette|0x6C",
+          "GetSystemPaletteEntries|0x70",
+          "InitDisplayDibWindowClass|0x10001EC0",
+          "SelectObject|0x72",
+          "GetWindowLongA|0xF",
+          "radmalloc|0x10001000",
+          "GetDC|0x11",
+          "DeleteDC|0x69",
+          "_SmackBufferClear@8|0x10003CF0",
+          "SetWindowLongA|0x15",
           "...+13 more"
         ],
         "LoD/1.14d": [
-          "SetWindowLongA|0x15",
-          "GetSystemMetrics|0x17",
-          "CreateWindowExA|0x10",
-          "_CopyData@20|0x10001060",
           "InitializeDibSupport|0x10001D50",
-          "_SmackBufferClear@8|0x10003CF0",
-          "InitializeWinGLibrary|0x10001DB0",
-          "GetClassLongA|0x13",
-          "DeleteDC|0x69",
-          "GetSystemPaletteUse|0x6F",
-          "GetWindowLongA|0xF",
-          "RealizePalette|0x6D",
-          "InitSmackBufferGlobals|0x10001F20",
           "LoadDirectDrawLibrary|0x10001E70",
-          "GetSystemPaletteEntries|0x70",
           "LoadCursorA|0x14",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "radmalloc|0x10001000",
-          "_SmackDDSurfaceType@4|0x10003E70",
-          "_SmackBlitOpen@4|0x1000A860",
+          "GetVersion|0x49",
+          "CreatePalette|0x6B",
+          "InitializeWinGLibrary|0x10001DB0",
+          "GetSystemMetrics|0x17",
+          "SelectPalette|0x6C",
+          "CreateCompatibleDC|0x71",
+          "GetDeviceCaps|0x6A",
+          "SelectObject|0x72",
+          "_CopyData@20|0x10001060",
+          "_SmackBufferClear@8|0x10003CF0",
+          "GetWindowLongA|0xF",
+          "GetSystemPaletteEntries|0x70",
+          "DeleteDC|0x69",
+          "DeleteObject|0x6E",
+          "ShowWindow|0x16",
+          "SetWindowPos|0x18",
+          "ReleaseDC|0x12",
           "...+13 more"
         ]
       },
@@ -10336,44 +10336,44 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetVersion|0x49",
           "GetProcAddress|0x47",
+          "GetVersion|0x49",
           "GetModuleHandleA|0x48"
         ],
         "Classic/1.01": [
+          "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47",
+          "GetVersion|0x49"
+        ],
+        "Classic/1.02": [
           "GetVersion|0x49",
           "GetProcAddress|0x47",
           "GetModuleHandleA|0x48"
         ],
-        "Classic/1.02": [
-          "GetVersion|0x49",
-          "GetModuleHandleA|0x48",
-          "GetProcAddress|0x47"
-        ],
         "Classic/1.03": [
-          "GetVersion|0x49",
           "GetModuleHandleA|0x48",
+          "GetVersion|0x49",
           "GetProcAddress|0x47"
         ],
         "Classic/1.04c": [
           "GetVersion|0x49",
+          "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47"
+        ],
+        "LoD/1.07": [
+          "GetProcAddress|0x47",
+          "GetVersion|0x49",
+          "GetModuleHandleA|0x48"
+        ],
+        "LoD/1.08": [
+          "GetVersion|0x49",
           "GetProcAddress|0x47",
           "GetModuleHandleA|0x48"
         ],
-        "LoD/1.07": [
-          "GetModuleHandleA|0x48",
-          "GetProcAddress|0x47",
-          "GetVersion|0x49"
-        ],
-        "LoD/1.08": [
+        "LoD/1.09": [
           "GetModuleHandleA|0x48",
           "GetVersion|0x49",
           "GetProcAddress|0x47"
-        ],
-        "LoD/1.09": [
-          "GetProcAddress|0x47",
-          "GetModuleHandleA|0x48",
-          "GetVersion|0x49"
         ],
         "LoD/1.09b": [
           "GetProcAddress|0x47",
@@ -10381,44 +10381,44 @@ var FUNCTIONS_SmackW32_dll = {
           "GetVersion|0x49"
         ],
         "LoD/1.09d": [
-          "GetModuleHandleA|0x48",
           "GetVersion|0x49",
+          "GetModuleHandleA|0x48",
           "GetProcAddress|0x47"
         ],
         "LoD/1.10": [
-          "GetProcAddress|0x47",
           "GetVersion|0x49",
+          "GetProcAddress|0x47",
           "GetModuleHandleA|0x48"
         ],
         "LoD/1.11": [
-          "GetProcAddress|0x47",
-          "GetVersion|0x49",
-          "GetModuleHandleA|0x48"
-        ],
-        "LoD/1.11b": [
-          "GetProcAddress|0x47",
           "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47",
           "GetVersion|0x49"
         ],
-        "LoD/1.12a": [
+        "LoD/1.11b": [
           "GetVersion|0x49",
           "GetModuleHandleA|0x48",
           "GetProcAddress|0x47"
         ],
-        "LoD/1.13c": [
+        "LoD/1.12a": [
           "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47",
+          "GetVersion|0x49"
+        ],
+        "LoD/1.13c": [
           "GetVersion|0x49",
+          "GetModuleHandleA|0x48",
           "GetProcAddress|0x47"
         ],
         "LoD/1.13d": [
-          "GetVersion|0x49",
           "GetModuleHandleA|0x48",
+          "GetVersion|0x49",
           "GetProcAddress|0x47"
         ],
         "LoD/1.14a": [
           "GetVersion|0x49",
-          "GetModuleHandleA|0x48",
-          "GetProcAddress|0x47"
+          "GetProcAddress|0x47",
+          "GetModuleHandleA|0x48"
         ],
         "LoD/1.14b": [
           "GetProcAddress|0x47",
@@ -10426,20 +10426,20 @@ var FUNCTIONS_SmackW32_dll = {
           "GetVersion|0x49"
         ],
         "LoD/1.14c": [
-          "GetVersion|0x49",
           "GetModuleHandleA|0x48",
-          "GetProcAddress|0x47"
+          "GetProcAddress|0x47",
+          "GetVersion|0x49"
         ],
         "LoD/1.14d": [
+          "GetProcAddress|0x47",
           "GetVersion|0x49",
-          "GetModuleHandleA|0x48",
-          "GetProcAddress|0x47"
+          "GetModuleHandleA|0x48"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_10001db0|0x10001DB0",
-          "_SmackBufferOpen@24|0x100012F0"
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_10001db0|0x10001DB0"
         ],
         "Classic/1.01": [
           "_SmackBufferOpen@24|0x100012F0",
@@ -10454,16 +10454,16 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10001db0|0x10001DB0"
         ],
         "Classic/1.04c": [
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_10001db0|0x10001DB0"
-        ],
-        "LoD/1.07": [
-          "InitializeWinGLibrary|0x10001DB0",
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.08": [
           "FUN_10001db0|0x10001DB0",
           "_SmackBufferOpen@24|0x100012F0"
+        ],
+        "LoD/1.07": [
+          "_SmackBufferOpen@24|0x100012F0",
+          "InitializeWinGLibrary|0x10001DB0"
+        ],
+        "LoD/1.08": [
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_10001db0|0x10001DB0"
         ],
         "LoD/1.09": [
           "_SmackBufferOpen@24|0x100012F0",
@@ -10474,40 +10474,40 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferOpen@24|0x100012F0"
         ],
         "LoD/1.09d": [
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_10001db0|0x10001DB0"
+          "FUN_10001db0|0x10001DB0",
+          "_SmackBufferOpen@24|0x100012F0"
         ],
         "LoD/1.10": [
           "_SmackBufferOpen@24|0x100012F0",
           "FUN_10001db0|0x10001DB0"
         ],
         "LoD/1.11": [
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_10001db0|0x10001DB0"
-        ],
-        "LoD/1.11b": [
           "FUN_10001db0|0x10001DB0",
           "_SmackBufferOpen@24|0x100012F0"
+        ],
+        "LoD/1.11b": [
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_10001db0|0x10001DB0"
         ],
         "LoD/1.12a": [
           "_SmackBufferOpen@24|0x100012F0",
           "FUN_10001db0|0x10001DB0"
         ],
         "LoD/1.13c": [
-          "_SmackBufferOpen@24|0x100012F0",
-          "FUN_10001db0|0x10001DB0"
+          "FUN_10001db0|0x10001DB0",
+          "_SmackBufferOpen@24|0x100012F0"
         ],
         "LoD/1.13d": [
-          "FUN_10001db0|0x10001DB0",
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.14a": [
           "_SmackBufferOpen@24|0x100012F0",
           "FUN_10001db0|0x10001DB0"
         ],
-        "LoD/1.14b": [
+        "LoD/1.14a": [
           "FUN_10001db0|0x10001DB0",
           "_SmackBufferOpen@24|0x100012F0"
+        ],
+        "LoD/1.14b": [
+          "_SmackBufferOpen@24|0x100012F0",
+          "FUN_10001db0|0x10001DB0"
         ],
         "LoD/1.14c": [
           "FUN_10001db0|0x10001DB0",
@@ -11481,38 +11481,38 @@ var FUNCTIONS_SmackW32_dll = {
         "Classic/1.00": [
           "GetProcAddress|0x47",
           "InitializeDibSupport|0x10001D50",
-          "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
-        ],
-        "Classic/1.01": [
-          "InitializeDibSupport|0x10001D50",
-          "GetProcAddress|0x47",
           "SetErrorMode|0x59",
           "LoadLibraryA|0x58"
         ],
-        "Classic/1.02": [
-          "LoadLibraryA|0x58",
-          "InitializeDibSupport|0x10001D50",
-          "GetProcAddress|0x47",
-          "SetErrorMode|0x59"
-        ],
-        "Classic/1.03": [
+        "Classic/1.01": [
           "InitializeDibSupport|0x10001D50",
           "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
-        "Classic/1.04c": [
+        "Classic/1.02": [
           "LoadLibraryA|0x58",
+          "SetErrorMode|0x59",
+          "GetProcAddress|0x47",
+          "InitializeDibSupport|0x10001D50"
+        ],
+        "Classic/1.03": [
           "InitializeDibSupport|0x10001D50",
           "GetProcAddress|0x47",
-          "SetErrorMode|0x59"
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58"
+        ],
+        "Classic/1.04c": [
+          "InitializeDibSupport|0x10001D50",
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.07": [
-          "InitializeDibSupport|0x10001D50",
-          "LoadLibraryA|0x58",
+          "SetErrorMode|0x59",
           "GetProcAddress|0x47",
-          "SetErrorMode|0x59"
+          "LoadLibraryA|0x58",
+          "InitializeDibSupport|0x10001D50"
         ],
         "LoD/1.08": [
           "SetErrorMode|0x59",
@@ -11522,81 +11522,81 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.09": [
           "SetErrorMode|0x59",
-          "GetProcAddress|0x47",
-          "InitializeDibSupport|0x10001D50",
-          "LoadLibraryA|0x58"
-        ],
-        "LoD/1.09b": [
-          "InitializeDibSupport|0x10001D50",
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47",
+          "InitializeDibSupport|0x10001D50"
+        ],
+        "LoD/1.09b": [
+          "GetProcAddress|0x47",
+          "LoadLibraryA|0x58",
+          "InitializeDibSupport|0x10001D50",
           "SetErrorMode|0x59"
         ],
         "LoD/1.09d": [
           "LoadLibraryA|0x58",
           "SetErrorMode|0x59",
-          "GetProcAddress|0x47",
-          "InitializeDibSupport|0x10001D50"
+          "InitializeDibSupport|0x10001D50",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.10": [
           "GetProcAddress|0x47",
-          "LoadLibraryA|0x58",
           "SetErrorMode|0x59",
-          "InitializeDibSupport|0x10001D50"
+          "InitializeDibSupport|0x10001D50",
+          "LoadLibraryA|0x58"
         ],
         "LoD/1.11": [
-          "LoadLibraryA|0x58",
-          "GetProcAddress|0x47",
           "SetErrorMode|0x59",
-          "InitializeDibSupport|0x10001D50"
-        ],
-        "LoD/1.11b": [
-          "GetProcAddress|0x47",
           "LoadLibraryA|0x58",
           "InitializeDibSupport|0x10001D50",
-          "SetErrorMode|0x59"
+          "GetProcAddress|0x47"
         ],
-        "LoD/1.12a": [
+        "LoD/1.11b": [
           "InitializeDibSupport|0x10001D50",
           "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
-        "LoD/1.13c": [
-          "SetErrorMode|0x59",
+        "LoD/1.12a": [
+          "GetProcAddress|0x47",
           "LoadLibraryA|0x58",
+          "SetErrorMode|0x59",
+          "InitializeDibSupport|0x10001D50"
+        ],
+        "LoD/1.13c": [
           "InitializeDibSupport|0x10001D50",
+          "LoadLibraryA|0x58",
+          "SetErrorMode|0x59",
           "GetProcAddress|0x47"
         ],
         "LoD/1.13d": [
           "SetErrorMode|0x59",
-          "InitializeDibSupport|0x10001D50",
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
-        ],
-        "LoD/1.14a": [
-          "InitializeDibSupport|0x10001D50",
-          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
+          "InitializeDibSupport|0x10001D50",
           "GetProcAddress|0x47"
         ],
-        "LoD/1.14b": [
-          "GetProcAddress|0x47",
+        "LoD/1.14a": [
           "LoadLibraryA|0x58",
+          "GetProcAddress|0x47",
           "SetErrorMode|0x59",
           "InitializeDibSupport|0x10001D50"
         ],
+        "LoD/1.14b": [
+          "GetProcAddress|0x47",
+          "InitializeDibSupport|0x10001D50",
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58"
+        ],
         "LoD/1.14c": [
           "InitializeDibSupport|0x10001D50",
-          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
-          "GetProcAddress|0x47"
+          "GetProcAddress|0x47",
+          "SetErrorMode|0x59"
         ],
         "LoD/1.14d": [
-          "LoadLibraryA|0x58",
-          "SetErrorMode|0x59",
+          "GetProcAddress|0x47",
           "InitializeDibSupport|0x10001D50",
-          "GetProcAddress|0x47"
+          "LoadLibraryA|0x58",
+          "SetErrorMode|0x59"
         ]
       },
       "callers": {
@@ -12887,33 +12887,33 @@ var FUNCTIONS_SmackW32_dll = {
       "callees": {
         "Classic/1.00": [
           "GetProcAddress|0x47",
-          "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
-        ],
-        "Classic/1.01": [
-          "GetProcAddress|0x47",
           "SetErrorMode|0x59",
           "LoadLibraryA|0x58"
         ],
-        "Classic/1.02": [
-          "LoadLibraryA|0x58",
-          "GetProcAddress|0x47",
-          "SetErrorMode|0x59"
-        ],
-        "Classic/1.03": [
+        "Classic/1.01": [
           "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
-        "Classic/1.04c": [
+        "Classic/1.02": [
           "LoadLibraryA|0x58",
+          "SetErrorMode|0x59",
+          "GetProcAddress|0x47"
+        ],
+        "Classic/1.03": [
           "GetProcAddress|0x47",
-          "SetErrorMode|0x59"
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58"
+        ],
+        "Classic/1.04c": [
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.07": [
-          "LoadLibraryA|0x58",
+          "SetErrorMode|0x59",
           "GetProcAddress|0x47",
-          "SetErrorMode|0x59"
+          "LoadLibraryA|0x58"
         ],
         "LoD/1.08": [
           "SetErrorMode|0x59",
@@ -12922,12 +12922,12 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.09": [
           "SetErrorMode|0x59",
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.09b": [
-          "LoadLibraryA|0x58",
           "GetProcAddress|0x47",
+          "LoadLibraryA|0x58",
           "SetErrorMode|0x59"
         ],
         "LoD/1.09d": [
@@ -12937,53 +12937,53 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.10": [
           "GetProcAddress|0x47",
-          "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58"
         ],
         "LoD/1.11": [
-          "LoadLibraryA|0x58",
-          "GetProcAddress|0x47",
-          "SetErrorMode|0x59"
-        ],
-        "LoD/1.11b": [
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
-        ],
-        "LoD/1.12a": [
           "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
-        "LoD/1.13c": [
+        "LoD/1.11b": [
           "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
+        ],
+        "LoD/1.12a": [
+          "GetProcAddress|0x47",
+          "LoadLibraryA|0x58",
+          "SetErrorMode|0x59"
+        ],
+        "LoD/1.13c": [
+          "LoadLibraryA|0x58",
+          "SetErrorMode|0x59",
           "GetProcAddress|0x47"
         ],
         "LoD/1.13d": [
           "SetErrorMode|0x59",
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
-        ],
-        "LoD/1.14a": [
-          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
+        ],
+        "LoD/1.14a": [
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47",
+          "SetErrorMode|0x59"
         ],
         "LoD/1.14b": [
           "GetProcAddress|0x47",
-          "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58"
         ],
         "LoD/1.14c": [
-          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
-          "GetProcAddress|0x47"
+          "GetProcAddress|0x47",
+          "SetErrorMode|0x59"
         ],
         "LoD/1.14d": [
+          "GetProcAddress|0x47",
           "LoadLibraryA|0x58",
-          "SetErrorMode|0x59",
-          "GetProcAddress|0x47"
+          "SetErrorMode|0x59"
         ]
       },
       "callers": {
@@ -14073,8 +14073,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetClassInfoA|0xE",
           "LoadModule|0x5A",
+          "GetClassInfoA|0xE",
           "SetErrorMode|0x59"
         ],
         "Classic/1.01": [
@@ -14083,14 +14083,14 @@ var FUNCTIONS_SmackW32_dll = {
           "LoadModule|0x5A"
         ],
         "Classic/1.02": [
-          "LoadModule|0x5A",
           "SetErrorMode|0x59",
+          "LoadModule|0x5A",
           "GetClassInfoA|0xE"
         ],
         "Classic/1.03": [
-          "SetErrorMode|0x59",
+          "GetClassInfoA|0xE",
           "LoadModule|0x5A",
-          "GetClassInfoA|0xE"
+          "SetErrorMode|0x59"
         ],
         "Classic/1.04c": [
           "LoadModule|0x5A",
@@ -14101,34 +14101,34 @@ var FUNCTIONS_SmackW32_dll = {
           "SetErrorMode|0x59"
         ],
         "LoD/1.08": [
-          "LoadModule|0x5A",
           "SetErrorMode|0x59",
+          "LoadModule|0x5A",
           "GetClassInfoA|0xE"
         ],
         "LoD/1.09": [
+          "SetErrorMode|0x59",
+          "GetClassInfoA|0xE",
+          "LoadModule|0x5A"
+        ],
+        "LoD/1.09b": [
           "LoadModule|0x5A",
           "SetErrorMode|0x59",
           "GetClassInfoA|0xE"
         ],
-        "LoD/1.09b": [
+        "LoD/1.09d": [
           "GetClassInfoA|0xE",
           "LoadModule|0x5A",
           "SetErrorMode|0x59"
         ],
-        "LoD/1.09d": [
-          "LoadModule|0x5A",
-          "SetErrorMode|0x59",
-          "GetClassInfoA|0xE"
-        ],
         "LoD/1.10": [
-          "GetClassInfoA|0xE",
           "SetErrorMode|0x59",
+          "GetClassInfoA|0xE",
           "LoadModule|0x5A"
         ],
         "LoD/1.11": [
           "SetErrorMode|0x59",
-          "GetClassInfoA|0xE",
-          "LoadModule|0x5A"
+          "LoadModule|0x5A",
+          "GetClassInfoA|0xE"
         ],
         "LoD/1.11b": [
           "GetClassInfoA|0xE",
@@ -14141,34 +14141,34 @@ var FUNCTIONS_SmackW32_dll = {
           "LoadModule|0x5A"
         ],
         "LoD/1.13c": [
-          "SetErrorMode|0x59",
           "GetClassInfoA|0xE",
-          "LoadModule|0x5A"
+          "LoadModule|0x5A",
+          "SetErrorMode|0x59"
         ],
         "LoD/1.13d": [
-          "SetErrorMode|0x59",
+          "GetClassInfoA|0xE",
           "LoadModule|0x5A",
-          "GetClassInfoA|0xE"
+          "SetErrorMode|0x59"
         ],
         "LoD/1.14a": [
-          "LoadModule|0x5A",
           "SetErrorMode|0x59",
+          "LoadModule|0x5A",
           "GetClassInfoA|0xE"
         ],
         "LoD/1.14b": [
-          "LoadModule|0x5A",
           "GetClassInfoA|0xE",
+          "LoadModule|0x5A",
           "SetErrorMode|0x59"
         ],
         "LoD/1.14c": [
-          "SetErrorMode|0x59",
           "GetClassInfoA|0xE",
+          "SetErrorMode|0x59",
           "LoadModule|0x5A"
         ],
         "LoD/1.14d": [
+          "GetClassInfoA|0xE",
           "LoadModule|0x5A",
-          "SetErrorMode|0x59",
-          "GetClassInfoA|0xE"
+          "SetErrorMode|0x59"
         ]
       },
       "callers": {
@@ -15239,23 +15239,23 @@ var FUNCTIONS_SmackW32_dll = {
       "callers": {
         "Classic/1.00": [
           "_SmackBufferBlit@32|0x10001F60",
-          "_SmackBufferFromScreen@16|0x10003960",
-          "_SmackBufferOpen@24|0x100012F0"
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBufferFromScreen@16|0x10003960"
         ],
         "Classic/1.01": [
+          "_SmackBufferFromScreen@16|0x10003960",
           "_SmackBufferBlit@32|0x10001F60",
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackBufferFromScreen@16|0x10003960"
+          "_SmackBufferOpen@24|0x100012F0"
         ],
         "Classic/1.02": [
+          "_SmackBufferFromScreen@16|0x10003960",
           "_SmackBufferOpen@24|0x100012F0",
-          "_SmackBufferBlit@32|0x10001F60",
-          "_SmackBufferFromScreen@16|0x10003960"
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "Classic/1.03": [
           "_SmackBufferOpen@24|0x100012F0",
-          "_SmackBufferFromScreen@16|0x10003960",
-          "_SmackBufferBlit@32|0x10001F60"
+          "_SmackBufferBlit@32|0x10001F60",
+          "_SmackBufferFromScreen@16|0x10003960"
         ],
         "Classic/1.04c": [
           "_SmackBufferBlit@32|0x10001F60",
@@ -15263,9 +15263,9 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferFromScreen@16|0x10003960"
         ],
         "LoD/1.07": [
-          "_SmackBufferBlit@32|0x10001F60",
           "_SmackBufferFromScreen@16|0x10003960",
-          "_SmackBufferOpen@24|0x100012F0"
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.08": [
           "_SmackBufferOpen@24|0x100012F0",
@@ -15278,14 +15278,14 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferFromScreen@16|0x10003960"
         ],
         "LoD/1.09b": [
-          "_SmackBufferBlit@32|0x10001F60",
           "_SmackBufferFromScreen@16|0x10003960",
+          "_SmackBufferBlit@32|0x10001F60",
           "_SmackBufferOpen@24|0x100012F0"
         ],
         "LoD/1.09d": [
+          "_SmackBufferFromScreen@16|0x10003960",
           "_SmackBufferOpen@24|0x100012F0",
-          "_SmackBufferBlit@32|0x10001F60",
-          "_SmackBufferFromScreen@16|0x10003960"
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.10": [
           "_SmackBufferFromScreen@16|0x10003960",
@@ -15293,44 +15293,44 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.11": [
-          "_SmackBufferFromScreen@16|0x10003960",
           "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBufferFromScreen@16|0x10003960",
           "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.11b": [
-          "_SmackBufferFromScreen@16|0x10003960",
           "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBufferFromScreen@16|0x10003960",
           "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.12a": [
-          "_SmackBufferFromScreen@16|0x10003960",
           "_SmackBufferOpen@24|0x100012F0",
-          "_SmackBufferBlit@32|0x10001F60"
+          "_SmackBufferBlit@32|0x10001F60",
+          "_SmackBufferFromScreen@16|0x10003960"
         ],
         "LoD/1.13c": [
-          "_SmackBufferOpen@24|0x100012F0",
-          "_SmackBufferFromScreen@16|0x10003960",
-          "_SmackBufferBlit@32|0x10001F60"
-        ],
-        "LoD/1.13d": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "_SmackBufferFromScreen@16|0x10003960",
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.14a": [
           "_SmackBufferBlit@32|0x10001F60",
           "_SmackBufferOpen@24|0x100012F0",
           "_SmackBufferFromScreen@16|0x10003960"
         ],
-        "LoD/1.14b": [
+        "LoD/1.13d": [
           "_SmackBufferFromScreen@16|0x10003960",
           "_SmackBufferOpen@24|0x100012F0",
           "_SmackBufferBlit@32|0x10001F60"
         ],
-        "LoD/1.14c": [
-          "_SmackBufferFromScreen@16|0x10003960",
+        "LoD/1.14a": [
           "_SmackBufferBlit@32|0x10001F60",
+          "_SmackBufferFromScreen@16|0x10003960",
           "_SmackBufferOpen@24|0x100012F0"
+        ],
+        "LoD/1.14b": [
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBufferBlit@32|0x10001F60",
+          "_SmackBufferFromScreen@16|0x10003960"
+        ],
+        "LoD/1.14c": [
+          "_SmackBufferOpen@24|0x100012F0",
+          "_SmackBufferFromScreen@16|0x10003960",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.14d": [
           "_SmackBufferOpen@24|0x100012F0",
@@ -16083,7 +16083,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_12": {
+    "SmackW32_NOP_213125a281ce": {
       "addresses": {
         "Classic/1.00": "0x10001F60",
         "Classic/1.01": "0x10001F60",
@@ -16158,8 +16158,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined4",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:12",
+      "method": "NOP",
+      "index": "NOP:213125a281cee3a1152ba3ddfb71f8dd1678f43f48ce072c231385727b5cebd8",
       "indexes": {
         "EXP": "12",
         "STR": null,
@@ -16175,462 +16175,462 @@ var FUNCTIONS_SmackW32_dll = {
       "callees": {
         "Classic/1.00": [
           "FUN_100032b0|0x100032B0",
-          "GetWindowRect|0xB",
-          "ReleaseDC|0x12",
-          "IsChild|0x9",
-          "SystemParametersInfoA|0xA",
-          "_SmackCheckCursor@20|0x100042B0",
-          "_SmackRestoreCursor@4|0x10004370",
-          "GetDC|0x11",
-          "ClientToScreen|0xD",
-          "InitSmackBufferGlobals|0x10001F20",
-          "CopyDataToWindow|0x100012C0",
-          "IsWindowVisible|0x7",
-          "StretchDIBits|0x66",
           "GetForegroundWindow|0x8",
-          "GetSystemMetrics|0x17",
-          "RealizePalette|0x6D",
-          "_SmackBlit@44|0x1000AF80",
-          "SelectPalette|0x6C",
-          "StretchBlt|0x60",
+          "GetParent|0xC",
+          "GetDC|0x11",
           "PatBlt|0x68",
+          "ReleaseDC|0x12",
+          "_SmackBlit@44|0x1000AF80",
+          "GetSystemMetrics|0x17",
+          "ClientToScreen|0xD",
+          "BitBlt|0x67",
+          "_SmackCheckCursor@20|0x100042B0",
+          "GetWindowRect|0xB",
+          "CopyDataToWindow|0x100012C0",
+          "SetStretchBltMode|0x65",
+          "StretchBlt|0x60",
+          "_SmackRestoreCursor@4|0x10004370",
+          "StretchDIBits|0x66",
+          "IsWindowVisible|0x7",
+          "SystemParametersInfoA|0xA",
+          "SelectPalette|0x6C",
           "...+3 more"
         ],
         "Classic/1.01": [
-          "GetParent|0xC",
-          "GetSystemMetrics|0x17",
-          "GetForegroundWindow|0x8",
-          "StretchDIBits|0x66",
-          "_SmackBlit@44|0x1000AF80",
           "RealizePalette|0x6D",
-          "_SmackRestoreCursor@4|0x10004370",
-          "_SmackCheckCursor@20|0x100042B0",
-          "CopyDataToWindow|0x100012C0",
           "SetStretchBltMode|0x65",
-          "IsChild|0x9",
-          "InitSmackBufferGlobals|0x10001F20",
+          "GetParent|0xC",
           "FUN_100032b0|0x100032B0",
-          "SelectPalette|0x6C",
-          "BitBlt|0x67",
-          "GetWindowRect|0xB",
-          "GetDC|0x11",
-          "StretchBlt|0x60",
           "ClientToScreen|0xD",
+          "StretchBlt|0x60",
+          "IsChild|0x9",
+          "IsWindowVisible|0x7",
+          "GetForegroundWindow|0x8",
+          "GetWindowRect|0xB",
+          "InitSmackBufferGlobals|0x10001F20",
+          "CopyDataToWindow|0x100012C0",
+          "GetDC|0x11",
+          "SelectPalette|0x6C",
+          "StretchDIBits|0x66",
+          "BitBlt|0x67",
           "SystemParametersInfoA|0xA",
+          "PatBlt|0x68",
+          "_SmackBlit@44|0x1000AF80",
+          "_SmackCheckCursor@20|0x100042B0",
           "...+3 more"
         ],
         "Classic/1.02": [
-          "GetWindowRect|0xB",
           "PatBlt|0x68",
           "StretchBlt|0x60",
-          "_SmackRestoreCursor@4|0x10004370",
-          "RealizePalette|0x6D",
-          "IsWindowVisible|0x7",
           "IsChild|0x9",
-          "GetSystemMetrics|0x17",
-          "GetForegroundWindow|0x8",
-          "_SmackCheckCursor@20|0x100042B0",
-          "GetDC|0x11",
-          "CopyDataToWindow|0x100012C0",
-          "FUN_100032b0|0x100032B0",
+          "IsWindowVisible|0x7",
           "ReleaseDC|0x12",
+          "GetDC|0x11",
           "SetStretchBltMode|0x65",
-          "SelectPalette|0x6C",
-          "ClientToScreen|0xD",
-          "SystemParametersInfoA|0xA",
           "StretchDIBits|0x66",
-          "GetParent|0xC",
+          "RealizePalette|0x6D",
+          "InitSmackBufferGlobals|0x10001F20",
+          "FUN_100032b0|0x100032B0",
+          "SelectPalette|0x6C",
+          "_SmackCheckCursor@20|0x100042B0",
+          "_SmackBlit@44|0x1000AF80",
+          "BitBlt|0x67",
+          "SystemParametersInfoA|0xA",
+          "GetForegroundWindow|0x8",
+          "_SmackRestoreCursor@4|0x10004370",
+          "CopyDataToWindow|0x100012C0",
+          "ClientToScreen|0xD",
           "...+3 more"
         ],
         "Classic/1.03": [
-          "GetSystemMetrics|0x17",
-          "SelectPalette|0x6C",
-          "IsChild|0x9",
-          "CopyDataToWindow|0x100012C0",
           "GetDC|0x11",
-          "SystemParametersInfoA|0xA",
-          "FUN_100032b0|0x100032B0",
-          "RealizePalette|0x6D",
-          "ClientToScreen|0xD",
-          "_SmackBlit@44|0x1000AF80",
-          "StretchDIBits|0x66",
-          "IsWindowVisible|0x7",
-          "PatBlt|0x68",
-          "ReleaseDC|0x12",
-          "GetParent|0xC",
-          "_SmackCheckCursor@20|0x100042B0",
-          "_SmackRestoreCursor@4|0x10004370",
+          "IsChild|0x9",
           "InitSmackBufferGlobals|0x10001F20",
+          "CopyDataToWindow|0x100012C0",
+          "StretchDIBits|0x66",
+          "ClientToScreen|0xD",
+          "IsWindowVisible|0x7",
+          "FUN_100032b0|0x100032B0",
+          "_SmackBlit@44|0x1000AF80",
+          "SetStretchBltMode|0x65",
           "BitBlt|0x67",
-          "GetForegroundWindow|0x8",
+          "SystemParametersInfoA|0xA",
+          "_SmackRestoreCursor@4|0x10004370",
+          "PatBlt|0x68",
+          "GetWindowRect|0xB",
+          "GetSystemMetrics|0x17",
+          "StretchBlt|0x60",
+          "RealizePalette|0x6D",
+          "_SmackCheckCursor@20|0x100042B0",
+          "SelectPalette|0x6C",
           "...+3 more"
         ],
         "Classic/1.04c": [
-          "ReleaseDC|0x12",
-          "SelectPalette|0x6C",
           "RealizePalette|0x6D",
-          "FUN_100032b0|0x100032B0",
-          "SetStretchBltMode|0x65",
-          "StretchBlt|0x60",
-          "GetParent|0xC",
-          "InitSmackBufferGlobals|0x10001F20",
-          "IsWindowVisible|0x7",
-          "PatBlt|0x68",
-          "_SmackBlit@44|0x1000AF80",
-          "StretchDIBits|0x66",
-          "CopyDataToWindow|0x100012C0",
-          "_SmackRestoreCursor@4|0x10004370",
-          "GetForegroundWindow|0x8",
-          "ClientToScreen|0xD",
-          "IsChild|0x9",
-          "BitBlt|0x67",
-          "SystemParametersInfoA|0xA",
           "GetDC|0x11",
+          "CopyDataToWindow|0x100012C0",
+          "_SmackBlit@44|0x1000AF80",
+          "_SmackRestoreCursor@4|0x10004370",
+          "IsWindowVisible|0x7",
+          "GetSystemMetrics|0x17",
+          "ClientToScreen|0xD",
+          "FUN_100032b0|0x100032B0",
+          "PatBlt|0x68",
+          "SystemParametersInfoA|0xA",
+          "SelectPalette|0x6C",
+          "GetWindowRect|0xB",
+          "GetForegroundWindow|0x8",
+          "StretchDIBits|0x66",
+          "IsChild|0x9",
+          "SetStretchBltMode|0x65",
+          "InitSmackBufferGlobals|0x10001F20",
+          "BitBlt|0x67",
+          "_SmackCheckCursor@20|0x100042B0",
           "...+3 more"
         ],
         "LoD/1.07": [
-          "IsWindowVisible|0x7",
-          "IsChild|0x9",
-          "_SmackCheckCursor@20|0x100042B0",
-          "PatBlt|0x68",
-          "BitBlt|0x67",
-          "ReleaseDC|0x12",
-          "GetDC|0x11",
-          "StretchBlt|0x60",
-          "FUN_100032b0|0x100032B0",
-          "StretchDIBits|0x66",
-          "RealizePalette|0x6D",
-          "SystemParametersInfoA|0xA",
-          "SetStretchBltMode|0x65",
-          "GetParent|0xC",
           "InitSmackBufferGlobals|0x10001F20",
-          "GetWindowRect|0xB",
+          "IsChild|0x9",
           "SelectPalette|0x6C",
+          "SystemParametersInfoA|0xA",
+          "CopyDataToWindow|0x100012C0",
+          "GetDC|0x11",
+          "FUN_100032b0|0x100032B0",
+          "RealizePalette|0x6D",
           "ClientToScreen|0xD",
-          "_SmackRestoreCursor@4|0x10004370",
           "GetSystemMetrics|0x17",
+          "GetForegroundWindow|0x8",
+          "StretchBlt|0x60",
+          "GetParent|0xC",
+          "ReleaseDC|0x12",
+          "IsWindowVisible|0x7",
+          "SetStretchBltMode|0x65",
+          "_SmackBlit@44|0x1000AF80",
+          "_SmackRestoreCursor@4|0x10004370",
+          "StretchDIBits|0x66",
+          "GetWindowRect|0xB",
           "...+3 more"
         ],
         "LoD/1.08": [
+          "FUN_100032b0|0x100032B0",
           "IsWindowVisible|0x7",
-          "_SmackCheckCursor@20|0x100042B0",
           "_SmackBlit@44|0x1000AF80",
-          "CopyDataToWindow|0x100012C0",
-          "ClientToScreen|0xD",
-          "InitSmackBufferGlobals|0x10001F20",
-          "GetForegroundWindow|0x8",
-          "GetParent|0xC",
-          "PatBlt|0x68",
-          "IsChild|0x9",
-          "StretchDIBits|0x66",
-          "SystemParametersInfoA|0xA",
-          "GetWindowRect|0xB",
           "GetDC|0x11",
-          "SelectPalette|0x6C",
-          "RealizePalette|0x6D",
-          "SetStretchBltMode|0x65",
+          "StretchDIBits|0x66",
           "ReleaseDC|0x12",
-          "GetSystemMetrics|0x17",
+          "SetStretchBltMode|0x65",
+          "ClientToScreen|0xD",
+          "BitBlt|0x67",
+          "PatBlt|0x68",
+          "_SmackRestoreCursor@4|0x10004370",
+          "GetParent|0xC",
           "StretchBlt|0x60",
+          "InitSmackBufferGlobals|0x10001F20",
+          "_SmackCheckCursor@20|0x100042B0",
+          "SystemParametersInfoA|0xA",
+          "SelectPalette|0x6C",
+          "GetSystemMetrics|0x17",
+          "CopyDataToWindow|0x100012C0",
+          "RealizePalette|0x6D",
           "...+3 more"
         ],
         "LoD/1.09": [
-          "GetParent|0xC",
-          "_SmackCheckCursor@20|0x100042B0",
-          "StretchBlt|0x60",
-          "IsChild|0x9",
-          "BitBlt|0x67",
-          "FUN_100032b0|0x100032B0",
-          "SetStretchBltMode|0x65",
-          "_SmackBlit@44|0x1000AF80",
-          "GetDC|0x11",
-          "GetForegroundWindow|0x8",
-          "IsWindowVisible|0x7",
+          "CopyDataToWindow|0x100012C0",
           "GetWindowRect|0xB",
-          "PatBlt|0x68",
-          "ReleaseDC|0x12",
-          "GetSystemMetrics|0x17",
-          "ClientToScreen|0xD",
-          "SystemParametersInfoA|0xA",
           "InitSmackBufferGlobals|0x10001F20",
-          "StretchDIBits|0x66",
+          "RealizePalette|0x6D",
+          "GetDC|0x11",
+          "ReleaseDC|0x12",
+          "_SmackRestoreCursor@4|0x10004370",
+          "_SmackCheckCursor@20|0x100042B0",
+          "GetForegroundWindow|0x8",
+          "FUN_100032b0|0x100032B0",
+          "SystemParametersInfoA|0xA",
+          "_SmackBlit@44|0x1000AF80",
+          "BitBlt|0x67",
+          "GetSystemMetrics|0x17",
+          "IsChild|0x9",
+          "PatBlt|0x68",
+          "GetParent|0xC",
+          "SetStretchBltMode|0x65",
+          "IsWindowVisible|0x7",
           "SelectPalette|0x6C",
           "...+3 more"
         ],
         "LoD/1.09b": [
-          "StretchDIBits|0x66",
-          "IsWindowVisible|0x7",
-          "GetSystemMetrics|0x17",
-          "ReleaseDC|0x12",
-          "ClientToScreen|0xD",
-          "GetParent|0xC",
-          "SetStretchBltMode|0x65",
+          "SystemParametersInfoA|0xA",
           "FUN_100032b0|0x100032B0",
-          "RealizePalette|0x6D",
           "_SmackCheckCursor@20|0x100042B0",
+          "GetDC|0x11",
+          "GetParent|0xC",
+          "_SmackRestoreCursor@4|0x10004370",
+          "GetWindowRect|0xB",
+          "RealizePalette|0x6D",
+          "GetForegroundWindow|0x8",
           "_SmackBlit@44|0x1000AF80",
           "PatBlt|0x68",
-          "GetDC|0x11",
-          "_SmackRestoreCursor@4|0x10004370",
-          "CopyDataToWindow|0x100012C0",
-          "GetForegroundWindow|0x8",
+          "BitBlt|0x67",
           "InitSmackBufferGlobals|0x10001F20",
-          "SystemParametersInfoA|0xA",
-          "SelectPalette|0x6C",
-          "StretchBlt|0x60",
+          "IsChild|0x9",
+          "CopyDataToWindow|0x100012C0",
+          "ReleaseDC|0x12",
+          "IsWindowVisible|0x7",
+          "ClientToScreen|0xD",
+          "GetSystemMetrics|0x17",
+          "StretchDIBits|0x66",
           "...+3 more"
         ],
         "LoD/1.09d": [
-          "ClientToScreen|0xD",
-          "IsChild|0x9",
-          "ReleaseDC|0x12",
-          "FUN_100032b0|0x100032B0",
           "CopyDataToWindow|0x100012C0",
-          "PatBlt|0x68",
-          "GetForegroundWindow|0x8",
+          "IsWindowVisible|0x7",
+          "SystemParametersInfoA|0xA",
+          "FUN_100032b0|0x100032B0",
           "SetStretchBltMode|0x65",
           "BitBlt|0x67",
-          "SystemParametersInfoA|0xA",
-          "IsWindowVisible|0x7",
-          "_SmackRestoreCursor@4|0x10004370",
-          "_SmackCheckCursor@20|0x100042B0",
-          "StretchDIBits|0x66",
-          "GetWindowRect|0xB",
-          "StretchBlt|0x60",
-          "InitSmackBufferGlobals|0x10001F20",
-          "GetDC|0x11",
           "GetSystemMetrics|0x17",
+          "ReleaseDC|0x12",
+          "GetWindowRect|0xB",
           "RealizePalette|0x6D",
+          "ClientToScreen|0xD",
+          "PatBlt|0x68",
+          "GetDC|0x11",
+          "_SmackBlit@44|0x1000AF80",
+          "_SmackRestoreCursor@4|0x10004370",
+          "InitSmackBufferGlobals|0x10001F20",
+          "IsChild|0x9",
+          "GetParent|0xC",
+          "SelectPalette|0x6C",
+          "GetForegroundWindow|0x8",
           "...+3 more"
         ],
         "LoD/1.10": [
-          "_SmackCheckCursor@20|0x100042B0",
-          "GetDC|0x11",
-          "StretchDIBits|0x66",
+          "GetForegroundWindow|0x8",
           "SystemParametersInfoA|0xA",
-          "GetWindowRect|0xB",
+          "StretchDIBits|0x66",
+          "PatBlt|0x68",
+          "IsChild|0x9",
           "StretchBlt|0x60",
           "ClientToScreen|0xD",
-          "GetForegroundWindow|0x8",
-          "InitSmackBufferGlobals|0x10001F20",
-          "GetParent|0xC",
-          "SetStretchBltMode|0x65",
-          "IsWindowVisible|0x7",
           "_SmackRestoreCursor@4|0x10004370",
-          "FUN_100032b0|0x100032B0",
-          "SelectPalette|0x6C",
-          "GetSystemMetrics|0x17",
-          "_SmackBlit@44|0x1000AF80",
-          "IsChild|0x9",
-          "RealizePalette|0x6D",
+          "GetParent|0xC",
+          "InitSmackBufferGlobals|0x10001F20",
           "BitBlt|0x67",
+          "FUN_100032b0|0x100032B0",
+          "CopyDataToWindow|0x100012C0",
+          "IsWindowVisible|0x7",
+          "ReleaseDC|0x12",
+          "GetWindowRect|0xB",
+          "GetDC|0x11",
+          "SetStretchBltMode|0x65",
+          "_SmackCheckCursor@20|0x100042B0",
+          "_SmackBlit@44|0x1000AF80",
           "...+3 more"
         ],
         "LoD/1.11": [
-          "FUN_100032b0|0x100032B0",
-          "GetSystemMetrics|0x17",
-          "GetParent|0xC",
-          "GetForegroundWindow|0x8",
-          "ClientToScreen|0xD",
-          "SystemParametersInfoA|0xA",
-          "SelectPalette|0x6C",
-          "GetWindowRect|0xB",
-          "_SmackCheckCursor@20|0x100042B0",
-          "_SmackRestoreCursor@4|0x10004370",
-          "RealizePalette|0x6D",
-          "StretchDIBits|0x66",
-          "ReleaseDC|0x12",
-          "SetStretchBltMode|0x65",
-          "IsChild|0x9",
-          "_SmackBlit@44|0x1000AF80",
-          "CopyDataToWindow|0x100012C0",
           "BitBlt|0x67",
           "StretchBlt|0x60",
+          "ClientToScreen|0xD",
+          "_SmackBlit@44|0x1000AF80",
+          "SystemParametersInfoA|0xA",
+          "CopyDataToWindow|0x100012C0",
           "GetDC|0x11",
+          "ReleaseDC|0x12",
+          "IsChild|0x9",
+          "InitSmackBufferGlobals|0x10001F20",
+          "SetStretchBltMode|0x65",
+          "StretchDIBits|0x66",
+          "FUN_100032b0|0x100032B0",
+          "GetForegroundWindow|0x8",
+          "GetSystemMetrics|0x17",
+          "PatBlt|0x68",
+          "GetParent|0xC",
+          "IsWindowVisible|0x7",
+          "_SmackCheckCursor@20|0x100042B0",
+          "SelectPalette|0x6C",
           "...+3 more"
         ],
         "LoD/1.11b": [
-          "FUN_100032b0|0x100032B0",
-          "GetForegroundWindow|0x8",
-          "_SmackCheckCursor@20|0x100042B0",
-          "StretchBlt|0x60",
-          "ClientToScreen|0xD",
-          "GetSystemMetrics|0x17",
+          "CopyDataToWindow|0x100012C0",
           "_SmackRestoreCursor@4|0x10004370",
-          "PatBlt|0x68",
+          "StretchBlt|0x60",
+          "GetSystemMetrics|0x17",
           "StretchDIBits|0x66",
-          "SelectPalette|0x6C",
-          "GetWindowRect|0xB",
-          "SetStretchBltMode|0x65",
-          "SystemParametersInfoA|0xA",
+          "IsChild|0x9",
+          "PatBlt|0x68",
           "ReleaseDC|0x12",
+          "GetDC|0x11",
+          "RealizePalette|0x6D",
+          "SetStretchBltMode|0x65",
           "InitSmackBufferGlobals|0x10001F20",
+          "SystemParametersInfoA|0xA",
+          "GetWindowRect|0xB",
+          "SelectPalette|0x6C",
+          "ClientToScreen|0xD",
+          "IsWindowVisible|0x7",
           "GetParent|0xC",
           "BitBlt|0x67",
-          "RealizePalette|0x6D",
-          "CopyDataToWindow|0x100012C0",
-          "IsWindowVisible|0x7",
+          "_SmackBlit@44|0x1000AF80",
           "...+3 more"
         ],
         "LoD/1.12a": [
-          "_SmackRestoreCursor@4|0x10004370",
-          "GetDC|0x11",
-          "PatBlt|0x68",
-          "InitSmackBufferGlobals|0x10001F20",
-          "SetStretchBltMode|0x65",
           "GetParent|0xC",
-          "CopyDataToWindow|0x100012C0",
-          "FUN_100032b0|0x100032B0",
-          "RealizePalette|0x6D",
-          "ReleaseDC|0x12",
-          "GetWindowRect|0xB",
-          "GetSystemMetrics|0x17",
-          "IsWindowVisible|0x7",
-          "ClientToScreen|0xD",
-          "_SmackBlit@44|0x1000AF80",
+          "_SmackCheckCursor@20|0x100042B0",
+          "GetForegroundWindow|0x8",
           "SelectPalette|0x6C",
+          "CopyDataToWindow|0x100012C0",
           "StretchDIBits|0x66",
+          "SetStretchBltMode|0x65",
+          "GetSystemMetrics|0x17",
+          "_SmackRestoreCursor@4|0x10004370",
+          "SystemParametersInfoA|0xA",
+          "GetWindowRect|0xB",
           "IsChild|0x9",
+          "_SmackBlit@44|0x1000AF80",
+          "ClientToScreen|0xD",
+          "ReleaseDC|0x12",
+          "InitSmackBufferGlobals|0x10001F20",
+          "FUN_100032b0|0x100032B0",
+          "IsWindowVisible|0x7",
           "BitBlt|0x67",
-          "StretchBlt|0x60",
+          "GetDC|0x11",
           "...+3 more"
         ],
         "LoD/1.13c": [
-          "RealizePalette|0x6D",
-          "BitBlt|0x67",
-          "_SmackCheckCursor@20|0x100042B0",
-          "GetForegroundWindow|0x8",
           "GetSystemMetrics|0x17",
-          "_SmackRestoreCursor@4|0x10004370",
-          "PatBlt|0x68",
-          "SelectPalette|0x6C",
-          "IsWindowVisible|0x7",
-          "FUN_100032b0|0x100032B0",
-          "GetWindowRect|0xB",
-          "GetParent|0xC",
-          "_SmackBlit@44|0x1000AF80",
-          "SystemParametersInfoA|0xA",
-          "InitSmackBufferGlobals|0x10001F20",
+          "SetStretchBltMode|0x65",
+          "RealizePalette|0x6D",
           "StretchDIBits|0x66",
-          "ReleaseDC|0x12",
-          "CopyDataToWindow|0x100012C0",
-          "GetDC|0x11",
+          "SelectPalette|0x6C",
+          "_SmackCheckCursor@20|0x100042B0",
+          "BitBlt|0x67",
+          "SystemParametersInfoA|0xA",
+          "StretchBlt|0x60",
+          "GetForegroundWindow|0x8",
+          "IsChild|0x9",
           "ClientToScreen|0xD",
+          "_SmackRestoreCursor@4|0x10004370",
+          "InitSmackBufferGlobals|0x10001F20",
+          "GetParent|0xC",
+          "ReleaseDC|0x12",
+          "PatBlt|0x68",
+          "_SmackBlit@44|0x1000AF80",
+          "GetDC|0x11",
+          "IsWindowVisible|0x7",
           "...+3 more"
         ],
         "LoD/1.13d": [
-          "_SmackRestoreCursor@4|0x10004370",
-          "FUN_100032b0|0x100032B0",
-          "ClientToScreen|0xD",
-          "BitBlt|0x67",
-          "_SmackBlit@44|0x1000AF80",
-          "SelectPalette|0x6C",
-          "ReleaseDC|0x12",
-          "PatBlt|0x68",
-          "IsChild|0x9",
-          "GetWindowRect|0xB",
-          "GetParent|0xC",
-          "IsWindowVisible|0x7",
-          "GetForegroundWindow|0x8",
-          "GetSystemMetrics|0x17",
-          "StretchDIBits|0x66",
-          "CopyDataToWindow|0x100012C0",
-          "SetStretchBltMode|0x65",
           "_SmackCheckCursor@20|0x100042B0",
-          "GetDC|0x11",
+          "FUN_100032b0|0x100032B0",
+          "_SmackBlit@44|0x1000AF80",
+          "StretchDIBits|0x66",
+          "BitBlt|0x67",
+          "InitSmackBufferGlobals|0x10001F20",
+          "GetWindowRect|0xB",
+          "GetSystemMetrics|0x17",
+          "PatBlt|0x68",
+          "ClientToScreen|0xD",
           "SystemParametersInfoA|0xA",
+          "StretchBlt|0x60",
+          "_SmackRestoreCursor@4|0x10004370",
+          "SelectPalette|0x6C",
+          "SetStretchBltMode|0x65",
+          "IsWindowVisible|0x7",
+          "GetDC|0x11",
+          "IsChild|0x9",
+          "ReleaseDC|0x12",
+          "CopyDataToWindow|0x100012C0",
           "...+3 more"
         ],
         "LoD/1.14a": [
-          "BitBlt|0x67",
-          "GetParent|0xC",
+          "StretchBlt|0x60",
+          "GetWindowRect|0xB",
+          "InitSmackBufferGlobals|0x10001F20",
+          "SetStretchBltMode|0x65",
+          "_SmackBlit@44|0x1000AF80",
           "GetSystemMetrics|0x17",
           "SystemParametersInfoA|0xA",
-          "GetWindowRect|0xB",
-          "StretchDIBits|0x66",
-          "StretchBlt|0x60",
-          "InitSmackBufferGlobals|0x10001F20",
-          "RealizePalette|0x6D",
           "_SmackCheckCursor@20|0x100042B0",
-          "IsChild|0x9",
-          "GetForegroundWindow|0x8",
-          "IsWindowVisible|0x7",
-          "_SmackBlit@44|0x1000AF80",
-          "SelectPalette|0x6C",
           "CopyDataToWindow|0x100012C0",
-          "PatBlt|0x68",
-          "FUN_100032b0|0x100032B0",
-          "ClientToScreen|0xD",
           "GetDC|0x11",
+          "StretchDIBits|0x66",
+          "GetForegroundWindow|0x8",
+          "RealizePalette|0x6D",
+          "_SmackRestoreCursor@4|0x10004370",
+          "IsChild|0x9",
+          "BitBlt|0x67",
+          "SelectPalette|0x6C",
+          "GetParent|0xC",
+          "FUN_100032b0|0x100032B0",
+          "IsWindowVisible|0x7",
           "...+3 more"
         ],
         "LoD/1.14b": [
-          "ClientToScreen|0xD",
-          "StretchBlt|0x60",
+          "PatBlt|0x68",
+          "FUN_100032b0|0x100032B0",
+          "_SmackCheckCursor@20|0x100042B0",
+          "RealizePalette|0x6D",
           "InitSmackBufferGlobals|0x10001F20",
-          "SelectPalette|0x6C",
-          "SetStretchBltMode|0x65",
-          "SystemParametersInfoA|0xA",
-          "GetParent|0xC",
+          "GetSystemMetrics|0x17",
+          "ReleaseDC|0x12",
           "CopyDataToWindow|0x100012C0",
           "GetDC|0x11",
-          "_SmackBlit@44|0x1000AF80",
-          "GetSystemMetrics|0x17",
-          "_SmackCheckCursor@20|0x100042B0",
-          "ReleaseDC|0x12",
+          "ClientToScreen|0xD",
+          "SetStretchBltMode|0x65",
           "IsWindowVisible|0x7",
-          "IsChild|0x9",
-          "RealizePalette|0x6D",
-          "GetWindowRect|0xB",
+          "SystemParametersInfoA|0xA",
+          "_SmackBlit@44|0x1000AF80",
           "GetForegroundWindow|0x8",
-          "PatBlt|0x68",
-          "StretchDIBits|0x66",
+          "_SmackRestoreCursor@4|0x10004370",
+          "GetParent|0xC",
+          "GetWindowRect|0xB",
+          "StretchBlt|0x60",
+          "IsChild|0x9",
           "...+3 more"
         ],
         "LoD/1.14c": [
+          "GetDC|0x11",
+          "StretchBlt|0x60",
           "PatBlt|0x68",
-          "GetSystemMetrics|0x17",
-          "RealizePalette|0x6D",
-          "_SmackRestoreCursor@4|0x10004370",
-          "GetForegroundWindow|0x8",
-          "BitBlt|0x67",
           "FUN_100032b0|0x100032B0",
-          "GetWindowRect|0xB",
-          "ReleaseDC|0x12",
-          "SetStretchBltMode|0x65",
-          "ClientToScreen|0xD",
-          "_SmackCheckCursor@20|0x100042B0",
           "CopyDataToWindow|0x100012C0",
           "IsWindowVisible|0x7",
-          "SystemParametersInfoA|0xA",
-          "IsChild|0x9",
           "GetParent|0xC",
-          "GetDC|0x11",
-          "SelectPalette|0x6C",
           "_SmackBlit@44|0x1000AF80",
+          "IsChild|0x9",
+          "SetStretchBltMode|0x65",
+          "GetWindowRect|0xB",
+          "RealizePalette|0x6D",
+          "BitBlt|0x67",
+          "ClientToScreen|0xD",
+          "GetForegroundWindow|0x8",
+          "ReleaseDC|0x12",
+          "_SmackCheckCursor@20|0x100042B0",
+          "SystemParametersInfoA|0xA",
+          "InitSmackBufferGlobals|0x10001F20",
+          "StretchDIBits|0x66",
           "...+3 more"
         ],
         "LoD/1.14d": [
-          "GetSystemMetrics|0x17",
-          "FUN_100032b0|0x100032B0",
-          "GetParent|0xC",
-          "GetForegroundWindow|0x8",
-          "BitBlt|0x67",
-          "StretchDIBits|0x66",
-          "CopyDataToWindow|0x100012C0",
-          "SelectPalette|0x6C",
+          "PatBlt|0x68",
           "IsWindowVisible|0x7",
-          "GetDC|0x11",
-          "SetStretchBltMode|0x65",
+          "BitBlt|0x67",
+          "CopyDataToWindow|0x100012C0",
           "IsChild|0x9",
-          "InitSmackBufferGlobals|0x10001F20",
-          "RealizePalette|0x6D",
+          "_SmackRestoreCursor@4|0x10004370",
+          "FUN_100032b0|0x100032B0",
+          "GetSystemMetrics|0x17",
+          "GetWindowRect|0xB",
+          "SelectPalette|0x6C",
+          "SetStretchBltMode|0x65",
+          "StretchDIBits|0x66",
+          "GetDC|0x11",
+          "SystemParametersInfoA|0xA",
+          "GetForegroundWindow|0x8",
           "_SmackCheckCursor@20|0x100042B0",
           "StretchBlt|0x60",
-          "SystemParametersInfoA|0xA",
-          "_SmackRestoreCursor@4|0x10004370",
-          "_SmackBlit@44|0x1000AF80",
-          "ReleaseDC|0x12",
+          "RealizePalette|0x6D",
+          "ClientToScreen|0xD",
+          "GetParent|0xC",
           "...+3 more"
         ]
       },
@@ -18996,24 +18996,24 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferSetPalette@4|0x100038A0"
         ],
         "Classic/1.02": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "_SmackBufferSetPalette@4|0x100038A0"
+          "_SmackBufferSetPalette@4|0x100038A0",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "Classic/1.03": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "_SmackBufferSetPalette@4|0x100038A0"
+          "_SmackBufferSetPalette@4|0x100038A0",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "Classic/1.04c": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "_SmackBufferSetPalette@4|0x100038A0"
+          "_SmackBufferSetPalette@4|0x100038A0",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.07": [
           "_SmackBufferBlit@32|0x10001F60",
           "_SmackBufferSetPalette@4|0x100038A0"
         ],
         "LoD/1.08": [
-          "_SmackBufferSetPalette@4|0x100038A0",
-          "_SmackBufferBlit@32|0x10001F60"
+          "_SmackBufferBlit@32|0x10001F60",
+          "_SmackBufferSetPalette@4|0x100038A0"
         ],
         "LoD/1.09": [
           "_SmackBufferSetPalette@4|0x100038A0",
@@ -19036,32 +19036,32 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.11b": [
-          "_SmackBufferSetPalette@4|0x100038A0",
-          "_SmackBufferBlit@32|0x10001F60"
+          "_SmackBufferBlit@32|0x10001F60",
+          "_SmackBufferSetPalette@4|0x100038A0"
         ],
         "LoD/1.12a": [
-          "_SmackBufferSetPalette@4|0x100038A0",
-          "_SmackBufferBlit@32|0x10001F60"
+          "_SmackBufferBlit@32|0x10001F60",
+          "_SmackBufferSetPalette@4|0x100038A0"
         ],
         "LoD/1.13c": [
           "_SmackBufferBlit@32|0x10001F60",
           "_SmackBufferSetPalette@4|0x100038A0"
         ],
         "LoD/1.13d": [
-          "_SmackBufferBlit@32|0x10001F60",
-          "_SmackBufferSetPalette@4|0x100038A0"
+          "_SmackBufferSetPalette@4|0x100038A0",
+          "_SmackBufferBlit@32|0x10001F60"
         ],
         "LoD/1.14a": [
           "_SmackBufferBlit@32|0x10001F60",
           "_SmackBufferSetPalette@4|0x100038A0"
         ],
         "LoD/1.14b": [
-          "_SmackBufferSetPalette@4|0x100038A0",
-          "_SmackBufferBlit@32|0x10001F60"
+          "_SmackBufferBlit@32|0x10001F60",
+          "_SmackBufferSetPalette@4|0x100038A0"
         ],
         "LoD/1.14c": [
-          "_SmackBufferSetPalette@4|0x100038A0",
-          "_SmackBufferBlit@32|0x10001F60"
+          "_SmackBufferBlit@32|0x10001F60",
+          "_SmackBufferSetPalette@4|0x100038A0"
         ],
         "LoD/1.14d": [
           "_SmackBufferBlit@32|0x10001F60",
@@ -20039,7 +20039,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_22": {
+    "SmackW32_NOP_7886df2cbc50": {
       "addresses": {
         "Classic/1.00": "0x10003370",
         "Classic/1.01": "0x10003370",
@@ -20114,8 +20114,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:22",
+      "method": "NOP",
+      "index": "NOP:7886df2cbc50e9713e0c6ef96963e7bb8495d29232e65a49775883206a15f5cf",
       "indexes": {
         "EXP": "22",
         "STR": null,
@@ -21063,7 +21063,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_16": {
+    "SmackW32_NOP_4b2328daeaeb": {
       "addresses": {
         "Classic/1.00": "0x100033C0",
         "Classic/1.01": "0x100033C0",
@@ -21138,8 +21138,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:16",
+      "method": "NOP",
+      "index": "NOP:4b2328daeaeb6b6936ddfa62a06c26f2a7ae752ea437a50a3ea8299e7cb87feb",
       "indexes": {
         "EXP": "16",
         "STR": null,
@@ -22047,7 +22047,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_17": {
+    "SmackW32_NOP_92926e8fe4c8": {
       "addresses": {
         "Classic/1.00": "0x10003410",
         "Classic/1.01": "0x10003410",
@@ -22122,8 +22122,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "bool",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:17",
+      "method": "NOP",
+      "index": "NOP:92926e8fe4c806272b4377246cf2acc74c51c9aba2a1f5316279c19619e71795",
       "indexes": {
         "EXP": "17",
         "STR": null,
@@ -22968,7 +22968,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_19": {
+    "SmackW32_NOP_c91e742e9d7c": {
       "addresses": {
         "Classic/1.00": "0x10003460",
         "Classic/1.01": "0x10003460",
@@ -23043,8 +23043,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:19",
+      "method": "NOP",
+      "index": "NOP:c91e742e9d7ca437f6aeb4d72a5e095a493de4f8d722d53c91b3bc7dfd846119",
       "indexes": {
         "EXP": "19",
         "STR": null,
@@ -23059,124 +23059,124 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "_SmackBlitSetPalette@12|0x1000AB90",
-          "InitializePaletteBuffer|0x100036F0",
+          "FUN_100036f0|0x100036F0",
+          "CreatePalette|0x6B",
           "DeleteObject|0x6E",
-          "CreatePalette|0x6B"
+          "_SmackBlitSetPalette@12|0x1000AB90"
         ],
         "Classic/1.01": [
-          "DeleteObject|0x6E",
-          "_SmackBlitSetPalette@12|0x1000AB90",
           "CreatePalette|0x6B",
-          "InitializePaletteBuffer|0x100036F0"
+          "FUN_100036f0|0x100036F0",
+          "DeleteObject|0x6E",
+          "_SmackBlitSetPalette@12|0x1000AB90"
         ],
         "Classic/1.02": [
           "_SmackBlitSetPalette@12|0x1000AB90",
           "DeleteObject|0x6E",
           "CreatePalette|0x6B",
-          "InitializePaletteBuffer|0x100036F0"
+          "FUN_100036f0|0x100036F0"
         ],
         "Classic/1.03": [
-          "_SmackBlitSetPalette@12|0x1000AB90",
           "CreatePalette|0x6B",
           "DeleteObject|0x6E",
-          "InitializePaletteBuffer|0x100036F0"
+          "FUN_100036f0|0x100036F0",
+          "_SmackBlitSetPalette@12|0x1000AB90"
         ],
         "Classic/1.04c": [
-          "InitializePaletteBuffer|0x100036F0",
-          "CreatePalette|0x6B",
           "_SmackBlitSetPalette@12|0x1000AB90",
-          "DeleteObject|0x6E"
+          "FUN_100036f0|0x100036F0",
+          "DeleteObject|0x6E",
+          "CreatePalette|0x6B"
         ],
         "LoD/1.07": [
-          "DeleteObject|0x6E",
           "CreatePalette|0x6B",
           "_SmackBlitSetPalette@12|0x1000AB90",
-          "InitializePaletteBuffer|0x100036F0"
+          "InitializePaletteBuffer|0x100036F0",
+          "DeleteObject|0x6E"
         ],
         "LoD/1.08": [
-          "_SmackBlitSetPalette@12|0x1000AB90",
-          "InitializePaletteBuffer|0x100036F0",
+          "FUN_100036f0|0x100036F0",
           "DeleteObject|0x6E",
+          "_SmackBlitSetPalette@12|0x1000AB90",
           "CreatePalette|0x6B"
         ],
         "LoD/1.09": [
-          "InitializePaletteBuffer|0x100036F0",
-          "DeleteObject|0x6E",
           "CreatePalette|0x6B",
+          "DeleteObject|0x6E",
+          "FUN_100036f0|0x100036F0",
           "_SmackBlitSetPalette@12|0x1000AB90"
         ],
         "LoD/1.09b": [
-          "_SmackBlitSetPalette@12|0x1000AB90",
+          "FUN_100036f0|0x100036F0",
+          "CreatePalette|0x6B",
           "DeleteObject|0x6E",
-          "InitializePaletteBuffer|0x100036F0",
-          "CreatePalette|0x6B"
+          "_SmackBlitSetPalette@12|0x1000AB90"
         ],
         "LoD/1.09d": [
-          "InitializePaletteBuffer|0x100036F0",
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "FUN_100036f0|0x100036F0",
           "DeleteObject|0x6E",
+          "CreatePalette|0x6B"
+        ],
+        "LoD/1.10": [
+          "DeleteObject|0x6E",
+          "FUN_100036f0|0x100036F0",
           "CreatePalette|0x6B",
           "_SmackBlitSetPalette@12|0x1000AB90"
         ],
-        "LoD/1.10": [
-          "_SmackBlitSetPalette@12|0x1000AB90",
-          "DeleteObject|0x6E",
-          "InitializePaletteBuffer|0x100036F0",
-          "CreatePalette|0x6B"
-        ],
         "LoD/1.11": [
-          "_SmackBlitSetPalette@12|0x1000AB90",
           "DeleteObject|0x6E",
-          "InitializePaletteBuffer|0x100036F0",
+          "FUN_100036f0|0x100036F0",
+          "_SmackBlitSetPalette@12|0x1000AB90",
           "CreatePalette|0x6B"
         ],
         "LoD/1.11b": [
+          "FUN_100036f0|0x100036F0",
+          "DeleteObject|0x6E",
           "_SmackBlitSetPalette@12|0x1000AB90",
-          "InitializePaletteBuffer|0x100036F0",
-          "CreatePalette|0x6B",
-          "DeleteObject|0x6E"
+          "CreatePalette|0x6B"
         ],
         "LoD/1.12a": [
+          "CreatePalette|0x6B",
+          "FUN_100036f0|0x100036F0",
           "_SmackBlitSetPalette@12|0x1000AB90",
-          "DeleteObject|0x6E",
-          "InitializePaletteBuffer|0x100036F0",
-          "CreatePalette|0x6B"
+          "DeleteObject|0x6E"
         ],
         "LoD/1.13c": [
           "DeleteObject|0x6E",
-          "_SmackBlitSetPalette@12|0x1000AB90",
-          "CreatePalette|0x6B",
-          "InitializePaletteBuffer|0x100036F0"
-        ],
-        "LoD/1.13d": [
-          "CreatePalette|0x6B",
-          "DeleteObject|0x6E",
-          "_SmackBlitSetPalette@12|0x1000AB90",
-          "InitializePaletteBuffer|0x100036F0"
-        ],
-        "LoD/1.14a": [
-          "InitializePaletteBuffer|0x100036F0",
-          "_SmackBlitSetPalette@12|0x1000AB90",
-          "CreatePalette|0x6B",
-          "DeleteObject|0x6E"
-        ],
-        "LoD/1.14b": [
-          "_SmackBlitSetPalette@12|0x1000AB90",
-          "InitializePaletteBuffer|0x100036F0",
-          "CreatePalette|0x6B",
-          "DeleteObject|0x6E"
-        ],
-        "LoD/1.14c": [
-          "InitializePaletteBuffer|0x100036F0",
-          "DeleteObject|0x6E",
+          "FUN_100036f0|0x100036F0",
           "_SmackBlitSetPalette@12|0x1000AB90",
           "CreatePalette|0x6B"
         ],
-        "LoD/1.14d": [
-          "CreatePalette|0x6B",
+        "LoD/1.13d": [
+          "FUN_100036f0|0x100036F0",
           "_SmackBlitSetPalette@12|0x1000AB90",
           "DeleteObject|0x6E",
-          "InitializePaletteBuffer|0x100036F0"
+          "CreatePalette|0x6B"
+        ],
+        "LoD/1.14a": [
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "FUN_100036f0|0x100036F0",
+          "DeleteObject|0x6E",
+          "CreatePalette|0x6B"
+        ],
+        "LoD/1.14b": [
+          "CreatePalette|0x6B",
+          "DeleteObject|0x6E",
+          "FUN_100036f0|0x100036F0",
+          "_SmackBlitSetPalette@12|0x1000AB90"
+        ],
+        "LoD/1.14c": [
+          "DeleteObject|0x6E",
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "CreatePalette|0x6B",
+          "FUN_100036f0|0x100036F0"
+        ],
+        "LoD/1.14d": [
+          "FUN_100036f0|0x100036F0",
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "DeleteObject|0x6E",
+          "CreatePalette|0x6B"
         ]
       },
       "instructions": {
@@ -24636,1239 +24636,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_NOP_a38bf6aa7534": {
-      "addresses": {
-        "Classic/1.00": "0x100036F0",
-        "Classic/1.01": "0x100036F0",
-        "Classic/1.02": "0x100036F0",
-        "Classic/1.03": "0x100036F0",
-        "Classic/1.04c": "0x100036F0",
-        "LoD/1.07": "0x100036F0",
-        "LoD/1.08": "0x100036F0",
-        "LoD/1.09": "0x100036F0",
-        "LoD/1.09b": "0x100036F0",
-        "LoD/1.09d": "0x100036F0",
-        "LoD/1.10": "0x100036F0",
-        "LoD/1.11": "0x100036F0",
-        "LoD/1.11b": "0x100036F0",
-        "LoD/1.12a": "0x100036F0",
-        "LoD/1.13c": "0x100036F0",
-        "LoD/1.13d": "0x100036F0",
-        "LoD/1.14a": "0x100036F0",
-        "LoD/1.14b": "0x100036F0",
-        "LoD/1.14c": "0x100036F0",
-        "LoD/1.14d": "0x100036F0",
-        "LoD/PD2": "0x02E236F0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x36F0",
-        "Classic/1.01": "0x36F0",
-        "Classic/1.02": "0x36F0",
-        "Classic/1.03": "0x36F0",
-        "Classic/1.04c": "0x36F0",
-        "LoD/1.07": "0x36F0",
-        "LoD/1.08": "0x36F0",
-        "LoD/1.09": "0x36F0",
-        "LoD/1.09b": "0x36F0",
-        "LoD/1.09d": "0x36F0",
-        "LoD/1.10": "0x36F0",
-        "LoD/1.11": "0x36F0",
-        "LoD/1.11b": "0x36F0",
-        "LoD/1.12a": "0x36F0",
-        "LoD/1.13c": "0x36F0",
-        "LoD/1.13d": "0x36F0",
-        "LoD/1.14a": "0x36F0",
-        "LoD/1.14b": "0x36F0",
-        "LoD/1.14c": "0x36F0",
-        "LoD/1.14d": "0x36F0",
-        "LoD/PD2": "0x36F0"
-      },
-      "sizes": {
-        "Classic/1.00": 93,
-        "Classic/1.01": 93,
-        "Classic/1.02": 93,
-        "Classic/1.03": 93,
-        "Classic/1.04c": 93,
-        "LoD/1.07": 93,
-        "LoD/1.08": 93,
-        "LoD/1.09": 93,
-        "LoD/1.09b": 93,
-        "LoD/1.09d": 93,
-        "LoD/1.10": 93,
-        "LoD/1.11": 93,
-        "LoD/1.11b": 93,
-        "LoD/1.12a": 93,
-        "LoD/1.13c": 93,
-        "LoD/1.13d": 93,
-        "LoD/1.14a": 93,
-        "LoD/1.14b": 93,
-        "LoD/1.14c": 93,
-        "LoD/1.14d": 93,
-        "LoD/PD2": 93
-      },
-      "name": "InitializePaletteBuffer",
-      "signature": "void InitializePaletteBuffer(int pSmackBuffer)",
-      "calling_convention": "__cdecl",
-      "return_type": "undefined",
-      "comment": "Initializes the global palette buffer from a Smack video handle.\n\nAlgorithm:\n  1. Copy 0x100 (256) palette entries from pSmackBuffer+0x3c to g_aPaletteBuffer\n  2. Send WM_COPYDATA (0x4a) message via _CopyData to transfer palette data\n     - HWND from pSmackBuffer+0x470\n     - Message size 0x428 bytes\n     - Flags computed from pSmackBuffer+0x8 (palette type)\n  3. Initialize palette index buffer: each entry = its index (0x00-0xFF)\n\nParameters:\n  pSmackBuffer (Stack[0x4]) - Pointer to Smack buffer structure containing:\n    +0x08: Palette type (1 = use flag 0x5, else flag 0x1)\n    +0x3c: Source palette data (256 DWORD entries)\n    +0x470: Target window handle (HWND)\n\nReturns:\n  void - No return value\n\nStructure Layout (SmackBuffer at pSmackBuffer):\n  Offset | Size  | Field            | Type   | Description\n  0x08   | 4     | nPaletteType     | int    | Palette mode flag\n  0x3c   | 0x400 | aPalette[256]    | DWORD  | Source palette entries\n  0x470  | 4     | hTargetWnd       | HWND   | Target window for WM_COPYDATA",
-      "name_source": "LoD/1.07",
-      "method": "NOP",
-      "index": "NOP:a38bf6aa7534d260c4b5a66e5b75580581c8aca3cf93db91e9cadd8802dd3b6b",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "a38bf6aa7534d260c4b5a66e5b75580581c8aca3cf93db91e9cadd8802dd3b6b",
-        "CAL": null,
-        "API": "00ae20ed802e3883313e20f96bfe2dda",
-        "APS": null,
-        "CON": "8203488f9cc99f9a1ce68d1f04ce009c",
-        "MNE": "87e8773bdaf0c641a675300278ef75ac",
-        "CFG": "866205673b9731a7681cc2ca2f408a60",
-        "PRO": "b65c931535e22b9d5b8fa0fe1bbd0a75"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "_CopyData@20|0x10001060"
-        ],
-        "Classic/1.01": [
-          "_CopyData@20|0x10001060"
-        ],
-        "Classic/1.02": [
-          "_CopyData@20|0x10001060"
-        ],
-        "Classic/1.03": [
-          "_CopyData@20|0x10001060"
-        ],
-        "Classic/1.04c": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.07": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.08": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.09": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.09b": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.09d": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.10": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.11": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.11b": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.12a": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.13c": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.13d": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.14a": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.14b": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.14c": [
-          "_CopyData@20|0x10001060"
-        ],
-        "LoD/1.14d": [
-          "_CopyData@20|0x10001060"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "Classic/1.01": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "Classic/1.02": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "Classic/1.03": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "Classic/1.04c": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.07": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.08": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.09": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.09b": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.09d": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.10": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.11": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.11b": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.12a": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.13c": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.13d": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.14a": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.14b": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.14c": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ],
-        "LoD/1.14d": [
-          "_SmackBufferNewPalette@12|0x10003460"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "Classic/1.01": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "Classic/1.02": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "Classic/1.03": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "Classic/1.04c": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.07": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.08": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.09": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.09b": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.09d": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.10": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.11": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.11b": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.12a": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.13c": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.13d": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.14a": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.14b": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.14c": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ],
-        "LoD/1.14d": [
-          "0x36F0|MOV|EDX, dword ptr [ESP + 0x4]",
-          "0x36F4|PUSH|ESI",
-          "0x36F5|PUSH|EDI",
-          "0x36F6|MOV|ECX, 0x100",
-          "0x36FB|LEA|ESI, [EDX + 0x3c]",
-          "0x36FE|MOV|EDI, 0x100158d8",
-          "0x3703|MOVSD.REP|ES:EDI, ESI",
-          "0x3705|PUSH|0x100158b0",
-          "0x370A|MOV|EAX, dword ptr [EDX + 0x8]",
-          "0x370D|PUSH|0x428",
-          "0x3712|DEC|EAX",
-          "0x3713|CMP|EAX, 0x1",
-          "0x3716|SBB|EAX, EAX",
-          "0x3718|AND|EAX, 0x4",
-          "0x371B|MOV|ECX, dword ptr [EDX + 0x470]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 31,
-        "Classic/1.01": 31,
-        "Classic/1.02": 31,
-        "Classic/1.03": 31,
-        "Classic/1.04c": 31,
-        "LoD/1.07": 31,
-        "LoD/1.08": 31,
-        "LoD/1.09": 31,
-        "LoD/1.09b": 31,
-        "LoD/1.09d": 31,
-        "LoD/1.10": 31,
-        "LoD/1.11": 31,
-        "LoD/1.11b": 31,
-        "LoD/1.12a": 31,
-        "LoD/1.13c": 31,
-        "LoD/1.13d": 31,
-        "LoD/1.14a": 31,
-        "LoD/1.14b": 31,
-        "LoD/1.14c": 31,
-        "LoD/1.14d": 31
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8,
-        "Classic/1.01": 8,
-        "Classic/1.02": 8,
-        "Classic/1.03": 8,
-        "Classic/1.04c": 8,
-        "LoD/1.07": 8,
-        "LoD/1.08": 8,
-        "LoD/1.09": 8,
-        "LoD/1.09b": 8,
-        "LoD/1.09d": 8,
-        "LoD/1.10": 8,
-        "LoD/1.11": 8,
-        "LoD/1.11b": 8,
-        "LoD/1.12a": 8,
-        "LoD/1.13c": 8,
-        "LoD/1.13d": 8,
-        "LoD/1.14a": 8,
-        "LoD/1.14b": 8,
-        "LoD/1.14c": 8,
-        "LoD/1.14d": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1,
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "87e8773bdaf0c641a675300278ef75ac",
-        "Classic/1.01": "87e8773bdaf0c641a675300278ef75ac",
-        "Classic/1.02": "87e8773bdaf0c641a675300278ef75ac",
-        "Classic/1.03": "87e8773bdaf0c641a675300278ef75ac",
-        "Classic/1.04c": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.07": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.08": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.09": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.09b": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.09d": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.10": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.11": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.11b": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.12a": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.13c": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.13d": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.14a": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.14b": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.14c": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/1.14d": "87e8773bdaf0c641a675300278ef75ac",
-        "LoD/PD2": "87e8773bdaf0c641a675300278ef75ac"
-      },
-      "constants": {
-        "Classic/1.00": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "Classic/1.01": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "Classic/1.02": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "Classic/1.03": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "Classic/1.04c": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.07": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.08": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.09": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.09b": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.09d": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.10": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.11": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.11b": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.12a": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.13c": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.13d": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.14a": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.14b": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.14c": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ],
-        "LoD/1.14d": [
-          "0x36F6||0x100",
-          "0x370D||0x428",
-          "0x371B||0x470",
-          "0x372A||0x400",
-          "0x3743||0x100"
-        ]
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "Classic/1.01": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "Classic/1.02": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "Classic/1.03": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "Classic/1.04c": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.07": [
-          "0x158D8|g_aPaletteBuffer|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|g_dwSmackBufferStride|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.08": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.09": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.09b": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.09d": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.10": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.11": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.11b": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.12a": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.13c": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.13d": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.14a": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.14b": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.14c": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ],
-        "LoD/1.14d": [
-          "0x158D8|DAT_100158d8|0x0",
-          "0x158DC|DAT_100158dc|0x0",
-          "0x158B0|DAT_100158b0|0x0",
-          "0x158DA|DAT_100158da|0x0"
-        ]
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "_CopyData@20"
-        ],
-        "Classic/1.01": [
-          "_CopyData@20"
-        ],
-        "Classic/1.02": [
-          "_CopyData@20"
-        ],
-        "Classic/1.03": [
-          "_CopyData@20"
-        ],
-        "Classic/1.04c": [
-          "_CopyData@20"
-        ],
-        "LoD/1.07": [
-          "_CopyData@20"
-        ],
-        "LoD/1.08": [
-          "_CopyData@20"
-        ],
-        "LoD/1.09": [
-          "_CopyData@20"
-        ],
-        "LoD/1.09b": [
-          "_CopyData@20"
-        ],
-        "LoD/1.09d": [
-          "_CopyData@20"
-        ],
-        "LoD/1.10": [
-          "_CopyData@20"
-        ],
-        "LoD/1.11": [
-          "_CopyData@20"
-        ],
-        "LoD/1.11b": [
-          "_CopyData@20"
-        ],
-        "LoD/1.12a": [
-          "_CopyData@20"
-        ],
-        "LoD/1.13c": [
-          "_CopyData@20"
-        ],
-        "LoD/1.13d": [
-          "_CopyData@20"
-        ],
-        "LoD/1.14a": [
-          "_CopyData@20"
-        ],
-        "LoD/1.14b": [
-          "_CopyData@20"
-        ],
-        "LoD/1.14c": [
-          "_CopyData@20"
-        ],
-        "LoD/1.14d": [
-          "_CopyData@20"
-        ],
-        "LoD/PD2": [
-          "_CopyData@20"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "caller_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "constant_counts": {
-        "Classic/1.00": 5,
-        "Classic/1.01": 5,
-        "Classic/1.02": 5,
-        "Classic/1.03": 5,
-        "Classic/1.04c": 5,
-        "LoD/1.07": 5,
-        "LoD/1.08": 5,
-        "LoD/1.09": 5,
-        "LoD/1.09b": 5,
-        "LoD/1.09d": 5,
-        "LoD/1.10": 5,
-        "LoD/1.11": 5,
-        "LoD/1.11b": 5,
-        "LoD/1.12a": 5,
-        "LoD/1.13c": 5,
-        "LoD/1.13d": 5,
-        "LoD/1.14a": 5,
-        "LoD/1.14b": 5,
-        "LoD/1.14c": 5,
-        "LoD/1.14d": 5
-      },
-      "global_counts": {
-        "Classic/1.00": 4,
-        "Classic/1.01": 4,
-        "Classic/1.02": 4,
-        "Classic/1.03": 4,
-        "Classic/1.04c": 4,
-        "LoD/1.07": 4,
-        "LoD/1.08": 4,
-        "LoD/1.09": 4,
-        "LoD/1.09b": 4,
-        "LoD/1.09d": 4,
-        "LoD/1.10": 4,
-        "LoD/1.11": 4,
-        "LoD/1.11b": 4,
-        "LoD/1.12a": 4,
-        "LoD/1.13c": 4,
-        "LoD/1.13d": 4,
-        "LoD/1.14a": 4,
-        "LoD/1.14b": 4,
-        "LoD/1.14c": 4,
-        "LoD/1.14d": 4
-      },
-      "api_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "Classic/1.01": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "Classic/1.02": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "Classic/1.03": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "Classic/1.04c": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.07": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.08": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.09": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.09b": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.09d": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.10": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.11": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.11b": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.12a": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.13c": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.13d": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14a": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14b": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14c": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14d": [
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_Control"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal",
-        "Classic/1.01": "internal",
-        "Classic/1.02": "internal",
-        "Classic/1.03": "internal",
-        "Classic/1.04c": "internal",
-        "LoD/1.07": "internal",
-        "LoD/1.08": "internal",
-        "LoD/1.09": "internal",
-        "LoD/1.09b": "internal",
-        "LoD/1.09d": "internal",
-        "LoD/1.10": "internal",
-        "LoD/1.11": "internal",
-        "LoD/1.11b": "internal",
-        "LoD/1.12a": "internal",
-        "LoD/1.13c": "internal",
-        "LoD/1.13d": "internal",
-        "LoD/1.14a": "internal",
-        "LoD/1.14b": "internal",
-        "LoD/1.14c": "internal",
-        "LoD/1.14d": "internal"
-      }
-    },
-    "SmackW32_EXP_14": {
+    "SmackW32_NOP_8e91ad4803a0": {
       "addresses": {
         "Classic/1.00": "0x10003750",
         "Classic/1.01": "0x10003750",
@@ -25943,8 +24711,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:14",
+      "method": "NOP",
+      "index": "NOP:8e91ad4803a0a3757e2e7308558e950db3b6d97a9693a2e32bfd0de68c762d5c",
       "indexes": {
         "EXP": "14",
         "STR": null,
@@ -25959,184 +24727,184 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "DeleteDC|0x69",
+          "SendMessageA|0x1",
           "SelectObject|0x72",
-          "ShowWindow|0x16",
+          "DeleteDC|0x69",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "ShowWindow|0x16",
           "DeleteObject|0x6E",
-          "SendMessageA|0x1"
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
         ],
         "Classic/1.01": [
-          "DeleteDC|0x69",
+          "SelectObject|0x72",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "ShowWindow|0x16",
           "SendMessageA|0x1",
           "DeleteObject|0x6E",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "SelectObject|0x72",
+          "DeleteDC|0x69",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480"
         ],
         "Classic/1.02": [
-          "DeleteObject|0x6E",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "SelectObject|0x72",
-          "DeleteDC|0x69",
-          "SendMessageA|0x1",
-          "ShowWindow|0x16",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
-        ],
-        "Classic/1.03": [
           "SendMessageA|0x1",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "SelectObject|0x72",
-          "ShowWindow|0x16",
           "DeleteObject|0x6E",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "ShowWindow|0x16",
           "DeleteDC|0x69"
+        ],
+        "Classic/1.03": [
+          "SelectObject|0x72",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "DeleteDC|0x69",
+          "SendMessageA|0x1",
+          "DeleteObject|0x6E",
+          "ShowWindow|0x16",
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "Classic/1.04c": [
           "SendMessageA|0x1",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "ShowWindow|0x16",
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "DeleteObject|0x6E",
           "SelectObject|0x72",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "DeleteDC|0x69",
-          "DeleteObject|0x6E"
+          "ShowWindow|0x16"
         ],
         "LoD/1.07": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "DeleteObject|0x6E",
-          "SendMessageA|0x1",
           "DeleteDC|0x69",
-          "SelectObject|0x72",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "ShowWindow|0x16"
+          "SelectObject|0x72",
+          "ShowWindow|0x16",
+          "SendMessageA|0x1",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "DeleteObject|0x6E"
         ],
         "LoD/1.08": [
-          "DeleteDC|0x69",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "SelectObject|0x72",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "DeleteObject|0x6E",
-          "SendMessageA|0x1",
-          "ShowWindow|0x16"
-        ],
-        "LoD/1.09": [
-          "DeleteObject|0x6E",
-          "DeleteDC|0x69",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "SendMessageA|0x1",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "ShowWindow|0x16",
-          "SelectObject|0x72"
-        ],
-        "LoD/1.09b": [
-          "SelectObject|0x72",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "ShowWindow|0x16",
-          "DeleteObject|0x6E",
-          "DeleteDC|0x69",
-          "SendMessageA|0x1",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
-        ],
-        "LoD/1.09d": [
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "ShowWindow|0x16",
-          "SendMessageA|0x1",
-          "SelectObject|0x72",
-          "DeleteObject|0x6E",
           "DeleteDC|0x69",
+          "DeleteObject|0x6E",
+          "SendMessageA|0x1",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
-        "LoD/1.10": [
+        "LoD/1.09": [
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "SendMessageA|0x1",
+          "SelectObject|0x72",
           "DeleteObject|0x6E",
+          "ShowWindow|0x16",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "DeleteDC|0x69"
+        ],
+        "LoD/1.09b": [
+          "ShowWindow|0x16",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "SendMessageA|0x1",
+          "SelectObject|0x72",
+          "DeleteObject|0x6E",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "DeleteDC|0x69"
+        ],
+        "LoD/1.09d": [
+          "SendMessageA|0x1",
+          "ShowWindow|0x16",
           "DeleteDC|0x69",
           "ApplyPresetUnitTileAttributes|0x10001040",
+          "DeleteObject|0x6E",
           "SelectObject|0x72",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
+        ],
+        "LoD/1.10": [
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "ShowWindow|0x16",
+          "DeleteDC|0x69",
+          "SelectObject|0x72",
+          "DeleteObject|0x6E",
+          "SendMessageA|0x1",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480"
         ],
         "LoD/1.11": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "DeleteObject|0x6E",
           "DeleteDC|0x69",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "ShowWindow|0x16",
           "SendMessageA|0x1",
           "SelectObject|0x72",
-          "ShowWindow|0x16"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.11b": [
+          "DeleteObject|0x6E",
           "DeleteDC|0x69",
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "ShowWindow|0x16",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "SendMessageA|0x1",
-          "SelectObject|0x72",
-          "ShowWindow|0x16",
-          "DeleteObject|0x6E"
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "SelectObject|0x72"
         ],
         "LoD/1.12a": [
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "SendMessageA|0x1",
-          "DeleteObject|0x6E",
-          "ShowWindow|0x16",
-          "DeleteDC|0x69",
-          "SelectObject|0x72",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
+          "DeleteDC|0x69",
+          "ShowWindow|0x16",
+          "DeleteObject|0x6E",
+          "SelectObject|0x72"
         ],
         "LoD/1.13c": [
-          "DeleteObject|0x6E",
+          "SendMessageA|0x1",
           "SelectObject|0x72",
-          "DeleteDC|0x69",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "DeleteObject|0x6E",
+          "DeleteDC|0x69",
           "ShowWindow|0x16",
-          "SendMessageA|0x1"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.13d": [
           "ShowWindow|0x16",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
           "SendMessageA|0x1",
-          "DeleteObject|0x6E",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "SelectObject|0x72",
-          "DeleteDC|0x69"
+          "DeleteDC|0x69",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "DeleteObject|0x6E",
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.14a": [
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "DeleteDC|0x69",
           "SelectObject|0x72",
-          "SendMessageA|0x1",
-          "ShowWindow|0x16",
           "DeleteObject|0x6E",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
+          "SendMessageA|0x1",
+          "DeleteDC|0x69",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "ShowWindow|0x16"
         ],
         "LoD/1.14b": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "SelectObject|0x72",
           "SendMessageA|0x1",
+          "DeleteObject|0x6E",
           "ShowWindow|0x16",
+          "SelectObject|0x72",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "DeleteDC|0x69",
-          "DeleteObject|0x6E"
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
         ],
         "LoD/1.14c": [
+          "ShowWindow|0x16",
+          "DeleteObject|0x6E",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "DeleteDC|0x69",
           "SendMessageA|0x1",
           "SelectObject|0x72",
-          "DeleteObject|0x6E",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "ShowWindow|0x16",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "DeleteDC|0x69"
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480"
         ],
         "LoD/1.14d": [
-          "SelectObject|0x72",
-          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
-          "SendMessageA|0x1",
-          "DeleteObject|0x6E",
-          "DeleteDC|0x69",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "ShowWindow|0x16"
+          "SelectObject|0x72",
+          "DeleteDC|0x69",
+          "ApplyPresetUnitTileAttributesSafe|0x1000B480",
+          "DeleteObject|0x6E",
+          "ShowWindow|0x16",
+          "SendMessageA|0x1"
         ]
       },
       "instructions": {
@@ -27560,7 +26328,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_21": {
+    "SmackW32_NOP_6e0774a48d7f": {
       "addresses": {
         "Classic/1.00": "0x100038A0",
         "Classic/1.01": "0x100038A0",
@@ -27635,8 +26403,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "UINT",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:21",
+      "method": "NOP",
+      "index": "NOP:6e0774a48d7f1398ec868cf799f62d13e808eca029be1f1082853f2e737a0f4e",
       "indexes": {
         "EXP": "21",
         "STR": null,
@@ -27652,163 +26420,163 @@ var FUNCTIONS_SmackW32_dll = {
       "callees": {
         "Classic/1.00": [
           "FUN_100032b0|0x100032B0",
-          "RealizePalette|0x6D",
-          "ReleaseDC|0x12",
+          "InvalidateRect|0x29",
           "GetDC|0x11",
+          "ReleaseDC|0x12",
           "SelectPalette|0x6C",
-          "InvalidateRect|0x29"
+          "RealizePalette|0x6D"
         ],
         "Classic/1.01": [
-          "GetDC|0x11",
           "RealizePalette|0x6D",
+          "GetDC|0x11",
+          "SelectPalette|0x6C",
           "InvalidateRect|0x29",
-          "ReleaseDC|0x12",
           "FUN_100032b0|0x100032B0",
-          "SelectPalette|0x6C"
+          "ReleaseDC|0x12"
         ],
         "Classic/1.02": [
-          "GetDC|0x11",
           "InvalidateRect|0x29",
-          "FUN_100032b0|0x100032B0",
-          "RealizePalette|0x6D",
           "ReleaseDC|0x12",
+          "GetDC|0x11",
+          "RealizePalette|0x6D",
+          "FUN_100032b0|0x100032B0",
           "SelectPalette|0x6C"
         ],
         "Classic/1.03": [
-          "SelectPalette|0x6C",
-          "ReleaseDC|0x12",
           "GetDC|0x11",
           "FUN_100032b0|0x100032B0",
+          "RealizePalette|0x6D",
+          "SelectPalette|0x6C",
           "InvalidateRect|0x29",
-          "RealizePalette|0x6D"
+          "ReleaseDC|0x12"
         ],
         "Classic/1.04c": [
-          "ReleaseDC|0x12",
           "SelectPalette|0x6C",
           "RealizePalette|0x6D",
-          "FUN_100032b0|0x100032B0",
+          "InvalidateRect|0x29",
           "GetDC|0x11",
-          "InvalidateRect|0x29"
+          "FUN_100032b0|0x100032B0",
+          "ReleaseDC|0x12"
         ],
         "LoD/1.07": [
-          "InvalidateRect|0x29",
           "SelectPalette|0x6C",
-          "ReleaseDC|0x12",
-          "GetDC|0x11",
+          "InvalidateRect|0x29",
           "FUN_100032b0|0x100032B0",
-          "RealizePalette|0x6D"
+          "GetDC|0x11",
+          "RealizePalette|0x6D",
+          "ReleaseDC|0x12"
         ],
         "LoD/1.08": [
           "InvalidateRect|0x29",
+          "FUN_100032b0|0x100032B0",
           "GetDC|0x11",
-          "SelectPalette|0x6C",
-          "RealizePalette|0x6D",
           "ReleaseDC|0x12",
-          "FUN_100032b0|0x100032B0"
+          "SelectPalette|0x6C",
+          "RealizePalette|0x6D"
         ],
         "LoD/1.09": [
           "InvalidateRect|0x29",
-          "FUN_100032b0|0x100032B0",
-          "ReleaseDC|0x12",
+          "RealizePalette|0x6D",
           "GetDC|0x11",
+          "ReleaseDC|0x12",
           "SelectPalette|0x6C",
-          "RealizePalette|0x6D"
+          "FUN_100032b0|0x100032B0"
         ],
         "LoD/1.09b": [
-          "GetDC|0x11",
-          "ReleaseDC|0x12",
-          "InvalidateRect|0x29",
-          "SelectPalette|0x6C",
           "FUN_100032b0|0x100032B0",
-          "RealizePalette|0x6D"
-        ],
-        "LoD/1.09d": [
           "ReleaseDC|0x12",
-          "FUN_100032b0|0x100032B0",
-          "InvalidateRect|0x29",
           "GetDC|0x11",
+          "InvalidateRect|0x29",
           "RealizePalette|0x6D",
           "SelectPalette|0x6C"
         ],
-        "LoD/1.10": [
+        "LoD/1.09d": [
           "GetDC|0x11",
-          "InvalidateRect|0x29",
           "FUN_100032b0|0x100032B0",
+          "InvalidateRect|0x29",
           "SelectPalette|0x6C",
-          "RealizePalette|0x6D",
-          "ReleaseDC|0x12"
+          "ReleaseDC|0x12",
+          "RealizePalette|0x6D"
+        ],
+        "LoD/1.10": [
+          "FUN_100032b0|0x100032B0",
+          "InvalidateRect|0x29",
+          "ReleaseDC|0x12",
+          "GetDC|0x11",
+          "SelectPalette|0x6C",
+          "RealizePalette|0x6D"
         ],
         "LoD/1.11": [
           "FUN_100032b0|0x100032B0",
-          "InvalidateRect|0x29",
-          "SelectPalette|0x6C",
           "GetDC|0x11",
-          "RealizePalette|0x6D",
-          "ReleaseDC|0x12"
+          "InvalidateRect|0x29",
+          "ReleaseDC|0x12",
+          "SelectPalette|0x6C",
+          "RealizePalette|0x6D"
         ],
         "LoD/1.11b": [
-          "SelectPalette|0x6C",
-          "FUN_100032b0|0x100032B0",
-          "ReleaseDC|0x12",
-          "RealizePalette|0x6D",
           "InvalidateRect|0x29",
-          "GetDC|0x11"
+          "SelectPalette|0x6C",
+          "ReleaseDC|0x12",
+          "GetDC|0x11",
+          "RealizePalette|0x6D",
+          "FUN_100032b0|0x100032B0"
         ],
         "LoD/1.12a": [
-          "GetDC|0x11",
-          "SelectPalette|0x6C",
           "FUN_100032b0|0x100032B0",
+          "SelectPalette|0x6C",
+          "GetDC|0x11",
           "RealizePalette|0x6D",
           "InvalidateRect|0x29",
           "ReleaseDC|0x12"
         ],
         "LoD/1.13c": [
+          "InvalidateRect|0x29",
           "RealizePalette|0x6D",
           "ReleaseDC|0x12",
-          "GetDC|0x11",
-          "SelectPalette|0x6C",
-          "FUN_100032b0|0x100032B0",
-          "InvalidateRect|0x29"
-        ],
-        "LoD/1.13d": [
-          "FUN_100032b0|0x100032B0",
-          "InvalidateRect|0x29",
-          "SelectPalette|0x6C",
-          "GetDC|0x11",
-          "ReleaseDC|0x12",
-          "RealizePalette|0x6D"
-        ],
-        "LoD/1.14a": [
-          "SelectPalette|0x6C",
-          "InvalidateRect|0x29",
-          "FUN_100032b0|0x100032B0",
-          "GetDC|0x11",
-          "ReleaseDC|0x12",
-          "RealizePalette|0x6D"
-        ],
-        "LoD/1.14b": [
-          "ReleaseDC|0x12",
-          "RealizePalette|0x6D",
-          "InvalidateRect|0x29",
           "SelectPalette|0x6C",
           "GetDC|0x11",
           "FUN_100032b0|0x100032B0"
         ],
-        "LoD/1.14c": [
-          "RealizePalette|0x6D",
-          "GetDC|0x11",
-          "InvalidateRect|0x29",
-          "SelectPalette|0x6C",
+        "LoD/1.13d": [
           "FUN_100032b0|0x100032B0",
+          "SelectPalette|0x6C",
+          "GetDC|0x11",
+          "ReleaseDC|0x12",
+          "InvalidateRect|0x29",
+          "RealizePalette|0x6D"
+        ],
+        "LoD/1.14a": [
+          "RealizePalette|0x6D",
+          "SelectPalette|0x6C",
+          "InvalidateRect|0x29",
+          "FUN_100032b0|0x100032B0",
+          "ReleaseDC|0x12",
+          "GetDC|0x11"
+        ],
+        "LoD/1.14b": [
+          "GetDC|0x11",
+          "FUN_100032b0|0x100032B0",
+          "InvalidateRect|0x29",
+          "RealizePalette|0x6D",
+          "SelectPalette|0x6C",
           "ReleaseDC|0x12"
         ],
+        "LoD/1.14c": [
+          "ReleaseDC|0x12",
+          "GetDC|0x11",
+          "FUN_100032b0|0x100032B0",
+          "SelectPalette|0x6C",
+          "RealizePalette|0x6D",
+          "InvalidateRect|0x29"
+        ],
         "LoD/1.14d": [
+          "GetDC|0x11",
           "FUN_100032b0|0x100032B0",
           "RealizePalette|0x6D",
+          "ReleaseDC|0x12",
           "SelectPalette|0x6C",
-          "InvalidateRect|0x29",
-          "GetDC|0x11",
-          "ReleaseDC|0x12"
+          "InvalidateRect|0x29"
         ]
       },
       "instructions": {
@@ -28801,7 +27569,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_18": {
+    "SmackW32_NOP_cdd884237f99": {
       "addresses": {
         "Classic/1.00": "0x10003960",
         "Classic/1.01": "0x10003960",
@@ -28876,8 +27644,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:18",
+      "method": "NOP",
+      "index": "NOP:cdd884237f99492e7d1bd575d913e7970e755a2e2804857d55370af7215fd71a",
       "indexes": {
         "EXP": "18",
         "STR": null,
@@ -28892,364 +27660,364 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "IsWindow|0x5",
-          "ReleaseDC|0x12",
-          "GetDC|0x11",
-          "CreateCompatibleDC|0x71",
-          "CreatePalette|0x6B",
-          "ClientToScreen|0xD",
-          "InitSmackBufferGlobals|0x10001F20",
-          "DeleteDC|0x69",
-          "SelectObject|0x72",
-          "RealizePalette|0x6D",
-          "GetDIBits|0x64",
           "GetSystemPaletteEntries|0x70",
-          "SelectPalette|0x6C",
-          "DeleteObject|0x6E",
-          "CreateCompatibleBitmap|0x63",
-          "BitBlt|0x67"
-        ],
-        "Classic/1.01": [
-          "CreateCompatibleBitmap|0x63",
-          "DeleteObject|0x6E",
-          "RealizePalette|0x6D",
+          "GetDC|0x11",
+          "ReleaseDC|0x12",
           "CreatePalette|0x6B",
-          "IsWindow|0x5",
-          "InitSmackBufferGlobals|0x10001F20",
-          "SelectPalette|0x6C",
           "CreateCompatibleDC|0x71",
+          "IsWindow|0x5",
+          "ClientToScreen|0xD",
           "BitBlt|0x67",
-          "DeleteDC|0x69",
-          "GetDC|0x11",
-          "GetDIBits|0x64",
-          "ClientToScreen|0xD",
-          "ReleaseDC|0x12",
-          "SelectObject|0x72",
-          "GetSystemPaletteEntries|0x70"
-        ],
-        "Classic/1.02": [
-          "GetDIBits|0x64",
-          "IsWindow|0x5",
-          "RealizePalette|0x6D",
-          "GetSystemPaletteEntries|0x70",
-          "CreateCompatibleDC|0x71",
-          "SelectObject|0x72",
           "CreateCompatibleBitmap|0x63",
-          "GetDC|0x11",
-          "DeleteObject|0x6E",
-          "ReleaseDC|0x12",
-          "CreatePalette|0x6B",
-          "ClientToScreen|0xD",
-          "SelectPalette|0x6C",
-          "DeleteDC|0x69",
-          "InitSmackBufferGlobals|0x10001F20",
-          "BitBlt|0x67"
-        ],
-        "Classic/1.03": [
-          "SelectPalette|0x6C",
-          "CreateCompatibleBitmap|0x63",
-          "GetDC|0x11",
-          "CreateCompatibleDC|0x71",
-          "DeleteObject|0x6E",
-          "RealizePalette|0x6D",
-          "DeleteDC|0x69",
-          "ClientToScreen|0xD",
-          "GetDIBits|0x64",
-          "GetSystemPaletteEntries|0x70",
-          "ReleaseDC|0x12",
-          "IsWindow|0x5",
           "SelectObject|0x72",
-          "CreatePalette|0x6B",
-          "BitBlt|0x67",
+          "GetDIBits|0x64",
+          "DeleteDC|0x69",
+          "DeleteObject|0x6E",
+          "SelectPalette|0x6C",
+          "RealizePalette|0x6D",
           "InitSmackBufferGlobals|0x10001F20"
         ],
-        "Classic/1.04c": [
-          "ReleaseDC|0x12",
-          "SelectPalette|0x6C",
+        "Classic/1.01": [
           "RealizePalette|0x6D",
-          "CreateCompatibleDC|0x71",
-          "GetDIBits|0x64",
-          "InitSmackBufferGlobals|0x10001F20",
-          "IsWindow|0x5",
-          "DeleteDC|0x69",
-          "GetSystemPaletteEntries|0x70",
+          "CreatePalette|0x6B",
           "ClientToScreen|0xD",
+          "DeleteObject|0x6E",
+          "CreateCompatibleBitmap|0x63",
+          "GetSystemPaletteEntries|0x70",
+          "GetDIBits|0x64",
+          "SelectObject|0x72",
+          "InitSmackBufferGlobals|0x10001F20",
+          "GetDC|0x11",
+          "SelectPalette|0x6C",
           "BitBlt|0x67",
+          "DeleteDC|0x69",
+          "ReleaseDC|0x12",
+          "IsWindow|0x5",
+          "CreateCompatibleDC|0x71"
+        ],
+        "Classic/1.02": [
+          "IsWindow|0x5",
+          "CreateCompatibleDC|0x71",
+          "GetSystemPaletteEntries|0x70",
+          "CreateCompatibleBitmap|0x63",
+          "ReleaseDC|0x12",
           "GetDC|0x11",
           "CreatePalette|0x6B",
+          "RealizePalette|0x6D",
+          "GetDIBits|0x64",
+          "InitSmackBufferGlobals|0x10001F20",
+          "SelectPalette|0x6C",
+          "BitBlt|0x67",
+          "SelectObject|0x72",
+          "DeleteObject|0x6E",
+          "ClientToScreen|0xD",
+          "DeleteDC|0x69"
+        ],
+        "Classic/1.03": [
+          "GetDC|0x11",
+          "IsWindow|0x5",
+          "CreatePalette|0x6B",
+          "CreateCompatibleDC|0x71",
+          "InitSmackBufferGlobals|0x10001F20",
+          "DeleteDC|0x69",
+          "DeleteObject|0x6E",
+          "ClientToScreen|0xD",
+          "GetDIBits|0x64",
+          "CreateCompatibleBitmap|0x63",
+          "BitBlt|0x67",
+          "GetSystemPaletteEntries|0x70",
+          "SelectObject|0x72",
+          "RealizePalette|0x6D",
+          "SelectPalette|0x6C",
+          "ReleaseDC|0x12"
+        ],
+        "Classic/1.04c": [
+          "RealizePalette|0x6D",
+          "CreateCompatibleDC|0x71",
+          "GetDC|0x11",
+          "DeleteObject|0x6E",
+          "GetDIBits|0x64",
+          "CreatePalette|0x6B",
+          "ClientToScreen|0xD",
+          "GetSystemPaletteEntries|0x70",
+          "SelectPalette|0x6C",
           "CreateCompatibleBitmap|0x63",
           "SelectObject|0x72",
-          "DeleteObject|0x6E"
+          "IsWindow|0x5",
+          "BitBlt|0x67",
+          "InitSmackBufferGlobals|0x10001F20",
+          "DeleteDC|0x69",
+          "ReleaseDC|0x12"
         ],
         "LoD/1.07": [
-          "BitBlt|0x67",
-          "DeleteDC|0x69",
           "CreatePalette|0x6B",
-          "ReleaseDC|0x12",
-          "GetDC|0x11",
-          "IsWindow|0x5",
           "SelectObject|0x72",
-          "GetDIBits|0x64",
-          "RealizePalette|0x6D",
           "InitSmackBufferGlobals|0x10001F20",
-          "DeleteObject|0x6E",
-          "GetSystemPaletteEntries|0x70",
           "SelectPalette|0x6C",
-          "ClientToScreen|0xD",
-          "CreateCompatibleBitmap|0x63",
-          "CreateCompatibleDC|0x71"
-        ],
-        "LoD/1.08": [
-          "DeleteDC|0x69",
-          "CreateCompatibleBitmap|0x63",
-          "SelectObject|0x72",
-          "GetSystemPaletteEntries|0x70",
-          "ClientToScreen|0xD",
-          "DeleteObject|0x6E",
-          "InitSmackBufferGlobals|0x10001F20",
-          "GetDIBits|0x64",
-          "IsWindow|0x5",
           "GetDC|0x11",
-          "SelectPalette|0x6C",
           "RealizePalette|0x6D",
-          "ReleaseDC|0x12",
-          "BitBlt|0x67",
-          "CreatePalette|0x6B",
-          "CreateCompatibleDC|0x71"
-        ],
-        "LoD/1.09": [
-          "BitBlt|0x67",
-          "CreateCompatibleBitmap|0x63",
-          "CreatePalette|0x6B",
+          "ClientToScreen|0xD",
           "CreateCompatibleDC|0x71",
-          "GetDC|0x11",
-          "SelectObject|0x72",
           "GetSystemPaletteEntries|0x70",
-          "ReleaseDC|0x12",
-          "IsWindow|0x5",
           "DeleteObject|0x6E",
-          "ClientToScreen|0xD",
-          "InitSmackBufferGlobals|0x10001F20",
-          "DeleteDC|0x69",
-          "GetDIBits|0x64",
-          "SelectPalette|0x6C",
-          "RealizePalette|0x6D"
-        ],
-        "LoD/1.09b": [
-          "CreateCompatibleDC|0x71",
-          "GetDIBits|0x64",
           "ReleaseDC|0x12",
-          "ClientToScreen|0xD",
-          "IsWindow|0x5",
-          "DeleteObject|0x6E",
-          "GetSystemPaletteEntries|0x70",
-          "RealizePalette|0x6D",
-          "GetDC|0x11",
-          "SelectObject|0x72",
-          "InitSmackBufferGlobals|0x10001F20",
+          "GetDIBits|0x64",
           "DeleteDC|0x69",
-          "SelectPalette|0x6C",
-          "CreatePalette|0x6B",
+          "IsWindow|0x5",
           "CreateCompatibleBitmap|0x63",
           "BitBlt|0x67"
         ],
-        "LoD/1.09d": [
+        "LoD/1.08": [
+          "SelectObject|0x72",
+          "GetSystemPaletteEntries|0x70",
+          "GetDC|0x11",
+          "CreateCompatibleDC|0x71",
+          "DeleteDC|0x69",
+          "DeleteObject|0x6E",
           "IsWindow|0x5",
-          "ClientToScreen|0xD",
           "ReleaseDC|0x12",
+          "CreatePalette|0x6B",
+          "ClientToScreen|0xD",
+          "BitBlt|0x67",
+          "InitSmackBufferGlobals|0x10001F20",
+          "SelectPalette|0x6C",
+          "CreateCompatibleBitmap|0x63",
+          "RealizePalette|0x6D",
+          "GetDIBits|0x64"
+        ],
+        "LoD/1.09": [
+          "CreatePalette|0x6B",
+          "InitSmackBufferGlobals|0x10001F20",
+          "RealizePalette|0x6D",
+          "GetDC|0x11",
+          "DeleteObject|0x6E",
+          "ReleaseDC|0x12",
+          "CreateCompatibleDC|0x71",
+          "DeleteDC|0x69",
+          "GetSystemPaletteEntries|0x70",
+          "BitBlt|0x67",
+          "SelectObject|0x72",
+          "GetDIBits|0x64",
+          "SelectPalette|0x6C",
+          "CreateCompatibleBitmap|0x63",
+          "IsWindow|0x5",
+          "ClientToScreen|0xD"
+        ],
+        "LoD/1.09b": [
+          "GetSystemPaletteEntries|0x70",
+          "CreateCompatibleBitmap|0x63",
+          "GetDC|0x11",
+          "RealizePalette|0x6D",
+          "BitBlt|0x67",
+          "InitSmackBufferGlobals|0x10001F20",
+          "CreatePalette|0x6B",
+          "SelectObject|0x72",
+          "ReleaseDC|0x12",
+          "CreateCompatibleDC|0x71",
+          "DeleteObject|0x6E",
+          "ClientToScreen|0xD",
+          "GetDIBits|0x64",
+          "DeleteDC|0x69",
+          "IsWindow|0x5",
+          "SelectPalette|0x6C"
+        ],
+        "LoD/1.09d": [
           "DeleteObject|0x6E",
           "BitBlt|0x67",
-          "CreateCompatibleDC|0x71",
-          "GetSystemPaletteEntries|0x70",
-          "SelectObject|0x72",
-          "GetDC|0x11",
-          "InitSmackBufferGlobals|0x10001F20",
-          "DeleteDC|0x69",
-          "RealizePalette|0x6D",
-          "CreatePalette|0x6B",
-          "GetDIBits|0x64",
+          "ReleaseDC|0x12",
           "CreateCompatibleBitmap|0x63",
-          "SelectPalette|0x6C"
+          "GetSystemPaletteEntries|0x70",
+          "CreatePalette|0x6B",
+          "ClientToScreen|0xD",
+          "RealizePalette|0x6D",
+          "IsWindow|0x5",
+          "GetDC|0x11",
+          "DeleteDC|0x69",
+          "InitSmackBufferGlobals|0x10001F20",
+          "CreateCompatibleDC|0x71",
+          "SelectPalette|0x6C",
+          "GetDIBits|0x64",
+          "SelectObject|0x72"
         ],
         "LoD/1.10": [
           "IsWindow|0x5",
-          "GetDC|0x11",
-          "DeleteDC|0x69",
-          "ClientToScreen|0xD",
           "SelectObject|0x72",
+          "ClientToScreen|0xD",
+          "GetDIBits|0x64",
+          "BitBlt|0x67",
           "InitSmackBufferGlobals|0x10001F20",
           "CreateCompatibleDC|0x71",
-          "CreateCompatibleBitmap|0x63",
-          "GetDIBits|0x64",
-          "DeleteObject|0x6E",
+          "DeleteDC|0x69",
           "GetSystemPaletteEntries|0x70",
+          "ReleaseDC|0x12",
+          "DeleteObject|0x6E",
+          "GetDC|0x11",
+          "CreateCompatibleBitmap|0x63",
           "SelectPalette|0x6C",
           "CreatePalette|0x6B",
-          "RealizePalette|0x6D",
-          "BitBlt|0x67",
-          "ReleaseDC|0x12"
+          "RealizePalette|0x6D"
         ],
         "LoD/1.11": [
-          "GetSystemPaletteEntries|0x70",
-          "DeleteObject|0x6E",
-          "CreateCompatibleBitmap|0x63",
-          "ClientToScreen|0xD",
-          "DeleteDC|0x69",
-          "SelectPalette|0x6C",
-          "RealizePalette|0x6D",
-          "ReleaseDC|0x12",
-          "IsWindow|0x5",
-          "GetDIBits|0x64",
           "BitBlt|0x67",
-          "CreatePalette|0x6B",
-          "GetDC|0x11",
-          "SelectObject|0x72",
+          "ClientToScreen|0xD",
           "CreateCompatibleDC|0x71",
-          "InitSmackBufferGlobals|0x10001F20"
+          "DeleteObject|0x6E",
+          "DeleteDC|0x69",
+          "GetDC|0x11",
+          "CreateCompatibleBitmap|0x63",
+          "GetDIBits|0x64",
+          "ReleaseDC|0x12",
+          "InitSmackBufferGlobals|0x10001F20",
+          "GetSystemPaletteEntries|0x70",
+          "SelectObject|0x72",
+          "IsWindow|0x5",
+          "CreatePalette|0x6B",
+          "SelectPalette|0x6C",
+          "RealizePalette|0x6D"
         ],
         "LoD/1.11b": [
-          "ClientToScreen|0xD",
-          "SelectObject|0x72",
-          "IsWindow|0x5",
-          "CreatePalette|0x6B",
-          "SelectPalette|0x6C",
-          "GetDIBits|0x64",
           "DeleteDC|0x69",
-          "ReleaseDC|0x12",
-          "InitSmackBufferGlobals|0x10001F20",
-          "CreateCompatibleBitmap|0x63",
-          "BitBlt|0x67",
-          "RealizePalette|0x6D",
-          "GetSystemPaletteEntries|0x70",
           "CreateCompatibleDC|0x71",
-          "GetDC|0x11",
-          "DeleteObject|0x6E"
-        ],
-        "LoD/1.12a": [
-          "IsWindow|0x5",
-          "GetDC|0x11",
-          "GetSystemPaletteEntries|0x70",
-          "InitSmackBufferGlobals|0x10001F20",
-          "DeleteDC|0x69",
-          "RealizePalette|0x6D",
-          "GetDIBits|0x64",
           "ReleaseDC|0x12",
+          "GetSystemPaletteEntries|0x70",
+          "GetDC|0x11",
+          "RealizePalette|0x6D",
+          "SelectObject|0x72",
+          "InitSmackBufferGlobals|0x10001F20",
           "DeleteObject|0x6E",
           "ClientToScreen|0xD",
-          "CreateCompatibleBitmap|0x63",
           "SelectPalette|0x6C",
-          "CreateCompatibleDC|0x71",
-          "SelectObject|0x72",
+          "GetDIBits|0x64",
+          "CreateCompatibleBitmap|0x63",
           "BitBlt|0x67",
+          "IsWindow|0x5",
           "CreatePalette|0x6B"
         ],
-        "LoD/1.13c": [
-          "RealizePalette|0x6D",
-          "BitBlt|0x67",
-          "DeleteObject|0x6E",
-          "SelectObject|0x72",
-          "CreateCompatibleBitmap|0x63",
-          "GetDIBits|0x64",
-          "DeleteDC|0x69",
-          "CreatePalette|0x6B",
+        "LoD/1.12a": [
+          "GetSystemPaletteEntries|0x70",
           "SelectPalette|0x6C",
           "IsWindow|0x5",
-          "CreateCompatibleDC|0x71",
-          "InitSmackBufferGlobals|0x10001F20",
-          "GetSystemPaletteEntries|0x70",
+          "DeleteObject|0x6E",
+          "ClientToScreen|0xD",
+          "SelectObject|0x72",
           "ReleaseDC|0x12",
+          "CreatePalette|0x6B",
+          "InitSmackBufferGlobals|0x10001F20",
+          "BitBlt|0x67",
+          "CreateCompatibleDC|0x71",
           "GetDC|0x11",
-          "ClientToScreen|0xD"
+          "DeleteDC|0x69",
+          "RealizePalette|0x6D",
+          "CreateCompatibleBitmap|0x63",
+          "GetDIBits|0x64"
+        ],
+        "LoD/1.13c": [
+          "CreateCompatibleDC|0x71",
+          "RealizePalette|0x6D",
+          "SelectPalette|0x6C",
+          "BitBlt|0x67",
+          "IsWindow|0x5",
+          "DeleteDC|0x69",
+          "CreateCompatibleBitmap|0x63",
+          "CreatePalette|0x6B",
+          "ClientToScreen|0xD",
+          "InitSmackBufferGlobals|0x10001F20",
+          "ReleaseDC|0x12",
+          "GetSystemPaletteEntries|0x70",
+          "SelectObject|0x72",
+          "DeleteObject|0x6E",
+          "GetDC|0x11",
+          "GetDIBits|0x64"
         ],
         "LoD/1.13d": [
-          "ClientToScreen|0xD",
-          "BitBlt|0x67",
-          "SelectPalette|0x6C",
-          "GetDIBits|0x64",
-          "ReleaseDC|0x12",
           "IsWindow|0x5",
-          "DeleteDC|0x69",
-          "CreateCompatibleDC|0x71",
-          "CreatePalette|0x6B",
-          "GetSystemPaletteEntries|0x70",
-          "DeleteObject|0x6E",
-          "GetDC|0x11",
-          "CreateCompatibleBitmap|0x63",
           "SelectObject|0x72",
+          "BitBlt|0x67",
+          "CreateCompatibleDC|0x71",
+          "CreateCompatibleBitmap|0x63",
           "InitSmackBufferGlobals|0x10001F20",
+          "DeleteDC|0x69",
+          "DeleteObject|0x6E",
+          "CreatePalette|0x6B",
+          "ClientToScreen|0xD",
+          "SelectPalette|0x6C",
+          "GetDC|0x11",
+          "ReleaseDC|0x12",
+          "GetDIBits|0x64",
+          "GetSystemPaletteEntries|0x70",
           "RealizePalette|0x6D"
         ],
         "LoD/1.14a": [
-          "BitBlt|0x67",
-          "GetDIBits|0x64",
-          "SelectObject|0x72",
-          "CreateCompatibleDC|0x71",
-          "GetSystemPaletteEntries|0x70",
-          "CreateCompatibleBitmap|0x63",
           "InitSmackBufferGlobals|0x10001F20",
           "DeleteObject|0x6E",
-          "RealizePalette|0x6D",
           "DeleteDC|0x69",
+          "GetSystemPaletteEntries|0x70",
           "IsWindow|0x5",
-          "SelectPalette|0x6C",
-          "ClientToScreen|0xD",
-          "GetDC|0x11",
           "CreatePalette|0x6B",
-          "ReleaseDC|0x12"
+          "GetDC|0x11",
+          "CreateCompatibleBitmap|0x63",
+          "RealizePalette|0x6D",
+          "SelectObject|0x72",
+          "CreateCompatibleDC|0x71",
+          "BitBlt|0x67",
+          "GetDIBits|0x64",
+          "SelectPalette|0x6C",
+          "ReleaseDC|0x12",
+          "ClientToScreen|0xD"
         ],
         "LoD/1.14b": [
-          "GetDIBits|0x64",
+          "DeleteObject|0x6E",
           "ClientToScreen|0xD",
+          "SelectObject|0x72",
+          "DeleteDC|0x69",
           "InitSmackBufferGlobals|0x10001F20",
-          "GetSystemPaletteEntries|0x70",
-          "CreateCompatibleDC|0x71",
-          "SelectPalette|0x6C",
+          "IsWindow|0x5",
           "GetDC|0x11",
           "CreatePalette|0x6B",
-          "DeleteObject|0x6E",
-          "ReleaseDC|0x12",
+          "GetDIBits|0x64",
+          "CreateCompatibleDC|0x71",
           "RealizePalette|0x6D",
-          "IsWindow|0x5",
-          "SelectObject|0x72",
+          "SelectPalette|0x6C",
           "CreateCompatibleBitmap|0x63",
+          "GetSystemPaletteEntries|0x70",
           "BitBlt|0x67",
-          "DeleteDC|0x69"
+          "ReleaseDC|0x12"
         ],
         "LoD/1.14c": [
-          "RealizePalette|0x6D",
-          "GetDIBits|0x64",
-          "CreatePalette|0x6B",
-          "BitBlt|0x67",
-          "ReleaseDC|0x12",
-          "SelectObject|0x72",
-          "ClientToScreen|0xD",
-          "CreateCompatibleDC|0x71",
           "DeleteObject|0x6E",
           "GetDC|0x11",
-          "GetSystemPaletteEntries|0x70",
-          "SelectPalette|0x6C",
-          "CreateCompatibleBitmap|0x63",
           "DeleteDC|0x69",
+          "CreateCompatibleBitmap|0x63",
           "IsWindow|0x5",
-          "InitSmackBufferGlobals|0x10001F20"
+          "CreateCompatibleDC|0x71",
+          "GetDIBits|0x64",
+          "CreatePalette|0x6B",
+          "RealizePalette|0x6D",
+          "BitBlt|0x67",
+          "ClientToScreen|0xD",
+          "ReleaseDC|0x12",
+          "InitSmackBufferGlobals|0x10001F20",
+          "SelectPalette|0x6C",
+          "GetSystemPaletteEntries|0x70",
+          "SelectObject|0x72"
         ],
         "LoD/1.14d": [
           "BitBlt|0x67",
-          "SelectPalette|0x6C",
-          "CreateCompatibleBitmap|0x63",
-          "DeleteObject|0x6E",
-          "GetDC|0x11",
-          "CreateCompatibleDC|0x71",
-          "DeleteDC|0x69",
-          "SelectObject|0x72",
-          "CreatePalette|0x6B",
-          "RealizePalette|0x6D",
-          "InitSmackBufferGlobals|0x10001F20",
           "IsWindow|0x5",
+          "CreatePalette|0x6B",
+          "CreateCompatibleBitmap|0x63",
+          "SelectPalette|0x6C",
+          "CreateCompatibleDC|0x71",
+          "SelectObject|0x72",
+          "GetDC|0x11",
           "GetSystemPaletteEntries|0x70",
-          "ReleaseDC|0x12",
+          "DeleteDC|0x69",
+          "DeleteObject|0x6E",
           "ClientToScreen|0xD",
-          "GetDIBits|0x64"
+          "RealizePalette|0x6D",
+          "GetDIBits|0x64",
+          "ReleaseDC|0x12",
+          "InitSmackBufferGlobals|0x10001F20"
         ]
       },
       "instructions": {
@@ -30822,7 +29590,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_15": {
+    "SmackW32_NOP_d2e18015ea98": {
       "addresses": {
         "Classic/1.00": "0x10003B80",
         "Classic/1.01": "0x10003B80",
@@ -30897,8 +29665,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:15",
+      "method": "NOP",
+      "index": "NOP:d2e18015ea986ed852cd63b601f1e308e9f55e930ae121859515c9aee909f0de",
       "indexes": {
         "EXP": "15",
         "STR": null,
@@ -32023,7 +30791,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_13": {
+    "SmackW32_NOP_7319cf9f614c": {
       "addresses": {
         "Classic/1.00": "0x10003CF0",
         "Classic/1.01": "0x10003CF0",
@@ -32098,8 +30866,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:13",
+      "method": "NOP",
+      "index": "NOP:7319cf9f614c5dc25e03302d4dda01729ef394ee51cea410a0d91d62f78a96d9",
       "indexes": {
         "EXP": "13",
         "STR": null,
@@ -32880,7 +31648,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_41": {
+    "SmackW32_STR_48946d2a7dab": {
       "addresses": {
         "Classic/1.00": "0x10003D60",
         "Classic/1.01": "0x10003D60",
@@ -32955,8 +31723,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "bool",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:41",
+      "method": "STR",
+      "index": "STR:48946d2a7dabd0a40a03eb1febd6d99d",
       "indexes": {
         "EXP": "41",
         "STR": "48946d2a7dabd0a40a03eb1febd6d99d",
@@ -32975,32 +31743,32 @@ var FUNCTIONS_SmackW32_dll = {
           "GetModuleHandleA|0x48"
         ],
         "Classic/1.01": [
-          "GetProcAddress|0x47",
-          "GetModuleHandleA|0x48"
-        ],
-        "Classic/1.02": [
           "GetModuleHandleA|0x48",
           "GetProcAddress|0x47"
+        ],
+        "Classic/1.02": [
+          "GetProcAddress|0x47",
+          "GetModuleHandleA|0x48"
         ],
         "Classic/1.03": [
           "GetModuleHandleA|0x48",
           "GetProcAddress|0x47"
         ],
         "Classic/1.04c": [
-          "GetProcAddress|0x47",
-          "GetModuleHandleA|0x48"
+          "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.07": [
-          "GetModuleHandleA|0x48",
-          "GetProcAddress|0x47"
-        ],
-        "LoD/1.08": [
-          "GetModuleHandleA|0x48",
-          "GetProcAddress|0x47"
-        ],
-        "LoD/1.09": [
           "GetProcAddress|0x47",
           "GetModuleHandleA|0x48"
+        ],
+        "LoD/1.08": [
+          "GetProcAddress|0x47",
+          "GetModuleHandleA|0x48"
+        ],
+        "LoD/1.09": [
+          "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.09b": [
           "GetProcAddress|0x47",
@@ -33015,12 +31783,12 @@ var FUNCTIONS_SmackW32_dll = {
           "GetModuleHandleA|0x48"
         ],
         "LoD/1.11": [
-          "GetProcAddress|0x47",
-          "GetModuleHandleA|0x48"
+          "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.11b": [
-          "GetProcAddress|0x47",
-          "GetModuleHandleA|0x48"
+          "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.12a": [
           "GetModuleHandleA|0x48",
@@ -33035,20 +31803,20 @@ var FUNCTIONS_SmackW32_dll = {
           "GetProcAddress|0x47"
         ],
         "LoD/1.14a": [
-          "GetModuleHandleA|0x48",
-          "GetProcAddress|0x47"
-        ],
-        "LoD/1.14b": [
           "GetProcAddress|0x47",
           "GetModuleHandleA|0x48"
+        ],
+        "LoD/1.14b": [
+          "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.14c": [
           "GetModuleHandleA|0x48",
           "GetProcAddress|0x47"
         ],
         "LoD/1.14d": [
-          "GetModuleHandleA|0x48",
-          "GetProcAddress|0x47"
+          "GetProcAddress|0x47",
+          "GetModuleHandleA|0x48"
         ]
       },
       "strings": {
@@ -34125,7 +32893,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_32": {
+    "SmackW32_NOP_646dc90094bc": {
       "addresses": {
         "Classic/1.00": "0x10003E70",
         "Classic/1.01": "0x10003E70",
@@ -34200,8 +32968,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined4",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:32",
+      "method": "NOP",
+      "index": "NOP:646dc90094bcf3bceabe6880337a0de8f65b693f817155e4f72a65b7bca0e7e7",
       "indexes": {
         "EXP": "32",
         "STR": null,
@@ -35166,38 +33934,38 @@ var FUNCTIONS_SmackW32_dll = {
       "callees": {
         "Classic/1.00": [
           "BeginPaint|0x28",
-          "DefWindowProcA|0x27",
-          "EndPaint|0x26"
+          "EndPaint|0x26",
+          "DefWindowProcA|0x27"
         ],
         "Classic/1.01": [
-          "DefWindowProcA|0x27",
+          "BeginPaint|0x28",
           "EndPaint|0x26",
-          "BeginPaint|0x28"
+          "DefWindowProcA|0x27"
         ],
         "Classic/1.02": [
           "EndPaint|0x26",
-          "BeginPaint|0x28",
-          "DefWindowProcA|0x27"
+          "DefWindowProcA|0x27",
+          "BeginPaint|0x28"
         ],
         "Classic/1.03": [
-          "DefWindowProcA|0x27",
           "BeginPaint|0x28",
-          "EndPaint|0x26"
+          "EndPaint|0x26",
+          "DefWindowProcA|0x27"
         ],
         "Classic/1.04c": [
-          "EndPaint|0x26",
-          "BeginPaint|0x28",
-          "DefWindowProcA|0x27"
-        ],
-        "LoD/1.08": [
           "DefWindowProcA|0x27",
           "BeginPaint|0x28",
           "EndPaint|0x26"
         ],
-        "LoD/1.09": [
+        "LoD/1.08": [
           "EndPaint|0x26",
           "BeginPaint|0x28",
           "DefWindowProcA|0x27"
+        ],
+        "LoD/1.09": [
+          "DefWindowProcA|0x27",
+          "BeginPaint|0x28",
+          "EndPaint|0x26"
         ],
         "LoD/1.09b": [
           "DefWindowProcA|0x27",
@@ -35206,28 +33974,28 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.09d": [
           "EndPaint|0x26",
-          "BeginPaint|0x28",
-          "DefWindowProcA|0x27"
+          "DefWindowProcA|0x27",
+          "BeginPaint|0x28"
         ],
         "LoD/1.10": [
-          "EndPaint|0x26",
-          "BeginPaint|0x28",
-          "DefWindowProcA|0x27"
-        ],
-        "LoD/1.11": [
-          "EndPaint|0x26",
-          "BeginPaint|0x28",
-          "DefWindowProcA|0x27"
-        ],
-        "LoD/1.11b": [
-          "BeginPaint|0x28",
-          "DefWindowProcA|0x27",
-          "EndPaint|0x26"
-        ],
-        "LoD/1.12a": [
           "DefWindowProcA|0x27",
           "EndPaint|0x26",
           "BeginPaint|0x28"
+        ],
+        "LoD/1.11": [
+          "DefWindowProcA|0x27",
+          "EndPaint|0x26",
+          "BeginPaint|0x28"
+        ],
+        "LoD/1.11b": [
+          "BeginPaint|0x28",
+          "EndPaint|0x26",
+          "DefWindowProcA|0x27"
+        ],
+        "LoD/1.12a": [
+          "BeginPaint|0x28",
+          "EndPaint|0x26",
+          "DefWindowProcA|0x27"
         ],
         "LoD/1.13c": [
           "EndPaint|0x26",
@@ -35236,8 +34004,8 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.13d": [
           "BeginPaint|0x28",
-          "DefWindowProcA|0x27",
-          "EndPaint|0x26"
+          "EndPaint|0x26",
+          "DefWindowProcA|0x27"
         ],
         "LoD/1.14a": [
           "EndPaint|0x26",
@@ -35245,14 +34013,14 @@ var FUNCTIONS_SmackW32_dll = {
           "DefWindowProcA|0x27"
         ],
         "LoD/1.14b": [
-          "DefWindowProcA|0x27",
           "BeginPaint|0x28",
+          "DefWindowProcA|0x27",
           "EndPaint|0x26"
         ],
         "LoD/1.14c": [
+          "EndPaint|0x26",
           "DefWindowProcA|0x27",
-          "BeginPaint|0x28",
-          "EndPaint|0x26"
+          "BeginPaint|0x28"
         ],
         "LoD/1.14d": [
           "BeginPaint|0x28",
@@ -36087,7 +34855,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_37": {
+    "SmackW32_STR_d96320df0246": {
       "addresses": {
         "Classic/1.00": "0x10003F90",
         "Classic/1.01": "0x10003F90",
@@ -36162,8 +34930,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "uint",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:37",
+      "method": "STR",
+      "index": "STR:d96320df0246d8085bfec955d5bc0e65",
       "indexes": {
         "EXP": "37",
         "STR": "d96320df0246d8085bfec955d5bc0e65",
@@ -36179,322 +34947,322 @@ var FUNCTIONS_SmackW32_dll = {
       "callees": {
         "Classic/1.00": [
           "ShowCursor|0x20",
-          "SetPixel|0x62",
-          "ReleaseDC|0x12",
-          "GetPixel|0x61",
-          "SetCursor|0x23",
-          "PeekMessageA|0x21",
-          "GetDC|0x11",
-          "CreateWindowExA|0x10",
-          "RegisterClassA|0x1F",
-          "GetSystemMetrics|0x17",
-          "UnregisterClassA|0x25",
           "ScreenToClient|0x22",
           "DestroyWindow|0x24",
-          "GetCursorPos|0x1D"
+          "SetPixel|0x62",
+          "GetDC|0x11",
+          "ReleaseDC|0x12",
+          "GetSystemMetrics|0x17",
+          "GetCursorPos|0x1D",
+          "UnregisterClassA|0x25",
+          "GetPixel|0x61",
+          "RegisterClassA|0x1F",
+          "CreateWindowExA|0x10",
+          "PeekMessageA|0x21",
+          "SetCursor|0x23"
         ],
         "Classic/1.01": [
-          "GetSystemMetrics|0x17",
-          "ShowCursor|0x20",
-          "PeekMessageA|0x21",
-          "RegisterClassA|0x1F",
           "CreateWindowExA|0x10",
-          "SetCursor|0x23",
-          "DestroyWindow|0x24",
-          "ScreenToClient|0x22",
           "GetPixel|0x61",
+          "GetCursorPos|0x1D",
           "UnregisterClassA|0x25",
+          "ShowCursor|0x20",
+          "RegisterClassA|0x1F",
+          "SetCursor|0x23",
+          "ScreenToClient|0x22",
           "GetDC|0x11",
-          "ReleaseDC|0x12",
           "SetPixel|0x62",
-          "GetCursorPos|0x1D"
+          "ReleaseDC|0x12",
+          "PeekMessageA|0x21",
+          "GetSystemMetrics|0x17",
+          "DestroyWindow|0x24"
         ],
         "Classic/1.02": [
-          "GetSystemMetrics|0x17",
           "RegisterClassA|0x1F",
-          "ShowCursor|0x20",
-          "CreateWindowExA|0x10",
-          "ScreenToClient|0x22",
-          "GetDC|0x11",
-          "SetPixel|0x62",
-          "SetCursor|0x23",
           "UnregisterClassA|0x25",
           "ReleaseDC|0x12",
-          "DestroyWindow|0x24",
-          "PeekMessageA|0x21",
+          "ScreenToClient|0x22",
           "GetCursorPos|0x1D",
-          "GetPixel|0x61"
+          "GetDC|0x11",
+          "DestroyWindow|0x24",
+          "ShowCursor|0x20",
+          "SetCursor|0x23",
+          "CreateWindowExA|0x10",
+          "PeekMessageA|0x21",
+          "GetSystemMetrics|0x17",
+          "GetPixel|0x61",
+          "SetPixel|0x62"
         ],
         "Classic/1.03": [
-          "GetSystemMetrics|0x17",
-          "CreateWindowExA|0x10",
-          "PeekMessageA|0x21",
           "GetDC|0x11",
-          "GetCursorPos|0x1D",
-          "RegisterClassA|0x1F",
-          "UnregisterClassA|0x25",
-          "ScreenToClient|0x22",
-          "ShowCursor|0x20",
-          "ReleaseDC|0x12",
           "DestroyWindow|0x24",
-          "SetPixel|0x62",
-          "GetPixel|0x61",
-          "SetCursor|0x23"
-        ],
-        "Classic/1.04c": [
-          "GetCursorPos|0x1D",
-          "ReleaseDC|0x12",
-          "ScreenToClient|0x22",
-          "GetPixel|0x61",
-          "ShowCursor|0x20",
-          "RegisterClassA|0x1F",
-          "DestroyWindow|0x24",
-          "GetDC|0x11",
-          "UnregisterClassA|0x25",
-          "PeekMessageA|0x21",
-          "GetSystemMetrics|0x17",
           "CreateWindowExA|0x10",
           "SetCursor|0x23",
-          "SetPixel|0x62"
-        ],
-        "LoD/1.07": [
-          "ScreenToClient|0x22",
-          "SetCursor|0x23",
-          "ReleaseDC|0x12",
-          "GetDC|0x11",
-          "ShowCursor|0x20",
-          "UnregisterClassA|0x25",
-          "GetPixel|0x61",
-          "SetPixel|0x62",
-          "RegisterClassA|0x1F",
-          "DestroyWindow|0x24",
-          "CreateWindowExA|0x10",
           "PeekMessageA|0x21",
+          "GetPixel|0x61",
+          "ScreenToClient|0x22",
+          "UnregisterClassA|0x25",
+          "SetPixel|0x62",
+          "ShowCursor|0x20",
           "GetSystemMetrics|0x17",
+          "RegisterClassA|0x1F",
+          "ReleaseDC|0x12",
           "GetCursorPos|0x1D"
         ],
-        "LoD/1.08": [
-          "SetPixel|0x62",
-          "ShowCursor|0x20",
-          "PeekMessageA|0x21",
-          "UnregisterClassA|0x25",
-          "ScreenToClient|0x22",
-          "DestroyWindow|0x24",
-          "GetCursorPos|0x1D",
-          "GetDC|0x11",
-          "CreateWindowExA|0x10",
-          "ReleaseDC|0x12",
-          "GetSystemMetrics|0x17",
-          "RegisterClassA|0x1F",
-          "GetPixel|0x61",
-          "SetCursor|0x23"
-        ],
-        "LoD/1.09": [
-          "RegisterClassA|0x1F",
-          "GetCursorPos|0x1D",
-          "CreateWindowExA|0x10",
-          "ShowCursor|0x20",
-          "GetDC|0x11",
-          "SetCursor|0x23",
-          "SetPixel|0x62",
-          "UnregisterClassA|0x25",
+        "Classic/1.04c": [
           "PeekMessageA|0x21",
           "ScreenToClient|0x22",
-          "ReleaseDC|0x12",
-          "GetSystemMetrics|0x17",
-          "DestroyWindow|0x24",
-          "GetPixel|0x61"
-        ],
-        "LoD/1.09b": [
-          "GetSystemMetrics|0x17",
-          "ReleaseDC|0x12",
-          "GetCursorPos|0x1D",
-          "GetPixel|0x61",
-          "CreateWindowExA|0x10",
-          "ScreenToClient|0x22",
-          "SetPixel|0x62",
-          "ShowCursor|0x20",
           "GetDC|0x11",
-          "DestroyWindow|0x24",
-          "UnregisterClassA|0x25",
-          "SetCursor|0x23",
-          "RegisterClassA|0x1F",
-          "PeekMessageA|0x21"
-        ],
-        "LoD/1.09d": [
-          "UnregisterClassA|0x25",
-          "GetCursorPos|0x1D",
-          "ScreenToClient|0x22",
-          "ReleaseDC|0x12",
-          "PeekMessageA|0x21",
-          "DestroyWindow|0x24",
-          "GetPixel|0x61",
-          "CreateWindowExA|0x10",
           "SetPixel|0x62",
           "GetSystemMetrics|0x17",
-          "GetDC|0x11",
-          "RegisterClassA|0x1F",
-          "ShowCursor|0x20",
-          "SetCursor|0x23"
-        ],
-        "LoD/1.10": [
-          "RegisterClassA|0x1F",
-          "GetDC|0x11",
-          "CreateWindowExA|0x10",
-          "ShowCursor|0x20",
           "GetCursorPos|0x1D",
-          "SetPixel|0x62",
-          "ScreenToClient|0x22",
-          "GetSystemMetrics|0x17",
-          "PeekMessageA|0x21",
-          "GetPixel|0x61",
-          "ReleaseDC|0x12",
-          "DestroyWindow|0x24",
-          "SetCursor|0x23",
-          "UnregisterClassA|0x25"
-        ],
-        "LoD/1.11": [
-          "GetSystemMetrics|0x17",
-          "CreateWindowExA|0x10",
-          "DestroyWindow|0x24",
-          "UnregisterClassA|0x25",
-          "ShowCursor|0x20",
-          "ScreenToClient|0x22",
-          "ReleaseDC|0x12",
-          "PeekMessageA|0x21",
-          "SetCursor|0x23",
-          "RegisterClassA|0x1F",
-          "SetPixel|0x62",
-          "GetCursorPos|0x1D",
-          "GetDC|0x11",
-          "GetPixel|0x61"
-        ],
-        "LoD/1.11b": [
-          "SetCursor|0x23",
-          "GetSystemMetrics|0x17",
-          "ShowCursor|0x20",
-          "PeekMessageA|0x21",
-          "ReleaseDC|0x12",
-          "RegisterClassA|0x1F",
-          "GetPixel|0x61",
-          "ScreenToClient|0x22",
-          "SetPixel|0x62",
-          "DestroyWindow|0x24",
-          "GetCursorPos|0x1D",
-          "CreateWindowExA|0x10",
-          "UnregisterClassA|0x25",
-          "GetDC|0x11"
-        ],
-        "LoD/1.12a": [
-          "GetDC|0x11",
-          "PeekMessageA|0x21",
-          "ScreenToClient|0x22",
-          "ShowCursor|0x20",
-          "RegisterClassA|0x1F",
-          "GetCursorPos|0x1D",
-          "DestroyWindow|0x24",
-          "CreateWindowExA|0x10",
-          "ReleaseDC|0x12",
           "SetCursor|0x23",
           "UnregisterClassA|0x25",
-          "GetSystemMetrics|0x17",
+          "CreateWindowExA|0x10",
           "GetPixel|0x61",
-          "SetPixel|0x62"
-        ],
-        "LoD/1.13c": [
-          "SetPixel|0x62",
-          "GetSystemMetrics|0x17",
-          "ScreenToClient|0x22",
-          "PeekMessageA|0x21",
           "RegisterClassA|0x1F",
           "ShowCursor|0x20",
-          "CreateWindowExA|0x10",
-          "DestroyWindow|0x24",
-          "ReleaseDC|0x12",
-          "GetDC|0x11",
-          "GetCursorPos|0x1D",
-          "UnregisterClassA|0x25",
-          "GetPixel|0x61",
-          "SetCursor|0x23"
-        ],
-        "LoD/1.13d": [
-          "SetCursor|0x23",
-          "UnregisterClassA|0x25",
-          "DestroyWindow|0x24",
-          "ReleaseDC|0x12",
-          "SetPixel|0x62",
-          "GetPixel|0x61",
-          "GetCursorPos|0x1D",
-          "ScreenToClient|0x22",
-          "RegisterClassA|0x1F",
-          "PeekMessageA|0x21",
-          "ShowCursor|0x20",
-          "GetSystemMetrics|0x17",
-          "CreateWindowExA|0x10",
-          "GetDC|0x11"
-        ],
-        "LoD/1.14a": [
-          "PeekMessageA|0x21",
-          "UnregisterClassA|0x25",
-          "GetSystemMetrics|0x17",
-          "SetPixel|0x62",
-          "SetCursor|0x23",
-          "RegisterClassA|0x1F",
-          "CreateWindowExA|0x10",
-          "ScreenToClient|0x22",
-          "GetCursorPos|0x1D",
-          "GetPixel|0x61",
-          "ShowCursor|0x20",
-          "GetDC|0x11",
           "ReleaseDC|0x12",
           "DestroyWindow|0x24"
         ],
-        "LoD/1.14b": [
-          "DestroyWindow|0x24",
-          "RegisterClassA|0x1F",
-          "UnregisterClassA|0x25",
-          "PeekMessageA|0x21",
-          "SetCursor|0x23",
+        "LoD/1.07": [
+          "ScreenToClient|0x22",
           "GetDC|0x11",
           "GetSystemMetrics|0x17",
+          "SetPixel|0x62",
+          "PeekMessageA|0x21",
+          "ShowCursor|0x20",
+          "GetPixel|0x61",
+          "ReleaseDC|0x12",
+          "CreateWindowExA|0x10",
+          "UnregisterClassA|0x25",
+          "SetCursor|0x23",
+          "GetCursorPos|0x1D",
+          "RegisterClassA|0x1F",
+          "DestroyWindow|0x24"
+        ],
+        "LoD/1.08": [
+          "SetCursor|0x23",
+          "GetPixel|0x61",
+          "SetPixel|0x62",
+          "GetDC|0x11",
           "CreateWindowExA|0x10",
           "ReleaseDC|0x12",
+          "RegisterClassA|0x1F",
+          "GetCursorPos|0x1D",
+          "ScreenToClient|0x22",
+          "ShowCursor|0x20",
+          "DestroyWindow|0x24",
+          "PeekMessageA|0x21",
+          "GetSystemMetrics|0x17",
+          "UnregisterClassA|0x25"
+        ],
+        "LoD/1.09": [
+          "GetCursorPos|0x1D",
+          "GetDC|0x11",
+          "ReleaseDC|0x12",
+          "UnregisterClassA|0x25",
+          "SetPixel|0x62",
+          "PeekMessageA|0x21",
+          "GetPixel|0x61",
+          "SetCursor|0x23",
+          "GetSystemMetrics|0x17",
+          "ScreenToClient|0x22",
+          "ShowCursor|0x20",
+          "DestroyWindow|0x24",
+          "RegisterClassA|0x1F",
+          "CreateWindowExA|0x10"
+        ],
+        "LoD/1.09b": [
+          "SetPixel|0x62",
+          "ScreenToClient|0x22",
+          "GetDC|0x11",
+          "RegisterClassA|0x1F",
+          "UnregisterClassA|0x25",
+          "ShowCursor|0x20",
+          "CreateWindowExA|0x10",
+          "SetCursor|0x23",
+          "DestroyWindow|0x24",
+          "ReleaseDC|0x12",
+          "GetSystemMetrics|0x17",
+          "GetCursorPos|0x1D",
+          "GetPixel|0x61",
+          "PeekMessageA|0x21"
+        ],
+        "LoD/1.09d": [
+          "CreateWindowExA|0x10",
+          "GetSystemMetrics|0x17",
+          "UnregisterClassA|0x25",
+          "ReleaseDC|0x12",
+          "SetCursor|0x23",
+          "DestroyWindow|0x24",
+          "GetDC|0x11",
+          "SetPixel|0x62",
+          "ShowCursor|0x20",
+          "GetPixel|0x61",
+          "PeekMessageA|0x21",
+          "ScreenToClient|0x22",
+          "GetCursorPos|0x1D",
+          "RegisterClassA|0x1F"
+        ],
+        "LoD/1.10": [
+          "DestroyWindow|0x24",
+          "PeekMessageA|0x21",
           "ScreenToClient|0x22",
           "ShowCursor|0x20",
           "GetCursorPos|0x1D",
+          "UnregisterClassA|0x25",
+          "RegisterClassA|0x1F",
+          "SetCursor|0x23",
+          "ReleaseDC|0x12",
+          "GetDC|0x11",
+          "CreateWindowExA|0x10",
           "GetPixel|0x61",
+          "GetSystemMetrics|0x17",
           "SetPixel|0x62"
         ],
-        "LoD/1.14c": [
+        "LoD/1.11": [
           "PeekMessageA|0x21",
-          "RegisterClassA|0x1F",
-          "GetSystemMetrics|0x17",
-          "ShowCursor|0x20",
-          "SetPixel|0x62",
-          "UnregisterClassA|0x25",
-          "CreateWindowExA|0x10",
-          "SetCursor|0x23",
-          "ScreenToClient|0x22",
-          "ReleaseDC|0x12",
-          "DestroyWindow|0x24",
-          "GetPixel|0x61",
-          "GetCursorPos|0x1D",
-          "GetDC|0x11"
-        ],
-        "LoD/1.14d": [
-          "GetSystemMetrics|0x17",
-          "DestroyWindow|0x24",
-          "GetCursorPos|0x1D",
-          "GetPixel|0x61",
-          "CreateWindowExA|0x10",
           "ScreenToClient|0x22",
           "GetDC|0x11",
-          "SetPixel|0x62",
+          "ReleaseDC|0x12",
+          "DestroyWindow|0x24",
           "RegisterClassA|0x1F",
-          "UnregisterClassA|0x25",
+          "GetSystemMetrics|0x17",
+          "GetPixel|0x61",
+          "CreateWindowExA|0x10",
           "ShowCursor|0x20",
           "SetCursor|0x23",
+          "GetCursorPos|0x1D",
+          "UnregisterClassA|0x25",
+          "SetPixel|0x62"
+        ],
+        "LoD/1.11b": [
+          "GetPixel|0x61",
+          "GetSystemMetrics|0x17",
+          "SetPixel|0x62",
+          "ShowCursor|0x20",
+          "ScreenToClient|0x22",
+          "ReleaseDC|0x12",
+          "GetDC|0x11",
           "PeekMessageA|0x21",
+          "CreateWindowExA|0x10",
+          "RegisterClassA|0x1F",
+          "UnregisterClassA|0x25",
+          "SetCursor|0x23",
+          "DestroyWindow|0x24",
+          "GetCursorPos|0x1D"
+        ],
+        "LoD/1.12a": [
+          "PeekMessageA|0x21",
+          "DestroyWindow|0x24",
+          "GetCursorPos|0x1D",
+          "GetSystemMetrics|0x17",
+          "ShowCursor|0x20",
+          "ReleaseDC|0x12",
+          "SetPixel|0x62",
+          "GetPixel|0x61",
+          "UnregisterClassA|0x25",
+          "ScreenToClient|0x22",
+          "GetDC|0x11",
+          "SetCursor|0x23",
+          "RegisterClassA|0x1F",
+          "CreateWindowExA|0x10"
+        ],
+        "LoD/1.13c": [
+          "GetSystemMetrics|0x17",
+          "PeekMessageA|0x21",
+          "CreateWindowExA|0x10",
+          "DestroyWindow|0x24",
+          "SetCursor|0x23",
+          "SetPixel|0x62",
+          "ScreenToClient|0x22",
+          "GetCursorPos|0x1D",
+          "UnregisterClassA|0x25",
+          "RegisterClassA|0x1F",
+          "GetPixel|0x61",
+          "ReleaseDC|0x12",
+          "ShowCursor|0x20",
+          "GetDC|0x11"
+        ],
+        "LoD/1.13d": [
+          "ShowCursor|0x20",
+          "DestroyWindow|0x24",
+          "PeekMessageA|0x21",
+          "GetSystemMetrics|0x17",
+          "SetCursor|0x23",
+          "ScreenToClient|0x22",
+          "GetPixel|0x61",
+          "GetDC|0x11",
+          "ReleaseDC|0x12",
+          "SetPixel|0x62",
+          "GetCursorPos|0x1D",
+          "RegisterClassA|0x1F",
+          "CreateWindowExA|0x10",
+          "UnregisterClassA|0x25"
+        ],
+        "LoD/1.14a": [
+          "GetSystemMetrics|0x17",
+          "DestroyWindow|0x24",
+          "ShowCursor|0x20",
+          "RegisterClassA|0x1F",
+          "PeekMessageA|0x21",
+          "CreateWindowExA|0x10",
+          "GetDC|0x11",
+          "GetCursorPos|0x1D",
+          "SetPixel|0x62",
+          "UnregisterClassA|0x25",
+          "GetPixel|0x61",
+          "ReleaseDC|0x12",
+          "ScreenToClient|0x22",
+          "SetCursor|0x23"
+        ],
+        "LoD/1.14b": [
+          "GetCursorPos|0x1D",
+          "DestroyWindow|0x24",
+          "RegisterClassA|0x1F",
+          "SetPixel|0x62",
+          "CreateWindowExA|0x10",
+          "GetPixel|0x61",
+          "GetDC|0x11",
+          "UnregisterClassA|0x25",
+          "PeekMessageA|0x21",
+          "SetCursor|0x23",
+          "ShowCursor|0x20",
+          "ScreenToClient|0x22",
+          "GetSystemMetrics|0x17",
+          "ReleaseDC|0x12"
+        ],
+        "LoD/1.14c": [
+          "GetDC|0x11",
+          "UnregisterClassA|0x25",
+          "RegisterClassA|0x1F",
+          "PeekMessageA|0x21",
+          "ReleaseDC|0x12",
+          "DestroyWindow|0x24",
+          "ShowCursor|0x20",
+          "GetCursorPos|0x1D",
+          "GetPixel|0x61",
+          "SetCursor|0x23",
+          "ScreenToClient|0x22",
+          "CreateWindowExA|0x10",
+          "GetSystemMetrics|0x17",
+          "SetPixel|0x62"
+        ],
+        "LoD/1.14d": [
+          "PeekMessageA|0x21",
+          "DestroyWindow|0x24",
+          "SetCursor|0x23",
+          "RegisterClassA|0x1F",
+          "GetCursorPos|0x1D",
+          "ShowCursor|0x20",
+          "ScreenToClient|0x22",
+          "GetSystemMetrics|0x17",
+          "SetPixel|0x62",
+          "GetPixel|0x61",
+          "CreateWindowExA|0x10",
+          "GetDC|0x11",
+          "UnregisterClassA|0x25",
           "ReleaseDC|0x12"
         ]
       },
@@ -38096,7 +36864,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_28": {
+    "SmackW32_NOP_be1b876ba5b6": {
       "addresses": {
         "Classic/1.00": "0x100042B0",
         "Classic/1.01": "0x100042B0",
@@ -38171,8 +36939,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "int",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:28",
+      "method": "NOP",
+      "index": "NOP:be1b876ba5b61512ac7cdc9e54fd8d075127912b85ee90099afb9414601e76a0",
       "indexes": {
         "EXP": "28",
         "STR": null,
@@ -38193,117 +36961,117 @@ var FUNCTIONS_SmackW32_dll = {
           "ClientToScreen|0xD"
         ],
         "Classic/1.01": [
-          "GetSystemMetrics|0x17",
-          "ShowCursor|0x20",
           "ClientToScreen|0xD",
-          "GetCursorPos|0x1D"
+          "GetCursorPos|0x1D",
+          "ShowCursor|0x20",
+          "GetSystemMetrics|0x17"
         ],
         "Classic/1.02": [
+          "GetCursorPos|0x1D",
           "GetSystemMetrics|0x17",
           "ClientToScreen|0xD",
-          "ShowCursor|0x20",
-          "GetCursorPos|0x1D"
+          "ShowCursor|0x20"
         ],
         "Classic/1.03": [
-          "GetSystemMetrics|0x17",
           "ShowCursor|0x20",
+          "GetSystemMetrics|0x17",
+          "ClientToScreen|0xD",
+          "GetCursorPos|0x1D"
+        ],
+        "Classic/1.04c": [
+          "ShowCursor|0x20",
+          "GetSystemMetrics|0x17",
           "GetCursorPos|0x1D",
           "ClientToScreen|0xD"
         ],
-        "Classic/1.04c": [
-          "ClientToScreen|0xD",
+        "LoD/1.07": [
           "GetCursorPos|0x1D",
           "GetSystemMetrics|0x17",
+          "ClientToScreen|0xD",
           "ShowCursor|0x20"
         ],
-        "LoD/1.07": [
+        "LoD/1.08": [
           "ClientToScreen|0xD",
           "ShowCursor|0x20",
           "GetSystemMetrics|0x17",
           "GetCursorPos|0x1D"
         ],
-        "LoD/1.08": [
+        "LoD/1.09": [
           "GetCursorPos|0x1D",
-          "ShowCursor|0x20",
           "GetSystemMetrics|0x17",
+          "ShowCursor|0x20",
           "ClientToScreen|0xD"
         ],
-        "LoD/1.09": [
-          "GetSystemMetrics|0x17",
-          "GetCursorPos|0x1D",
-          "ClientToScreen|0xD",
-          "ShowCursor|0x20"
-        ],
         "LoD/1.09b": [
-          "GetSystemMetrics|0x17",
           "ClientToScreen|0xD",
+          "GetSystemMetrics|0x17",
           "GetCursorPos|0x1D",
           "ShowCursor|0x20"
         ],
         "LoD/1.09d": [
-          "ClientToScreen|0xD",
-          "GetCursorPos|0x1D",
-          "GetSystemMetrics|0x17",
-          "ShowCursor|0x20"
-        ],
-        "LoD/1.10": [
           "ShowCursor|0x20",
           "GetSystemMetrics|0x17",
           "ClientToScreen|0xD",
           "GetCursorPos|0x1D"
         ],
-        "LoD/1.11": [
-          "GetSystemMetrics|0x17",
+        "LoD/1.10": [
+          "ShowCursor|0x20",
+          "GetCursorPos|0x1D",
           "ClientToScreen|0xD",
+          "GetSystemMetrics|0x17"
+        ],
+        "LoD/1.11": [
+          "ClientToScreen|0xD",
+          "GetSystemMetrics|0x17",
           "ShowCursor|0x20",
           "GetCursorPos|0x1D"
         ],
         "LoD/1.11b": [
           "GetSystemMetrics|0x17",
           "ClientToScreen|0xD",
-          "GetCursorPos|0x1D",
-          "ShowCursor|0x20"
+          "ShowCursor|0x20",
+          "GetCursorPos|0x1D"
         ],
         "LoD/1.12a": [
+          "GetCursorPos|0x1D",
           "GetSystemMetrics|0x17",
           "ShowCursor|0x20",
-          "ClientToScreen|0xD",
-          "GetCursorPos|0x1D"
+          "ClientToScreen|0xD"
         ],
         "LoD/1.13c": [
           "GetSystemMetrics|0x17",
-          "GetCursorPos|0x1D",
+          "ClientToScreen|0xD",
           "ShowCursor|0x20",
-          "ClientToScreen|0xD"
+          "GetCursorPos|0x1D"
         ],
         "LoD/1.13d": [
           "ShowCursor|0x20",
-          "ClientToScreen|0xD",
           "GetSystemMetrics|0x17",
-          "GetCursorPos|0x1D"
+          "GetCursorPos|0x1D",
+          "ClientToScreen|0xD"
         ],
         "LoD/1.14a": [
           "GetSystemMetrics|0x17",
-          "GetCursorPos|0x1D",
           "ShowCursor|0x20",
+          "GetCursorPos|0x1D",
           "ClientToScreen|0xD"
         ],
         "LoD/1.14b": [
+          "GetCursorPos|0x1D",
           "ClientToScreen|0xD",
           "ShowCursor|0x20",
-          "GetCursorPos|0x1D",
           "GetSystemMetrics|0x17"
         ],
         "LoD/1.14c": [
-          "GetSystemMetrics|0x17",
-          "ClientToScreen|0xD",
           "ShowCursor|0x20",
-          "GetCursorPos|0x1D"
+          "GetCursorPos|0x1D",
+          "GetSystemMetrics|0x17",
+          "ClientToScreen|0xD"
         ],
         "LoD/1.14d": [
-          "GetSystemMetrics|0x17",
           "GetCursorPos|0x1D",
           "ShowCursor|0x20",
+          "GetSystemMetrics|0x17",
           "ClientToScreen|0xD"
         ]
       },
@@ -39277,7 +38045,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_40": {
+    "SmackW32_NOP_3c6a7c3de154": {
       "addresses": {
         "Classic/1.00": "0x10004370",
         "Classic/1.01": "0x10004370",
@@ -39352,8 +38120,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:40",
+      "method": "NOP",
+      "index": "NOP:3c6a7c3de154cf693337b527b49dfd9f0039b7093fe1812c51436b42140bc6ac",
       "indexes": {
         "EXP": "40",
         "STR": null,
@@ -40178,7 +38946,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_39": {
+    "SmackW32_STR_63fe77203292": {
       "addresses": {
         "Classic/1.00": "0x100043A0",
         "Classic/1.01": "0x100043A0",
@@ -40253,8 +39021,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "int *",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:39",
+      "method": "STR",
+      "index": "STR:63fe7720329244873317b6bd0eef2ba1",
       "indexes": {
         "EXP": "39",
         "STR": "63fe7720329244873317b6bd0eef2ba1",
@@ -40269,424 +39037,424 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ReadFile|0x38",
-          "SetFilePointer|0x56",
-          "__itoa|0x1000BA10",
-          "GetProfileIntA|0x57",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "timeGetTime|0x34",
-          "ReadFileWithBuffer|0x10004DE0",
-          "OutputDebugStringA|0x5D",
-          "GetSmackBufferOverhead|0x1000E520",
-          "CloseHandle|0x3A",
+          "DecompressSmackFrame|0x100050F0",
           "ReadSmackFrame|0x100050A0",
-          "FUN_10004c80|0x10004C80",
-          "SmackReadFrame|0x10004CB0",
-          "CreateFileA|0x5F",
-          "radmalloc|0x10001000",
-          "FindFirstSetBitAndClear|0x10005640",
-          "InitializeSmackAudioBuffer|0x10005670",
+          "ReadFileWithBuffer|0x10004DE0",
+          "SetFilePointer|0x56",
+          "OutputDebugStringA|0x5D",
           "FUN_1000e530|0x1000E530",
-          "DecompressSmackFrame|0x100050F0"
+          "ReadFile|0x38",
+          "GetProfileIntA|0x57",
+          "FindFirstSetBitAndClear|0x10005640",
+          "CreateFileA|0x5F",
+          "GetSmackBufferOverhead|0x1000E520",
+          "SmackReadFrame|0x10004CB0",
+          "timeGetTime|0x34",
+          "__itoa|0x1000BA10",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "CloseHandle|0x3A",
+          "radmalloc|0x10001000",
+          "FUN_10004c80|0x10004C80"
         ],
         "Classic/1.01": [
-          "ReadFile|0x38",
-          "ReadSmackFrame|0x100050A0",
-          "CreateFileA|0x5F",
-          "radmalloc|0x10001000",
-          "FUN_1000e530|0x1000E530",
-          "SetFilePointer|0x56",
-          "CloseHandle|0x3A",
-          "timeGetTime|0x34",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "FUN_10004c80|0x10004C80",
-          "__itoa|0x1000BA10",
-          "DecompressSmackFrame|0x100050F0",
-          "GetProfileIntA|0x57",
-          "ReadFileWithBuffer|0x10004DE0",
           "FindFirstSetBitAndClear|0x10005640",
-          "GetSmackBufferOverhead|0x1000E520",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "OutputDebugStringA|0x5D",
-          "SmackReadFrame|0x10004CB0"
-        ],
-        "Classic/1.02": [
-          "CreateFileA|0x5F",
-          "SetFilePointer|0x56",
-          "timeGetTime|0x34",
-          "ReadFileWithBuffer|0x10004DE0",
-          "ReadSmackFrame|0x100050A0",
-          "GetSmackBufferOverhead|0x1000E520",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "GetProfileIntA|0x57",
-          "FindFirstSetBitAndClear|0x10005640",
-          "SmackReadFrame|0x10004CB0",
-          "CloseHandle|0x3A",
-          "DecompressSmackFrame|0x100050F0",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "__itoa|0x1000BA10",
-          "FUN_1000e530|0x1000E530",
-          "ReadFile|0x38",
-          "FUN_10004c80|0x10004C80",
-          "OutputDebugStringA|0x5D",
-          "radmalloc|0x10001000"
-        ],
-        "Classic/1.03": [
-          "GetSmackBufferOverhead|0x1000E520",
-          "CloseHandle|0x3A",
-          "timeGetTime|0x34",
-          "CreateFileA|0x5F",
-          "ReadFileWithBuffer|0x10004DE0",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "ReadFile|0x38",
-          "FUN_1000e530|0x1000E530",
-          "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10004c80|0x10004C80",
-          "ReadSmackFrame|0x100050A0",
-          "GetProfileIntA|0x57",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "SetFilePointer|0x56",
-          "DecompressSmackFrame|0x100050F0",
-          "radmalloc|0x10001000",
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10",
-          "SmackReadFrame|0x10004CB0"
-        ],
-        "Classic/1.04c": [
-          "OutputDebugStringA|0x5D",
-          "CloseHandle|0x3A",
-          "DecompressSmackFrame|0x100050F0",
-          "SmackReadFrame|0x10004CB0",
-          "timeGetTime|0x34",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "CreateFileA|0x5F",
-          "ReadFileWithBuffer|0x10004DE0",
-          "ReadFile|0x38",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "radmalloc|0x10001000",
-          "GetProfileIntA|0x57",
-          "SetFilePointer|0x56",
-          "FindFirstSetBitAndClear|0x10005640",
-          "__itoa|0x1000BA10",
-          "FUN_1000e530|0x1000E530",
-          "GetSmackBufferOverhead|0x1000E520",
-          "ReadSmackFrame|0x100050A0",
-          "FUN_10004c80|0x10004C80"
-        ],
-        "LoD/1.07": [
-          "CreateFileA|0x5F",
-          "FUN_10004c80|0x10004C80",
-          "OutputDebugStringA|0x5D",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "GetProfileIntA|0x57",
-          "ReadSmackFrame|0x100050A0",
-          "__itoa|0x1000BA10",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "FindFirstSetBitAndClear|0x10005640",
-          "SetFilePointer|0x56",
-          "DecompressSmackFrame|0x100050F0",
-          "GetSmackBufferOverhead|0x1000E520",
-          "ReadFile|0x38",
-          "SmackReadFrame|0x10004CB0",
-          "ReadFileWithBuffer|0x10004DE0",
-          "CloseHandle|0x3A",
-          "FUN_1000e530|0x1000E530",
-          "radmalloc|0x10001000",
-          "timeGetTime|0x34"
-        ],
-        "LoD/1.08": [
-          "CloseHandle|0x3A",
-          "__itoa|0x1000BA10",
-          "SetFilePointer|0x56",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "radmalloc|0x10001000",
-          "GetSmackBufferOverhead|0x1000E520",
-          "ReadSmackFrame|0x100050A0",
-          "SmackReadFrame|0x10004CB0",
-          "FUN_1000e530|0x1000E530",
-          "CreateFileA|0x5F",
-          "FindFirstSetBitAndClear|0x10005640",
-          "ReadFileWithBuffer|0x10004DE0",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "ReadFile|0x38",
-          "timeGetTime|0x34",
-          "GetProfileIntA|0x57",
-          "DecompressSmackFrame|0x100050F0",
-          "OutputDebugStringA|0x5D",
-          "FUN_10004c80|0x10004C80"
-        ],
-        "LoD/1.09": [
-          "CreateFileA|0x5F",
-          "OutputDebugStringA|0x5D",
-          "CloseHandle|0x3A",
-          "FindFirstSetBitAndClear|0x10005640",
-          "DecompressSmackFrame|0x100050F0",
-          "timeGetTime|0x34",
           "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_1000e530|0x1000E530",
+          "OutputDebugStringA|0x5D",
           "GetProfileIntA|0x57",
-          "ReadSmackFrame|0x100050A0",
           "ReadFileWithBuffer|0x10004DE0",
-          "SmackReadFrame|0x10004CB0",
           "InitializeSmackAudioBuffer|0x10005670",
-          "__itoa|0x1000BA10",
-          "SetFilePointer|0x56",
-          "GetSmackBufferOverhead|0x1000E520",
-          "radmalloc|0x10001000",
-          "FUN_10004c80|0x10004C80",
-          "ReadFile|0x38"
-        ],
-        "LoD/1.09b": [
-          "ReadFile|0x38",
-          "SmackReadFrame|0x10004CB0",
-          "CreateFileA|0x5F",
-          "CloseHandle|0x3A",
-          "radmalloc|0x10001000",
           "ReadSmackFrame|0x100050A0",
           "DecompressSmackFrame|0x100050F0",
-          "ReadFileWithBuffer|0x10004DE0",
-          "GetSmackBufferOverhead|0x1000E520",
-          "OutputDebugStringA|0x5D",
-          "SetFilePointer|0x56",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FindFirstSetBitAndClear|0x10005640",
           "__itoa|0x1000BA10",
-          "FUN_1000e530|0x1000E530",
-          "timeGetTime|0x34",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "FUN_10004c80|0x10004C80",
-          "GetProfileIntA|0x57"
-        ],
-        "LoD/1.09d": [
-          "timeGetTime|0x34",
-          "SmackReadFrame|0x10004CB0",
-          "FindFirstSetBitAndClear|0x10005640",
-          "__itoa|0x1000BA10",
-          "GetProfileIntA|0x57",
-          "ReadSmackFrame|0x100050A0",
-          "radmalloc|0x10001000",
-          "DecompressSmackFrame|0x100050F0",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "OutputDebugStringA|0x5D",
-          "GetSmackBufferOverhead|0x1000E520",
-          "ReadFile|0x38",
-          "ReadFileWithBuffer|0x10004DE0",
-          "FUN_10004c80|0x10004C80",
-          "SetFilePointer|0x56",
-          "FUN_1000e530|0x1000E530",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseHandle|0x3A",
-          "CreateFileA|0x5F"
-        ],
-        "LoD/1.10": [
-          "CloseHandle|0x3A",
-          "ReadFileWithBuffer|0x10004DE0",
-          "OutputDebugStringA|0x5D",
-          "SetFilePointer|0x56",
-          "ReadFile|0x38",
-          "__itoa|0x1000BA10",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "SmackReadFrame|0x10004CB0",
-          "GetProfileIntA|0x57",
-          "DecompressSmackFrame|0x100050F0",
-          "FindFirstSetBitAndClear|0x10005640",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "CreateFileA|0x5F",
-          "GetSmackBufferOverhead|0x1000E520",
-          "FUN_1000e530|0x1000E530",
-          "radmalloc|0x10001000",
-          "FUN_10004c80|0x10004C80",
-          "ReadSmackFrame|0x100050A0",
-          "timeGetTime|0x34"
-        ],
-        "LoD/1.11": [
-          "ReadFileWithBuffer|0x10004DE0",
-          "ReadSmackFrame|0x100050A0",
-          "GetProfileIntA|0x57",
-          "FindFirstSetBitAndClear|0x10005640",
-          "SetFilePointer|0x56",
-          "FUN_10004c80|0x10004C80",
-          "timeGetTime|0x34",
-          "OutputDebugStringA|0x5D",
-          "SmackReadFrame|0x10004CB0",
-          "GetSmackBufferOverhead|0x1000E520",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "radmalloc|0x10001000",
-          "__itoa|0x1000BA10",
-          "CloseHandle|0x3A",
-          "CreateFileA|0x5F",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "DecompressSmackFrame|0x100050F0",
-          "FUN_1000e530|0x1000E530",
-          "ReadFile|0x38"
-        ],
-        "LoD/1.11b": [
-          "FUN_1000e530|0x1000E530",
-          "GetProfileIntA|0x57",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseHandle|0x3A",
-          "FUN_10004c80|0x10004C80",
-          "radmalloc|0x10001000",
-          "ReadFileWithBuffer|0x10004DE0",
-          "SetFilePointer|0x56",
-          "DecompressSmackFrame|0x100050F0",
-          "GetSmackBufferOverhead|0x1000E520",
-          "ReadFile|0x38",
-          "timeGetTime|0x34",
-          "ReadSmackFrame|0x100050A0",
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D",
-          "FindFirstSetBitAndClear|0x10005640",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "SmackReadFrame|0x10004CB0",
-          "CreateFileA|0x5F"
-        ],
-        "LoD/1.12a": [
-          "__itoa|0x1000BA10",
-          "timeGetTime|0x34",
-          "FUN_10004c80|0x10004C80",
-          "FindFirstSetBitAndClear|0x10005640",
-          "GetProfileIntA|0x57",
-          "ReadFile|0x38",
-          "DecompressSmackFrame|0x100050F0",
-          "ReadFileWithBuffer|0x10004DE0",
-          "GetSmackBufferOverhead|0x1000E520",
-          "FUN_1000e530|0x1000E530",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "CloseHandle|0x3A",
-          "radmalloc|0x10001000",
-          "SmackReadFrame|0x10004CB0",
-          "CreateFileA|0x5F",
-          "ReadSmackFrame|0x100050A0",
-          "SetFilePointer|0x56",
-          "OutputDebugStringA|0x5D",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.13c": [
-          "ReadFile|0x38",
-          "CloseHandle|0x3A",
-          "OutputDebugStringA|0x5D",
-          "FUN_10004c80|0x10004C80",
-          "GetProfileIntA|0x57",
-          "timeGetTime|0x34",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "SmackReadFrame|0x10004CB0",
-          "radmalloc|0x10001000",
-          "DecompressSmackFrame|0x100050F0",
-          "SetFilePointer|0x56",
-          "CreateFileA|0x5F",
-          "GetSmackBufferOverhead|0x1000E520",
-          "ReadSmackFrame|0x100050A0",
-          "ReadFileWithBuffer|0x10004DE0",
-          "FUN_1000e530|0x1000E530",
-          "FindFirstSetBitAndClear|0x10005640",
-          "__itoa|0x1000BA10",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.13d": [
-          "OutputDebugStringA|0x5D",
-          "FindFirstSetBitAndClear|0x10005640",
-          "ReadFile|0x38",
-          "FUN_1000e530|0x1000E530",
-          "radmalloc|0x10001000",
-          "timeGetTime|0x34",
-          "SmackReadFrame|0x10004CB0",
-          "CreateFileA|0x5F",
-          "GetSmackBufferOverhead|0x1000E520",
-          "FUN_10004c80|0x10004C80",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "CloseHandle|0x3A",
-          "DecompressSmackFrame|0x100050F0",
-          "__itoa|0x1000BA10",
-          "ReadFileWithBuffer|0x10004DE0",
-          "SetFilePointer|0x56",
-          "ReadSmackFrame|0x100050A0",
-          "GetProfileIntA|0x57",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.14a": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "SmackReadFrame|0x10004CB0",
-          "radmalloc|0x10001000",
-          "ReadFileWithBuffer|0x10004DE0",
-          "CloseHandle|0x3A",
-          "GetProfileIntA|0x57",
-          "FUN_1000e530|0x1000E530",
-          "FUN_10004c80|0x10004C80",
-          "ReadFile|0x38",
-          "CreateFileA|0x5F",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "__itoa|0x1000BA10",
-          "SetFilePointer|0x56",
-          "OutputDebugStringA|0x5D",
-          "ReadSmackFrame|0x100050A0",
-          "GetSmackBufferOverhead|0x1000E520",
-          "timeGetTime|0x34",
-          "FindFirstSetBitAndClear|0x10005640",
-          "DecompressSmackFrame|0x100050F0"
-        ],
-        "LoD/1.14b": [
-          "radmalloc|0x10001000",
-          "ReadFileWithBuffer|0x10004DE0",
-          "CloseHandle|0x3A",
-          "CreateFileA|0x5F",
-          "OutputDebugStringA|0x5D",
-          "SetFilePointer|0x56",
-          "ReadFile|0x38",
-          "FindFirstSetBitAndClear|0x10005640",
-          "SmackReadFrame|0x10004CB0",
-          "FUN_10004c80|0x10004C80",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "__itoa|0x1000BA10",
-          "DecompressSmackFrame|0x100050F0",
-          "FUN_1000e530|0x1000E530",
-          "timeGetTime|0x34",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "GetProfileIntA|0x57",
-          "ReadSmackFrame|0x100050A0",
-          "GetSmackBufferOverhead|0x1000E520"
-        ],
-        "LoD/1.14c": [
-          "FindFirstSetBitAndClear|0x10005640",
-          "radmalloc|0x10001000",
-          "__itoa|0x1000BA10",
-          "FUN_1000e530|0x1000E530",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "SmackReadFrame|0x10004CB0",
-          "FUN_10004c80|0x10004C80",
-          "GetSmackBufferOverhead|0x1000E520",
-          "ReadFileWithBuffer|0x10004DE0",
-          "ReadSmackFrame|0x100050A0",
-          "SetFilePointer|0x56",
           "timeGetTime|0x34",
           "CreateFileA|0x5F",
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_10004c80|0x10004C80",
           "ReadFile|0x38",
-          "OutputDebugStringA|0x5D",
-          "DecompressSmackFrame|0x100050F0",
-          "GetProfileIntA|0x57",
+          "SmackReadFrame|0x10004CB0",
+          "GetSmackBufferOverhead|0x1000E520",
+          "radmalloc|0x10001000",
+          "SetFilePointer|0x56",
           "CloseHandle|0x3A"
         ],
-        "LoD/1.14d": [
+        "Classic/1.02": [
+          "SetFilePointer|0x56",
+          "GetProfileIntA|0x57",
+          "ReadSmackFrame|0x100050A0",
+          "OutputDebugStringA|0x5D",
+          "DecompressSmackFrame|0x100050F0",
+          "CreateFileA|0x5F",
+          "ReadFileWithBuffer|0x10004DE0",
+          "radmalloc|0x10001000",
+          "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10004c80|0x10004C80",
+          "CloseHandle|0x3A",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "timeGetTime|0x34",
+          "__itoa|0x1000BA10",
+          "GetSmackBufferOverhead|0x1000E520",
+          "SmackReadFrame|0x10004CB0",
+          "FUN_1000e530|0x1000E530",
+          "ReadFile|0x38",
+          "InitializeSmackAudioBuffer|0x10005670"
+        ],
+        "Classic/1.03": [
+          "GetProfileIntA|0x57",
+          "OutputDebugStringA|0x5D",
+          "radmalloc|0x10001000",
+          "ReadFileWithBuffer|0x10004DE0",
+          "SetFilePointer|0x56",
+          "__itoa|0x1000BA10",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "ReadSmackFrame|0x100050A0",
+          "DecompressSmackFrame|0x100050F0",
+          "timeGetTime|0x34",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "CloseHandle|0x3A",
+          "SmackReadFrame|0x10004CB0",
+          "FUN_1000e530|0x1000E530",
+          "GetSmackBufferOverhead|0x1000E520",
+          "FUN_10004c80|0x10004C80",
+          "FindFirstSetBitAndClear|0x10005640",
+          "ReadFile|0x38",
+          "CreateFileA|0x5F"
+        ],
+        "Classic/1.04c": [
+          "__itoa|0x1000BA10",
           "ReadFile|0x38",
           "radmalloc|0x10001000",
           "FUN_10004c80|0x10004C80",
-          "FUN_1000e530|0x1000E530",
-          "ReadSmackFrame|0x100050A0",
-          "FindFirstSetBitAndClear|0x10005640",
-          "SetFilePointer|0x56",
-          "CloseHandle|0x3A",
-          "SmackReadFrame|0x10004CB0",
-          "__itoa|0x1000BA10",
-          "CreateFileA|0x5F",
-          "GetSmackBufferOverhead|0x1000E520",
-          "timeGetTime|0x34",
           "DecompressSmackFrame|0x100050F0",
           "OutputDebugStringA|0x5D",
+          "CreateFileA|0x5F",
+          "GetSmackBufferOverhead|0x1000E520",
+          "ReadSmackFrame|0x100050A0",
+          "SmackReadFrame|0x10004CB0",
+          "timeGetTime|0x34",
           "GetProfileIntA|0x57",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "CloseHandle|0x3A",
+          "FUN_1000e530|0x1000E530",
+          "SetFilePointer|0x56",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "ReadFileWithBuffer|0x10004DE0",
+          "FindFirstSetBitAndClear|0x10005640"
+        ],
+        "LoD/1.07": [
+          "GetProfileIntA|0x57",
+          "FUN_10004c80|0x10004C80",
+          "ReadFile|0x38",
+          "CreateFileA|0x5F",
+          "CloseHandle|0x3A",
           "ApplyPresetUnitTileAttributes|0x10001040",
           "InitializeSmackAudioBuffer|0x10005670",
-          "ReadFileWithBuffer|0x10004DE0"
+          "OutputDebugStringA|0x5D",
+          "__itoa|0x1000BA10",
+          "ReadSmackFrame|0x100050A0",
+          "SmackReadFrame|0x10004CB0",
+          "ReadFileWithBuffer|0x10004DE0",
+          "FUN_1000e530|0x1000E530",
+          "FindFirstSetBitAndClear|0x10005640",
+          "SetFilePointer|0x56",
+          "GetSmackBufferOverhead|0x1000E520",
+          "timeGetTime|0x34",
+          "radmalloc|0x10001000",
+          "DecompressSmackFrame|0x100050F0"
+        ],
+        "LoD/1.08": [
+          "CreateFileA|0x5F",
+          "ReadSmackFrame|0x100050A0",
+          "radmalloc|0x10001000",
+          "ReadFile|0x38",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "OutputDebugStringA|0x5D",
+          "timeGetTime|0x34",
+          "FUN_10004c80|0x10004C80",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "DecompressSmackFrame|0x100050F0",
+          "__itoa|0x1000BA10",
+          "GetSmackBufferOverhead|0x1000E520",
+          "ReadFileWithBuffer|0x10004DE0",
+          "GetProfileIntA|0x57",
+          "FUN_1000e530|0x1000E530",
+          "CloseHandle|0x3A",
+          "SmackReadFrame|0x10004CB0",
+          "FindFirstSetBitAndClear|0x10005640",
+          "SetFilePointer|0x56"
+        ],
+        "LoD/1.09": [
+          "FUN_10004c80|0x10004C80",
+          "CloseHandle|0x3A",
+          "ReadFile|0x38",
+          "SmackReadFrame|0x10004CB0",
+          "ReadFileWithBuffer|0x10004DE0",
+          "FUN_1000e530|0x1000E530",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "ReadSmackFrame|0x100050A0",
+          "GetSmackBufferOverhead|0x1000E520",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "SetFilePointer|0x56",
+          "radmalloc|0x10001000",
+          "__itoa|0x1000BA10",
+          "FindFirstSetBitAndClear|0x10005640",
+          "timeGetTime|0x34",
+          "GetProfileIntA|0x57",
+          "OutputDebugStringA|0x5D",
+          "CreateFileA|0x5F",
+          "DecompressSmackFrame|0x100050F0"
+        ],
+        "LoD/1.09b": [
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "GetSmackBufferOverhead|0x1000E520",
+          "FUN_10004c80|0x10004C80",
+          "DecompressSmackFrame|0x100050F0",
+          "FindFirstSetBitAndClear|0x10005640",
+          "CreateFileA|0x5F",
+          "CloseHandle|0x3A",
+          "GetProfileIntA|0x57",
+          "__itoa|0x1000BA10",
+          "ReadSmackFrame|0x100050A0",
+          "ReadFileWithBuffer|0x10004DE0",
+          "ReadFile|0x38",
+          "SetFilePointer|0x56",
+          "timeGetTime|0x34",
+          "SmackReadFrame|0x10004CB0",
+          "radmalloc|0x10001000",
+          "FUN_1000e530|0x1000E530",
+          "OutputDebugStringA|0x5D",
+          "InitializeSmackAudioBuffer|0x10005670"
+        ],
+        "LoD/1.09d": [
+          "FindFirstSetBitAndClear|0x10005640",
+          "CreateFileA|0x5F",
+          "FUN_10004c80|0x10004C80",
+          "OutputDebugStringA|0x5D",
+          "GetProfileIntA|0x57",
+          "radmalloc|0x10001000",
+          "ReadFileWithBuffer|0x10004DE0",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "SmackReadFrame|0x10004CB0",
+          "FUN_1000e530|0x1000E530",
+          "DecompressSmackFrame|0x100050F0",
+          "timeGetTime|0x34",
+          "SetFilePointer|0x56",
+          "ReadFile|0x38",
+          "ReadSmackFrame|0x100050A0",
+          "__itoa|0x1000BA10",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "GetSmackBufferOverhead|0x1000E520",
+          "CloseHandle|0x3A"
+        ],
+        "LoD/1.10": [
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "timeGetTime|0x34",
+          "FUN_1000e530|0x1000E530",
+          "SmackReadFrame|0x10004CB0",
+          "FindFirstSetBitAndClear|0x10005640",
+          "ReadSmackFrame|0x100050A0",
+          "OutputDebugStringA|0x5D",
+          "CloseHandle|0x3A",
+          "FUN_10004c80|0x10004C80",
+          "ReadFileWithBuffer|0x10004DE0",
+          "GetProfileIntA|0x57",
+          "CreateFileA|0x5F",
+          "radmalloc|0x10001000",
+          "SetFilePointer|0x56",
+          "GetSmackBufferOverhead|0x1000E520",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "DecompressSmackFrame|0x100050F0",
+          "ReadFile|0x38",
+          "__itoa|0x1000BA10"
+        ],
+        "LoD/1.11": [
+          "CloseHandle|0x3A",
+          "timeGetTime|0x34",
+          "FUN_1000e530|0x1000E530",
+          "DecompressSmackFrame|0x100050F0",
+          "SmackReadFrame|0x10004CB0",
+          "FindFirstSetBitAndClear|0x10005640",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "ReadFile|0x38",
+          "SetFilePointer|0x56",
+          "FUN_10004c80|0x10004C80",
+          "ReadSmackFrame|0x100050A0",
+          "OutputDebugStringA|0x5D",
+          "CreateFileA|0x5F",
+          "GetProfileIntA|0x57",
+          "__itoa|0x1000BA10",
+          "ReadFileWithBuffer|0x10004DE0",
+          "GetSmackBufferOverhead|0x1000E520",
+          "radmalloc|0x10001000"
+        ],
+        "LoD/1.11b": [
+          "SetFilePointer|0x56",
+          "CreateFileA|0x5F",
+          "FindFirstSetBitAndClear|0x10005640",
+          "OutputDebugStringA|0x5D",
+          "FUN_10004c80|0x10004C80",
+          "ReadFile|0x38",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "ReadSmackFrame|0x100050A0",
+          "GetSmackBufferOverhead|0x1000E520",
+          "CloseHandle|0x3A",
+          "GetProfileIntA|0x57",
+          "SmackReadFrame|0x10004CB0",
+          "radmalloc|0x10001000",
+          "ReadFileWithBuffer|0x10004DE0",
+          "__itoa|0x1000BA10",
+          "FUN_1000e530|0x1000E530",
+          "timeGetTime|0x34",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "DecompressSmackFrame|0x100050F0"
+        ],
+        "LoD/1.12a": [
+          "timeGetTime|0x34",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "CreateFileA|0x5F",
+          "FUN_10004c80|0x10004C80",
+          "FUN_1000e530|0x1000E530",
+          "__itoa|0x1000BA10",
+          "GetSmackBufferOverhead|0x1000E520",
+          "DecompressSmackFrame|0x100050F0",
+          "SmackReadFrame|0x10004CB0",
+          "FindFirstSetBitAndClear|0x10005640",
+          "CloseHandle|0x3A",
+          "radmalloc|0x10001000",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "ReadFile|0x38",
+          "ReadSmackFrame|0x100050A0",
+          "OutputDebugStringA|0x5D",
+          "SetFilePointer|0x56",
+          "ReadFileWithBuffer|0x10004DE0",
+          "GetProfileIntA|0x57"
+        ],
+        "LoD/1.13c": [
+          "CloseHandle|0x3A",
+          "FUN_10004c80|0x10004C80",
+          "FUN_1000e530|0x1000E530",
+          "radmalloc|0x10001000",
+          "timeGetTime|0x34",
+          "GetProfileIntA|0x57",
+          "__itoa|0x1000BA10",
+          "ReadFileWithBuffer|0x10004DE0",
+          "CreateFileA|0x5F",
+          "SmackReadFrame|0x10004CB0",
+          "SetFilePointer|0x56",
+          "ReadFile|0x38",
+          "DecompressSmackFrame|0x100050F0",
+          "ReadSmackFrame|0x100050A0",
+          "FindFirstSetBitAndClear|0x10005640",
+          "OutputDebugStringA|0x5D",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "GetSmackBufferOverhead|0x1000E520",
+          "InitializeSmackAudioBuffer|0x10005670"
+        ],
+        "LoD/1.13d": [
+          "ReadFileWithBuffer|0x10004DE0",
+          "SmackReadFrame|0x10004CB0",
+          "DecompressSmackFrame|0x100050F0",
+          "OutputDebugStringA|0x5D",
+          "GetSmackBufferOverhead|0x1000E520",
+          "SetFilePointer|0x56",
+          "radmalloc|0x10001000",
+          "FUN_1000e530|0x1000E530",
+          "ReadFile|0x38",
+          "CloseHandle|0x3A",
+          "__itoa|0x1000BA10",
+          "CreateFileA|0x5F",
+          "timeGetTime|0x34",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "ReadSmackFrame|0x100050A0",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "GetProfileIntA|0x57",
+          "FUN_10004c80|0x10004C80",
+          "FindFirstSetBitAndClear|0x10005640"
+        ],
+        "LoD/1.14a": [
+          "SmackReadFrame|0x10004CB0",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_10004c80|0x10004C80",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "timeGetTime|0x34",
+          "FindFirstSetBitAndClear|0x10005640",
+          "CloseHandle|0x3A",
+          "ReadFile|0x38",
+          "ReadFileWithBuffer|0x10004DE0",
+          "ReadSmackFrame|0x100050A0",
+          "SetFilePointer|0x56",
+          "radmalloc|0x10001000",
+          "GetProfileIntA|0x57",
+          "OutputDebugStringA|0x5D",
+          "FUN_1000e530|0x1000E530",
+          "DecompressSmackFrame|0x100050F0",
+          "CreateFileA|0x5F",
+          "GetSmackBufferOverhead|0x1000E520",
+          "__itoa|0x1000BA10"
+        ],
+        "LoD/1.14b": [
+          "GetProfileIntA|0x57",
+          "FUN_1000e530|0x1000E530",
+          "DecompressSmackFrame|0x100050F0",
+          "FUN_10004c80|0x10004C80",
+          "__itoa|0x1000BA10",
+          "radmalloc|0x10001000",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "SetFilePointer|0x56",
+          "GetSmackBufferOverhead|0x1000E520",
+          "FindFirstSetBitAndClear|0x10005640",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "OutputDebugStringA|0x5D",
+          "ReadSmackFrame|0x100050A0",
+          "timeGetTime|0x34",
+          "ReadFile|0x38",
+          "CloseHandle|0x3A",
+          "ReadFileWithBuffer|0x10004DE0",
+          "SmackReadFrame|0x10004CB0",
+          "CreateFileA|0x5F"
+        ],
+        "LoD/1.14c": [
+          "GetSmackBufferOverhead|0x1000E520",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "__itoa|0x1000BA10",
+          "CloseHandle|0x3A",
+          "FUN_10004c80|0x10004C80",
+          "FindFirstSetBitAndClear|0x10005640",
+          "CreateFileA|0x5F",
+          "SetFilePointer|0x56",
+          "ReadFile|0x38",
+          "timeGetTime|0x34",
+          "DecompressSmackFrame|0x100050F0",
+          "SmackReadFrame|0x10004CB0",
+          "ReadFileWithBuffer|0x10004DE0",
+          "GetProfileIntA|0x57",
+          "ReadSmackFrame|0x100050A0",
+          "OutputDebugStringA|0x5D",
+          "radmalloc|0x10001000",
+          "FUN_1000e530|0x1000E530"
+        ],
+        "LoD/1.14d": [
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "__itoa|0x1000BA10",
+          "FUN_1000e530|0x1000E530",
+          "SetFilePointer|0x56",
+          "GetSmackBufferOverhead|0x1000E520",
+          "DecompressSmackFrame|0x100050F0",
+          "GetProfileIntA|0x57",
+          "timeGetTime|0x34",
+          "ReadFileWithBuffer|0x10004DE0",
+          "FindFirstSetBitAndClear|0x10005640",
+          "InitializeSmackAudioBuffer|0x10005670",
+          "CloseHandle|0x3A",
+          "radmalloc|0x10001000",
+          "FUN_10004c80|0x10004C80",
+          "CreateFileA|0x5F",
+          "ReadSmackFrame|0x100050A0",
+          "OutputDebugStringA|0x5D",
+          "ReadFile|0x38",
+          "SmackReadFrame|0x10004CB0"
         ]
       },
       "strings": {
@@ -42976,1131 +41744,6 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_NOP_bf279459954d": {
-      "addresses": {
-        "Classic/1.00": "0x10004C80",
-        "Classic/1.01": "0x10004C80",
-        "Classic/1.02": "0x10004C80",
-        "Classic/1.03": "0x10004C80",
-        "Classic/1.04c": "0x10004C80",
-        "LoD/1.07": "0x10004C80",
-        "LoD/1.08": "0x10004C80",
-        "LoD/1.09": "0x10004C80",
-        "LoD/1.09b": "0x10004C80",
-        "LoD/1.09d": "0x10004C80",
-        "LoD/1.10": "0x10004C80",
-        "LoD/1.11": "0x10004C80",
-        "LoD/1.11b": "0x10004C80",
-        "LoD/1.12a": "0x10004C80",
-        "LoD/1.13c": "0x10004C80",
-        "LoD/1.13d": "0x10004C80",
-        "LoD/1.14a": "0x10004C80",
-        "LoD/1.14b": "0x10004C80",
-        "LoD/1.14c": "0x10004C80",
-        "LoD/1.14d": "0x10004C80",
-        "LoD/PD2": "0x02E24C80"
-      },
-      "rvas": {
-        "Classic/1.00": "0x4C80",
-        "Classic/1.01": "0x4C80",
-        "Classic/1.02": "0x4C80",
-        "Classic/1.03": "0x4C80",
-        "Classic/1.04c": "0x4C80",
-        "LoD/1.07": "0x4C80",
-        "LoD/1.08": "0x4C80",
-        "LoD/1.09": "0x4C80",
-        "LoD/1.09b": "0x4C80",
-        "LoD/1.09d": "0x4C80",
-        "LoD/1.10": "0x4C80",
-        "LoD/1.11": "0x4C80",
-        "LoD/1.11b": "0x4C80",
-        "LoD/1.12a": "0x4C80",
-        "LoD/1.13c": "0x4C80",
-        "LoD/1.13d": "0x4C80",
-        "LoD/1.14a": "0x4C80",
-        "LoD/1.14b": "0x4C80",
-        "LoD/1.14c": "0x4C80",
-        "LoD/1.14d": "0x4C80",
-        "LoD/PD2": "0x4C80"
-      },
-      "sizes": {
-        "Classic/1.00": 48,
-        "Classic/1.01": 48,
-        "Classic/1.02": 48,
-        "Classic/1.03": 48,
-        "Classic/1.04c": 48,
-        "LoD/1.07": 48,
-        "LoD/1.08": 48,
-        "LoD/1.09": 48,
-        "LoD/1.09b": 48,
-        "LoD/1.09d": 48,
-        "LoD/1.10": 48,
-        "LoD/1.11": 48,
-        "LoD/1.11b": 48,
-        "LoD/1.12a": 48,
-        "LoD/1.13c": 48,
-        "LoD/1.13d": 48,
-        "LoD/1.14a": 48,
-        "LoD/1.14b": 48,
-        "LoD/1.14c": 48,
-        "LoD/1.14d": 48,
-        "LoD/PD2": 48
-      },
-      "calling_convention": "__cdecl",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:bf279459954dcef360d53b69a3fc5b4ff860d17b2da959a0e5ccaadbd7a94f30",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "bf279459954dcef360d53b69a3fc5b4ff860d17b2da959a0e5ccaadbd7a94f30",
-        "CAL": null,
-        "API": "a9a858c71208a7ec98494372be7b0971",
-        "APS": null,
-        "CON": "4d305a36ecf24ce7514769660e0a323f",
-        "MNE": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "CFG": "10bed4a01ccf522db5916f2aa87b4d51",
-        "PRO": "59e750d295abf131f398bcb6a5ba614d"
-      },
-      "display_name": "NOP_bf279459954dcef3",
-      "callees": {
-        "Classic/1.00": [
-          "radmalloc|0x10001000"
-        ],
-        "Classic/1.01": [
-          "radmalloc|0x10001000"
-        ],
-        "Classic/1.02": [
-          "radmalloc|0x10001000"
-        ],
-        "Classic/1.03": [
-          "radmalloc|0x10001000"
-        ],
-        "Classic/1.04c": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.07": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.08": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.09": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.09b": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.09d": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.10": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.11": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.11b": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.12a": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.13c": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.13d": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.14a": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.14b": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.14c": [
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.14d": [
-          "radmalloc|0x10001000"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10005670|0x10005670",
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00"
-        ],
-        "Classic/1.01": [
-          "_SmackGetTrackData@12|0x10007070",
-          "FUN_10005670|0x10005670",
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0"
-        ],
-        "Classic/1.02": [
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10005670|0x10005670"
-        ],
-        "Classic/1.03": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00",
-          "FUN_10005670|0x10005670",
-          "_SmackGetTrackData@12|0x10007070"
-        ],
-        "Classic/1.04c": [
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToScreen@28|0x100064E0",
-          "FUN_10005670|0x10005670",
-          "_SmackGetTrackData@12|0x10007070"
-        ],
-        "LoD/1.07": [
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToScreen@28|0x100064E0",
-          "InitializeSmackAudioBuffer|0x10005670",
-          "_SmackGetTrackData@12|0x10007070"
-        ],
-        "LoD/1.08": [
-          "_SmackGetTrackData@12|0x10007070",
-          "FUN_10005670|0x10005670",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackToScreen@28|0x100064E0"
-        ],
-        "LoD/1.09": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToBuffer@28|0x10006B00",
-          "FUN_10005670|0x10005670"
-        ],
-        "LoD/1.09b": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToBuffer@28|0x10006B00",
-          "FUN_10005670|0x10005670"
-        ],
-        "LoD/1.09d": [
-          "FUN_10005670|0x10005670",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToScreen@28|0x100064E0"
-        ],
-        "LoD/1.10": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackToScreen@28|0x100064E0",
-          "FUN_10005670|0x10005670",
-          "_SmackToBuffer@28|0x10006B00"
-        ],
-        "LoD/1.11": [
-          "_SmackToScreen@28|0x100064E0",
-          "FUN_10005670|0x10005670",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackGetTrackData@12|0x10007070"
-        ],
-        "LoD/1.11b": [
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToScreen@28|0x100064E0",
-          "FUN_10005670|0x10005670"
-        ],
-        "LoD/1.12a": [
-          "FUN_10005670|0x10005670",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToScreen@28|0x100064E0"
-        ],
-        "LoD/1.13c": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackGetTrackData@12|0x10007070",
-          "FUN_10005670|0x10005670",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToBuffer@28|0x10006B00"
-        ],
-        "LoD/1.13d": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackToBuffer@28|0x10006B00",
-          "FUN_10005670|0x10005670"
-        ],
-        "LoD/1.14a": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackGetTrackData@12|0x10007070",
-          "FUN_10005670|0x10005670"
-        ],
-        "LoD/1.14b": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00",
-          "FUN_10005670|0x10005670"
-        ],
-        "LoD/1.14c": [
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10005670|0x10005670",
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00"
-        ],
-        "LoD/1.14d": [
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10005670|0x10005670",
-          "_SmackToBuffer@28|0x10006B00"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "Classic/1.01": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "Classic/1.02": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "Classic/1.03": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "Classic/1.04c": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.07": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.08": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.09": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.09b": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.09d": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.10": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.11": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.11b": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.12a": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.13c": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.13d": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.14a": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.14b": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.14c": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ],
-        "LoD/1.14d": [
-          "0x4C80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x4C84|PUSH|EBX",
-          "0x4C85|MOV|EDX, dword ptr [ESP + 0xc]",
-          "0x4C89|NOP|",
-          "0x4C8A|MOV|EBX, dword ptr [ECX + 0x4c0]",
-          "0x4C90|MOV|EAX, dword ptr [ECX + 0x480]",
-          "0x4C96|ADD|EAX, EDX",
-          "0x4C98|MOV|dword ptr [ECX + 0x480], EAX",
-          "0x4C9E|CMP|EBX, EAX",
-          "0x4CA0|JNC|0x10004ca8",
-          "0x4CA2|MOV|dword ptr [ECX + 0x4c0], EAX",
-          "0x4CA8|PUSH|EDX",
-          "0x4CA9|CALL|0x10001000",
-          "0x4CAE|POP|EBX",
-          "0x4CAF|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 15,
-        "Classic/1.01": 15,
-        "Classic/1.02": 15,
-        "Classic/1.03": 15,
-        "Classic/1.04c": 15,
-        "LoD/1.07": 15,
-        "LoD/1.08": 15,
-        "LoD/1.09": 15,
-        "LoD/1.09b": 15,
-        "LoD/1.09d": 15,
-        "LoD/1.10": 15,
-        "LoD/1.11": 15,
-        "LoD/1.11b": 15,
-        "LoD/1.12a": 15,
-        "LoD/1.13c": 15,
-        "LoD/1.13d": 15,
-        "LoD/1.14a": 15,
-        "LoD/1.14b": 15,
-        "LoD/1.14c": 15,
-        "LoD/1.14d": 15
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 12,
-        "Classic/1.01": 12,
-        "Classic/1.02": 12,
-        "Classic/1.03": 12,
-        "Classic/1.04c": 12,
-        "LoD/1.07": 12,
-        "LoD/1.08": 12,
-        "LoD/1.09": 12,
-        "LoD/1.09b": 12,
-        "LoD/1.09d": 12,
-        "LoD/1.10": 12,
-        "LoD/1.11": 12,
-        "LoD/1.11b": 12,
-        "LoD/1.12a": 12,
-        "LoD/1.13c": 12,
-        "LoD/1.13d": 12,
-        "LoD/1.14a": 12,
-        "LoD/1.14b": 12,
-        "LoD/1.14c": 12,
-        "LoD/1.14d": 12
-      },
-      "loop_counts": {
-        "Classic/1.00": 0,
-        "Classic/1.01": 0,
-        "Classic/1.02": 0,
-        "Classic/1.03": 0,
-        "Classic/1.04c": 0,
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0,
-        "LoD/1.14a": 0,
-        "LoD/1.14b": 0,
-        "LoD/1.14c": 0,
-        "LoD/1.14d": 0,
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "Classic/1.01": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "Classic/1.02": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "Classic/1.03": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "Classic/1.04c": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.07": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.08": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.09": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.09b": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.09d": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.10": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.11": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.11b": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.12a": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.13c": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.13d": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.14a": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.14b": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.14c": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/1.14d": "d91af7ecf28ef8d229a9530fdd2a4ab6",
-        "LoD/PD2": "d91af7ecf28ef8d229a9530fdd2a4ab6"
-      },
-      "constants": {
-        "Classic/1.00": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "Classic/1.01": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "Classic/1.02": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "Classic/1.03": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "Classic/1.04c": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.07": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.08": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.09": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.09b": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.09d": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.10": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.11": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.11b": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.12a": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.13c": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.13d": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.14a": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.14b": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.14c": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ],
-        "LoD/1.14d": [
-          "0x4C8A||0x4C0",
-          "0x4C90||0x480",
-          "0x4C98||0x480",
-          "0x4CA2||0x4C0"
-        ]
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "_radmalloc@4"
-        ],
-        "Classic/1.01": [
-          "_radmalloc@4"
-        ],
-        "Classic/1.02": [
-          "_radmalloc@4"
-        ],
-        "Classic/1.03": [
-          "_radmalloc@4"
-        ],
-        "Classic/1.04c": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.07": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.08": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.09": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.09b": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.09d": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.10": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.11": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.11b": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.12a": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.13c": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.13d": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.14a": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.14b": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.14c": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.14d": [
-          "_radmalloc@4"
-        ],
-        "LoD/PD2": [
-          "_radmalloc@4"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "caller_counts": {
-        "Classic/1.00": 5,
-        "Classic/1.01": 5,
-        "Classic/1.02": 5,
-        "Classic/1.03": 5,
-        "Classic/1.04c": 5,
-        "LoD/1.07": 5,
-        "LoD/1.08": 5,
-        "LoD/1.09": 5,
-        "LoD/1.09b": 5,
-        "LoD/1.09d": 5,
-        "LoD/1.10": 5,
-        "LoD/1.11": 5,
-        "LoD/1.11b": 5,
-        "LoD/1.12a": 5,
-        "LoD/1.13c": 5,
-        "LoD/1.13d": 5,
-        "LoD/1.14a": 5,
-        "LoD/1.14b": 5,
-        "LoD/1.14c": 5,
-        "LoD/1.14d": 5
-      },
-      "constant_counts": {
-        "Classic/1.00": 4,
-        "Classic/1.01": 4,
-        "Classic/1.02": 4,
-        "Classic/1.03": 4,
-        "Classic/1.04c": 4,
-        "LoD/1.07": 4,
-        "LoD/1.08": 4,
-        "LoD/1.09": 4,
-        "LoD/1.09b": 4,
-        "LoD/1.09d": 4,
-        "LoD/1.10": 4,
-        "LoD/1.11": 4,
-        "LoD/1.11b": 4,
-        "LoD/1.12a": 4,
-        "LoD/1.13c": 4,
-        "LoD/1.13d": 4,
-        "LoD/1.14a": 4,
-        "LoD/1.14b": 4,
-        "LoD/1.14c": 4,
-        "LoD/1.14d": 4
-      },
-      "api_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 2,
-        "Classic/1.01": 2,
-        "Classic/1.02": 2,
-        "Classic/1.03": 2,
-        "Classic/1.04c": 2,
-        "LoD/1.07": 2,
-        "LoD/1.08": 2,
-        "LoD/1.09": 2,
-        "LoD/1.09b": 2,
-        "LoD/1.09d": 2,
-        "LoD/1.10": 2,
-        "LoD/1.11": 2,
-        "LoD/1.11b": 2,
-        "LoD/1.12a": 2,
-        "LoD/1.13c": 2,
-        "LoD/1.13d": 2,
-        "LoD/1.14a": 2,
-        "LoD/1.14b": 2,
-        "LoD/1.14c": 2,
-        "LoD/1.14d": 2
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "Classic/1.01": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "Classic/1.02": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "Classic/1.03": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "Classic/1.04c": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.07": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.08": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.09": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.09b": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.09d": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.10": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.11": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.11b": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.12a": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.13c": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.13d": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.14a": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.14b": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.14c": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ],
-        "LoD/1.14d": [
-          "PARAM_2",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal",
-        "Classic/1.01": "internal",
-        "Classic/1.02": "internal",
-        "Classic/1.03": "internal",
-        "Classic/1.04c": "internal",
-        "LoD/1.07": "internal",
-        "LoD/1.08": "internal",
-        "LoD/1.09": "internal",
-        "LoD/1.09b": "internal",
-        "LoD/1.09d": "internal",
-        "LoD/1.10": "internal",
-        "LoD/1.11": "internal",
-        "LoD/1.11b": "internal",
-        "LoD/1.12a": "internal",
-        "LoD/1.13c": "internal",
-        "LoD/1.13d": "internal",
-        "LoD/1.14a": "internal",
-        "LoD/1.14b": "internal",
-        "LoD/1.14c": "internal",
-        "LoD/1.14d": "internal"
-      }
-    },
     "SmackW32_NOP_5684b3cfe40c": {
       "addresses": {
         "Classic/1.00": "0x10004CB0",
@@ -44193,12 +41836,12 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ReadFile|0x38",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "Classic/1.01": [
-          "ReadFile|0x38",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "Classic/1.02": [
           "timeGetTime|0x34",
@@ -44209,8 +41852,8 @@ var FUNCTIONS_SmackW32_dll = {
           "ReadFile|0x38"
         ],
         "Classic/1.04c": [
-          "timeGetTime|0x34",
-          "ReadFile|0x38"
+          "ReadFile|0x38",
+          "timeGetTime|0x34"
         ],
         "LoD/1.07": [
           "ReadFile|0x38",
@@ -44221,20 +41864,20 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.09": [
-          "timeGetTime|0x34",
-          "ReadFile|0x38"
-        ],
-        "LoD/1.09b": [
           "ReadFile|0x38",
           "timeGetTime|0x34"
+        ],
+        "LoD/1.09b": [
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "LoD/1.09d": [
           "timeGetTime|0x34",
           "ReadFile|0x38"
         ],
         "LoD/1.10": [
-          "ReadFile|0x38",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "LoD/1.11": [
           "timeGetTime|0x34",
@@ -44253,24 +41896,24 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.13d": [
-          "ReadFile|0x38",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "LoD/1.14a": [
-          "ReadFile|0x38",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "LoD/1.14b": [
           "timeGetTime|0x34",
           "ReadFile|0x38"
         ],
         "LoD/1.14c": [
-          "timeGetTime|0x34",
-          "ReadFile|0x38"
-        ],
-        "LoD/1.14d": [
           "ReadFile|0x38",
           "timeGetTime|0x34"
+        ],
+        "LoD/1.14d": [
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ]
       },
       "callers": {
@@ -44279,12 +41922,12 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackWait@4|0x10007720"
         ],
         "Classic/1.01": [
-          "_SmackWait@4|0x10007720",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackOpen@12|0x100043A0",
+          "_SmackWait@4|0x10007720"
         ],
         "Classic/1.02": [
-          "_SmackWait@4|0x10007720",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackOpen@12|0x100043A0",
+          "_SmackWait@4|0x10007720"
         ],
         "Classic/1.03": [
           "_SmackOpen@12|0x100043A0",
@@ -44295,28 +41938,28 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackWait@4|0x10007720"
         ],
         "LoD/1.07": [
-          "_SmackWait@4|0x10007720",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackOpen@12|0x100043A0",
+          "_SmackWait@4|0x10007720"
         ],
         "LoD/1.08": [
-          "_SmackWait@4|0x10007720",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackOpen@12|0x100043A0",
+          "_SmackWait@4|0x10007720"
         ],
         "LoD/1.09": [
-          "_SmackWait@4|0x10007720",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackOpen@12|0x100043A0",
+          "_SmackWait@4|0x10007720"
         ],
         "LoD/1.09b": [
+          "_SmackOpen@12|0x100043A0",
+          "_SmackWait@4|0x10007720"
+        ],
+        "LoD/1.09d": [
           "_SmackWait@4|0x10007720",
           "_SmackOpen@12|0x100043A0"
         ],
-        "LoD/1.09d": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackWait@4|0x10007720"
-        ],
         "LoD/1.10": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackWait@4|0x10007720"
+          "_SmackWait@4|0x10007720",
+          "_SmackOpen@12|0x100043A0"
         ],
         "LoD/1.11": [
           "_SmackOpen@12|0x100043A0",
@@ -44327,8 +41970,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackOpen@12|0x100043A0"
         ],
         "LoD/1.12a": [
-          "_SmackWait@4|0x10007720",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackOpen@12|0x100043A0",
+          "_SmackWait@4|0x10007720"
         ],
         "LoD/1.13c": [
           "_SmackOpen@12|0x100043A0",
@@ -44343,8 +41986,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackOpen@12|0x100043A0"
         ],
         "LoD/1.14b": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackWait@4|0x10007720"
+          "_SmackWait@4|0x10007720",
+          "_SmackOpen@12|0x100043A0"
         ],
         "LoD/1.14c": [
           "_SmackOpen@12|0x100043A0",
@@ -45758,12 +43401,12 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ReadFile|0x38",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "Classic/1.01": [
-          "ReadFile|0x38",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "Classic/1.02": [
           "timeGetTime|0x34",
@@ -45774,8 +43417,8 @@ var FUNCTIONS_SmackW32_dll = {
           "ReadFile|0x38"
         ],
         "Classic/1.04c": [
-          "timeGetTime|0x34",
-          "ReadFile|0x38"
+          "ReadFile|0x38",
+          "timeGetTime|0x34"
         ],
         "LoD/1.07": [
           "ReadFile|0x38",
@@ -45786,20 +43429,20 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.09": [
-          "timeGetTime|0x34",
-          "ReadFile|0x38"
-        ],
-        "LoD/1.09b": [
           "ReadFile|0x38",
           "timeGetTime|0x34"
+        ],
+        "LoD/1.09b": [
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "LoD/1.09d": [
           "timeGetTime|0x34",
           "ReadFile|0x38"
         ],
         "LoD/1.10": [
-          "ReadFile|0x38",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "LoD/1.11": [
           "timeGetTime|0x34",
@@ -45818,41 +43461,41 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.13d": [
-          "ReadFile|0x38",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "LoD/1.14a": [
-          "ReadFile|0x38",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ],
         "LoD/1.14b": [
           "timeGetTime|0x34",
           "ReadFile|0x38"
         ],
         "LoD/1.14c": [
-          "timeGetTime|0x34",
-          "ReadFile|0x38"
-        ],
-        "LoD/1.14d": [
           "ReadFile|0x38",
           "timeGetTime|0x34"
+        ],
+        "LoD/1.14d": [
+          "timeGetTime|0x34",
+          "ReadFile|0x38"
         ]
       },
       "callers": {
         "Classic/1.00": [
           "_SmackOpen@12|0x100043A0",
-          "FUN_10005440|0x10005440",
-          "FUN_100050a0|0x100050A0"
+          "FUN_100050a0|0x100050A0",
+          "FUN_10005440|0x10005440"
         ],
         "Classic/1.01": [
           "FUN_100050a0|0x100050A0",
-          "FUN_10005440|0x10005440",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10005440|0x10005440"
         ],
         "Classic/1.02": [
+          "FUN_100050a0|0x100050A0",
           "FUN_10005440|0x10005440",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_100050a0|0x100050A0"
+          "_SmackOpen@12|0x100043A0"
         ],
         "Classic/1.03": [
           "_SmackOpen@12|0x100043A0",
@@ -45860,33 +43503,33 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10005440|0x10005440"
         ],
         "Classic/1.04c": [
-          "FUN_10005440|0x10005440",
           "_SmackOpen@12|0x100043A0",
-          "FUN_100050a0|0x100050A0"
+          "FUN_100050a0|0x100050A0",
+          "FUN_10005440|0x10005440"
         ],
         "LoD/1.07": [
+          "ReadSmackFrame|0x100050A0",
           "_SmackOpen@12|0x100043A0",
-          "ReadBufferedSmackFrame|0x10005440",
-          "ReadSmackFrame|0x100050A0"
+          "ReadBufferedSmackFrame|0x10005440"
         ],
         "LoD/1.08": [
-          "FUN_10005440|0x10005440",
-          "FUN_100050a0|0x100050A0",
-          "_SmackOpen@12|0x100043A0"
-        ],
-        "LoD/1.09": [
           "FUN_100050a0|0x100050A0",
           "_SmackOpen@12|0x100043A0",
           "FUN_10005440|0x10005440"
         ],
-        "LoD/1.09b": [
-          "_SmackOpen@12|0x100043A0",
+        "LoD/1.09": [
           "FUN_10005440|0x10005440",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_100050a0|0x100050A0"
+        ],
+        "LoD/1.09b": [
+          "FUN_10005440|0x10005440",
+          "_SmackOpen@12|0x100043A0",
           "FUN_100050a0|0x100050A0"
         ],
         "LoD/1.09d": [
-          "_SmackOpen@12|0x100043A0",
           "FUN_100050a0|0x100050A0",
+          "_SmackOpen@12|0x100043A0",
           "FUN_10005440|0x10005440"
         ],
         "LoD/1.10": [
@@ -45895,49 +43538,49 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10005440|0x10005440"
         ],
         "LoD/1.11": [
-          "FUN_10005440|0x10005440",
-          "FUN_100050a0|0x100050A0",
-          "_SmackOpen@12|0x100043A0"
-        ],
-        "LoD/1.11b": [
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10005440|0x10005440",
-          "FUN_100050a0|0x100050A0"
-        ],
-        "LoD/1.12a": [
-          "FUN_100050a0|0x100050A0",
-          "FUN_10005440|0x10005440",
-          "_SmackOpen@12|0x100043A0"
-        ],
-        "LoD/1.13c": [
           "FUN_100050a0|0x100050A0",
           "_SmackOpen@12|0x100043A0",
           "FUN_10005440|0x10005440"
+        ],
+        "LoD/1.11b": [
+          "FUN_10005440|0x10005440",
+          "FUN_100050a0|0x100050A0",
+          "_SmackOpen@12|0x100043A0"
+        ],
+        "LoD/1.12a": [
+          "FUN_10005440|0x10005440",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_100050a0|0x100050A0"
+        ],
+        "LoD/1.13c": [
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10005440|0x10005440",
+          "FUN_100050a0|0x100050A0"
         ],
         "LoD/1.13d": [
           "_SmackOpen@12|0x100043A0",
-          "FUN_10005440|0x10005440",
-          "FUN_100050a0|0x100050A0"
-        ],
-        "LoD/1.14a": [
           "FUN_100050a0|0x100050A0",
-          "_SmackOpen@12|0x100043A0",
           "FUN_10005440|0x10005440"
         ],
-        "LoD/1.14b": [
-          "_SmackOpen@12|0x100043A0",
+        "LoD/1.14a": [
           "FUN_10005440|0x10005440",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_100050a0|0x100050A0"
+        ],
+        "LoD/1.14b": [
+          "FUN_10005440|0x10005440",
+          "_SmackOpen@12|0x100043A0",
           "FUN_100050a0|0x100050A0"
         ],
         "LoD/1.14c": [
           "_SmackOpen@12|0x100043A0",
-          "FUN_100050a0|0x100050A0",
-          "FUN_10005440|0x10005440"
+          "FUN_10005440|0x10005440",
+          "FUN_100050a0|0x100050A0"
         ],
         "LoD/1.14d": [
-          "FUN_10005440|0x10005440",
+          "_SmackOpen@12|0x100043A0",
           "FUN_100050a0|0x100050A0",
-          "_SmackOpen@12|0x100043A0"
+          "FUN_10005440|0x10005440"
         ]
       },
       "instructions": {
@@ -47645,123 +45288,123 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "_SmackNextFrame@4|0x10006440",
+          "FUN_100050f0|0x100050F0",
           "_SmackOpen@12|0x100043A0",
           "FUN_10005440|0x10005440",
-          "FUN_100050f0|0x100050F0"
+          "_SmackNextFrame@4|0x10006440"
         ],
         "Classic/1.01": [
-          "_SmackNextFrame@4|0x10006440",
           "FUN_100050f0|0x100050F0",
-          "FUN_10005440|0x10005440",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackOpen@12|0x100043A0",
+          "_SmackNextFrame@4|0x10006440",
+          "FUN_10005440|0x10005440"
         ],
         "Classic/1.02": [
-          "FUN_10005440|0x10005440",
           "FUN_100050f0|0x100050F0",
+          "FUN_10005440|0x10005440",
           "_SmackOpen@12|0x100043A0",
           "_SmackNextFrame@4|0x10006440"
         ],
         "Classic/1.03": [
           "_SmackOpen@12|0x100043A0",
           "_SmackNextFrame@4|0x10006440",
-          "FUN_10005440|0x10005440",
-          "FUN_100050f0|0x100050F0"
+          "FUN_100050f0|0x100050F0",
+          "FUN_10005440|0x10005440"
         ],
         "Classic/1.04c": [
-          "FUN_10005440|0x10005440",
-          "_SmackOpen@12|0x100043A0",
           "_SmackNextFrame@4|0x10006440",
-          "FUN_100050f0|0x100050F0"
+          "_SmackOpen@12|0x100043A0",
+          "FUN_100050f0|0x100050F0",
+          "FUN_10005440|0x10005440"
         ],
         "LoD/1.07": [
-          "DecompressSmackFrame|0x100050F0",
-          "_SmackOpen@12|0x100043A0",
-          "ReadBufferedSmackFrame|0x10005440",
-          "_SmackNextFrame@4|0x10006440"
-        ],
-        "LoD/1.08": [
-          "FUN_10005440|0x10005440",
           "_SmackNextFrame@4|0x10006440",
           "_SmackOpen@12|0x100043A0",
+          "ReadBufferedSmackFrame|0x10005440",
+          "DecompressSmackFrame|0x100050F0"
+        ],
+        "LoD/1.08": [
+          "_SmackNextFrame@4|0x10006440",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10005440|0x10005440",
           "FUN_100050f0|0x100050F0"
         ],
         "LoD/1.09": [
-          "_SmackOpen@12|0x100043A0",
-          "FUN_100050f0|0x100050F0",
           "FUN_10005440|0x10005440",
-          "_SmackNextFrame@4|0x10006440"
+          "_SmackOpen@12|0x100043A0",
+          "_SmackNextFrame@4|0x10006440",
+          "FUN_100050f0|0x100050F0"
         ],
         "LoD/1.09b": [
-          "FUN_100050f0|0x100050F0",
           "_SmackNextFrame@4|0x10006440",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10005440|0x10005440"
+          "FUN_10005440|0x10005440",
+          "FUN_100050f0|0x100050F0",
+          "_SmackOpen@12|0x100043A0"
         ],
         "LoD/1.09d": [
           "_SmackNextFrame@4|0x10006440",
           "_SmackOpen@12|0x100043A0",
-          "FUN_100050f0|0x100050F0",
-          "FUN_10005440|0x10005440"
+          "FUN_10005440|0x10005440",
+          "FUN_100050f0|0x100050F0"
         ],
         "LoD/1.10": [
           "_SmackNextFrame@4|0x10006440",
           "_SmackOpen@12|0x100043A0",
-          "FUN_100050f0|0x100050F0",
-          "FUN_10005440|0x10005440"
+          "FUN_10005440|0x10005440",
+          "FUN_100050f0|0x100050F0"
         ],
         "LoD/1.11": [
-          "FUN_10005440|0x10005440",
-          "_SmackNextFrame@4|0x10006440",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_100050f0|0x100050F0"
-        ],
-        "LoD/1.11b": [
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10005440|0x10005440",
-          "_SmackNextFrame@4|0x10006440",
-          "FUN_100050f0|0x100050F0"
-        ],
-        "LoD/1.12a": [
-          "_SmackNextFrame@4|0x10006440",
           "FUN_100050f0|0x100050F0",
-          "FUN_10005440|0x10005440",
-          "_SmackOpen@12|0x100043A0"
-        ],
-        "LoD/1.13c": [
-          "_SmackNextFrame@4|0x10006440",
           "_SmackOpen@12|0x100043A0",
-          "FUN_10005440|0x10005440",
-          "FUN_100050f0|0x100050F0"
-        ],
-        "LoD/1.13d": [
-          "_SmackOpen@12|0x100043A0",
-          "FUN_100050f0|0x100050F0",
           "FUN_10005440|0x10005440",
           "_SmackNextFrame@4|0x10006440"
         ],
-        "LoD/1.14a": [
+        "LoD/1.11b": [
+          "FUN_10005440|0x10005440",
+          "_SmackNextFrame@4|0x10006440",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_100050f0|0x100050F0"
+        ],
+        "LoD/1.12a": [
+          "FUN_10005440|0x10005440",
           "_SmackOpen@12|0x100043A0",
           "_SmackNextFrame@4|0x10006440",
-          "FUN_100050f0|0x100050F0",
-          "FUN_10005440|0x10005440"
+          "FUN_100050f0|0x100050F0"
         ],
-        "LoD/1.14b": [
+        "LoD/1.13c": [
           "_SmackOpen@12|0x100043A0",
           "FUN_10005440|0x10005440",
           "_SmackNextFrame@4|0x10006440",
           "FUN_100050f0|0x100050F0"
+        ],
+        "LoD/1.13d": [
+          "FUN_100050f0|0x100050F0",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackNextFrame@4|0x10006440",
+          "FUN_10005440|0x10005440"
+        ],
+        "LoD/1.14a": [
+          "FUN_10005440|0x10005440",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_100050f0|0x100050F0",
+          "_SmackNextFrame@4|0x10006440"
+        ],
+        "LoD/1.14b": [
+          "FUN_100050f0|0x100050F0",
+          "FUN_10005440|0x10005440",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackNextFrame@4|0x10006440"
         ],
         "LoD/1.14c": [
           "FUN_100050f0|0x100050F0",
           "_SmackOpen@12|0x100043A0",
-          "_SmackNextFrame@4|0x10006440",
-          "FUN_10005440|0x10005440"
+          "FUN_10005440|0x10005440",
+          "_SmackNextFrame@4|0x10006440"
         ],
         "LoD/1.14d": [
-          "FUN_10005440|0x10005440",
           "FUN_100050f0|0x100050F0",
           "_SmackOpen@12|0x100043A0",
+          "FUN_10005440|0x10005440",
           "_SmackNextFrame@4|0x10006440"
         ]
       },
@@ -48624,36 +46267,36 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "ReadSmackFrame|0x100050A0"
+          "ReadSmackFrame|0x100050A0",
+          "ReadBufferedSmackFrame|0x10005440"
         ],
         "Classic/1.01": [
           "ReadSmackFrame|0x100050A0",
           "ReadBufferedSmackFrame|0x10005440"
         ],
         "Classic/1.02": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "ReadSmackFrame|0x100050A0"
+          "ReadSmackFrame|0x100050A0",
+          "ReadBufferedSmackFrame|0x10005440"
         ],
         "Classic/1.03": [
           "ReadSmackFrame|0x100050A0",
           "ReadBufferedSmackFrame|0x10005440"
         ],
         "Classic/1.04c": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "ReadSmackFrame|0x100050A0"
-        ],
-        "LoD/1.07": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "ReadSmackFrame|0x100050A0"
-        ],
-        "LoD/1.08": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "ReadSmackFrame|0x100050A0"
-        ],
-        "LoD/1.09": [
           "ReadSmackFrame|0x100050A0",
           "ReadBufferedSmackFrame|0x10005440"
+        ],
+        "LoD/1.07": [
+          "ReadSmackFrame|0x100050A0",
+          "ReadBufferedSmackFrame|0x10005440"
+        ],
+        "LoD/1.08": [
+          "ReadSmackFrame|0x100050A0",
+          "ReadBufferedSmackFrame|0x10005440"
+        ],
+        "LoD/1.09": [
+          "ReadBufferedSmackFrame|0x10005440",
+          "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.09b": [
           "ReadBufferedSmackFrame|0x10005440",
@@ -48668,52 +46311,52 @@ var FUNCTIONS_SmackW32_dll = {
           "ReadBufferedSmackFrame|0x10005440"
         ],
         "LoD/1.11": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "ReadSmackFrame|0x100050A0"
+          "ReadSmackFrame|0x100050A0",
+          "ReadBufferedSmackFrame|0x10005440"
         ],
         "LoD/1.11b": [
           "ReadBufferedSmackFrame|0x10005440",
           "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.12a": [
-          "ReadSmackFrame|0x100050A0",
-          "ReadBufferedSmackFrame|0x10005440"
-        ],
-        "LoD/1.13c": [
-          "ReadSmackFrame|0x100050A0",
-          "ReadBufferedSmackFrame|0x10005440"
-        ],
-        "LoD/1.13d": [
           "ReadBufferedSmackFrame|0x10005440",
           "ReadSmackFrame|0x100050A0"
         ],
-        "LoD/1.14a": [
+        "LoD/1.13c": [
+          "ReadBufferedSmackFrame|0x10005440",
+          "ReadSmackFrame|0x100050A0"
+        ],
+        "LoD/1.13d": [
           "ReadSmackFrame|0x100050A0",
           "ReadBufferedSmackFrame|0x10005440"
+        ],
+        "LoD/1.14a": [
+          "ReadBufferedSmackFrame|0x10005440",
+          "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.14b": [
           "ReadBufferedSmackFrame|0x10005440",
           "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.14c": [
-          "ReadSmackFrame|0x100050A0",
-          "ReadBufferedSmackFrame|0x10005440"
-        ],
-        "LoD/1.14d": [
           "ReadBufferedSmackFrame|0x10005440",
           "ReadSmackFrame|0x100050A0"
+        ],
+        "LoD/1.14d": [
+          "ReadSmackFrame|0x100050A0",
+          "ReadBufferedSmackFrame|0x10005440"
         ]
       },
       "callers": {
         "Classic/1.00": [
+          "_SmackOpen@12|0x100043A0",
           "_SmackGoto@8|0x10007170",
-          "_SmackNextFrame@4|0x10006440",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackNextFrame@4|0x10006440"
         ],
         "Classic/1.01": [
+          "_SmackOpen@12|0x100043A0",
           "_SmackNextFrame@4|0x10006440",
-          "_SmackGoto@8|0x10007170",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackGoto@8|0x10007170"
         ],
         "Classic/1.02": [
           "_SmackGoto@8|0x10007170",
@@ -48721,34 +46364,34 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackNextFrame@4|0x10006440"
         ],
         "Classic/1.03": [
+          "_SmackGoto@8|0x10007170",
           "_SmackOpen@12|0x100043A0",
-          "_SmackNextFrame@4|0x10006440",
-          "_SmackGoto@8|0x10007170"
+          "_SmackNextFrame@4|0x10006440"
         ],
         "Classic/1.04c": [
-          "_SmackOpen@12|0x100043A0",
           "_SmackNextFrame@4|0x10006440",
+          "_SmackOpen@12|0x100043A0",
           "_SmackGoto@8|0x10007170"
         ],
         "LoD/1.07": [
+          "_SmackGoto@8|0x10007170",
+          "_SmackNextFrame@4|0x10006440",
+          "_SmackOpen@12|0x100043A0"
+        ],
+        "LoD/1.08": [
+          "_SmackNextFrame@4|0x10006440",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackGoto@8|0x10007170"
+        ],
+        "LoD/1.09": [
           "_SmackOpen@12|0x100043A0",
           "_SmackNextFrame@4|0x10006440",
           "_SmackGoto@8|0x10007170"
         ],
-        "LoD/1.08": [
-          "_SmackGoto@8|0x10007170",
-          "_SmackNextFrame@4|0x10006440",
-          "_SmackOpen@12|0x100043A0"
-        ],
-        "LoD/1.09": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackGoto@8|0x10007170",
-          "_SmackNextFrame@4|0x10006440"
-        ],
         "LoD/1.09b": [
           "_SmackNextFrame@4|0x10006440",
-          "_SmackGoto@8|0x10007170",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackOpen@12|0x100043A0",
+          "_SmackGoto@8|0x10007170"
         ],
         "LoD/1.09d": [
           "_SmackNextFrame@4|0x10006440",
@@ -48757,27 +46400,27 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.10": [
           "_SmackNextFrame@4|0x10006440",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackGoto@8|0x10007170"
-        ],
-        "LoD/1.11": [
           "_SmackGoto@8|0x10007170",
-          "_SmackNextFrame@4|0x10006440",
           "_SmackOpen@12|0x100043A0"
         ],
-        "LoD/1.11b": [
+        "LoD/1.11": [
           "_SmackGoto@8|0x10007170",
           "_SmackOpen@12|0x100043A0",
           "_SmackNextFrame@4|0x10006440"
         ],
-        "LoD/1.12a": [
-          "_SmackNextFrame@4|0x10006440",
+        "LoD/1.11b": [
           "_SmackGoto@8|0x10007170",
+          "_SmackNextFrame@4|0x10006440",
           "_SmackOpen@12|0x100043A0"
         ],
-        "LoD/1.13c": [
-          "_SmackNextFrame@4|0x10006440",
+        "LoD/1.12a": [
           "_SmackOpen@12|0x100043A0",
+          "_SmackNextFrame@4|0x10006440",
+          "_SmackGoto@8|0x10007170"
+        ],
+        "LoD/1.13c": [
+          "_SmackOpen@12|0x100043A0",
+          "_SmackNextFrame@4|0x10006440",
           "_SmackGoto@8|0x10007170"
         ],
         "LoD/1.13d": [
@@ -48791,9 +46434,9 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackNextFrame@4|0x10006440"
         ],
         "LoD/1.14b": [
+          "_SmackGoto@8|0x10007170",
           "_SmackOpen@12|0x100043A0",
-          "_SmackNextFrame@4|0x10006440",
-          "_SmackGoto@8|0x10007170"
+          "_SmackNextFrame@4|0x10006440"
         ],
         "LoD/1.14c": [
           "_SmackGoto@8|0x10007170",
@@ -50349,24 +47992,24 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "SetFilePointer|0x56",
-          "ReadFileWithBuffer|0x10004DE0",
-          "ReadSmackFrame|0x100050A0"
-        ],
-        "Classic/1.01": [
           "ReadSmackFrame|0x100050A0",
           "ReadFileWithBuffer|0x10004DE0",
           "SetFilePointer|0x56"
         ],
-        "Classic/1.02": [
-          "SetFilePointer|0x56",
-          "ReadFileWithBuffer|0x10004DE0",
-          "ReadSmackFrame|0x100050A0"
-        ],
-        "Classic/1.03": [
+        "Classic/1.01": [
           "ReadSmackFrame|0x100050A0",
           "SetFilePointer|0x56",
           "ReadFileWithBuffer|0x10004DE0"
+        ],
+        "Classic/1.02": [
+          "SetFilePointer|0x56",
+          "ReadSmackFrame|0x100050A0",
+          "ReadFileWithBuffer|0x10004DE0"
+        ],
+        "Classic/1.03": [
+          "ReadFileWithBuffer|0x10004DE0",
+          "SetFilePointer|0x56",
+          "ReadSmackFrame|0x100050A0"
         ],
         "Classic/1.04c": [
           "SetFilePointer|0x56",
@@ -50374,44 +48017,44 @@ var FUNCTIONS_SmackW32_dll = {
           "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.07": [
-          "SetFilePointer|0x56",
+          "ReadSmackFrame|0x100050A0",
           "ReadFileWithBuffer|0x10004DE0",
-          "ReadSmackFrame|0x100050A0"
+          "SetFilePointer|0x56"
         ],
         "LoD/1.08": [
           "ReadFileWithBuffer|0x10004DE0",
-          "SetFilePointer|0x56",
-          "ReadSmackFrame|0x100050A0"
+          "ReadSmackFrame|0x100050A0",
+          "SetFilePointer|0x56"
         ],
         "LoD/1.09": [
-          "ReadSmackFrame|0x100050A0",
           "ReadFileWithBuffer|0x10004DE0",
+          "ReadSmackFrame|0x100050A0",
           "SetFilePointer|0x56"
         ],
         "LoD/1.09b": [
-          "ReadFileWithBuffer|0x10004DE0",
           "SetFilePointer|0x56",
-          "ReadSmackFrame|0x100050A0"
+          "ReadSmackFrame|0x100050A0",
+          "ReadFileWithBuffer|0x10004DE0"
         ],
         "LoD/1.09d": [
-          "ReadFileWithBuffer|0x10004DE0",
           "SetFilePointer|0x56",
+          "ReadFileWithBuffer|0x10004DE0",
           "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.10": [
-          "ReadFileWithBuffer|0x10004DE0",
           "SetFilePointer|0x56",
-          "ReadSmackFrame|0x100050A0"
+          "ReadSmackFrame|0x100050A0",
+          "ReadFileWithBuffer|0x10004DE0"
         ],
         "LoD/1.11": [
-          "ReadFileWithBuffer|0x10004DE0",
           "ReadSmackFrame|0x100050A0",
-          "SetFilePointer|0x56"
+          "SetFilePointer|0x56",
+          "ReadFileWithBuffer|0x10004DE0"
         ],
         "LoD/1.11b": [
-          "ReadSmackFrame|0x100050A0",
+          "SetFilePointer|0x56",
           "ReadFileWithBuffer|0x10004DE0",
-          "SetFilePointer|0x56"
+          "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.12a": [
           "ReadSmackFrame|0x100050A0",
@@ -50419,9 +48062,9 @@ var FUNCTIONS_SmackW32_dll = {
           "ReadFileWithBuffer|0x10004DE0"
         ],
         "LoD/1.13c": [
-          "SetFilePointer|0x56",
           "ReadSmackFrame|0x100050A0",
-          "ReadFileWithBuffer|0x10004DE0"
+          "ReadFileWithBuffer|0x10004DE0",
+          "SetFilePointer|0x56"
         ],
         "LoD/1.13d": [
           "ReadFileWithBuffer|0x10004DE0",
@@ -50429,9 +48072,9 @@ var FUNCTIONS_SmackW32_dll = {
           "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.14a": [
-          "SetFilePointer|0x56",
+          "ReadFileWithBuffer|0x10004DE0",
           "ReadSmackFrame|0x100050A0",
-          "ReadFileWithBuffer|0x10004DE0"
+          "SetFilePointer|0x56"
         ],
         "LoD/1.14b": [
           "ReadFileWithBuffer|0x10004DE0",
@@ -50444,15 +48087,15 @@ var FUNCTIONS_SmackW32_dll = {
           "SetFilePointer|0x56"
         ],
         "LoD/1.14d": [
-          "ReadSmackFrame|0x100050A0",
           "SetFilePointer|0x56",
-          "ReadFileWithBuffer|0x10004DE0"
+          "ReadFileWithBuffer|0x10004DE0",
+          "ReadSmackFrame|0x100050A0"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "_SmackGoto@8|0x10007170",
-          "FUN_100050f0|0x100050F0"
+          "FUN_100050f0|0x100050F0",
+          "_SmackGoto@8|0x10007170"
         ],
         "Classic/1.01": [
           "FUN_100050f0|0x100050F0",
@@ -50467,36 +48110,36 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_100050f0|0x100050F0"
         ],
         "Classic/1.04c": [
-          "_SmackGoto@8|0x10007170",
-          "FUN_100050f0|0x100050F0"
-        ],
-        "LoD/1.07": [
-          "DecompressSmackFrame|0x100050F0",
-          "_SmackGoto@8|0x10007170"
-        ],
-        "LoD/1.08": [
-          "_SmackGoto@8|0x10007170",
-          "FUN_100050f0|0x100050F0"
-        ],
-        "LoD/1.09": [
           "FUN_100050f0|0x100050F0",
           "_SmackGoto@8|0x10007170"
+        ],
+        "LoD/1.07": [
+          "_SmackGoto@8|0x10007170",
+          "DecompressSmackFrame|0x100050F0"
+        ],
+        "LoD/1.08": [
+          "FUN_100050f0|0x100050F0",
+          "_SmackGoto@8|0x10007170"
+        ],
+        "LoD/1.09": [
+          "_SmackGoto@8|0x10007170",
+          "FUN_100050f0|0x100050F0"
         ],
         "LoD/1.09b": [
           "FUN_100050f0|0x100050F0",
           "_SmackGoto@8|0x10007170"
         ],
         "LoD/1.09d": [
-          "FUN_100050f0|0x100050F0",
-          "_SmackGoto@8|0x10007170"
-        ],
-        "LoD/1.10": [
-          "FUN_100050f0|0x100050F0",
-          "_SmackGoto@8|0x10007170"
-        ],
-        "LoD/1.11": [
           "_SmackGoto@8|0x10007170",
           "FUN_100050f0|0x100050F0"
+        ],
+        "LoD/1.10": [
+          "_SmackGoto@8|0x10007170",
+          "FUN_100050f0|0x100050F0"
+        ],
+        "LoD/1.11": [
+          "FUN_100050f0|0x100050F0",
+          "_SmackGoto@8|0x10007170"
         ],
         "LoD/1.11b": [
           "_SmackGoto@8|0x10007170",
@@ -50511,24 +48154,24 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackGoto@8|0x10007170"
         ],
         "LoD/1.13d": [
-          "_SmackGoto@8|0x10007170",
-          "FUN_100050f0|0x100050F0"
+          "FUN_100050f0|0x100050F0",
+          "_SmackGoto@8|0x10007170"
         ],
         "LoD/1.14a": [
-          "_SmackGoto@8|0x10007170",
-          "FUN_100050f0|0x100050F0"
+          "FUN_100050f0|0x100050F0",
+          "_SmackGoto@8|0x10007170"
         ],
         "LoD/1.14b": [
-          "_SmackGoto@8|0x10007170",
-          "FUN_100050f0|0x100050F0"
+          "FUN_100050f0|0x100050F0",
+          "_SmackGoto@8|0x10007170"
         ],
         "LoD/1.14c": [
           "FUN_100050f0|0x100050F0",
           "_SmackGoto@8|0x10007170"
         ],
         "LoD/1.14d": [
-          "FUN_100050f0|0x100050F0",
-          "_SmackGoto@8|0x10007170"
+          "_SmackGoto@8|0x10007170",
+          "FUN_100050f0|0x100050F0"
         ]
       },
       "instructions": {
@@ -52134,144 +49777,144 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackVolumePan@16|0x10007680",
           "_SmackOpen@12|0x100043A0",
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackGetTrackData@12|0x10007070",
           "_SmackSoundInTrack@8|0x10007620",
-          "FUN_10005dd0|0x10005DD0"
+          "_SmackVolumePan@16|0x10007680"
         ],
         "Classic/1.01": [
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackVolumePan@16|0x10007680",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackSoundInTrack@8|0x10007620",
+          "_SmackGetTrackData@12|0x10007070"
+        ],
+        "Classic/1.02": [
           "_SmackVolumePan@16|0x10007680",
           "_SmackGetTrackData@12|0x10007070",
+          "_SmackSoundInTrack@8|0x10007620",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10005dd0|0x10005DD0"
+        ],
+        "Classic/1.03": [
+          "_SmackGetTrackData@12|0x10007070",
+          "_SmackVolumePan@16|0x10007680",
+          "_SmackSoundInTrack@8|0x10007620",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10005dd0|0x10005DD0"
+        ],
+        "Classic/1.04c": [
+          "_SmackSoundInTrack@8|0x10007620",
+          "_SmackGetTrackData@12|0x10007070",
+          "_SmackVolumePan@16|0x10007680",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10005dd0|0x10005DD0"
+        ],
+        "LoD/1.07": [
+          "_SmackGetTrackData@12|0x10007070",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackVolumePan@16|0x10007680",
+          "_SmackSoundInTrack@8|0x10007620",
+          "ProcessSmackAudioTracks|0x10005DD0"
+        ],
+        "LoD/1.08": [
+          "_SmackSoundInTrack@8|0x10007620",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackVolumePan@16|0x10007680",
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackGetTrackData@12|0x10007070"
+        ],
+        "LoD/1.09": [
+          "_SmackSoundInTrack@8|0x10007620",
+          "_SmackVolumePan@16|0x10007680",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackGetTrackData@12|0x10007070",
+          "FUN_10005dd0|0x10005DD0"
+        ],
+        "LoD/1.09b": [
+          "_SmackGetTrackData@12|0x10007070",
+          "_SmackVolumePan@16|0x10007680",
           "_SmackOpen@12|0x100043A0",
           "_SmackSoundInTrack@8|0x10007620",
           "FUN_10005dd0|0x10005DD0"
-        ],
-        "Classic/1.02": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackVolumePan@16|0x10007680",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackSoundInTrack@8|0x10007620"
-        ],
-        "Classic/1.03": [
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackSoundInTrack@8|0x10007620",
-          "_SmackVolumePan@16|0x10007680",
-          "_SmackGetTrackData@12|0x10007070"
-        ],
-        "Classic/1.04c": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackVolumePan@16|0x10007680",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackSoundInTrack@8|0x10007620"
-        ],
-        "LoD/1.07": [
-          "_SmackVolumePan@16|0x10007680",
-          "_SmackOpen@12|0x100043A0",
-          "ProcessSmackAudioTracks|0x10005DD0",
-          "_SmackSoundInTrack@8|0x10007620",
-          "_SmackGetTrackData@12|0x10007070"
-        ],
-        "LoD/1.08": [
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackVolumePan@16|0x10007680",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackSoundInTrack@8|0x10007620"
-        ],
-        "LoD/1.09": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackVolumePan@16|0x10007680",
-          "_SmackSoundInTrack@8|0x10007620"
-        ],
-        "LoD/1.09b": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackSoundInTrack@8|0x10007620",
-          "_SmackGetTrackData@12|0x10007070",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackVolumePan@16|0x10007680"
         ],
         "LoD/1.09d": [
           "_SmackGetTrackData@12|0x10007070",
           "FUN_10005dd0|0x10005DD0",
-          "_SmackOpen@12|0x100043A0",
           "_SmackVolumePan@16|0x10007680",
-          "_SmackSoundInTrack@8|0x10007620"
+          "_SmackSoundInTrack@8|0x10007620",
+          "_SmackOpen@12|0x100043A0"
         ],
         "LoD/1.10": [
-          "_SmackVolumePan@16|0x10007680",
+          "_SmackSoundInTrack@8|0x10007620",
           "_SmackOpen@12|0x100043A0",
           "_SmackGetTrackData@12|0x10007070",
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackSoundInTrack@8|0x10007620"
+          "_SmackVolumePan@16|0x10007680",
+          "FUN_10005dd0|0x10005DD0"
         ],
         "LoD/1.11": [
-          "FUN_10005dd0|0x10005DD0",
           "_SmackVolumePan@16|0x10007680",
-          "_SmackOpen@12|0x100043A0",
+          "FUN_10005dd0|0x10005DD0",
           "_SmackGetTrackData@12|0x10007070",
+          "_SmackOpen@12|0x100043A0",
           "_SmackSoundInTrack@8|0x10007620"
         ],
         "LoD/1.11b": [
           "FUN_10005dd0|0x10005DD0",
-          "_SmackSoundInTrack@8|0x10007620",
-          "_SmackGetTrackData@12|0x10007070",
           "_SmackVolumePan@16|0x10007680",
+          "_SmackGetTrackData@12|0x10007070",
+          "_SmackSoundInTrack@8|0x10007620",
           "_SmackOpen@12|0x100043A0"
         ],
         "LoD/1.12a": [
-          "FUN_10005dd0|0x10005DD0",
           "_SmackGetTrackData@12|0x10007070",
-          "_SmackSoundInTrack@8|0x10007620",
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackOpen@12|0x100043A0",
           "_SmackVolumePan@16|0x10007680",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackSoundInTrack@8|0x10007620"
         ],
         "LoD/1.13c": [
-          "_SmackVolumePan@16|0x10007680",
           "_SmackSoundInTrack@8|0x10007620",
-          "_SmackGetTrackData@12|0x10007070",
+          "_SmackOpen@12|0x100043A0",
           "FUN_10005dd0|0x10005DD0",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackVolumePan@16|0x10007680",
+          "_SmackGetTrackData@12|0x10007070"
         ],
         "LoD/1.13d": [
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackVolumePan@16|0x10007680",
           "_SmackOpen@12|0x100043A0",
           "_SmackGetTrackData@12|0x10007070",
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackSoundInTrack@8|0x10007620",
-          "_SmackVolumePan@16|0x10007680"
+          "_SmackSoundInTrack@8|0x10007620"
         ],
         "LoD/1.14a": [
-          "FUN_10005dd0|0x10005DD0",
           "_SmackOpen@12|0x100043A0",
-          "_SmackVolumePan@16|0x10007680",
           "_SmackSoundInTrack@8|0x10007620",
+          "_SmackVolumePan@16|0x10007680",
+          "FUN_10005dd0|0x10005DD0",
           "_SmackGetTrackData@12|0x10007070"
         ],
         "LoD/1.14b": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackGetTrackData@12|0x10007070",
+          "_SmackVolumePan@16|0x10007680",
           "_SmackSoundInTrack@8|0x10007620",
-          "_SmackVolumePan@16|0x10007680"
+          "_SmackGetTrackData@12|0x10007070",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10005dd0|0x10005DD0"
         ],
         "LoD/1.14c": [
-          "_SmackGetTrackData@12|0x10007070",
           "_SmackVolumePan@16|0x10007680",
           "_SmackOpen@12|0x100043A0",
           "FUN_10005dd0|0x10005DD0",
+          "_SmackGetTrackData@12|0x10007070",
           "_SmackSoundInTrack@8|0x10007620"
         ],
         "LoD/1.14d": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackGetTrackData@12|0x10007070",
           "_SmackVolumePan@16|0x10007680",
+          "_SmackSoundInTrack@8|0x10007620",
           "_SmackOpen@12|0x100043A0",
-          "_SmackSoundInTrack@8|0x10007620"
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackGetTrackData@12|0x10007070"
         ]
       },
       "instructions": {
@@ -53051,14 +50694,14 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FUN_10004c80|0x10004C80",
+          "_SmackSoundUseWin@0|0x10008720",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "_SmackSoundUseWin@0|0x10008720"
+          "FUN_10004c80|0x10004C80"
         ],
         "Classic/1.01": [
-          "FUN_10004c80|0x10004C80",
           "_SmackSoundUseWin@0|0x10008720",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_10004c80|0x10004C80"
         ],
         "Classic/1.02": [
           "_SmackSoundUseWin@0|0x10008720",
@@ -53071,34 +50714,34 @@ var FUNCTIONS_SmackW32_dll = {
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "Classic/1.04c": [
+          "FUN_10004c80|0x10004C80",
+          "_SmackSoundUseWin@0|0x10008720",
+          "ApplyPresetUnitTileAttributes|0x10001040"
+        ],
+        "LoD/1.07": [
           "_SmackSoundUseWin@0|0x10008720",
           "FUN_10004c80|0x10004C80",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
-        "LoD/1.07": [
-          "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "_SmackSoundUseWin@0|0x10008720"
-        ],
         "LoD/1.08": [
           "_SmackSoundUseWin@0|0x10008720",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_10004c80|0x10004C80"
+          "FUN_10004c80|0x10004C80",
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.09": [
-          "_SmackSoundUseWin@0|0x10008720",
           "FUN_10004c80|0x10004C80",
+          "_SmackSoundUseWin@0|0x10008720",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.09b": [
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "_SmackSoundUseWin@0|0x10008720",
-          "FUN_10004c80|0x10004C80"
+          "FUN_10004c80|0x10004C80",
+          "_SmackSoundUseWin@0|0x10008720"
         ],
         "LoD/1.09d": [
+          "_SmackSoundUseWin@0|0x10008720",
           "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "_SmackSoundUseWin@0|0x10008720"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.10": [
           "ApplyPresetUnitTileAttributes|0x10001040",
@@ -53106,14 +50749,14 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackSoundUseWin@0|0x10008720"
         ],
         "LoD/1.11": [
+          "FUN_10004c80|0x10004C80",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "_SmackSoundUseWin@0|0x10008720",
-          "FUN_10004c80|0x10004C80"
+          "_SmackSoundUseWin@0|0x10008720"
         ],
         "LoD/1.11b": [
+          "FUN_10004c80|0x10004C80",
           "_SmackSoundUseWin@0|0x10008720",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_10004c80|0x10004C80"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.12a": [
           "FUN_10004c80|0x10004C80",
@@ -53121,9 +50764,9 @@ var FUNCTIONS_SmackW32_dll = {
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.13c": [
+          "_SmackSoundUseWin@0|0x10008720",
           "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "_SmackSoundUseWin@0|0x10008720"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.13d": [
           "_SmackSoundUseWin@0|0x10008720",
@@ -53131,24 +50774,24 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10004c80|0x10004C80"
         ],
         "LoD/1.14a": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "_SmackSoundUseWin@0|0x10008720",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_10004c80|0x10004C80"
         ],
         "LoD/1.14b": [
+          "FUN_10004c80|0x10004C80",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "_SmackSoundUseWin@0|0x10008720"
+        ],
+        "LoD/1.14c": [
           "_SmackSoundUseWin@0|0x10008720",
           "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_10004c80|0x10004C80"
         ],
-        "LoD/1.14c": [
-          "_SmackSoundUseWin@0|0x10008720",
-          "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
         "LoD/1.14d": [
-          "FUN_10004c80|0x10004C80",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "_SmackSoundUseWin@0|0x10008720",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "FUN_10004c80|0x10004C80"
         ]
       },
       "callers": {
@@ -54832,7 +52475,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_42": {
+    "SmackW32_NOP_1468f123d09e": {
       "addresses": {
         "Classic/1.00": "0x100058B0",
         "Classic/1.01": "0x100058B0",
@@ -54908,8 +52551,8 @@ var FUNCTIONS_SmackW32_dll = {
       "return_type": "void",
       "comment": "Sets the error handling disabled flag.\n\nAlgorithm:\n1. Store dwDisable value to g_fErrorHandlingDisabled global\n\nWhen enabled (dwDisable != 0), DisplayCriticalError returns\nimmediately without showing dialogs or terminating the process.\nCalled with 1 during process termination in DisplayCriticalError.\n\nParameters:\n- dwDisable (uint): Non-zero to disable error handling\n\nReturns:\n- void",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:42",
+      "method": "NOP",
+      "index": "NOP:1468f123d09ec1944f5cf61e476b9e9038507f35ec7a3b237b1e046616f5b6f9",
       "indexes": {
         "EXP": "42",
         "STR": null,
@@ -55366,7 +53009,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_34": {
+    "SmackW32_NOP_d53e86bfc7d7": {
       "addresses": {
         "Classic/1.00": "0x100058C0",
         "Classic/1.01": "0x100058C0",
@@ -55441,8 +53084,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:34",
+      "method": "NOP",
+      "index": "NOP:d53e86bfc7d7144e0928770442c9ab4c37104942ef609e8e83030364b90a20b3",
       "indexes": {
         "EXP": "34",
         "STR": null,
@@ -56039,7 +53682,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_45": {
+    "SmackW32_NOP_f813d7e0e67b": {
       "addresses": {
         "Classic/1.00": "0x100058F0",
         "Classic/1.01": "0x100058F0",
@@ -56114,8 +53757,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined4",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:45",
+      "method": "NOP",
+      "index": "NOP:f813d7e0e67b48068f16857e82627e50f3c0f1c0dfb0340ff7847588b6c657af",
       "indexes": {
         "EXP": "45",
         "STR": null,
@@ -57356,7 +54999,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_29": {
+    "SmackW32_STR_94eacea5927e": {
       "addresses": {
         "Classic/1.00": "0x10005B20",
         "Classic/1.01": "0x10005B20",
@@ -57431,8 +55074,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:29",
+      "method": "STR",
+      "index": "STR:94eacea5927e021980f25b4b32dccf84",
       "indexes": {
         "EXP": "29",
         "STR": "94eacea5927e021980f25b4b32dccf84",
@@ -57448,8 +55091,8 @@ var FUNCTIONS_SmackW32_dll = {
       "callees": {
         "Classic/1.00": [
           "__itoa|0x1000BA10",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "OutputDebugStringA|0x5D",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "CloseHandle|0x3A"
         ],
         "Classic/1.01": [
@@ -57459,112 +55102,112 @@ var FUNCTIONS_SmackW32_dll = {
           "CloseHandle|0x3A"
         ],
         "Classic/1.02": [
+          "OutputDebugStringA|0x5D",
           "CloseHandle|0x3A",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D"
+          "__itoa|0x1000BA10"
         ],
         "Classic/1.03": [
           "CloseHandle|0x3A",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
+          "__itoa|0x1000BA10",
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "Classic/1.04c": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "__itoa|0x1000BA10",
           "CloseHandle|0x3A",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.07": [
           "OutputDebugStringA|0x5D",
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "__itoa|0x1000BA10",
           "CloseHandle|0x3A",
-          "__itoa|0x1000BA10"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.08": [
           "CloseHandle|0x3A",
-          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "OutputDebugStringA|0x5D"
+          "__itoa|0x1000BA10"
         ],
         "LoD/1.09": [
-          "OutputDebugStringA|0x5D",
           "CloseHandle|0x3A",
           "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.09b": [
-          "OutputDebugStringA|0x5D",
           "ApplyPresetUnitTileAttributes|0x10001040",
+          "CloseHandle|0x3A",
           "__itoa|0x1000BA10",
-          "CloseHandle|0x3A"
+          "OutputDebugStringA|0x5D"
         ],
         "LoD/1.09d": [
           "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10",
           "ApplyPresetUnitTileAttributes|0x10001040",
+          "__itoa|0x1000BA10",
           "CloseHandle|0x3A"
         ],
         "LoD/1.10": [
-          "CloseHandle|0x3A",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "CloseHandle|0x3A",
+          "__itoa|0x1000BA10"
         ],
         "LoD/1.11": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "__itoa|0x1000BA10",
-          "CloseHandle|0x3A",
-          "OutputDebugStringA|0x5D"
-        ],
-        "LoD/1.11b": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseHandle|0x3A",
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D"
-        ],
-        "LoD/1.12a": [
-          "__itoa|0x1000BA10",
           "CloseHandle|0x3A",
           "OutputDebugStringA|0x5D",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "__itoa|0x1000BA10"
+        ],
+        "LoD/1.11b": [
+          "OutputDebugStringA|0x5D",
+          "__itoa|0x1000BA10",
+          "CloseHandle|0x3A",
           "ApplyPresetUnitTileAttributes|0x10001040"
+        ],
+        "LoD/1.12a": [
+          "CloseHandle|0x3A",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D"
         ],
         "LoD/1.13c": [
           "CloseHandle|0x3A",
-          "OutputDebugStringA|0x5D",
           "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.13d": [
-          "OutputDebugStringA|0x5D",
           "CloseHandle|0x3A",
           "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.14a": [
-          "__itoa|0x1000BA10",
           "ApplyPresetUnitTileAttributes|0x10001040",
           "OutputDebugStringA|0x5D",
-          "CloseHandle|0x3A"
-        ],
-        "LoD/1.14b": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "CloseHandle|0x3A",
-          "OutputDebugStringA|0x5D",
           "__itoa|0x1000BA10"
         ],
-        "LoD/1.14c": [
-          "OutputDebugStringA|0x5D",
+        "LoD/1.14b": [
+          "CloseHandle|0x3A",
           "__itoa|0x1000BA10",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseHandle|0x3A"
+          "OutputDebugStringA|0x5D"
+        ],
+        "LoD/1.14c": [
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "__itoa|0x1000BA10",
+          "CloseHandle|0x3A",
+          "OutputDebugStringA|0x5D"
         ],
         "LoD/1.14d": [
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D",
           "CloseHandle|0x3A",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "OutputDebugStringA|0x5D"
         ]
       },
       "strings": {
@@ -59096,7 +56739,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_33": {
+    "SmackW32_NOP_b381a0ba492d": {
       "addresses": {
         "Classic/1.00": "0x10005C70",
         "Classic/1.01": "0x10005C70",
@@ -59171,8 +56814,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "uint",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:33",
+      "method": "NOP",
+      "index": "NOP:b381a0ba492da7373a85975ee1ee83375f6d72f6dcc81539c3d902e9859507be",
       "indexes": {
         "EXP": "33",
         "STR": null,
@@ -59187,164 +56830,164 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "CheckSoundBufferReady|0x10006170",
-          "ConvertRgb24ToRgb555|0x1001292F",
+          "ProcessSmackAudioTracks|0x10005DD0",
           "FUN_10011ab0|0x10011AB0",
+          "ConvertRgb24ToRgb555|0x1001292F",
           "timeGetTime|0x34",
           "ConvertRgb24ToRgb565|0x1001296D",
-          "ProcessSmackAudioTracks|0x10005DD0"
+          "CheckSoundBufferReady|0x10006170"
         ],
         "Classic/1.01": [
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "timeGetTime|0x34",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "FUN_10011ab0|0x10011AB0",
-          "CheckSoundBufferReady|0x10006170",
-          "ProcessSmackAudioTracks|0x10005DD0"
-        ],
-        "Classic/1.02": [
           "ProcessSmackAudioTracks|0x10005DD0",
-          "CheckSoundBufferReady|0x10006170",
           "FUN_10011ab0|0x10011AB0",
           "timeGetTime|0x34",
+          "CheckSoundBufferReady|0x10006170",
           "ConvertRgb24ToRgb565|0x1001296D",
           "ConvertRgb24ToRgb555|0x1001292F"
         ],
-        "Classic/1.03": [
-          "ProcessSmackAudioTracks|0x10005DD0",
+        "Classic/1.02": [
+          "ConvertRgb24ToRgb565|0x1001296D",
           "FUN_10011ab0|0x10011AB0",
           "timeGetTime|0x34",
-          "ConvertRgb24ToRgb565|0x1001296D",
+          "ProcessSmackAudioTracks|0x10005DD0",
           "ConvertRgb24ToRgb555|0x1001292F",
           "CheckSoundBufferReady|0x10006170"
         ],
-        "Classic/1.04c": [
-          "ProcessSmackAudioTracks|0x10005DD0",
+        "Classic/1.03": [
+          "timeGetTime|0x34",
+          "ConvertRgb24ToRgb565|0x1001296D",
           "FUN_10011ab0|0x10011AB0",
           "ConvertRgb24ToRgb555|0x1001292F",
+          "CheckSoundBufferReady|0x10006170",
+          "ProcessSmackAudioTracks|0x10005DD0"
+        ],
+        "Classic/1.04c": [
+          "CheckSoundBufferReady|0x10006170",
           "ConvertRgb24ToRgb565|0x1001296D",
-          "timeGetTime|0x34",
-          "CheckSoundBufferReady|0x10006170"
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "ProcessSmackAudioTracks|0x10005DD0",
+          "FUN_10011ab0|0x10011AB0",
+          "timeGetTime|0x34"
         ],
         "LoD/1.07": [
           "ConvertRgb24ToRgb555|0x1001292F",
           "ConvertRgb24ToRgb565|0x1001296D",
-          "ProcessSmackAudioTracks|0x10005DD0",
           "FUN_10011ab0|0x10011AB0",
+          "CheckSoundBufferReady|0x10006170",
           "timeGetTime|0x34",
-          "CheckSoundBufferReady|0x10006170"
+          "ProcessSmackAudioTracks|0x10005DD0"
         ],
         "LoD/1.08": [
           "FUN_10011ab0|0x10011AB0",
+          "CheckSoundBufferReady|0x10006170",
           "ConvertRgb24ToRgb555|0x1001292F",
           "timeGetTime|0x34",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "CheckSoundBufferReady|0x10006170",
-          "ProcessSmackAudioTracks|0x10005DD0"
+          "ProcessSmackAudioTracks|0x10005DD0",
+          "ConvertRgb24ToRgb565|0x1001296D"
         ],
         "LoD/1.09": [
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "ProcessSmackAudioTracks|0x10005DD0",
           "FUN_10011ab0|0x10011AB0",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "CheckSoundBufferReady|0x10006170",
-          "timeGetTime|0x34"
-        ],
-        "LoD/1.09b": [
-          "ProcessSmackAudioTracks|0x10005DD0",
-          "FUN_10011ab0|0x10011AB0",
-          "ConvertRgb24ToRgb555|0x1001292F",
           "ConvertRgb24ToRgb565|0x1001296D",
           "timeGetTime|0x34",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "ProcessSmackAudioTracks|0x10005DD0",
           "CheckSoundBufferReady|0x10006170"
+        ],
+        "LoD/1.09b": [
+          "timeGetTime|0x34",
+          "FUN_10011ab0|0x10011AB0",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "ProcessSmackAudioTracks|0x10005DD0",
+          "CheckSoundBufferReady|0x10006170",
+          "ConvertRgb24ToRgb565|0x1001296D"
         ],
         "LoD/1.09d": [
           "timeGetTime|0x34",
           "ProcessSmackAudioTracks|0x10005DD0",
-          "FUN_10011ab0|0x10011AB0",
-          "ConvertRgb24ToRgb565|0x1001296D",
+          "CheckSoundBufferReady|0x10006170",
           "ConvertRgb24ToRgb555|0x1001292F",
-          "CheckSoundBufferReady|0x10006170"
+          "FUN_10011ab0|0x10011AB0",
+          "ConvertRgb24ToRgb565|0x1001296D"
         ],
         "LoD/1.10": [
+          "CheckSoundBufferReady|0x10006170",
+          "ConvertRgb24ToRgb565|0x1001296D",
+          "timeGetTime|0x34",
+          "FUN_10011ab0|0x10011AB0",
           "ConvertRgb24ToRgb555|0x1001292F",
+          "ProcessSmackAudioTracks|0x10005DD0"
+        ],
+        "LoD/1.11": [
+          "timeGetTime|0x34",
+          "ProcessSmackAudioTracks|0x10005DD0",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "FUN_10011ab0|0x10011AB0",
+          "ConvertRgb24ToRgb565|0x1001296D",
+          "CheckSoundBufferReady|0x10006170"
+        ],
+        "LoD/1.11b": [
           "ConvertRgb24ToRgb565|0x1001296D",
           "ProcessSmackAudioTracks|0x10005DD0",
+          "ConvertRgb24ToRgb555|0x1001292F",
           "timeGetTime|0x34",
           "CheckSoundBufferReady|0x10006170",
           "FUN_10011ab0|0x10011AB0"
         ],
-        "LoD/1.11": [
-          "ProcessSmackAudioTracks|0x10005DD0",
-          "CheckSoundBufferReady|0x10006170",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "FUN_10011ab0|0x10011AB0",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "timeGetTime|0x34"
-        ],
-        "LoD/1.11b": [
-          "ProcessSmackAudioTracks|0x10005DD0",
-          "timeGetTime|0x34",
-          "FUN_10011ab0|0x10011AB0",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "CheckSoundBufferReady|0x10006170"
-        ],
         "LoD/1.12a": [
-          "ConvertRgb24ToRgb555|0x1001292F",
           "timeGetTime|0x34",
+          "ConvertRgb24ToRgb565|0x1001296D",
           "ProcessSmackAudioTracks|0x10005DD0",
           "FUN_10011ab0|0x10011AB0",
-          "ConvertRgb24ToRgb565|0x1001296D",
+          "ConvertRgb24ToRgb555|0x1001292F",
           "CheckSoundBufferReady|0x10006170"
         ],
         "LoD/1.13c": [
-          "CheckSoundBufferReady|0x10006170",
-          "FUN_10011ab0|0x10011AB0",
           "ConvertRgb24ToRgb565|0x1001296D",
           "timeGetTime|0x34",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "FUN_10011ab0|0x10011AB0",
+          "ProcessSmackAudioTracks|0x10005DD0",
+          "CheckSoundBufferReady|0x10006170"
+        ],
+        "LoD/1.13d": [
+          "ProcessSmackAudioTracks|0x10005DD0",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "timeGetTime|0x34",
+          "CheckSoundBufferReady|0x10006170",
+          "FUN_10011ab0|0x10011AB0",
+          "ConvertRgb24ToRgb565|0x1001296D"
+        ],
+        "LoD/1.14a": [
+          "FUN_10011ab0|0x10011AB0",
+          "timeGetTime|0x34",
+          "ConvertRgb24ToRgb565|0x1001296D",
+          "CheckSoundBufferReady|0x10006170",
           "ProcessSmackAudioTracks|0x10005DD0",
           "ConvertRgb24ToRgb555|0x1001292F"
         ],
-        "LoD/1.13d": [
-          "CheckSoundBufferReady|0x10006170",
-          "FUN_10011ab0|0x10011AB0",
-          "ProcessSmackAudioTracks|0x10005DD0",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "timeGetTime|0x34"
-        ],
-        "LoD/1.14a": [
-          "ProcessSmackAudioTracks|0x10005DD0",
-          "CheckSoundBufferReady|0x10006170",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "FUN_10011ab0|0x10011AB0",
-          "timeGetTime|0x34"
-        ],
         "LoD/1.14b": [
-          "ProcessSmackAudioTracks|0x10005DD0",
           "timeGetTime|0x34",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb565|0x1001296D",
           "FUN_10011ab0|0x10011AB0",
-          "CheckSoundBufferReady|0x10006170"
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "CheckSoundBufferReady|0x10006170",
+          "ConvertRgb24ToRgb565|0x1001296D",
+          "ProcessSmackAudioTracks|0x10005DD0"
         ],
         "LoD/1.14c": [
+          "CheckSoundBufferReady|0x10006170",
           "FUN_10011ab0|0x10011AB0",
           "ProcessSmackAudioTracks|0x10005DD0",
+          "ConvertRgb24ToRgb565|0x1001296D",
           "timeGetTime|0x34",
-          "CheckSoundBufferReady|0x10006170",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb565|0x1001296D"
+          "ConvertRgb24ToRgb555|0x1001292F"
         ],
         "LoD/1.14d": [
-          "CheckSoundBufferReady|0x10006170",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "ProcessSmackAudioTracks|0x10005DD0",
-          "timeGetTime|0x34",
           "ConvertRgb24ToRgb565|0x1001296D",
-          "FUN_10011ab0|0x10011AB0"
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "CheckSoundBufferReady|0x10006170",
+          "FUN_10011ab0|0x10011AB0",
+          "timeGetTime|0x34",
+          "ProcessSmackAudioTracks|0x10005DD0"
         ]
       },
       "instructions": {
@@ -60749,12 +58392,12 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10011f10|0x10011F10"
-        ],
-        "Classic/1.01": [
           "FUN_10011f10|0x10011F10",
           "FindFirstSetBitAndClear|0x10005640"
+        ],
+        "Classic/1.01": [
+          "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10011f10|0x10011F10"
         ],
         "Classic/1.02": [
           "FindFirstSetBitAndClear|0x10005640",
@@ -60769,44 +58412,44 @@ var FUNCTIONS_SmackW32_dll = {
           "FindFirstSetBitAndClear|0x10005640"
         ],
         "LoD/1.07": [
-          "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10011f10|0x10011F10"
+          "FUN_10011f10|0x10011F10",
+          "FindFirstSetBitAndClear|0x10005640"
         ],
         "LoD/1.08": [
-          "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10011f10|0x10011F10"
+          "FUN_10011f10|0x10011F10",
+          "FindFirstSetBitAndClear|0x10005640"
         ],
         "LoD/1.09": [
           "FindFirstSetBitAndClear|0x10005640",
           "FUN_10011f10|0x10011F10"
         ],
         "LoD/1.09b": [
-          "FUN_10011f10|0x10011F10",
-          "FindFirstSetBitAndClear|0x10005640"
+          "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10011f10|0x10011F10"
         ],
         "LoD/1.09d": [
-          "FUN_10011f10|0x10011F10",
-          "FindFirstSetBitAndClear|0x10005640"
+          "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10011f10|0x10011F10"
         ],
         "LoD/1.10": [
-          "FUN_10011f10|0x10011F10",
-          "FindFirstSetBitAndClear|0x10005640"
+          "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10011f10|0x10011F10"
         ],
         "LoD/1.11": [
-          "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10011f10|0x10011F10"
+          "FUN_10011f10|0x10011F10",
+          "FindFirstSetBitAndClear|0x10005640"
         ],
         "LoD/1.11b": [
-          "FUN_10011f10|0x10011F10",
-          "FindFirstSetBitAndClear|0x10005640"
-        ],
-        "LoD/1.12a": [
           "FindFirstSetBitAndClear|0x10005640",
           "FUN_10011f10|0x10011F10"
         ],
-        "LoD/1.13c": [
+        "LoD/1.12a": [
           "FUN_10011f10|0x10011F10",
           "FindFirstSetBitAndClear|0x10005640"
+        ],
+        "LoD/1.13c": [
+          "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10011f10|0x10011F10"
         ],
         "LoD/1.13d": [
           "FUN_10011f10|0x10011F10",
@@ -60821,12 +58464,12 @@ var FUNCTIONS_SmackW32_dll = {
           "FindFirstSetBitAndClear|0x10005640"
         ],
         "LoD/1.14c": [
-          "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10011f10|0x10011F10"
-        ],
-        "LoD/1.14d": [
           "FUN_10011f10|0x10011F10",
           "FindFirstSetBitAndClear|0x10005640"
+        ],
+        "LoD/1.14d": [
+          "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10011f10|0x10011F10"
         ]
       },
       "callers": {
@@ -63263,7 +60906,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_51": {
+    "SmackW32_NOP_46c464b5a023": {
       "addresses": {
         "Classic/1.00": "0x100061F0",
         "Classic/1.01": "0x100061F0",
@@ -63338,8 +60981,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:51",
+      "method": "NOP",
+      "index": "NOP:46c464b5a023dd8356078b8fb07240c53e25506d41c021711f69823f7881357d",
       "indexes": {
         "EXP": "51",
         "STR": null,
@@ -63354,8 +60997,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FUN_10006340|0x10006340",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "FUN_10006340|0x10006340"
         ],
         "Classic/1.01": [
           "FUN_10006340|0x10006340",
@@ -63366,8 +61009,8 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10006340|0x10006340"
         ],
         "Classic/1.03": [
-          "FUN_10006340|0x10006340",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "FUN_10006340|0x10006340"
         ],
         "Classic/1.04c": [
           "FUN_10006340|0x10006340",
@@ -63378,16 +61021,16 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.08": [
-          "timeGetTime|0x34",
-          "FUN_10006340|0x10006340"
+          "FUN_10006340|0x10006340",
+          "timeGetTime|0x34"
         ],
         "LoD/1.09": [
           "FUN_10006340|0x10006340",
           "timeGetTime|0x34"
         ],
         "LoD/1.09b": [
-          "FUN_10006340|0x10006340",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "FUN_10006340|0x10006340"
         ],
         "LoD/1.09d": [
           "timeGetTime|0x34",
@@ -63402,36 +61045,36 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10006340|0x10006340"
         ],
         "LoD/1.11b": [
-          "timeGetTime|0x34",
-          "FUN_10006340|0x10006340"
+          "FUN_10006340|0x10006340",
+          "timeGetTime|0x34"
         ],
         "LoD/1.12a": [
           "timeGetTime|0x34",
           "FUN_10006340|0x10006340"
         ],
         "LoD/1.13c": [
-          "FUN_10006340|0x10006340",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "FUN_10006340|0x10006340"
         ],
         "LoD/1.13d": [
           "timeGetTime|0x34",
           "FUN_10006340|0x10006340"
         ],
         "LoD/1.14a": [
-          "FUN_10006340|0x10006340",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "FUN_10006340|0x10006340"
         ],
         "LoD/1.14b": [
+          "timeGetTime|0x34",
+          "FUN_10006340|0x10006340"
+        ],
+        "LoD/1.14c": [
           "FUN_10006340|0x10006340",
           "timeGetTime|0x34"
         ],
-        "LoD/1.14c": [
-          "timeGetTime|0x34",
-          "FUN_10006340|0x10006340"
-        ],
         "LoD/1.14d": [
-          "timeGetTime|0x34",
-          "FUN_10006340|0x10006340"
+          "FUN_10006340|0x10006340",
+          "timeGetTime|0x34"
         ]
       },
       "instructions": {
@@ -65035,20 +62678,20 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "_SmackNextFrame@4|0x10006440",
-          "_SmackSummary@8|0x100061F0"
-        ],
-        "Classic/1.01": [
           "_SmackSummary@8|0x100061F0",
           "_SmackNextFrame@4|0x10006440"
         ],
-        "Classic/1.02": [
+        "Classic/1.01": [
           "_SmackNextFrame@4|0x10006440",
           "_SmackSummary@8|0x100061F0"
         ],
+        "Classic/1.02": [
+          "_SmackSummary@8|0x100061F0",
+          "_SmackNextFrame@4|0x10006440"
+        ],
         "Classic/1.03": [
-          "_SmackNextFrame@4|0x10006440",
-          "_SmackSummary@8|0x100061F0"
+          "_SmackSummary@8|0x100061F0",
+          "_SmackNextFrame@4|0x10006440"
         ],
         "Classic/1.04c": [
           "_SmackSummary@8|0x100061F0",
@@ -65063,8 +62706,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackNextFrame@4|0x10006440"
         ],
         "LoD/1.09": [
-          "_SmackSummary@8|0x100061F0",
-          "_SmackNextFrame@4|0x10006440"
+          "_SmackNextFrame@4|0x10006440",
+          "_SmackSummary@8|0x100061F0"
         ],
         "LoD/1.09b": [
           "_SmackNextFrame@4|0x10006440",
@@ -65075,12 +62718,12 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackSummary@8|0x100061F0"
         ],
         "LoD/1.10": [
-          "_SmackSummary@8|0x100061F0",
-          "_SmackNextFrame@4|0x10006440"
-        ],
-        "LoD/1.11": [
           "_SmackNextFrame@4|0x10006440",
           "_SmackSummary@8|0x100061F0"
+        ],
+        "LoD/1.11": [
+          "_SmackSummary@8|0x100061F0",
+          "_SmackNextFrame@4|0x10006440"
         ],
         "LoD/1.11b": [
           "_SmackNextFrame@4|0x10006440",
@@ -65095,8 +62738,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackSummary@8|0x100061F0"
         ],
         "LoD/1.13d": [
-          "_SmackSummary@8|0x100061F0",
-          "_SmackNextFrame@4|0x10006440"
+          "_SmackNextFrame@4|0x10006440",
+          "_SmackSummary@8|0x100061F0"
         ],
         "LoD/1.14a": [
           "_SmackSummary@8|0x100061F0",
@@ -66346,7 +63989,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_38": {
+    "SmackW32_NOP_0f24c5ad4218": {
       "addresses": {
         "Classic/1.00": "0x10006440",
         "Classic/1.01": "0x10006440",
@@ -66421,8 +64064,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:38",
+      "method": "NOP",
+      "index": "NOP:0f24c5ad421889fd31b70e36688208ce27dc4d1ba231796c2be2476779182e7d",
       "indexes": {
         "EXP": "38",
         "STR": null,
@@ -66437,9 +64080,9 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FUN_10006340|0x10006340",
+          "DecompressSmackFrame|0x100050F0",
           "ReadSmackFrame|0x100050A0",
-          "DecompressSmackFrame|0x100050F0"
+          "FUN_10006340|0x10006340"
         ],
         "Classic/1.01": [
           "FUN_10006340|0x10006340",
@@ -66447,8 +64090,8 @@ var FUNCTIONS_SmackW32_dll = {
           "DecompressSmackFrame|0x100050F0"
         ],
         "Classic/1.02": [
-          "DecompressSmackFrame|0x100050F0",
           "ReadSmackFrame|0x100050A0",
+          "DecompressSmackFrame|0x100050F0",
           "FUN_10006340|0x10006340"
         ],
         "Classic/1.03": [
@@ -66462,29 +64105,29 @@ var FUNCTIONS_SmackW32_dll = {
           "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.07": [
-          "DecompressSmackFrame|0x100050F0",
-          "FUN_10006340|0x10006340",
-          "ReadSmackFrame|0x100050A0"
-        ],
-        "LoD/1.08": [
-          "ReadSmackFrame|0x100050A0",
-          "DecompressSmackFrame|0x100050F0",
-          "FUN_10006340|0x10006340"
-        ],
-        "LoD/1.09": [
           "ReadSmackFrame|0x100050A0",
           "FUN_10006340|0x10006340",
           "DecompressSmackFrame|0x100050F0"
         ],
+        "LoD/1.08": [
+          "FUN_10006340|0x10006340",
+          "ReadSmackFrame|0x100050A0",
+          "DecompressSmackFrame|0x100050F0"
+        ],
+        "LoD/1.09": [
+          "FUN_10006340|0x10006340",
+          "ReadSmackFrame|0x100050A0",
+          "DecompressSmackFrame|0x100050F0"
+        ],
         "LoD/1.09b": [
           "DecompressSmackFrame|0x100050F0",
-          "FUN_10006340|0x10006340",
-          "ReadSmackFrame|0x100050A0"
+          "ReadSmackFrame|0x100050A0",
+          "FUN_10006340|0x10006340"
         ],
         "LoD/1.09d": [
           "ReadSmackFrame|0x100050A0",
-          "DecompressSmackFrame|0x100050F0",
-          "FUN_10006340|0x10006340"
+          "FUN_10006340|0x10006340",
+          "DecompressSmackFrame|0x100050F0"
         ],
         "LoD/1.10": [
           "FUN_10006340|0x10006340",
@@ -66497,34 +64140,34 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10006340|0x10006340"
         ],
         "LoD/1.11b": [
-          "ReadSmackFrame|0x100050A0",
           "FUN_10006340|0x10006340",
+          "ReadSmackFrame|0x100050A0",
           "DecompressSmackFrame|0x100050F0"
         ],
         "LoD/1.12a": [
-          "DecompressSmackFrame|0x100050F0",
           "FUN_10006340|0x10006340",
-          "ReadSmackFrame|0x100050A0"
-        ],
-        "LoD/1.13c": [
           "ReadSmackFrame|0x100050A0",
-          "FUN_10006340|0x10006340",
           "DecompressSmackFrame|0x100050F0"
         ],
-        "LoD/1.13d": [
+        "LoD/1.13c": [
           "DecompressSmackFrame|0x100050F0",
           "ReadSmackFrame|0x100050A0",
           "FUN_10006340|0x10006340"
         ],
-        "LoD/1.14a": [
-          "ReadSmackFrame|0x100050A0",
+        "LoD/1.13d": [
+          "DecompressSmackFrame|0x100050F0",
           "FUN_10006340|0x10006340",
-          "DecompressSmackFrame|0x100050F0"
+          "ReadSmackFrame|0x100050A0"
+        ],
+        "LoD/1.14a": [
+          "FUN_10006340|0x10006340",
+          "DecompressSmackFrame|0x100050F0",
+          "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.14b": [
+          "DecompressSmackFrame|0x100050F0",
           "FUN_10006340|0x10006340",
-          "ReadSmackFrame|0x100050A0",
-          "DecompressSmackFrame|0x100050F0"
+          "ReadSmackFrame|0x100050A0"
         ],
         "LoD/1.14c": [
           "DecompressSmackFrame|0x100050F0",
@@ -66533,8 +64176,8 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.14d": [
           "DecompressSmackFrame|0x100050F0",
-          "ReadSmackFrame|0x100050A0",
-          "FUN_10006340|0x10006340"
+          "FUN_10006340|0x10006340",
+          "ReadSmackFrame|0x100050A0"
         ]
       },
       "instructions": {
@@ -67447,7 +65090,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_54": {
+    "SmackW32_NOP_61088bed23bd": {
       "addresses": {
         "Classic/1.00": "0x100064E0",
         "Classic/1.01": "0x100064E0",
@@ -67522,8 +65165,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:54",
+      "method": "NOP",
+      "index": "NOP:61088bed23bd875b649082b14653980b8e5a7e1d4fa0256861a7f1e8c4e902ef",
       "indexes": {
         "EXP": "54",
         "STR": null,
@@ -67538,93 +65181,93 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FUN_10004c80|0x10004C80",
           "FUN_10006a90|0x10006A90",
+          "FID_conflict:_memcpy|0x1000BAB0",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "FID_conflict:_memcpy|0x1000BAB0"
+          "FUN_10004c80|0x10004C80"
         ],
         "Classic/1.01": [
-          "FUN_10006a90|0x10006A90",
           "FID_conflict:_memcpy|0x1000BAB0",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "FUN_10006a90|0x10006A90"
         ],
         "Classic/1.02": [
-          "FUN_10006a90|0x10006A90",
           "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_10004c80|0x10004C80",
           "FID_conflict:_memcpy|0x1000BAB0",
-          "FUN_10004c80|0x10004C80"
+          "FUN_10006a90|0x10006A90"
         ],
         "Classic/1.03": [
           "FUN_10004c80|0x10004C80",
           "FUN_10006a90|0x10006A90",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FID_conflict:_memcpy|0x1000BAB0"
+          "FID_conflict:_memcpy|0x1000BAB0",
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "Classic/1.04c": [
           "FUN_10004c80|0x10004C80",
+          "FUN_10006a90|0x10006A90",
+          "FID_conflict:_memcpy|0x1000BAB0",
+          "ApplyPresetUnitTileAttributes|0x10001040"
+        ],
+        "LoD/1.07": [
+          "FUN_10004c80|0x10004C80",
+          "FUN_10006a90|0x10006A90",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FID_conflict:_memcpy|0x1000BAB0"
+        ],
+        "LoD/1.08": [
+          "FUN_10006a90|0x10006A90",
+          "FID_conflict:_memcpy|0x1000BAB0",
+          "FUN_10004c80|0x10004C80",
+          "ApplyPresetUnitTileAttributes|0x10001040"
+        ],
+        "LoD/1.09": [
+          "FUN_10004c80|0x10004C80",
+          "FID_conflict:_memcpy|0x1000BAB0",
+          "FUN_10006a90|0x10006A90",
+          "ApplyPresetUnitTileAttributes|0x10001040"
+        ],
+        "LoD/1.09b": [
+          "FUN_10006a90|0x10006A90",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_10004c80|0x10004C80",
+          "FID_conflict:_memcpy|0x1000BAB0"
+        ],
+        "LoD/1.09d": [
+          "FUN_10004c80|0x10004C80",
           "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_10006a90|0x10006A90",
           "FID_conflict:_memcpy|0x1000BAB0"
         ],
-        "LoD/1.07": [
-          "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FID_conflict:_memcpy|0x1000BAB0",
-          "FUN_10006a90|0x10006A90"
-        ],
-        "LoD/1.08": [
-          "FID_conflict:_memcpy|0x1000BAB0",
-          "FUN_10006a90|0x10006A90",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_10004c80|0x10004C80"
-        ],
-        "LoD/1.09": [
-          "FID_conflict:_memcpy|0x1000BAB0",
-          "FUN_10006a90|0x10006A90",
-          "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.09b": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_10006a90|0x10006A90",
-          "FID_conflict:_memcpy|0x1000BAB0",
-          "FUN_10004c80|0x10004C80"
-        ],
-        "LoD/1.09d": [
-          "FID_conflict:_memcpy|0x1000BAB0",
-          "FUN_10004c80|0x10004C80",
-          "FUN_10006a90|0x10006A90",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
         "LoD/1.10": [
-          "FID_conflict:_memcpy|0x1000BAB0",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_10004c80|0x10004C80",
-          "FUN_10006a90|0x10006A90"
+          "FUN_10006a90|0x10006A90",
+          "FID_conflict:_memcpy|0x1000BAB0",
+          "FUN_10004c80|0x10004C80"
         ],
         "LoD/1.11": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_10004c80|0x10004C80",
           "FID_conflict:_memcpy|0x1000BAB0",
           "FUN_10006a90|0x10006A90",
-          "FUN_10004c80|0x10004C80"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.11b": [
           "FID_conflict:_memcpy|0x1000BAB0",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_10004c80|0x10004C80",
-          "FUN_10006a90|0x10006A90"
-        ],
-        "LoD/1.12a": [
-          "FUN_10004c80|0x10004C80",
           "FUN_10006a90|0x10006A90",
-          "FID_conflict:_memcpy|0x1000BAB0",
+          "FUN_10004c80|0x10004C80",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
+        "LoD/1.12a": [
+          "FID_conflict:_memcpy|0x1000BAB0",
+          "FUN_10004c80|0x10004C80",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_10006a90|0x10006A90"
+        ],
         "LoD/1.13c": [
-          "FUN_10006a90|0x10006A90",
           "FUN_10004c80|0x10004C80",
           "FID_conflict:_memcpy|0x1000BAB0",
+          "FUN_10006a90|0x10006A90",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.13d": [
@@ -67640,22 +65283,22 @@ var FUNCTIONS_SmackW32_dll = {
           "FID_conflict:_memcpy|0x1000BAB0"
         ],
         "LoD/1.14b": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FID_conflict:_memcpy|0x1000BAB0",
           "FUN_10004c80|0x10004C80",
+          "FID_conflict:_memcpy|0x1000BAB0",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_10006a90|0x10006A90"
         ],
         "LoD/1.14c": [
-          "FID_conflict:_memcpy|0x1000BAB0",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_10006a90|0x10006A90",
           "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "FID_conflict:_memcpy|0x1000BAB0"
         ],
         "LoD/1.14d": [
-          "FUN_10004c80|0x10004C80",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_10006a90|0x10006A90",
           "FID_conflict:_memcpy|0x1000BAB0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "FUN_10004c80|0x10004C80"
         ]
       },
       "instructions": {
@@ -70001,7 +67644,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_52": {
+    "SmackW32_NOP_7e5f50ef5d7d": {
       "addresses": {
         "Classic/1.00": "0x10006B00",
         "Classic/1.01": "0x10006B00",
@@ -70022,7 +67665,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": "0x10006B00",
         "LoD/1.14b": "0x10006B00",
         "LoD/1.14c": "0x10006B00",
-        "LoD/1.14d": "0x10006B00"
+        "LoD/1.14d": "0x10006B00",
+        "LoD/PD2": "0x02E26B00"
       },
       "rvas": {
         "Classic/1.00": "0x6B00",
@@ -70044,7 +67688,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": "0x6B00",
         "LoD/1.14b": "0x6B00",
         "LoD/1.14c": "0x6B00",
-        "LoD/1.14d": "0x6B00"
+        "LoD/1.14d": "0x6B00",
+        "LoD/PD2": "0x6B00"
       },
       "sizes": {
         "Classic/1.00": 729,
@@ -70066,15 +67711,16 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": 729,
         "LoD/1.14b": 729,
         "LoD/1.14c": 729,
-        "LoD/1.14d": 729
+        "LoD/1.14d": 729,
+        "LoD/PD2": 729
       },
       "name": "_SmackToBuffer@28",
       "signature": "undefined _SmackToBuffer@28(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6, uint param_7)",
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:52",
+      "method": "NOP",
+      "index": "NOP:7e5f50ef5d7db82557c3cfc522e488122528f7cb257b970ac27884499c646744",
       "indexes": {
         "EXP": "52",
         "STR": null,
@@ -70089,124 +67735,124 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "CalcSmackerBufferOffset|0x10012720",
-          "FID_conflict:_memcpy|0x1000BAB0"
+          "FID_conflict:_memcpy|0x1000BAB0",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_10004c80|0x10004C80"
         ],
         "Classic/1.01": [
           "FID_conflict:_memcpy|0x1000BAB0",
-          "FUN_10004c80|0x10004C80",
           "CalcSmackerBufferOffset|0x10012720",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.02": [
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "CalcSmackerBufferOffset|0x10012720",
-          "FID_conflict:_memcpy|0x1000BAB0",
           "FUN_10004c80|0x10004C80"
         ],
-        "Classic/1.03": [
-          "FUN_10004c80|0x10004C80",
+        "Classic/1.02": [
+          "CalcSmackerBufferOffset|0x10012720",
           "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_10004c80|0x10004C80",
+          "FID_conflict:_memcpy|0x1000BAB0"
+        ],
+        "Classic/1.03": [
+          "CalcSmackerBufferOffset|0x10012720",
+          "FUN_10004c80|0x10004C80",
           "FID_conflict:_memcpy|0x1000BAB0",
-          "CalcSmackerBufferOffset|0x10012720"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "Classic/1.04c": [
+          "CalcSmackerBufferOffset|0x10012720",
           "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "FID_conflict:_memcpy|0x1000BAB0",
-          "CalcSmackerBufferOffset|0x10012720"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.07": [
           "FUN_10004c80|0x10004C80",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "CalcSmackerBufferOffset|0x10012720",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "FID_conflict:_memcpy|0x1000BAB0"
         ],
         "LoD/1.08": [
+          "CalcSmackerBufferOffset|0x10012720",
           "FID_conflict:_memcpy|0x1000BAB0",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "CalcSmackerBufferOffset|0x10012720",
           "FUN_10004c80|0x10004C80"
         ],
         "LoD/1.09": [
+          "FUN_10004c80|0x10004C80",
           "FID_conflict:_memcpy|0x1000BAB0",
           "CalcSmackerBufferOffset|0x10012720",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_10004c80|0x10004C80"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.09b": [
           "ApplyPresetUnitTileAttributes|0x10001040",
           "CalcSmackerBufferOffset|0x10012720",
-          "FID_conflict:_memcpy|0x1000BAB0",
-          "FUN_10004c80|0x10004C80"
+          "FUN_10004c80|0x10004C80",
+          "FID_conflict:_memcpy|0x1000BAB0"
         ],
         "LoD/1.09d": [
-          "FID_conflict:_memcpy|0x1000BAB0",
+          "CalcSmackerBufferOffset|0x10012720",
           "FUN_10004c80|0x10004C80",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "CalcSmackerBufferOffset|0x10012720"
+          "FID_conflict:_memcpy|0x1000BAB0"
         ],
         "LoD/1.10": [
-          "FID_conflict:_memcpy|0x1000BAB0",
           "ApplyPresetUnitTileAttributes|0x10001040",
+          "FID_conflict:_memcpy|0x1000BAB0",
           "FUN_10004c80|0x10004C80",
           "CalcSmackerBufferOffset|0x10012720"
         ],
         "LoD/1.11": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FID_conflict:_memcpy|0x1000BAB0",
+          "CalcSmackerBufferOffset|0x10012720",
           "FUN_10004c80|0x10004C80",
-          "CalcSmackerBufferOffset|0x10012720"
+          "FID_conflict:_memcpy|0x1000BAB0",
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.11b": [
           "FID_conflict:_memcpy|0x1000BAB0",
+          "FUN_10004c80|0x10004C80",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "CalcSmackerBufferOffset|0x10012720",
-          "FUN_10004c80|0x10004C80"
+          "CalcSmackerBufferOffset|0x10012720"
         ],
         "LoD/1.12a": [
-          "FUN_10004c80|0x10004C80",
           "CalcSmackerBufferOffset|0x10012720",
           "FID_conflict:_memcpy|0x1000BAB0",
+          "FUN_10004c80|0x10004C80",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.13c": [
-          "CalcSmackerBufferOffset|0x10012720",
           "FUN_10004c80|0x10004C80",
           "FID_conflict:_memcpy|0x1000BAB0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "CalcSmackerBufferOffset|0x10012720"
         ],
         "LoD/1.13d": [
-          "FID_conflict:_memcpy|0x1000BAB0",
           "CalcSmackerBufferOffset|0x10012720",
+          "FID_conflict:_memcpy|0x1000BAB0",
           "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_10004c80|0x10004C80"
         ],
         "LoD/1.14a": [
           "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_10004c80|0x10004C80",
+          "FID_conflict:_memcpy|0x1000BAB0",
+          "CalcSmackerBufferOffset|0x10012720"
+        ],
+        "LoD/1.14b": [
+          "FUN_10004c80|0x10004C80",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "CalcSmackerBufferOffset|0x10012720",
           "FID_conflict:_memcpy|0x1000BAB0"
         ],
-        "LoD/1.14b": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FID_conflict:_memcpy|0x1000BAB0",
-          "CalcSmackerBufferOffset|0x10012720",
-          "FUN_10004c80|0x10004C80"
-        ],
         "LoD/1.14c": [
-          "FID_conflict:_memcpy|0x1000BAB0",
-          "FUN_10004c80|0x10004C80",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "CalcSmackerBufferOffset|0x10012720"
+          "CalcSmackerBufferOffset|0x10012720",
+          "FUN_10004c80|0x10004C80",
+          "FID_conflict:_memcpy|0x1000BAB0"
         ],
         "LoD/1.14d": [
-          "FUN_10004c80|0x10004C80",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "CalcSmackerBufferOffset|0x10012720",
           "FID_conflict:_memcpy|0x1000BAB0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "FUN_10004c80|0x10004C80"
         ]
       },
       "instructions": {
@@ -70615,7 +68261,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": 0,
         "LoD/1.14b": 0,
         "LoD/1.14c": 0,
-        "LoD/1.14d": 0
+        "LoD/1.14d": 0,
+        "LoD/PD2": 0
       },
       "mnemonic_hashes": {
         "Classic/1.00": "6a80ca09a4073b224d934b58ae1e9a53",
@@ -71282,6 +68929,10 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": [
           "_radfree@4",
           "_radfree@4"
+        ],
+        "LoD/PD2": [
+          "_radfree@4",
+          "_radfree@4"
         ]
       },
       "callee_counts": {
@@ -71370,7 +69021,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": 7,
         "LoD/1.14b": 7,
         "LoD/1.14c": 7,
-        "LoD/1.14d": 7
+        "LoD/1.14d": 7,
+        "LoD/PD2": 7
       },
       "tags": {
         "Classic/1.00": [
@@ -71677,7 +69329,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_31": {
+    "SmackW32_NOP_6c163796a67c": {
       "addresses": {
         "Classic/1.00": "0x10006DE0",
         "Classic/1.01": "0x10006DE0",
@@ -71752,8 +69404,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:31",
+      "method": "NOP",
+      "index": "NOP:6c163796a67c7b119589e7414b1c56e44fa550754259ce790a9287729ced9944",
       "indexes": {
         "EXP": "31",
         "STR": null,
@@ -72598,7 +70250,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_30": {
+    "SmackW32_NOP_583144fa4e73": {
       "addresses": {
         "Classic/1.00": "0x10006E20",
         "Classic/1.01": "0x10006E20",
@@ -72673,8 +70325,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:30",
+      "method": "NOP",
+      "index": "NOP:583144fa4e73afe9b7b5b862d3efb443efc0e8bee0ef3a1fe297f65271167dc6",
       "indexes": {
         "EXP": "30",
         "STR": null,
@@ -74059,7 +71711,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_35": {
+    "SmackW32_NOP_e47d6f335b60": {
       "addresses": {
         "Classic/1.00": "0x10007070",
         "Classic/1.01": "0x10007070",
@@ -74134,8 +71786,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "uint",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:35",
+      "method": "NOP",
+      "index": "NOP:e47d6f335b60e767dab6e7cd0f6e64dc901a31df3682c71ef330be22ed08828e",
       "indexes": {
         "EXP": "35",
         "STR": null,
@@ -74150,19 +71802,19 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FUN_10004c80|0x10004C80",
+          "FUN_10011f10|0x10011F10",
           "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10011f10|0x10011F10"
+          "FUN_10004c80|0x10004C80"
         ],
         "Classic/1.01": [
-          "FUN_10004c80|0x10004C80",
+          "FindFirstSetBitAndClear|0x10005640",
           "FUN_10011f10|0x10011F10",
-          "FindFirstSetBitAndClear|0x10005640"
+          "FUN_10004c80|0x10004C80"
         ],
         "Classic/1.02": [
-          "FUN_10004c80|0x10004C80",
           "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10011f10|0x10011F10"
+          "FUN_10011f10|0x10011F10",
+          "FUN_10004c80|0x10004C80"
         ],
         "Classic/1.03": [
           "FindFirstSetBitAndClear|0x10005640",
@@ -74170,64 +71822,64 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10011f10|0x10011F10"
         ],
         "Classic/1.04c": [
-          "FUN_10011f10|0x10011F10",
           "FUN_10004c80|0x10004C80",
+          "FUN_10011f10|0x10011F10",
           "FindFirstSetBitAndClear|0x10005640"
         ],
         "LoD/1.07": [
-          "FindFirstSetBitAndClear|0x10005640",
           "FUN_10004c80|0x10004C80",
-          "FUN_10011f10|0x10011F10"
+          "FUN_10011f10|0x10011F10",
+          "FindFirstSetBitAndClear|0x10005640"
         ],
         "LoD/1.08": [
-          "FindFirstSetBitAndClear|0x10005640",
           "FUN_10011f10|0x10011F10",
+          "FindFirstSetBitAndClear|0x10005640",
           "FUN_10004c80|0x10004C80"
         ],
         "LoD/1.09": [
+          "FUN_10004c80|0x10004C80",
           "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10011f10|0x10011F10",
-          "FUN_10004c80|0x10004C80"
+          "FUN_10011f10|0x10011F10"
         ],
         "LoD/1.09b": [
-          "FUN_10011f10|0x10011F10",
+          "FUN_10004c80|0x10004C80",
           "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10004c80|0x10004C80"
+          "FUN_10011f10|0x10011F10"
         ],
         "LoD/1.09d": [
-          "FUN_10011f10|0x10011F10",
-          "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10004c80|0x10004C80"
-        ],
-        "LoD/1.10": [
-          "FUN_10011f10|0x10011F10",
-          "FUN_10004c80|0x10004C80",
-          "FindFirstSetBitAndClear|0x10005640"
-        ],
-        "LoD/1.11": [
           "FindFirstSetBitAndClear|0x10005640",
           "FUN_10004c80|0x10004C80",
           "FUN_10011f10|0x10011F10"
         ],
-        "LoD/1.11b": [
-          "FUN_10011f10|0x10011F10",
+        "LoD/1.10": [
           "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10011f10|0x10011F10",
+          "FUN_10004c80|0x10004C80"
+        ],
+        "LoD/1.11": [
+          "FUN_10004c80|0x10004C80",
+          "FUN_10011f10|0x10011F10",
+          "FindFirstSetBitAndClear|0x10005640"
+        ],
+        "LoD/1.11b": [
+          "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10011f10|0x10011F10",
           "FUN_10004c80|0x10004C80"
         ],
         "LoD/1.12a": [
-          "FindFirstSetBitAndClear|0x10005640",
           "FUN_10004c80|0x10004C80",
-          "FUN_10011f10|0x10011F10"
+          "FUN_10011f10|0x10011F10",
+          "FindFirstSetBitAndClear|0x10005640"
         ],
         "LoD/1.13c": [
-          "FUN_10011f10|0x10011F10",
           "FUN_10004c80|0x10004C80",
-          "FindFirstSetBitAndClear|0x10005640"
+          "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10011f10|0x10011F10"
         ],
         "LoD/1.13d": [
           "FUN_10011f10|0x10011F10",
-          "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10004c80|0x10004C80"
+          "FUN_10004c80|0x10004C80",
+          "FindFirstSetBitAndClear|0x10005640"
         ],
         "LoD/1.14a": [
           "FUN_10011f10|0x10011F10",
@@ -74235,19 +71887,19 @@ var FUNCTIONS_SmackW32_dll = {
           "FindFirstSetBitAndClear|0x10005640"
         ],
         "LoD/1.14b": [
+          "FUN_10004c80|0x10004C80",
+          "FUN_10011f10|0x10011F10",
+          "FindFirstSetBitAndClear|0x10005640"
+        ],
+        "LoD/1.14c": [
           "FUN_10011f10|0x10011F10",
           "FindFirstSetBitAndClear|0x10005640",
           "FUN_10004c80|0x10004C80"
         ],
-        "LoD/1.14c": [
-          "FindFirstSetBitAndClear|0x10005640",
-          "FUN_10004c80|0x10004C80",
-          "FUN_10011f10|0x10011F10"
-        ],
         "LoD/1.14d": [
           "FUN_10004c80|0x10004C80",
-          "FUN_10011f10|0x10011F10",
-          "FindFirstSetBitAndClear|0x10005640"
+          "FindFirstSetBitAndClear|0x10005640",
+          "FUN_10011f10|0x10011F10"
         ]
       },
       "instructions": {
@@ -75120,7 +72772,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_36": {
+    "SmackW32_NOP_bddff6b591e9": {
       "addresses": {
         "Classic/1.00": "0x10007170",
         "Classic/1.01": "0x10007170",
@@ -75195,8 +72847,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:36",
+      "method": "NOP",
+      "index": "NOP:bddff6b591e9e236ffac8adb84b06ba2fe3ca8c2b0fce9da4c7b6e8ada0052a2",
       "indexes": {
         "EXP": "36",
         "STR": null,
@@ -75211,8 +72863,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "DecompressSmackFrame|0x100050F0"
+          "DecompressSmackFrame|0x100050F0",
+          "ReadBufferedSmackFrame|0x10005440"
         ],
         "Classic/1.01": [
           "DecompressSmackFrame|0x100050F0",
@@ -75223,72 +72875,72 @@ var FUNCTIONS_SmackW32_dll = {
           "DecompressSmackFrame|0x100050F0"
         ],
         "Classic/1.03": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "DecompressSmackFrame|0x100050F0"
-        ],
-        "Classic/1.04c": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "DecompressSmackFrame|0x100050F0"
-        ],
-        "LoD/1.07": [
           "DecompressSmackFrame|0x100050F0",
           "ReadBufferedSmackFrame|0x10005440"
+        ],
+        "Classic/1.04c": [
+          "DecompressSmackFrame|0x100050F0",
+          "ReadBufferedSmackFrame|0x10005440"
+        ],
+        "LoD/1.07": [
+          "ReadBufferedSmackFrame|0x10005440",
+          "DecompressSmackFrame|0x100050F0"
         ],
         "LoD/1.08": [
           "ReadBufferedSmackFrame|0x10005440",
           "DecompressSmackFrame|0x100050F0"
         ],
         "LoD/1.09": [
-          "DecompressSmackFrame|0x100050F0",
-          "ReadBufferedSmackFrame|0x10005440"
-        ],
-        "LoD/1.09b": [
-          "DecompressSmackFrame|0x100050F0",
-          "ReadBufferedSmackFrame|0x10005440"
-        ],
-        "LoD/1.09d": [
-          "DecompressSmackFrame|0x100050F0",
-          "ReadBufferedSmackFrame|0x10005440"
-        ],
-        "LoD/1.10": [
-          "DecompressSmackFrame|0x100050F0",
-          "ReadBufferedSmackFrame|0x10005440"
-        ],
-        "LoD/1.11": [
           "ReadBufferedSmackFrame|0x10005440",
           "DecompressSmackFrame|0x100050F0"
+        ],
+        "LoD/1.09b": [
+          "ReadBufferedSmackFrame|0x10005440",
+          "DecompressSmackFrame|0x100050F0"
+        ],
+        "LoD/1.09d": [
+          "ReadBufferedSmackFrame|0x10005440",
+          "DecompressSmackFrame|0x100050F0"
+        ],
+        "LoD/1.10": [
+          "ReadBufferedSmackFrame|0x10005440",
+          "DecompressSmackFrame|0x100050F0"
+        ],
+        "LoD/1.11": [
+          "DecompressSmackFrame|0x100050F0",
+          "ReadBufferedSmackFrame|0x10005440"
         ],
         "LoD/1.11b": [
           "ReadBufferedSmackFrame|0x10005440",
           "DecompressSmackFrame|0x100050F0"
         ],
         "LoD/1.12a": [
-          "DecompressSmackFrame|0x100050F0",
-          "ReadBufferedSmackFrame|0x10005440"
+          "ReadBufferedSmackFrame|0x10005440",
+          "DecompressSmackFrame|0x100050F0"
         ],
         "LoD/1.13c": [
           "ReadBufferedSmackFrame|0x10005440",
           "DecompressSmackFrame|0x100050F0"
         ],
         "LoD/1.13d": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "DecompressSmackFrame|0x100050F0"
+          "DecompressSmackFrame|0x100050F0",
+          "ReadBufferedSmackFrame|0x10005440"
         ],
         "LoD/1.14a": [
           "ReadBufferedSmackFrame|0x10005440",
           "DecompressSmackFrame|0x100050F0"
         ],
         "LoD/1.14b": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "DecompressSmackFrame|0x100050F0"
+          "DecompressSmackFrame|0x100050F0",
+          "ReadBufferedSmackFrame|0x10005440"
         ],
         "LoD/1.14c": [
           "DecompressSmackFrame|0x100050F0",
           "ReadBufferedSmackFrame|0x10005440"
         ],
         "LoD/1.14d": [
-          "ReadBufferedSmackFrame|0x10005440",
-          "DecompressSmackFrame|0x100050F0"
+          "DecompressSmackFrame|0x100050F0",
+          "ReadBufferedSmackFrame|0x10005440"
         ]
       },
       "instructions": {
@@ -75997,7 +73649,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_53": {
+    "SmackW32_NOP_358e9ffa2dd5": {
       "addresses": {
         "Classic/1.00": "0x100071C0",
         "Classic/1.01": "0x100071C0",
@@ -76072,8 +73724,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__fastcall",
       "return_type": "undefined4",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:53",
+      "method": "NOP",
+      "index": "NOP:358e9ffa2dd592176920afb632b50e0ea7b2569a2a5950d5295925b9f40b8c19",
       "indexes": {
         "EXP": "53",
         "STR": null,
@@ -76088,28 +73740,28 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FUN_10007300|0x10007300",
           "timeGetTime|0x34",
+          "FUN_10007300|0x10007300",
           "RemoveArrayElementCompact|0x10007560"
         ],
         "Classic/1.01": [
           "FUN_10007300|0x10007300",
-          "RemoveArrayElementCompact|0x10007560",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "RemoveArrayElementCompact|0x10007560"
         ],
         "Classic/1.02": [
+          "timeGetTime|0x34",
+          "RemoveArrayElementCompact|0x10007560",
+          "FUN_10007300|0x10007300"
+        ],
+        "Classic/1.03": [
           "timeGetTime|0x34",
           "FUN_10007300|0x10007300",
           "RemoveArrayElementCompact|0x10007560"
         ],
-        "Classic/1.03": [
-          "RemoveArrayElementCompact|0x10007560",
-          "timeGetTime|0x34",
-          "FUN_10007300|0x10007300"
-        ],
         "Classic/1.04c": [
-          "RemoveArrayElementCompact|0x10007560",
           "FUN_10007300|0x10007300",
+          "RemoveArrayElementCompact|0x10007560",
           "timeGetTime|0x34"
         ],
         "LoD/1.07": [
@@ -76118,64 +73770,64 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.08": [
+          "RemoveArrayElementCompact|0x10007560",
           "FUN_10007300|0x10007300",
-          "timeGetTime|0x34",
-          "RemoveArrayElementCompact|0x10007560"
+          "timeGetTime|0x34"
         ],
         "LoD/1.09": [
-          "RemoveArrayElementCompact|0x10007560",
           "timeGetTime|0x34",
-          "FUN_10007300|0x10007300"
+          "FUN_10007300|0x10007300",
+          "RemoveArrayElementCompact|0x10007560"
         ],
         "LoD/1.09b": [
-          "timeGetTime|0x34",
           "RemoveArrayElementCompact|0x10007560",
-          "FUN_10007300|0x10007300"
+          "FUN_10007300|0x10007300",
+          "timeGetTime|0x34"
         ],
         "LoD/1.09d": [
           "timeGetTime|0x34",
-          "FUN_10007300|0x10007300",
-          "RemoveArrayElementCompact|0x10007560"
-        ],
-        "LoD/1.10": [
           "RemoveArrayElementCompact|0x10007560",
-          "timeGetTime|0x34",
           "FUN_10007300|0x10007300"
         ],
-        "LoD/1.11": [
+        "LoD/1.10": [
           "FUN_10007300|0x10007300",
           "timeGetTime|0x34",
+          "RemoveArrayElementCompact|0x10007560"
+        ],
+        "LoD/1.11": [
+          "timeGetTime|0x34",
+          "FUN_10007300|0x10007300",
           "RemoveArrayElementCompact|0x10007560"
         ],
         "LoD/1.11b": [
-          "timeGetTime|0x34",
           "FUN_10007300|0x10007300",
-          "RemoveArrayElementCompact|0x10007560"
+          "RemoveArrayElementCompact|0x10007560",
+          "timeGetTime|0x34"
         ],
         "LoD/1.12a": [
           "timeGetTime|0x34",
-          "RemoveArrayElementCompact|0x10007560",
-          "FUN_10007300|0x10007300"
-        ],
-        "LoD/1.13c": [
           "FUN_10007300|0x10007300",
-          "timeGetTime|0x34",
           "RemoveArrayElementCompact|0x10007560"
         ],
-        "LoD/1.13d": [
-          "FUN_10007300|0x10007300",
+        "LoD/1.13c": [
           "RemoveArrayElementCompact|0x10007560",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "FUN_10007300|0x10007300"
+        ],
+        "LoD/1.13d": [
+          "RemoveArrayElementCompact|0x10007560",
+          "timeGetTime|0x34",
+          "FUN_10007300|0x10007300"
         ],
         "LoD/1.14a": [
+          "timeGetTime|0x34",
           "FUN_10007300|0x10007300",
-          "RemoveArrayElementCompact|0x10007560",
-          "timeGetTime|0x34"
+          "RemoveArrayElementCompact|0x10007560"
         ],
         "LoD/1.14b": [
           "timeGetTime|0x34",
-          "FUN_10007300|0x10007300",
-          "RemoveArrayElementCompact|0x10007560"
+          "RemoveArrayElementCompact|0x10007560",
+          "FUN_10007300|0x10007300"
         ],
         "LoD/1.14c": [
           "RemoveArrayElementCompact|0x10007560",
@@ -76183,8 +73835,8 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.14d": [
-          "FUN_10007300|0x10007300",
           "timeGetTime|0x34",
+          "FUN_10007300|0x10007300",
           "RemoveArrayElementCompact|0x10007560"
         ]
       },
@@ -79929,7 +77581,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_44": {
+    "SmackW32_NOP_0e3719b7e77c": {
       "addresses": {
         "Classic/1.00": "0x10007620",
         "Classic/1.01": "0x10007620",
@@ -80004,8 +77656,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined4",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:44",
+      "method": "NOP",
+      "index": "NOP:0e3719b7e77cdff708c9e78ca2c0e0024ed59717c35a04a344808473a1a1264d",
       "indexes": {
         "EXP": "44",
         "STR": null,
@@ -80806,7 +78458,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_56": {
+    "SmackW32_NOP_c9c8631796a0": {
       "addresses": {
         "Classic/1.00": "0x10007680",
         "Classic/1.01": "0x10007680",
@@ -80881,8 +78533,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:56",
+      "method": "NOP",
+      "index": "NOP:c9c8631796a0862a6e73fdad637e55c380b442601477b7c5c8a40c997ca1fd7e",
       "indexes": {
         "EXP": "56",
         "STR": null,
@@ -81887,7 +79539,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_43": {
+    "SmackW32_NOP_dff36556ac8c": {
       "addresses": {
         "Classic/1.00": "0x10007710",
         "Classic/1.01": "0x10007710",
@@ -81962,8 +79614,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:43",
+      "method": "NOP",
+      "index": "NOP:dff36556ac8c602c8cd7d5f0efc4f0ad317b09d1411aae144bc0c9ca0ee75d47",
       "indexes": {
         "EXP": "43",
         "STR": null,
@@ -82501,7 +80153,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_57": {
+    "SmackW32_NOP_0cfd99e9211c": {
       "addresses": {
         "Classic/1.00": "0x10007720",
         "Classic/1.01": "0x10007720",
@@ -82576,8 +80228,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined4",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:57",
+      "method": "NOP",
+      "index": "NOP:0cfd99e9211cb59c11107a9d966db5df40b9283abbfb14cf3fd4ba00695217c9",
       "indexes": {
         "EXP": "57",
         "STR": null,
@@ -82600,40 +80252,40 @@ var FUNCTIONS_SmackW32_dll = {
           "SmackReadFrame|0x10004CB0"
         ],
         "Classic/1.02": [
-          "SmackReadFrame|0x10004CB0",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "SmackReadFrame|0x10004CB0"
         ],
         "Classic/1.03": [
           "timeGetTime|0x34",
           "SmackReadFrame|0x10004CB0"
         ],
         "Classic/1.04c": [
-          "timeGetTime|0x34",
-          "SmackReadFrame|0x10004CB0"
+          "SmackReadFrame|0x10004CB0",
+          "timeGetTime|0x34"
         ],
         "LoD/1.07": [
           "SmackReadFrame|0x10004CB0",
           "timeGetTime|0x34"
         ],
         "LoD/1.08": [
-          "timeGetTime|0x34",
-          "SmackReadFrame|0x10004CB0"
+          "SmackReadFrame|0x10004CB0",
+          "timeGetTime|0x34"
         ],
         "LoD/1.09": [
           "SmackReadFrame|0x10004CB0",
           "timeGetTime|0x34"
         ],
         "LoD/1.09b": [
-          "SmackReadFrame|0x10004CB0",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "SmackReadFrame|0x10004CB0"
         ],
         "LoD/1.09d": [
           "timeGetTime|0x34",
           "SmackReadFrame|0x10004CB0"
         ],
         "LoD/1.10": [
-          "SmackReadFrame|0x10004CB0",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "SmackReadFrame|0x10004CB0"
         ],
         "LoD/1.11": [
           "timeGetTime|0x34",
@@ -82652,8 +80304,8 @@ var FUNCTIONS_SmackW32_dll = {
           "SmackReadFrame|0x10004CB0"
         ],
         "LoD/1.13d": [
-          "timeGetTime|0x34",
-          "SmackReadFrame|0x10004CB0"
+          "SmackReadFrame|0x10004CB0",
+          "timeGetTime|0x34"
         ],
         "LoD/1.14a": [
           "SmackReadFrame|0x10004CB0",
@@ -82668,8 +80320,8 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.14d": [
-          "SmackReadFrame|0x10004CB0",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "SmackReadFrame|0x10004CB0"
         ]
       },
       "instructions": {
@@ -83894,106 +81546,106 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_10008e30|0x10008E30",
           "FUN_10008a90|0x10008A90",
+          "FUN_10008e30|0x10008E30",
           "FUN_10007c30|0x10007C30",
           "FUN_100084a0|0x100084A0"
         ],
         "Classic/1.01": [
-          "FUN_10008e30|0x10008E30",
           "FUN_100084a0|0x100084A0",
-          "FUN_10008a90|0x10008A90",
-          "FUN_10007c30|0x10007C30"
-        ],
-        "Classic/1.02": [
           "FUN_10007c30|0x10007C30",
           "FUN_10008a90|0x10008A90",
+          "FUN_10008e30|0x10008E30"
+        ],
+        "Classic/1.02": [
           "FUN_10008e30|0x10008E30",
-          "FUN_100084a0|0x100084A0"
+          "FUN_10008a90|0x10008A90",
+          "FUN_100084a0|0x100084A0",
+          "FUN_10007c30|0x10007C30"
         ],
         "Classic/1.03": [
           "FUN_10008e30|0x10008E30",
-          "FUN_100084a0|0x100084A0",
+          "FUN_10008a90|0x10008A90",
           "FUN_10007c30|0x10007C30",
-          "FUN_10008a90|0x10008A90"
+          "FUN_100084a0|0x100084A0"
         ],
         "Classic/1.04c": [
-          "FUN_10008e30|0x10008E30",
+          "FUN_10008a90|0x10008A90",
           "FUN_10007c30|0x10007C30",
           "FUN_100084a0|0x100084A0",
-          "FUN_10008a90|0x10008A90"
+          "FUN_10008e30|0x10008E30"
         ],
         "LoD/1.07": [
           "ProcessSmackBufferList|0x100084A0",
+          "ProcessSmackSoundQueue|0x10008A90",
           "UpdateAudioStreamBuffers|0x10008E30",
-          "ProcessStreamQueue|0x10007C30",
-          "ProcessSmackSoundQueue|0x10008A90"
+          "ProcessStreamQueue|0x10007C30"
         ],
         "LoD/1.08": [
-          "FUN_100084a0|0x100084A0",
-          "FUN_10008a90|0x10008A90",
           "FUN_10008e30|0x10008E30",
-          "FUN_10007c30|0x10007C30"
+          "FUN_100084a0|0x100084A0",
+          "FUN_10007c30|0x10007C30",
+          "FUN_10008a90|0x10008A90"
         ],
         "LoD/1.09": [
-          "FUN_100084a0|0x100084A0",
-          "FUN_10008a90|0x10008A90",
+          "FUN_10008e30|0x10008E30",
           "FUN_10007c30|0x10007C30",
-          "FUN_10008e30|0x10008E30"
+          "FUN_100084a0|0x100084A0",
+          "FUN_10008a90|0x10008A90"
         ],
         "LoD/1.09b": [
-          "FUN_100084a0|0x100084A0",
           "FUN_10008e30|0x10008E30",
-          "FUN_10007c30|0x10007C30",
-          "FUN_10008a90|0x10008A90"
+          "FUN_100084a0|0x100084A0",
+          "FUN_10008a90|0x10008A90",
+          "FUN_10007c30|0x10007C30"
         ],
         "LoD/1.09d": [
-          "FUN_10008e30|0x10008E30",
           "FUN_100084a0|0x100084A0",
-          "FUN_10007c30|0x10007C30",
-          "FUN_10008a90|0x10008A90"
-        ],
-        "LoD/1.10": [
-          "FUN_10007c30|0x10007C30",
-          "FUN_100084a0|0x100084A0",
-          "FUN_10008e30|0x10008E30",
-          "FUN_10008a90|0x10008A90"
-        ],
-        "LoD/1.11": [
-          "FUN_100084a0|0x100084A0",
-          "FUN_10008e30|0x10008E30",
-          "FUN_10007c30|0x10007C30",
-          "FUN_10008a90|0x10008A90"
-        ],
-        "LoD/1.11b": [
           "FUN_10008e30|0x10008E30",
           "FUN_10008a90|0x10008A90",
+          "FUN_10007c30|0x10007C30"
+        ],
+        "LoD/1.10": [
+          "FUN_10008a90|0x10008A90",
+          "FUN_10008e30|0x10008E30",
           "FUN_100084a0|0x100084A0",
           "FUN_10007c30|0x10007C30"
+        ],
+        "LoD/1.11": [
+          "FUN_10007c30|0x10007C30",
+          "FUN_100084a0|0x100084A0",
+          "FUN_10008a90|0x10008A90",
+          "FUN_10008e30|0x10008E30"
+        ],
+        "LoD/1.11b": [
+          "FUN_100084a0|0x100084A0",
+          "FUN_10008e30|0x10008E30",
+          "FUN_10007c30|0x10007C30",
+          "FUN_10008a90|0x10008A90"
         ],
         "LoD/1.12a": [
           "FUN_10008e30|0x10008E30",
           "FUN_100084a0|0x100084A0",
-          "FUN_10007c30|0x10007C30",
-          "FUN_10008a90|0x10008A90"
-        ],
-        "LoD/1.13c": [
-          "FUN_10008e30|0x10008E30",
-          "FUN_100084a0|0x100084A0",
           "FUN_10008a90|0x10008A90",
           "FUN_10007c30|0x10007C30"
         ],
-        "LoD/1.13d": [
-          "FUN_10008a90|0x10008A90",
+        "LoD/1.13c": [
+          "FUN_100084a0|0x100084A0",
           "FUN_10008e30|0x10008E30",
           "FUN_10007c30|0x10007C30",
-          "FUN_100084a0|0x100084A0"
+          "FUN_10008a90|0x10008A90"
+        ],
+        "LoD/1.13d": [
+          "FUN_10008e30|0x10008E30",
+          "FUN_10007c30|0x10007C30",
+          "FUN_100084a0|0x100084A0",
+          "FUN_10008a90|0x10008A90"
         ],
         "LoD/1.14a": [
-          "FUN_10008e30|0x10008E30",
           "FUN_10008a90|0x10008A90",
-          "FUN_10007c30|0x10007C30",
-          "FUN_100084a0|0x100084A0"
+          "FUN_10008e30|0x10008E30",
+          "FUN_100084a0|0x100084A0",
+          "FUN_10007c30|0x10007C30"
         ],
         "LoD/1.14b": [
           "FUN_10008e30|0x10008E30",
@@ -84002,16 +81654,16 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10007c30|0x10007C30"
         ],
         "LoD/1.14c": [
-          "FUN_10007c30|0x10007C30",
           "FUN_10008a90|0x10008A90",
           "FUN_10008e30|0x10008E30",
+          "FUN_10007c30|0x10007C30",
           "FUN_100084a0|0x100084A0"
         ],
         "LoD/1.14d": [
+          "FUN_10007c30|0x10007C30",
           "FUN_10008e30|0x10008E30",
           "FUN_10008a90|0x10008A90",
-          "FUN_100084a0|0x100084A0",
-          "FUN_10007c30|0x10007C30"
+          "FUN_100084a0|0x100084A0"
         ]
       },
       "instructions": {
@@ -84615,7 +82267,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_55": {
+    "SmackW32_NOP_2706d6d1bcf0": {
       "addresses": {
         "Classic/1.00": "0x100078C0",
         "Classic/1.01": "0x100078C0",
@@ -84636,7 +82288,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": "0x10008C80",
         "LoD/1.14b": "0x10008C80",
         "LoD/1.14c": "0x10008C80",
-        "LoD/1.14d": "0x10008C80"
+        "LoD/1.14d": "0x10008C80",
+        "LoD/PD2": "0x02E278C0"
       },
       "rvas": {
         "Classic/1.00": "0x78C0",
@@ -84658,7 +82311,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": "0x8C80",
         "LoD/1.14b": "0x8C80",
         "LoD/1.14c": "0x8C80",
-        "LoD/1.14d": "0x8C80"
+        "LoD/1.14d": "0x8C80",
+        "LoD/PD2": "0x78C0"
       },
       "sizes": {
         "Classic/1.00": 16,
@@ -84680,15 +82334,16 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": 16,
         "LoD/1.14b": 16,
         "LoD/1.14c": 16,
-        "LoD/1.14d": 16
+        "LoD/1.14d": 16,
+        "LoD/PD2": 16
       },
       "name": "_SmackUseMMX@4",
       "signature": "undefined _SmackUseMMX@4(uint param_1)",
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:55",
+      "method": "NOP",
+      "index": "NOP:2706d6d1bcf031d4ae03848e8d75b8b96945a965c09d1df6628c8f3e3e87af08",
       "indexes": {
         "EXP": "55",
         "STR": null,
@@ -84980,7 +82635,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": 0,
         "LoD/1.14b": 0,
         "LoD/1.14c": 0,
-        "LoD/1.14d": 0
+        "LoD/1.14d": 0,
+        "LoD/PD2": 0
       },
       "mnemonic_hashes": {
         "Classic/1.00": "82a4681e028ce912ff418ce451dc2dfa",
@@ -85052,7 +82708,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": 1,
         "LoD/1.14b": 1,
         "LoD/1.14c": 1,
-        "LoD/1.14d": 1
+        "LoD/1.14d": 1,
+        "LoD/PD2": 1
       },
       "tags": {
         "Classic/1.00": [
@@ -85176,7 +82833,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_49": {
+    "SmackW32_STR_1ce90489f533": {
       "addresses": {
         "Classic/1.00": "0x100078D0",
         "Classic/1.01": "0x100078D0",
@@ -85251,8 +82908,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "bool",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:49",
+      "method": "STR",
+      "index": "STR:1ce90489f53312a4901dfca144ff5d4b",
       "indexes": {
         "EXP": "49",
         "STR": "1ce90489f53312a4901dfca144ff5d4b",
@@ -85267,204 +82924,204 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "LoadStringA|0x6",
           "GetProcAddress|0x47",
+          "FreeLibrary|0x35",
+          "LoadStringA|0x6",
+          "MessageBoxA|0x1E",
+          "SetErrorMode|0x59",
           "_SmackSoundUseDirectSound@4|0x100094A0",
           "__strcmpi|0x1000B980",
-          "FreeLibrary|0x35",
-          "LoadLibraryA|0x58",
-          "MessageBoxA|0x1E",
-          "SetErrorMode|0x59"
+          "LoadLibraryA|0x58"
         ],
         "Classic/1.01": [
-          "GetProcAddress|0x47",
+          "__strcmpi|0x1000B980",
           "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
-          "LoadStringA|0x6",
-          "_SmackSoundUseDirectSound@4|0x100094A0",
-          "__strcmpi|0x1000B980",
+          "GetProcAddress|0x47",
           "FreeLibrary|0x35",
-          "MessageBoxA|0x1E"
+          "_SmackSoundUseDirectSound@4|0x100094A0",
+          "MessageBoxA|0x1E",
+          "LoadStringA|0x6"
         ],
         "Classic/1.02": [
           "LoadLibraryA|0x58",
-          "LoadStringA|0x6",
-          "MessageBoxA|0x1E",
-          "GetProcAddress|0x47",
           "SetErrorMode|0x59",
-          "__strcmpi|0x1000B980",
+          "LoadStringA|0x6",
+          "GetProcAddress|0x47",
           "_SmackSoundUseDirectSound@4|0x100094A0",
+          "MessageBoxA|0x1E",
+          "__strcmpi|0x1000B980",
           "FreeLibrary|0x35"
         ],
         "Classic/1.03": [
           "FreeLibrary|0x35",
-          "SetErrorMode|0x59",
+          "__strcmpi|0x1000B980",
           "_SmackSoundUseDirectSound@4|0x100094A0",
-          "LoadLibraryA|0x58",
           "LoadStringA|0x6",
-          "GetProcAddress|0x47",
           "MessageBoxA|0x1E",
-          "__strcmpi|0x1000B980"
+          "GetProcAddress|0x47",
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58"
         ],
         "Classic/1.04c": [
           "__strcmpi|0x1000B980",
-          "GetProcAddress|0x47",
+          "LoadStringA|0x6",
+          "FreeLibrary|0x35",
           "MessageBoxA|0x1E",
-          "FreeLibrary|0x35",
-          "LoadStringA|0x6",
-          "_SmackSoundUseDirectSound@4|0x100094A0",
-          "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
-        ],
-        "LoD/1.07": [
-          "FreeLibrary|0x35",
-          "LoadLibraryA|0x58",
-          "LoadStringA|0x6",
-          "GetProcAddress|0x47",
-          "__strcmpi|0x1000B980",
           "_SmackSoundUseDirectSound@4|0x100094A0",
           "SetErrorMode|0x59",
-          "MessageBoxA|0x1E"
-        ],
-        "LoD/1.08": [
-          "__strcmpi|0x1000B980",
-          "MessageBoxA|0x1E",
-          "SetErrorMode|0x59",
-          "_SmackSoundUseDirectSound@4|0x100094A0",
           "LoadLibraryA|0x58",
-          "FreeLibrary|0x35",
-          "LoadStringA|0x6",
           "GetProcAddress|0x47"
         ],
-        "LoD/1.09": [
-          "LoadStringA|0x6",
+        "LoD/1.07": [
           "SetErrorMode|0x59",
+          "MessageBoxA|0x1E",
+          "GetProcAddress|0x47",
+          "LoadLibraryA|0x58",
+          "FreeLibrary|0x35",
           "_SmackSoundUseDirectSound@4|0x100094A0",
           "__strcmpi|0x1000B980",
-          "GetProcAddress|0x47",
-          "FreeLibrary|0x35",
-          "MessageBoxA|0x1E",
-          "LoadLibraryA|0x58"
+          "LoadStringA|0x6"
         ],
-        "LoD/1.09b": [
+        "LoD/1.08": [
+          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
+          "LoadStringA|0x6",
           "MessageBoxA|0x1E",
+          "FreeLibrary|0x35",
           "GetProcAddress|0x47",
           "__strcmpi|0x1000B980",
-          "FreeLibrary|0x35",
-          "SetErrorMode|0x59",
-          "LoadStringA|0x6",
           "_SmackSoundUseDirectSound@4|0x100094A0"
         ],
-        "LoD/1.09d": [
+        "LoD/1.09": [
+          "MessageBoxA|0x1E",
+          "SetErrorMode|0x59",
           "FreeLibrary|0x35",
           "LoadStringA|0x6",
-          "LoadLibraryA|0x58",
-          "_SmackSoundUseDirectSound@4|0x100094A0",
-          "SetErrorMode|0x59",
-          "GetProcAddress|0x47",
           "__strcmpi|0x1000B980",
+          "_SmackSoundUseDirectSound@4|0x100094A0",
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
+        ],
+        "LoD/1.09b": [
+          "GetProcAddress|0x47",
+          "FreeLibrary|0x35",
+          "LoadLibraryA|0x58",
+          "MessageBoxA|0x1E",
+          "_SmackSoundUseDirectSound@4|0x100094A0",
+          "LoadStringA|0x6",
+          "__strcmpi|0x1000B980",
+          "SetErrorMode|0x59"
+        ],
+        "LoD/1.09d": [
+          "_SmackSoundUseDirectSound@4|0x100094A0",
+          "__strcmpi|0x1000B980",
+          "LoadLibraryA|0x58",
+          "LoadStringA|0x6",
+          "SetErrorMode|0x59",
+          "FreeLibrary|0x35",
+          "GetProcAddress|0x47",
           "MessageBoxA|0x1E"
         ],
         "LoD/1.10": [
+          "LoadStringA|0x6",
           "GetProcAddress|0x47",
+          "SetErrorMode|0x59",
           "_SmackSoundUseDirectSound@4|0x100094A0",
           "FreeLibrary|0x35",
-          "LoadStringA|0x6",
           "LoadLibraryA|0x58",
-          "SetErrorMode|0x59",
-          "__strcmpi|0x1000B980",
-          "MessageBoxA|0x1E"
+          "MessageBoxA|0x1E",
+          "__strcmpi|0x1000B980"
         ],
         "LoD/1.11": [
-          "LoadLibraryA|0x58",
-          "LoadStringA|0x6",
-          "GetProcAddress|0x47",
           "SetErrorMode|0x59",
-          "_SmackSoundUseDirectSound@4|0x100094A0",
+          "FreeLibrary|0x35",
+          "LoadStringA|0x6",
           "__strcmpi|0x1000B980",
+          "_SmackSoundUseDirectSound@4|0x100094A0",
+          "LoadLibraryA|0x58",
           "MessageBoxA|0x1E",
-          "FreeLibrary|0x35"
+          "GetProcAddress|0x47"
         ],
         "LoD/1.11b": [
-          "GetProcAddress|0x47",
-          "LoadStringA|0x6",
-          "LoadLibraryA|0x58",
-          "FreeLibrary|0x35",
-          "SetErrorMode|0x59",
-          "_SmackSoundUseDirectSound@4|0x100094A0",
           "__strcmpi|0x1000B980",
+          "FreeLibrary|0x35",
+          "LoadStringA|0x6",
+          "_SmackSoundUseDirectSound@4|0x100094A0",
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47",
           "MessageBoxA|0x1E"
         ],
         "LoD/1.12a": [
-          "FreeLibrary|0x35",
-          "SetErrorMode|0x59",
+          "GetProcAddress|0x47",
+          "MessageBoxA|0x1E",
           "_SmackSoundUseDirectSound@4|0x100094A0",
           "LoadLibraryA|0x58",
-          "LoadStringA|0x6",
+          "FreeLibrary|0x35",
+          "SetErrorMode|0x59",
           "__strcmpi|0x1000B980",
-          "GetProcAddress|0x47",
-          "MessageBoxA|0x1E"
+          "LoadStringA|0x6"
         ],
         "LoD/1.13c": [
-          "SetErrorMode|0x59",
-          "LoadStringA|0x6",
-          "_SmackSoundUseDirectSound@4|0x100094A0",
-          "__strcmpi|0x1000B980",
           "FreeLibrary|0x35",
-          "LoadLibraryA|0x58",
+          "__strcmpi|0x1000B980",
           "MessageBoxA|0x1E",
+          "LoadLibraryA|0x58",
+          "SetErrorMode|0x59",
+          "_SmackSoundUseDirectSound@4|0x100094A0",
+          "LoadStringA|0x6",
           "GetProcAddress|0x47"
         ],
         "LoD/1.13d": [
           "MessageBoxA|0x1E",
-          "SetErrorMode|0x59",
+          "__strcmpi|0x1000B980",
           "LoadStringA|0x6",
-          "FreeLibrary|0x35",
-          "GetProcAddress|0x47",
           "_SmackSoundUseDirectSound@4|0x100094A0",
+          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
-          "__strcmpi|0x1000B980"
+          "GetProcAddress|0x47",
+          "FreeLibrary|0x35"
         ],
         "LoD/1.14a": [
+          "MessageBoxA|0x1E",
+          "LoadStringA|0x6",
+          "LoadLibraryA|0x58",
+          "__strcmpi|0x1000B980",
+          "GetProcAddress|0x47",
           "FreeLibrary|0x35",
           "SetErrorMode|0x59",
-          "__strcmpi|0x1000B980",
-          "LoadLibraryA|0x58",
-          "GetProcAddress|0x47",
-          "MessageBoxA|0x1E",
-          "_SmackSoundUseDirectSound@4|0x100094A0",
-          "LoadStringA|0x6"
+          "_SmackSoundUseDirectSound@4|0x100094A0"
         ],
         "LoD/1.14b": [
-          "GetProcAddress|0x47",
-          "FreeLibrary|0x35",
+          "MessageBoxA|0x1E",
           "LoadLibraryA|0x58",
-          "LoadStringA|0x6",
-          "__strcmpi|0x1000B980",
+          "FreeLibrary|0x35",
+          "GetProcAddress|0x47",
           "_SmackSoundUseDirectSound@4|0x100094A0",
+          "__strcmpi|0x1000B980",
+          "SetErrorMode|0x59",
+          "LoadStringA|0x6"
+        ],
+        "LoD/1.14c": [
+          "LoadStringA|0x6",
+          "_SmackSoundUseDirectSound@4|0x100094A0",
+          "__strcmpi|0x1000B980",
+          "LoadLibraryA|0x58",
+          "FreeLibrary|0x35",
+          "GetProcAddress|0x47",
           "SetErrorMode|0x59",
           "MessageBoxA|0x1E"
         ],
-        "LoD/1.14c": [
-          "MessageBoxA|0x1E",
-          "__strcmpi|0x1000B980",
-          "_SmackSoundUseDirectSound@4|0x100094A0",
-          "LoadStringA|0x6",
-          "FreeLibrary|0x35",
-          "SetErrorMode|0x59",
-          "LoadLibraryA|0x58",
-          "GetProcAddress|0x47"
-        ],
         "LoD/1.14d": [
-          "LoadLibraryA|0x58",
-          "MessageBoxA|0x1E",
-          "SetErrorMode|0x59",
+          "GetProcAddress|0x47",
           "LoadStringA|0x6",
           "__strcmpi|0x1000B980",
+          "MessageBoxA|0x1E",
+          "FreeLibrary|0x35",
+          "LoadLibraryA|0x58",
           "_SmackSoundUseDirectSound@4|0x100094A0",
-          "GetProcAddress|0x47",
-          "FreeLibrary|0x35"
+          "SetErrorMode|0x59"
         ]
       },
       "strings": {
@@ -87461,12 +85118,12 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
-        ],
-        "Classic/1.01": [
           "timeGetTime|0x34",
           "MemoryCopyRegions|0x10007850"
+        ],
+        "Classic/1.01": [
+          "MemoryCopyRegions|0x10007850",
+          "timeGetTime|0x34"
         ],
         "Classic/1.02": [
           "MemoryCopyRegions|0x10007850",
@@ -87477,8 +85134,8 @@ var FUNCTIONS_SmackW32_dll = {
           "MemoryCopyRegions|0x10007850"
         ],
         "Classic/1.04c": [
-          "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
+          "MemoryCopyRegions|0x10007850",
+          "timeGetTime|0x34"
         ],
         "LoD/1.07": [
           "MemoryCopyRegions|0x10007850"
@@ -87492,8 +85149,8 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.09b": [
-          "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
         ],
         "LoD/1.09d": [
           "timeGetTime|0x34",
@@ -87504,12 +85161,12 @@ var FUNCTIONS_SmackW32_dll = {
           "MemoryCopyRegions|0x10007850"
         ],
         "LoD/1.11": [
-          "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
-        ],
-        "LoD/1.11b": [
           "timeGetTime|0x34",
           "MemoryCopyRegions|0x10007850"
+        ],
+        "LoD/1.11b": [
+          "MemoryCopyRegions|0x10007850",
+          "timeGetTime|0x34"
         ],
         "LoD/1.12a": [
           "timeGetTime|0x34",
@@ -87520,24 +85177,24 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.13d": [
-          "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
         ],
         "LoD/1.14a": [
           "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34"
         ],
         "LoD/1.14b": [
-          "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
+          "MemoryCopyRegions|0x10007850",
+          "timeGetTime|0x34"
         ],
         "LoD/1.14c": [
           "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34"
         ],
         "LoD/1.14d": [
-          "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
         ]
       },
       "callers": {
@@ -88459,8 +86116,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ProcessStreamQueue|0x10007C30",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ProcessStreamQueue|0x10007C30"
         ],
         "Classic/1.01": [
           "timeGetTime|0x34",
@@ -88471,23 +86128,23 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "Classic/1.03": [
-          "ProcessStreamQueue|0x10007C30",
-          "timeGetTime|0x34"
-        ],
-        "Classic/1.04c": [
           "timeGetTime|0x34",
           "ProcessStreamQueue|0x10007C30"
+        ],
+        "Classic/1.04c": [
+          "ProcessStreamQueue|0x10007C30",
+          "timeGetTime|0x34"
         ],
         "LoD/1.07": [
           "ProcessStreamQueue|0x10007C30"
         ],
         "LoD/1.08": [
-          "timeGetTime|0x34",
-          "ProcessStreamQueue|0x10007C30"
-        ],
-        "LoD/1.09": [
           "ProcessStreamQueue|0x10007C30",
           "timeGetTime|0x34"
+        ],
+        "LoD/1.09": [
+          "timeGetTime|0x34",
+          "ProcessStreamQueue|0x10007C30"
         ],
         "LoD/1.09b": [
           "timeGetTime|0x34",
@@ -88498,16 +86155,16 @@ var FUNCTIONS_SmackW32_dll = {
           "ProcessStreamQueue|0x10007C30"
         ],
         "LoD/1.10": [
-          "ProcessStreamQueue|0x10007C30",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ProcessStreamQueue|0x10007C30"
         ],
         "LoD/1.11": [
           "ProcessStreamQueue|0x10007C30",
           "timeGetTime|0x34"
         ],
         "LoD/1.11b": [
-          "timeGetTime|0x34",
-          "ProcessStreamQueue|0x10007C30"
+          "ProcessStreamQueue|0x10007C30",
+          "timeGetTime|0x34"
         ],
         "LoD/1.12a": [
           "timeGetTime|0x34",
@@ -88522,8 +86179,8 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.14a": [
-          "ProcessStreamQueue|0x10007C30",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "ProcessStreamQueue|0x10007C30"
         ],
         "LoD/1.14b": [
           "timeGetTime|0x34",
@@ -88534,8 +86191,8 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.14d": [
-          "timeGetTime|0x34",
-          "ProcessStreamQueue|0x10007C30"
+          "ProcessStreamQueue|0x10007C30",
+          "timeGetTime|0x34"
         ]
       },
       "instructions": {
@@ -92810,7 +90467,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_47": {
+    "SmackW32_STR_fb9ec9ace224": {
       "addresses": {
         "Classic/1.00": "0x10008090",
         "Classic/1.01": "0x10008090",
@@ -92885,8 +90542,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "uint",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:47",
+      "method": "STR",
+      "index": "STR:fb9ec9ace224bf9af35ab935b554d6e0",
       "indexes": {
         "EXP": "47",
         "STR": "fb9ec9ace224bf9af35ab935b554d6e0",
@@ -92901,33 +90558,33 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetVersion|0x49",
           "GetProcAddress|0x47",
+          "GetVersion|0x49",
           "LoadLibraryA|0x58"
         ],
         "Classic/1.01": [
-          "GetVersion|0x49",
+          "LoadLibraryA|0x58",
           "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
+          "GetVersion|0x49"
         ],
         "Classic/1.02": [
-          "GetVersion|0x49",
           "LoadLibraryA|0x58",
+          "GetVersion|0x49",
           "GetProcAddress|0x47"
         ],
         "Classic/1.03": [
           "GetVersion|0x49",
+          "GetProcAddress|0x47",
+          "LoadLibraryA|0x58"
+        ],
+        "Classic/1.04c": [
+          "GetVersion|0x49",
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
-        "Classic/1.04c": [
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58",
-          "GetVersion|0x49"
-        ],
         "LoD/1.07": [
-          "LoadLibraryA|0x58",
           "GetProcAddress|0x47",
+          "LoadLibraryA|0x58",
           "GetVersion|0x49"
         ],
         "LoD/1.08": [
@@ -92936,13 +90593,13 @@ var FUNCTIONS_SmackW32_dll = {
           "GetProcAddress|0x47"
         ],
         "LoD/1.09": [
-          "GetProcAddress|0x47",
           "GetVersion|0x49",
-          "LoadLibraryA|0x58"
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.09b": [
-          "LoadLibraryA|0x58",
           "GetProcAddress|0x47",
+          "LoadLibraryA|0x58",
           "GetVersion|0x49"
         ],
         "LoD/1.09d": [
@@ -92951,8 +90608,8 @@ var FUNCTIONS_SmackW32_dll = {
           "GetProcAddress|0x47"
         ],
         "LoD/1.10": [
-          "GetProcAddress|0x47",
           "GetVersion|0x49",
+          "GetProcAddress|0x47",
           "LoadLibraryA|0x58"
         ],
         "LoD/1.11": [
@@ -92961,24 +90618,24 @@ var FUNCTIONS_SmackW32_dll = {
           "GetVersion|0x49"
         ],
         "LoD/1.11b": [
+          "GetVersion|0x49",
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
+        ],
+        "LoD/1.12a": [
           "GetProcAddress|0x47",
           "LoadLibraryA|0x58",
           "GetVersion|0x49"
         ],
-        "LoD/1.12a": [
-          "LoadLibraryA|0x58",
-          "GetVersion|0x49",
-          "GetProcAddress|0x47"
-        ],
         "LoD/1.13c": [
-          "LoadLibraryA|0x58",
           "GetVersion|0x49",
+          "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
         "LoD/1.13d": [
+          "LoadLibraryA|0x58",
           "GetVersion|0x49",
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
+          "GetProcAddress|0x47"
         ],
         "LoD/1.14a": [
           "GetVersion|0x49",
@@ -92986,19 +90643,19 @@ var FUNCTIONS_SmackW32_dll = {
           "GetProcAddress|0x47"
         ],
         "LoD/1.14b": [
-          "GetProcAddress|0x47",
           "LoadLibraryA|0x58",
-          "GetVersion|0x49"
+          "GetVersion|0x49",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.14c": [
-          "GetVersion|0x49",
           "LoadLibraryA|0x58",
-          "GetProcAddress|0x47"
+          "GetProcAddress|0x47",
+          "GetVersion|0x49"
         ],
         "LoD/1.14d": [
-          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47",
           "GetVersion|0x49",
-          "GetProcAddress|0x47"
+          "LoadLibraryA|0x58"
         ]
       },
       "strings": {
@@ -95618,918 +93275,6 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_NOP_ae2a89995fb9": {
-      "addresses": {
-        "Classic/1.00": "0x100083B0",
-        "Classic/1.01": "0x100083B0",
-        "Classic/1.02": "0x100083B0",
-        "Classic/1.03": "0x100083B0",
-        "Classic/1.04c": "0x100083B0",
-        "LoD/1.08": "0x100083B0",
-        "LoD/1.09": "0x100083B0",
-        "LoD/1.09b": "0x100083B0",
-        "LoD/1.09d": "0x100083B0",
-        "LoD/1.10": "0x100083B0",
-        "LoD/1.11": "0x100083B0",
-        "LoD/1.11b": "0x100083B0",
-        "LoD/1.12a": "0x100083B0",
-        "LoD/1.13c": "0x100083B0",
-        "LoD/1.13d": "0x100083B0",
-        "LoD/1.14a": "0x100083B0",
-        "LoD/1.14b": "0x100083B0",
-        "LoD/1.14c": "0x100083B0",
-        "LoD/1.14d": "0x100083B0",
-        "LoD/PD2": "0x02E26B00"
-      },
-      "rvas": {
-        "Classic/1.00": "0x83B0",
-        "Classic/1.01": "0x83B0",
-        "Classic/1.02": "0x83B0",
-        "Classic/1.03": "0x83B0",
-        "Classic/1.04c": "0x83B0",
-        "LoD/1.08": "0x83B0",
-        "LoD/1.09": "0x83B0",
-        "LoD/1.09b": "0x83B0",
-        "LoD/1.09d": "0x83B0",
-        "LoD/1.10": "0x83B0",
-        "LoD/1.11": "0x83B0",
-        "LoD/1.11b": "0x83B0",
-        "LoD/1.12a": "0x83B0",
-        "LoD/1.13c": "0x83B0",
-        "LoD/1.13d": "0x83B0",
-        "LoD/1.14a": "0x83B0",
-        "LoD/1.14b": "0x83B0",
-        "LoD/1.14c": "0x83B0",
-        "LoD/1.14d": "0x83B0",
-        "LoD/PD2": "0x6B00"
-      },
-      "sizes": {
-        "Classic/1.00": 119,
-        "Classic/1.01": 119,
-        "Classic/1.02": 119,
-        "Classic/1.03": 119,
-        "Classic/1.04c": 119,
-        "LoD/1.08": 119,
-        "LoD/1.09": 119,
-        "LoD/1.09b": 119,
-        "LoD/1.09d": 119,
-        "LoD/1.10": 119,
-        "LoD/1.11": 119,
-        "LoD/1.11b": 119,
-        "LoD/1.12a": 119,
-        "LoD/1.13c": 119,
-        "LoD/1.13d": 119,
-        "LoD/1.14a": 119,
-        "LoD/1.14b": 119,
-        "LoD/1.14c": 119,
-        "LoD/1.14d": 119,
-        "LoD/PD2": 729
-      },
-      "name": "_SmackToBuffer@28",
-      "signature": "undefined _SmackToBuffer@28(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6, uint param_7)",
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "name_source": "LoD/PD2",
-      "method": "NOP",
-      "index": "NOP:ae2a89995fb98fc0fbf24fa145a4afdcbd235b5325f202d21b4f04d7d3ea5e4c",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "ae2a89995fb98fc0fbf24fa145a4afdcbd235b5325f202d21b4f04d7d3ea5e4c",
-        "CAL": null,
-        "API": "7ea41d38c3be5dbcf086509c906678ea",
-        "APS": "7ea41d38c3be5dbcf086509c906678ea",
-        "CON": null,
-        "MNE": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "CFG": "d77a2c59e5ab0781a5c092802c184530",
-        "PRO": "b025fa342a8cb550eb3a99e5408a5e4a"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.01": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.02": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.03": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.04c": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.08": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.09": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.09b": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.09d": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.10": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.11": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.11b": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.12a": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.13c": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.13d": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.14a": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.14b": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.14c": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.14d": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "Classic/1.01": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "Classic/1.02": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "Classic/1.03": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "Classic/1.04c": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.08": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.09": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.09b": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.09d": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.10": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.11": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.11b": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.12a": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.13c": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.13d": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.14a": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.14b": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.14c": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ],
-        "LoD/1.14d": [
-          "0x83B0|PUSH|ESI",
-          "0x83B1|MOV|EAX, [0x100147a8]",
-          "0x83B6|TEST|EAX, EAX",
-          "0x83B8|JZ|0x10008423",
-          "0x83BA|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x83BE|XOR|ECX, ECX",
-          "0x83C0|MOV|EAX, dword ptr [ESI + 0x60]",
-          "0x83C3|MOV|CX, word ptr [EAX + 0xe]",
-          "0x83C7|PUSH|ECX",
-          "0x83C8|CALL|dword ptr [0x10015d40]",
-          "0x83CE|MOV|ECX, dword ptr [ESI + 0x60]",
-          "0x83D1|MOV|EDX, dword ptr [ECX + 0x4]",
-          "0x83D4|PUSH|EDX",
-          "0x83D5|CALL|0x10001040",
-          "0x83DA|MOV|ECX, dword ptr [ESI + 0x60]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 42,
-        "Classic/1.01": 42,
-        "Classic/1.02": 42,
-        "Classic/1.03": 42,
-        "Classic/1.04c": 42,
-        "LoD/1.08": 42,
-        "LoD/1.09": 42,
-        "LoD/1.09b": 42,
-        "LoD/1.09d": 42,
-        "LoD/1.10": 42,
-        "LoD/1.11": 42,
-        "LoD/1.11b": 42,
-        "LoD/1.12a": 42,
-        "LoD/1.13c": 42,
-        "LoD/1.13d": 42,
-        "LoD/1.14a": 42,
-        "LoD/1.14b": 42,
-        "LoD/1.14c": 42,
-        "LoD/1.14d": 42
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8,
-        "Classic/1.01": 8,
-        "Classic/1.02": 8,
-        "Classic/1.03": 8,
-        "Classic/1.04c": 8,
-        "LoD/1.08": 8,
-        "LoD/1.09": 8,
-        "LoD/1.09b": 8,
-        "LoD/1.09d": 8,
-        "LoD/1.10": 8,
-        "LoD/1.11": 8,
-        "LoD/1.11b": 8,
-        "LoD/1.12a": 8,
-        "LoD/1.13c": 8,
-        "LoD/1.13d": 8,
-        "LoD/1.14a": 8,
-        "LoD/1.14b": 8,
-        "LoD/1.14c": 8,
-        "LoD/1.14d": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1,
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "Classic/1.01": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "Classic/1.02": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "Classic/1.03": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "Classic/1.04c": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.07": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.08": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.09": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.09b": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.09d": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.10": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.11": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.11b": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.12a": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.13c": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.13d": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.14a": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.14b": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.14c": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/1.14d": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
-        "LoD/PD2": "6a80ca09a4073b224d934b58ae1e9a53"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "Classic/1.01": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "Classic/1.02": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "Classic/1.03": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "Classic/1.04c": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.08": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.09": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.09b": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.09d": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.10": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.11": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.11b": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.12a": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.13c": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.13d": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.14a": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.14b": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.14c": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ],
-        "LoD/1.14d": [
-          "0x147A8|DAT_100147a8|0x0",
-          "0x15D40|DAT_10015d40|0x0"
-        ]
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "Classic/1.01": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "Classic/1.02": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "Classic/1.03": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "Classic/1.04c": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.08": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.09": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.09b": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.09d": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.10": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.11": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.11b": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.12a": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.13c": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.13d": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.14a": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.14b": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.14c": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/1.14d": [
-          "_radfree@4",
-          "_radfree@4"
-        ],
-        "LoD/PD2": [
-          "_radfree@4",
-          "_radfree@4"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "global_counts": {
-        "Classic/1.00": 2,
-        "Classic/1.01": 2,
-        "Classic/1.02": 2,
-        "Classic/1.03": 2,
-        "Classic/1.04c": 2,
-        "LoD/1.08": 2,
-        "LoD/1.09": 2,
-        "LoD/1.09b": 2,
-        "LoD/1.09d": 2,
-        "LoD/1.10": 2,
-        "LoD/1.11": 2,
-        "LoD/1.11b": 2,
-        "LoD/1.12a": 2,
-        "LoD/1.13c": 2,
-        "LoD/1.13d": 2,
-        "LoD/1.14a": 2,
-        "LoD/1.14b": 2,
-        "LoD/1.14c": 2,
-        "LoD/1.14d": 2
-      },
-      "api_counts": {
-        "Classic/1.00": 2,
-        "Classic/1.01": 2,
-        "Classic/1.02": 2,
-        "Classic/1.03": 2,
-        "Classic/1.04c": 2,
-        "LoD/1.08": 2,
-        "LoD/1.09": 2,
-        "LoD/1.09b": 2,
-        "LoD/1.09d": 2,
-        "LoD/1.10": 2,
-        "LoD/1.11": 2,
-        "LoD/1.11b": 2,
-        "LoD/1.12a": 2,
-        "LoD/1.13c": 2,
-        "LoD/1.13d": 2,
-        "LoD/1.14a": 2,
-        "LoD/1.14b": 2,
-        "LoD/1.14c": 2,
-        "LoD/1.14d": 2
-      },
-      "param_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1,
-        "LoD/PD2": 7
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "Classic/1.01": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "Classic/1.02": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "Classic/1.03": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "Classic/1.04c": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.08": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.09": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.09b": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.09d": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.10": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.11": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.11b": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.12a": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.13c": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.13d": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.14a": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.14b": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.14c": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.14d": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal",
-        "Classic/1.01": "internal",
-        "Classic/1.02": "internal",
-        "Classic/1.03": "internal",
-        "Classic/1.04c": "internal",
-        "LoD/1.08": "internal",
-        "LoD/1.09": "internal",
-        "LoD/1.09b": "internal",
-        "LoD/1.09d": "internal",
-        "LoD/1.10": "internal",
-        "LoD/1.11": "internal",
-        "LoD/1.11b": "internal",
-        "LoD/1.12a": "internal",
-        "LoD/1.13c": "internal",
-        "LoD/1.13d": "internal",
-        "LoD/1.14a": "internal",
-        "LoD/1.14b": "internal",
-        "LoD/1.14c": "internal",
-        "LoD/1.14d": "internal"
-      },
-      "candidates": {
-        "LoD/1.07": {
-          "address": "0x10001EC0",
-          "rva": "0x1EC0",
-          "confidence": 0.922,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "InitDisplayDibWindowClass"
-        }
-      }
-    },
     "SmackW32_NOP_33ce7192b48a": {
       "addresses": {
         "Classic/1.00": "0x10008430",
@@ -97496,14 +94241,14 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "MemoryCopyRegions|0x10007850",
           "lstrcpyA|0x36",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
         ],
         "Classic/1.01": [
+          "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34",
-          "lstrcpyA|0x36",
-          "MemoryCopyRegions|0x10007850"
+          "lstrcpyA|0x36"
         ],
         "Classic/1.02": [
           "MemoryCopyRegions|0x10007850",
@@ -97511,54 +94256,54 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "Classic/1.03": [
-          "lstrcpyA|0x36",
+          "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
+          "lstrcpyA|0x36"
         ],
         "Classic/1.04c": [
           "lstrcpyA|0x36",
-          "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
+          "MemoryCopyRegions|0x10007850",
+          "timeGetTime|0x34"
         ],
         "LoD/1.07": [
-          "lstrcpyA|0x36",
           "MemoryCopyRegions|0x10007850",
+          "lstrcpyA|0x36",
           "timeGetTime|0x34"
         ],
         "LoD/1.08": [
-          "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34",
-          "lstrcpyA|0x36"
-        ],
-        "LoD/1.09": [
-          "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34",
-          "lstrcpyA|0x36"
-        ],
-        "LoD/1.09b": [
           "lstrcpyA|0x36",
           "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34"
+        ],
+        "LoD/1.09": [
+          "lstrcpyA|0x36",
+          "MemoryCopyRegions|0x10007850",
+          "timeGetTime|0x34"
+        ],
+        "LoD/1.09b": [
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850",
+          "lstrcpyA|0x36"
         ],
         "LoD/1.09d": [
           "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850",
-          "lstrcpyA|0x36"
+          "lstrcpyA|0x36",
+          "MemoryCopyRegions|0x10007850"
         ],
         "LoD/1.10": [
-          "lstrcpyA|0x36",
           "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "lstrcpyA|0x36"
         ],
         "LoD/1.11": [
+          "lstrcpyA|0x36",
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
+        ],
+        "LoD/1.11b": [
           "MemoryCopyRegions|0x10007850",
           "lstrcpyA|0x36",
           "timeGetTime|0x34"
-        ],
-        "LoD/1.11b": [
-          "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850",
-          "lstrcpyA|0x36"
         ],
         "LoD/1.12a": [
           "timeGetTime|0x34",
@@ -97571,8 +94316,8 @@ var FUNCTIONS_SmackW32_dll = {
           "lstrcpyA|0x36"
         ],
         "LoD/1.13d": [
-          "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850",
           "lstrcpyA|0x36"
         ],
         "LoD/1.14a": [
@@ -97581,19 +94326,19 @@ var FUNCTIONS_SmackW32_dll = {
           "lstrcpyA|0x36"
         ],
         "LoD/1.14b": [
-          "timeGetTime|0x34",
           "MemoryCopyRegions|0x10007850",
+          "timeGetTime|0x34",
           "lstrcpyA|0x36"
         ],
         "LoD/1.14c": [
-          "MemoryCopyRegions|0x10007850",
           "lstrcpyA|0x36",
+          "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34"
         ],
         "LoD/1.14d": [
-          "MemoryCopyRegions|0x10007850",
           "lstrcpyA|0x36",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
         ]
       },
       "strings": {
@@ -100416,7 +97161,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_50": {
+    "SmackW32_NOP_3c701105f105": {
       "addresses": {
         "Classic/1.00": "0x10008720",
         "Classic/1.01": "0x10008720",
@@ -100491,8 +97236,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "uint",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:50",
+      "method": "NOP",
+      "index": "NOP:3c701105f10515f740d80e40d6a5306a6a98dad2a7e3d90bdc83e1c8ed2caf52",
       "indexes": {
         "EXP": "50",
         "STR": null,
@@ -101623,13 +98368,13 @@ var FUNCTIONS_SmackW32_dll = {
       "callees": {
         "Classic/1.00": [
           "OpenWaveOutDevice|0x10008800",
-          "radmalloc|0x10001000",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "radmalloc|0x10001000"
         ],
         "Classic/1.01": [
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "radmalloc|0x10001000",
-          "OpenWaveOutDevice|0x10008800",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "OpenWaveOutDevice|0x10008800"
         ],
         "Classic/1.02": [
           "OpenWaveOutDevice|0x10008800",
@@ -101637,29 +98382,29 @@ var FUNCTIONS_SmackW32_dll = {
           "radmalloc|0x10001000"
         ],
         "Classic/1.03": [
+          "radmalloc|0x10001000",
           "OpenWaveOutDevice|0x10008800",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "radmalloc|0x10001000"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "Classic/1.04c": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "OpenWaveOutDevice|0x10008800",
           "radmalloc|0x10001000",
-          "OpenWaveOutDevice|0x10008800"
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.07": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "OpenWaveOutDevice|0x10008800",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "radmalloc|0x10001000"
         ],
         "LoD/1.08": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "radmalloc|0x10001000",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "OpenWaveOutDevice|0x10008800"
         ],
         "LoD/1.09": [
           "OpenWaveOutDevice|0x10008800",
-          "radmalloc|0x10001000",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "radmalloc|0x10001000"
         ],
         "LoD/1.09b": [
           "ApplyPresetUnitTileAttributes|0x10001040",
@@ -101668,58 +98413,58 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.09d": [
           "radmalloc|0x10001000",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "OpenWaveOutDevice|0x10008800"
-        ],
-        "LoD/1.10": [
           "OpenWaveOutDevice|0x10008800",
-          "radmalloc|0x10001000",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
-        "LoD/1.11": [
+        "LoD/1.10": [
           "ApplyPresetUnitTileAttributes|0x10001040",
           "radmalloc|0x10001000",
           "OpenWaveOutDevice|0x10008800"
         ],
-        "LoD/1.11b": [
+        "LoD/1.11": [
           "OpenWaveOutDevice|0x10008800",
           "ApplyPresetUnitTileAttributes|0x10001040",
           "radmalloc|0x10001000"
         ],
-        "LoD/1.12a": [
-          "OpenWaveOutDevice|0x10008800",
+        "LoD/1.11b": [
           "radmalloc|0x10001000",
+          "OpenWaveOutDevice|0x10008800",
+          "ApplyPresetUnitTileAttributes|0x10001040"
+        ],
+        "LoD/1.12a": [
+          "radmalloc|0x10001000",
+          "OpenWaveOutDevice|0x10008800",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "LoD/1.13c": [
-          "OpenWaveOutDevice|0x10008800",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.13d": [
           "radmalloc|0x10001000",
           "OpenWaveOutDevice|0x10008800",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
-        "LoD/1.14a": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
+        "LoD/1.13d": [
           "OpenWaveOutDevice|0x10008800",
-          "radmalloc|0x10001000"
+          "radmalloc|0x10001000",
+          "ApplyPresetUnitTileAttributes|0x10001040"
         ],
-        "LoD/1.14b": [
+        "LoD/1.14a": [
           "radmalloc|0x10001000",
           "ApplyPresetUnitTileAttributes|0x10001040",
           "OpenWaveOutDevice|0x10008800"
         ],
-        "LoD/1.14c": [
-          "radmalloc|0x10001000",
+        "LoD/1.14b": [
           "OpenWaveOutDevice|0x10008800",
+          "radmalloc|0x10001000",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
-        "LoD/1.14d": [
-          "radmalloc|0x10001000",
+        "LoD/1.14c": [
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "OpenWaveOutDevice|0x10008800",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "radmalloc|0x10001000"
+        ],
+        "LoD/1.14d": [
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "OpenWaveOutDevice|0x10008800",
+          "radmalloc|0x10001000"
         ]
       },
       "instructions": {
@@ -102711,175 +99456,175 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "waveOutWrite|0x33",
-          "CloseWaveOutDevice|0x100089D0",
-          "waveOutOpen|0x31",
-          "__itoa|0x1000BA10",
           "timeGetTime|0x34",
+          "waveOutPrepareHeader|0x32",
           "OutputDebugStringA|0x5D",
-          "waveOutPrepareHeader|0x32"
+          "__itoa|0x1000BA10",
+          "waveOutOpen|0x31",
+          "CloseWaveOutDevice|0x100089D0",
+          "waveOutWrite|0x33"
         ],
         "Classic/1.01": [
           "CloseWaveOutDevice|0x100089D0",
-          "waveOutWrite|0x33",
-          "timeGetTime|0x34",
           "__itoa|0x1000BA10",
-          "waveOutOpen|0x31",
           "waveOutPrepareHeader|0x32",
-          "OutputDebugStringA|0x5D"
+          "waveOutWrite|0x33",
+          "OutputDebugStringA|0x5D",
+          "timeGetTime|0x34",
+          "waveOutOpen|0x31"
         ],
         "Classic/1.02": [
           "waveOutOpen|0x31",
           "waveOutPrepareHeader|0x32",
-          "timeGetTime|0x34",
-          "CloseWaveOutDevice|0x100089D0",
-          "__itoa|0x1000BA10",
           "OutputDebugStringA|0x5D",
+          "CloseWaveOutDevice|0x100089D0",
+          "timeGetTime|0x34",
+          "__itoa|0x1000BA10",
           "waveOutWrite|0x33"
         ],
         "Classic/1.03": [
-          "waveOutWrite|0x33",
-          "waveOutOpen|0x31",
-          "waveOutPrepareHeader|0x32",
           "timeGetTime|0x34",
           "CloseWaveOutDevice|0x100089D0",
+          "waveOutWrite|0x33",
           "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
+          "waveOutPrepareHeader|0x32",
+          "__itoa|0x1000BA10",
+          "waveOutOpen|0x31"
         ],
         "Classic/1.04c": [
-          "waveOutOpen|0x31",
           "__itoa|0x1000BA10",
-          "CloseWaveOutDevice|0x100089D0",
-          "timeGetTime|0x34",
           "waveOutWrite|0x33",
           "waveOutPrepareHeader|0x32",
-          "OutputDebugStringA|0x5D"
-        ],
-        "LoD/1.07": [
-          "waveOutPrepareHeader|0x32",
-          "waveOutOpen|0x31",
-          "waveOutWrite|0x33",
           "OutputDebugStringA|0x5D",
           "CloseWaveOutDevice|0x100089D0",
+          "waveOutOpen|0x31",
+          "timeGetTime|0x34"
+        ],
+        "LoD/1.07": [
+          "OutputDebugStringA|0x5D",
+          "waveOutPrepareHeader|0x32",
           "__itoa|0x1000BA10",
+          "waveOutOpen|0x31",
+          "waveOutWrite|0x33",
+          "CloseWaveOutDevice|0x100089D0",
           "timeGetTime|0x34"
         ],
         "LoD/1.08": [
+          "waveOutWrite|0x33",
           "waveOutOpen|0x31",
           "waveOutPrepareHeader|0x32",
-          "__itoa|0x1000BA10",
-          "timeGetTime|0x34",
           "CloseWaveOutDevice|0x100089D0",
-          "waveOutWrite|0x33",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "timeGetTime|0x34",
+          "__itoa|0x1000BA10"
         ],
         "LoD/1.09": [
-          "OutputDebugStringA|0x5D",
-          "waveOutPrepareHeader|0x32",
-          "waveOutOpen|0x31",
+          "CloseWaveOutDevice|0x100089D0",
           "__itoa|0x1000BA10",
           "timeGetTime|0x34",
-          "CloseWaveOutDevice|0x100089D0",
-          "waveOutWrite|0x33"
+          "waveOutWrite|0x33",
+          "OutputDebugStringA|0x5D",
+          "waveOutPrepareHeader|0x32",
+          "waveOutOpen|0x31"
         ],
         "LoD/1.09b": [
           "CloseWaveOutDevice|0x100089D0",
           "waveOutOpen|0x31",
-          "OutputDebugStringA|0x5D",
-          "waveOutPrepareHeader|0x32",
           "waveOutWrite|0x33",
+          "timeGetTime|0x34",
+          "waveOutPrepareHeader|0x32",
           "__itoa|0x1000BA10",
-          "timeGetTime|0x34"
+          "OutputDebugStringA|0x5D"
         ],
         "LoD/1.09d": [
-          "waveOutPrepareHeader|0x32",
           "timeGetTime|0x34",
-          "OutputDebugStringA|0x5D",
-          "waveOutWrite|0x33",
-          "__itoa|0x1000BA10",
           "waveOutOpen|0x31",
-          "CloseWaveOutDevice|0x100089D0"
+          "OutputDebugStringA|0x5D",
+          "CloseWaveOutDevice|0x100089D0",
+          "__itoa|0x1000BA10",
+          "waveOutWrite|0x33",
+          "waveOutPrepareHeader|0x32"
         ],
         "LoD/1.10": [
           "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10",
-          "CloseWaveOutDevice|0x100089D0",
-          "waveOutWrite|0x33",
           "waveOutPrepareHeader|0x32",
           "timeGetTime|0x34",
-          "waveOutOpen|0x31"
+          "CloseWaveOutDevice|0x100089D0",
+          "waveOutOpen|0x31",
+          "__itoa|0x1000BA10",
+          "waveOutWrite|0x33"
         ],
         "LoD/1.11": [
-          "__itoa|0x1000BA10",
-          "waveOutWrite|0x33",
-          "waveOutOpen|0x31",
-          "waveOutPrepareHeader|0x32",
+          "CloseWaveOutDevice|0x100089D0",
           "timeGetTime|0x34",
           "OutputDebugStringA|0x5D",
-          "CloseWaveOutDevice|0x100089D0"
+          "waveOutOpen|0x31",
+          "waveOutWrite|0x33",
+          "waveOutPrepareHeader|0x32",
+          "__itoa|0x1000BA10"
         ],
         "LoD/1.11b": [
-          "waveOutWrite|0x33",
-          "timeGetTime|0x34",
           "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10",
-          "waveOutOpen|0x31",
           "waveOutPrepareHeader|0x32",
-          "CloseWaveOutDevice|0x100089D0"
+          "waveOutOpen|0x31",
+          "__itoa|0x1000BA10",
+          "waveOutWrite|0x33",
+          "CloseWaveOutDevice|0x100089D0",
+          "timeGetTime|0x34"
         ],
         "LoD/1.12a": [
+          "waveOutOpen|0x31",
+          "timeGetTime|0x34",
+          "CloseWaveOutDevice|0x100089D0",
           "__itoa|0x1000BA10",
           "waveOutPrepareHeader|0x32",
-          "timeGetTime|0x34",
-          "waveOutOpen|0x31",
-          "CloseWaveOutDevice|0x100089D0",
-          "waveOutWrite|0x33",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "waveOutWrite|0x33"
         ],
         "LoD/1.13c": [
           "waveOutPrepareHeader|0x32",
-          "OutputDebugStringA|0x5D",
           "CloseWaveOutDevice|0x100089D0",
-          "__itoa|0x1000BA10",
           "timeGetTime|0x34",
+          "waveOutOpen|0x31",
+          "__itoa|0x1000BA10",
           "waveOutWrite|0x33",
-          "waveOutOpen|0x31"
+          "OutputDebugStringA|0x5D"
         ],
         "LoD/1.13d": [
           "waveOutOpen|0x31",
-          "OutputDebugStringA|0x5D",
           "__itoa|0x1000BA10",
-          "timeGetTime|0x34",
-          "waveOutPrepareHeader|0x32",
           "CloseWaveOutDevice|0x100089D0",
+          "timeGetTime|0x34",
+          "OutputDebugStringA|0x5D",
+          "waveOutPrepareHeader|0x32",
           "waveOutWrite|0x33"
         ],
         "LoD/1.14a": [
-          "__itoa|0x1000BA10",
+          "waveOutOpen|0x31",
           "CloseWaveOutDevice|0x100089D0",
-          "OutputDebugStringA|0x5D",
-          "waveOutOpen|0x31",
           "waveOutWrite|0x33",
-          "timeGetTime|0x34",
-          "waveOutPrepareHeader|0x32"
-        ],
-        "LoD/1.14b": [
-          "timeGetTime|0x34",
-          "waveOutOpen|0x31",
           "waveOutPrepareHeader|0x32",
-          "waveOutWrite|0x33",
+          "timeGetTime|0x34",
           "OutputDebugStringA|0x5D",
-          "CloseWaveOutDevice|0x100089D0",
           "__itoa|0x1000BA10"
         ],
+        "LoD/1.14b": [
+          "CloseWaveOutDevice|0x100089D0",
+          "timeGetTime|0x34",
+          "waveOutPrepareHeader|0x32",
+          "waveOutWrite|0x33",
+          "waveOutOpen|0x31",
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D"
+        ],
         "LoD/1.14c": [
-          "OutputDebugStringA|0x5D",
+          "CloseWaveOutDevice|0x100089D0",
           "waveOutWrite|0x33",
           "__itoa|0x1000BA10",
-          "CloseWaveOutDevice|0x100089D0",
+          "waveOutPrepareHeader|0x32",
+          "OutputDebugStringA|0x5D",
           "waveOutOpen|0x31",
-          "timeGetTime|0x34",
-          "waveOutPrepareHeader|0x32"
+          "timeGetTime|0x34"
         ],
         "LoD/1.14d": [
           "CloseWaveOutDevice|0x100089D0",
@@ -104160,13 +100905,13 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "waveOutUnprepareHeader|0x2A",
-          "waveOutClose|0x30",
-          "waveOutReset|0x2F"
-        ],
-        "Classic/1.01": [
           "waveOutReset|0x2F",
           "waveOutUnprepareHeader|0x2A",
+          "waveOutClose|0x30"
+        ],
+        "Classic/1.01": [
+          "waveOutUnprepareHeader|0x2A",
+          "waveOutReset|0x2F",
           "waveOutClose|0x30"
         ],
         "Classic/1.02": [
@@ -104175,34 +100920,34 @@ var FUNCTIONS_SmackW32_dll = {
           "waveOutUnprepareHeader|0x2A"
         ],
         "Classic/1.03": [
+          "waveOutClose|0x30",
           "waveOutReset|0x2F",
-          "waveOutUnprepareHeader|0x2A",
-          "waveOutClose|0x30"
+          "waveOutUnprepareHeader|0x2A"
         ],
         "Classic/1.04c": [
           "waveOutClose|0x30",
-          "waveOutReset|0x2F",
-          "waveOutUnprepareHeader|0x2A"
+          "waveOutUnprepareHeader|0x2A",
+          "waveOutReset|0x2F"
         ],
         "LoD/1.07": [
-          "waveOutUnprepareHeader|0x2A",
           "waveOutReset|0x2F",
+          "waveOutUnprepareHeader|0x2A",
           "waveOutClose|0x30"
         ],
         "LoD/1.08": [
-          "waveOutReset|0x2F",
           "waveOutClose|0x30",
+          "waveOutReset|0x2F",
           "waveOutUnprepareHeader|0x2A"
         ],
         "LoD/1.09": [
+          "waveOutReset|0x2F",
           "waveOutUnprepareHeader|0x2A",
-          "waveOutClose|0x30",
-          "waveOutReset|0x2F"
+          "waveOutClose|0x30"
         ],
         "LoD/1.09b": [
           "waveOutReset|0x2F",
-          "waveOutClose|0x30",
-          "waveOutUnprepareHeader|0x2A"
+          "waveOutUnprepareHeader|0x2A",
+          "waveOutClose|0x30"
         ],
         "LoD/1.09d": [
           "waveOutReset|0x2F",
@@ -104210,9 +100955,9 @@ var FUNCTIONS_SmackW32_dll = {
           "waveOutClose|0x30"
         ],
         "LoD/1.10": [
-          "waveOutClose|0x30",
+          "waveOutUnprepareHeader|0x2A",
           "waveOutReset|0x2F",
-          "waveOutUnprepareHeader|0x2A"
+          "waveOutClose|0x30"
         ],
         "LoD/1.11": [
           "waveOutReset|0x2F",
@@ -104220,39 +100965,39 @@ var FUNCTIONS_SmackW32_dll = {
           "waveOutUnprepareHeader|0x2A"
         ],
         "LoD/1.11b": [
-          "waveOutUnprepareHeader|0x2A",
+          "waveOutReset|0x2F",
           "waveOutClose|0x30",
-          "waveOutReset|0x2F"
+          "waveOutUnprepareHeader|0x2A"
         ],
         "LoD/1.12a": [
-          "waveOutClose|0x30",
           "waveOutUnprepareHeader|0x2A",
+          "waveOutClose|0x30",
           "waveOutReset|0x2F"
         ],
         "LoD/1.13c": [
           "waveOutReset|0x2F",
-          "waveOutClose|0x30",
-          "waveOutUnprepareHeader|0x2A"
+          "waveOutUnprepareHeader|0x2A",
+          "waveOutClose|0x30"
         ],
         "LoD/1.13d": [
-          "waveOutReset|0x2F",
-          "waveOutClose|0x30",
-          "waveOutUnprepareHeader|0x2A"
-        ],
-        "LoD/1.14a": [
-          "waveOutClose|0x30",
           "waveOutUnprepareHeader|0x2A",
+          "waveOutClose|0x30",
           "waveOutReset|0x2F"
         ],
-        "LoD/1.14b": [
+        "LoD/1.14a": [
           "waveOutUnprepareHeader|0x2A",
           "waveOutReset|0x2F",
           "waveOutClose|0x30"
         ],
-        "LoD/1.14c": [
-          "waveOutClose|0x30",
+        "LoD/1.14b": [
+          "waveOutReset|0x2F",
           "waveOutUnprepareHeader|0x2A",
-          "waveOutReset|0x2F"
+          "waveOutClose|0x30"
+        ],
+        "LoD/1.14c": [
+          "waveOutReset|0x2F",
+          "waveOutClose|0x30",
+          "waveOutUnprepareHeader|0x2A"
         ],
         "LoD/1.14d": [
           "waveOutClose|0x30",
@@ -104263,28 +101008,28 @@ var FUNCTIONS_SmackW32_dll = {
       "callers": {
         "Classic/1.00": [
           "FUN_10008800|0x10008800",
-          "_SmackUseMMX@4|0x10008C80",
-          "FUN_10008c10|0x10008C10"
+          "FUN_10008c10|0x10008C10",
+          "_SmackUseMMX@4|0x10008C80"
         ],
         "Classic/1.01": [
-          "FUN_10008c10|0x10008C10",
           "_SmackUseMMX@4|0x10008C80",
+          "FUN_10008c10|0x10008C10",
           "FUN_10008800|0x10008800"
         ],
         "Classic/1.02": [
           "FUN_10008800|0x10008800",
-          "FUN_10008c10|0x10008C10",
-          "_SmackUseMMX@4|0x10008C80"
+          "_SmackUseMMX@4|0x10008C80",
+          "FUN_10008c10|0x10008C10"
         ],
         "Classic/1.03": [
+          "_SmackUseMMX@4|0x10008C80",
           "FUN_10008800|0x10008800",
-          "FUN_10008c10|0x10008C10",
-          "_SmackUseMMX@4|0x10008C80"
+          "FUN_10008c10|0x10008C10"
         ],
         "Classic/1.04c": [
           "FUN_10008c10|0x10008C10",
-          "_SmackUseMMX@4|0x10008C80",
-          "FUN_10008800|0x10008800"
+          "FUN_10008800|0x10008800",
+          "_SmackUseMMX@4|0x10008C80"
         ],
         "LoD/1.07": [
           "OpenWaveOutDevice|0x10008800"
@@ -104295,34 +101040,34 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10008800|0x10008800"
         ],
         "LoD/1.09": [
-          "FUN_10008c10|0x10008C10",
+          "FUN_10008800|0x10008800",
           "_SmackUseMMX@4|0x10008C80",
-          "FUN_10008800|0x10008800"
+          "FUN_10008c10|0x10008C10"
         ],
         "LoD/1.09b": [
-          "FUN_10008800|0x10008800",
-          "FUN_10008c10|0x10008C10",
-          "_SmackUseMMX@4|0x10008C80"
-        ],
-        "LoD/1.09d": [
           "_SmackUseMMX@4|0x10008C80",
           "FUN_10008c10|0x10008C10",
           "FUN_10008800|0x10008800"
         ],
-        "LoD/1.10": [
+        "LoD/1.09d": [
           "FUN_10008800|0x10008800",
           "FUN_10008c10|0x10008C10",
           "_SmackUseMMX@4|0x10008C80"
+        ],
+        "LoD/1.10": [
+          "_SmackUseMMX@4|0x10008C80",
+          "FUN_10008c10|0x10008C10",
+          "FUN_10008800|0x10008800"
         ],
         "LoD/1.11": [
           "FUN_10008800|0x10008800",
-          "_SmackUseMMX@4|0x10008C80",
-          "FUN_10008c10|0x10008C10"
+          "FUN_10008c10|0x10008C10",
+          "_SmackUseMMX@4|0x10008C80"
         ],
         "LoD/1.11b": [
           "FUN_10008800|0x10008800",
-          "_SmackUseMMX@4|0x10008C80",
-          "FUN_10008c10|0x10008C10"
+          "FUN_10008c10|0x10008C10",
+          "_SmackUseMMX@4|0x10008C80"
         ],
         "LoD/1.12a": [
           "FUN_10008800|0x10008800",
@@ -104335,29 +101080,29 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackUseMMX@4|0x10008C80"
         ],
         "LoD/1.13d": [
-          "FUN_10008c10|0x10008C10",
           "FUN_10008800|0x10008800",
-          "_SmackUseMMX@4|0x10008C80"
-        ],
-        "LoD/1.14a": [
           "_SmackUseMMX@4|0x10008C80",
-          "FUN_10008800|0x10008800",
           "FUN_10008c10|0x10008C10"
         ],
-        "LoD/1.14b": [
+        "LoD/1.14a": [
           "FUN_10008c10|0x10008C10",
           "FUN_10008800|0x10008800",
           "_SmackUseMMX@4|0x10008C80"
         ],
-        "LoD/1.14c": [
-          "FUN_10008c10|0x10008C10",
+        "LoD/1.14b": [
           "FUN_10008800|0x10008800",
+          "_SmackUseMMX@4|0x10008C80",
+          "FUN_10008c10|0x10008C10"
+        ],
+        "LoD/1.14c": [
+          "FUN_10008800|0x10008800",
+          "FUN_10008c10|0x10008C10",
           "_SmackUseMMX@4|0x10008C80"
         ],
         "LoD/1.14d": [
-          "FUN_10008c10|0x10008C10",
           "FUN_10008800|0x10008800",
-          "_SmackUseMMX@4|0x10008C80"
+          "_SmackUseMMX@4|0x10008C80",
+          "FUN_10008c10|0x10008C10"
         ]
       },
       "instructions": {
@@ -105199,14 +101944,14 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "waveOutWrite|0x33",
+          "timeGetTime|0x34",
           "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
+          "waveOutWrite|0x33"
         ],
         "Classic/1.01": [
+          "MemoryCopyRegions|0x10007850",
           "waveOutWrite|0x33",
-          "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
+          "timeGetTime|0x34"
         ],
         "Classic/1.02": [
           "MemoryCopyRegions|0x10007850",
@@ -105214,24 +101959,24 @@ var FUNCTIONS_SmackW32_dll = {
           "waveOutWrite|0x33"
         ],
         "Classic/1.03": [
-          "waveOutWrite|0x33",
+          "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
+          "waveOutWrite|0x33"
         ],
         "Classic/1.04c": [
-          "timeGetTime|0x34",
-          "waveOutWrite|0x33",
-          "MemoryCopyRegions|0x10007850"
-        ],
-        "LoD/1.07": [
           "waveOutWrite|0x33",
           "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34"
         ],
-        "LoD/1.08": [
+        "LoD/1.07": [
           "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34",
-          "waveOutWrite|0x33"
+          "waveOutWrite|0x33",
+          "timeGetTime|0x34"
+        ],
+        "LoD/1.08": [
+          "waveOutWrite|0x33",
+          "MemoryCopyRegions|0x10007850",
+          "timeGetTime|0x34"
         ],
         "LoD/1.09": [
           "MemoryCopyRegions|0x10007850",
@@ -105240,28 +101985,28 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.09b": [
           "waveOutWrite|0x33",
-          "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
         ],
         "LoD/1.09d": [
           "timeGetTime|0x34",
-          "waveOutWrite|0x33",
-          "MemoryCopyRegions|0x10007850"
+          "MemoryCopyRegions|0x10007850",
+          "waveOutWrite|0x33"
         ],
         "LoD/1.10": [
-          "waveOutWrite|0x33",
           "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "waveOutWrite|0x33"
         ],
         "LoD/1.11": [
+          "timeGetTime|0x34",
+          "waveOutWrite|0x33",
+          "MemoryCopyRegions|0x10007850"
+        ],
+        "LoD/1.11b": [
           "MemoryCopyRegions|0x10007850",
           "waveOutWrite|0x33",
           "timeGetTime|0x34"
-        ],
-        "LoD/1.11b": [
-          "waveOutWrite|0x33",
-          "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
         ],
         "LoD/1.12a": [
           "timeGetTime|0x34",
@@ -105274,8 +102019,8 @@ var FUNCTIONS_SmackW32_dll = {
           "waveOutWrite|0x33"
         ],
         "LoD/1.13d": [
-          "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850",
           "waveOutWrite|0x33"
         ],
         "LoD/1.14a": [
@@ -105284,9 +102029,9 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.14b": [
+          "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34",
-          "waveOutWrite|0x33",
-          "MemoryCopyRegions|0x10007850"
+          "waveOutWrite|0x33"
         ],
         "LoD/1.14c": [
           "waveOutWrite|0x33",
@@ -105295,8 +102040,8 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.14d": [
           "waveOutWrite|0x33",
-          "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
         ]
       },
       "instructions": {
@@ -107003,1129 +103748,6 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_NOP_b2d266512237": {
-      "addresses": {
-        "Classic/1.00": "0x10008C10",
-        "Classic/1.01": "0x10008C10",
-        "Classic/1.02": "0x10008C10",
-        "Classic/1.03": "0x10008C10",
-        "Classic/1.04c": "0x10008C10",
-        "LoD/1.08": "0x10008C10",
-        "LoD/1.09": "0x10008C10",
-        "LoD/1.09b": "0x10008C10",
-        "LoD/1.09d": "0x10008C10",
-        "LoD/1.10": "0x10008C10",
-        "LoD/1.11": "0x10008C10",
-        "LoD/1.11b": "0x10008C10",
-        "LoD/1.12a": "0x10008C10",
-        "LoD/1.13c": "0x10008C10",
-        "LoD/1.13d": "0x10008C10",
-        "LoD/1.14a": "0x10008C10",
-        "LoD/1.14b": "0x10008C10",
-        "LoD/1.14c": "0x10008C10",
-        "LoD/1.14d": "0x10008C10"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8C10",
-        "Classic/1.01": "0x8C10",
-        "Classic/1.02": "0x8C10",
-        "Classic/1.03": "0x8C10",
-        "Classic/1.04c": "0x8C10",
-        "LoD/1.08": "0x8C10",
-        "LoD/1.09": "0x8C10",
-        "LoD/1.09b": "0x8C10",
-        "LoD/1.09d": "0x8C10",
-        "LoD/1.10": "0x8C10",
-        "LoD/1.11": "0x8C10",
-        "LoD/1.11b": "0x8C10",
-        "LoD/1.12a": "0x8C10",
-        "LoD/1.13c": "0x8C10",
-        "LoD/1.13d": "0x8C10",
-        "LoD/1.14a": "0x8C10",
-        "LoD/1.14b": "0x8C10",
-        "LoD/1.14c": "0x8C10",
-        "LoD/1.14d": "0x8C10"
-      },
-      "sizes": {
-        "Classic/1.00": 100,
-        "Classic/1.01": 100,
-        "Classic/1.02": 100,
-        "Classic/1.03": 100,
-        "Classic/1.04c": 100,
-        "LoD/1.08": 100,
-        "LoD/1.09": 100,
-        "LoD/1.09b": 100,
-        "LoD/1.09d": 100,
-        "LoD/1.10": 100,
-        "LoD/1.11": 100,
-        "LoD/1.11b": 100,
-        "LoD/1.12a": 100,
-        "LoD/1.13c": 100,
-        "LoD/1.13d": 100,
-        "LoD/1.14a": 100,
-        "LoD/1.14b": 100,
-        "LoD/1.14c": 100,
-        "LoD/1.14d": 100
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:b2d266512237b9cec3b023368d970412b50c0fc6e1825660bc2508e5384ead22",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b2d266512237b9cec3b023368d970412b50c0fc6e1825660bc2508e5384ead22",
-        "CAL": null,
-        "API": "d5e768179954a0f9e9bc303d8b021875",
-        "APS": null,
-        "CON": null,
-        "MNE": "06ffa3da065379b7064deb0c67302897",
-        "CFG": "94601ab63605a91fb6ad2c1a8a7c9d23",
-        "PRO": "349ce0cec15a4f8eda2303d11590ad4e"
-      },
-      "display_name": "NOP_b2d266512237b9ce",
-      "callees": {
-        "Classic/1.00": [
-          "CloseWaveOutDevice|0x100089D0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.01": [
-          "CloseWaveOutDevice|0x100089D0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.02": [
-          "CloseWaveOutDevice|0x100089D0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.03": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseWaveOutDevice|0x100089D0"
-        ],
-        "Classic/1.04c": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseWaveOutDevice|0x100089D0"
-        ],
-        "LoD/1.08": [
-          "CloseWaveOutDevice|0x100089D0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.09": [
-          "CloseWaveOutDevice|0x100089D0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.09b": [
-          "CloseWaveOutDevice|0x100089D0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.09d": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseWaveOutDevice|0x100089D0"
-        ],
-        "LoD/1.10": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseWaveOutDevice|0x100089D0"
-        ],
-        "LoD/1.11": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseWaveOutDevice|0x100089D0"
-        ],
-        "LoD/1.11b": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseWaveOutDevice|0x100089D0"
-        ],
-        "LoD/1.12a": [
-          "CloseWaveOutDevice|0x100089D0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.13c": [
-          "CloseWaveOutDevice|0x100089D0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.13d": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseWaveOutDevice|0x100089D0"
-        ],
-        "LoD/1.14a": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseWaveOutDevice|0x100089D0"
-        ],
-        "LoD/1.14b": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "CloseWaveOutDevice|0x100089D0"
-        ],
-        "LoD/1.14c": [
-          "CloseWaveOutDevice|0x100089D0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.14d": [
-          "CloseWaveOutDevice|0x100089D0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "Classic/1.01": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "Classic/1.02": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "Classic/1.03": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "Classic/1.04c": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.08": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.09": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.09b": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.09d": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.10": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.11": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.11b": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.12a": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.13c": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.13d": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.14a": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.14b": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.14c": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ],
-        "LoD/1.14d": [
-          "0x8C10|PUSH|ESI",
-          "0x8C11|MOV|EAX, [0x10014874]",
-          "0x8C16|TEST|EAX, EAX",
-          "0x8C18|JZ|0x10008c70",
-          "0x8C1A|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C1E|PUSH|ESI",
-          "0x8C1F|CALL|0x100089d0",
-          "0x8C24|ADD|ESP, 0x4",
-          "0x8C27|MOV|EAX, dword ptr [ESI + 0x64]",
-          "0x8C2A|PUSH|EAX",
-          "0x8C2B|CALL|0x10001040",
-          "0x8C30|CMP|dword ptr [0x10014874], ESI",
-          "0x8C36|JNZ|0x10008c44",
-          "0x8C38|MOV|EAX, dword ptr [ESI + 0x3c]",
-          "0x8C3B|POP|ESI"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 36,
-        "Classic/1.01": 36,
-        "Classic/1.02": 36,
-        "Classic/1.03": 36,
-        "Classic/1.04c": 36,
-        "LoD/1.08": 36,
-        "LoD/1.09": 36,
-        "LoD/1.09b": 36,
-        "LoD/1.09d": 36,
-        "LoD/1.10": 36,
-        "LoD/1.11": 36,
-        "LoD/1.11b": 36,
-        "LoD/1.12a": 36,
-        "LoD/1.13c": 36,
-        "LoD/1.13d": 36,
-        "LoD/1.14a": 36,
-        "LoD/1.14b": 36,
-        "LoD/1.14c": 36,
-        "LoD/1.14d": 36
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8,
-        "Classic/1.01": 8,
-        "Classic/1.02": 8,
-        "Classic/1.03": 8,
-        "Classic/1.04c": 8,
-        "LoD/1.08": 8,
-        "LoD/1.09": 8,
-        "LoD/1.09b": 8,
-        "LoD/1.09d": 8,
-        "LoD/1.10": 8,
-        "LoD/1.11": 8,
-        "LoD/1.11b": 8,
-        "LoD/1.12a": 8,
-        "LoD/1.13c": 8,
-        "LoD/1.13d": 8,
-        "LoD/1.14a": 8,
-        "LoD/1.14b": 8,
-        "LoD/1.14c": 8,
-        "LoD/1.14d": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "06ffa3da065379b7064deb0c67302897",
-        "Classic/1.01": "06ffa3da065379b7064deb0c67302897",
-        "Classic/1.02": "06ffa3da065379b7064deb0c67302897",
-        "Classic/1.03": "06ffa3da065379b7064deb0c67302897",
-        "Classic/1.04c": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.07": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.08": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.09": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.09b": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.09d": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.10": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.11": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.11b": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.12a": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.13c": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.13d": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.14a": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.14b": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.14c": "06ffa3da065379b7064deb0c67302897",
-        "LoD/1.14d": "06ffa3da065379b7064deb0c67302897",
-        "LoD/PD2": "06ffa3da065379b7064deb0c67302897"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "Classic/1.01": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "Classic/1.02": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "Classic/1.03": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "Classic/1.04c": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.08": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.09": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.09b": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.09d": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.10": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.11": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.11b": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.12a": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.13c": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.13d": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.14a": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.14b": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.14c": [
-          "0x14874|DAT_10014874|0x0"
-        ],
-        "LoD/1.14d": [
-          "0x14874|DAT_10014874|0x0"
-        ]
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "_radfree@4"
-        ],
-        "Classic/1.01": [
-          "_radfree@4"
-        ],
-        "Classic/1.02": [
-          "_radfree@4"
-        ],
-        "Classic/1.03": [
-          "_radfree@4"
-        ],
-        "Classic/1.04c": [
-          "_radfree@4"
-        ],
-        "LoD/1.08": [
-          "_radfree@4"
-        ],
-        "LoD/1.09": [
-          "_radfree@4"
-        ],
-        "LoD/1.09b": [
-          "_radfree@4"
-        ],
-        "LoD/1.09d": [
-          "_radfree@4"
-        ],
-        "LoD/1.10": [
-          "_radfree@4"
-        ],
-        "LoD/1.11": [
-          "_radfree@4"
-        ],
-        "LoD/1.11b": [
-          "_radfree@4"
-        ],
-        "LoD/1.12a": [
-          "_radfree@4"
-        ],
-        "LoD/1.13c": [
-          "_radfree@4"
-        ],
-        "LoD/1.13d": [
-          "_radfree@4"
-        ],
-        "LoD/1.14a": [
-          "_radfree@4"
-        ],
-        "LoD/1.14b": [
-          "_radfree@4"
-        ],
-        "LoD/1.14c": [
-          "_radfree@4"
-        ],
-        "LoD/1.14d": [
-          "_radfree@4"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 2,
-        "Classic/1.01": 2,
-        "Classic/1.02": 2,
-        "Classic/1.03": 2,
-        "Classic/1.04c": 2,
-        "LoD/1.08": 2,
-        "LoD/1.09": 2,
-        "LoD/1.09b": 2,
-        "LoD/1.09d": 2,
-        "LoD/1.10": 2,
-        "LoD/1.11": 2,
-        "LoD/1.11b": 2,
-        "LoD/1.12a": 2,
-        "LoD/1.13c": 2,
-        "LoD/1.13d": 2,
-        "LoD/1.14a": 2,
-        "LoD/1.14b": 2,
-        "LoD/1.14c": 2,
-        "LoD/1.14d": 2
-      },
-      "global_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "api_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "Classic/1.01": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "Classic/1.02": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "Classic/1.03": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "Classic/1.04c": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.08": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.09": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.09b": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.09d": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.10": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.11": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.11b": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.12a": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.13c": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.13d": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.14a": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.14b": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.14c": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ],
-        "LoD/1.14d": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal",
-        "Classic/1.01": "internal",
-        "Classic/1.02": "internal",
-        "Classic/1.03": "internal",
-        "Classic/1.04c": "internal",
-        "LoD/1.08": "internal",
-        "LoD/1.09": "internal",
-        "LoD/1.09b": "internal",
-        "LoD/1.09d": "internal",
-        "LoD/1.10": "internal",
-        "LoD/1.11": "internal",
-        "LoD/1.11b": "internal",
-        "LoD/1.12a": "internal",
-        "LoD/1.13c": "internal",
-        "LoD/1.13d": "internal",
-        "LoD/1.14a": "internal",
-        "LoD/1.14b": "internal",
-        "LoD/1.14c": "internal",
-        "LoD/1.14d": "internal"
-      }
-    },
-    "SmackW32_MNE_82a4681e028c": {
-      "addresses": {
-        "Classic/1.00": "0x10008C80",
-        "LoD/PD2": "0x02E278C0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8C80",
-        "LoD/PD2": "0x78C0"
-      },
-      "sizes": {
-        "Classic/1.00": 16,
-        "LoD/PD2": 16
-      },
-      "name": "_SmackUseMMX@4",
-      "signature": "undefined _SmackUseMMX@4(uint param_1)",
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:2706d6d1bcf031d4ae03848e8d75b8b96945a965c09d1df6628c8f3e3e87af08",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "2706d6d1bcf031d4ae03848e8d75b8b96945a965c09d1df6628c8f3e3e87af08",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "82a4681e028ce912ff418ce451dc2dfa",
-        "CFG": "708f6dc7dfeb6d65dfc09cc055561044",
-        "PRO": "3956d7a16aaa41f5cc2fbf211ae4ae41"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "CloseWaveOutDevice|0x100089D0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8C80|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0x8C84|PUSH|EAX",
-          "0x8C85|CALL|0x100089d0",
-          "0x8C8A|ADD|ESP, 0x4",
-          "0x8C8D|RET|0x4"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 5
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0,
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "82a4681e028ce912ff418ce451dc2dfa",
-        "Classic/1.01": "82a4681e028ce912ff418ce451dc2dfa",
-        "Classic/1.02": "82a4681e028ce912ff418ce451dc2dfa",
-        "Classic/1.03": "82a4681e028ce912ff418ce451dc2dfa",
-        "Classic/1.04c": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.07": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.08": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.09": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.09b": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.09d": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.10": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.11": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.11b": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.12a": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.13c": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.13d": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.14a": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.14b": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.14c": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.14d": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/PD2": "82a4681e028ce912ff418ce451dc2dfa"
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 1,
-        "LoD/PD2": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_1",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      },
-      "candidates": {
-        "Classic/1.01": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "Classic/1.02": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "Classic/1.03": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "Classic/1.04c": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.07": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.08": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.09": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.09b": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.09d": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.10": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.11": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.11b": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.12a": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.13c": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.13d": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.14a": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.14b": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.14c": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.14d": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "_SmackSoundCheck@0"
-        }
-      }
-    },
     "SmackW32_NOP_96322149ac97": {
       "addresses": {
         "Classic/1.00": "0x10008CA0",
@@ -108218,8 +103840,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "waveOutGetID|0x2D",
-          "waveOutSetVolume|0x2E"
+          "waveOutSetVolume|0x2E",
+          "waveOutGetID|0x2D"
         ],
         "Classic/1.01": [
           "waveOutGetID|0x2D",
@@ -108246,56 +103868,56 @@ var FUNCTIONS_SmackW32_dll = {
           "waveOutSetVolume|0x2E"
         ],
         "LoD/1.09": [
-          "waveOutSetVolume|0x2E",
-          "waveOutGetID|0x2D"
+          "waveOutGetID|0x2D",
+          "waveOutSetVolume|0x2E"
         ],
         "LoD/1.09b": [
           "waveOutSetVolume|0x2E",
           "waveOutGetID|0x2D"
         ],
         "LoD/1.09d": [
-          "waveOutSetVolume|0x2E",
-          "waveOutGetID|0x2D"
+          "waveOutGetID|0x2D",
+          "waveOutSetVolume|0x2E"
         ],
         "LoD/1.10": [
           "waveOutGetID|0x2D",
           "waveOutSetVolume|0x2E"
         ],
         "LoD/1.11": [
-          "waveOutGetID|0x2D",
-          "waveOutSetVolume|0x2E"
+          "waveOutSetVolume|0x2E",
+          "waveOutGetID|0x2D"
         ],
         "LoD/1.11b": [
           "waveOutSetVolume|0x2E",
           "waveOutGetID|0x2D"
         ],
         "LoD/1.12a": [
+          "waveOutSetVolume|0x2E",
+          "waveOutGetID|0x2D"
+        ],
+        "LoD/1.13c": [
           "waveOutGetID|0x2D",
           "waveOutSetVolume|0x2E"
         ],
-        "LoD/1.13c": [
-          "waveOutSetVolume|0x2E",
-          "waveOutGetID|0x2D"
-        ],
         "LoD/1.13d": [
-          "waveOutSetVolume|0x2E",
-          "waveOutGetID|0x2D"
+          "waveOutGetID|0x2D",
+          "waveOutSetVolume|0x2E"
         ],
         "LoD/1.14a": [
-          "waveOutSetVolume|0x2E",
-          "waveOutGetID|0x2D"
+          "waveOutGetID|0x2D",
+          "waveOutSetVolume|0x2E"
         ],
         "LoD/1.14b": [
-          "waveOutSetVolume|0x2E",
-          "waveOutGetID|0x2D"
+          "waveOutGetID|0x2D",
+          "waveOutSetVolume|0x2E"
         ],
         "LoD/1.14c": [
           "waveOutSetVolume|0x2E",
           "waveOutGetID|0x2D"
         ],
         "LoD/1.14d": [
-          "waveOutSetVolume|0x2E",
-          "waveOutGetID|0x2D"
+          "waveOutGetID|0x2D",
+          "waveOutSetVolume|0x2E"
         ]
       },
       "instructions": {
@@ -109287,7 +104909,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_46": {
+    "SmackW32_STR_bc0ec8aced85": {
       "addresses": {
         "Classic/1.00": "0x10008D50",
         "Classic/1.01": "0x10008D50",
@@ -109362,8 +104984,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:46",
+      "method": "STR",
+      "index": "STR:bc0ec8aced85907df8d5b9e4552bf43a",
       "indexes": {
         "EXP": "46",
         "STR": "bc0ec8aced85907df8d5b9e4552bf43a",
@@ -109386,8 +105008,8 @@ var FUNCTIONS_SmackW32_dll = {
           "OutputDebugStringA|0x5D"
         ],
         "Classic/1.02": [
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "__itoa|0x1000BA10"
         ],
         "Classic/1.03": [
           "OutputDebugStringA|0x5D",
@@ -109402,16 +105024,16 @@ var FUNCTIONS_SmackW32_dll = {
           "__itoa|0x1000BA10"
         ],
         "LoD/1.08": [
+          "OutputDebugStringA|0x5D",
+          "__itoa|0x1000BA10"
+        ],
+        "LoD/1.09": [
           "__itoa|0x1000BA10",
           "OutputDebugStringA|0x5D"
         ],
-        "LoD/1.09": [
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
-        ],
         "LoD/1.09b": [
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D"
         ],
         "LoD/1.09d": [
           "OutputDebugStringA|0x5D",
@@ -109422,36 +105044,36 @@ var FUNCTIONS_SmackW32_dll = {
           "__itoa|0x1000BA10"
         ],
         "LoD/1.11": [
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "__itoa|0x1000BA10"
         ],
         "LoD/1.11b": [
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "__itoa|0x1000BA10"
         ],
         "LoD/1.12a": [
           "__itoa|0x1000BA10",
           "OutputDebugStringA|0x5D"
         ],
         "LoD/1.13c": [
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
-        ],
-        "LoD/1.13d": [
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
-        ],
-        "LoD/1.14a": [
           "__itoa|0x1000BA10",
           "OutputDebugStringA|0x5D"
         ],
-        "LoD/1.14b": [
+        "LoD/1.13d": [
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D"
+        ],
+        "LoD/1.14a": [
           "OutputDebugStringA|0x5D",
           "__itoa|0x1000BA10"
         ],
+        "LoD/1.14b": [
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D"
+        ],
         "LoD/1.14c": [
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D"
         ],
         "LoD/1.14d": [
           "__itoa|0x1000BA10",
@@ -110452,7 +106074,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_58": {
+    "SmackW32_NOP_49d3b949bf1c": {
       "addresses": {
         "Classic/1.00": "0x10008E20",
         "Classic/1.01": "0x10008E20",
@@ -110524,8 +106146,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:58",
+      "method": "NOP",
+      "index": "NOP:49d3b949bf1ce045d23d238e8e923b2ea0f20964b85963512f062d92bb2adfd0",
       "indexes": {
         "EXP": "58",
         "STR": null,
@@ -111010,14 +106632,14 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "ProcessAudioStreamBuffer|0x10009390",
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
+        ],
+        "Classic/1.01": [
           "MemoryCopyRegions|0x10007850",
           "ProcessAudioStreamBuffer|0x10009390",
           "timeGetTime|0x34"
-        ],
-        "Classic/1.01": [
-          "timeGetTime|0x34",
-          "ProcessAudioStreamBuffer|0x10009390",
-          "MemoryCopyRegions|0x10007850"
         ],
         "Classic/1.02": [
           "MemoryCopyRegions|0x10007850",
@@ -111025,24 +106647,24 @@ var FUNCTIONS_SmackW32_dll = {
           "ProcessAudioStreamBuffer|0x10009390"
         ],
         "Classic/1.03": [
-          "ProcessAudioStreamBuffer|0x10009390",
           "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
+          "MemoryCopyRegions|0x10007850",
+          "ProcessAudioStreamBuffer|0x10009390"
         ],
         "Classic/1.04c": [
+          "MemoryCopyRegions|0x10007850",
           "ProcessAudioStreamBuffer|0x10009390",
-          "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
+          "timeGetTime|0x34"
         ],
         "LoD/1.07": [
-          "ProcessAudioStreamBuffer|0x10009390",
           "MemoryCopyRegions|0x10007850",
+          "ProcessAudioStreamBuffer|0x10009390",
           "timeGetTime|0x34"
         ],
         "LoD/1.08": [
+          "ProcessAudioStreamBuffer|0x10009390",
           "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34",
-          "ProcessAudioStreamBuffer|0x10009390"
+          "timeGetTime|0x34"
         ],
         "LoD/1.09": [
           "MemoryCopyRegions|0x10007850",
@@ -111051,8 +106673,8 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.09b": [
           "ProcessAudioStreamBuffer|0x10009390",
-          "MemoryCopyRegions|0x10007850",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
         ],
         "LoD/1.09d": [
           "timeGetTime|0x34",
@@ -111060,24 +106682,24 @@ var FUNCTIONS_SmackW32_dll = {
           "MemoryCopyRegions|0x10007850"
         ],
         "LoD/1.10": [
-          "ProcessAudioStreamBuffer|0x10009390",
+          "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
+          "ProcessAudioStreamBuffer|0x10009390"
         ],
         "LoD/1.11": [
+          "timeGetTime|0x34",
           "MemoryCopyRegions|0x10007850",
-          "ProcessAudioStreamBuffer|0x10009390",
-          "timeGetTime|0x34"
+          "ProcessAudioStreamBuffer|0x10009390"
         ],
         "LoD/1.11b": [
           "ProcessAudioStreamBuffer|0x10009390",
-          "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
+          "MemoryCopyRegions|0x10007850",
+          "timeGetTime|0x34"
         ],
         "LoD/1.12a": [
           "timeGetTime|0x34",
-          "ProcessAudioStreamBuffer|0x10009390",
-          "MemoryCopyRegions|0x10007850"
+          "MemoryCopyRegions|0x10007850",
+          "ProcessAudioStreamBuffer|0x10009390"
         ],
         "LoD/1.13c": [
           "MemoryCopyRegions|0x10007850",
@@ -111085,46 +106707,46 @@ var FUNCTIONS_SmackW32_dll = {
           "ProcessAudioStreamBuffer|0x10009390"
         ],
         "LoD/1.13d": [
+          "timeGetTime|0x34",
           "MemoryCopyRegions|0x10007850",
-          "ProcessAudioStreamBuffer|0x10009390",
-          "timeGetTime|0x34"
+          "ProcessAudioStreamBuffer|0x10009390"
         ],
         "LoD/1.14a": [
-          "MemoryCopyRegions|0x10007850",
-          "ProcessAudioStreamBuffer|0x10009390",
-          "timeGetTime|0x34"
-        ],
-        "LoD/1.14b": [
-          "ProcessAudioStreamBuffer|0x10009390",
-          "timeGetTime|0x34",
-          "MemoryCopyRegions|0x10007850"
-        ],
-        "LoD/1.14c": [
           "MemoryCopyRegions|0x10007850",
           "timeGetTime|0x34",
           "ProcessAudioStreamBuffer|0x10009390"
         ],
-        "LoD/1.14d": [
+        "LoD/1.14b": [
+          "MemoryCopyRegions|0x10007850",
+          "timeGetTime|0x34",
+          "ProcessAudioStreamBuffer|0x10009390"
+        ],
+        "LoD/1.14c": [
           "MemoryCopyRegions|0x10007850",
           "ProcessAudioStreamBuffer|0x10009390",
           "timeGetTime|0x34"
+        ],
+        "LoD/1.14d": [
+          "ProcessAudioStreamBuffer|0x10009390",
+          "timeGetTime|0x34",
+          "MemoryCopyRegions|0x10007850"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ailcallback|0x10009490",
+          "_TimerFunc@20|0x10008E20",
           "FUN_10009580|0x10009580",
-          "_TimerFunc@20|0x10008E20"
+          "ailcallback|0x10009490"
         ],
         "Classic/1.01": [
           "_TimerFunc@20|0x10008E20",
-          "ailcallback|0x10009490",
-          "FUN_10009580|0x10009580"
+          "FUN_10009580|0x10009580",
+          "ailcallback|0x10009490"
         ],
         "Classic/1.02": [
-          "FUN_10009580|0x10009580",
           "_TimerFunc@20|0x10008E20",
-          "ailcallback|0x10009490"
+          "ailcallback|0x10009490",
+          "FUN_10009580|0x10009580"
         ],
         "Classic/1.03": [
           "FUN_10009580|0x10009580",
@@ -111133,43 +106755,43 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "Classic/1.04c": [
           "FUN_10009580|0x10009580",
-          "ailcallback|0x10009490",
-          "_TimerFunc@20|0x10008E20"
+          "_TimerFunc@20|0x10008E20",
+          "ailcallback|0x10009490"
         ],
         "LoD/1.07": [
-          "_TimerFunc@20|0x10008E20",
           "ailcallback|0x10009490",
-          "GetAudioStreamPosition|0x10009580"
-        ],
-        "LoD/1.08": [
-          "ailcallback|0x10009490",
-          "FUN_10009580|0x10009580",
+          "GetAudioStreamPosition|0x10009580",
           "_TimerFunc@20|0x10008E20"
         ],
-        "LoD/1.09": [
+        "LoD/1.08": [
           "FUN_10009580|0x10009580",
           "_TimerFunc@20|0x10008E20",
           "ailcallback|0x10009490"
         ],
-        "LoD/1.09b": [
-          "FUN_10009580|0x10009580",
-          "ailcallback|0x10009490",
-          "_TimerFunc@20|0x10008E20"
-        ],
-        "LoD/1.09d": [
+        "LoD/1.09": [
           "_TimerFunc@20|0x10008E20",
           "ailcallback|0x10009490",
           "FUN_10009580|0x10009580"
+        ],
+        "LoD/1.09b": [
+          "FUN_10009580|0x10009580",
+          "_TimerFunc@20|0x10008E20",
+          "ailcallback|0x10009490"
+        ],
+        "LoD/1.09d": [
+          "FUN_10009580|0x10009580",
+          "ailcallback|0x10009490",
+          "_TimerFunc@20|0x10008E20"
         ],
         "LoD/1.10": [
           "ailcallback|0x10009490",
-          "_TimerFunc@20|0x10008E20",
-          "FUN_10009580|0x10009580"
-        ],
-        "LoD/1.11": [
-          "ailcallback|0x10009490",
           "FUN_10009580|0x10009580",
           "_TimerFunc@20|0x10008E20"
+        ],
+        "LoD/1.11": [
+          "_TimerFunc@20|0x10008E20",
+          "ailcallback|0x10009490",
+          "FUN_10009580|0x10009580"
         ],
         "LoD/1.11b": [
           "_TimerFunc@20|0x10008E20",
@@ -111177,14 +106799,14 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10009580|0x10009580"
         ],
         "LoD/1.12a": [
-          "ailcallback|0x10009490",
-          "_TimerFunc@20|0x10008E20",
-          "FUN_10009580|0x10009580"
-        ],
-        "LoD/1.13c": [
           "FUN_10009580|0x10009580",
           "_TimerFunc@20|0x10008E20",
           "ailcallback|0x10009490"
+        ],
+        "LoD/1.13c": [
+          "ailcallback|0x10009490",
+          "_TimerFunc@20|0x10008E20",
+          "FUN_10009580|0x10009580"
         ],
         "LoD/1.13d": [
           "ailcallback|0x10009490",
@@ -111198,13 +106820,13 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.14b": [
           "ailcallback|0x10009490",
-          "_TimerFunc@20|0x10008E20",
-          "FUN_10009580|0x10009580"
+          "FUN_10009580|0x10009580",
+          "_TimerFunc@20|0x10008E20"
         ],
         "LoD/1.14c": [
+          "FUN_10009580|0x10009580",
           "_TimerFunc@20|0x10008E20",
-          "ailcallback|0x10009490",
-          "FUN_10009580|0x10009580"
+          "ailcallback|0x10009490"
         ],
         "LoD/1.14d": [
           "FUN_10009580|0x10009580",
@@ -113318,7 +108940,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_59": {
+    "SmackW32_NOP_6b103931a56d": {
       "addresses": {
         "Classic/1.00": "0x10009490",
         "Classic/1.01": "0x10009490",
@@ -113394,8 +109016,8 @@ var FUNCTIONS_SmackW32_dll = {
       "return_type": "undefined",
       "comment": "__stdcall ailcallback,4",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:59",
+      "method": "NOP",
+      "index": "NOP:6b103931a56de43938379ac50011c74c8ae19ab1f871ff560627b34ca63366e5",
       "indexes": {
         "EXP": "59",
         "STR": null,
@@ -113789,7 +109411,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_48": {
+    "SmackW32_STR_48fca3de7f9e": {
       "addresses": {
         "Classic/1.00": "0x100094A0",
         "Classic/1.01": "0x100094A0",
@@ -113864,8 +109486,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "bool",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:48",
+      "method": "STR",
+      "index": "STR:48fca3de7f9e4c3ef0fac22ed4260928",
       "indexes": {
         "EXP": "48",
         "STR": "48fca3de7f9e4c3ef0fac22ed4260928",
@@ -113881,33 +109503,33 @@ var FUNCTIONS_SmackW32_dll = {
       "callees": {
         "Classic/1.00": [
           "GetProcAddress|0x47",
-          "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
-        ],
-        "Classic/1.01": [
-          "GetProcAddress|0x47",
           "SetErrorMode|0x59",
           "LoadLibraryA|0x58"
         ],
-        "Classic/1.02": [
-          "LoadLibraryA|0x58",
-          "GetProcAddress|0x47",
-          "SetErrorMode|0x59"
-        ],
-        "Classic/1.03": [
+        "Classic/1.01": [
           "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
-        "Classic/1.04c": [
-          "GetProcAddress|0x47",
+        "Classic/1.02": [
           "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
+          "SetErrorMode|0x59",
+          "GetProcAddress|0x47"
+        ],
+        "Classic/1.03": [
+          "GetProcAddress|0x47",
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58"
+        ],
+        "Classic/1.04c": [
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.07": [
-          "LoadLibraryA|0x58",
+          "SetErrorMode|0x59",
           "GetProcAddress|0x47",
-          "SetErrorMode|0x59"
+          "LoadLibraryA|0x58"
         ],
         "LoD/1.08": [
           "SetErrorMode|0x59",
@@ -113915,13 +109537,13 @@ var FUNCTIONS_SmackW32_dll = {
           "GetProcAddress|0x47"
         ],
         "LoD/1.09": [
-          "GetProcAddress|0x47",
+          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
+          "GetProcAddress|0x47"
         ],
         "LoD/1.09b": [
-          "LoadLibraryA|0x58",
           "GetProcAddress|0x47",
+          "LoadLibraryA|0x58",
           "SetErrorMode|0x59"
         ],
         "LoD/1.09d": [
@@ -113931,53 +109553,53 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.10": [
           "GetProcAddress|0x47",
-          "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
+          "SetErrorMode|0x59",
+          "LoadLibraryA|0x58"
         ],
         "LoD/1.11": [
+          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
-          "GetProcAddress|0x47",
-          "SetErrorMode|0x59"
+          "GetProcAddress|0x47"
         ],
         "LoD/1.11b": [
-          "GetProcAddress|0x47",
+          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
-          "SetErrorMode|0x59"
+          "GetProcAddress|0x47"
         ],
         "LoD/1.12a": [
-          "LoadLibraryA|0x58",
           "GetProcAddress|0x47",
+          "LoadLibraryA|0x58",
           "SetErrorMode|0x59"
         ],
         "LoD/1.13c": [
-          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
+          "SetErrorMode|0x59",
           "GetProcAddress|0x47"
         ],
         "LoD/1.13d": [
           "SetErrorMode|0x59",
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
-        ],
-        "LoD/1.14a": [
-          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
-        "LoD/1.14b": [
-          "GetProcAddress|0x47",
+        "LoD/1.14a": [
           "LoadLibraryA|0x58",
+          "GetProcAddress|0x47",
+          "SetErrorMode|0x59"
+        ],
+        "LoD/1.14b": [
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47",
           "SetErrorMode|0x59"
         ],
         "LoD/1.14c": [
-          "SetErrorMode|0x59",
           "LoadLibraryA|0x58",
-          "GetProcAddress|0x47"
+          "GetProcAddress|0x47",
+          "SetErrorMode|0x59"
         ],
         "LoD/1.14d": [
+          "GetProcAddress|0x47",
           "LoadLibraryA|0x58",
-          "SetErrorMode|0x59",
-          "GetProcAddress|0x47"
+          "SetErrorMode|0x59"
         ]
       },
       "callers": {
@@ -115374,16 +110996,16 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "Classic/1.01": [
-          "UpdateAudioStreamBuffers|0x10008E30",
-          "timeGetTime|0x34"
-        ],
-        "Classic/1.02": [
           "timeGetTime|0x34",
           "UpdateAudioStreamBuffers|0x10008E30"
         ],
-        "Classic/1.03": [
+        "Classic/1.02": [
           "UpdateAudioStreamBuffers|0x10008E30",
           "timeGetTime|0x34"
+        ],
+        "Classic/1.03": [
+          "timeGetTime|0x34",
+          "UpdateAudioStreamBuffers|0x10008E30"
         ],
         "Classic/1.04c": [
           "UpdateAudioStreamBuffers|0x10008E30",
@@ -115394,40 +111016,40 @@ var FUNCTIONS_SmackW32_dll = {
           "timeGetTime|0x34"
         ],
         "LoD/1.08": [
-          "timeGetTime|0x34",
-          "UpdateAudioStreamBuffers|0x10008E30"
+          "UpdateAudioStreamBuffers|0x10008E30",
+          "timeGetTime|0x34"
         ],
         "LoD/1.09": [
-          "timeGetTime|0x34",
-          "UpdateAudioStreamBuffers|0x10008E30"
+          "UpdateAudioStreamBuffers|0x10008E30",
+          "timeGetTime|0x34"
         ],
         "LoD/1.09b": [
           "UpdateAudioStreamBuffers|0x10008E30",
           "timeGetTime|0x34"
         ],
         "LoD/1.09d": [
-          "UpdateAudioStreamBuffers|0x10008E30",
-          "timeGetTime|0x34"
-        ],
-        "LoD/1.10": [
           "timeGetTime|0x34",
           "UpdateAudioStreamBuffers|0x10008E30"
         ],
-        "LoD/1.11": [
+        "LoD/1.10": [
           "UpdateAudioStreamBuffers|0x10008E30",
           "timeGetTime|0x34"
+        ],
+        "LoD/1.11": [
+          "timeGetTime|0x34",
+          "UpdateAudioStreamBuffers|0x10008E30"
         ],
         "LoD/1.11b": [
           "UpdateAudioStreamBuffers|0x10008E30",
           "timeGetTime|0x34"
         ],
         "LoD/1.12a": [
-          "UpdateAudioStreamBuffers|0x10008E30",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "UpdateAudioStreamBuffers|0x10008E30"
         ],
         "LoD/1.13c": [
-          "UpdateAudioStreamBuffers|0x10008E30",
-          "timeGetTime|0x34"
+          "timeGetTime|0x34",
+          "UpdateAudioStreamBuffers|0x10008E30"
         ],
         "LoD/1.13d": [
           "UpdateAudioStreamBuffers|0x10008E30",
@@ -116402,100 +112024,100 @@ var FUNCTIONS_SmackW32_dll = {
       "display_name": "STR_f52704dfa2e43216",
       "callees": {
         "Classic/1.00": [
-          "InitializeDirectSoundAudio|0x10009910",
           "timeSetEvent|0x2C",
           "InitializeAudioStream|0x10009770",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "InitializeDirectSoundAudio|0x10009910"
         ],
         "Classic/1.01": [
-          "InitializeDirectSoundAudio|0x10009910",
+          "OutputDebugStringA|0x5D",
           "InitializeAudioStream|0x10009770",
-          "timeSetEvent|0x2C",
-          "OutputDebugStringA|0x5D"
+          "InitializeDirectSoundAudio|0x10009910",
+          "timeSetEvent|0x2C"
         ],
         "Classic/1.02": [
-          "timeSetEvent|0x2C",
-          "InitializeDirectSoundAudio|0x10009910",
+          "OutputDebugStringA|0x5D",
           "InitializeAudioStream|0x10009770",
-          "OutputDebugStringA|0x5D"
+          "timeSetEvent|0x2C",
+          "InitializeDirectSoundAudio|0x10009910"
         ],
         "Classic/1.03": [
-          "InitializeDirectSoundAudio|0x10009910",
           "timeSetEvent|0x2C",
-          "InitializeAudioStream|0x10009770",
-          "OutputDebugStringA|0x5D"
-        ],
-        "Classic/1.04c": [
-          "InitializeAudioStream|0x10009770",
-          "timeSetEvent|0x2C",
-          "InitializeDirectSoundAudio|0x10009910",
-          "OutputDebugStringA|0x5D"
-        ],
-        "LoD/1.08": [
-          "InitializeDirectSoundAudio|0x10009910",
-          "timeSetEvent|0x2C",
-          "InitializeAudioStream|0x10009770",
-          "OutputDebugStringA|0x5D"
-        ],
-        "LoD/1.09": [
-          "timeSetEvent|0x2C",
-          "InitializeDirectSoundAudio|0x10009910",
           "OutputDebugStringA|0x5D",
+          "InitializeDirectSoundAudio|0x10009910",
           "InitializeAudioStream|0x10009770"
         ],
-        "LoD/1.09b": [
+        "Classic/1.04c": [
+          "timeSetEvent|0x2C",
+          "InitializeAudioStream|0x10009770",
+          "OutputDebugStringA|0x5D",
+          "InitializeDirectSoundAudio|0x10009910"
+        ],
+        "LoD/1.08": [
+          "timeSetEvent|0x2C",
+          "InitializeAudioStream|0x10009770",
+          "OutputDebugStringA|0x5D",
+          "InitializeDirectSoundAudio|0x10009910"
+        ],
+        "LoD/1.09": [
           "InitializeAudioStream|0x10009770",
           "OutputDebugStringA|0x5D",
           "InitializeDirectSoundAudio|0x10009910",
           "timeSetEvent|0x2C"
+        ],
+        "LoD/1.09b": [
+          "timeSetEvent|0x2C",
+          "InitializeDirectSoundAudio|0x10009910",
+          "OutputDebugStringA|0x5D",
+          "InitializeAudioStream|0x10009770"
         ],
         "LoD/1.09d": [
           "OutputDebugStringA|0x5D",
           "InitializeDirectSoundAudio|0x10009910",
-          "timeSetEvent|0x2C",
-          "InitializeAudioStream|0x10009770"
+          "InitializeAudioStream|0x10009770",
+          "timeSetEvent|0x2C"
         ],
         "LoD/1.10": [
-          "timeSetEvent|0x2C",
           "OutputDebugStringA|0x5D",
           "InitializeAudioStream|0x10009770",
+          "timeSetEvent|0x2C",
           "InitializeDirectSoundAudio|0x10009910"
         ],
         "LoD/1.11": [
-          "InitializeAudioStream|0x10009770",
-          "InitializeDirectSoundAudio|0x10009910",
-          "OutputDebugStringA|0x5D",
-          "timeSetEvent|0x2C"
-        ],
-        "LoD/1.11b": [
-          "InitializeDirectSoundAudio|0x10009910",
-          "InitializeAudioStream|0x10009770",
           "timeSetEvent|0x2C",
+          "InitializeDirectSoundAudio|0x10009910",
+          "InitializeAudioStream|0x10009770",
           "OutputDebugStringA|0x5D"
         ],
-        "LoD/1.12a": [
-          "InitializeAudioStream|0x10009770",
+        "LoD/1.11b": [
           "OutputDebugStringA|0x5D",
           "timeSetEvent|0x2C",
+          "InitializeDirectSoundAudio|0x10009910",
+          "InitializeAudioStream|0x10009770"
+        ],
+        "LoD/1.12a": [
+          "timeSetEvent|0x2C",
+          "OutputDebugStringA|0x5D",
+          "InitializeAudioStream|0x10009770",
           "InitializeDirectSoundAudio|0x10009910"
         ],
         "LoD/1.13c": [
-          "timeSetEvent|0x2C",
-          "OutputDebugStringA|0x5D",
+          "InitializeDirectSoundAudio|0x10009910",
           "InitializeAudioStream|0x10009770",
-          "InitializeDirectSoundAudio|0x10009910"
+          "OutputDebugStringA|0x5D",
+          "timeSetEvent|0x2C"
         ],
         "LoD/1.13d": [
-          "OutputDebugStringA|0x5D",
           "InitializeDirectSoundAudio|0x10009910",
+          "OutputDebugStringA|0x5D",
           "InitializeAudioStream|0x10009770",
           "timeSetEvent|0x2C"
         ],
         "LoD/1.14a": [
-          "OutputDebugStringA|0x5D",
-          "InitializeAudioStream|0x10009770",
           "InitializeDirectSoundAudio|0x10009910",
-          "timeSetEvent|0x2C"
+          "timeSetEvent|0x2C",
+          "OutputDebugStringA|0x5D",
+          "InitializeAudioStream|0x10009770"
         ],
         "LoD/1.14b": [
           "InitializeDirectSoundAudio|0x10009910",
@@ -116504,16 +112126,16 @@ var FUNCTIONS_SmackW32_dll = {
           "OutputDebugStringA|0x5D"
         ],
         "LoD/1.14c": [
-          "OutputDebugStringA|0x5D",
+          "InitializeAudioStream|0x10009770",
           "InitializeDirectSoundAudio|0x10009910",
-          "timeSetEvent|0x2C",
-          "InitializeAudioStream|0x10009770"
+          "OutputDebugStringA|0x5D",
+          "timeSetEvent|0x2C"
         ],
         "LoD/1.14d": [
           "InitializeAudioStream|0x10009770",
-          "OutputDebugStringA|0x5D",
+          "InitializeDirectSoundAudio|0x10009910",
           "timeSetEvent|0x2C",
-          "InitializeDirectSoundAudio|0x10009910"
+          "OutputDebugStringA|0x5D"
         ]
       },
       "strings": {
@@ -117846,8 +113468,8 @@ var FUNCTIONS_SmackW32_dll = {
           "OutputDebugStringA|0x5D"
         ],
         "Classic/1.02": [
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "__itoa|0x1000BA10"
         ],
         "Classic/1.03": [
           "OutputDebugStringA|0x5D",
@@ -117862,16 +113484,16 @@ var FUNCTIONS_SmackW32_dll = {
           "__itoa|0x1000BA10"
         ],
         "LoD/1.08": [
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "__itoa|0x1000BA10"
         ],
         "LoD/1.09": [
           "__itoa|0x1000BA10",
           "OutputDebugStringA|0x5D"
         ],
         "LoD/1.09b": [
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D"
         ],
         "LoD/1.09d": [
           "OutputDebugStringA|0x5D",
@@ -117882,36 +113504,36 @@ var FUNCTIONS_SmackW32_dll = {
           "__itoa|0x1000BA10"
         ],
         "LoD/1.11": [
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "__itoa|0x1000BA10"
         ],
         "LoD/1.11b": [
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D"
+          "OutputDebugStringA|0x5D",
+          "__itoa|0x1000BA10"
         ],
         "LoD/1.12a": [
           "__itoa|0x1000BA10",
           "OutputDebugStringA|0x5D"
         ],
         "LoD/1.13c": [
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
-        ],
-        "LoD/1.13d": [
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
-        ],
-        "LoD/1.14a": [
           "__itoa|0x1000BA10",
           "OutputDebugStringA|0x5D"
         ],
-        "LoD/1.14b": [
+        "LoD/1.13d": [
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D"
+        ],
+        "LoD/1.14a": [
           "OutputDebugStringA|0x5D",
           "__itoa|0x1000BA10"
         ],
+        "LoD/1.14b": [
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D"
+        ],
         "LoD/1.14c": [
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10"
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D"
         ],
         "LoD/1.14d": [
           "__itoa|0x1000BA10",
@@ -117920,51 +113542,51 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_10009630|0x10009630",
-          "FUN_10009b40|0x10009B40"
+          "FUN_10009b40|0x10009B40",
+          "FUN_10009630|0x10009630"
         ],
         "Classic/1.01": [
           "FUN_10009b40|0x10009B40",
           "FUN_10009630|0x10009630"
         ],
         "Classic/1.02": [
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009630|0x10009630"
+          "FUN_10009630|0x10009630",
+          "FUN_10009b40|0x10009B40"
         ],
         "Classic/1.03": [
           "FUN_10009630|0x10009630",
           "FUN_10009b40|0x10009B40"
         ],
         "Classic/1.04c": [
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009630|0x10009630"
+          "FUN_10009630|0x10009630",
+          "FUN_10009b40|0x10009B40"
         ],
         "LoD/1.07": [
           "InitializeAudioDevice|0x10009B40"
         ],
         "LoD/1.08": [
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009630|0x10009630"
-        ],
-        "LoD/1.09": [
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009630|0x10009630"
-        ],
-        "LoD/1.09b": [
           "FUN_10009630|0x10009630",
           "FUN_10009b40|0x10009B40"
         ],
-        "LoD/1.09d": [
+        "LoD/1.09": [
+          "FUN_10009630|0x10009630",
+          "FUN_10009b40|0x10009B40"
+        ],
+        "LoD/1.09b": [
           "FUN_10009b40|0x10009B40",
           "FUN_10009630|0x10009630"
+        ],
+        "LoD/1.09d": [
+          "FUN_10009630|0x10009630",
+          "FUN_10009b40|0x10009B40"
         ],
         "LoD/1.10": [
           "FUN_10009b40|0x10009B40",
           "FUN_10009630|0x10009630"
         ],
         "LoD/1.11": [
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009630|0x10009630"
+          "FUN_10009630|0x10009630",
+          "FUN_10009b40|0x10009B40"
         ],
         "LoD/1.11b": [
           "FUN_10009630|0x10009630",
@@ -117987,12 +113609,12 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10009630|0x10009630"
         ],
         "LoD/1.14b": [
-          "FUN_10009630|0x10009630",
-          "FUN_10009b40|0x10009B40"
+          "FUN_10009b40|0x10009B40",
+          "FUN_10009630|0x10009630"
         ],
         "LoD/1.14c": [
-          "FUN_10009630|0x10009630",
-          "FUN_10009b40|0x10009B40"
+          "FUN_10009b40|0x10009B40",
+          "FUN_10009630|0x10009630"
         ],
         "LoD/1.14d": [
           "FUN_10009630|0x10009630",
@@ -119226,51 +114848,51 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_10009630|0x10009630",
-          "FUN_10009b40|0x10009B40"
+          "FUN_10009b40|0x10009B40",
+          "FUN_10009630|0x10009630"
         ],
         "Classic/1.01": [
           "FUN_10009b40|0x10009B40",
           "FUN_10009630|0x10009630"
         ],
         "Classic/1.02": [
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009630|0x10009630"
+          "FUN_10009630|0x10009630",
+          "FUN_10009b40|0x10009B40"
         ],
         "Classic/1.03": [
           "FUN_10009630|0x10009630",
           "FUN_10009b40|0x10009B40"
         ],
         "Classic/1.04c": [
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009630|0x10009630"
+          "FUN_10009630|0x10009630",
+          "FUN_10009b40|0x10009B40"
         ],
         "LoD/1.07": [
           "InitializeAudioDevice|0x10009B40"
         ],
         "LoD/1.08": [
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009630|0x10009630"
-        ],
-        "LoD/1.09": [
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009630|0x10009630"
-        ],
-        "LoD/1.09b": [
           "FUN_10009630|0x10009630",
           "FUN_10009b40|0x10009B40"
         ],
-        "LoD/1.09d": [
+        "LoD/1.09": [
+          "FUN_10009630|0x10009630",
+          "FUN_10009b40|0x10009B40"
+        ],
+        "LoD/1.09b": [
           "FUN_10009b40|0x10009B40",
           "FUN_10009630|0x10009630"
+        ],
+        "LoD/1.09d": [
+          "FUN_10009630|0x10009630",
+          "FUN_10009b40|0x10009B40"
         ],
         "LoD/1.10": [
           "FUN_10009b40|0x10009B40",
           "FUN_10009630|0x10009630"
         ],
         "LoD/1.11": [
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009630|0x10009630"
+          "FUN_10009630|0x10009630",
+          "FUN_10009b40|0x10009B40"
         ],
         "LoD/1.11b": [
           "FUN_10009630|0x10009630",
@@ -119293,12 +114915,12 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10009630|0x10009630"
         ],
         "LoD/1.14b": [
-          "FUN_10009630|0x10009630",
-          "FUN_10009b40|0x10009B40"
+          "FUN_10009b40|0x10009B40",
+          "FUN_10009630|0x10009630"
         ],
         "LoD/1.14c": [
-          "FUN_10009630|0x10009630",
-          "FUN_10009b40|0x10009B40"
+          "FUN_10009b40|0x10009B40",
+          "FUN_10009630|0x10009630"
         ],
         "LoD/1.14d": [
           "FUN_10009630|0x10009630",
@@ -119841,203 +115463,203 @@ var FUNCTIONS_SmackW32_dll = {
       "callees": {
         "Classic/1.00": [
           "GetWindowThreadProcessId|0x1B",
-          "__itoa|0x1000BA10",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "GetCurrentProcessId|0x37",
-          "GetWindow|0x2",
-          "OutputDebugStringA|0x5D",
           "GetTopWindow|0x3",
-          "GetActiveWindow|0x1C"
+          "GetCurrentProcessId|0x37",
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D",
+          "GetActiveWindow|0x1C",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetWindow|0x2"
         ],
         "Classic/1.01": [
-          "GetWindow|0x2",
-          "GetTopWindow|0x3",
-          "GetActiveWindow|0x1C",
-          "GetCurrentProcessId|0x37",
           "__itoa|0x1000BA10",
           "OutputDebugStringA|0x5D",
-          "GetWindowThreadProcessId|0x1B",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
+          "GetWindow|0x2",
+          "GetActiveWindow|0x1C",
+          "GetTopWindow|0x3",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetCurrentProcessId|0x37",
+          "GetWindowThreadProcessId|0x1B"
         ],
         "Classic/1.02": [
-          "GetWindowThreadProcessId|0x1B",
+          "GetTopWindow|0x3",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "GetWindow|0x2",
-          "GetCurrentProcessId|0x37",
-          "GetActiveWindow|0x1C",
-          "__itoa|0x1000BA10",
           "OutputDebugStringA|0x5D",
-          "GetTopWindow|0x3"
+          "GetWindowThreadProcessId|0x1B",
+          "GetActiveWindow|0x1C",
+          "GetCurrentProcessId|0x37",
+          "__itoa|0x1000BA10",
+          "GetWindow|0x2"
         ],
         "Classic/1.03": [
+          "OutputDebugStringA|0x5D",
+          "GetTopWindow|0x3",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetActiveWindow|0x1C",
+          "GetCurrentProcessId|0x37",
           "GetWindowThreadProcessId|0x1B",
           "GetWindow|0x2",
-          "GetActiveWindow|0x1C",
-          "OutputDebugStringA|0x5D",
-          "GetCurrentProcessId|0x37",
-          "__itoa|0x1000BA10",
-          "GetTopWindow|0x3",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
+          "__itoa|0x1000BA10"
         ],
         "Classic/1.04c": [
-          "GetTopWindow|0x3",
           "__itoa|0x1000BA10",
-          "GetWindow|0x2",
           "GetWindowThreadProcessId|0x1B",
-          "GetCurrentProcessId|0x37",
-          "GetActiveWindow|0x1C",
+          "GetWindow|0x2",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetCurrentProcessId|0x37",
+          "GetTopWindow|0x3",
+          "GetActiveWindow|0x1C",
           "OutputDebugStringA|0x5D"
         ],
         "LoD/1.07": [
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
           "OutputDebugStringA|0x5D",
-          "GetWindowThreadProcessId|0x1B",
+          "__itoa|0x1000BA10",
           "GetTopWindow|0x3",
+          "GetWindow|0x2",
           "GetCurrentProcessId|0x37",
-          "GetActiveWindow|0x1C",
-          "__itoa|0x1000BA10",
-          "GetWindow|0x2"
-        ],
-        "LoD/1.08": [
           "GetWindowThreadProcessId|0x1B",
-          "GetWindow|0x2",
-          "__itoa|0x1000BA10",
           "GetActiveWindow|0x1C",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "GetTopWindow|0x3",
-          "GetCurrentProcessId|0x37",
-          "OutputDebugStringA|0x5D"
-        ],
-        "LoD/1.09": [
-          "GetActiveWindow|0x1C",
-          "__itoa|0x1000BA10",
-          "GetWindow|0x2",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "GetWindowThreadProcessId|0x1B",
-          "GetTopWindow|0x3",
-          "OutputDebugStringA|0x5D",
-          "GetCurrentProcessId|0x37"
-        ],
-        "LoD/1.09b": [
-          "GetWindow|0x2",
-          "GetActiveWindow|0x1C",
-          "OutputDebugStringA|0x5D",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "GetCurrentProcessId|0x37",
-          "__itoa|0x1000BA10",
-          "GetTopWindow|0x3",
-          "GetWindowThreadProcessId|0x1B"
-        ],
-        "LoD/1.09d": [
-          "OutputDebugStringA|0x5D",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "GetCurrentProcessId|0x37",
-          "__itoa|0x1000BA10",
-          "GetTopWindow|0x3",
-          "GetWindowThreadProcessId|0x1B",
-          "GetWindow|0x2",
-          "GetActiveWindow|0x1C"
-        ],
-        "LoD/1.10": [
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10",
-          "GetTopWindow|0x3",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "GetWindowThreadProcessId|0x1B",
-          "GetWindow|0x2",
-          "GetActiveWindow|0x1C",
-          "GetCurrentProcessId|0x37"
-        ],
-        "LoD/1.11": [
-          "__itoa|0x1000BA10",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "GetWindow|0x2",
-          "GetActiveWindow|0x1C",
-          "GetWindowThreadProcessId|0x1B",
-          "GetTopWindow|0x3",
-          "GetCurrentProcessId|0x37",
-          "OutputDebugStringA|0x5D"
-        ],
-        "LoD/1.11b": [
-          "GetTopWindow|0x3",
-          "GetWindow|0x2",
-          "GetActiveWindow|0x1C",
-          "__itoa|0x1000BA10",
-          "OutputDebugStringA|0x5D",
-          "GetWindowThreadProcessId|0x1B",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "GetCurrentProcessId|0x37"
-        ],
-        "LoD/1.12a": [
-          "__itoa|0x1000BA10",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "GetWindow|0x2",
-          "GetActiveWindow|0x1C",
-          "GetTopWindow|0x3",
-          "GetCurrentProcessId|0x37",
-          "OutputDebugStringA|0x5D",
-          "GetWindowThreadProcessId|0x1B"
-        ],
-        "LoD/1.13c": [
-          "GetTopWindow|0x3",
-          "GetActiveWindow|0x1C",
-          "OutputDebugStringA|0x5D",
-          "__itoa|0x1000BA10",
-          "GetCurrentProcessId|0x37",
-          "GetWindow|0x2",
-          "GetWindowThreadProcessId|0x1B",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
         ],
-        "LoD/1.13d": [
+        "LoD/1.08": [
+          "GetWindow|0x2",
+          "GetTopWindow|0x3",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetCurrentProcessId|0x37",
           "OutputDebugStringA|0x5D",
           "GetWindowThreadProcessId|0x1B",
-          "GetCurrentProcessId|0x37",
           "__itoa|0x1000BA10",
-          "GetActiveWindow|0x1C",
+          "GetActiveWindow|0x1C"
+        ],
+        "LoD/1.09": [
           "GetTopWindow|0x3",
+          "GetWindowThreadProcessId|0x1B",
+          "__itoa|0x1000BA10",
+          "GetCurrentProcessId|0x37",
+          "GetActiveWindow|0x1C",
+          "OutputDebugStringA|0x5D",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
           "GetWindow|0x2"
         ],
-        "LoD/1.14a": [
-          "__itoa|0x1000BA10",
+        "LoD/1.09b": [
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetTopWindow|0x3",
           "GetWindowThreadProcessId|0x1B",
+          "__itoa|0x1000BA10",
+          "GetWindow|0x2",
+          "GetActiveWindow|0x1C",
+          "OutputDebugStringA|0x5D",
+          "GetCurrentProcessId|0x37"
+        ],
+        "LoD/1.09d": [
+          "GetCurrentProcessId|0x37",
           "GetActiveWindow|0x1C",
           "OutputDebugStringA|0x5D",
           "GetWindow|0x2",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "__itoa|0x1000BA10",
           "GetTopWindow|0x3",
-          "GetCurrentProcessId|0x37"
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetWindowThreadProcessId|0x1B"
         ],
-        "LoD/1.14b": [
-          "GetCurrentProcessId|0x37",
-          "GetWindow|0x2",
-          "GetWindowThreadProcessId|0x1B",
-          "GetTopWindow|0x3",
-          "OutputDebugStringA|0x5D",
+        "LoD/1.10": [
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetWindowThreadProcessId|0x1B",
+          "GetWindow|0x2",
+          "GetCurrentProcessId|0x37",
+          "OutputDebugStringA|0x5D",
+          "GetTopWindow|0x3",
           "GetActiveWindow|0x1C",
           "__itoa|0x1000BA10"
         ],
-        "LoD/1.14c": [
-          "OutputDebugStringA|0x5D",
+        "LoD/1.11": [
           "GetWindowThreadProcessId|0x1B",
-          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D",
           "GetTopWindow|0x3",
-          "GetCurrentProcessId|0x37",
           "GetActiveWindow|0x1C",
           "GetWindow|0x2",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "__itoa|0x1000BA10",
+          "GetCurrentProcessId|0x37"
+        ],
+        "LoD/1.11b": [
+          "GetTopWindow|0x3",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "OutputDebugStringA|0x5D",
+          "GetCurrentProcessId|0x37",
+          "__itoa|0x1000BA10",
+          "GetWindowThreadProcessId|0x1B",
+          "GetWindow|0x2",
+          "GetActiveWindow|0x1C"
+        ],
+        "LoD/1.12a": [
+          "GetCurrentProcessId|0x37",
+          "GetTopWindow|0x3",
+          "__itoa|0x1000BA10",
+          "GetWindowThreadProcessId|0x1B",
+          "GetWindow|0x2",
+          "OutputDebugStringA|0x5D",
+          "GetActiveWindow|0x1C",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
         ],
-        "LoD/1.14d": [
-          "GetWindowThreadProcessId|0x1B",
-          "__itoa|0x1000BA10",
+        "LoD/1.13c": [
+          "GetCurrentProcessId|0x37",
+          "GetActiveWindow|0x1C",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetWindow|0x2",
+          "__itoa|0x1000BA10",
+          "OutputDebugStringA|0x5D",
+          "GetWindowThreadProcessId|0x1B",
+          "GetTopWindow|0x3"
+        ],
+        "LoD/1.13d": [
+          "__itoa|0x1000BA10",
+          "GetCurrentProcessId|0x37",
+          "GetWindow|0x2",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetWindowThreadProcessId|0x1B",
+          "GetActiveWindow|0x1C",
+          "OutputDebugStringA|0x5D",
+          "GetTopWindow|0x3"
+        ],
+        "LoD/1.14a": [
           "GetWindow|0x2",
           "OutputDebugStringA|0x5D",
           "GetTopWindow|0x3",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
           "GetCurrentProcessId|0x37",
-          "GetActiveWindow|0x1C"
+          "GetWindowThreadProcessId|0x1B",
+          "GetActiveWindow|0x1C",
+          "__itoa|0x1000BA10"
+        ],
+        "LoD/1.14b": [
+          "GetCurrentProcessId|0x37",
+          "GetTopWindow|0x3",
+          "GetActiveWindow|0x1C",
+          "GetWindow|0x2",
+          "__itoa|0x1000BA10",
+          "GetWindowThreadProcessId|0x1B",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "OutputDebugStringA|0x5D"
+        ],
+        "LoD/1.14c": [
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetCurrentProcessId|0x37",
+          "__itoa|0x1000BA10",
+          "GetWindowThreadProcessId|0x1B",
+          "GetActiveWindow|0x1C",
+          "GetTopWindow|0x3",
+          "OutputDebugStringA|0x5D",
+          "GetWindow|0x2"
+        ],
+        "LoD/1.14d": [
+          "__itoa|0x1000BA10",
+          "GetActiveWindow|0x1C",
+          "GetCurrentProcessId|0x37",
+          "GetTopWindow|0x3",
+          "GetWindow|0x2",
+          "OutputDebugStringA|0x5D",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "GetWindowThreadProcessId|0x1B"
         ]
       },
       "strings": {
@@ -122053,40 +117675,40 @@ var FUNCTIONS_SmackW32_dll = {
           "AcquireAudioLock|0x10009A90"
         ],
         "Classic/1.02": [
-          "AcquireAudioLock|0x10009A90",
-          "UnlockAudioDevice|0x10009AE0"
+          "UnlockAudioDevice|0x10009AE0",
+          "AcquireAudioLock|0x10009A90"
         ],
         "Classic/1.03": [
           "AcquireAudioLock|0x10009A90",
           "UnlockAudioDevice|0x10009AE0"
         ],
         "Classic/1.04c": [
-          "AcquireAudioLock|0x10009A90",
-          "UnlockAudioDevice|0x10009AE0"
+          "UnlockAudioDevice|0x10009AE0",
+          "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.08": [
-          "UnlockAudioDevice|0x10009AE0",
-          "AcquireAudioLock|0x10009A90"
+          "AcquireAudioLock|0x10009A90",
+          "UnlockAudioDevice|0x10009AE0"
         ],
         "LoD/1.09": [
-          "AcquireAudioLock|0x10009A90",
-          "UnlockAudioDevice|0x10009AE0"
+          "UnlockAudioDevice|0x10009AE0",
+          "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.09b": [
-          "UnlockAudioDevice|0x10009AE0",
-          "AcquireAudioLock|0x10009A90"
-        ],
-        "LoD/1.09d": [
-          "UnlockAudioDevice|0x10009AE0",
-          "AcquireAudioLock|0x10009A90"
-        ],
-        "LoD/1.10": [
           "AcquireAudioLock|0x10009A90",
           "UnlockAudioDevice|0x10009AE0"
         ],
-        "LoD/1.11": [
+        "LoD/1.09d": [
+          "AcquireAudioLock|0x10009A90",
+          "UnlockAudioDevice|0x10009AE0"
+        ],
+        "LoD/1.10": [
           "UnlockAudioDevice|0x10009AE0",
           "AcquireAudioLock|0x10009A90"
+        ],
+        "LoD/1.11": [
+          "AcquireAudioLock|0x10009A90",
+          "UnlockAudioDevice|0x10009AE0"
         ],
         "LoD/1.11b": [
           "UnlockAudioDevice|0x10009AE0",
@@ -122097,8 +117719,8 @@ var FUNCTIONS_SmackW32_dll = {
           "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.13c": [
-          "AcquireAudioLock|0x10009A90",
-          "UnlockAudioDevice|0x10009AE0"
+          "UnlockAudioDevice|0x10009AE0",
+          "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.13d": [
           "UnlockAudioDevice|0x10009AE0",
@@ -122113,12 +117735,12 @@ var FUNCTIONS_SmackW32_dll = {
           "UnlockAudioDevice|0x10009AE0"
         ],
         "LoD/1.14c": [
-          "AcquireAudioLock|0x10009A90",
-          "UnlockAudioDevice|0x10009AE0"
+          "UnlockAudioDevice|0x10009AE0",
+          "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.14d": [
-          "AcquireAudioLock|0x10009A90",
-          "UnlockAudioDevice|0x10009AE0"
+          "UnlockAudioDevice|0x10009AE0",
+          "AcquireAudioLock|0x10009A90"
         ]
       },
       "instructions": {
@@ -122809,13 +118431,13 @@ var FUNCTIONS_SmackW32_dll = {
       "callers": {
         "Classic/1.00": [
           "FUN_10009b90|0x10009B90",
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009a60|0x10009A60"
+          "FUN_10009a60|0x10009A60",
+          "FUN_10009b40|0x10009B40"
         ],
         "Classic/1.01": [
-          "FUN_10009b90|0x10009B90",
           "FUN_10009b40|0x10009B40",
-          "FUN_10009a60|0x10009A60"
+          "FUN_10009a60|0x10009A60",
+          "FUN_10009b90|0x10009B90"
         ],
         "Classic/1.02": [
           "FUN_10009b40|0x10009B40",
@@ -122824,8 +118446,8 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "Classic/1.03": [
           "FUN_10009a60|0x10009A60",
-          "FUN_10009b90|0x10009B90",
-          "FUN_10009b40|0x10009B40"
+          "FUN_10009b40|0x10009B40",
+          "FUN_10009b90|0x10009B90"
         ],
         "Classic/1.04c": [
           "FUN_10009a60|0x10009A60",
@@ -122846,24 +118468,24 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10009a60|0x10009A60"
         ],
         "LoD/1.09b": [
-          "FUN_10009b90|0x10009B90",
           "FUN_10009b40|0x10009B40",
+          "FUN_10009b90|0x10009B90",
           "FUN_10009a60|0x10009A60"
         ],
         "LoD/1.09d": [
-          "FUN_10009b90|0x10009B90",
           "FUN_10009a60|0x10009A60",
+          "FUN_10009b90|0x10009B90",
           "FUN_10009b40|0x10009B40"
         ],
         "LoD/1.10": [
-          "FUN_10009b90|0x10009B90",
+          "FUN_10009a60|0x10009A60",
           "FUN_10009b40|0x10009B40",
-          "FUN_10009a60|0x10009A60"
+          "FUN_10009b90|0x10009B90"
         ],
         "LoD/1.11": [
           "FUN_10009b40|0x10009B40",
-          "FUN_10009b90|0x10009B90",
-          "FUN_10009a60|0x10009A60"
+          "FUN_10009a60|0x10009A60",
+          "FUN_10009b90|0x10009B90"
         ],
         "LoD/1.11b": [
           "FUN_10009b90|0x10009B90",
@@ -122876,14 +118498,14 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10009b40|0x10009B40"
         ],
         "LoD/1.13c": [
+          "FUN_10009b90|0x10009B90",
+          "FUN_10009a60|0x10009A60",
+          "FUN_10009b40|0x10009B40"
+        ],
+        "LoD/1.13d": [
           "FUN_10009b40|0x10009B40",
           "FUN_10009b90|0x10009B90",
           "FUN_10009a60|0x10009A60"
-        ],
-        "LoD/1.13d": [
-          "FUN_10009a60|0x10009A60",
-          "FUN_10009b40|0x10009B40",
-          "FUN_10009b90|0x10009B90"
         ],
         "LoD/1.14a": [
           "FUN_10009b40|0x10009B40",
@@ -122891,18 +118513,18 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10009a60|0x10009A60"
         ],
         "LoD/1.14b": [
-          "FUN_10009a60|0x10009A60",
+          "FUN_10009b40|0x10009B40",
           "FUN_10009b90|0x10009B90",
-          "FUN_10009b40|0x10009B40"
+          "FUN_10009a60|0x10009A60"
         ],
         "LoD/1.14c": [
-          "FUN_10009b90|0x10009B90",
+          "FUN_10009b40|0x10009B40",
           "FUN_10009a60|0x10009A60",
-          "FUN_10009b40|0x10009B40"
+          "FUN_10009b90|0x10009B90"
         ],
         "LoD/1.14d": [
-          "FUN_10009b90|0x10009B90",
           "FUN_10009a60|0x10009A60",
+          "FUN_10009b90|0x10009B90",
           "FUN_10009b40|0x10009B40"
         ]
       },
@@ -123725,8 +119347,8 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10009a60|0x10009A60"
         ],
         "Classic/1.01": [
-          "FUN_10009b90|0x10009B90",
-          "FUN_10009a60|0x10009A60"
+          "FUN_10009a60|0x10009A60",
+          "FUN_10009b90|0x10009B90"
         ],
         "Classic/1.02": [
           "FUN_10009b90|0x10009B90",
@@ -123753,16 +119375,16 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10009a60|0x10009A60"
         ],
         "LoD/1.09d": [
-          "FUN_10009b90|0x10009B90",
-          "FUN_10009a60|0x10009A60"
+          "FUN_10009a60|0x10009A60",
+          "FUN_10009b90|0x10009B90"
         ],
         "LoD/1.10": [
-          "FUN_10009b90|0x10009B90",
-          "FUN_10009a60|0x10009A60"
+          "FUN_10009a60|0x10009A60",
+          "FUN_10009b90|0x10009B90"
         ],
         "LoD/1.11": [
-          "FUN_10009b90|0x10009B90",
-          "FUN_10009a60|0x10009A60"
+          "FUN_10009a60|0x10009A60",
+          "FUN_10009b90|0x10009B90"
         ],
         "LoD/1.11b": [
           "FUN_10009b90|0x10009B90",
@@ -123777,24 +119399,24 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_10009a60|0x10009A60"
         ],
         "LoD/1.13d": [
-          "FUN_10009a60|0x10009A60",
-          "FUN_10009b90|0x10009B90"
+          "FUN_10009b90|0x10009B90",
+          "FUN_10009a60|0x10009A60"
         ],
         "LoD/1.14a": [
           "FUN_10009b90|0x10009B90",
           "FUN_10009a60|0x10009A60"
         ],
         "LoD/1.14b": [
+          "FUN_10009b90|0x10009B90",
+          "FUN_10009a60|0x10009A60"
+        ],
+        "LoD/1.14c": [
           "FUN_10009a60|0x10009A60",
           "FUN_10009b90|0x10009B90"
         ],
-        "LoD/1.14c": [
-          "FUN_10009b90|0x10009B90",
-          "FUN_10009a60|0x10009A60"
-        ],
         "LoD/1.14d": [
-          "FUN_10009b90|0x10009B90",
-          "FUN_10009a60|0x10009A60"
+          "FUN_10009a60|0x10009A60",
+          "FUN_10009b90|0x10009B90"
         ]
       },
       "instructions": {
@@ -124634,23 +120256,23 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeDirectSoundAudio|0x10009910",
           "AcquireAudioLock|0x10009A90",
-          "InitializeAudioStream|0x10009770"
+          "InitializeAudioStream|0x10009770",
+          "InitializeDirectSoundAudio|0x10009910"
         ],
         "Classic/1.01": [
-          "InitializeDirectSoundAudio|0x10009910",
           "InitializeAudioStream|0x10009770",
+          "InitializeDirectSoundAudio|0x10009910",
           "AcquireAudioLock|0x10009A90"
         ],
         "Classic/1.02": [
-          "InitializeDirectSoundAudio|0x10009910",
           "AcquireAudioLock|0x10009A90",
-          "InitializeAudioStream|0x10009770"
+          "InitializeAudioStream|0x10009770",
+          "InitializeDirectSoundAudio|0x10009910"
         ],
         "Classic/1.03": [
-          "AcquireAudioLock|0x10009A90",
           "InitializeDirectSoundAudio|0x10009910",
+          "AcquireAudioLock|0x10009A90",
           "InitializeAudioStream|0x10009770"
         ],
         "Classic/1.04c": [
@@ -124660,28 +120282,28 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.07": [
           "InitializeAudioStream|0x10009770",
-          "AcquireAudioLock|0x10009A90",
-          "InitializeDirectSoundAudio|0x10009910"
-        ],
-        "LoD/1.08": [
-          "InitializeDirectSoundAudio|0x10009910",
-          "AcquireAudioLock|0x10009A90",
-          "InitializeAudioStream|0x10009770"
-        ],
-        "LoD/1.09": [
-          "InitializeDirectSoundAudio|0x10009910",
-          "AcquireAudioLock|0x10009A90",
-          "InitializeAudioStream|0x10009770"
-        ],
-        "LoD/1.09b": [
-          "InitializeAudioStream|0x10009770",
           "InitializeDirectSoundAudio|0x10009910",
           "AcquireAudioLock|0x10009A90"
         ],
+        "LoD/1.08": [
+          "AcquireAudioLock|0x10009A90",
+          "InitializeAudioStream|0x10009770",
+          "InitializeDirectSoundAudio|0x10009910"
+        ],
+        "LoD/1.09": [
+          "InitializeAudioStream|0x10009770",
+          "AcquireAudioLock|0x10009A90",
+          "InitializeDirectSoundAudio|0x10009910"
+        ],
+        "LoD/1.09b": [
+          "AcquireAudioLock|0x10009A90",
+          "InitializeDirectSoundAudio|0x10009910",
+          "InitializeAudioStream|0x10009770"
+        ],
         "LoD/1.09d": [
           "InitializeDirectSoundAudio|0x10009910",
-          "AcquireAudioLock|0x10009A90",
-          "InitializeAudioStream|0x10009770"
+          "InitializeAudioStream|0x10009770",
+          "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.10": [
           "InitializeAudioStream|0x10009770",
@@ -124689,8 +120311,8 @@ var FUNCTIONS_SmackW32_dll = {
           "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.11": [
-          "InitializeAudioStream|0x10009770",
           "InitializeDirectSoundAudio|0x10009910",
+          "InitializeAudioStream|0x10009770",
           "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.11b": [
@@ -124699,14 +120321,14 @@ var FUNCTIONS_SmackW32_dll = {
           "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.12a": [
-          "AcquireAudioLock|0x10009A90",
           "InitializeAudioStream|0x10009770",
+          "AcquireAudioLock|0x10009A90",
           "InitializeDirectSoundAudio|0x10009910"
         ],
         "LoD/1.13c": [
-          "AcquireAudioLock|0x10009A90",
+          "InitializeDirectSoundAudio|0x10009910",
           "InitializeAudioStream|0x10009770",
-          "InitializeDirectSoundAudio|0x10009910"
+          "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.13d": [
           "InitializeDirectSoundAudio|0x10009910",
@@ -124714,24 +120336,24 @@ var FUNCTIONS_SmackW32_dll = {
           "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.14a": [
-          "InitializeAudioStream|0x10009770",
-          "AcquireAudioLock|0x10009A90",
-          "InitializeDirectSoundAudio|0x10009910"
-        ],
-        "LoD/1.14b": [
           "InitializeDirectSoundAudio|0x10009910",
           "InitializeAudioStream|0x10009770",
           "AcquireAudioLock|0x10009A90"
         ],
-        "LoD/1.14c": [
+        "LoD/1.14b": [
           "AcquireAudioLock|0x10009A90",
           "InitializeDirectSoundAudio|0x10009910",
           "InitializeAudioStream|0x10009770"
         ],
-        "LoD/1.14d": [
+        "LoD/1.14c": [
           "AcquireAudioLock|0x10009A90",
           "InitializeAudioStream|0x10009770",
           "InitializeDirectSoundAudio|0x10009910"
+        ],
+        "LoD/1.14d": [
+          "InitializeAudioStream|0x10009770",
+          "InitializeDirectSoundAudio|0x10009910",
+          "AcquireAudioLock|0x10009A90"
         ]
       },
       "instructions": {
@@ -125487,53 +121109,53 @@ var FUNCTIONS_SmackW32_dll = {
           "UnlockAudioDevice|0x10009AE0"
         ],
         "Classic/1.01": [
+          "timeKillEvent|0x2B",
           "UnlockAudioDevice|0x10009AE0",
-          "AcquireAudioLock|0x10009A90",
-          "timeKillEvent|0x2B"
+          "AcquireAudioLock|0x10009A90"
         ],
         "Classic/1.02": [
+          "UnlockAudioDevice|0x10009AE0",
+          "AcquireAudioLock|0x10009A90",
+          "timeKillEvent|0x2B"
+        ],
+        "Classic/1.03": [
           "timeKillEvent|0x2B",
           "AcquireAudioLock|0x10009A90",
           "UnlockAudioDevice|0x10009AE0"
         ],
-        "Classic/1.03": [
+        "Classic/1.04c": [
+          "UnlockAudioDevice|0x10009AE0",
+          "AcquireAudioLock|0x10009A90",
+          "timeKillEvent|0x2B"
+        ],
+        "LoD/1.08": [
           "AcquireAudioLock|0x10009A90",
           "UnlockAudioDevice|0x10009AE0",
           "timeKillEvent|0x2B"
         ],
-        "Classic/1.04c": [
-          "timeKillEvent|0x2B",
-          "AcquireAudioLock|0x10009A90",
-          "UnlockAudioDevice|0x10009AE0"
-        ],
-        "LoD/1.08": [
-          "timeKillEvent|0x2B",
-          "UnlockAudioDevice|0x10009AE0",
-          "AcquireAudioLock|0x10009A90"
-        ],
         "LoD/1.09": [
-          "AcquireAudioLock|0x10009A90",
+          "UnlockAudioDevice|0x10009AE0",
           "timeKillEvent|0x2B",
-          "UnlockAudioDevice|0x10009AE0"
+          "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.09b": [
-          "UnlockAudioDevice|0x10009AE0",
-          "timeKillEvent|0x2B",
-          "AcquireAudioLock|0x10009A90"
-        ],
-        "LoD/1.09d": [
-          "timeKillEvent|0x2B",
-          "UnlockAudioDevice|0x10009AE0",
-          "AcquireAudioLock|0x10009A90"
-        ],
-        "LoD/1.10": [
           "timeKillEvent|0x2B",
           "AcquireAudioLock|0x10009A90",
           "UnlockAudioDevice|0x10009AE0"
         ],
-        "LoD/1.11": [
-          "UnlockAudioDevice|0x10009AE0",
+        "LoD/1.09d": [
           "AcquireAudioLock|0x10009A90",
+          "timeKillEvent|0x2B",
+          "UnlockAudioDevice|0x10009AE0"
+        ],
+        "LoD/1.10": [
+          "UnlockAudioDevice|0x10009AE0",
+          "timeKillEvent|0x2B",
+          "AcquireAudioLock|0x10009A90"
+        ],
+        "LoD/1.11": [
+          "AcquireAudioLock|0x10009A90",
+          "UnlockAudioDevice|0x10009AE0",
           "timeKillEvent|0x2B"
         ],
         "LoD/1.11b": [
@@ -125548,17 +121170,17 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.13c": [
           "timeKillEvent|0x2B",
-          "AcquireAudioLock|0x10009A90",
-          "UnlockAudioDevice|0x10009AE0"
-        ],
-        "LoD/1.13d": [
-          "timeKillEvent|0x2B",
           "UnlockAudioDevice|0x10009AE0",
           "AcquireAudioLock|0x10009A90"
         ],
-        "LoD/1.14a": [
+        "LoD/1.13d": [
           "UnlockAudioDevice|0x10009AE0",
           "timeKillEvent|0x2B",
+          "AcquireAudioLock|0x10009A90"
+        ],
+        "LoD/1.14a": [
+          "timeKillEvent|0x2B",
+          "UnlockAudioDevice|0x10009AE0",
           "AcquireAudioLock|0x10009A90"
         ],
         "LoD/1.14b": [
@@ -125567,14 +121189,14 @@ var FUNCTIONS_SmackW32_dll = {
           "UnlockAudioDevice|0x10009AE0"
         ],
         "LoD/1.14c": [
+          "UnlockAudioDevice|0x10009AE0",
           "AcquireAudioLock|0x10009A90",
-          "timeKillEvent|0x2B",
-          "UnlockAudioDevice|0x10009AE0"
+          "timeKillEvent|0x2B"
         ],
         "LoD/1.14d": [
-          "AcquireAudioLock|0x10009A90",
+          "timeKillEvent|0x2B",
           "UnlockAudioDevice|0x10009AE0",
-          "timeKillEvent|0x2B"
+          "AcquireAudioLock|0x10009A90"
         ]
       },
       "instructions": {
@@ -127557,16 +123179,16 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlit@44|0x1000AF80"
         ],
         "Classic/1.01": [
-          "_SmackBlit@44|0x1000AF80",
-          "_SmackBufferToBuffer@32|0x1000B4A0"
+          "_SmackBufferToBuffer@32|0x1000B4A0",
+          "_SmackBlit@44|0x1000AF80"
         ],
         "Classic/1.02": [
           "_SmackBufferToBuffer@32|0x1000B4A0",
           "_SmackBlit@44|0x1000AF80"
         ],
         "Classic/1.03": [
-          "_SmackBlit@44|0x1000AF80",
-          "_SmackBufferToBuffer@32|0x1000B4A0"
+          "_SmackBufferToBuffer@32|0x1000B4A0",
+          "_SmackBlit@44|0x1000AF80"
         ],
         "Classic/1.04c": [
           "_SmackBufferToBuffer@32|0x1000B4A0",
@@ -127581,36 +123203,36 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferToBuffer@32|0x1000B4A0"
         ],
         "LoD/1.09": [
-          "_SmackBufferToBuffer@32|0x1000B4A0",
-          "_SmackBlit@44|0x1000AF80"
+          "_SmackBlit@44|0x1000AF80",
+          "_SmackBufferToBuffer@32|0x1000B4A0"
         ],
         "LoD/1.09b": [
           "_SmackBlit@44|0x1000AF80",
           "_SmackBufferToBuffer@32|0x1000B4A0"
         ],
         "LoD/1.09d": [
-          "_SmackBufferToBuffer@32|0x1000B4A0",
-          "_SmackBlit@44|0x1000AF80"
-        ],
-        "LoD/1.10": [
-          "_SmackBufferToBuffer@32|0x1000B4A0",
-          "_SmackBlit@44|0x1000AF80"
-        ],
-        "LoD/1.11": [
           "_SmackBlit@44|0x1000AF80",
           "_SmackBufferToBuffer@32|0x1000B4A0"
         ],
-        "LoD/1.11b": [
+        "LoD/1.10": [
+          "_SmackBlit@44|0x1000AF80",
+          "_SmackBufferToBuffer@32|0x1000B4A0"
+        ],
+        "LoD/1.11": [
           "_SmackBufferToBuffer@32|0x1000B4A0",
           "_SmackBlit@44|0x1000AF80"
+        ],
+        "LoD/1.11b": [
+          "_SmackBlit@44|0x1000AF80",
+          "_SmackBufferToBuffer@32|0x1000B4A0"
         ],
         "LoD/1.12a": [
           "_SmackBufferToBuffer@32|0x1000B4A0",
           "_SmackBlit@44|0x1000AF80"
         ],
         "LoD/1.13c": [
-          "_SmackBlit@44|0x1000AF80",
-          "_SmackBufferToBuffer@32|0x1000B4A0"
+          "_SmackBufferToBuffer@32|0x1000B4A0",
+          "_SmackBlit@44|0x1000AF80"
         ],
         "LoD/1.13d": [
           "_SmackBlit@44|0x1000AF80",
@@ -127621,8 +123243,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferToBuffer@32|0x1000B4A0"
         ],
         "LoD/1.14b": [
-          "_SmackBufferToBuffer@32|0x1000B4A0",
-          "_SmackBlit@44|0x1000AF80"
+          "_SmackBlit@44|0x1000AF80",
+          "_SmackBufferToBuffer@32|0x1000B4A0"
         ],
         "LoD/1.14c": [
           "_SmackBlit@44|0x1000AF80",
@@ -134968,24 +130590,24 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "_SmackBlitTrans@48|0x1000B230",
-          "_SmackBufferToBufferTrans@36|0x1000B5A0"
+          "_SmackBufferToBufferTrans@36|0x1000B5A0",
+          "_SmackBlitTrans@48|0x1000B230"
         ],
         "Classic/1.01": [
           "_SmackBufferToBufferTrans@36|0x1000B5A0",
           "_SmackBlitTrans@48|0x1000B230"
         ],
         "Classic/1.02": [
-          "_SmackBlitTrans@48|0x1000B230",
-          "_SmackBufferToBufferTrans@36|0x1000B5A0"
+          "_SmackBufferToBufferTrans@36|0x1000B5A0",
+          "_SmackBlitTrans@48|0x1000B230"
         ],
         "Classic/1.03": [
           "_SmackBufferToBufferTrans@36|0x1000B5A0",
           "_SmackBlitTrans@48|0x1000B230"
         ],
         "Classic/1.04c": [
-          "_SmackBufferToBufferTrans@36|0x1000B5A0",
-          "_SmackBlitTrans@48|0x1000B230"
+          "_SmackBlitTrans@48|0x1000B230",
+          "_SmackBufferToBufferTrans@36|0x1000B5A0"
         ],
         "LoD/1.07": [
           "_SmackBlitTrans@48|0x1000B230",
@@ -135004,12 +130626,12 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitTrans@48|0x1000B230"
         ],
         "LoD/1.09d": [
-          "_SmackBlitTrans@48|0x1000B230",
-          "_SmackBufferToBufferTrans@36|0x1000B5A0"
-        ],
-        "LoD/1.10": [
           "_SmackBufferToBufferTrans@36|0x1000B5A0",
           "_SmackBlitTrans@48|0x1000B230"
+        ],
+        "LoD/1.10": [
+          "_SmackBlitTrans@48|0x1000B230",
+          "_SmackBufferToBufferTrans@36|0x1000B5A0"
         ],
         "LoD/1.11": [
           "_SmackBlitTrans@48|0x1000B230",
@@ -135020,20 +130642,20 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitTrans@48|0x1000B230"
         ],
         "LoD/1.12a": [
-          "_SmackBufferToBufferTrans@36|0x1000B5A0",
-          "_SmackBlitTrans@48|0x1000B230"
+          "_SmackBlitTrans@48|0x1000B230",
+          "_SmackBufferToBufferTrans@36|0x1000B5A0"
         ],
         "LoD/1.13c": [
           "_SmackBufferToBufferTrans@36|0x1000B5A0",
           "_SmackBlitTrans@48|0x1000B230"
         ],
         "LoD/1.13d": [
-          "_SmackBufferToBufferTrans@36|0x1000B5A0",
-          "_SmackBlitTrans@48|0x1000B230"
-        ],
-        "LoD/1.14a": [
           "_SmackBlitTrans@48|0x1000B230",
           "_SmackBufferToBufferTrans@36|0x1000B5A0"
+        ],
+        "LoD/1.14a": [
+          "_SmackBufferToBufferTrans@36|0x1000B5A0",
+          "_SmackBlitTrans@48|0x1000B230"
         ],
         "LoD/1.14b": [
           "_SmackBufferToBufferTrans@36|0x1000B5A0",
@@ -135044,8 +130666,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitTrans@48|0x1000B230"
         ],
         "LoD/1.14d": [
-          "_SmackBlitTrans@48|0x1000B230",
-          "_SmackBufferToBufferTrans@36|0x1000B5A0"
+          "_SmackBufferToBufferTrans@36|0x1000B5A0",
+          "_SmackBlitTrans@48|0x1000B230"
         ]
       },
       "instructions": {
@@ -135973,8 +131595,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitMask@52|0x1000B310"
         ],
         "Classic/1.01": [
-          "_SmackBufferToBufferMerge@40|0x1000B7C0",
-          "_SmackBlitMask@52|0x1000B310"
+          "_SmackBlitMask@52|0x1000B310",
+          "_SmackBufferToBufferMerge@40|0x1000B7C0"
         ],
         "Classic/1.02": [
           "_SmackBufferToBufferMerge@40|0x1000B7C0",
@@ -135997,44 +131619,44 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferToBufferMerge@40|0x1000B7C0"
         ],
         "LoD/1.09": [
-          "_SmackBlitMask@52|0x1000B310",
-          "_SmackBufferToBufferMerge@40|0x1000B7C0"
+          "_SmackBufferToBufferMerge@40|0x1000B7C0",
+          "_SmackBlitMask@52|0x1000B310"
         ],
         "LoD/1.09b": [
           "_SmackBufferToBufferMerge@40|0x1000B7C0",
           "_SmackBlitMask@52|0x1000B310"
         ],
         "LoD/1.09d": [
-          "_SmackBufferToBufferMerge@40|0x1000B7C0",
-          "_SmackBlitMask@52|0x1000B310"
-        ],
-        "LoD/1.10": [
-          "_SmackBufferToBufferMerge@40|0x1000B7C0",
-          "_SmackBlitMask@52|0x1000B310"
-        ],
-        "LoD/1.11": [
           "_SmackBlitMask@52|0x1000B310",
           "_SmackBufferToBufferMerge@40|0x1000B7C0"
+        ],
+        "LoD/1.10": [
+          "_SmackBlitMask@52|0x1000B310",
+          "_SmackBufferToBufferMerge@40|0x1000B7C0"
+        ],
+        "LoD/1.11": [
+          "_SmackBufferToBufferMerge@40|0x1000B7C0",
+          "_SmackBlitMask@52|0x1000B310"
         ],
         "LoD/1.11b": [
           "_SmackBlitMask@52|0x1000B310",
           "_SmackBufferToBufferMerge@40|0x1000B7C0"
         ],
         "LoD/1.12a": [
-          "_SmackBlitMask@52|0x1000B310",
-          "_SmackBufferToBufferMerge@40|0x1000B7C0"
+          "_SmackBufferToBufferMerge@40|0x1000B7C0",
+          "_SmackBlitMask@52|0x1000B310"
         ],
         "LoD/1.13c": [
-          "_SmackBlitMask@52|0x1000B310",
-          "_SmackBufferToBufferMerge@40|0x1000B7C0"
+          "_SmackBufferToBufferMerge@40|0x1000B7C0",
+          "_SmackBlitMask@52|0x1000B310"
         ],
         "LoD/1.13d": [
           "_SmackBlitMask@52|0x1000B310",
           "_SmackBufferToBufferMerge@40|0x1000B7C0"
         ],
         "LoD/1.14a": [
-          "_SmackBufferToBufferMerge@40|0x1000B7C0",
-          "_SmackBlitMask@52|0x1000B310"
+          "_SmackBlitMask@52|0x1000B310",
+          "_SmackBufferToBufferMerge@40|0x1000B7C0"
         ],
         "LoD/1.14b": [
           "_SmackBlitMask@52|0x1000B310",
@@ -136045,8 +131667,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitMask@52|0x1000B310"
         ],
         "LoD/1.14d": [
-          "_SmackBlitMask@52|0x1000B310",
-          "_SmackBufferToBufferMerge@40|0x1000B7C0"
+          "_SmackBufferToBufferMerge@40|0x1000B7C0",
+          "_SmackBlitMask@52|0x1000B310"
         ]
       },
       "instructions": {
@@ -136990,12 +132612,12 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "_SmackBufferToBufferMask@40|0x1000B6A0",
-          "_SmackBlitMask@52|0x1000B2A0"
+          "_SmackBlitMask@52|0x1000B2A0",
+          "_SmackBufferToBufferMask@40|0x1000B6A0"
         ],
         "Classic/1.01": [
-          "_SmackBufferToBufferMask@40|0x1000B6A0",
-          "_SmackBlitMask@52|0x1000B2A0"
+          "_SmackBlitMask@52|0x1000B2A0",
+          "_SmackBufferToBufferMask@40|0x1000B6A0"
         ],
         "Classic/1.02": [
           "_SmackBufferToBufferMask@40|0x1000B6A0",
@@ -137006,20 +132628,20 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitMask@52|0x1000B2A0"
         ],
         "Classic/1.04c": [
-          "_SmackBlitMask@52|0x1000B2A0",
-          "_SmackBufferToBufferMask@40|0x1000B6A0"
-        ],
-        "LoD/1.07": [
           "_SmackBufferToBufferMask@40|0x1000B6A0",
           "_SmackBlitMask@52|0x1000B2A0"
+        ],
+        "LoD/1.07": [
+          "_SmackBlitMask@52|0x1000B2A0",
+          "_SmackBufferToBufferMask@40|0x1000B6A0"
         ],
         "LoD/1.08": [
           "_SmackBlitMask@52|0x1000B2A0",
           "_SmackBufferToBufferMask@40|0x1000B6A0"
         ],
         "LoD/1.09": [
-          "_SmackBlitMask@52|0x1000B2A0",
-          "_SmackBufferToBufferMask@40|0x1000B6A0"
+          "_SmackBufferToBufferMask@40|0x1000B6A0",
+          "_SmackBlitMask@52|0x1000B2A0"
         ],
         "LoD/1.09b": [
           "_SmackBufferToBufferMask@40|0x1000B6A0",
@@ -137030,12 +132652,12 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitMask@52|0x1000B2A0"
         ],
         "LoD/1.10": [
-          "_SmackBlitMask@52|0x1000B2A0",
-          "_SmackBufferToBufferMask@40|0x1000B6A0"
+          "_SmackBufferToBufferMask@40|0x1000B6A0",
+          "_SmackBlitMask@52|0x1000B2A0"
         ],
         "LoD/1.11": [
-          "_SmackBlitMask@52|0x1000B2A0",
-          "_SmackBufferToBufferMask@40|0x1000B6A0"
+          "_SmackBufferToBufferMask@40|0x1000B6A0",
+          "_SmackBlitMask@52|0x1000B2A0"
         ],
         "LoD/1.11b": [
           "_SmackBlitMask@52|0x1000B2A0",
@@ -137054,20 +132676,20 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBufferToBufferMask@40|0x1000B6A0"
         ],
         "LoD/1.14a": [
-          "_SmackBlitMask@52|0x1000B2A0",
-          "_SmackBufferToBufferMask@40|0x1000B6A0"
-        ],
-        "LoD/1.14b": [
           "_SmackBufferToBufferMask@40|0x1000B6A0",
           "_SmackBlitMask@52|0x1000B2A0"
         ],
-        "LoD/1.14c": [
+        "LoD/1.14b": [
           "_SmackBlitMask@52|0x1000B2A0",
           "_SmackBufferToBufferMask@40|0x1000B6A0"
         ],
+        "LoD/1.14c": [
+          "_SmackBufferToBufferMask@40|0x1000B6A0",
+          "_SmackBlitMask@52|0x1000B2A0"
+        ],
         "LoD/1.14d": [
-          "_SmackBlitMask@52|0x1000B2A0",
-          "_SmackBufferToBufferMask@40|0x1000B6A0"
+          "_SmackBufferToBufferMask@40|0x1000B6A0",
+          "_SmackBlitMask@52|0x1000B2A0"
         ]
       },
       "instructions": {
@@ -139671,1234 +135293,6 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_7": {
-      "addresses": {
-        "Classic/1.00": "0x1000A860",
-        "Classic/1.01": "0x1000A860",
-        "Classic/1.02": "0x1000A860",
-        "Classic/1.03": "0x1000A860",
-        "Classic/1.04c": "0x1000A860",
-        "LoD/1.07": "0x1000A860",
-        "LoD/1.08": "0x1000A860",
-        "LoD/1.09": "0x1000A860",
-        "LoD/1.09b": "0x1000A860",
-        "LoD/1.09d": "0x1000A860",
-        "LoD/1.10": "0x1000A860",
-        "LoD/1.11": "0x1000A860",
-        "LoD/1.11b": "0x1000A860",
-        "LoD/1.12a": "0x1000A860",
-        "LoD/1.13c": "0x1000A860",
-        "LoD/1.13d": "0x1000A860",
-        "LoD/1.14a": "0x1000A860",
-        "LoD/1.14b": "0x1000A860",
-        "LoD/1.14c": "0x1000A860",
-        "LoD/1.14d": "0x1000A860",
-        "LoD/PD2": "0x02E2A860"
-      },
-      "rvas": {
-        "Classic/1.00": "0xA860",
-        "Classic/1.01": "0xA860",
-        "Classic/1.02": "0xA860",
-        "Classic/1.03": "0xA860",
-        "Classic/1.04c": "0xA860",
-        "LoD/1.07": "0xA860",
-        "LoD/1.08": "0xA860",
-        "LoD/1.09": "0xA860",
-        "LoD/1.09b": "0xA860",
-        "LoD/1.09d": "0xA860",
-        "LoD/1.10": "0xA860",
-        "LoD/1.11": "0xA860",
-        "LoD/1.11b": "0xA860",
-        "LoD/1.12a": "0xA860",
-        "LoD/1.13c": "0xA860",
-        "LoD/1.13d": "0xA860",
-        "LoD/1.14a": "0xA860",
-        "LoD/1.14b": "0xA860",
-        "LoD/1.14c": "0xA860",
-        "LoD/1.14d": "0xA860",
-        "LoD/PD2": "0xA860"
-      },
-      "sizes": {
-        "Classic/1.00": 198,
-        "Classic/1.01": 198,
-        "Classic/1.02": 198,
-        "Classic/1.03": 198,
-        "Classic/1.04c": 198,
-        "LoD/1.07": 198,
-        "LoD/1.08": 198,
-        "LoD/1.09": 198,
-        "LoD/1.09b": 198,
-        "LoD/1.09d": 198,
-        "LoD/1.10": 198,
-        "LoD/1.11": 198,
-        "LoD/1.11b": 198,
-        "LoD/1.12a": 198,
-        "LoD/1.13c": 198,
-        "LoD/1.13d": 198,
-        "LoD/1.14a": 198,
-        "LoD/1.14b": 198,
-        "LoD/1.14c": 198,
-        "LoD/1.14d": 198,
-        "LoD/PD2": 198
-      },
-      "name": "_SmackBlitOpen@4",
-      "signature": "uint * _SmackBlitOpen@4(uint param_1)",
-      "calling_convention": "__stdcall",
-      "return_type": "uint *",
-      "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:7",
-      "indexes": {
-        "EXP": "7",
-        "STR": null,
-        "NOP": "c69f81e6fb419f066790b37af7d75d08451573f3e62d61e89319993b4e8f32cb",
-        "CAL": null,
-        "API": "a9a858c71208a7ec98494372be7b0971",
-        "APS": null,
-        "CON": "68eba41dcf1a6687b9633d081a561d33",
-        "MNE": "bb46e06b55044304d678f27871e2cb58",
-        "CFG": "ea4eb138ebe1bc294355544c2964119e",
-        "PRO": "dc71de6ec98348b36fbdf24cd00d9d23"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "Classic/1.01": [
-          "radmalloc|0x10001000",
-          "GetBlitScaleIndex|0x1000A930"
-        ],
-        "Classic/1.02": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "Classic/1.03": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "Classic/1.04c": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.07": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.08": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.09": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.09b": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.09d": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.10": [
-          "radmalloc|0x10001000",
-          "GetBlitScaleIndex|0x1000A930"
-        ],
-        "LoD/1.11": [
-          "radmalloc|0x10001000",
-          "GetBlitScaleIndex|0x1000A930"
-        ],
-        "LoD/1.11b": [
-          "radmalloc|0x10001000",
-          "GetBlitScaleIndex|0x1000A930"
-        ],
-        "LoD/1.12a": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.13c": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.13d": [
-          "radmalloc|0x10001000",
-          "GetBlitScaleIndex|0x1000A930"
-        ],
-        "LoD/1.14a": [
-          "radmalloc|0x10001000",
-          "GetBlitScaleIndex|0x1000A930"
-        ],
-        "LoD/1.14b": [
-          "radmalloc|0x10001000",
-          "GetBlitScaleIndex|0x1000A930"
-        ],
-        "LoD/1.14c": [
-          "radmalloc|0x10001000",
-          "GetBlitScaleIndex|0x1000A930"
-        ],
-        "LoD/1.14d": [
-          "GetBlitScaleIndex|0x1000A930",
-          "radmalloc|0x10001000"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "Classic/1.01": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "Classic/1.02": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "Classic/1.03": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "Classic/1.04c": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.07": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.08": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.09": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.09b": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.09d": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.10": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.11": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.11b": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.12a": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.13c": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.13d": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.14a": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.14b": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.14c": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ],
-        "LoD/1.14d": [
-          "_SmackBufferOpen@24|0x100012F0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "Classic/1.01": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "Classic/1.02": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "Classic/1.03": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "Classic/1.04c": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.07": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.08": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.09": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.09b": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.09d": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.10": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.11": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.11b": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.12a": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.13c": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.13d": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.14a": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.14b": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.14c": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ],
-        "LoD/1.14d": [
-          "0xA860|PUSH|EBX",
-          "0xA861|MOV|EAX, 0x100",
-          "0xA866|PUSH|ESI",
-          "0xA867|XOR|EBX, EBX",
-          "0xA869|MOV|ESI, dword ptr [ESP + 0xc]",
-          "0xA86D|PUSH|EDI",
-          "0xA86E|TEST|ESI, 0xc0000000",
-          "0xA874|PUSH|EBP",
-          "0xA875|JZ|0x1000a881",
-          "0xA877|MOV|EBX, 0x1",
-          "0xA87C|MOV|EAX, 0x300",
-          "0xA881|TEST|ESI, 0x4",
-          "0xA887|JZ|0x1000a899",
-          "0xA889|OR|EBX, 0x2",
-          "0xA88C|CMP|EBX, 0x1"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 69,
-        "Classic/1.01": 69,
-        "Classic/1.02": 69,
-        "Classic/1.03": 69,
-        "Classic/1.04c": 69,
-        "LoD/1.07": 69,
-        "LoD/1.08": 69,
-        "LoD/1.09": 69,
-        "LoD/1.09b": 69,
-        "LoD/1.09d": 69,
-        "LoD/1.10": 69,
-        "LoD/1.11": 69,
-        "LoD/1.11b": 69,
-        "LoD/1.12a": 69,
-        "LoD/1.13c": 69,
-        "LoD/1.13d": 69,
-        "LoD/1.14a": 69,
-        "LoD/1.14b": 69,
-        "LoD/1.14c": 69,
-        "LoD/1.14d": 69
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8,
-        "Classic/1.01": 8,
-        "Classic/1.02": 8,
-        "Classic/1.03": 8,
-        "Classic/1.04c": 8,
-        "LoD/1.07": 8,
-        "LoD/1.08": 8,
-        "LoD/1.09": 8,
-        "LoD/1.09b": 8,
-        "LoD/1.09d": 8,
-        "LoD/1.10": 8,
-        "LoD/1.11": 8,
-        "LoD/1.11b": 8,
-        "LoD/1.12a": 8,
-        "LoD/1.13c": 8,
-        "LoD/1.13d": 8,
-        "LoD/1.14a": 8,
-        "LoD/1.14b": 8,
-        "LoD/1.14c": 8,
-        "LoD/1.14d": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0,
-        "Classic/1.01": 0,
-        "Classic/1.02": 0,
-        "Classic/1.03": 0,
-        "Classic/1.04c": 0,
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0,
-        "LoD/1.14a": 0,
-        "LoD/1.14b": 0,
-        "LoD/1.14c": 0,
-        "LoD/1.14d": 0,
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "bb46e06b55044304d678f27871e2cb58",
-        "Classic/1.01": "bb46e06b55044304d678f27871e2cb58",
-        "Classic/1.02": "bb46e06b55044304d678f27871e2cb58",
-        "Classic/1.03": "bb46e06b55044304d678f27871e2cb58",
-        "Classic/1.04c": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.07": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.08": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.09": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.09b": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.09d": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.10": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.11": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.11b": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.12a": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.13c": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.13d": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.14a": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.14b": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.14c": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/1.14d": "bb46e06b55044304d678f27871e2cb58",
-        "LoD/PD2": "bb46e06b55044304d678f27871e2cb58"
-      },
-      "constants": {
-        "Classic/1.00": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "Classic/1.01": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "Classic/1.02": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "Classic/1.03": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "Classic/1.04c": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.07": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.08": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.09": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.09b": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.09d": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.10": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.11": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.11b": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.12a": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.13c": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.13d": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.14a": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.14b": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.14c": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ],
-        "LoD/1.14d": [
-          "0xA861||0x100",
-          "0xA87C||0x300",
-          "0xA89D||0x300",
-          "0xA8D6||0x100",
-          "0xA8DF||0x200",
-          "0xA8E9||0x100",
-          "0xA8F1||0x100",
-          "0xA8FA||0x200",
-          "0xA902||0x300"
-        ]
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "_radmalloc@4"
-        ],
-        "Classic/1.01": [
-          "_radmalloc@4"
-        ],
-        "Classic/1.02": [
-          "_radmalloc@4"
-        ],
-        "Classic/1.03": [
-          "_radmalloc@4"
-        ],
-        "Classic/1.04c": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.07": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.08": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.09": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.09b": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.09d": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.10": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.11": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.11b": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.12a": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.13c": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.13d": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.14a": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.14b": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.14c": [
-          "_radmalloc@4"
-        ],
-        "LoD/1.14d": [
-          "_radmalloc@4"
-        ],
-        "LoD/PD2": [
-          "_radmalloc@4"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 2,
-        "Classic/1.01": 2,
-        "Classic/1.02": 2,
-        "Classic/1.03": 2,
-        "Classic/1.04c": 2,
-        "LoD/1.07": 2,
-        "LoD/1.08": 2,
-        "LoD/1.09": 2,
-        "LoD/1.09b": 2,
-        "LoD/1.09d": 2,
-        "LoD/1.10": 2,
-        "LoD/1.11": 2,
-        "LoD/1.11b": 2,
-        "LoD/1.12a": 2,
-        "LoD/1.13c": 2,
-        "LoD/1.13d": 2,
-        "LoD/1.14a": 2,
-        "LoD/1.14b": 2,
-        "LoD/1.14c": 2,
-        "LoD/1.14d": 2
-      },
-      "caller_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "constant_counts": {
-        "Classic/1.00": 9,
-        "Classic/1.01": 9,
-        "Classic/1.02": 9,
-        "Classic/1.03": 9,
-        "Classic/1.04c": 9,
-        "LoD/1.07": 9,
-        "LoD/1.08": 9,
-        "LoD/1.09": 9,
-        "LoD/1.09b": 9,
-        "LoD/1.09d": 9,
-        "LoD/1.10": 9,
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9,
-        "LoD/1.14a": 9,
-        "LoD/1.14b": 9,
-        "LoD/1.14c": 9,
-        "LoD/1.14d": 9
-      },
-      "api_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1,
-        "LoD/PD2": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "Classic/1.01": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "Classic/1.02": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "Classic/1.03": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "Classic/1.04c": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.07": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.08": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.09": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.09b": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.09d": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.10": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.11": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.11b": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.12a": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.13c": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.13d": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14a": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14b": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14c": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14d": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "export",
-        "Classic/1.01": "export",
-        "Classic/1.02": "export",
-        "Classic/1.03": "export",
-        "Classic/1.04c": "export",
-        "LoD/1.07": "export",
-        "LoD/1.08": "export",
-        "LoD/1.09": "export",
-        "LoD/1.09b": "export",
-        "LoD/1.09d": "export",
-        "LoD/1.10": "export",
-        "LoD/1.11": "export",
-        "LoD/1.11b": "export",
-        "LoD/1.12a": "export",
-        "LoD/1.13c": "export",
-        "LoD/1.13d": "export",
-        "LoD/1.14a": "export",
-        "LoD/1.14b": "export",
-        "LoD/1.14c": "export",
-        "LoD/1.14d": "export"
-      }
-    },
     "SmackW32_NOP_3d86f8d30d1b": {
       "addresses": {
         "Classic/1.00": "0x1000A930",
@@ -141003,20 +135397,20 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "Classic/1.03": [
+          "_SmackBlitSetFlags@8|0x1000AD80",
+          "_SmackBlitOpen@4|0x1000A860"
+        ],
+        "Classic/1.04c": [
           "_SmackBlitOpen@4|0x1000A860",
           "_SmackBlitSetFlags@8|0x1000AD80"
         ],
-        "Classic/1.04c": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitOpen@4|0x1000A860"
-        ],
         "LoD/1.07": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitOpen@4|0x1000A860"
+          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.08": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitOpen@4|0x1000A860"
+          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.09": [
           "_SmackBlitSetFlags@8|0x1000AD80",
@@ -141027,36 +135421,36 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.09d": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitOpen@4|0x1000A860"
+          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.10": [
-          "_SmackBlitOpen@4|0x1000A860",
-          "_SmackBlitSetFlags@8|0x1000AD80"
+          "_SmackBlitSetFlags@8|0x1000AD80",
+          "_SmackBlitOpen@4|0x1000A860"
         ],
         "LoD/1.11": [
-          "_SmackBlitOpen@4|0x1000A860",
-          "_SmackBlitSetFlags@8|0x1000AD80"
+          "_SmackBlitSetFlags@8|0x1000AD80",
+          "_SmackBlitOpen@4|0x1000A860"
         ],
         "LoD/1.11b": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitOpen@4|0x1000A860"
+          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.12a": [
-          "_SmackBlitOpen@4|0x1000A860",
-          "_SmackBlitSetFlags@8|0x1000AD80"
+          "_SmackBlitSetFlags@8|0x1000AD80",
+          "_SmackBlitOpen@4|0x1000A860"
         ],
         "LoD/1.13c": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitOpen@4|0x1000A860"
-        ],
-        "LoD/1.13d": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitOpen@4|0x1000A860"
-        ],
-        "LoD/1.14a": [
           "_SmackBlitOpen@4|0x1000A860",
           "_SmackBlitSetFlags@8|0x1000AD80"
+        ],
+        "LoD/1.13d": [
+          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBlitSetFlags@8|0x1000AD80"
+        ],
+        "LoD/1.14a": [
+          "_SmackBlitSetFlags@8|0x1000AD80",
+          "_SmackBlitOpen@4|0x1000A860"
         ],
         "LoD/1.14b": [
           "_SmackBlitSetFlags@8|0x1000AD80",
@@ -141067,8 +135461,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitOpen@4|0x1000A860"
         ],
         "LoD/1.14d": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitOpen@4|0x1000A860"
+          "_SmackBlitOpen@4|0x1000A860",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ]
       },
       "instructions": {
@@ -143675,7 +138069,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_9": {
+    "SmackW32_NOP_a54f850e63e5": {
       "addresses": {
         "Classic/1.00": "0x1000AB90",
         "Classic/1.01": "0x1000AB90",
@@ -143750,8 +138144,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:9",
+      "method": "NOP",
+      "index": "NOP:a54f850e63e5069e5ae8fa3ce4b152766578df7dc9a28106b793dc87eb5b84a4",
       "indexes": {
         "EXP": "9",
         "STR": null,
@@ -144888,164 +139282,164 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "BlendPixelBuffers|0x1000A7F2",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "_SmackSoundCheck@0|0x10007710",
           "QuantizePaletteToRgb|0x1000A980",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "BlendPixelBuffers|0x1000A7F2",
+          "_SmackSoundCheck@0|0x10007710",
           "ConvertRgb24ToRgb565|0x1001296D",
           "ConvertRgb24ToRgb16Averaged|0x1000A788"
         ],
         "Classic/1.01": [
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
           "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
           "ConvertRgb24ToRgb565|0x1001296D",
+          "ConvertRgb24ToRgb555|0x1001292F",
           "BlendPixelBuffers|0x1000A7F2",
           "QuantizePaletteToRgb|0x1000A980"
         ],
         "Classic/1.02": [
-          "QuantizePaletteToRgb|0x1000A980",
-          "BlendPixelBuffers|0x1000A7F2",
-          "_SmackSoundCheck@0|0x10007710",
           "ConvertRgb24ToRgb565|0x1001296D",
+          "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
           "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb16Averaged|0x1000A788"
+          "BlendPixelBuffers|0x1000A7F2",
+          "QuantizePaletteToRgb|0x1000A980"
         ],
         "Classic/1.03": [
+          "ConvertRgb24ToRgb565|0x1001296D",
           "BlendPixelBuffers|0x1000A7F2",
           "ConvertRgb24ToRgb16Averaged|0x1000A788",
           "QuantizePaletteToRgb|0x1000A980",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "_SmackSoundCheck@0|0x10007710"
+          "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb555|0x1001292F"
         ],
         "Classic/1.04c": [
-          "QuantizePaletteToRgb|0x1000A980",
+          "ConvertRgb24ToRgb565|0x1001296D",
           "ConvertRgb24ToRgb555|0x1001292F",
-          "BlendPixelBuffers|0x1000A7F2",
           "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
+          "QuantizePaletteToRgb|0x1000A980",
+          "BlendPixelBuffers|0x1000A7F2"
+        ],
+        "LoD/1.07": [
+          "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
+          "BlendPixelBuffers|0x1000A7F2",
+          "ConvertRgb24ToRgb565|0x1001296D",
+          "QuantizePaletteToRgb|0x1000A980"
+        ],
+        "LoD/1.08": [
+          "BlendPixelBuffers|0x1000A7F2",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "_SmackSoundCheck@0|0x10007710",
+          "QuantizePaletteToRgb|0x1000A980",
           "ConvertRgb24ToRgb16Averaged|0x1000A788",
           "ConvertRgb24ToRgb565|0x1001296D"
         ],
-        "LoD/1.07": [
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "QuantizePaletteToRgb|0x1000A980",
-          "BlendPixelBuffers|0x1000A7F2",
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "_SmackSoundCheck@0|0x10007710"
-        ],
-        "LoD/1.08": [
-          "QuantizePaletteToRgb|0x1000A980",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "_SmackSoundCheck@0|0x10007710",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "BlendPixelBuffers|0x1000A7F2"
-        ],
         "LoD/1.09": [
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "BlendPixelBuffers|0x1000A7F2",
           "ConvertRgb24ToRgb565|0x1001296D",
           "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
           "ConvertRgb24ToRgb555|0x1001292F",
+          "BlendPixelBuffers|0x1000A7F2",
           "QuantizePaletteToRgb|0x1000A980"
         ],
         "LoD/1.09b": [
-          "BlendPixelBuffers|0x1000A7F2",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "_SmackSoundCheck@0|0x10007710",
           "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "QuantizePaletteToRgb|0x1000A980"
-        ],
-        "LoD/1.09d": [
           "QuantizePaletteToRgb|0x1000A980",
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "ConvertRgb24ToRgb555|0x1001292F",
           "BlendPixelBuffers|0x1000A7F2",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "ConvertRgb24ToRgb565|0x1001296D",
           "_SmackSoundCheck@0|0x10007710"
         ],
-        "LoD/1.10": [
-          "ConvertRgb24ToRgb565|0x1001296D",
+        "LoD/1.09d": [
+          "BlendPixelBuffers|0x1000A7F2",
           "ConvertRgb24ToRgb555|0x1001292F",
-          "_SmackSoundCheck@0|0x10007710",
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
           "QuantizePaletteToRgb|0x1000A980",
-          "BlendPixelBuffers|0x1000A7F2"
+          "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb565|0x1001296D",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788"
+        ],
+        "LoD/1.10": [
+          "BlendPixelBuffers|0x1000A7F2",
+          "QuantizePaletteToRgb|0x1000A980",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "ConvertRgb24ToRgb565|0x1001296D",
+          "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788"
         ],
         "LoD/1.11": [
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
           "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb565|0x1001296D",
           "_SmackSoundCheck@0|0x10007710",
           "QuantizePaletteToRgb|0x1000A980",
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
+          "ConvertRgb24ToRgb565|0x1001296D",
           "BlendPixelBuffers|0x1000A7F2"
         ],
         "LoD/1.11b": [
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb565|0x1001296D",
           "QuantizePaletteToRgb|0x1000A980",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "BlendPixelBuffers|0x1000A7F2"
-        ],
-        "LoD/1.12a": [
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "_SmackSoundCheck@0|0x10007710",
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
           "BlendPixelBuffers|0x1000A7F2",
           "ConvertRgb24ToRgb555|0x1001292F",
+          "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788"
+        ],
+        "LoD/1.12a": [
+          "_SmackSoundCheck@0|0x10007710",
+          "ConvertRgb24ToRgb565|0x1001296D",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "BlendPixelBuffers|0x1000A7F2",
           "QuantizePaletteToRgb|0x1000A980"
         ],
         "LoD/1.13c": [
-          "BlendPixelBuffers|0x1000A7F2",
-          "QuantizePaletteToRgb|0x1000A980",
           "ConvertRgb24ToRgb565|0x1001296D",
+          "QuantizePaletteToRgb|0x1000A980",
           "ConvertRgb24ToRgb555|0x1001292F",
           "ConvertRgb24ToRgb16Averaged|0x1000A788",
+          "BlendPixelBuffers|0x1000A7F2",
           "_SmackSoundCheck@0|0x10007710"
         ],
         "LoD/1.13d": [
-          "BlendPixelBuffers|0x1000A7F2",
           "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb565|0x1001296D",
           "_SmackSoundCheck@0|0x10007710",
+          "QuantizePaletteToRgb|0x1000A980",
           "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "QuantizePaletteToRgb|0x1000A980"
+          "BlendPixelBuffers|0x1000A7F2",
+          "ConvertRgb24ToRgb565|0x1001296D"
         ],
         "LoD/1.14a": [
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "_SmackSoundCheck@0|0x10007710",
-          "ConvertRgb24ToRgb555|0x1001292F",
           "QuantizePaletteToRgb|0x1000A980",
           "ConvertRgb24ToRgb565|0x1001296D",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "_SmackSoundCheck@0|0x10007710",
           "BlendPixelBuffers|0x1000A7F2"
         ],
         "LoD/1.14b": [
           "ConvertRgb24ToRgb555|0x1001292F",
-          "ConvertRgb24ToRgb565|0x1001296D",
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "BlendPixelBuffers|0x1000A7F2",
           "QuantizePaletteToRgb|0x1000A980",
-          "_SmackSoundCheck@0|0x10007710"
-        ],
-        "LoD/1.14c": [
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "BlendPixelBuffers|0x1000A7F2",
           "_SmackSoundCheck@0|0x10007710",
           "ConvertRgb24ToRgb565|0x1001296D",
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "QuantizePaletteToRgb|0x1000A980"
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
+          "BlendPixelBuffers|0x1000A7F2"
+        ],
+        "LoD/1.14c": [
+          "_SmackSoundCheck@0|0x10007710",
+          "BlendPixelBuffers|0x1000A7F2",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
+          "QuantizePaletteToRgb|0x1000A980",
+          "ConvertRgb24ToRgb565|0x1001296D",
+          "ConvertRgb24ToRgb555|0x1001292F"
         ],
         "LoD/1.14d": [
-          "ConvertRgb24ToRgb555|0x1001292F",
-          "QuantizePaletteToRgb|0x1000A980",
-          "ConvertRgb24ToRgb16Averaged|0x1000A788",
-          "ConvertRgb24ToRgb565|0x1001296D",
+          "_SmackSoundCheck@0|0x10007710",
           "BlendPixelBuffers|0x1000A7F2",
-          "_SmackSoundCheck@0|0x10007710"
+          "ConvertRgb24ToRgb565|0x1001296D",
+          "ConvertRgb24ToRgb555|0x1001292F",
+          "ConvertRgb24ToRgb16Averaged|0x1000A788",
+          "QuantizePaletteToRgb|0x1000A980"
         ]
       },
       "callers": {
@@ -145062,16 +139456,16 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "Classic/1.03": [
-          "_SmackBlitSetPalette@12|0x1000AB90",
-          "_SmackBlitSetFlags@8|0x1000AD80"
+          "_SmackBlitSetFlags@8|0x1000AD80",
+          "_SmackBlitSetPalette@12|0x1000AB90"
         ],
         "Classic/1.04c": [
           "_SmackBlitSetPalette@12|0x1000AB90",
           "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.07": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitSetPalette@12|0x1000AB90"
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.08": [
           "_SmackBlitSetFlags@8|0x1000AD80",
@@ -145082,52 +139476,52 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.09b": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitSetPalette@12|0x1000AB90"
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.09d": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitSetPalette@12|0x1000AB90"
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.10": [
           "_SmackBlitSetPalette@12|0x1000AB90",
           "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.11": [
+          "_SmackBlitSetFlags@8|0x1000AD80",
+          "_SmackBlitSetPalette@12|0x1000AB90"
+        ],
+        "LoD/1.11b": [
           "_SmackBlitSetPalette@12|0x1000AB90",
           "_SmackBlitSetFlags@8|0x1000AD80"
         ],
-        "LoD/1.11b": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitSetPalette@12|0x1000AB90"
-        ],
         "LoD/1.12a": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitSetPalette@12|0x1000AB90"
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.13c": [
           "_SmackBlitSetFlags@8|0x1000AD80",
           "_SmackBlitSetPalette@12|0x1000AB90"
         ],
         "LoD/1.13d": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitSetPalette@12|0x1000AB90"
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.14a": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitSetPalette@12|0x1000AB90"
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.14b": [
           "_SmackBlitSetFlags@8|0x1000AD80",
           "_SmackBlitSetPalette@12|0x1000AB90"
         ],
         "LoD/1.14c": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitSetPalette@12|0x1000AB90"
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ],
         "LoD/1.14d": [
-          "_SmackBlitSetFlags@8|0x1000AD80",
-          "_SmackBlitSetPalette@12|0x1000AB90"
+          "_SmackBlitSetPalette@12|0x1000AB90",
+          "_SmackBlitSetFlags@8|0x1000AD80"
         ]
       },
       "instructions": {
@@ -145921,7 +140315,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_EXP_8": {
+    "SmackW32_NOP_2dacdf4d1daa": {
       "addresses": {
         "Classic/1.00": "0x1000AD80",
         "Classic/1.01": "0x1000AD80",
@@ -145996,8 +140390,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined4",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:8",
+      "method": "NOP",
+      "index": "NOP:2dacdf4d1daa2cf8888eb0705ee8e2dd84889daa731244e5842a08a98836290e",
       "indexes": {
         "EXP": "8",
         "STR": null,
@@ -146012,8 +140406,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetBlitScaleIndex|0x1000A930",
-          "UpdateBlitContextPaletteAndFrame|0x1000AC90"
+          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
+          "GetBlitScaleIndex|0x1000A930"
         ],
         "Classic/1.01": [
           "GetBlitScaleIndex|0x1000A930",
@@ -146036,20 +140430,20 @@ var FUNCTIONS_SmackW32_dll = {
           "UpdateBlitContextPaletteAndFrame|0x1000AC90"
         ],
         "LoD/1.08": [
-          "GetBlitScaleIndex|0x1000A930",
-          "UpdateBlitContextPaletteAndFrame|0x1000AC90"
+          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
+          "GetBlitScaleIndex|0x1000A930"
         ],
         "LoD/1.09": [
-          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
-          "GetBlitScaleIndex|0x1000A930"
-        ],
-        "LoD/1.09b": [
           "GetBlitScaleIndex|0x1000A930",
           "UpdateBlitContextPaletteAndFrame|0x1000AC90"
         ],
-        "LoD/1.09d": [
+        "LoD/1.09b": [
           "UpdateBlitContextPaletteAndFrame|0x1000AC90",
           "GetBlitScaleIndex|0x1000A930"
+        ],
+        "LoD/1.09d": [
+          "GetBlitScaleIndex|0x1000A930",
+          "UpdateBlitContextPaletteAndFrame|0x1000AC90"
         ],
         "LoD/1.10": [
           "UpdateBlitContextPaletteAndFrame|0x1000AC90",
@@ -146064,32 +140458,32 @@ var FUNCTIONS_SmackW32_dll = {
           "GetBlitScaleIndex|0x1000A930"
         ],
         "LoD/1.12a": [
-          "GetBlitScaleIndex|0x1000A930",
-          "UpdateBlitContextPaletteAndFrame|0x1000AC90"
+          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
+          "GetBlitScaleIndex|0x1000A930"
         ],
         "LoD/1.13c": [
-          "GetBlitScaleIndex|0x1000A930",
-          "UpdateBlitContextPaletteAndFrame|0x1000AC90"
+          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
+          "GetBlitScaleIndex|0x1000A930"
         ],
         "LoD/1.13d": [
+          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
+          "GetBlitScaleIndex|0x1000A930"
+        ],
+        "LoD/1.14a": [
           "GetBlitScaleIndex|0x1000A930",
           "UpdateBlitContextPaletteAndFrame|0x1000AC90"
         ],
-        "LoD/1.14a": [
-          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
-          "GetBlitScaleIndex|0x1000A930"
-        ],
         "LoD/1.14b": [
-          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
-          "GetBlitScaleIndex|0x1000A930"
+          "GetBlitScaleIndex|0x1000A930",
+          "UpdateBlitContextPaletteAndFrame|0x1000AC90"
         ],
         "LoD/1.14c": [
           "GetBlitScaleIndex|0x1000A930",
           "UpdateBlitContextPaletteAndFrame|0x1000AC90"
         ],
         "LoD/1.14d": [
-          "GetBlitScaleIndex|0x1000A930",
-          "UpdateBlitContextPaletteAndFrame|0x1000AC90"
+          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
+          "GetBlitScaleIndex|0x1000A930"
         ]
       },
       "instructions": {
@@ -146754,7 +141148,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_10": {
+    "SmackW32_STR_bac0004db822": {
       "addresses": {
         "Classic/1.00": "0x1000ADE0",
         "Classic/1.01": "0x1000ADE0",
@@ -146829,8 +141223,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "char *",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:10",
+      "method": "STR",
+      "index": "STR:bac0004db822bf28b32d4daf991c1ac2",
       "indexes": {
         "EXP": "10",
         "STR": "bac0004db822bf28b32d4daf991c1ac2",
@@ -148366,7 +142760,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_2": {
+    "SmackW32_NOP_ecff1b27e8c2": {
       "addresses": {
         "Classic/1.00": "0x1000AF80",
         "Classic/1.01": "0x1000AF80",
@@ -148441,8 +142835,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "int",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:2",
+      "method": "NOP",
+      "index": "NOP:ecff1b27e8c26c3713ca3b3486c83f92b9634c2b1d3c2af0bf7d5b79b7461130",
       "indexes": {
         "EXP": "2",
         "STR": null,
@@ -148457,204 +142851,204 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "CopyBitmapRegion|0x10009D00",
           "BlitPalettized8to16|0x1000A042",
-          "BlitScaled2xWithColorTable|0x10009FA1",
           "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
+          "BlitScaled2xWithColorTable|0x10009FA1",
           "ExpandPaletteToDoublePixels|0x1000A323",
+          "FUN_1000a493|0x1000A493",
           "ExpandByteToWord|0x10009D38",
           "ExpandPixelDataDouble|0x10009E87",
-          "FUN_1000a493|0x1000A493"
+          "CopyBitmapRegion|0x10009D00"
         ],
         "Classic/1.01": [
-          "ExpandPaletteToDoublePixels|0x1000A323",
           "ExpandByteToWord|0x10009D38",
-          "FUN_1000a493|0x1000A493",
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "CopyBitmapRegion|0x10009D00",
           "ExpandPixelDataDouble|0x10009E87",
-          "BlitPalettized8to16|0x1000A042"
+          "ExpandPaletteToDoublePixels|0x1000A323",
+          "CopyBitmapRegion|0x10009D00",
+          "FUN_1000a493|0x1000A493",
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "BlitPalettized8to16|0x1000A042",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9"
         ],
         "Classic/1.02": [
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
           "CopyBitmapRegion|0x10009D00",
-          "ExpandByteToWord|0x10009D38",
-          "ExpandPixelDataDouble|0x10009E87",
-          "BlitPalettized8to16|0x1000A042",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
           "ExpandPaletteToDoublePixels|0x1000A323",
           "FUN_1000a493|0x1000A493",
-          "BlitScaled2xWithColorTable|0x10009FA1"
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "ExpandPixelDataDouble|0x10009E87",
+          "ExpandByteToWord|0x10009D38",
+          "BlitPalettized8to16|0x1000A042"
         ],
         "Classic/1.03": [
-          "ExpandPixelDataDouble|0x10009E87",
-          "ExpandPaletteToDoublePixels|0x1000A323",
-          "CopyBitmapRegion|0x10009D00",
           "ExpandByteToWord|0x10009D38",
+          "CopyBitmapRegion|0x10009D00",
           "BlitPalettized8to16|0x1000A042",
           "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
           "FUN_1000a493|0x1000A493",
+          "ExpandPaletteToDoublePixels|0x1000A323",
+          "ExpandPixelDataDouble|0x10009E87",
           "BlitScaled2xWithColorTable|0x10009FA1"
         ],
         "Classic/1.04c": [
-          "CopyBitmapRegion|0x10009D00",
-          "BlitPalettized8to16|0x1000A042",
-          "ExpandByteToWord|0x10009D38",
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "ExpandPaletteToDoublePixels|0x1000A323",
-          "FUN_1000a493|0x1000A493",
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
-          "ExpandPixelDataDouble|0x10009E87"
-        ],
-        "LoD/1.07": [
-          "FUN_1000a493|0x1000A493",
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "ExpandByteToWord|0x10009D38",
-          "CopyBitmapRegion|0x10009D00",
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
-          "ExpandPaletteToDoublePixels|0x1000A323",
           "ExpandPixelDataDouble|0x10009E87",
-          "BlitPalettized8to16|0x1000A042"
-        ],
-        "LoD/1.08": [
           "ExpandByteToWord|0x10009D38",
-          "ExpandPixelDataDouble|0x10009E87",
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "FUN_1000a493|0x1000A493",
           "BlitPalettized8to16|0x1000A042",
+          "FUN_1000a493|0x1000A493",
+          "BlitScaled2xWithColorTable|0x10009FA1",
           "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
           "ExpandPaletteToDoublePixels|0x1000A323",
           "CopyBitmapRegion|0x10009D00"
         ],
-        "LoD/1.09": [
-          "FUN_1000a493|0x1000A493",
+        "LoD/1.07": [
           "ExpandByteToWord|0x10009D38",
+          "FUN_1000a493|0x1000A493",
           "CopyBitmapRegion|0x10009D00",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
+          "BlitPalettized8to16|0x1000A042",
+          "ExpandPaletteToDoublePixels|0x1000A323",
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "ExpandPixelDataDouble|0x10009E87"
+        ],
+        "LoD/1.08": [
+          "CopyBitmapRegion|0x10009D00",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
+          "BlitPalettized8to16|0x1000A042",
+          "ExpandPaletteToDoublePixels|0x1000A323",
           "BlitScaled2xWithColorTable|0x10009FA1",
           "ExpandPixelDataDouble|0x10009E87",
-          "ExpandPaletteToDoublePixels|0x1000A323",
+          "FUN_1000a493|0x1000A493",
+          "ExpandByteToWord|0x10009D38"
+        ],
+        "LoD/1.09": [
+          "ExpandByteToWord|0x10009D38",
+          "ExpandPixelDataDouble|0x10009E87",
+          "CopyBitmapRegion|0x10009D00",
           "BlitPalettized8to16|0x1000A042",
+          "ExpandPaletteToDoublePixels|0x1000A323",
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "FUN_1000a493|0x1000A493",
           "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9"
         ],
         "LoD/1.09b": [
-          "FUN_1000a493|0x1000A493",
-          "ExpandPixelDataDouble|0x10009E87",
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "ExpandPaletteToDoublePixels|0x1000A323",
           "CopyBitmapRegion|0x10009D00",
+          "FUN_1000a493|0x1000A493",
           "ExpandByteToWord|0x10009D38",
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "ExpandPixelDataDouble|0x10009E87",
+          "ExpandPaletteToDoublePixels|0x1000A323",
           "BlitPalettized8to16|0x1000A042",
           "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9"
         ],
         "LoD/1.09d": [
-          "ExpandPixelDataDouble|0x10009E87",
           "CopyBitmapRegion|0x10009D00",
-          "FUN_1000a493|0x1000A493",
+          "ExpandPixelDataDouble|0x10009E87",
+          "ExpandPaletteToDoublePixels|0x1000A323",
           "BlitPalettized8to16|0x1000A042",
           "ExpandByteToWord|0x10009D38",
-          "ExpandPaletteToDoublePixels|0x1000A323",
+          "FUN_1000a493|0x1000A493",
           "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
           "BlitScaled2xWithColorTable|0x10009FA1"
         ],
         "LoD/1.10": [
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "FUN_1000a493|0x1000A493",
-          "CopyBitmapRegion|0x10009D00",
           "ExpandPaletteToDoublePixels|0x1000A323",
           "ExpandPixelDataDouble|0x10009E87",
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
+          "ExpandByteToWord|0x10009D38",
           "BlitPalettized8to16|0x1000A042",
-          "ExpandByteToWord|0x10009D38"
+          "FUN_1000a493|0x1000A493",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
+          "CopyBitmapRegion|0x10009D00",
+          "BlitScaled2xWithColorTable|0x10009FA1"
         ],
         "LoD/1.11": [
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "ExpandPaletteToDoublePixels|0x1000A323",
-          "FUN_1000a493|0x1000A493",
-          "ExpandPixelDataDouble|0x10009E87",
-          "ExpandByteToWord|0x10009D38",
           "CopyBitmapRegion|0x10009D00",
           "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
-          "BlitPalettized8to16|0x1000A042"
+          "ExpandByteToWord|0x10009D38",
+          "ExpandPixelDataDouble|0x10009E87",
+          "BlitPalettized8to16|0x1000A042",
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "ExpandPaletteToDoublePixels|0x1000A323",
+          "FUN_1000a493|0x1000A493"
         ],
         "LoD/1.11b": [
-          "CopyBitmapRegion|0x10009D00",
           "BlitScaled2xWithColorTable|0x10009FA1",
-          "ExpandPixelDataDouble|0x10009E87",
           "BlitPalettized8to16|0x1000A042",
-          "ExpandPaletteToDoublePixels|0x1000A323",
+          "CopyBitmapRegion|0x10009D00",
+          "ExpandPixelDataDouble|0x10009E87",
           "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
-          "ExpandByteToWord|0x10009D38",
-          "FUN_1000a493|0x1000A493"
+          "FUN_1000a493|0x1000A493",
+          "ExpandPaletteToDoublePixels|0x1000A323",
+          "ExpandByteToWord|0x10009D38"
         ],
         "LoD/1.12a": [
-          "BlitPalettized8to16|0x1000A042",
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
-          "ExpandPaletteToDoublePixels|0x1000A323",
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "ExpandByteToWord|0x10009D38",
-          "ExpandPixelDataDouble|0x10009E87",
           "CopyBitmapRegion|0x10009D00",
-          "FUN_1000a493|0x1000A493"
+          "FUN_1000a493|0x1000A493",
+          "ExpandPixelDataDouble|0x10009E87",
+          "BlitPalettized8to16|0x1000A042",
+          "ExpandPaletteToDoublePixels|0x1000A323",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
+          "ExpandByteToWord|0x10009D38",
+          "BlitScaled2xWithColorTable|0x10009FA1"
         ],
         "LoD/1.13c": [
           "ExpandByteToWord|0x10009D38",
-          "ExpandPixelDataDouble|0x10009E87",
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "BlitPalettized8to16|0x1000A042",
           "ExpandPaletteToDoublePixels|0x1000A323",
           "FUN_1000a493|0x1000A493",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "BlitPalettized8to16|0x1000A042",
           "CopyBitmapRegion|0x10009D00",
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9"
+          "ExpandPixelDataDouble|0x10009E87"
         ],
         "LoD/1.13d": [
-          "ExpandByteToWord|0x10009D38",
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "BlitPalettized8to16|0x1000A042",
           "FUN_1000a493|0x1000A493",
+          "ExpandByteToWord|0x10009D38",
           "CopyBitmapRegion|0x10009D00",
           "ExpandPixelDataDouble|0x10009E87",
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
-          "BlitPalettized8to16|0x1000A042",
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "ExpandPaletteToDoublePixels|0x1000A323"
+          "ExpandPaletteToDoublePixels|0x1000A323",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9"
         ],
         "LoD/1.14a": [
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
+          "ExpandByteToWord|0x10009D38",
           "ExpandPaletteToDoublePixels|0x1000A323",
-          "CopyBitmapRegion|0x10009D00",
-          "FUN_1000a493|0x1000A493",
-          "BlitPalettized8to16|0x1000A042",
-          "BlitScaled2xWithColorTable|0x10009FA1",
           "ExpandPixelDataDouble|0x10009E87",
-          "ExpandByteToWord|0x10009D38"
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "FUN_1000a493|0x1000A493",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
+          "CopyBitmapRegion|0x10009D00",
+          "BlitPalettized8to16|0x1000A042"
         ],
         "LoD/1.14b": [
           "ExpandPaletteToDoublePixels|0x1000A323",
           "ExpandByteToWord|0x10009D38",
-          "FUN_1000a493|0x1000A493",
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
           "ExpandPixelDataDouble|0x10009E87",
-          "BlitPalettized8to16|0x1000A042",
-          "BlitScaled2xWithColorTable|0x10009FA1",
-          "CopyBitmapRegion|0x10009D00"
-        ],
-        "LoD/1.14c": [
           "FUN_1000a493|0x1000A493",
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
           "CopyBitmapRegion|0x10009D00",
-          "ExpandPixelDataDouble|0x10009E87",
-          "ExpandPaletteToDoublePixels|0x1000A323",
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
-          "ExpandByteToWord|0x10009D38",
-          "BlitScaled2xWithColorTable|0x10009FA1",
           "BlitPalettized8to16|0x1000A042"
         ],
-        "LoD/1.14d": [
-          "ExpandPaletteToDoublePixels|0x1000A323",
+        "LoD/1.14c": [
+          "ExpandByteToWord|0x10009D38",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
           "CopyBitmapRegion|0x10009D00",
-          "BlitScaled2xWithColorTable|0x10009FA1",
+          "FUN_1000a493|0x1000A493",
           "BlitPalettized8to16|0x1000A042",
+          "ExpandPixelDataDouble|0x10009E87",
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "ExpandPaletteToDoublePixels|0x1000A323"
+        ],
+        "LoD/1.14d": [
+          "CopyBitmapRegion|0x10009D00",
+          "FUN_1000a493|0x1000A493",
+          "BlitPalettized8to16|0x1000A042",
+          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
           "ExpandByteToWord|0x10009D38",
           "ExpandPixelDataDouble|0x10009E87",
-          "FUN_1000a493|0x1000A493",
-          "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9"
+          "BlitScaled2xWithColorTable|0x10009FA1",
+          "ExpandPaletteToDoublePixels|0x1000A323"
         ]
       },
       "callers": {
@@ -149567,7 +143961,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_11": {
+    "SmackW32_NOP_e532efdfee08": {
       "addresses": {
         "Classic/1.00": "0x1000B230",
         "Classic/1.01": "0x1000B230",
@@ -149642,8 +144036,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:11",
+      "method": "NOP",
+      "index": "NOP:e532efdfee08d50cc365327b58ac3594da0529f4cbaec60e7fcc841946789ba2",
       "indexes": {
         "EXP": "11",
         "STR": null,
@@ -150340,798 +144734,10 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_5": {
+    "SmackW32_NOP_9818ea1521aa": {
       "addresses": {
         "Classic/1.00": "0x1000B2A0",
         "Classic/1.01": "0x1000B2A0",
-        "Classic/1.02": "0x1000B2A0",
-        "Classic/1.03": "0x1000B2A0",
-        "Classic/1.04c": "0x1000B2A0",
-        "LoD/1.07": "0x1000B2A0",
-        "LoD/1.08": "0x1000B2A0",
-        "LoD/1.09": "0x1000B2A0",
-        "LoD/1.09b": "0x1000B2A0",
-        "LoD/1.09d": "0x1000B2A0",
-        "LoD/1.10": "0x1000B2A0",
-        "LoD/1.11": "0x1000B2A0",
-        "LoD/1.11b": "0x1000B2A0",
-        "LoD/1.12a": "0x1000B2A0",
-        "LoD/1.13c": "0x1000B2A0",
-        "LoD/1.13d": "0x1000B2A0",
-        "LoD/1.14a": "0x1000B2A0",
-        "LoD/1.14b": "0x1000B2A0",
-        "LoD/1.14c": "0x1000B2A0",
-        "LoD/1.14d": "0x1000B2A0"
-      },
-      "rvas": {
-        "Classic/1.00": "0xB2A0",
-        "Classic/1.01": "0xB2A0",
-        "Classic/1.02": "0xB2A0",
-        "Classic/1.03": "0xB2A0",
-        "Classic/1.04c": "0xB2A0",
-        "LoD/1.07": "0xB2A0",
-        "LoD/1.08": "0xB2A0",
-        "LoD/1.09": "0xB2A0",
-        "LoD/1.09b": "0xB2A0",
-        "LoD/1.09d": "0xB2A0",
-        "LoD/1.10": "0xB2A0",
-        "LoD/1.11": "0xB2A0",
-        "LoD/1.11b": "0xB2A0",
-        "LoD/1.12a": "0xB2A0",
-        "LoD/1.13c": "0xB2A0",
-        "LoD/1.13d": "0xB2A0",
-        "LoD/1.14a": "0xB2A0",
-        "LoD/1.14b": "0xB2A0",
-        "LoD/1.14c": "0xB2A0",
-        "LoD/1.14d": "0xB2A0"
-      },
-      "sizes": {
-        "Classic/1.00": 108,
-        "Classic/1.01": 108,
-        "Classic/1.02": 108,
-        "Classic/1.03": 108,
-        "Classic/1.04c": 108,
-        "LoD/1.07": 108,
-        "LoD/1.08": 108,
-        "LoD/1.09": 108,
-        "LoD/1.09b": 108,
-        "LoD/1.09d": 108,
-        "LoD/1.10": 108,
-        "LoD/1.11": 108,
-        "LoD/1.11b": 108,
-        "LoD/1.12a": 108,
-        "LoD/1.13c": 108,
-        "LoD/1.13d": 108,
-        "LoD/1.14a": 108,
-        "LoD/1.14b": 108,
-        "LoD/1.14c": 108,
-        "LoD/1.14d": 108
-      },
-      "name": "_SmackBlitMask@52",
-      "signature": "undefined _SmackBlitMask@52(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int param_9, uint param_10, int param_11, char param_12, int param_13)",
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:5",
-      "indexes": {
-        "EXP": "5",
-        "STR": null,
-        "NOP": "9818ea1521aa5b12fa0324755c0678bc1785caea068b2b2079043e30a24ff0da",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "CFG": "bb5a96a2f5be789b9a60f815ca963c25",
-        "PRO": "4fd1b8ad43b57f4fd6e0e458ad58bc5b"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "Classic/1.01": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "Classic/1.02": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "Classic/1.03": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "Classic/1.04c": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.07": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.08": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.09": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.09b": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.09d": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.10": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.11": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.11b": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.12a": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.13c": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.13d": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.14a": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.14b": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.14c": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ],
-        "LoD/1.14d": [
-          "BlitMaskedBufferSIMD|0x1000A6BE"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "Classic/1.01": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "Classic/1.02": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "Classic/1.03": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "Classic/1.04c": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.07": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.08": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.09": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.09b": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.09d": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.10": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.11": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.11b": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.12a": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.13c": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.13d": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.14a": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.14b": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.14c": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ],
-        "LoD/1.14d": [
-          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB2A4|PUSH|EBX",
-          "0xB2A5|PUSH|ESI",
-          "0xB2A6|TEST|ECX, ECX",
-          "0xB2A8|PUSH|EDI",
-          "0xB2A9|JZ|0x1000b306",
-          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB2AF|TEST|ESI, ESI",
-          "0xB2B1|JZ|0x1000b306",
-          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB2BA|TEST|EDX, EDX",
-          "0xB2BC|JNZ|0x1000b306",
-          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 44,
-        "Classic/1.01": 44,
-        "Classic/1.02": 44,
-        "Classic/1.03": 44,
-        "Classic/1.04c": 44,
-        "LoD/1.07": 44,
-        "LoD/1.08": 44,
-        "LoD/1.09": 44,
-        "LoD/1.09b": 44,
-        "LoD/1.09d": 44,
-        "LoD/1.10": 44,
-        "LoD/1.11": 44,
-        "LoD/1.11b": 44,
-        "LoD/1.12a": 44,
-        "LoD/1.13c": 44,
-        "LoD/1.13d": 44,
-        "LoD/1.14a": 44,
-        "LoD/1.14b": 44,
-        "LoD/1.14c": 44,
-        "LoD/1.14d": 44
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 56,
-        "Classic/1.01": 56,
-        "Classic/1.02": 56,
-        "Classic/1.03": 56,
-        "Classic/1.04c": 56,
-        "LoD/1.07": 56,
-        "LoD/1.08": 56,
-        "LoD/1.09": 56,
-        "LoD/1.09b": 56,
-        "LoD/1.09d": 56,
-        "LoD/1.10": 56,
-        "LoD/1.11": 56,
-        "LoD/1.11b": 56,
-        "LoD/1.12a": 56,
-        "LoD/1.13c": 56,
-        "LoD/1.13d": 56,
-        "LoD/1.14a": 56,
-        "LoD/1.14b": 56,
-        "LoD/1.14c": 56,
-        "LoD/1.14d": 56
-      },
-      "loop_counts": {
-        "Classic/1.00": 0,
-        "Classic/1.01": 0,
-        "Classic/1.02": 0,
-        "Classic/1.03": 0,
-        "Classic/1.04c": 0,
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0,
-        "LoD/1.14a": 0,
-        "LoD/1.14b": 0,
-        "LoD/1.14c": 0,
-        "LoD/1.14d": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "Classic/1.01": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "Classic/1.02": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "Classic/1.03": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "Classic/1.04c": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.07": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.08": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.09": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.09b": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.09d": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.10": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.11": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.11b": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.12a": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.13c": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.13d": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.14a": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.14b": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.14c": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/1.14d": "20ccb1fb6d4d5fc23f375917b3073ed8",
-        "LoD/PD2": "20ccb1fb6d4d5fc23f375917b3073ed8"
-      },
-      "callee_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 13,
-        "Classic/1.01": 13,
-        "Classic/1.02": 13,
-        "Classic/1.03": 13,
-        "Classic/1.04c": 13,
-        "LoD/1.07": 13,
-        "LoD/1.08": 13,
-        "LoD/1.09": 13,
-        "LoD/1.09b": 13,
-        "LoD/1.09d": 13,
-        "LoD/1.10": 13,
-        "LoD/1.11": 13,
-        "LoD/1.11b": 13,
-        "LoD/1.12a": 13,
-        "LoD/1.13c": 13,
-        "LoD/1.13d": 13,
-        "LoD/1.14a": 13,
-        "LoD/1.14b": 13,
-        "LoD/1.14c": 13,
-        "LoD/1.14d": 13
-      },
-      "tags": {
-        "Classic/1.00": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "Classic/1.01": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "Classic/1.02": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "Classic/1.03": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "Classic/1.04c": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.07": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.08": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.09": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.09b": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.09d": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.10": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.11": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.11b": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.12a": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.13c": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.13d": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14a": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14b": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14c": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ],
-        "LoD/1.14d": [
-          "STRUCT_Path",
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_13",
-          "STRUCT_Control"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "export",
-        "Classic/1.01": "export",
-        "Classic/1.02": "export",
-        "Classic/1.03": "export",
-        "Classic/1.04c": "export",
-        "LoD/1.07": "export",
-        "LoD/1.08": "export",
-        "LoD/1.09": "export",
-        "LoD/1.09b": "export",
-        "LoD/1.09d": "export",
-        "LoD/1.10": "export",
-        "LoD/1.11": "export",
-        "LoD/1.11b": "export",
-        "LoD/1.12a": "export",
-        "LoD/1.13c": "export",
-        "LoD/1.13d": "export",
-        "LoD/1.14a": "export",
-        "LoD/1.14b": "export",
-        "LoD/1.14c": "export",
-        "LoD/1.14d": "export"
-      }
-    },
-    "SmackW32_EXP_6": {
-      "addresses": {
-        "Classic/1.00": "0x1000B310",
-        "Classic/1.01": "0x1000B310",
         "Classic/1.02": "0x1000B310",
         "Classic/1.03": "0x1000B310",
         "Classic/1.04c": "0x1000B310",
@@ -151153,8 +144759,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/PD2": "0x02E2B2A0"
       },
       "rvas": {
-        "Classic/1.00": "0xB310",
-        "Classic/1.01": "0xB310",
+        "Classic/1.00": "0xB2A0",
+        "Classic/1.01": "0xB2A0",
         "Classic/1.02": "0xB310",
         "Classic/1.03": "0xB310",
         "Classic/1.04c": "0xB310",
@@ -151203,10 +144809,10 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:6",
+      "method": "NOP",
+      "index": "NOP:9818ea1521aa5b12fa0324755c0678bc1785caea068b2b2079043e30a24ff0da",
       "indexes": {
-        "EXP": "6",
+        "EXP": "5",
         "STR": null,
         "NOP": "9818ea1521aa5b12fa0324755c0678bc1785caea068b2b2079043e30a24ff0da",
         "CAL": null,
@@ -151219,10 +144825,10 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "BlitMergeWithColorKey|0x1000A5F0"
+          "BlitMaskedBufferSIMD|0x1000A6BE"
         ],
         "Classic/1.01": [
-          "BlitMergeWithColorKey|0x1000A5F0"
+          "BlitMaskedBufferSIMD|0x1000A6BE"
         ],
         "Classic/1.02": [
           "BlitMergeWithColorKey|0x1000A5F0"
@@ -151281,38 +144887,38 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "instructions": {
         "Classic/1.00": [
-          "0xB310|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB314|PUSH|EBX",
-          "0xB315|PUSH|ESI",
-          "0xB316|TEST|ECX, ECX",
-          "0xB318|PUSH|EDI",
-          "0xB319|JZ|0x1000b376",
-          "0xB31B|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB31F|TEST|ESI, ESI",
-          "0xB321|JZ|0x1000b376",
-          "0xB323|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB327|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB32A|TEST|EDX, EDX",
-          "0xB32C|JNZ|0x1000b376",
-          "0xB32E|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB332|MOV|EDI, dword ptr [ESP + 0x28]"
+          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
+          "0xB2A4|PUSH|EBX",
+          "0xB2A5|PUSH|ESI",
+          "0xB2A6|TEST|ECX, ECX",
+          "0xB2A8|PUSH|EDI",
+          "0xB2A9|JZ|0x1000b306",
+          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
+          "0xB2AF|TEST|ESI, ESI",
+          "0xB2B1|JZ|0x1000b306",
+          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
+          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
+          "0xB2BA|TEST|EDX, EDX",
+          "0xB2BC|JNZ|0x1000b306",
+          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
+          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
         ],
         "Classic/1.01": [
-          "0xB310|MOV|ECX, dword ptr [ESP + 0x28]",
-          "0xB314|PUSH|EBX",
-          "0xB315|PUSH|ESI",
-          "0xB316|TEST|ECX, ECX",
-          "0xB318|PUSH|EDI",
-          "0xB319|JZ|0x1000b376",
-          "0xB31B|MOV|ESI, dword ptr [ESP + 0x38]",
-          "0xB31F|TEST|ESI, ESI",
-          "0xB321|JZ|0x1000b376",
-          "0xB323|MOV|EAX, dword ptr [ESP + 0x10]",
-          "0xB327|MOV|EDX, dword ptr [EAX + 0x14]",
-          "0xB32A|TEST|EDX, EDX",
-          "0xB32C|JNZ|0x1000b376",
-          "0xB32E|MOV|EDX, dword ptr [ESP + 0x30]",
-          "0xB332|MOV|EDI, dword ptr [ESP + 0x28]"
+          "0xB2A0|MOV|ECX, dword ptr [ESP + 0x28]",
+          "0xB2A4|PUSH|EBX",
+          "0xB2A5|PUSH|ESI",
+          "0xB2A6|TEST|ECX, ECX",
+          "0xB2A8|PUSH|EDI",
+          "0xB2A9|JZ|0x1000b306",
+          "0xB2AB|MOV|ESI, dword ptr [ESP + 0x38]",
+          "0xB2AF|TEST|ESI, ESI",
+          "0xB2B1|JZ|0x1000b306",
+          "0xB2B3|MOV|EAX, dword ptr [ESP + 0x10]",
+          "0xB2B7|MOV|EDX, dword ptr [EAX + 0x14]",
+          "0xB2BA|TEST|EDX, EDX",
+          "0xB2BC|JNZ|0x1000b306",
+          "0xB2BE|MOV|EDX, dword ptr [ESP + 0x30]",
+          "0xB2C2|MOV|EDI, dword ptr [ESP + 0x28]"
         ],
         "Classic/1.02": [
           "0xB310|MOV|ECX, dword ptr [ESP + 0x28]",
@@ -151921,7 +145527,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_3": {
+    "SmackW32_NOP_b9fd0d60117c": {
       "addresses": {
         "Classic/1.00": "0x1000B380",
         "Classic/1.01": "0x1000B380",
@@ -151996,8 +145602,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:3",
+      "method": "NOP",
+      "index": "NOP:b9fd0d60117cd74f98d6dc73a1ae2d29300f2cc54b623a811cf051fde16d136e",
       "indexes": {
         "EXP": "3",
         "STR": null,
@@ -152710,732 +146316,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_4": {
-      "addresses": {
-        "Classic/1.00": "0x1000B480",
-        "Classic/1.01": "0x1000B480",
-        "Classic/1.02": "0x1000B480",
-        "Classic/1.03": "0x1000B480",
-        "Classic/1.04c": "0x1000B480",
-        "LoD/1.07": "0x1000B480",
-        "LoD/1.08": "0x1000B480",
-        "LoD/1.09": "0x1000B480",
-        "LoD/1.09b": "0x1000B480",
-        "LoD/1.09d": "0x1000B480",
-        "LoD/1.10": "0x1000B480",
-        "LoD/1.11": "0x1000B480",
-        "LoD/1.11b": "0x1000B480",
-        "LoD/1.12a": "0x1000B480",
-        "LoD/1.13c": "0x1000B480",
-        "LoD/1.13d": "0x1000B480",
-        "LoD/1.14a": "0x1000B480",
-        "LoD/1.14b": "0x1000B480",
-        "LoD/1.14c": "0x1000B480",
-        "LoD/1.14d": "0x1000B480",
-        "LoD/PD2": "0x02E2B480"
-      },
-      "rvas": {
-        "Classic/1.00": "0xB480",
-        "Classic/1.01": "0xB480",
-        "Classic/1.02": "0xB480",
-        "Classic/1.03": "0xB480",
-        "Classic/1.04c": "0xB480",
-        "LoD/1.07": "0xB480",
-        "LoD/1.08": "0xB480",
-        "LoD/1.09": "0xB480",
-        "LoD/1.09b": "0xB480",
-        "LoD/1.09d": "0xB480",
-        "LoD/1.10": "0xB480",
-        "LoD/1.11": "0xB480",
-        "LoD/1.11b": "0xB480",
-        "LoD/1.12a": "0xB480",
-        "LoD/1.13c": "0xB480",
-        "LoD/1.13d": "0xB480",
-        "LoD/1.14a": "0xB480",
-        "LoD/1.14b": "0xB480",
-        "LoD/1.14c": "0xB480",
-        "LoD/1.14d": "0xB480",
-        "LoD/PD2": "0xB480"
-      },
-      "sizes": {
-        "Classic/1.00": 17,
-        "Classic/1.01": 17,
-        "Classic/1.02": 17,
-        "Classic/1.03": 17,
-        "Classic/1.04c": 17,
-        "LoD/1.07": 17,
-        "LoD/1.08": 17,
-        "LoD/1.09": 17,
-        "LoD/1.09b": 17,
-        "LoD/1.09d": 17,
-        "LoD/1.10": 17,
-        "LoD/1.11": 17,
-        "LoD/1.11b": 17,
-        "LoD/1.12a": 17,
-        "LoD/1.13c": 17,
-        "LoD/1.13d": 17,
-        "LoD/1.14a": 17,
-        "LoD/1.14b": 17,
-        "LoD/1.14c": 17,
-        "LoD/1.14d": 17,
-        "LoD/PD2": 17
-      },
-      "name": "ApplyPresetUnitTileAttributesSafe",
-      "signature": "void ApplyPresetUnitTileAttributesSafe(int * pPresetUnit)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Null-safe wrapper for ApplyPresetUnitTileAttributes.\n\nAlgorithm:\n1. Check if pPresetUnit is NULL\n2. If valid, call ApplyPresetUnitTileAttributes to process tile flags\n\nParameters:\n- pPresetUnit (int*): Preset unit structure containing tile attribute data\n\nReturns:\n- void\n\nRelated Functions:\n- ApplyPresetUnitTileAttributes: Core implementation (Ordinal_10222)",
-      "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:4",
-      "indexes": {
-        "EXP": "4",
-        "STR": null,
-        "NOP": "491517843e8e7438ad14460c89cb890cabf6c4c0fe39dd4d05f3e63d0d73d9af",
-        "CAL": null,
-        "API": "d5e768179954a0f9e9bc303d8b021875",
-        "APS": null,
-        "CON": null,
-        "MNE": "cffa9ff338088808bf5749ca49298e21",
-        "CFG": "2db868291d56b3c29f4df1340564a4ad",
-        "PRO": "1ce457c492c42035d43ca2bc4e355d50"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.01": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.02": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.03": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "Classic/1.04c": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.07": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.08": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.09": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.09b": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.09d": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.10": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.11": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.11b": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.12a": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.13c": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.13d": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.14a": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.14b": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.14c": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.14d": [
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "Classic/1.01": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "Classic/1.02": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "Classic/1.03": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "Classic/1.04c": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.07": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.08": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.09": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.09b": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.09d": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.10": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.11": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.11b": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.12a": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.13c": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.13d": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.14a": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.14b": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.14c": [
-          "_SmackBufferClose@4|0x10003750"
-        ],
-        "LoD/1.14d": [
-          "_SmackBufferClose@4|0x10003750"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "Classic/1.01": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "Classic/1.02": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "Classic/1.03": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "Classic/1.04c": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.07": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.08": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.09": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.09b": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.09d": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.10": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.11": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.11b": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.12a": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.13c": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.13d": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.14a": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.14b": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.14c": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ],
-        "LoD/1.14d": [
-          "0xB480|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0xB484|TEST|EAX, EAX",
-          "0xB486|JZ|0x1000b48e",
-          "0xB488|PUSH|EAX",
-          "0xB489|CALL|0x10001040",
-          "0xB48E|RET|0x4"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 6,
-        "Classic/1.01": 6,
-        "Classic/1.02": 6,
-        "Classic/1.03": 6,
-        "Classic/1.04c": 6,
-        "LoD/1.07": 6,
-        "LoD/1.08": 6,
-        "LoD/1.09": 6,
-        "LoD/1.09b": 6,
-        "LoD/1.09d": 6,
-        "LoD/1.10": 6,
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6,
-        "LoD/1.14a": 6,
-        "LoD/1.14b": 6,
-        "LoD/1.14c": 6,
-        "LoD/1.14d": 6
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8,
-        "Classic/1.01": 8,
-        "Classic/1.02": 8,
-        "Classic/1.03": 8,
-        "Classic/1.04c": 8,
-        "LoD/1.07": 8,
-        "LoD/1.08": 8,
-        "LoD/1.09": 8,
-        "LoD/1.09b": 8,
-        "LoD/1.09d": 8,
-        "LoD/1.10": 8,
-        "LoD/1.11": 8,
-        "LoD/1.11b": 8,
-        "LoD/1.12a": 8,
-        "LoD/1.13c": 8,
-        "LoD/1.13d": 8,
-        "LoD/1.14a": 8,
-        "LoD/1.14b": 8,
-        "LoD/1.14c": 8,
-        "LoD/1.14d": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0,
-        "Classic/1.01": 0,
-        "Classic/1.02": 0,
-        "Classic/1.03": 0,
-        "Classic/1.04c": 0,
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0,
-        "LoD/1.14a": 0,
-        "LoD/1.14b": 0,
-        "LoD/1.14c": 0,
-        "LoD/1.14d": 0,
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "cffa9ff338088808bf5749ca49298e21",
-        "Classic/1.01": "cffa9ff338088808bf5749ca49298e21",
-        "Classic/1.02": "cffa9ff338088808bf5749ca49298e21",
-        "Classic/1.03": "cffa9ff338088808bf5749ca49298e21",
-        "Classic/1.04c": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.07": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.08": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.09": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.09b": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.09d": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.10": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.11": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.11b": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.12a": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.13c": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.13d": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.14a": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.14b": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.14c": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/1.14d": "cffa9ff338088808bf5749ca49298e21",
-        "LoD/PD2": "cffa9ff338088808bf5749ca49298e21"
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "_radfree@4"
-        ],
-        "Classic/1.01": [
-          "_radfree@4"
-        ],
-        "Classic/1.02": [
-          "_radfree@4"
-        ],
-        "Classic/1.03": [
-          "_radfree@4"
-        ],
-        "Classic/1.04c": [
-          "_radfree@4"
-        ],
-        "LoD/1.07": [
-          "_radfree@4"
-        ],
-        "LoD/1.08": [
-          "_radfree@4"
-        ],
-        "LoD/1.09": [
-          "_radfree@4"
-        ],
-        "LoD/1.09b": [
-          "_radfree@4"
-        ],
-        "LoD/1.09d": [
-          "_radfree@4"
-        ],
-        "LoD/1.10": [
-          "_radfree@4"
-        ],
-        "LoD/1.11": [
-          "_radfree@4"
-        ],
-        "LoD/1.11b": [
-          "_radfree@4"
-        ],
-        "LoD/1.12a": [
-          "_radfree@4"
-        ],
-        "LoD/1.13c": [
-          "_radfree@4"
-        ],
-        "LoD/1.13d": [
-          "_radfree@4"
-        ],
-        "LoD/1.14a": [
-          "_radfree@4"
-        ],
-        "LoD/1.14b": [
-          "_radfree@4"
-        ],
-        "LoD/1.14c": [
-          "_radfree@4"
-        ],
-        "LoD/1.14d": [
-          "_radfree@4"
-        ],
-        "LoD/PD2": [
-          "_radfree@4"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "caller_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "api_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 1,
-        "Classic/1.01": 1,
-        "Classic/1.02": 1,
-        "Classic/1.03": 1,
-        "Classic/1.04c": 1,
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1,
-        "LoD/1.14a": 1,
-        "LoD/1.14b": 1,
-        "LoD/1.14c": 1,
-        "LoD/1.14d": 1,
-        "LoD/PD2": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "Classic/1.01": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "Classic/1.02": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "Classic/1.03": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "Classic/1.04c": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.07": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.08": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.09": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.09b": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.09d": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.10": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.11": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.11b": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.12a": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.13c": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.13d": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.14a": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.14b": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.14c": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ],
-        "LoD/1.14d": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "export",
-        "Classic/1.01": "export",
-        "Classic/1.02": "export",
-        "Classic/1.03": "export",
-        "Classic/1.04c": "export",
-        "LoD/1.07": "export",
-        "LoD/1.08": "export",
-        "LoD/1.09": "export",
-        "LoD/1.09b": "export",
-        "LoD/1.09d": "export",
-        "LoD/1.10": "export",
-        "LoD/1.11": "export",
-        "LoD/1.11b": "export",
-        "LoD/1.12a": "export",
-        "LoD/1.13c": "export",
-        "LoD/1.13d": "export",
-        "LoD/1.14a": "export",
-        "LoD/1.14b": "export",
-        "LoD/1.14c": "export",
-        "LoD/1.14d": "export"
-      }
-    },
-    "SmackW32_EXP_24": {
+    "SmackW32_NOP_4c3015666937": {
       "addresses": {
         "Classic/1.00": "0x1000B4A0",
         "Classic/1.01": "0x1000B4A0",
@@ -153510,8 +146391,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:24",
+      "method": "NOP",
+      "index": "NOP:4c3015666937dcd43d343eb9304c1c3543a2eae085bb449b591a9a649cb8e46b",
       "indexes": {
         "EXP": "24",
         "STR": null,
@@ -154392,7 +147273,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_27": {
+    "SmackW32_NOP_d4898204a8ca": {
       "addresses": {
         "Classic/1.00": "0x1000B5A0",
         "Classic/1.01": "0x1000B5A0",
@@ -154467,8 +147348,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:27",
+      "method": "NOP",
+      "index": "NOP:d4898204a8cafa5b613c36834bc8035d7cb9e65a44b3f9a3f3f179224bb89105",
       "indexes": {
         "EXP": "27",
         "STR": null,
@@ -155349,7 +148230,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_25": {
+    "SmackW32_NOP_a4982dc8b157": {
       "addresses": {
         "Classic/1.00": "0x1000B6A0",
         "Classic/1.01": "0x1000B6A0",
@@ -155424,8 +148305,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:25",
+      "method": "NOP",
+      "index": "NOP:a4982dc8b15794a17a9dd063070e327e2aca4def1681510e1acfef00d2f27c4d",
       "indexes": {
         "EXP": "25",
         "STR": null,
@@ -156366,7 +149247,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "export"
       }
     },
-    "SmackW32_EXP_26": {
+    "SmackW32_NOP_3a85ca90e3b8": {
       "addresses": {
         "Classic/1.00": "0x1000B7C0",
         "Classic/1.01": "0x1000B7C0",
@@ -156441,8 +149322,8 @@ var FUNCTIONS_SmackW32_dll = {
       "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:26",
+      "method": "NOP",
+      "index": "NOP:3a85ca90e3b8b23fab88b6ebab72b377c4297431b01aa0a68453ccac2d12ee17",
       "indexes": {
         "EXP": "26",
         "STR": null,
@@ -157537,164 +150418,164 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000c290|0x1000C290",
-          "radmalloc|0x10001000",
           "__setargv|0x1000C580",
+          "FUN_1000c4a0|0x1000C4A0",
+          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000c290|0x1000C290",
           "FUN_1000cad0|0x1000CAD0",
-          "FUN_1000cee0|0x1000CEE0"
+          "radmalloc|0x10001000"
         ],
         "Classic/1.01": [
           "FUN_1000cee0|0x1000CEE0",
-          "__setargv|0x1000C580",
           "FUN_1000c4a0|0x1000C4A0",
+          "FUN_1000cad0|0x1000CAD0",
           "radmalloc|0x10001000",
           "FUN_1000c290|0x1000C290",
-          "FUN_1000cad0|0x1000CAD0"
+          "__setargv|0x1000C580"
         ],
         "Classic/1.02": [
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cad0|0x1000CAD0",
-          "FUN_1000cee0|0x1000CEE0",
-          "FUN_1000c290|0x1000C290",
-          "__setargv|0x1000C580",
-          "radmalloc|0x10001000"
-        ],
-        "Classic/1.03": [
-          "FUN_1000cad0|0x1000CAD0",
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000c290|0x1000C290",
-          "FUN_1000cee0|0x1000CEE0",
-          "__setargv|0x1000C580",
-          "radmalloc|0x10001000"
-        ],
-        "Classic/1.04c": [
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cee0|0x1000CEE0",
-          "__setargv|0x1000C580",
-          "FUN_1000cad0|0x1000CAD0",
-          "FUN_1000c290|0x1000C290",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.07": [
-          "MapLocaleStringWithCodePage|0x1000CEE0",
-          "__setargv|0x1000C580",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "radmalloc|0x10001000",
-          "InitializeStdioHandles|0x1000C290"
-        ],
-        "LoD/1.08": [
-          "FUN_1000c290|0x1000C290",
-          "radmalloc|0x10001000",
-          "FUN_1000cad0|0x1000CAD0",
-          "FUN_1000cee0|0x1000CEE0",
-          "FUN_1000c4a0|0x1000C4A0",
-          "__setargv|0x1000C580"
-        ],
-        "LoD/1.09": [
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cad0|0x1000CAD0",
-          "__setargv|0x1000C580",
-          "FUN_1000c290|0x1000C290",
-          "FUN_1000cee0|0x1000CEE0",
-          "radmalloc|0x10001000"
-        ],
-        "LoD/1.09b": [
-          "FUN_1000cad0|0x1000CAD0",
-          "FUN_1000c290|0x1000C290",
-          "FUN_1000c4a0|0x1000C4A0",
-          "__setargv|0x1000C580",
-          "radmalloc|0x10001000",
-          "FUN_1000cee0|0x1000CEE0"
-        ],
-        "LoD/1.09d": [
-          "__setargv|0x1000C580",
           "FUN_1000cee0|0x1000CEE0",
           "radmalloc|0x10001000",
-          "FUN_1000c290|0x1000C290",
           "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cad0|0x1000CAD0"
-        ],
-        "LoD/1.10": [
-          "radmalloc|0x10001000",
-          "FUN_1000cad0|0x1000CAD0",
-          "FUN_1000c290|0x1000C290",
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cee0|0x1000CEE0",
-          "__setargv|0x1000C580"
-        ],
-        "LoD/1.11": [
-          "radmalloc|0x10001000",
           "__setargv|0x1000C580",
-          "FUN_1000cad0|0x1000CAD0",
-          "FUN_1000c290|0x1000C290",
-          "FUN_1000cee0|0x1000CEE0",
-          "FUN_1000c4a0|0x1000C4A0"
-        ],
-        "LoD/1.11b": [
-          "FUN_1000c4a0|0x1000C4A0",
-          "radmalloc|0x10001000",
-          "__setargv|0x1000C580",
-          "FUN_1000cee0|0x1000CEE0",
           "FUN_1000cad0|0x1000CAD0",
           "FUN_1000c290|0x1000C290"
         ],
-        "LoD/1.12a": [
+        "Classic/1.03": [
           "FUN_1000cee0|0x1000CEE0",
           "radmalloc|0x10001000",
           "FUN_1000c290|0x1000C290",
+          "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000c4a0|0x1000C4A0",
+          "__setargv|0x1000C580"
+        ],
+        "Classic/1.04c": [
+          "__setargv|0x1000C580",
+          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000cad0|0x1000CAD0",
+          "radmalloc|0x10001000",
+          "FUN_1000c290|0x1000C290",
+          "FUN_1000c4a0|0x1000C4A0"
+        ],
+        "LoD/1.07": [
+          "MapLocaleStringWithCodePage|0x1000CEE0",
+          "InitializeStdioHandles|0x1000C290",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "radmalloc|0x10001000",
+          "__setargv|0x1000C580",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0"
+        ],
+        "LoD/1.08": [
+          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000c4a0|0x1000C4A0",
+          "FUN_1000c290|0x1000C290",
+          "__setargv|0x1000C580",
+          "radmalloc|0x10001000",
+          "FUN_1000cad0|0x1000CAD0"
+        ],
+        "LoD/1.09": [
+          "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000c4a0|0x1000C4A0",
+          "__setargv|0x1000C580",
+          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000c290|0x1000C290",
+          "radmalloc|0x10001000"
+        ],
+        "LoD/1.09b": [
+          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000c290|0x1000C290",
+          "FUN_1000cad0|0x1000CAD0",
+          "radmalloc|0x10001000",
+          "__setargv|0x1000C580",
+          "FUN_1000c4a0|0x1000C4A0"
+        ],
+        "LoD/1.09d": [
+          "FUN_1000c4a0|0x1000C4A0",
+          "FUN_1000c290|0x1000C290",
+          "radmalloc|0x10001000",
+          "FUN_1000cee0|0x1000CEE0",
+          "__setargv|0x1000C580",
+          "FUN_1000cad0|0x1000CAD0"
+        ],
+        "LoD/1.10": [
           "FUN_1000c4a0|0x1000C4A0",
           "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000cee0|0x1000CEE0",
+          "__setargv|0x1000C580",
+          "radmalloc|0x10001000",
+          "FUN_1000c290|0x1000C290"
+        ],
+        "LoD/1.11": [
+          "FUN_1000c290|0x1000C290",
+          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000c4a0|0x1000C4A0",
+          "__setargv|0x1000C580",
+          "FUN_1000cad0|0x1000CAD0",
+          "radmalloc|0x10001000"
+        ],
+        "LoD/1.11b": [
+          "FUN_1000c290|0x1000C290",
+          "radmalloc|0x10001000",
+          "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000c4a0|0x1000C4A0",
+          "__setargv|0x1000C580",
+          "FUN_1000cee0|0x1000CEE0"
+        ],
+        "LoD/1.12a": [
+          "FUN_1000c290|0x1000C290",
+          "FUN_1000cad0|0x1000CAD0",
+          "radmalloc|0x10001000",
+          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000c4a0|0x1000C4A0",
           "__setargv|0x1000C580"
         ],
         "LoD/1.13c": [
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cee0|0x1000CEE0",
-          "FUN_1000cad0|0x1000CAD0",
-          "FUN_1000c290|0x1000C290",
           "radmalloc|0x10001000",
-          "__setargv|0x1000C580"
+          "FUN_1000c4a0|0x1000C4A0",
+          "FUN_1000c290|0x1000C290",
+          "FUN_1000cee0|0x1000CEE0",
+          "__setargv|0x1000C580",
+          "FUN_1000cad0|0x1000CAD0"
         ],
         "LoD/1.13d": [
           "FUN_1000c4a0|0x1000C4A0",
           "__setargv|0x1000C580",
           "radmalloc|0x10001000",
-          "FUN_1000c290|0x1000C290",
           "FUN_1000cee0|0x1000CEE0",
-          "FUN_1000cad0|0x1000CAD0"
+          "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000c290|0x1000C290"
         ],
         "LoD/1.14a": [
+          "radmalloc|0x10001000",
           "FUN_1000c4a0|0x1000C4A0",
           "FUN_1000c290|0x1000C290",
-          "radmalloc|0x10001000",
           "FUN_1000cee0|0x1000CEE0",
-          "FUN_1000cad0|0x1000CAD0",
-          "__setargv|0x1000C580"
+          "__setargv|0x1000C580",
+          "FUN_1000cad0|0x1000CAD0"
         ],
         "LoD/1.14b": [
-          "radmalloc|0x10001000",
+          "FUN_1000cee0|0x1000CEE0",
           "FUN_1000c290|0x1000C290",
+          "radmalloc|0x10001000",
           "__setargv|0x1000C580",
-          "FUN_1000cad0|0x1000CAD0",
           "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cee0|0x1000CEE0"
+          "FUN_1000cad0|0x1000CAD0"
         ],
         "LoD/1.14c": [
           "FUN_1000c290|0x1000C290",
-          "radmalloc|0x10001000",
           "FUN_1000cee0|0x1000CEE0",
-          "FUN_1000c4a0|0x1000C4A0",
+          "__setargv|0x1000C580",
           "FUN_1000cad0|0x1000CAD0",
-          "__setargv|0x1000C580"
+          "radmalloc|0x10001000",
+          "FUN_1000c4a0|0x1000C4A0"
         ],
         "LoD/1.14d": [
           "FUN_1000cee0|0x1000CEE0",
-          "radmalloc|0x10001000",
+          "__setargv|0x1000C580",
           "FUN_1000c4a0|0x1000C4A0",
           "FUN_1000c290|0x1000C290",
-          "FUN_1000cad0|0x1000CAD0",
-          "__setargv|0x1000C580"
+          "radmalloc|0x10001000",
+          "FUN_1000cad0|0x1000CAD0"
         ]
       },
       "instructions": {
@@ -158332,12 +151213,12 @@ var FUNCTIONS_SmackW32_dll = {
           "AllocateHeapMemory|0x1000B940"
         ],
         "Classic/1.04c": [
-          "AllocateHeapMemory|0x1000B940",
-          "InvokeOptionalHandler|0x1000C020"
+          "InvokeOptionalHandler|0x1000C020",
+          "AllocateHeapMemory|0x1000B940"
         ],
         "LoD/1.07": [
-          "AllocateHeapMemory|0x1000B940",
-          "InvokeOptionalHandler|0x1000C020"
+          "InvokeOptionalHandler|0x1000C020",
+          "AllocateHeapMemory|0x1000B940"
         ],
         "LoD/1.08": [
           "AllocateHeapMemory|0x1000B940",
@@ -158348,28 +151229,28 @@ var FUNCTIONS_SmackW32_dll = {
           "AllocateHeapMemory|0x1000B940"
         ],
         "LoD/1.09b": [
-          "InvokeOptionalHandler|0x1000C020",
-          "AllocateHeapMemory|0x1000B940"
-        ],
-        "LoD/1.09d": [
           "AllocateHeapMemory|0x1000B940",
           "InvokeOptionalHandler|0x1000C020"
+        ],
+        "LoD/1.09d": [
+          "InvokeOptionalHandler|0x1000C020",
+          "AllocateHeapMemory|0x1000B940"
         ],
         "LoD/1.10": [
           "InvokeOptionalHandler|0x1000C020",
           "AllocateHeapMemory|0x1000B940"
         ],
         "LoD/1.11": [
+          "AllocateHeapMemory|0x1000B940",
+          "InvokeOptionalHandler|0x1000C020"
+        ],
+        "LoD/1.11b": [
           "InvokeOptionalHandler|0x1000C020",
           "AllocateHeapMemory|0x1000B940"
         ],
-        "LoD/1.11b": [
-          "AllocateHeapMemory|0x1000B940",
-          "InvokeOptionalHandler|0x1000C020"
-        ],
         "LoD/1.12a": [
-          "AllocateHeapMemory|0x1000B940",
-          "InvokeOptionalHandler|0x1000C020"
+          "InvokeOptionalHandler|0x1000C020",
+          "AllocateHeapMemory|0x1000B940"
         ],
         "LoD/1.13c": [
           "InvokeOptionalHandler|0x1000C020",
@@ -158384,16 +151265,16 @@ var FUNCTIONS_SmackW32_dll = {
           "InvokeOptionalHandler|0x1000C020"
         ],
         "LoD/1.14b": [
-          "InvokeOptionalHandler|0x1000C020",
-          "AllocateHeapMemory|0x1000B940"
+          "AllocateHeapMemory|0x1000B940",
+          "InvokeOptionalHandler|0x1000C020"
         ],
         "LoD/1.14c": [
           "InvokeOptionalHandler|0x1000C020",
           "AllocateHeapMemory|0x1000B940"
         ],
         "LoD/1.14d": [
-          "AllocateHeapMemory|0x1000B940",
-          "InvokeOptionalHandler|0x1000C020"
+          "InvokeOptionalHandler|0x1000C020",
+          "AllocateHeapMemory|0x1000B940"
         ]
       },
       "callers": {
@@ -159953,164 +152834,164 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_1000c4a0|0x1000C4A0",
           "FUN_1000c470|0x1000C470",
+          "FUN_1000c4a0|0x1000C4A0",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_1000cad0|0x1000CAD0",
           "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000cad0|0x1000CAD0",
           "___crtGetStringTypeA|0x1000D380"
         ],
         "Classic/1.01": [
           "FUN_1000cee0|0x1000CEE0",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_1000c4a0|0x1000C4A0",
           "___crtGetStringTypeA|0x1000D380",
           "FUN_1000c470|0x1000C470",
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cad0|0x1000CAD0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "FUN_1000cad0|0x1000CAD0"
         ],
         "Classic/1.02": [
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cad0|0x1000CAD0",
           "FUN_1000cee0|0x1000CEE0",
-          "___crtGetStringTypeA|0x1000D380",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_1000c470|0x1000C470"
+          "FUN_1000c470|0x1000C470",
+          "FUN_1000c4a0|0x1000C4A0",
+          "___crtGetStringTypeA|0x1000D380",
+          "FUN_1000cad0|0x1000CAD0"
         ],
         "Classic/1.03": [
-          "FUN_1000cad0|0x1000CAD0",
-          "___crtGetStringTypeA|0x1000D380",
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cee0|0x1000CEE0",
           "FUN_1000c470|0x1000C470",
+          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000c4a0|0x1000C4A0",
+          "___crtGetStringTypeA|0x1000D380",
           "ApplyPresetUnitTileAttributes|0x10001040"
         ],
         "Classic/1.04c": [
-          "FUN_1000c4a0|0x1000C4A0",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_1000cee0|0x1000CEE0",
+          "___crtGetStringTypeA|0x1000D380",
           "FUN_1000cad0|0x1000CAD0",
           "FUN_1000c470|0x1000C470",
-          "___crtGetStringTypeA|0x1000D380"
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_1000c4a0|0x1000C4A0"
         ],
         "LoD/1.07": [
           "MapLocaleStringWithCodePage|0x1000CEE0",
           "CleanupHandleTable|0x1000C470",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "___crtGetStringTypeA|0x1000D380",
           "ParseCommandLineIntoTokens|0x1000C4A0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "___crtGetStringTypeA|0x1000D380"
         ],
         "LoD/1.08": [
-          "___crtGetStringTypeA|0x1000D380",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_1000cad0|0x1000CAD0",
           "FUN_1000cee0|0x1000CEE0",
           "FUN_1000c470|0x1000C470",
-          "FUN_1000c4a0|0x1000C4A0"
-        ],
-        "LoD/1.09": [
           "FUN_1000c4a0|0x1000C4A0",
-          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_1000cad0|0x1000CAD0",
           "___crtGetStringTypeA|0x1000D380",
+          "ApplyPresetUnitTileAttributes|0x10001040"
+        ],
+        "LoD/1.09": [
+          "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000c4a0|0x1000C4A0",
+          "___crtGetStringTypeA|0x1000D380",
           "FUN_1000c470|0x1000C470",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_1000cee0|0x1000CEE0"
         ],
         "LoD/1.09b": [
-          "FUN_1000cad0|0x1000CAD0",
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_1000c4a0|0x1000C4A0",
-          "___crtGetStringTypeA|0x1000D380",
           "FUN_1000cee0|0x1000CEE0",
-          "FUN_1000c470|0x1000C470"
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_1000c470|0x1000C470",
+          "___crtGetStringTypeA|0x1000D380",
+          "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000c4a0|0x1000C4A0"
         ],
         "LoD/1.09d": [
           "FUN_1000c470|0x1000C470",
+          "FUN_1000c4a0|0x1000C4A0",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_1000cee0|0x1000CEE0",
           "___crtGetStringTypeA|0x1000D380",
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cad0|0x1000CAD0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "FUN_1000cad0|0x1000CAD0"
         ],
         "LoD/1.10": [
-          "FUN_1000c470|0x1000C470",
+          "FUN_1000c4a0|0x1000C4A0",
+          "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000cee0|0x1000CEE0",
           "___crtGetStringTypeA|0x1000D380",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_1000cad0|0x1000CAD0",
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cee0|0x1000CEE0"
+          "FUN_1000c470|0x1000C470"
         ],
         "LoD/1.11": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_1000cad0|0x1000CAD0",
           "___crtGetStringTypeA|0x1000D380",
-          "FUN_1000c470|0x1000C470",
           "FUN_1000cee0|0x1000CEE0",
-          "FUN_1000c4a0|0x1000C4A0"
-        ],
-        "LoD/1.11b": [
           "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_1000c4a0|0x1000C4A0",
           "FUN_1000c470|0x1000C470",
-          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000cad0|0x1000CAD0"
+        ],
+        "LoD/1.11b": [
+          "FUN_1000c470|0x1000C470",
           "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000c4a0|0x1000C4A0",
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_1000cee0|0x1000CEE0",
           "___crtGetStringTypeA|0x1000D380"
         ],
         "LoD/1.12a": [
+          "FUN_1000c470|0x1000C470",
+          "___crtGetStringTypeA|0x1000D380",
+          "FUN_1000cad0|0x1000CAD0",
           "FUN_1000cee0|0x1000CEE0",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cad0|0x1000CAD0",
-          "___crtGetStringTypeA|0x1000D380",
-          "FUN_1000c470|0x1000C470"
+          "FUN_1000c4a0|0x1000C4A0"
         ],
         "LoD/1.13c": [
+          "___crtGetStringTypeA|0x1000D380",
           "FUN_1000c4a0|0x1000C4A0",
           "FUN_1000cee0|0x1000CEE0",
-          "___crtGetStringTypeA|0x1000D380",
-          "FUN_1000cad0|0x1000CAD0",
           "FUN_1000c470|0x1000C470",
-          "ApplyPresetUnitTileAttributes|0x10001040"
-        ],
-        "LoD/1.13d": [
-          "FUN_1000c470|0x1000C470",
-          "FUN_1000c4a0|0x1000C4A0",
-          "___crtGetStringTypeA|0x1000D380",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_1000cee0|0x1000CEE0",
           "FUN_1000cad0|0x1000CAD0"
         ],
-        "LoD/1.14a": [
+        "LoD/1.13d": [
           "FUN_1000c4a0|0x1000C4A0",
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_1000c470|0x1000C470",
+          "___crtGetStringTypeA|0x1000D380",
           "FUN_1000cee0|0x1000CEE0",
           "FUN_1000cad0|0x1000CAD0",
+          "ApplyPresetUnitTileAttributes|0x10001040"
+        ],
+        "LoD/1.14a": [
           "___crtGetStringTypeA|0x1000D380",
-          "FUN_1000c470|0x1000C470"
+          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_1000c4a0|0x1000C4A0",
+          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000c470|0x1000C470",
+          "FUN_1000cad0|0x1000CAD0"
         ],
         "LoD/1.14b": [
-          "ApplyPresetUnitTileAttributes|0x10001040",
+          "FUN_1000cee0|0x1000CEE0",
           "FUN_1000c470|0x1000C470",
-          "FUN_1000cad0|0x1000CAD0",
-          "___crtGetStringTypeA|0x1000D380",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cee0|0x1000CEE0"
+          "FUN_1000cad0|0x1000CAD0",
+          "___crtGetStringTypeA|0x1000D380"
         ],
         "LoD/1.14c": [
           "___crtGetStringTypeA|0x1000D380",
-          "FUN_1000cee0|0x1000CEE0",
           "FUN_1000c470|0x1000C470",
-          "FUN_1000c4a0|0x1000C4A0",
           "ApplyPresetUnitTileAttributes|0x10001040",
-          "FUN_1000cad0|0x1000CAD0"
+          "FUN_1000cee0|0x1000CEE0",
+          "FUN_1000cad0|0x1000CAD0",
+          "FUN_1000c4a0|0x1000C4A0"
         ],
         "LoD/1.14d": [
           "FUN_1000cee0|0x1000CEE0",
           "___crtGetStringTypeA|0x1000D380",
+          "ApplyPresetUnitTileAttributes|0x10001040",
           "FUN_1000c470|0x1000C470",
           "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000cad0|0x1000CAD0",
-          "ApplyPresetUnitTileAttributes|0x10001040"
+          "FUN_1000cad0|0x1000CAD0"
         ]
       },
       "instructions": {
@@ -161797,163 +154678,163 @@ var FUNCTIONS_SmackW32_dll = {
       "callers": {
         "Classic/1.00": [
           "FUN_1000991b|0x1000991B",
-          "FUN_10008800|0x10008800",
-          "_SmackClose@4|0x10005B20",
           "_SmackOpen@12|0x100043A0",
+          "FUN_10008800|0x10008800",
+          "FUN_10009770|0x10009770",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "FUN_10009770|0x10009770"
+          "_SmackClose@4|0x10005B20"
         ],
         "Classic/1.01": [
-          "FUN_1000991b|0x1000991B",
-          "FUN_10009770|0x10009770",
-          "_SmackClose@4|0x10005B20",
-          "FUN_10008800|0x10008800",
           "_SmackOpen@12|0x100043A0",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
-        ],
-        "Classic/1.02": [
+          "_SmackClose@4|0x10005B20",
+          "FUN_10009770|0x10009770",
           "FUN_1000991b|0x1000991B",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "FUN_10008800|0x10008800",
-          "_SmackOpen@12|0x100043A0",
+          "FUN_10008800|0x10008800"
+        ],
+        "Classic/1.02": [
           "_SmackClose@4|0x10005B20",
+          "FUN_10008800|0x10008800",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "FUN_1000991b|0x1000991B",
+          "_SmackOpen@12|0x100043A0",
           "FUN_10009770|0x10009770"
         ],
         "Classic/1.03": [
           "_SmackOpen@12|0x100043A0",
-          "FUN_10008800|0x10008800",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
           "_SmackClose@4|0x10005B20",
-          "FUN_1000991b|0x1000991B",
+          "FUN_10008800|0x10008800",
           "FUN_10009770|0x10009770",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
+          "FUN_1000991b|0x1000991B"
         ],
         "Classic/1.04c": [
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "FUN_10008800|0x10008800",
           "FUN_10009770|0x10009770",
           "_SmackOpen@12|0x100043A0",
-          "FUN_1000991b|0x1000991B",
           "_SmackClose@4|0x10005B20",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "FUN_10008800|0x10008800"
+          "FUN_1000991b|0x1000991B"
         ],
         "LoD/1.07": [
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "InitializeDirectSoundWindow|0x1000991B",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackClose@4|0x10005B20",
           "InitializeAudioStream|0x10009770",
-          "OpenWaveOutDevice|0x10008800"
+          "_SmackOpen@12|0x100043A0",
+          "OpenWaveOutDevice|0x10008800",
+          "InitializeDirectSoundWindow|0x1000991B",
+          "_SmackClose@4|0x10005B20",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
         ],
         "LoD/1.08": [
-          "_SmackClose@4|0x10005B20",
-          "_SmackOpen@12|0x100043A0",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
           "FUN_1000991b|0x1000991B",
           "FUN_10009770|0x10009770",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "_SmackClose@4|0x10005B20",
           "FUN_10008800|0x10008800"
         ],
         "LoD/1.09": [
+          "_SmackClose@4|0x10005B20",
           "FUN_10008800|0x10008800",
           "_SmackOpen@12|0x100043A0",
-          "FUN_1000991b|0x1000991B",
+          "FUN_10009770|0x10009770",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "_SmackClose@4|0x10005B20",
-          "FUN_10009770|0x10009770"
+          "FUN_1000991b|0x1000991B"
         ],
         "LoD/1.09b": [
-          "FUN_10009770|0x10009770",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "FUN_1000991b|0x1000991B",
           "FUN_10008800|0x10008800",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_1000991b|0x1000991B",
-          "_SmackClose@4|0x10005B20"
-        ],
-        "LoD/1.09d": [
-          "FUN_1000991b|0x1000991B",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
           "_SmackOpen@12|0x100043A0",
           "_SmackClose@4|0x10005B20",
-          "FUN_10008800|0x10008800",
           "FUN_10009770|0x10009770"
         ],
-        "LoD/1.10": [
+        "LoD/1.09d": [
+          "_SmackClose@4|0x10005B20",
           "FUN_10008800|0x10008800",
-          "_SmackOpen@12|0x100043A0",
           "FUN_10009770|0x10009770",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_1000991b|0x1000991B",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
+        ],
+        "LoD/1.10": [
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
           "_SmackClose@4|0x10005B20",
+          "FUN_10009770|0x10009770",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10008800|0x10008800",
           "FUN_1000991b|0x1000991B"
         ],
         "LoD/1.11": [
           "FUN_10009770|0x10009770",
-          "_SmackClose@4|0x10005B20",
-          "FUN_1000991b|0x1000991B",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "_SmackOpen@12|0x100043A0",
-          "FUN_10008800|0x10008800"
-        ],
-        "LoD/1.11b": [
           "FUN_10008800|0x10008800",
           "FUN_1000991b|0x1000991B",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "_SmackClose@4|0x10005B20"
+        ],
+        "LoD/1.11b": [
+          "FUN_1000991b|0x1000991B",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "FUN_10008800|0x10008800",
           "FUN_10009770|0x10009770",
           "_SmackOpen@12|0x100043A0",
-          "_SmackClose@4|0x10005B20",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
+          "_SmackClose@4|0x10005B20"
         ],
         "LoD/1.12a": [
           "_SmackOpen@12|0x100043A0",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "FUN_1000991b|0x1000991B",
           "FUN_10008800|0x10008800",
           "_SmackClose@4|0x10005B20",
-          "FUN_10009770|0x10009770"
-        ],
-        "LoD/1.13c": [
-          "_SmackClose@4|0x10005B20",
-          "FUN_10008800|0x10008800",
           "FUN_10009770|0x10009770",
-          "_SmackOpen@12|0x100043A0",
           "FUN_1000991b|0x1000991B",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
         ],
-        "LoD/1.13d": [
-          "_SmackOpen@12|0x100043A0",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+        "LoD/1.13c": [
           "_SmackClose@4|0x10005B20",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "_SmackOpen@12|0x100043A0",
           "FUN_10009770|0x10009770",
           "FUN_10008800|0x10008800",
           "FUN_1000991b|0x1000991B"
         ],
+        "LoD/1.13d": [
+          "FUN_10008800|0x10008800",
+          "FUN_1000991b|0x1000991B",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "_SmackOpen@12|0x100043A0",
+          "_SmackClose@4|0x10005B20",
+          "FUN_10009770|0x10009770"
+        ],
         "LoD/1.14a": [
           "_SmackClose@4|0x10005B20",
-          "FUN_10008800|0x10008800",
-          "FUN_1000991b|0x1000991B",
-          "FUN_10009770|0x10009770",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
-          "_SmackOpen@12|0x100043A0"
-        ],
-        "LoD/1.14b": [
           "_SmackOpen@12|0x100043A0",
           "FUN_1000991b|0x1000991B",
-          "FUN_10009770|0x10009770",
+          "FUN_10008800|0x10008800",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "FUN_10009770|0x10009770"
+        ],
+        "LoD/1.14b": [
           "_SmackClose@4|0x10005B20",
           "FUN_10008800|0x10008800",
+          "FUN_1000991b|0x1000991B",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10009770|0x10009770",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
         ],
         "LoD/1.14c": [
-          "_SmackOpen@12|0x100043A0",
-          "FUN_1000991b|0x1000991B",
-          "FUN_10008800|0x10008800",
-          "FUN_10009770|0x10009770",
-          "_SmackClose@4|0x10005B20",
-          "_SmackSoundSetDirectSoundHWND@4|0x10008D50"
-        ],
-        "LoD/1.14d": [
-          "FUN_10009770|0x10009770",
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
           "FUN_10008800|0x10008800",
-          "_SmackClose@4|0x10005B20",
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10009770|0x10009770",
           "FUN_1000991b|0x1000991B",
-          "_SmackOpen@12|0x100043A0"
+          "_SmackClose@4|0x10005B20"
+        ],
+        "LoD/1.14d": [
+          "_SmackOpen@12|0x100043A0",
+          "FUN_10008800|0x10008800",
+          "FUN_10009770|0x10009770",
+          "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
+          "_SmackClose@4|0x10005B20",
+          "FUN_1000991b|0x1000991B"
         ]
       },
       "instructions": {
@@ -163446,8 +156327,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00"
+          "_SmackToBuffer@28|0x10006B00",
+          "_SmackToScreen@28|0x100064E0"
         ],
         "Classic/1.01": [
           "_SmackToScreen@28|0x100064E0",
@@ -163458,40 +156339,40 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackToBuffer@28|0x10006B00"
         ],
         "Classic/1.03": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00"
+          "_SmackToBuffer@28|0x10006B00",
+          "_SmackToScreen@28|0x100064E0"
         ],
         "Classic/1.04c": [
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackToScreen@28|0x100064E0"
+          "_SmackToScreen@28|0x100064E0",
+          "_SmackToBuffer@28|0x10006B00"
         ],
         "LoD/1.07": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00"
+          "_SmackToBuffer@28|0x10006B00",
+          "_SmackToScreen@28|0x100064E0"
         ],
         "LoD/1.08": [
-          "_SmackToBuffer@28|0x10006B00",
-          "_SmackToScreen@28|0x100064E0"
+          "_SmackToScreen@28|0x100064E0",
+          "_SmackToBuffer@28|0x10006B00"
         ],
         "LoD/1.09": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00"
-        ],
-        "LoD/1.09b": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00"
-        ],
-        "LoD/1.09d": [
           "_SmackToBuffer@28|0x10006B00",
           "_SmackToScreen@28|0x100064E0"
         ],
-        "LoD/1.10": [
+        "LoD/1.09b": [
+          "_SmackToBuffer@28|0x10006B00",
+          "_SmackToScreen@28|0x100064E0"
+        ],
+        "LoD/1.09d": [
           "_SmackToScreen@28|0x100064E0",
           "_SmackToBuffer@28|0x10006B00"
         ],
+        "LoD/1.10": [
+          "_SmackToBuffer@28|0x10006B00",
+          "_SmackToScreen@28|0x100064E0"
+        ],
         "LoD/1.11": [
-          "_SmackToScreen@28|0x100064E0",
-          "_SmackToBuffer@28|0x10006B00"
+          "_SmackToBuffer@28|0x10006B00",
+          "_SmackToScreen@28|0x100064E0"
         ],
         "LoD/1.11b": [
           "_SmackToBuffer@28|0x10006B00",
@@ -164344,8 +157225,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "swap|0x1000BDC0",
-          "QuickSortPartitionThreeWay|0x1000BD60"
+          "QuickSortPartitionThreeWay|0x1000BD60",
+          "swap|0x1000BDC0"
         ],
         "Classic/1.01": [
           "QuickSortPartitionThreeWay|0x1000BD60",
@@ -164356,8 +157237,8 @@ var FUNCTIONS_SmackW32_dll = {
           "QuickSortPartitionThreeWay|0x1000BD60"
         ],
         "Classic/1.03": [
-          "QuickSortPartitionThreeWay|0x1000BD60",
-          "swap|0x1000BDC0"
+          "swap|0x1000BDC0",
+          "QuickSortPartitionThreeWay|0x1000BD60"
         ],
         "Classic/1.04c": [
           "swap|0x1000BDC0",
@@ -164368,40 +157249,40 @@ var FUNCTIONS_SmackW32_dll = {
           "swap|0x1000BDC0"
         ],
         "LoD/1.08": [
+          "QuickSortPartitionThreeWay|0x1000BD60",
+          "swap|0x1000BDC0"
+        ],
+        "LoD/1.09": [
           "swap|0x1000BDC0",
           "QuickSortPartitionThreeWay|0x1000BD60"
         ],
-        "LoD/1.09": [
-          "QuickSortPartitionThreeWay|0x1000BD60",
-          "swap|0x1000BDC0"
-        ],
         "LoD/1.09b": [
-          "QuickSortPartitionThreeWay|0x1000BD60",
-          "swap|0x1000BDC0"
+          "swap|0x1000BDC0",
+          "QuickSortPartitionThreeWay|0x1000BD60"
         ],
         "LoD/1.09d": [
-          "QuickSortPartitionThreeWay|0x1000BD60",
-          "swap|0x1000BDC0"
+          "swap|0x1000BDC0",
+          "QuickSortPartitionThreeWay|0x1000BD60"
         ],
         "LoD/1.10": [
           "QuickSortPartitionThreeWay|0x1000BD60",
           "swap|0x1000BDC0"
         ],
         "LoD/1.11": [
-          "swap|0x1000BDC0",
-          "QuickSortPartitionThreeWay|0x1000BD60"
+          "QuickSortPartitionThreeWay|0x1000BD60",
+          "swap|0x1000BDC0"
         ],
         "LoD/1.11b": [
           "swap|0x1000BDC0",
           "QuickSortPartitionThreeWay|0x1000BD60"
         ],
         "LoD/1.12a": [
-          "QuickSortPartitionThreeWay|0x1000BD60",
-          "swap|0x1000BDC0"
+          "swap|0x1000BDC0",
+          "QuickSortPartitionThreeWay|0x1000BD60"
         ],
         "LoD/1.13c": [
-          "QuickSortPartitionThreeWay|0x1000BD60",
-          "swap|0x1000BDC0"
+          "swap|0x1000BDC0",
+          "QuickSortPartitionThreeWay|0x1000BD60"
         ],
         "LoD/1.13d": [
           "QuickSortPartitionThreeWay|0x1000BD60",
@@ -164412,16 +157293,16 @@ var FUNCTIONS_SmackW32_dll = {
           "swap|0x1000BDC0"
         ],
         "LoD/1.14b": [
+          "QuickSortPartitionThreeWay|0x1000BD60",
+          "swap|0x1000BDC0"
+        ],
+        "LoD/1.14c": [
           "swap|0x1000BDC0",
           "QuickSortPartitionThreeWay|0x1000BD60"
         ],
-        "LoD/1.14c": [
-          "QuickSortPartitionThreeWay|0x1000BD60",
-          "swap|0x1000BDC0"
-        ],
         "LoD/1.14d": [
-          "QuickSortPartitionThreeWay|0x1000BD60",
-          "swap|0x1000BDC0"
+          "swap|0x1000BDC0",
+          "QuickSortPartitionThreeWay|0x1000BD60"
         ]
       },
       "callers": {
@@ -166342,20 +159223,20 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_1000bd60|0x1000BD60",
-          "FUN_1000bc00|0x1000BC00"
-        ],
-        "Classic/1.01": [
-          "FUN_1000bd60|0x1000BD60",
-          "FUN_1000bc00|0x1000BC00"
-        ],
-        "Classic/1.02": [
-          "FUN_1000bd60|0x1000BD60",
-          "FUN_1000bc00|0x1000BC00"
-        ],
-        "Classic/1.03": [
           "FUN_1000bc00|0x1000BC00",
           "FUN_1000bd60|0x1000BD60"
+        ],
+        "Classic/1.01": [
+          "FUN_1000bc00|0x1000BC00",
+          "FUN_1000bd60|0x1000BD60"
+        ],
+        "Classic/1.02": [
+          "FUN_1000bc00|0x1000BC00",
+          "FUN_1000bd60|0x1000BD60"
+        ],
+        "Classic/1.03": [
+          "FUN_1000bd60|0x1000BD60",
+          "FUN_1000bc00|0x1000BC00"
         ],
         "Classic/1.04c": [
           "FUN_1000bc00|0x1000BC00",
@@ -166366,12 +159247,12 @@ var FUNCTIONS_SmackW32_dll = {
           "QuickSortPartition|0x1000BC00"
         ],
         "LoD/1.08": [
-          "FUN_1000bc00|0x1000BC00",
-          "FUN_1000bd60|0x1000BD60"
-        ],
-        "LoD/1.09": [
           "FUN_1000bd60|0x1000BD60",
           "FUN_1000bc00|0x1000BC00"
+        ],
+        "LoD/1.09": [
+          "FUN_1000bc00|0x1000BC00",
+          "FUN_1000bd60|0x1000BD60"
         ],
         "LoD/1.09b": [
           "FUN_1000bd60|0x1000BD60",
@@ -166382,36 +159263,36 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_1000bd60|0x1000BD60"
         ],
         "LoD/1.10": [
-          "FUN_1000bd60|0x1000BD60",
-          "FUN_1000bc00|0x1000BC00"
-        ],
-        "LoD/1.11": [
           "FUN_1000bc00|0x1000BC00",
           "FUN_1000bd60|0x1000BD60"
+        ],
+        "LoD/1.11": [
+          "FUN_1000bd60|0x1000BD60",
+          "FUN_1000bc00|0x1000BC00"
         ],
         "LoD/1.11b": [
           "FUN_1000bc00|0x1000BC00",
           "FUN_1000bd60|0x1000BD60"
         ],
         "LoD/1.12a": [
-          "FUN_1000bc00|0x1000BC00",
-          "FUN_1000bd60|0x1000BD60"
+          "FUN_1000bd60|0x1000BD60",
+          "FUN_1000bc00|0x1000BC00"
         ],
         "LoD/1.13c": [
           "FUN_1000bc00|0x1000BC00",
           "FUN_1000bd60|0x1000BD60"
         ],
         "LoD/1.13d": [
-          "FUN_1000bd60|0x1000BD60",
-          "FUN_1000bc00|0x1000BC00"
+          "FUN_1000bc00|0x1000BC00",
+          "FUN_1000bd60|0x1000BD60"
         ],
         "LoD/1.14a": [
           "FUN_1000bd60|0x1000BD60",
           "FUN_1000bc00|0x1000BC00"
         ],
         "LoD/1.14b": [
-          "FUN_1000bd60|0x1000BD60",
-          "FUN_1000bc00|0x1000BC00"
+          "FUN_1000bc00|0x1000BC00",
+          "FUN_1000bd60|0x1000BD60"
         ],
         "LoD/1.14c": [
           "FUN_1000bc00|0x1000BC00",
@@ -167116,344 +159997,344 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetVersion|0x49",
-          "GetProcAddress|0x47",
-          "InitializeStdioHandles|0x1000C290",
-          "DestroyPrivateHeap|0x1000C060",
-          "___initmbctable|0x1000CAC0",
-          "SetNTInitializedFlag|0x1000CC70",
-          "__setargv|0x1000C580",
-          "CreatePrivateHeap|0x1000C040",
-          "GetCommandLineA|0x45",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
           "__cinit|0x1000C160",
-          "InitializeCleanupSequence|0x1000C1B0",
           "CleanupHandleTable|0x1000C470",
-          "GetModuleHandleA|0x48",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0"
-        ],
-        "Classic/1.01": [
-          "GetVersion|0x49",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "GetProcAddress|0x47",
-          "GetCommandLineA|0x45",
           "___initmbctable|0x1000CAC0",
-          "CleanupHandleTable|0x1000C470",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "__cinit|0x1000C160",
-          "GetModuleHandleA|0x48",
           "SetNTInitializedFlag|0x1000CC70",
-          "CreatePrivateHeap|0x1000C040",
-          "__setargv|0x1000C580",
-          "DestroyPrivateHeap|0x1000C060",
-          "InitializeStdioHandles|0x1000C290",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0"
-        ],
-        "Classic/1.02": [
           "ParseCommandLineIntoTokens|0x1000C4A0",
-          "__cinit|0x1000C160",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "__setargv|0x1000C580",
-          "GetVersion|0x49",
-          "___initmbctable|0x1000CAC0",
+          "GetModuleHandleA|0x48",
           "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "GetModuleHandleA|0x48",
-          "CreatePrivateHeap|0x1000C040",
-          "GetProcAddress|0x47",
-          "SetNTInitializedFlag|0x1000CC70",
-          "InitializeStdioHandles|0x1000C290",
           "GetCommandLineA|0x45",
-          "DestroyPrivateHeap|0x1000C060",
-          "CleanupHandleTable|0x1000C470"
-        ],
-        "Classic/1.03": [
-          "GetVersion|0x49",
-          "GetModuleHandleA|0x48",
-          "SetNTInitializedFlag|0x1000CC70",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "__cinit|0x1000C160",
-          "___initmbctable|0x1000CAC0",
-          "GetProcAddress|0x47",
-          "DestroyPrivateHeap|0x1000C060",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "InitializeStdioHandles|0x1000C290",
-          "GetCommandLineA|0x45",
-          "CleanupHandleTable|0x1000C470",
-          "CreatePrivateHeap|0x1000C040",
-          "__setargv|0x1000C580"
-        ],
-        "Classic/1.04c": [
-          "GetProcAddress|0x47",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "GetCommandLineA|0x45",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
           "__setargv|0x1000C580",
-          "___initmbctable|0x1000CAC0",
-          "__cinit|0x1000C160",
-          "GetVersion|0x49",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "GetModuleHandleA|0x48",
-          "InitializeStdioHandles|0x1000C290",
-          "DestroyPrivateHeap|0x1000C060",
-          "SetNTInitializedFlag|0x1000CC70",
-          "CreatePrivateHeap|0x1000C040",
-          "CleanupHandleTable|0x1000C470"
-        ],
-        "LoD/1.07": [
-          "___initmbctable|0x1000CAC0",
-          "GetCommandLineA|0x45",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "GetModuleHandleA|0x48",
           "GetProcAddress|0x47",
-          "DestroyPrivateHeap|0x1000C060",
-          "InitializeCleanupSequence|0x1000C1B0",
           "CreatePrivateHeap|0x1000C040",
           "GetVersion|0x49",
-          "CleanupHandleTable|0x1000C470",
-          "__setargv|0x1000C580",
-          "SetNTInitializedFlag|0x1000CC70",
-          "__cinit|0x1000C160",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "DestroyPrivateHeap|0x1000C060",
           "InitializeStdioHandles|0x1000C290"
         ],
-        "LoD/1.08": [
-          "InitializeCleanupSequence|0x1000C1B0",
+        "Classic/1.01": [
           "CreatePrivateHeap|0x1000C040",
+          "GetCommandLineA|0x45",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "___initmbctable|0x1000CAC0",
+          "GetProcAddress|0x47",
+          "GetVersion|0x49",
           "InitializeStdioHandles|0x1000C290",
+          "DestroyPrivateHeap|0x1000C060",
           "__cinit|0x1000C160",
-          "GetVersion|0x49",
-          "SetNTInitializedFlag|0x1000CC70",
-          "DestroyPrivateHeap|0x1000C060",
-          "GetCommandLineA|0x45",
-          "__setargv|0x1000C580",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "InitializeCleanupSequence|0x1000C1B0",
           "GetModuleHandleA|0x48",
-          "___initmbctable|0x1000CAC0",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "SetNTInitializedFlag|0x1000CC70",
           "CleanupHandleTable|0x1000C470",
-          "GetProcAddress|0x47"
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "__setargv|0x1000C580"
         ],
-        "LoD/1.09": [
+        "Classic/1.02": [
           "__cinit|0x1000C160",
-          "GetCommandLineA|0x45",
-          "GetProcAddress|0x47",
-          "SetNTInitializedFlag|0x1000CC70",
-          "__setargv|0x1000C580",
           "CreatePrivateHeap|0x1000C040",
-          "DestroyPrivateHeap|0x1000C060",
-          "CleanupHandleTable|0x1000C470",
-          "GetVersion|0x49",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "GetModuleHandleA|0x48",
-          "InitializeStdioHandles|0x1000C290",
-          "___initmbctable|0x1000CAC0",
-          "InitializeCleanupSequence|0x1000C1B0"
-        ],
-        "LoD/1.09b": [
-          "DestroyPrivateHeap|0x1000C060",
-          "InitializeStdioHandles|0x1000C290",
           "GetProcAddress|0x47",
           "GetModuleHandleA|0x48",
-          "SetNTInitializedFlag|0x1000CC70",
-          "CleanupHandleTable|0x1000C470",
-          "CreatePrivateHeap|0x1000C040",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "GetCommandLineA|0x45",
           "ParseCommandLineIntoTokens|0x1000C4A0",
-          "___initmbctable|0x1000CAC0",
           "__setargv|0x1000C580",
+          "InitializeStdioHandles|0x1000C290",
           "InitializeCleanupSequence|0x1000C1B0",
-          "GetVersion|0x49",
-          "__cinit|0x1000C160"
-        ],
-        "LoD/1.09d": [
+          "GetCommandLineA|0x45",
           "GetVersion|0x49",
           "DestroyPrivateHeap|0x1000C060",
-          "CreatePrivateHeap|0x1000C040",
-          "GetProcAddress|0x47",
+          "CleanupHandleTable|0x1000C470",
+          "___initmbctable|0x1000CAC0",
           "SetNTInitializedFlag|0x1000CC70",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0"
+        ],
+        "Classic/1.03": [
+          "CleanupHandleTable|0x1000C470",
+          "___initmbctable|0x1000CAC0",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "InitializeStdioHandles|0x1000C290",
+          "DestroyPrivateHeap|0x1000C060",
+          "SetNTInitializedFlag|0x1000CC70",
+          "GetProcAddress|0x47",
+          "__setargv|0x1000C580",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
           "__cinit|0x1000C160",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "InitializeStdioHandles|0x1000C290",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "GetModuleHandleA|0x48",
-          "__setargv|0x1000C580",
-          "___initmbctable|0x1000CAC0",
-          "CleanupHandleTable|0x1000C470",
-          "GetCommandLineA|0x45",
-          "InitializeCleanupSequence|0x1000C1B0"
-        ],
-        "LoD/1.10": [
-          "CleanupHandleTable|0x1000C470",
-          "GetVersion|0x49",
-          "InitializeStdioHandles|0x1000C290",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "__setargv|0x1000C580",
-          "__cinit|0x1000C160",
-          "GetProcAddress|0x47",
-          "GetCommandLineA|0x45",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
           "InitializeCleanupSequence|0x1000C1B0",
-          "CreatePrivateHeap|0x1000C040",
-          "SetNTInitializedFlag|0x1000CC70",
-          "DestroyPrivateHeap|0x1000C060",
           "GetModuleHandleA|0x48",
-          "___initmbctable|0x1000CAC0"
-        ],
-        "LoD/1.11": [
-          "SetNTInitializedFlag|0x1000CC70",
-          "GetProcAddress|0x47",
-          "___initmbctable|0x1000CAC0",
-          "DestroyPrivateHeap|0x1000C060",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "GetCommandLineA|0x45",
           "GetVersion|0x49",
-          "InitializeStdioHandles|0x1000C290",
-          "GetModuleHandleA|0x48",
-          "InitializeCleanupSequence|0x1000C1B0",
           "CreatePrivateHeap|0x1000C040",
-          "__setargv|0x1000C580",
-          "__cinit|0x1000C160",
-          "CleanupHandleTable|0x1000C470",
-          "ParseCommandLineIntoTokens|0x1000C4A0"
-        ],
-        "LoD/1.11b": [
-          "GetProcAddress|0x47",
-          "CreatePrivateHeap|0x1000C040",
-          "DestroyPrivateHeap|0x1000C060",
-          "SetNTInitializedFlag|0x1000CC70",
-          "___initmbctable|0x1000CAC0",
-          "CleanupHandleTable|0x1000C470",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "GetVersion|0x49",
-          "InitializeStdioHandles|0x1000C290",
-          "GetCommandLineA|0x45",
-          "GetModuleHandleA|0x48",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "__setargv|0x1000C580",
-          "__cinit|0x1000C160"
-        ],
-        "LoD/1.12a": [
-          "GetVersion|0x49",
-          "InitializeStdioHandles|0x1000C290",
-          "GetModuleHandleA|0x48",
-          "__setargv|0x1000C580",
-          "CreatePrivateHeap|0x1000C040",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "___initmbctable|0x1000CAC0",
-          "DestroyPrivateHeap|0x1000C060",
-          "CleanupHandleTable|0x1000C470",
-          "SetNTInitializedFlag|0x1000CC70",
-          "GetProcAddress|0x47",
-          "GetCommandLineA|0x45",
-          "__cinit|0x1000C160"
-        ],
-        "LoD/1.13c": [
-          "___initmbctable|0x1000CAC0",
-          "__cinit|0x1000C160",
-          "GetModuleHandleA|0x48",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "CleanupHandleTable|0x1000C470",
-          "GetVersion|0x49",
-          "DestroyPrivateHeap|0x1000C060",
-          "GetProcAddress|0x47",
-          "__setargv|0x1000C580",
-          "CreatePrivateHeap|0x1000C040",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "InitializeStdioHandles|0x1000C290",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "SetNTInitializedFlag|0x1000CC70",
           "GetCommandLineA|0x45"
         ],
-        "LoD/1.13d": [
-          "CleanupHandleTable|0x1000C470",
+        "Classic/1.04c": [
           "__setargv|0x1000C580",
-          "__cinit|0x1000C160",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "SetNTInitializedFlag|0x1000CC70",
-          "GetCommandLineA|0x45",
-          "GetProcAddress|0x47",
-          "InitializeStdioHandles|0x1000C290",
+          "CreatePrivateHeap|0x1000C040",
           "___initmbctable|0x1000CAC0",
+          "GetModuleHandleA|0x48",
+          "CleanupHandleTable|0x1000C470",
+          "GetProcAddress|0x47",
+          "__cinit|0x1000C160",
+          "DestroyPrivateHeap|0x1000C060",
+          "GetVersion|0x49",
+          "InitializeCleanupSequence|0x1000C1B0",
           "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "SetNTInitializedFlag|0x1000CC70",
+          "InitializeStdioHandles|0x1000C290",
+          "GetCommandLineA|0x45",
+          "ParseCommandLineIntoTokens|0x1000C4A0"
+        ],
+        "LoD/1.07": [
+          "__cinit|0x1000C160",
           "DestroyPrivateHeap|0x1000C060",
           "GetVersion|0x49",
           "GetModuleHandleA|0x48",
-          "CreatePrivateHeap|0x1000C040"
+          "InitializeStdioHandles|0x1000C290",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "SetNTInitializedFlag|0x1000CC70",
+          "GetProcAddress|0x47",
+          "CreatePrivateHeap|0x1000C040",
+          "GetCommandLineA|0x45",
+          "___initmbctable|0x1000CAC0",
+          "CleanupHandleTable|0x1000C470",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "__setargv|0x1000C580"
+        ],
+        "LoD/1.08": [
+          "GetVersion|0x49",
+          "CleanupHandleTable|0x1000C470",
+          "CreatePrivateHeap|0x1000C040",
+          "__setargv|0x1000C580",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "SetNTInitializedFlag|0x1000CC70",
+          "GetProcAddress|0x47",
+          "GetModuleHandleA|0x48",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "__cinit|0x1000C160",
+          "InitializeStdioHandles|0x1000C290",
+          "DestroyPrivateHeap|0x1000C060",
+          "GetCommandLineA|0x45",
+          "___initmbctable|0x1000CAC0"
+        ],
+        "LoD/1.09": [
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "GetModuleHandleA|0x48",
+          "DestroyPrivateHeap|0x1000C060",
+          "GetProcAddress|0x47",
+          "__setargv|0x1000C580",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "___initmbctable|0x1000CAC0",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "GetCommandLineA|0x45",
+          "CreatePrivateHeap|0x1000C040",
+          "__cinit|0x1000C160",
+          "CleanupHandleTable|0x1000C470",
+          "SetNTInitializedFlag|0x1000CC70",
+          "GetVersion|0x49",
+          "InitializeStdioHandles|0x1000C290"
+        ],
+        "LoD/1.09b": [
+          "GetProcAddress|0x47",
+          "CleanupHandleTable|0x1000C470",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "DestroyPrivateHeap|0x1000C060",
+          "__setargv|0x1000C580",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "___initmbctable|0x1000CAC0",
+          "GetModuleHandleA|0x48",
+          "InitializeStdioHandles|0x1000C290",
+          "GetVersion|0x49",
+          "GetCommandLineA|0x45",
+          "CreatePrivateHeap|0x1000C040",
+          "__cinit|0x1000C160",
+          "SetNTInitializedFlag|0x1000CC70"
+        ],
+        "LoD/1.09d": [
+          "___initmbctable|0x1000CAC0",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "CleanupHandleTable|0x1000C470",
+          "SetNTInitializedFlag|0x1000CC70",
+          "GetCommandLineA|0x45",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "GetVersion|0x49",
+          "CreatePrivateHeap|0x1000C040",
+          "InitializeStdioHandles|0x1000C290",
+          "__cinit|0x1000C160",
+          "GetModuleHandleA|0x48",
+          "__setargv|0x1000C580",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "DestroyPrivateHeap|0x1000C060",
+          "GetProcAddress|0x47"
+        ],
+        "LoD/1.10": [
+          "GetVersion|0x49",
+          "___initmbctable|0x1000CAC0",
+          "__cinit|0x1000C160",
+          "GetProcAddress|0x47",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "CreatePrivateHeap|0x1000C040",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "__setargv|0x1000C580",
+          "GetModuleHandleA|0x48",
+          "GetCommandLineA|0x45",
+          "SetNTInitializedFlag|0x1000CC70",
+          "DestroyPrivateHeap|0x1000C060",
+          "CleanupHandleTable|0x1000C470",
+          "InitializeStdioHandles|0x1000C290"
+        ],
+        "LoD/1.11": [
+          "InitializeStdioHandles|0x1000C290",
+          "__cinit|0x1000C160",
+          "GetCommandLineA|0x45",
+          "CreatePrivateHeap|0x1000C040",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "GetModuleHandleA|0x48",
+          "__setargv|0x1000C580",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "CleanupHandleTable|0x1000C470",
+          "GetVersion|0x49",
+          "SetNTInitializedFlag|0x1000CC70",
+          "___initmbctable|0x1000CAC0",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "GetProcAddress|0x47",
+          "DestroyPrivateHeap|0x1000C060"
+        ],
+        "LoD/1.11b": [
+          "CreatePrivateHeap|0x1000C040",
+          "CleanupHandleTable|0x1000C470",
+          "__cinit|0x1000C160",
+          "DestroyPrivateHeap|0x1000C060",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "___initmbctable|0x1000CAC0",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "InitializeStdioHandles|0x1000C290",
+          "GetVersion|0x49",
+          "GetModuleHandleA|0x48",
+          "GetCommandLineA|0x45",
+          "__setargv|0x1000C580",
+          "SetNTInitializedFlag|0x1000CC70",
+          "GetProcAddress|0x47"
+        ],
+        "LoD/1.12a": [
+          "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47",
+          "InitializeStdioHandles|0x1000C290",
+          "CleanupHandleTable|0x1000C470",
+          "GetCommandLineA|0x45",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "___initmbctable|0x1000CAC0",
+          "__setargv|0x1000C580",
+          "CreatePrivateHeap|0x1000C040",
+          "SetNTInitializedFlag|0x1000CC70",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "__cinit|0x1000C160",
+          "DestroyPrivateHeap|0x1000C060",
+          "GetVersion|0x49"
+        ],
+        "LoD/1.13c": [
+          "GetVersion|0x49",
+          "__cinit|0x1000C160",
+          "DestroyPrivateHeap|0x1000C060",
+          "CreatePrivateHeap|0x1000C040",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "InitializeStdioHandles|0x1000C290",
+          "GetCommandLineA|0x45",
+          "__setargv|0x1000C580",
+          "CleanupHandleTable|0x1000C470",
+          "SetNTInitializedFlag|0x1000CC70",
+          "___initmbctable|0x1000CAC0",
+          "GetModuleHandleA|0x48",
+          "GetProcAddress|0x47",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "InitializeCleanupSequence|0x1000C1B0"
+        ],
+        "LoD/1.13d": [
+          "__cinit|0x1000C160",
+          "GetCommandLineA|0x45",
+          "GetModuleHandleA|0x48",
+          "___initmbctable|0x1000CAC0",
+          "SetNTInitializedFlag|0x1000CC70",
+          "__setargv|0x1000C580",
+          "DestroyPrivateHeap|0x1000C060",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "CreatePrivateHeap|0x1000C040",
+          "InitializeStdioHandles|0x1000C290",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "CleanupHandleTable|0x1000C470",
+          "GetVersion|0x49",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.14a": [
           "GetVersion|0x49",
-          "SetNTInitializedFlag|0x1000CC70",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "InitializeStdioHandles|0x1000C290",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "CreatePrivateHeap|0x1000C040",
+          "DestroyPrivateHeap|0x1000C060",
           "GetCommandLineA|0x45",
-          "__cinit|0x1000C160",
-          "GetModuleHandleA|0x48",
-          "GetProcAddress|0x47",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
           "___initmbctable|0x1000CAC0",
-          "__setargv|0x1000C580",
-          "DestroyPrivateHeap|0x1000C060",
-          "CleanupHandleTable|0x1000C470"
-        ],
-        "LoD/1.14b": [
           "GetProcAddress|0x47",
           "__setargv|0x1000C580",
-          "DestroyPrivateHeap|0x1000C060",
-          "CleanupHandleTable|0x1000C470",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "GetVersion|0x49",
+          "GetModuleHandleA|0x48",
           "CreatePrivateHeap|0x1000C040",
           "ParseCommandLineIntoTokens|0x1000C4A0",
-          "GetModuleHandleA|0x48",
-          "___initmbctable|0x1000CAC0",
-          "InitializeStdioHandles|0x1000C290",
           "SetNTInitializedFlag|0x1000CC70",
-          "__cinit|0x1000C160",
-          "GetCommandLineA|0x45"
-        ],
-        "LoD/1.14c": [
-          "CreatePrivateHeap|0x1000C040",
           "InitializeStdioHandles|0x1000C290",
-          "GetVersion|0x49",
-          "___initmbctable|0x1000CAC0",
           "InitializeCleanupSequence|0x1000C1B0",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "CleanupHandleTable|0x1000C470",
-          "GetProcAddress|0x47",
-          "DestroyPrivateHeap|0x1000C060",
-          "__setargv|0x1000C580",
           "__cinit|0x1000C160",
-          "SetNTInitializedFlag|0x1000CC70",
-          "GetModuleHandleA|0x48",
-          "GetCommandLineA|0x45",
+          "CleanupHandleTable|0x1000C470",
           "GetEnvironmentStringsAsAnsi|0x1000CAD0"
         ],
-        "LoD/1.14d": [
-          "CleanupHandleTable|0x1000C470",
+        "LoD/1.14b": [
           "GetCommandLineA|0x45",
-          "CreatePrivateHeap|0x1000C040",
-          "GetVersion|0x49",
-          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "CleanupHandleTable|0x1000C470",
+          "SetNTInitializedFlag|0x1000CC70",
           "DestroyPrivateHeap|0x1000C060",
-          "___initmbctable|0x1000CAC0",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "GetModuleHandleA|0x48",
+          "CreatePrivateHeap|0x1000C040",
+          "InitializeStdioHandles|0x1000C290",
+          "GetVersion|0x49",
+          "GetProcAddress|0x47",
           "__setargv|0x1000C580",
           "__cinit|0x1000C160",
-          "GetProcAddress|0x47",
-          "InitializeCleanupSequence|0x1000C1B0",
-          "SetNTInitializedFlag|0x1000CC70",
           "ParseCommandLineIntoTokens|0x1000C4A0",
+          "___initmbctable|0x1000CAC0"
+        ],
+        "LoD/1.14c": [
           "InitializeStdioHandles|0x1000C290",
-          "GetModuleHandleA|0x48"
+          "__cinit|0x1000C160",
+          "CreatePrivateHeap|0x1000C040",
+          "__setargv|0x1000C580",
+          "GetCommandLineA|0x45",
+          "GetVersion|0x49",
+          "InitializeCleanupSequence|0x1000C1B0",
+          "___initmbctable|0x1000CAC0",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "GetModuleHandleA|0x48",
+          "CleanupHandleTable|0x1000C470",
+          "SetNTInitializedFlag|0x1000CC70",
+          "GetProcAddress|0x47",
+          "DestroyPrivateHeap|0x1000C060",
+          "ParseCommandLineIntoTokens|0x1000C4A0"
+        ],
+        "LoD/1.14d": [
+          "InitializeCleanupSequence|0x1000C1B0",
+          "GetModuleHandleA|0x48",
+          "GetCommandLineA|0x45",
+          "__setargv|0x1000C580",
+          "SetNTInitializedFlag|0x1000CC70",
+          "GetProcAddress|0x47",
+          "CleanupHandleTable|0x1000C470",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "__cinit|0x1000C160",
+          "InitializeStdioHandles|0x1000C290",
+          "GetEnvironmentStringsAsAnsi|0x1000CAD0",
+          "GetVersion|0x49",
+          "DestroyPrivateHeap|0x1000C060",
+          "___initmbctable|0x1000CAC0",
+          "CreatePrivateHeap|0x1000C040"
         ]
       },
       "callers": {
@@ -168678,54 +161559,54 @@ var FUNCTIONS_SmackW32_dll = {
       "display_name": "NOP_4e807cea31b4a360",
       "callees": {
         "Classic/1.00": [
-          "InitializeRuntimeEnvironment|0x1000BDF0",
+          "DllProcessEntry|0x1000CC80",
           "DestroyPrivateHeap|0x1000C060",
-          "DllProcessEntry|0x1000CC80"
+          "InitializeRuntimeEnvironment|0x1000BDF0"
         ],
         "Classic/1.01": [
-          "DestroyPrivateHeap|0x1000C060",
+          "InitializeRuntimeEnvironment|0x1000BDF0",
           "DllProcessEntry|0x1000CC80",
-          "InitializeRuntimeEnvironment|0x1000BDF0"
+          "DestroyPrivateHeap|0x1000C060"
         ],
         "Classic/1.02": [
           "InitializeRuntimeEnvironment|0x1000BDF0",
-          "DllProcessEntry|0x1000CC80",
-          "DestroyPrivateHeap|0x1000C060"
+          "DestroyPrivateHeap|0x1000C060",
+          "DllProcessEntry|0x1000CC80"
         ],
         "Classic/1.03": [
-          "DllProcessEntry|0x1000CC80",
           "InitializeRuntimeEnvironment|0x1000BDF0",
-          "DestroyPrivateHeap|0x1000C060"
+          "DestroyPrivateHeap|0x1000C060",
+          "DllProcessEntry|0x1000CC80"
         ],
         "Classic/1.04c": [
-          "DllProcessEntry|0x1000CC80",
           "DestroyPrivateHeap|0x1000C060",
+          "DllProcessEntry|0x1000CC80",
           "InitializeRuntimeEnvironment|0x1000BDF0"
         ],
         "LoD/1.07": [
-          "DllProcessEntry|0x1000CC80",
-          "DestroyPrivateHeap|0x1000C060",
-          "InitializeRuntimeEnvironment|0x1000BDF0"
-        ],
-        "LoD/1.08": [
-          "DllProcessEntry|0x1000CC80",
-          "DestroyPrivateHeap|0x1000C060",
-          "InitializeRuntimeEnvironment|0x1000BDF0"
-        ],
-        "LoD/1.09": [
-          "DllProcessEntry|0x1000CC80",
           "InitializeRuntimeEnvironment|0x1000BDF0",
-          "DestroyPrivateHeap|0x1000C060"
-        ],
-        "LoD/1.09b": [
           "DestroyPrivateHeap|0x1000C060",
-          "InitializeRuntimeEnvironment|0x1000BDF0",
           "DllProcessEntry|0x1000CC80"
         ],
-        "LoD/1.09d": [
+        "LoD/1.08": [
+          "InitializeRuntimeEnvironment|0x1000BDF0",
+          "DllProcessEntry|0x1000CC80",
+          "DestroyPrivateHeap|0x1000C060"
+        ],
+        "LoD/1.09": [
+          "InitializeRuntimeEnvironment|0x1000BDF0",
+          "DestroyPrivateHeap|0x1000C060",
+          "DllProcessEntry|0x1000CC80"
+        ],
+        "LoD/1.09b": [
           "DllProcessEntry|0x1000CC80",
           "DestroyPrivateHeap|0x1000C060",
           "InitializeRuntimeEnvironment|0x1000BDF0"
+        ],
+        "LoD/1.09d": [
+          "InitializeRuntimeEnvironment|0x1000BDF0",
+          "DllProcessEntry|0x1000CC80",
+          "DestroyPrivateHeap|0x1000C060"
         ],
         "LoD/1.10": [
           "InitializeRuntimeEnvironment|0x1000BDF0",
@@ -168733,9 +161614,9 @@ var FUNCTIONS_SmackW32_dll = {
           "DllProcessEntry|0x1000CC80"
         ],
         "LoD/1.11": [
+          "DllProcessEntry|0x1000CC80",
           "InitializeRuntimeEnvironment|0x1000BDF0",
-          "DestroyPrivateHeap|0x1000C060",
-          "DllProcessEntry|0x1000CC80"
+          "DestroyPrivateHeap|0x1000C060"
         ],
         "LoD/1.11b": [
           "DestroyPrivateHeap|0x1000C060",
@@ -168744,38 +161625,38 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.12a": [
           "DllProcessEntry|0x1000CC80",
-          "InitializeRuntimeEnvironment|0x1000BDF0",
-          "DestroyPrivateHeap|0x1000C060"
+          "DestroyPrivateHeap|0x1000C060",
+          "InitializeRuntimeEnvironment|0x1000BDF0"
         ],
         "LoD/1.13c": [
-          "InitializeRuntimeEnvironment|0x1000BDF0",
-          "DestroyPrivateHeap|0x1000C060",
-          "DllProcessEntry|0x1000CC80"
-        ],
-        "LoD/1.13d": [
-          "InitializeRuntimeEnvironment|0x1000BDF0",
-          "DestroyPrivateHeap|0x1000C060",
-          "DllProcessEntry|0x1000CC80"
-        ],
-        "LoD/1.14a": [
-          "DllProcessEntry|0x1000CC80",
-          "InitializeRuntimeEnvironment|0x1000BDF0",
-          "DestroyPrivateHeap|0x1000C060"
-        ],
-        "LoD/1.14b": [
           "DllProcessEntry|0x1000CC80",
           "DestroyPrivateHeap|0x1000C060",
           "InitializeRuntimeEnvironment|0x1000BDF0"
         ],
-        "LoD/1.14c": [
+        "LoD/1.13d": [
+          "DllProcessEntry|0x1000CC80",
+          "DestroyPrivateHeap|0x1000C060",
+          "InitializeRuntimeEnvironment|0x1000BDF0"
+        ],
+        "LoD/1.14a": [
           "DestroyPrivateHeap|0x1000C060",
           "InitializeRuntimeEnvironment|0x1000BDF0",
           "DllProcessEntry|0x1000CC80"
         ],
-        "LoD/1.14d": [
-          "DestroyPrivateHeap|0x1000C060",
+        "LoD/1.14b": [
+          "DllProcessEntry|0x1000CC80",
           "InitializeRuntimeEnvironment|0x1000BDF0",
-          "DllProcessEntry|0x1000CC80"
+          "DestroyPrivateHeap|0x1000C060"
+        ],
+        "LoD/1.14c": [
+          "DllProcessEntry|0x1000CC80",
+          "InitializeRuntimeEnvironment|0x1000BDF0",
+          "DestroyPrivateHeap|0x1000C060"
+        ],
+        "LoD/1.14d": [
+          "DllProcessEntry|0x1000CC80",
+          "InitializeRuntimeEnvironment|0x1000BDF0",
+          "DestroyPrivateHeap|0x1000C060"
         ]
       },
       "instructions": {
@@ -169555,38 +162436,38 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "__exit|0x1000C190",
           "__FF_MSGBANNER|0x1000CCB0",
-          "FUN_1000ccf0|0x1000CCF0"
+          "FUN_1000ccf0|0x1000CCF0",
+          "__exit|0x1000C190"
         ],
         "Classic/1.01": [
-          "FUN_1000ccf0|0x1000CCF0",
           "__exit|0x1000C190",
+          "FUN_1000ccf0|0x1000CCF0",
           "__FF_MSGBANNER|0x1000CCB0"
         ],
         "Classic/1.02": [
-          "__exit|0x1000C190",
-          "__FF_MSGBANNER|0x1000CCB0",
-          "FUN_1000ccf0|0x1000CCF0"
-        ],
-        "Classic/1.03": [
-          "__FF_MSGBANNER|0x1000CCB0",
           "FUN_1000ccf0|0x1000CCF0",
-          "__exit|0x1000C190"
-        ],
-        "Classic/1.04c": [
           "__exit|0x1000C190",
-          "FUN_1000ccf0|0x1000CCF0",
           "__FF_MSGBANNER|0x1000CCB0"
         ],
-        "LoD/1.07": [
-          "__FF_MSGBANNER|0x1000CCB0",
+        "Classic/1.03": [
           "FUN_1000ccf0|0x1000CCF0",
+          "__exit|0x1000C190",
+          "__FF_MSGBANNER|0x1000CCB0"
+        ],
+        "Classic/1.04c": [
+          "__FF_MSGBANNER|0x1000CCB0",
+          "__exit|0x1000C190",
+          "FUN_1000ccf0|0x1000CCF0"
+        ],
+        "LoD/1.07": [
+          "FUN_1000ccf0|0x1000CCF0",
+          "__FF_MSGBANNER|0x1000CCB0",
           "__exit|0x1000C190"
         ],
         "LoD/1.08": [
-          "FUN_1000ccf0|0x1000CCF0",
           "__exit|0x1000C190",
+          "FUN_1000ccf0|0x1000CCF0",
           "__FF_MSGBANNER|0x1000CCB0"
         ],
         "LoD/1.09": [
@@ -169596,8 +162477,8 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.09b": [
           "__FF_MSGBANNER|0x1000CCB0",
-          "__exit|0x1000C190",
-          "FUN_1000ccf0|0x1000CCF0"
+          "FUN_1000ccf0|0x1000CCF0",
+          "__exit|0x1000C190"
         ],
         "LoD/1.09d": [
           "__FF_MSGBANNER|0x1000CCB0",
@@ -169610,39 +162491,39 @@ var FUNCTIONS_SmackW32_dll = {
           "__FF_MSGBANNER|0x1000CCB0"
         ],
         "LoD/1.11": [
-          "FUN_1000ccf0|0x1000CCF0",
           "__FF_MSGBANNER|0x1000CCB0",
-          "__exit|0x1000C190"
+          "__exit|0x1000C190",
+          "FUN_1000ccf0|0x1000CCF0"
         ],
         "LoD/1.11b": [
           "__exit|0x1000C190",
-          "FUN_1000ccf0|0x1000CCF0",
-          "__FF_MSGBANNER|0x1000CCB0"
-        ],
-        "LoD/1.12a": [
-          "__exit|0x1000C190",
           "__FF_MSGBANNER|0x1000CCB0",
           "FUN_1000ccf0|0x1000CCF0"
         ],
-        "LoD/1.13c": [
+        "LoD/1.12a": [
           "FUN_1000ccf0|0x1000CCF0",
           "__FF_MSGBANNER|0x1000CCB0",
+          "__exit|0x1000C190"
+        ],
+        "LoD/1.13c": [
+          "__FF_MSGBANNER|0x1000CCB0",
+          "FUN_1000ccf0|0x1000CCF0",
           "__exit|0x1000C190"
         ],
         "LoD/1.13d": [
-          "__FF_MSGBANNER|0x1000CCB0",
           "FUN_1000ccf0|0x1000CCF0",
-          "__exit|0x1000C190"
-        ],
-        "LoD/1.14a": [
           "__exit|0x1000C190",
-          "FUN_1000ccf0|0x1000CCF0",
           "__FF_MSGBANNER|0x1000CCB0"
         ],
-        "LoD/1.14b": [
+        "LoD/1.14a": [
           "__FF_MSGBANNER|0x1000CCB0",
           "__exit|0x1000C190",
           "FUN_1000ccf0|0x1000CCF0"
+        ],
+        "LoD/1.14b": [
+          "__FF_MSGBANNER|0x1000CCB0",
+          "FUN_1000ccf0|0x1000CCF0",
+          "__exit|0x1000C190"
         ],
         "LoD/1.14c": [
           "__FF_MSGBANNER|0x1000CCB0",
@@ -169650,45 +162531,45 @@ var FUNCTIONS_SmackW32_dll = {
           "__exit|0x1000C190"
         ],
         "LoD/1.14d": [
-          "__exit|0x1000C190",
           "FUN_1000ccf0|0x1000CCF0",
+          "__exit|0x1000C190",
           "__FF_MSGBANNER|0x1000CCB0"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000c290|0x1000C290",
-          "__setargv|0x1000C580"
-        ],
-        "Classic/1.01": [
           "__setargv|0x1000C580",
           "FUN_1000c4a0|0x1000C4A0",
           "FUN_1000c290|0x1000C290"
+        ],
+        "Classic/1.01": [
+          "FUN_1000c4a0|0x1000C4A0",
+          "FUN_1000c290|0x1000C290",
+          "__setargv|0x1000C580"
         ],
         "Classic/1.02": [
           "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000c290|0x1000C290",
-          "__setargv|0x1000C580"
-        ],
-        "Classic/1.03": [
-          "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000c290|0x1000C290",
-          "__setargv|0x1000C580"
-        ],
-        "Classic/1.04c": [
-          "FUN_1000c4a0|0x1000C4A0",
           "__setargv|0x1000C580",
           "FUN_1000c290|0x1000C290"
         ],
-        "LoD/1.07": [
-          "__setargv|0x1000C580",
-          "ParseCommandLineIntoTokens|0x1000C4A0",
-          "InitializeStdioHandles|0x1000C290"
-        ],
-        "LoD/1.08": [
+        "Classic/1.03": [
           "FUN_1000c290|0x1000C290",
           "FUN_1000c4a0|0x1000C4A0",
+          "__setargv|0x1000C580"
+        ],
+        "Classic/1.04c": [
+          "__setargv|0x1000C580",
+          "FUN_1000c290|0x1000C290",
+          "FUN_1000c4a0|0x1000C4A0"
+        ],
+        "LoD/1.07": [
+          "InitializeStdioHandles|0x1000C290",
+          "ParseCommandLineIntoTokens|0x1000C4A0",
+          "__setargv|0x1000C580"
+        ],
+        "LoD/1.08": [
+          "FUN_1000c4a0|0x1000C4A0",
+          "FUN_1000c290|0x1000C290",
           "__setargv|0x1000C580"
         ],
         "LoD/1.09": [
@@ -169698,28 +162579,28 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.09b": [
           "FUN_1000c290|0x1000C290",
-          "FUN_1000c4a0|0x1000C4A0",
-          "__setargv|0x1000C580"
+          "__setargv|0x1000C580",
+          "FUN_1000c4a0|0x1000C4A0"
         ],
         "LoD/1.09d": [
-          "__setargv|0x1000C580",
-          "FUN_1000c290|0x1000C290",
-          "FUN_1000c4a0|0x1000C4A0"
-        ],
-        "LoD/1.10": [
-          "FUN_1000c290|0x1000C290",
           "FUN_1000c4a0|0x1000C4A0",
+          "FUN_1000c290|0x1000C290",
           "__setargv|0x1000C580"
         ],
-        "LoD/1.11": [
-          "__setargv|0x1000C580",
-          "FUN_1000c290|0x1000C290",
-          "FUN_1000c4a0|0x1000C4A0"
-        ],
-        "LoD/1.11b": [
+        "LoD/1.10": [
           "FUN_1000c4a0|0x1000C4A0",
           "__setargv|0x1000C580",
           "FUN_1000c290|0x1000C290"
+        ],
+        "LoD/1.11": [
+          "FUN_1000c290|0x1000C290",
+          "FUN_1000c4a0|0x1000C4A0",
+          "__setargv|0x1000C580"
+        ],
+        "LoD/1.11b": [
+          "FUN_1000c290|0x1000C290",
+          "FUN_1000c4a0|0x1000C4A0",
+          "__setargv|0x1000C580"
         ],
         "LoD/1.12a": [
           "FUN_1000c290|0x1000C290",
@@ -169748,13 +162629,13 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.14c": [
           "FUN_1000c290|0x1000C290",
-          "FUN_1000c4a0|0x1000C4A0",
-          "__setargv|0x1000C580"
+          "__setargv|0x1000C580",
+          "FUN_1000c4a0|0x1000C4A0"
         ],
         "LoD/1.14d": [
+          "__setargv|0x1000C580",
           "FUN_1000c4a0|0x1000C4A0",
-          "FUN_1000c290|0x1000C290",
-          "__setargv|0x1000C580"
+          "FUN_1000c290|0x1000C290"
         ]
       },
       "instructions": {
@@ -170537,8 +163418,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_1000b900|0x1000B900",
-          "FUN_1000d4b0|0x1000D4B0"
+          "FUN_1000d4b0|0x1000D4B0",
+          "FUN_1000b900|0x1000B900"
         ],
         "Classic/1.01": [
           "FUN_1000b900|0x1000B900",
@@ -170549,20 +163430,20 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_1000d4b0|0x1000D4B0"
         ],
         "Classic/1.03": [
-          "FUN_1000b900|0x1000B900",
-          "FUN_1000d4b0|0x1000D4B0"
-        ],
-        "Classic/1.04c": [
-          "FUN_1000b900|0x1000B900",
-          "FUN_1000d4b0|0x1000D4B0"
-        ],
-        "LoD/1.07": [
-          "ProcessWithRetry|0x1000B900",
-          "FUN_1000d4b0|0x1000D4B0"
-        ],
-        "LoD/1.08": [
           "FUN_1000d4b0|0x1000D4B0",
           "FUN_1000b900|0x1000B900"
+        ],
+        "Classic/1.04c": [
+          "FUN_1000d4b0|0x1000D4B0",
+          "FUN_1000b900|0x1000B900"
+        ],
+        "LoD/1.07": [
+          "FUN_1000d4b0|0x1000D4B0",
+          "ProcessWithRetry|0x1000B900"
+        ],
+        "LoD/1.08": [
+          "FUN_1000b900|0x1000B900",
+          "FUN_1000d4b0|0x1000D4B0"
         ],
         "LoD/1.09": [
           "FUN_1000b900|0x1000B900",
@@ -170573,8 +163454,8 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_1000d4b0|0x1000D4B0"
         ],
         "LoD/1.09d": [
-          "FUN_1000d4b0|0x1000D4B0",
-          "FUN_1000b900|0x1000B900"
+          "FUN_1000b900|0x1000B900",
+          "FUN_1000d4b0|0x1000D4B0"
         ],
         "LoD/1.10": [
           "FUN_1000b900|0x1000B900",
@@ -170585,24 +163466,24 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_1000b900|0x1000B900"
         ],
         "LoD/1.11b": [
-          "FUN_1000b900|0x1000B900",
-          "FUN_1000d4b0|0x1000D4B0"
+          "FUN_1000d4b0|0x1000D4B0",
+          "FUN_1000b900|0x1000B900"
         ],
         "LoD/1.12a": [
-          "FUN_1000b900|0x1000B900",
-          "FUN_1000d4b0|0x1000D4B0"
+          "FUN_1000d4b0|0x1000D4B0",
+          "FUN_1000b900|0x1000B900"
         ],
         "LoD/1.13c": [
-          "FUN_1000b900|0x1000B900",
-          "FUN_1000d4b0|0x1000D4B0"
+          "FUN_1000d4b0|0x1000D4B0",
+          "FUN_1000b900|0x1000B900"
         ],
         "LoD/1.13d": [
           "FUN_1000d4b0|0x1000D4B0",
           "FUN_1000b900|0x1000B900"
         ],
         "LoD/1.14a": [
-          "FUN_1000b900|0x1000B900",
-          "FUN_1000d4b0|0x1000D4B0"
+          "FUN_1000d4b0|0x1000D4B0",
+          "FUN_1000b900|0x1000B900"
         ],
         "LoD/1.14b": [
           "FUN_1000d4b0|0x1000D4B0",
@@ -170613,8 +163494,8 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_1000d4b0|0x1000D4B0"
         ],
         "LoD/1.14d": [
-          "FUN_1000b900|0x1000B900",
-          "FUN_1000d4b0|0x1000D4B0"
+          "FUN_1000d4b0|0x1000D4B0",
+          "FUN_1000b900|0x1000B900"
         ]
       },
       "instructions": {
@@ -172231,28 +165112,28 @@ var FUNCTIONS_SmackW32_dll = {
           "entry|0x1000BF10"
         ],
         "Classic/1.03": [
-          "entry|0x1000BF10",
-          "FUN_1000bdf0|0x1000BDF0"
+          "FUN_1000bdf0|0x1000BDF0",
+          "entry|0x1000BF10"
         ],
         "Classic/1.04c": [
           "entry|0x1000BF10",
           "FUN_1000bdf0|0x1000BDF0"
         ],
         "LoD/1.07": [
-          "entry|0x1000BF10",
-          "InitializeRuntimeEnvironment|0x1000BDF0"
+          "InitializeRuntimeEnvironment|0x1000BDF0",
+          "entry|0x1000BF10"
         ],
         "LoD/1.08": [
-          "entry|0x1000BF10",
-          "FUN_1000bdf0|0x1000BDF0"
-        ],
-        "LoD/1.09": [
-          "entry|0x1000BF10",
-          "FUN_1000bdf0|0x1000BDF0"
-        ],
-        "LoD/1.09b": [
           "FUN_1000bdf0|0x1000BDF0",
           "entry|0x1000BF10"
+        ],
+        "LoD/1.09": [
+          "FUN_1000bdf0|0x1000BDF0",
+          "entry|0x1000BF10"
+        ],
+        "LoD/1.09b": [
+          "entry|0x1000BF10",
+          "FUN_1000bdf0|0x1000BDF0"
         ],
         "LoD/1.09d": [
           "entry|0x1000BF10",
@@ -172267,8 +165148,8 @@ var FUNCTIONS_SmackW32_dll = {
           "entry|0x1000BF10"
         ],
         "LoD/1.11b": [
-          "FUN_1000bdf0|0x1000BDF0",
-          "entry|0x1000BF10"
+          "entry|0x1000BF10",
+          "FUN_1000bdf0|0x1000BDF0"
         ],
         "LoD/1.12a": [
           "entry|0x1000BF10",
@@ -172279,8 +165160,8 @@ var FUNCTIONS_SmackW32_dll = {
           "entry|0x1000BF10"
         ],
         "LoD/1.13d": [
-          "FUN_1000bdf0|0x1000BDF0",
-          "entry|0x1000BF10"
+          "entry|0x1000BF10",
+          "FUN_1000bdf0|0x1000BDF0"
         ],
         "LoD/1.14a": [
           "entry|0x1000BF10",
@@ -172291,12 +165172,12 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_1000bdf0|0x1000BDF0"
         ],
         "LoD/1.14c": [
-          "entry|0x1000BF10",
-          "FUN_1000bdf0|0x1000BDF0"
+          "FUN_1000bdf0|0x1000BDF0",
+          "entry|0x1000BF10"
         ],
         "LoD/1.14d": [
-          "entry|0x1000BF10",
-          "FUN_1000bdf0|0x1000BDF0"
+          "FUN_1000bdf0|0x1000BDF0",
+          "entry|0x1000BF10"
         ]
       },
       "instructions": {
@@ -172888,20 +165769,20 @@ var FUNCTIONS_SmackW32_dll = {
           "MapLocaleStringWithCodePage|0x1000CEE0"
         ],
         "LoD/1.09b": [
-          "__isctype|0x1000D140",
-          "MapLocaleStringWithCodePage|0x1000CEE0"
-        ],
-        "LoD/1.09d": [
           "MapLocaleStringWithCodePage|0x1000CEE0",
           "__isctype|0x1000D140"
         ],
-        "LoD/1.10": [
+        "LoD/1.09d": [
           "__isctype|0x1000D140",
           "MapLocaleStringWithCodePage|0x1000CEE0"
         ],
+        "LoD/1.10": [
+          "MapLocaleStringWithCodePage|0x1000CEE0",
+          "__isctype|0x1000D140"
+        ],
         "LoD/1.11": [
-          "__isctype|0x1000D140",
-          "MapLocaleStringWithCodePage|0x1000CEE0"
+          "MapLocaleStringWithCodePage|0x1000CEE0",
+          "__isctype|0x1000D140"
         ],
         "LoD/1.11b": [
           "__isctype|0x1000D140",
@@ -172916,24 +165797,24 @@ var FUNCTIONS_SmackW32_dll = {
           "MapLocaleStringWithCodePage|0x1000CEE0"
         ],
         "LoD/1.13d": [
-          "MapLocaleStringWithCodePage|0x1000CEE0",
-          "__isctype|0x1000D140"
+          "__isctype|0x1000D140",
+          "MapLocaleStringWithCodePage|0x1000CEE0"
         ],
         "LoD/1.14a": [
           "MapLocaleStringWithCodePage|0x1000CEE0",
           "__isctype|0x1000D140"
         ],
         "LoD/1.14b": [
-          "__isctype|0x1000D140",
-          "MapLocaleStringWithCodePage|0x1000CEE0"
+          "MapLocaleStringWithCodePage|0x1000CEE0",
+          "__isctype|0x1000D140"
         ],
         "LoD/1.14c": [
           "MapLocaleStringWithCodePage|0x1000CEE0",
           "__isctype|0x1000D140"
         ],
         "LoD/1.14d": [
-          "MapLocaleStringWithCodePage|0x1000CEE0",
-          "__isctype|0x1000D140"
+          "__isctype|0x1000D140",
+          "MapLocaleStringWithCodePage|0x1000CEE0"
         ]
       },
       "callers": {
@@ -176216,22 +169097,22 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetCurrentProcess|0x43",
           "ExitProcess|0x42",
+          "__initterm|0x1000C270",
           "TerminateProcess|0x41",
-          "__initterm|0x1000C270"
+          "GetCurrentProcess|0x43"
         ],
         "Classic/1.01": [
-          "GetCurrentProcess|0x43",
-          "TerminateProcess|0x41",
+          "ExitProcess|0x42",
           "__initterm|0x1000C270",
-          "ExitProcess|0x42"
+          "TerminateProcess|0x41",
+          "GetCurrentProcess|0x43"
         ],
         "Classic/1.02": [
-          "GetCurrentProcess|0x43",
-          "__initterm|0x1000C270",
           "TerminateProcess|0x41",
-          "ExitProcess|0x42"
+          "ExitProcess|0x42",
+          "__initterm|0x1000C270",
+          "GetCurrentProcess|0x43"
         ],
         "Classic/1.03": [
           "GetCurrentProcess|0x43",
@@ -176242,92 +169123,92 @@ var FUNCTIONS_SmackW32_dll = {
         "Classic/1.04c": [
           "__initterm|0x1000C270",
           "GetCurrentProcess|0x43",
-          "ExitProcess|0x42",
-          "TerminateProcess|0x41"
+          "TerminateProcess|0x41",
+          "ExitProcess|0x42"
         ],
         "LoD/1.07": [
-          "TerminateProcess|0x41",
-          "ExitProcess|0x42",
           "GetCurrentProcess|0x43",
-          "__initterm|0x1000C270"
+          "ExitProcess|0x42",
+          "__initterm|0x1000C270",
+          "TerminateProcess|0x41"
         ],
         "LoD/1.08": [
-          "__initterm|0x1000C270",
           "ExitProcess|0x42",
           "GetCurrentProcess|0x43",
+          "__initterm|0x1000C270",
           "TerminateProcess|0x41"
         ],
         "LoD/1.09": [
+          "ExitProcess|0x42",
           "GetCurrentProcess|0x43",
           "TerminateProcess|0x41",
-          "__initterm|0x1000C270",
-          "ExitProcess|0x42"
+          "__initterm|0x1000C270"
         ],
         "LoD/1.09b": [
           "__initterm|0x1000C270",
-          "ExitProcess|0x42",
-          "GetCurrentProcess|0x43",
-          "TerminateProcess|0x41"
-        ],
-        "LoD/1.09d": [
           "TerminateProcess|0x41",
           "GetCurrentProcess|0x43",
-          "__initterm|0x1000C270",
           "ExitProcess|0x42"
         ],
-        "LoD/1.10": [
-          "__initterm|0x1000C270",
+        "LoD/1.09d": [
           "ExitProcess|0x42",
+          "TerminateProcess|0x41",
+          "__initterm|0x1000C270",
+          "GetCurrentProcess|0x43"
+        ],
+        "LoD/1.10": [
           "GetCurrentProcess|0x43",
+          "ExitProcess|0x42",
+          "__initterm|0x1000C270",
           "TerminateProcess|0x41"
         ],
         "LoD/1.11": [
           "TerminateProcess|0x41",
-          "__initterm|0x1000C270",
           "GetCurrentProcess|0x43",
-          "ExitProcess|0x42"
+          "ExitProcess|0x42",
+          "__initterm|0x1000C270"
         ],
         "LoD/1.11b": [
-          "TerminateProcess|0x41",
-          "__initterm|0x1000C270",
-          "GetCurrentProcess|0x43",
-          "ExitProcess|0x42"
-        ],
-        "LoD/1.12a": [
-          "TerminateProcess|0x41",
           "ExitProcess|0x42",
+          "TerminateProcess|0x41",
           "__initterm|0x1000C270",
           "GetCurrentProcess|0x43"
         ],
-        "LoD/1.13c": [
-          "GetCurrentProcess|0x43",
-          "TerminateProcess|0x41",
-          "__initterm|0x1000C270",
-          "ExitProcess|0x42"
-        ],
-        "LoD/1.13d": [
+        "LoD/1.12a": [
           "GetCurrentProcess|0x43",
           "ExitProcess|0x42",
+          "TerminateProcess|0x41",
+          "__initterm|0x1000C270"
+        ],
+        "LoD/1.13c": [
+          "ExitProcess|0x42",
+          "GetCurrentProcess|0x43",
+          "TerminateProcess|0x41",
+          "__initterm|0x1000C270"
+        ],
+        "LoD/1.13d": [
           "__initterm|0x1000C270",
-          "TerminateProcess|0x41"
+          "TerminateProcess|0x41",
+          "ExitProcess|0x42",
+          "GetCurrentProcess|0x43"
         ],
         "LoD/1.14a": [
-          "TerminateProcess|0x41",
           "GetCurrentProcess|0x43",
-          "__initterm|0x1000C270",
-          "ExitProcess|0x42"
+          "ExitProcess|0x42",
+          "TerminateProcess|0x41",
+          "__initterm|0x1000C270"
         ],
         "LoD/1.14b": [
           "TerminateProcess|0x41",
-          "ExitProcess|0x42",
           "__initterm|0x1000C270",
-          "GetCurrentProcess|0x43"
+          "GetCurrentProcess|0x43",
+          "ExitProcess|0x42"
         ],
         "LoD/1.14c": [
-          "__initterm|0x1000C270",
-          "ExitProcess|0x42",
           "TerminateProcess|0x41",
-          "GetCurrentProcess|0x43"
+          "GetCurrentProcess|0x43",
+          "__initterm|0x1000C270",
+          "ExitProcess|0x42"
         ],
         "LoD/1.14d": [
           "GetCurrentProcess|0x43",
@@ -176338,8 +169219,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "__exit|0x1000C190",
-          "InitializeCleanupSequence|0x1000C1B0"
+          "InitializeCleanupSequence|0x1000C1B0",
+          "__exit|0x1000C190"
         ],
         "Classic/1.01": [
           "__exit|0x1000C190",
@@ -176350,24 +169231,24 @@ var FUNCTIONS_SmackW32_dll = {
           "InitializeCleanupSequence|0x1000C1B0"
         ],
         "Classic/1.03": [
-          "InitializeCleanupSequence|0x1000C1B0",
-          "__exit|0x1000C190"
+          "__exit|0x1000C190",
+          "InitializeCleanupSequence|0x1000C1B0"
         ],
         "Classic/1.04c": [
           "InitializeCleanupSequence|0x1000C1B0",
           "__exit|0x1000C190"
         ],
         "LoD/1.07": [
-          "InitializeCleanupSequence|0x1000C1B0",
-          "__exit|0x1000C190"
-        ],
-        "LoD/1.08": [
-          "InitializeCleanupSequence|0x1000C1B0",
-          "__exit|0x1000C190"
-        ],
-        "LoD/1.09": [
           "__exit|0x1000C190",
           "InitializeCleanupSequence|0x1000C1B0"
+        ],
+        "LoD/1.08": [
+          "__exit|0x1000C190",
+          "InitializeCleanupSequence|0x1000C1B0"
+        ],
+        "LoD/1.09": [
+          "InitializeCleanupSequence|0x1000C1B0",
+          "__exit|0x1000C190"
         ],
         "LoD/1.09b": [
           "__exit|0x1000C190",
@@ -176382,40 +169263,40 @@ var FUNCTIONS_SmackW32_dll = {
           "__exit|0x1000C190"
         ],
         "LoD/1.11": [
-          "InitializeCleanupSequence|0x1000C1B0",
-          "__exit|0x1000C190"
+          "__exit|0x1000C190",
+          "InitializeCleanupSequence|0x1000C1B0"
         ],
         "LoD/1.11b": [
           "__exit|0x1000C190",
           "InitializeCleanupSequence|0x1000C1B0"
         ],
         "LoD/1.12a": [
-          "InitializeCleanupSequence|0x1000C1B0",
-          "__exit|0x1000C190"
+          "__exit|0x1000C190",
+          "InitializeCleanupSequence|0x1000C1B0"
         ],
         "LoD/1.13c": [
-          "InitializeCleanupSequence|0x1000C1B0",
-          "__exit|0x1000C190"
+          "__exit|0x1000C190",
+          "InitializeCleanupSequence|0x1000C1B0"
         ],
         "LoD/1.13d": [
-          "InitializeCleanupSequence|0x1000C1B0",
-          "__exit|0x1000C190"
+          "__exit|0x1000C190",
+          "InitializeCleanupSequence|0x1000C1B0"
         ],
         "LoD/1.14a": [
           "__exit|0x1000C190",
           "InitializeCleanupSequence|0x1000C1B0"
         ],
         "LoD/1.14b": [
-          "__exit|0x1000C190",
-          "InitializeCleanupSequence|0x1000C1B0"
+          "InitializeCleanupSequence|0x1000C1B0",
+          "__exit|0x1000C190"
         ],
         "LoD/1.14c": [
           "__exit|0x1000C190",
           "InitializeCleanupSequence|0x1000C1B0"
         ],
         "LoD/1.14d": [
-          "__exit|0x1000C190",
-          "InitializeCleanupSequence|0x1000C1B0"
+          "InitializeCleanupSequence|0x1000C1B0",
+          "__exit|0x1000C190"
         ]
       },
       "instructions": {
@@ -177478,8 +170359,8 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ProcessTerminationHandler|0x1000C1C0",
-          "__cinit|0x1000C160"
+          "__cinit|0x1000C160",
+          "ProcessTerminationHandler|0x1000C1C0"
         ],
         "Classic/1.01": [
           "__cinit|0x1000C160",
@@ -177490,16 +170371,16 @@ var FUNCTIONS_SmackW32_dll = {
           "ProcessTerminationHandler|0x1000C1C0"
         ],
         "Classic/1.03": [
-          "ProcessTerminationHandler|0x1000C1C0",
-          "__cinit|0x1000C160"
-        ],
-        "Classic/1.04c": [
           "__cinit|0x1000C160",
           "ProcessTerminationHandler|0x1000C1C0"
         ],
-        "LoD/1.07": [
+        "Classic/1.04c": [
           "ProcessTerminationHandler|0x1000C1C0",
           "__cinit|0x1000C160"
+        ],
+        "LoD/1.07": [
+          "__cinit|0x1000C160",
+          "ProcessTerminationHandler|0x1000C1C0"
         ],
         "LoD/1.08": [
           "__cinit|0x1000C160",
@@ -177510,16 +170391,16 @@ var FUNCTIONS_SmackW32_dll = {
           "ProcessTerminationHandler|0x1000C1C0"
         ],
         "LoD/1.09b": [
-          "ProcessTerminationHandler|0x1000C1C0",
-          "__cinit|0x1000C160"
+          "__cinit|0x1000C160",
+          "ProcessTerminationHandler|0x1000C1C0"
         ],
         "LoD/1.09d": [
           "ProcessTerminationHandler|0x1000C1C0",
           "__cinit|0x1000C160"
         ],
         "LoD/1.10": [
-          "ProcessTerminationHandler|0x1000C1C0",
-          "__cinit|0x1000C160"
+          "__cinit|0x1000C160",
+          "ProcessTerminationHandler|0x1000C1C0"
         ],
         "LoD/1.11": [
           "__cinit|0x1000C160",
@@ -177554,8 +170435,8 @@ var FUNCTIONS_SmackW32_dll = {
           "ProcessTerminationHandler|0x1000C1C0"
         ],
         "LoD/1.14d": [
-          "ProcessTerminationHandler|0x1000C1C0",
-          "__cinit|0x1000C160"
+          "__cinit|0x1000C160",
+          "ProcessTerminationHandler|0x1000C1C0"
         ]
       },
       "instructions": {
@@ -178252,164 +171133,164 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "GetStdHandle|0x40",
           "__amsg_exit|0x1000BFE0",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "GetStartupInfoA|0x3C",
-          "SetHandleCount|0x3F",
           "GetFileType|0x3E",
-          "GetStdHandle|0x40"
+          "SetHandleCount|0x3F",
+          "GetStartupInfoA|0x3C"
         ],
         "Classic/1.01": [
+          "GetStartupInfoA|0x3C",
           "__amsg_exit|0x1000BFE0",
           "GetStdHandle|0x40",
-          "GetFileType|0x3E",
-          "GetStartupInfoA|0x3C",
+          "SetHandleCount|0x3F",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "SetHandleCount|0x3F"
+          "GetFileType|0x3E"
         ],
         "Classic/1.02": [
-          "GetFileType|0x3E",
           "__amsg_exit|0x1000BFE0",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "SetHandleCount|0x3F",
+          "GetFileType|0x3E",
           "GetStartupInfoA|0x3C",
+          "SetHandleCount|0x3F",
           "GetStdHandle|0x40"
         ],
         "Classic/1.03": [
-          "GetStartupInfoA|0x3C",
           "GetStdHandle|0x40",
           "AllocateMemoryWithRetry|0x1000B8E0",
           "SetHandleCount|0x3F",
+          "__amsg_exit|0x1000BFE0",
           "GetFileType|0x3E",
-          "__amsg_exit|0x1000BFE0"
+          "GetStartupInfoA|0x3C"
         ],
         "Classic/1.04c": [
-          "SetHandleCount|0x3F",
-          "GetStartupInfoA|0x3C",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "__amsg_exit|0x1000BFE0",
-          "GetFileType|0x3E",
-          "GetStdHandle|0x40"
-        ],
-        "LoD/1.07": [
-          "GetFileType|0x3E",
-          "__amsg_exit|0x1000BFE0",
-          "SetHandleCount|0x3F",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "GetStdHandle|0x40",
-          "GetStartupInfoA|0x3C"
-        ],
-        "LoD/1.08": [
-          "GetStdHandle|0x40",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "__amsg_exit|0x1000BFE0",
-          "GetFileType|0x3E",
-          "SetHandleCount|0x3F",
-          "GetStartupInfoA|0x3C"
-        ],
-        "LoD/1.09": [
-          "SetHandleCount|0x3F",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "GetStdHandle|0x40",
           "GetFileType|0x3E",
           "GetStartupInfoA|0x3C",
+          "SetHandleCount|0x3F",
+          "GetStdHandle|0x40",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0"
         ],
-        "LoD/1.09b": [
-          "GetFileType|0x3E",
+        "LoD/1.07": [
           "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0",
           "GetStartupInfoA|0x3C",
           "GetStdHandle|0x40",
+          "GetFileType|0x3E",
+          "SetHandleCount|0x3F"
+        ],
+        "LoD/1.08": [
+          "__amsg_exit|0x1000BFE0",
+          "GetStdHandle|0x40",
+          "GetFileType|0x3E",
+          "GetStartupInfoA|0x3C",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "SetHandleCount|0x3F"
+        ],
+        "LoD/1.09": [
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetFileType|0x3E",
+          "SetHandleCount|0x3F",
+          "GetStartupInfoA|0x3C",
+          "__amsg_exit|0x1000BFE0",
+          "GetStdHandle|0x40"
+        ],
+        "LoD/1.09b": [
+          "__amsg_exit|0x1000BFE0",
+          "GetFileType|0x3E",
+          "GetStdHandle|0x40",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetStartupInfoA|0x3C",
           "SetHandleCount|0x3F"
         ],
         "LoD/1.09d": [
-          "GetFileType|0x3E",
           "__amsg_exit|0x1000BFE0",
-          "GetStartupInfoA|0x3C",
           "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetFileType|0x3E",
+          "GetStdHandle|0x40",
           "SetHandleCount|0x3F",
-          "GetStdHandle|0x40"
+          "GetStartupInfoA|0x3C"
         ],
         "LoD/1.10": [
+          "GetFileType|0x3E",
           "__amsg_exit|0x1000BFE0",
           "SetHandleCount|0x3F",
           "AllocateMemoryWithRetry|0x1000B8E0",
           "GetStdHandle|0x40",
-          "GetFileType|0x3E",
           "GetStartupInfoA|0x3C"
         ],
         "LoD/1.11": [
           "GetStartupInfoA|0x3C",
-          "GetStdHandle|0x40",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "SetHandleCount|0x3F",
           "__amsg_exit|0x1000BFE0",
-          "GetFileType|0x3E"
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetStdHandle|0x40",
+          "GetFileType|0x3E",
+          "SetHandleCount|0x3F"
         ],
         "LoD/1.11b": [
-          "SetHandleCount|0x3F",
+          "GetFileType|0x3E",
           "GetStartupInfoA|0x3C",
           "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0",
           "GetStdHandle|0x40",
-          "GetFileType|0x3E"
+          "SetHandleCount|0x3F"
         ],
         "LoD/1.12a": [
-          "AllocateMemoryWithRetry|0x1000B8E0",
           "GetStartupInfoA|0x3C",
-          "SetHandleCount|0x3F",
+          "GetFileType|0x3E",
           "GetStdHandle|0x40",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0",
-          "GetFileType|0x3E"
+          "SetHandleCount|0x3F"
         ],
         "LoD/1.13c": [
-          "AllocateMemoryWithRetry|0x1000B8E0",
           "GetStartupInfoA|0x3C",
-          "__amsg_exit|0x1000BFE0",
           "SetHandleCount|0x3F",
-          "GetFileType|0x3E",
-          "GetStdHandle|0x40"
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "__amsg_exit|0x1000BFE0",
+          "GetStdHandle|0x40",
+          "GetFileType|0x3E"
         ],
         "LoD/1.13d": [
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "GetStdHandle|0x40",
-          "GetFileType|0x3E",
-          "GetStartupInfoA|0x3C",
           "__amsg_exit|0x1000BFE0",
-          "SetHandleCount|0x3F"
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetStartupInfoA|0x3C",
+          "GetStdHandle|0x40",
+          "SetHandleCount|0x3F",
+          "GetFileType|0x3E"
         ],
         "LoD/1.14a": [
-          "GetStdHandle|0x40",
-          "__amsg_exit|0x1000BFE0",
           "GetFileType|0x3E",
-          "AllocateMemoryWithRetry|0x1000B8E0",
           "GetStartupInfoA|0x3C",
-          "SetHandleCount|0x3F"
+          "GetStdHandle|0x40",
+          "SetHandleCount|0x3F",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.14b": [
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetStartupInfoA|0x3C",
           "GetFileType|0x3E",
           "__amsg_exit|0x1000BFE0",
-          "AllocateMemoryWithRetry|0x1000B8E0",
           "GetStdHandle|0x40",
-          "GetStartupInfoA|0x3C",
           "SetHandleCount|0x3F"
         ],
         "LoD/1.14c": [
           "GetFileType|0x3E",
-          "__amsg_exit|0x1000BFE0",
           "GetStdHandle|0x40",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "SetHandleCount|0x3F",
-          "GetStartupInfoA|0x3C"
+          "__amsg_exit|0x1000BFE0",
+          "GetStartupInfoA|0x3C",
+          "SetHandleCount|0x3F"
         ],
         "LoD/1.14d": [
-          "SetHandleCount|0x3F",
-          "GetStartupInfoA|0x3C",
-          "__amsg_exit|0x1000BFE0",
           "GetStdHandle|0x40",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "GetFileType|0x3E"
+          "__amsg_exit|0x1000BFE0",
+          "GetFileType|0x3E",
+          "SetHandleCount|0x3F",
+          "GetStartupInfoA|0x3C"
         ]
       },
       "callers": {
@@ -180480,8 +173361,8 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "Classic/1.01": [
           "__amsg_exit|0x1000BFE0",
-          "FreeHeapMemory|0x1000B960",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "FreeHeapMemory|0x1000B960"
         ],
         "Classic/1.02": [
           "__amsg_exit|0x1000BFE0",
@@ -180499,14 +173380,14 @@ var FUNCTIONS_SmackW32_dll = {
           "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.07": [
-          "__amsg_exit|0x1000BFE0",
           "AllocateMemoryWithRetry|0x1000B8E0",
+          "__amsg_exit|0x1000BFE0",
           "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.08": [
+          "__amsg_exit|0x1000BFE0",
           "FreeHeapMemory|0x1000B960",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "__amsg_exit|0x1000BFE0"
+          "AllocateMemoryWithRetry|0x1000B8E0"
         ],
         "LoD/1.09": [
           "AllocateMemoryWithRetry|0x1000B8E0",
@@ -180514,14 +173395,14 @@ var FUNCTIONS_SmackW32_dll = {
           "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.09b": [
-          "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.09d": [
           "__amsg_exit|0x1000BFE0",
-          "FreeHeapMemory|0x1000B960",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.10": [
           "__amsg_exit|0x1000BFE0",
@@ -180529,14 +173410,14 @@ var FUNCTIONS_SmackW32_dll = {
           "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.11": [
+          "__amsg_exit|0x1000BFE0",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeHeapMemory|0x1000B960",
-          "__amsg_exit|0x1000BFE0"
+          "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.11b": [
+          "FreeHeapMemory|0x1000B960",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "__amsg_exit|0x1000BFE0",
-          "FreeHeapMemory|0x1000B960"
+          "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.12a": [
           "FreeHeapMemory|0x1000B960",
@@ -180544,34 +173425,34 @@ var FUNCTIONS_SmackW32_dll = {
           "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.13c": [
+          "FreeHeapMemory|0x1000B960",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "__amsg_exit|0x1000BFE0",
-          "FreeHeapMemory|0x1000B960"
+          "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.13d": [
+          "__amsg_exit|0x1000BFE0",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "FreeHeapMemory|0x1000B960"
+        ],
+        "LoD/1.14a": [
           "AllocateMemoryWithRetry|0x1000B8E0",
           "FreeHeapMemory|0x1000B960",
           "__amsg_exit|0x1000BFE0"
         ],
-        "LoD/1.14a": [
-          "FreeHeapMemory|0x1000B960",
-          "__amsg_exit|0x1000BFE0",
-          "AllocateMemoryWithRetry|0x1000B8E0"
-        ],
         "LoD/1.14b": [
-          "__amsg_exit|0x1000BFE0",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeHeapMemory|0x1000B960"
+          "FreeHeapMemory|0x1000B960",
+          "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.14c": [
           "FreeHeapMemory|0x1000B960",
-          "__amsg_exit|0x1000BFE0",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.14d": [
-          "FreeHeapMemory|0x1000B960",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "FreeHeapMemory|0x1000B960"
         ]
       },
       "callers": {
@@ -181393,124 +174274,124 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetModuleFileNameA|0x5C",
           "__amsg_exit|0x1000BFE0",
-          "parse_cmdline|0x1000C620",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "GetModuleFileNameA|0x5C",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "parse_cmdline|0x1000C620"
         ],
         "Classic/1.01": [
           "__amsg_exit|0x1000BFE0",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "parse_cmdline|0x1000C620",
-          "GetModuleFileNameA|0x5C",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "GetModuleFileNameA|0x5C"
         ],
         "Classic/1.02": [
-          "GetModuleFileNameA|0x5C",
           "__amsg_exit|0x1000BFE0",
+          "GetModuleFileNameA|0x5C",
           "AllocateMemoryWithRetry|0x1000B8E0",
           "parse_cmdline|0x1000C620"
         ],
         "Classic/1.03": [
-          "parse_cmdline|0x1000C620",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "GetModuleFileNameA|0x5C",
-          "__amsg_exit|0x1000BFE0"
-        ],
-        "Classic/1.04c": [
           "parse_cmdline|0x1000C620",
-          "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0",
           "GetModuleFileNameA|0x5C"
         ],
-        "LoD/1.07": [
-          "__amsg_exit|0x1000BFE0",
+        "Classic/1.04c": [
+          "GetModuleFileNameA|0x5C",
           "parse_cmdline|0x1000C620",
           "AllocateMemoryWithRetry|0x1000B8E0",
+          "__amsg_exit|0x1000BFE0"
+        ],
+        "LoD/1.07": [
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "__amsg_exit|0x1000BFE0",
+          "parse_cmdline|0x1000C620",
           "GetModuleFileNameA|0x5C"
         ],
         "LoD/1.08": [
+          "__amsg_exit|0x1000BFE0",
+          "parse_cmdline|0x1000C620",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetModuleFileNameA|0x5C"
+        ],
+        "LoD/1.09": [
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "parse_cmdline|0x1000C620",
+          "GetModuleFileNameA|0x5C",
+          "__amsg_exit|0x1000BFE0"
+        ],
+        "LoD/1.09b": [
+          "__amsg_exit|0x1000BFE0",
+          "GetModuleFileNameA|0x5C",
+          "parse_cmdline|0x1000C620",
+          "AllocateMemoryWithRetry|0x1000B8E0"
+        ],
+        "LoD/1.09d": [
+          "parse_cmdline|0x1000C620",
+          "__amsg_exit|0x1000BFE0",
+          "GetModuleFileNameA|0x5C",
+          "AllocateMemoryWithRetry|0x1000B8E0"
+        ],
+        "LoD/1.10": [
+          "__amsg_exit|0x1000BFE0",
+          "GetModuleFileNameA|0x5C",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "parse_cmdline|0x1000C620"
+        ],
+        "LoD/1.11": [
+          "__amsg_exit|0x1000BFE0",
+          "parse_cmdline|0x1000C620",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetModuleFileNameA|0x5C"
+        ],
+        "LoD/1.11b": [
           "GetModuleFileNameA|0x5C",
           "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0",
           "parse_cmdline|0x1000C620"
         ],
-        "LoD/1.09": [
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "parse_cmdline|0x1000C620",
-          "__amsg_exit|0x1000BFE0",
-          "GetModuleFileNameA|0x5C"
-        ],
-        "LoD/1.09b": [
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "GetModuleFileNameA|0x5C",
-          "parse_cmdline|0x1000C620",
-          "__amsg_exit|0x1000BFE0"
-        ],
-        "LoD/1.09d": [
-          "__amsg_exit|0x1000BFE0",
-          "GetModuleFileNameA|0x5C",
-          "parse_cmdline|0x1000C620",
-          "AllocateMemoryWithRetry|0x1000B8E0"
-        ],
-        "LoD/1.10": [
-          "parse_cmdline|0x1000C620",
-          "__amsg_exit|0x1000BFE0",
-          "GetModuleFileNameA|0x5C",
-          "AllocateMemoryWithRetry|0x1000B8E0"
-        ],
-        "LoD/1.11": [
-          "GetModuleFileNameA|0x5C",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "parse_cmdline|0x1000C620",
-          "__amsg_exit|0x1000BFE0"
-        ],
-        "LoD/1.11b": [
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "__amsg_exit|0x1000BFE0",
-          "parse_cmdline|0x1000C620",
-          "GetModuleFileNameA|0x5C"
-        ],
         "LoD/1.12a": [
+          "GetModuleFileNameA|0x5C",
           "parse_cmdline|0x1000C620",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "GetModuleFileNameA|0x5C",
           "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.13c": [
           "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0",
-          "parse_cmdline|0x1000C620",
-          "GetModuleFileNameA|0x5C"
+          "GetModuleFileNameA|0x5C",
+          "parse_cmdline|0x1000C620"
         ],
         "LoD/1.13d": [
-          "parse_cmdline|0x1000C620",
-          "AllocateMemoryWithRetry|0x1000B8E0",
           "GetModuleFileNameA|0x5C",
-          "__amsg_exit|0x1000BFE0"
+          "parse_cmdline|0x1000C620",
+          "__amsg_exit|0x1000BFE0",
+          "AllocateMemoryWithRetry|0x1000B8E0"
         ],
         "LoD/1.14a": [
-          "GetModuleFileNameA|0x5C",
-          "__amsg_exit|0x1000BFE0",
           "parse_cmdline|0x1000C620",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "GetModuleFileNameA|0x5C",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.14b": [
           "GetModuleFileNameA|0x5C",
-          "parse_cmdline|0x1000C620",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "parse_cmdline|0x1000C620"
         ],
         "LoD/1.14c": [
           "GetModuleFileNameA|0x5C",
-          "__amsg_exit|0x1000BFE0",
           "parse_cmdline|0x1000C620",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.14d": [
           "GetModuleFileNameA|0x5C",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "__amsg_exit|0x1000BFE0",
-          "parse_cmdline|0x1000C620",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "parse_cmdline|0x1000C620"
         ]
       },
       "callers": {
@@ -183494,106 +176375,106 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "_CPtoLCID|0x1000CA30",
-          "getSystemCP|0x1000C9E0",
           "GetCPInfo|0x3B",
-          "setSBCS|0x1000CA90"
+          "setSBCS|0x1000CA90",
+          "getSystemCP|0x1000C9E0",
+          "_CPtoLCID|0x1000CA30"
         ],
         "Classic/1.01": [
+          "GetCPInfo|0x3B",
+          "setSBCS|0x1000CA90",
+          "getSystemCP|0x1000C9E0",
+          "_CPtoLCID|0x1000CA30"
+        ],
+        "Classic/1.02": [
           "getSystemCP|0x1000C9E0",
           "setSBCS|0x1000CA90",
           "_CPtoLCID|0x1000CA30",
           "GetCPInfo|0x3B"
         ],
-        "Classic/1.02": [
-          "GetCPInfo|0x3B",
-          "_CPtoLCID|0x1000CA30",
-          "getSystemCP|0x1000C9E0",
-          "setSBCS|0x1000CA90"
-        ],
         "Classic/1.03": [
-          "getSystemCP|0x1000C9E0",
           "_CPtoLCID|0x1000CA30",
           "GetCPInfo|0x3B",
-          "setSBCS|0x1000CA90"
+          "setSBCS|0x1000CA90",
+          "getSystemCP|0x1000C9E0"
         ],
         "Classic/1.04c": [
-          "_CPtoLCID|0x1000CA30",
-          "getSystemCP|0x1000C9E0",
           "setSBCS|0x1000CA90",
+          "getSystemCP|0x1000C9E0",
+          "_CPtoLCID|0x1000CA30",
           "GetCPInfo|0x3B"
         ],
         "LoD/1.07": [
-          "getSystemCP|0x1000C9E0",
-          "GetCPInfo|0x3B",
           "setSBCS|0x1000CA90",
-          "_CPtoLCID|0x1000CA30"
+          "_CPtoLCID|0x1000CA30",
+          "getSystemCP|0x1000C9E0",
+          "GetCPInfo|0x3B"
         ],
         "LoD/1.08": [
-          "setSBCS|0x1000CA90",
-          "GetCPInfo|0x3B",
           "_CPtoLCID|0x1000CA30",
-          "getSystemCP|0x1000C9E0"
+          "getSystemCP|0x1000C9E0",
+          "GetCPInfo|0x3B",
+          "setSBCS|0x1000CA90"
         ],
         "LoD/1.09": [
-          "getSystemCP|0x1000C9E0",
-          "setSBCS|0x1000CA90",
           "_CPtoLCID|0x1000CA30",
+          "setSBCS|0x1000CA90",
+          "getSystemCP|0x1000C9E0",
           "GetCPInfo|0x3B"
         ],
         "LoD/1.09b": [
-          "getSystemCP|0x1000C9E0",
+          "GetCPInfo|0x3B",
           "setSBCS|0x1000CA90",
-          "_CPtoLCID|0x1000CA30",
-          "GetCPInfo|0x3B"
+          "getSystemCP|0x1000C9E0",
+          "_CPtoLCID|0x1000CA30"
         ],
         "LoD/1.09d": [
-          "_CPtoLCID|0x1000CA30",
-          "getSystemCP|0x1000C9E0",
-          "GetCPInfo|0x3B",
-          "setSBCS|0x1000CA90"
-        ],
-        "LoD/1.10": [
-          "_CPtoLCID|0x1000CA30",
-          "getSystemCP|0x1000C9E0",
-          "setSBCS|0x1000CA90",
-          "GetCPInfo|0x3B"
-        ],
-        "LoD/1.11": [
           "getSystemCP|0x1000C9E0",
           "GetCPInfo|0x3B",
           "setSBCS|0x1000CA90",
           "_CPtoLCID|0x1000CA30"
         ],
-        "LoD/1.11b": [
+        "LoD/1.10": [
           "_CPtoLCID|0x1000CA30",
           "GetCPInfo|0x3B",
-          "getSystemCP|0x1000C9E0",
-          "setSBCS|0x1000CA90"
+          "setSBCS|0x1000CA90",
+          "getSystemCP|0x1000C9E0"
         ],
-        "LoD/1.12a": [
-          "_CPtoLCID|0x1000CA30",
-          "GetCPInfo|0x3B",
-          "getSystemCP|0x1000C9E0",
-          "setSBCS|0x1000CA90"
-        ],
-        "LoD/1.13c": [
+        "LoD/1.11": [
           "getSystemCP|0x1000C9E0",
           "_CPtoLCID|0x1000CA30",
-          "GetCPInfo|0x3B",
-          "setSBCS|0x1000CA90"
-        ],
-        "LoD/1.13d": [
-          "_CPtoLCID|0x1000CA30",
-          "getSystemCP|0x1000C9E0",
           "setSBCS|0x1000CA90",
           "GetCPInfo|0x3B"
         ],
-        "LoD/1.14a": [
-          "_CPtoLCID|0x1000CA30",
+        "LoD/1.11b": [
+          "getSystemCP|0x1000C9E0",
+          "setSBCS|0x1000CA90",
+          "GetCPInfo|0x3B",
+          "_CPtoLCID|0x1000CA30"
+        ],
+        "LoD/1.12a": [
           "getSystemCP|0x1000C9E0",
           "GetCPInfo|0x3B",
+          "_CPtoLCID|0x1000CA30",
           "setSBCS|0x1000CA90"
+        ],
+        "LoD/1.13c": [
+          "_CPtoLCID|0x1000CA30",
+          "setSBCS|0x1000CA90",
+          "GetCPInfo|0x3B",
+          "getSystemCP|0x1000C9E0"
+        ],
+        "LoD/1.13d": [
+          "setSBCS|0x1000CA90",
+          "getSystemCP|0x1000C9E0",
+          "_CPtoLCID|0x1000CA30",
+          "GetCPInfo|0x3B"
+        ],
+        "LoD/1.14a": [
+          "setSBCS|0x1000CA90",
+          "getSystemCP|0x1000C9E0",
+          "_CPtoLCID|0x1000CA30",
+          "GetCPInfo|0x3B"
         ],
         "LoD/1.14b": [
           "getSystemCP|0x1000C9E0",
@@ -183602,16 +176483,16 @@ var FUNCTIONS_SmackW32_dll = {
           "_CPtoLCID|0x1000CA30"
         ],
         "LoD/1.14c": [
-          "_CPtoLCID|0x1000CA30",
           "getSystemCP|0x1000C9E0",
           "setSBCS|0x1000CA90",
-          "GetCPInfo|0x3B"
+          "GetCPInfo|0x3B",
+          "_CPtoLCID|0x1000CA30"
         ],
         "LoD/1.14d": [
-          "_CPtoLCID|0x1000CA30",
           "getSystemCP|0x1000C9E0",
           "setSBCS|0x1000CA90",
-          "GetCPInfo|0x3B"
+          "GetCPInfo|0x3B",
+          "_CPtoLCID|0x1000CA30"
         ]
       },
       "callers": {
@@ -188266,184 +181147,184 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FreeEnvironmentStringsW|0x52",
-          "WideCharToMultiByte|0x50",
-          "FreeEnvironmentStringsA|0x55",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeHeapMemory|0x1000B960",
           "GetEnvironmentStrings|0x53",
-          "GetEnvironmentStringsW|0x51"
+          "WideCharToMultiByte|0x50",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "FreeEnvironmentStringsW|0x52",
+          "FreeEnvironmentStringsA|0x55",
+          "GetEnvironmentStringsW|0x51",
+          "FreeHeapMemory|0x1000B960"
         ],
         "Classic/1.01": [
+          "WideCharToMultiByte|0x50",
           "FreeEnvironmentStringsW|0x52",
           "GetEnvironmentStrings|0x53",
-          "FreeEnvironmentStringsA|0x55",
-          "GetEnvironmentStringsW|0x51",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "FreeHeapMemory|0x1000B960",
-          "WideCharToMultiByte|0x50",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "GetEnvironmentStringsW|0x51",
+          "FreeEnvironmentStringsA|0x55"
         ],
         "Classic/1.02": [
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetEnvironmentStringsW|0x51",
+          "FreeEnvironmentStringsW|0x52",
+          "FreeEnvironmentStringsA|0x55",
           "GetEnvironmentStrings|0x53",
           "WideCharToMultiByte|0x50",
-          "FreeEnvironmentStringsW|0x52",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeEnvironmentStringsA|0x55",
-          "FreeHeapMemory|0x1000B960",
-          "GetEnvironmentStringsW|0x51"
+          "FreeHeapMemory|0x1000B960"
         ],
         "Classic/1.03": [
-          "FreeEnvironmentStringsW|0x52",
+          "FreeEnvironmentStringsA|0x55",
           "FreeHeapMemory|0x1000B960",
           "AllocateMemoryWithRetry|0x1000B8E0",
           "WideCharToMultiByte|0x50",
-          "FreeEnvironmentStringsA|0x55",
           "GetEnvironmentStrings|0x53",
-          "GetEnvironmentStringsW|0x51"
+          "GetEnvironmentStringsW|0x51",
+          "FreeEnvironmentStringsW|0x52"
         ],
         "Classic/1.04c": [
-          "GetEnvironmentStringsW|0x51",
-          "FreeEnvironmentStringsA|0x55",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeHeapMemory|0x1000B960",
           "GetEnvironmentStrings|0x53",
+          "FreeEnvironmentStringsW|0x52",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "FreeEnvironmentStringsA|0x55",
+          "GetEnvironmentStringsW|0x51",
           "WideCharToMultiByte|0x50",
-          "FreeEnvironmentStringsW|0x52"
+          "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.07": [
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeHeapMemory|0x1000B960",
-          "WideCharToMultiByte|0x50",
           "FreeEnvironmentStringsA|0x55",
-          "GetEnvironmentStrings|0x53",
+          "GetEnvironmentStringsW|0x51",
           "FreeEnvironmentStringsW|0x52",
-          "GetEnvironmentStringsW|0x51"
+          "GetEnvironmentStrings|0x53",
+          "WideCharToMultiByte|0x50",
+          "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.08": [
-          "FreeEnvironmentStringsA|0x55",
+          "GetEnvironmentStrings|0x53",
           "WideCharToMultiByte|0x50",
           "FreeHeapMemory|0x1000B960",
-          "FreeEnvironmentStringsW|0x52",
-          "GetEnvironmentStrings|0x53",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "FreeEnvironmentStringsA|0x55",
           "GetEnvironmentStringsW|0x51",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "FreeEnvironmentStringsW|0x52"
         ],
         "LoD/1.09": [
-          "GetEnvironmentStrings|0x53",
           "AllocateMemoryWithRetry|0x1000B8E0",
           "WideCharToMultiByte|0x50",
-          "FreeHeapMemory|0x1000B960",
           "GetEnvironmentStringsW|0x51",
+          "FreeEnvironmentStringsW|0x52",
+          "GetEnvironmentStrings|0x53",
           "FreeEnvironmentStringsA|0x55",
-          "FreeEnvironmentStringsW|0x52"
+          "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.09b": [
-          "GetEnvironmentStrings|0x53",
           "FreeEnvironmentStringsW|0x52",
-          "GetEnvironmentStringsW|0x51",
+          "FreeEnvironmentStringsA|0x55",
+          "GetEnvironmentStrings|0x53",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "WideCharToMultiByte|0x50",
           "FreeHeapMemory|0x1000B960",
-          "FreeEnvironmentStringsA|0x55"
+          "GetEnvironmentStringsW|0x51",
+          "WideCharToMultiByte|0x50"
         ],
         "LoD/1.09d": [
-          "GetEnvironmentStrings|0x53",
           "GetEnvironmentStringsW|0x51",
-          "WideCharToMultiByte|0x50",
-          "FreeEnvironmentStringsW|0x52",
-          "FreeHeapMemory|0x1000B960",
-          "FreeEnvironmentStringsA|0x55",
-          "AllocateMemoryWithRetry|0x1000B8E0"
-        ],
-        "LoD/1.10": [
-          "GetEnvironmentStringsW|0x51",
-          "FreeEnvironmentStringsA|0x55",
           "AllocateMemoryWithRetry|0x1000B8E0",
           "FreeHeapMemory|0x1000B960",
-          "GetEnvironmentStrings|0x53",
           "WideCharToMultiByte|0x50",
+          "FreeEnvironmentStringsA|0x55",
+          "GetEnvironmentStrings|0x53",
           "FreeEnvironmentStringsW|0x52"
         ],
-        "LoD/1.11": [
-          "FreeEnvironmentStringsW|0x52",
-          "GetEnvironmentStringsW|0x51",
-          "AllocateMemoryWithRetry|0x1000B8E0",
+        "LoD/1.10": [
           "FreeEnvironmentStringsA|0x55",
-          "GetEnvironmentStrings|0x53",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "FreeHeapMemory|0x1000B960",
+          "FreeEnvironmentStringsW|0x52",
+          "GetEnvironmentStrings|0x53",
+          "GetEnvironmentStringsW|0x51",
           "WideCharToMultiByte|0x50"
+        ],
+        "LoD/1.11": [
+          "GetEnvironmentStrings|0x53",
+          "FreeEnvironmentStringsA|0x55",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetEnvironmentStringsW|0x51",
+          "WideCharToMultiByte|0x50",
+          "FreeEnvironmentStringsW|0x52",
+          "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.11b": [
           "GetEnvironmentStrings|0x53",
-          "FreeEnvironmentStringsA|0x55",
-          "GetEnvironmentStringsW|0x51",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeEnvironmentStringsW|0x52",
           "FreeHeapMemory|0x1000B960",
-          "WideCharToMultiByte|0x50"
+          "GetEnvironmentStringsW|0x51",
+          "FreeEnvironmentStringsW|0x52",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "WideCharToMultiByte|0x50",
+          "FreeEnvironmentStringsA|0x55"
         ],
         "LoD/1.12a": [
-          "FreeHeapMemory|0x1000B960",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeEnvironmentStringsA|0x55",
           "GetEnvironmentStrings|0x53",
+          "FreeEnvironmentStringsA|0x55",
           "WideCharToMultiByte|0x50",
+          "FreeEnvironmentStringsW|0x52",
           "GetEnvironmentStringsW|0x51",
-          "FreeEnvironmentStringsW|0x52"
+          "FreeHeapMemory|0x1000B960",
+          "AllocateMemoryWithRetry|0x1000B8E0"
         ],
         "LoD/1.13c": [
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "GetEnvironmentStringsW|0x51",
-          "GetEnvironmentStrings|0x53",
+          "WideCharToMultiByte|0x50",
           "FreeEnvironmentStringsW|0x52",
           "FreeHeapMemory|0x1000B960",
-          "FreeEnvironmentStringsA|0x55",
-          "WideCharToMultiByte|0x50"
+          "GetEnvironmentStringsW|0x51",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetEnvironmentStrings|0x53",
+          "FreeEnvironmentStringsA|0x55"
         ],
         "LoD/1.13d": [
-          "GetEnvironmentStrings|0x53",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeHeapMemory|0x1000B960",
-          "FreeEnvironmentStringsW|0x52",
           "GetEnvironmentStringsW|0x51",
+          "GetEnvironmentStrings|0x53",
           "FreeEnvironmentStringsA|0x55",
-          "WideCharToMultiByte|0x50"
-        ],
-        "LoD/1.14a": [
-          "GetEnvironmentStrings|0x53",
-          "GetEnvironmentStringsW|0x51",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "FreeHeapMemory|0x1000B960",
           "WideCharToMultiByte|0x50",
-          "FreeEnvironmentStringsA|0x55",
-          "AllocateMemoryWithRetry|0x1000B8E0",
           "FreeEnvironmentStringsW|0x52"
         ],
-        "LoD/1.14b": [
-          "GetEnvironmentStringsW|0x51",
-          "GetEnvironmentStrings|0x53",
+        "LoD/1.14a": [
+          "FreeEnvironmentStringsA|0x55",
+          "FreeEnvironmentStringsW|0x52",
           "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetEnvironmentStrings|0x53",
+          "WideCharToMultiByte|0x50",
+          "GetEnvironmentStringsW|0x51",
+          "FreeHeapMemory|0x1000B960"
+        ],
+        "LoD/1.14b": [
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "FreeEnvironmentStringsA|0x55",
+          "WideCharToMultiByte|0x50",
           "FreeHeapMemory|0x1000B960",
           "FreeEnvironmentStringsW|0x52",
-          "FreeEnvironmentStringsA|0x55",
-          "WideCharToMultiByte|0x50"
+          "GetEnvironmentStringsW|0x51",
+          "GetEnvironmentStrings|0x53"
         ],
         "LoD/1.14c": [
           "GetEnvironmentStringsW|0x51",
           "FreeEnvironmentStringsA|0x55",
-          "FreeEnvironmentStringsW|0x52",
-          "WideCharToMultiByte|0x50",
-          "GetEnvironmentStrings|0x53",
           "FreeHeapMemory|0x1000B960",
+          "FreeEnvironmentStringsW|0x52",
+          "GetEnvironmentStrings|0x53",
+          "WideCharToMultiByte|0x50",
           "AllocateMemoryWithRetry|0x1000B8E0"
         ],
         "LoD/1.14d": [
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "GetEnvironmentStrings|0x53",
           "FreeHeapMemory|0x1000B960",
           "FreeEnvironmentStringsW|0x52",
           "GetEnvironmentStringsW|0x51",
-          "GetEnvironmentStrings|0x53",
-          "WideCharToMultiByte|0x50",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeEnvironmentStringsA|0x55"
+          "FreeEnvironmentStringsA|0x55",
+          "WideCharToMultiByte|0x50"
         ]
       },
       "callers": {
@@ -191739,144 +184620,144 @@ var FUNCTIONS_SmackW32_dll = {
       "display_name": "STR_322a7bdb84e6466f",
       "callees": {
         "Classic/1.00": [
+          "GetStdHandle|0x40",
+          "WriteFile|0x4E",
+          "GetModuleFileNameA|0x5C",
+          "_strncpy|0x1000D280",
+          "___crtMessageBoxA|0x1000D1E0"
+        ],
+        "Classic/1.01": [
+          "GetStdHandle|0x40",
+          "_strncpy|0x1000D280",
+          "WriteFile|0x4E",
           "___crtMessageBoxA|0x1000D1E0",
+          "GetModuleFileNameA|0x5C"
+        ],
+        "Classic/1.02": [
           "GetModuleFileNameA|0x5C",
           "WriteFile|0x4E",
+          "___crtMessageBoxA|0x1000D1E0",
           "_strncpy|0x1000D280",
           "GetStdHandle|0x40"
         ],
-        "Classic/1.01": [
+        "Classic/1.03": [
           "___crtMessageBoxA|0x1000D1E0",
           "GetStdHandle|0x40",
           "WriteFile|0x4E",
           "GetModuleFileNameA|0x5C",
           "_strncpy|0x1000D280"
         ],
-        "Classic/1.02": [
-          "GetModuleFileNameA|0x5C",
-          "___crtMessageBoxA|0x1000D1E0",
-          "_strncpy|0x1000D280",
-          "WriteFile|0x4E",
-          "GetStdHandle|0x40"
-        ],
-        "Classic/1.03": [
-          "_strncpy|0x1000D280",
-          "GetStdHandle|0x40",
-          "WriteFile|0x4E",
-          "___crtMessageBoxA|0x1000D1E0",
-          "GetModuleFileNameA|0x5C"
-        ],
         "Classic/1.04c": [
-          "___crtMessageBoxA|0x1000D1E0",
-          "_strncpy|0x1000D280",
           "GetModuleFileNameA|0x5C",
-          "WriteFile|0x4E",
-          "GetStdHandle|0x40"
+          "_strncpy|0x1000D280",
+          "___crtMessageBoxA|0x1000D1E0",
+          "GetStdHandle|0x40",
+          "WriteFile|0x4E"
         ],
         "LoD/1.07": [
-          "_strncpy|0x1000D280",
           "WriteFile|0x4E",
+          "_strncpy|0x1000D280",
           "GetStdHandle|0x40",
           "___crtMessageBoxA|0x1000D1E0",
           "GetModuleFileNameA|0x5C"
         ],
         "LoD/1.08": [
           "GetStdHandle|0x40",
-          "GetModuleFileNameA|0x5C",
-          "_strncpy|0x1000D280",
-          "___crtMessageBoxA|0x1000D1E0",
-          "WriteFile|0x4E"
-        ],
-        "LoD/1.09": [
           "WriteFile|0x4E",
-          "GetStdHandle|0x40",
           "_strncpy|0x1000D280",
           "___crtMessageBoxA|0x1000D1E0",
           "GetModuleFileNameA|0x5C"
         ],
+        "LoD/1.09": [
+          "_strncpy|0x1000D280",
+          "GetModuleFileNameA|0x5C",
+          "WriteFile|0x4E",
+          "___crtMessageBoxA|0x1000D1E0",
+          "GetStdHandle|0x40"
+        ],
         "LoD/1.09b": [
           "___crtMessageBoxA|0x1000D1E0",
           "GetModuleFileNameA|0x5C",
+          "GetStdHandle|0x40",
           "_strncpy|0x1000D280",
-          "WriteFile|0x4E",
-          "GetStdHandle|0x40"
+          "WriteFile|0x4E"
         ],
         "LoD/1.09d": [
-          "WriteFile|0x4E",
           "_strncpy|0x1000D280",
           "GetModuleFileNameA|0x5C",
           "___crtMessageBoxA|0x1000D1E0",
-          "GetStdHandle|0x40"
+          "GetStdHandle|0x40",
+          "WriteFile|0x4E"
         ],
         "LoD/1.10": [
-          "GetModuleFileNameA|0x5C",
           "___crtMessageBoxA|0x1000D1E0",
+          "GetModuleFileNameA|0x5C",
           "_strncpy|0x1000D280",
           "GetStdHandle|0x40",
           "WriteFile|0x4E"
         ],
         "LoD/1.11": [
-          "GetModuleFileNameA|0x5C",
-          "___crtMessageBoxA|0x1000D1E0",
           "WriteFile|0x4E",
           "GetStdHandle|0x40",
-          "_strncpy|0x1000D280"
+          "_strncpy|0x1000D280",
+          "GetModuleFileNameA|0x5C",
+          "___crtMessageBoxA|0x1000D1E0"
         ],
         "LoD/1.11b": [
-          "WriteFile|0x4E",
+          "GetModuleFileNameA|0x5C",
           "_strncpy|0x1000D280",
-          "___crtMessageBoxA|0x1000D1E0",
+          "WriteFile|0x4E",
           "GetStdHandle|0x40",
-          "GetModuleFileNameA|0x5C"
+          "___crtMessageBoxA|0x1000D1E0"
         ],
         "LoD/1.12a": [
-          "GetStdHandle|0x40",
-          "GetModuleFileNameA|0x5C",
           "___crtMessageBoxA|0x1000D1E0",
+          "GetModuleFileNameA|0x5C",
           "WriteFile|0x4E",
-          "_strncpy|0x1000D280"
+          "_strncpy|0x1000D280",
+          "GetStdHandle|0x40"
         ],
         "LoD/1.13c": [
-          "_strncpy|0x1000D280",
-          "WriteFile|0x4E",
           "GetStdHandle|0x40",
-          "___crtMessageBoxA|0x1000D1E0",
-          "GetModuleFileNameA|0x5C"
+          "WriteFile|0x4E",
+          "GetModuleFileNameA|0x5C",
+          "_strncpy|0x1000D280",
+          "___crtMessageBoxA|0x1000D1E0"
         ],
         "LoD/1.13d": [
           "GetModuleFileNameA|0x5C",
+          "WriteFile|0x4E",
           "___crtMessageBoxA|0x1000D1E0",
           "GetStdHandle|0x40",
-          "WriteFile|0x4E",
           "_strncpy|0x1000D280"
         ],
         "LoD/1.14a": [
-          "WriteFile|0x4E",
-          "GetModuleFileNameA|0x5C",
-          "_strncpy|0x1000D280",
-          "___crtMessageBoxA|0x1000D1E0",
-          "GetStdHandle|0x40"
-        ],
-        "LoD/1.14b": [
           "GetModuleFileNameA|0x5C",
           "_strncpy|0x1000D280",
           "GetStdHandle|0x40",
           "WriteFile|0x4E",
           "___crtMessageBoxA|0x1000D1E0"
         ],
-        "LoD/1.14c": [
-          "___crtMessageBoxA|0x1000D1E0",
-          "WriteFile|0x4E",
+        "LoD/1.14b": [
           "GetModuleFileNameA|0x5C",
+          "___crtMessageBoxA|0x1000D1E0",
+          "_strncpy|0x1000D280",
           "GetStdHandle|0x40",
-          "_strncpy|0x1000D280"
+          "WriteFile|0x4E"
+        ],
+        "LoD/1.14c": [
+          "GetModuleFileNameA|0x5C",
+          "_strncpy|0x1000D280",
+          "GetStdHandle|0x40",
+          "WriteFile|0x4E",
+          "___crtMessageBoxA|0x1000D1E0"
         ],
         "LoD/1.14d": [
           "GetModuleFileNameA|0x5C",
-          "WriteFile|0x4E",
-          "___crtMessageBoxA|0x1000D1E0",
           "GetStdHandle|0x40",
-          "_strncpy|0x1000D280"
+          "WriteFile|0x4E",
+          "_strncpy|0x1000D280",
+          "___crtMessageBoxA|0x1000D1E0"
         ]
       },
       "callers": {
@@ -191893,12 +184774,12 @@ var FUNCTIONS_SmackW32_dll = {
           "__FF_MSGBANNER|0x1000CCB0"
         ],
         "Classic/1.03": [
-          "__FF_MSGBANNER|0x1000CCB0",
-          "__amsg_exit|0x1000BFE0"
-        ],
-        "Classic/1.04c": [
           "__amsg_exit|0x1000BFE0",
           "__FF_MSGBANNER|0x1000CCB0"
+        ],
+        "Classic/1.04c": [
+          "__FF_MSGBANNER|0x1000CCB0",
+          "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.07": [
           "__amsg_exit|0x1000BFE0",
@@ -191913,12 +184794,12 @@ var FUNCTIONS_SmackW32_dll = {
           "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.09b": [
-          "__FF_MSGBANNER|0x1000CCB0",
-          "__amsg_exit|0x1000BFE0"
+          "__amsg_exit|0x1000BFE0",
+          "__FF_MSGBANNER|0x1000CCB0"
         ],
         "LoD/1.09d": [
-          "__FF_MSGBANNER|0x1000CCB0",
-          "__amsg_exit|0x1000BFE0"
+          "__amsg_exit|0x1000BFE0",
+          "__FF_MSGBANNER|0x1000CCB0"
         ],
         "LoD/1.10": [
           "__amsg_exit|0x1000BFE0",
@@ -191929,28 +184810,28 @@ var FUNCTIONS_SmackW32_dll = {
           "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.11b": [
-          "__amsg_exit|0x1000BFE0",
-          "__FF_MSGBANNER|0x1000CCB0"
+          "__FF_MSGBANNER|0x1000CCB0",
+          "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.12a": [
           "__FF_MSGBANNER|0x1000CCB0",
           "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.13c": [
-          "__amsg_exit|0x1000BFE0",
-          "__FF_MSGBANNER|0x1000CCB0"
-        ],
-        "LoD/1.13d": [
           "__FF_MSGBANNER|0x1000CCB0",
           "__amsg_exit|0x1000BFE0"
         ],
-        "LoD/1.14a": [
+        "LoD/1.13d": [
           "__amsg_exit|0x1000BFE0",
           "__FF_MSGBANNER|0x1000CCB0"
         ],
+        "LoD/1.14a": [
+          "__FF_MSGBANNER|0x1000CCB0",
+          "__amsg_exit|0x1000BFE0"
+        ],
         "LoD/1.14b": [
-          "__amsg_exit|0x1000BFE0",
-          "__FF_MSGBANNER|0x1000CCB0"
+          "__FF_MSGBANNER|0x1000CCB0",
+          "__amsg_exit|0x1000BFE0"
         ],
         "LoD/1.14c": [
           "__FF_MSGBANNER|0x1000CCB0",
@@ -193488,94 +186369,94 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "WideCharToMultiByte|0x50",
-          "MultiByteToWideChar|0x54",
-          "_strncnt|0x1000D110",
+          "LCMapStringA|0x4D",
           "AllocateMemoryWithRetry|0x1000B8E0",
+          "WideCharToMultiByte|0x50",
+          "_strncnt|0x1000D110",
           "FreeHeapMemory|0x1000B960",
-          "LCMapStringW|0x4C",
-          "LCMapStringA|0x4D"
+          "MultiByteToWideChar|0x54",
+          "LCMapStringW|0x4C"
         ],
         "Classic/1.01": [
-          "LCMapStringA|0x4D",
-          "MultiByteToWideChar|0x54",
-          "LCMapStringW|0x4C",
-          "_strncnt|0x1000D110",
-          "FreeHeapMemory|0x1000B960",
           "WideCharToMultiByte|0x50",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "_strncnt|0x1000D110",
+          "LCMapStringW|0x4C",
+          "LCMapStringA|0x4D",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "FreeHeapMemory|0x1000B960",
+          "MultiByteToWideChar|0x54"
         ],
         "Classic/1.02": [
-          "LCMapStringW|0x4C",
-          "WideCharToMultiByte|0x50",
-          "_strncnt|0x1000D110",
           "LCMapStringA|0x4D",
           "MultiByteToWideChar|0x54",
           "AllocateMemoryWithRetry|0x1000B8E0",
+          "LCMapStringW|0x4C",
+          "WideCharToMultiByte|0x50",
+          "_strncnt|0x1000D110",
           "FreeHeapMemory|0x1000B960"
         ],
         "Classic/1.03": [
           "MultiByteToWideChar|0x54",
-          "FreeHeapMemory|0x1000B960",
           "_strncnt|0x1000D110",
+          "FreeHeapMemory|0x1000B960",
           "AllocateMemoryWithRetry|0x1000B8E0",
           "WideCharToMultiByte|0x50",
-          "LCMapStringW|0x4C",
-          "LCMapStringA|0x4D"
+          "LCMapStringA|0x4D",
+          "LCMapStringW|0x4C"
         ],
         "Classic/1.04c": [
           "_strncnt|0x1000D110",
           "LCMapStringA|0x4D",
           "LCMapStringW|0x4C",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "MultiByteToWideChar|0x54",
           "FreeHeapMemory|0x1000B960",
-          "WideCharToMultiByte|0x50"
-        ],
-        "LoD/1.07": [
-          "LCMapStringA|0x4D",
-          "_strncnt|0x1000D110",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "FreeHeapMemory|0x1000B960",
-          "LCMapStringW|0x4C",
           "WideCharToMultiByte|0x50",
           "MultiByteToWideChar|0x54"
         ],
-        "LoD/1.08": [
-          "MultiByteToWideChar|0x54",
-          "LCMapStringW|0x4C",
-          "FreeHeapMemory|0x1000B960",
-          "WideCharToMultiByte|0x50",
+        "LoD/1.07": [
           "AllocateMemoryWithRetry|0x1000B8E0",
           "_strncnt|0x1000D110",
-          "LCMapStringA|0x4D"
+          "MultiByteToWideChar|0x54",
+          "LCMapStringW|0x4C",
+          "LCMapStringA|0x4D",
+          "FreeHeapMemory|0x1000B960",
+          "WideCharToMultiByte|0x50"
+        ],
+        "LoD/1.08": [
+          "_strncnt|0x1000D110",
+          "WideCharToMultiByte|0x50",
+          "FreeHeapMemory|0x1000B960",
+          "LCMapStringW|0x4C",
+          "LCMapStringA|0x4D",
+          "MultiByteToWideChar|0x54",
+          "AllocateMemoryWithRetry|0x1000B8E0"
         ],
         "LoD/1.09": [
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "MultiByteToWideChar|0x54",
-          "FreeHeapMemory|0x1000B960",
           "WideCharToMultiByte|0x50",
-          "LCMapStringA|0x4D",
-          "LCMapStringW|0x4C",
-          "_strncnt|0x1000D110"
-        ],
-        "LoD/1.09b": [
           "MultiByteToWideChar|0x54",
           "LCMapStringW|0x4C",
-          "AllocateMemoryWithRetry|0x1000B8E0",
           "_strncnt|0x1000D110",
-          "WideCharToMultiByte|0x50",
           "FreeHeapMemory|0x1000B960",
           "LCMapStringA|0x4D"
         ],
-        "LoD/1.09d": [
-          "MultiByteToWideChar|0x54",
-          "LCMapStringA|0x4D",
-          "WideCharToMultiByte|0x50",
+        "LoD/1.09b": [
           "_strncnt|0x1000D110",
+          "LCMapStringA|0x4D",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "FreeHeapMemory|0x1000B960",
+          "MultiByteToWideChar|0x54",
           "LCMapStringW|0x4C",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "WideCharToMultiByte|0x50"
+        ],
+        "LoD/1.09d": [
+          "LCMapStringW|0x4C",
+          "LCMapStringA|0x4D",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "MultiByteToWideChar|0x54",
+          "FreeHeapMemory|0x1000B960",
+          "_strncnt|0x1000D110",
+          "WideCharToMultiByte|0x50"
         ],
         "LoD/1.10": [
           "LCMapStringW|0x4C",
@@ -193587,85 +186468,85 @@ var FUNCTIONS_SmackW32_dll = {
           "_strncnt|0x1000D110"
         ],
         "LoD/1.11": [
-          "LCMapStringA|0x4D",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "_strncnt|0x1000D110",
-          "FreeHeapMemory|0x1000B960",
           "LCMapStringW|0x4C",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "LCMapStringA|0x4D",
+          "MultiByteToWideChar|0x54",
           "WideCharToMultiByte|0x50",
-          "MultiByteToWideChar|0x54"
+          "_strncnt|0x1000D110",
+          "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.11b": [
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "LCMapStringW|0x4C",
-          "_strncnt|0x1000D110",
           "FreeHeapMemory|0x1000B960",
-          "MultiByteToWideChar|0x54",
+          "LCMapStringA|0x4D",
+          "_strncnt|0x1000D110",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "WideCharToMultiByte|0x50",
-          "LCMapStringA|0x4D"
+          "LCMapStringW|0x4C",
+          "MultiByteToWideChar|0x54"
         ],
         "LoD/1.12a": [
-          "FreeHeapMemory|0x1000B960",
-          "AllocateMemoryWithRetry|0x1000B8E0",
-          "MultiByteToWideChar|0x54",
-          "LCMapStringA|0x4D",
-          "LCMapStringW|0x4C",
-          "WideCharToMultiByte|0x50",
-          "_strncnt|0x1000D110"
-        ],
-        "LoD/1.13c": [
-          "AllocateMemoryWithRetry|0x1000B8E0",
           "MultiByteToWideChar|0x54",
           "_strncnt|0x1000D110",
-          "LCMapStringW|0x4C",
+          "WideCharToMultiByte|0x50",
           "FreeHeapMemory|0x1000B960",
           "LCMapStringA|0x4D",
-          "WideCharToMultiByte|0x50"
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "LCMapStringW|0x4C"
+        ],
+        "LoD/1.13c": [
+          "WideCharToMultiByte|0x50",
+          "MultiByteToWideChar|0x54",
+          "LCMapStringA|0x4D",
+          "FreeHeapMemory|0x1000B960",
+          "_strncnt|0x1000D110",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "LCMapStringW|0x4C"
         ],
         "LoD/1.13d": [
           "LCMapStringW|0x4C",
+          "LCMapStringA|0x4D",
           "AllocateMemoryWithRetry|0x1000B8E0",
           "FreeHeapMemory|0x1000B960",
-          "LCMapStringA|0x4D",
-          "_strncnt|0x1000D110",
           "WideCharToMultiByte|0x50",
-          "MultiByteToWideChar|0x54"
+          "MultiByteToWideChar|0x54",
+          "_strncnt|0x1000D110"
         ],
         "LoD/1.14a": [
-          "LCMapStringA|0x4D",
-          "FreeHeapMemory|0x1000B960",
-          "LCMapStringW|0x4C",
           "_strncnt|0x1000D110",
-          "WideCharToMultiByte|0x50",
+          "LCMapStringA|0x4D",
           "MultiByteToWideChar|0x54",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "WideCharToMultiByte|0x50",
+          "FreeHeapMemory|0x1000B960",
+          "LCMapStringW|0x4C"
         ],
         "LoD/1.14b": [
-          "_strncnt|0x1000D110",
           "AllocateMemoryWithRetry|0x1000B8E0",
-          "LCMapStringA|0x4D",
-          "LCMapStringW|0x4C",
           "FreeHeapMemory|0x1000B960",
           "WideCharToMultiByte|0x50",
-          "MultiByteToWideChar|0x54"
+          "_strncnt|0x1000D110",
+          "LCMapStringA|0x4D",
+          "MultiByteToWideChar|0x54",
+          "LCMapStringW|0x4C"
         ],
         "LoD/1.14c": [
-          "_strncnt|0x1000D110",
-          "LCMapStringW|0x4C",
           "MultiByteToWideChar|0x54",
-          "LCMapStringA|0x4D",
-          "WideCharToMultiByte|0x50",
+          "_strncnt|0x1000D110",
           "FreeHeapMemory|0x1000B960",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "WideCharToMultiByte|0x50",
+          "LCMapStringA|0x4D",
+          "AllocateMemoryWithRetry|0x1000B8E0",
+          "LCMapStringW|0x4C"
         ],
         "LoD/1.14d": [
+          "LCMapStringW|0x4C",
+          "AllocateMemoryWithRetry|0x1000B8E0",
           "FreeHeapMemory|0x1000B960",
           "LCMapStringA|0x4D",
-          "_strncnt|0x1000D110",
           "MultiByteToWideChar|0x54",
-          "WideCharToMultiByte|0x50",
-          "LCMapStringW|0x4C",
-          "AllocateMemoryWithRetry|0x1000B8E0"
+          "_strncnt|0x1000D110",
+          "WideCharToMultiByte|0x50"
         ]
       },
       "callers": {
@@ -196717,36 +189598,36 @@ var FUNCTIONS_SmackW32_dll = {
           "LoadLibraryA|0x58"
         ],
         "Classic/1.01": [
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
         ],
         "Classic/1.02": [
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
         "Classic/1.03": [
-          "LoadLibraryA|0x58",
-          "GetProcAddress|0x47"
-        ],
-        "Classic/1.04c": [
           "GetProcAddress|0x47",
           "LoadLibraryA|0x58"
         ],
-        "LoD/1.07": [
+        "Classic/1.04c": [
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
+        ],
+        "LoD/1.07": [
+          "GetProcAddress|0x47",
+          "LoadLibraryA|0x58"
         ],
         "LoD/1.08": [
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
         "LoD/1.09": [
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
-        ],
-        "LoD/1.09b": [
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
+        ],
+        "LoD/1.09b": [
+          "GetProcAddress|0x47",
+          "LoadLibraryA|0x58"
         ],
         "LoD/1.09d": [
           "LoadLibraryA|0x58",
@@ -196761,36 +189642,36 @@ var FUNCTIONS_SmackW32_dll = {
           "GetProcAddress|0x47"
         ],
         "LoD/1.11b": [
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
-        ],
-        "LoD/1.12a": [
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
+        ],
+        "LoD/1.12a": [
+          "GetProcAddress|0x47",
+          "LoadLibraryA|0x58"
         ],
         "LoD/1.13c": [
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
         "LoD/1.13d": [
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.14a": [
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
         "LoD/1.14b": [
-          "GetProcAddress|0x47",
-          "LoadLibraryA|0x58"
+          "LoadLibraryA|0x58",
+          "GetProcAddress|0x47"
         ],
         "LoD/1.14c": [
           "LoadLibraryA|0x58",
           "GetProcAddress|0x47"
         ],
         "LoD/1.14d": [
-          "LoadLibraryA|0x58",
-          "GetProcAddress|0x47"
+          "GetProcAddress|0x47",
+          "LoadLibraryA|0x58"
         ]
       },
       "callers": {
@@ -198817,143 +191698,143 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetStringTypeW|0x4A",
-          "MultiByteToWideChar|0x54",
-          "FUN_1000d4b0|0x1000D4B0",
           "GetStringTypeA|0x4B",
-          "FreeHeapMemory|0x1000B960"
+          "FUN_1000d4b0|0x1000D4B0",
+          "GetStringTypeW|0x4A",
+          "FreeHeapMemory|0x1000B960",
+          "MultiByteToWideChar|0x54"
         ],
         "Classic/1.01": [
           "GetStringTypeW|0x4A",
-          "MultiByteToWideChar|0x54",
           "GetStringTypeA|0x4B",
           "FUN_1000d4b0|0x1000D4B0",
-          "FreeHeapMemory|0x1000B960"
+          "FreeHeapMemory|0x1000B960",
+          "MultiByteToWideChar|0x54"
         ],
         "Classic/1.02": [
-          "GetStringTypeA|0x4B",
           "GetStringTypeW|0x4A",
-          "FUN_1000d4b0|0x1000D4B0",
           "MultiByteToWideChar|0x54",
+          "FUN_1000d4b0|0x1000D4B0",
+          "GetStringTypeA|0x4B",
           "FreeHeapMemory|0x1000B960"
         ],
         "Classic/1.03": [
+          "FUN_1000d4b0|0x1000D4B0",
+          "GetStringTypeA|0x4B",
           "MultiByteToWideChar|0x54",
           "FreeHeapMemory|0x1000B960",
-          "GetStringTypeW|0x4A",
-          "FUN_1000d4b0|0x1000D4B0",
-          "GetStringTypeA|0x4B"
+          "GetStringTypeW|0x4A"
         ],
         "Classic/1.04c": [
-          "GetStringTypeW|0x4A",
           "GetStringTypeA|0x4B",
           "FUN_1000d4b0|0x1000D4B0",
-          "MultiByteToWideChar|0x54",
-          "FreeHeapMemory|0x1000B960"
+          "GetStringTypeW|0x4A",
+          "FreeHeapMemory|0x1000B960",
+          "MultiByteToWideChar|0x54"
         ],
         "LoD/1.07": [
-          "GetStringTypeA|0x4B",
-          "FreeHeapMemory|0x1000B960",
-          "GetStringTypeW|0x4A",
           "MultiByteToWideChar|0x54",
-          "FUN_1000d4b0|0x1000D4B0"
+          "GetStringTypeW|0x4A",
+          "FUN_1000d4b0|0x1000D4B0",
+          "GetStringTypeA|0x4B",
+          "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.08": [
           "GetStringTypeA|0x4B",
+          "FreeHeapMemory|0x1000B960",
           "GetStringTypeW|0x4A",
           "MultiByteToWideChar|0x54",
-          "FreeHeapMemory|0x1000B960",
           "FUN_1000d4b0|0x1000D4B0"
         ],
         "LoD/1.09": [
+          "GetStringTypeA|0x4B",
+          "GetStringTypeW|0x4A",
           "MultiByteToWideChar|0x54",
           "FreeHeapMemory|0x1000B960",
-          "GetStringTypeW|0x4A",
-          "FUN_1000d4b0|0x1000D4B0",
-          "GetStringTypeA|0x4B"
+          "FUN_1000d4b0|0x1000D4B0"
         ],
         "LoD/1.09b": [
-          "FUN_1000d4b0|0x1000D4B0",
-          "MultiByteToWideChar|0x54",
           "GetStringTypeW|0x4A",
+          "FreeHeapMemory|0x1000B960",
+          "MultiByteToWideChar|0x54",
           "GetStringTypeA|0x4B",
-          "FreeHeapMemory|0x1000B960"
+          "FUN_1000d4b0|0x1000D4B0"
         ],
         "LoD/1.09d": [
           "GetStringTypeW|0x4A",
+          "MultiByteToWideChar|0x54",
+          "FreeHeapMemory|0x1000B960",
+          "GetStringTypeA|0x4B",
+          "FUN_1000d4b0|0x1000D4B0"
+        ],
+        "LoD/1.10": [
           "GetStringTypeA|0x4B",
           "FUN_1000d4b0|0x1000D4B0",
+          "GetStringTypeW|0x4A",
+          "FreeHeapMemory|0x1000B960",
+          "MultiByteToWideChar|0x54"
+        ],
+        "LoD/1.11": [
+          "GetStringTypeW|0x4A",
+          "FUN_1000d4b0|0x1000D4B0",
+          "GetStringTypeA|0x4B",
           "MultiByteToWideChar|0x54",
           "FreeHeapMemory|0x1000B960"
         ],
-        "LoD/1.10": [
-          "FreeHeapMemory|0x1000B960",
-          "MultiByteToWideChar|0x54",
-          "GetStringTypeA|0x4B",
-          "GetStringTypeW|0x4A",
-          "FUN_1000d4b0|0x1000D4B0"
-        ],
-        "LoD/1.11": [
-          "FUN_1000d4b0|0x1000D4B0",
-          "GetStringTypeW|0x4A",
-          "FreeHeapMemory|0x1000B960",
-          "GetStringTypeA|0x4B",
-          "MultiByteToWideChar|0x54"
-        ],
         "LoD/1.11b": [
+          "FreeHeapMemory|0x1000B960",
           "GetStringTypeW|0x4A",
           "FUN_1000d4b0|0x1000D4B0",
-          "FreeHeapMemory|0x1000B960",
           "MultiByteToWideChar|0x54",
           "GetStringTypeA|0x4B"
         ],
         "LoD/1.12a": [
-          "FreeHeapMemory|0x1000B960",
-          "GetStringTypeW|0x4A",
-          "MultiByteToWideChar|0x54",
           "FUN_1000d4b0|0x1000D4B0",
-          "GetStringTypeA|0x4B"
+          "MultiByteToWideChar|0x54",
+          "FreeHeapMemory|0x1000B960",
+          "GetStringTypeA|0x4B",
+          "GetStringTypeW|0x4A"
         ],
         "LoD/1.13c": [
-          "GetStringTypeA|0x4B",
+          "FUN_1000d4b0|0x1000D4B0",
           "MultiByteToWideChar|0x54",
           "FreeHeapMemory|0x1000B960",
-          "GetStringTypeW|0x4A",
-          "FUN_1000d4b0|0x1000D4B0"
+          "GetStringTypeA|0x4B",
+          "GetStringTypeW|0x4A"
         ],
         "LoD/1.13d": [
-          "FUN_1000d4b0|0x1000D4B0",
           "FreeHeapMemory|0x1000B960",
-          "GetStringTypeW|0x4A",
+          "MultiByteToWideChar|0x54",
+          "FUN_1000d4b0|0x1000D4B0",
           "GetStringTypeA|0x4B",
-          "MultiByteToWideChar|0x54"
+          "GetStringTypeW|0x4A"
         ],
         "LoD/1.14a": [
-          "GetStringTypeW|0x4A",
-          "FreeHeapMemory|0x1000B960",
           "FUN_1000d4b0|0x1000D4B0",
           "MultiByteToWideChar|0x54",
-          "GetStringTypeA|0x4B"
+          "GetStringTypeA|0x4B",
+          "FreeHeapMemory|0x1000B960",
+          "GetStringTypeW|0x4A"
         ],
         "LoD/1.14b": [
-          "GetStringTypeA|0x4B",
-          "GetStringTypeW|0x4A",
           "FUN_1000d4b0|0x1000D4B0",
           "FreeHeapMemory|0x1000B960",
-          "MultiByteToWideChar|0x54"
-        ],
-        "LoD/1.14c": [
           "MultiByteToWideChar|0x54",
           "GetStringTypeW|0x4A",
-          "FreeHeapMemory|0x1000B960",
+          "GetStringTypeA|0x4B"
+        ],
+        "LoD/1.14c": [
           "GetStringTypeA|0x4B",
-          "FUN_1000d4b0|0x1000D4B0"
+          "MultiByteToWideChar|0x54",
+          "FUN_1000d4b0|0x1000D4B0",
+          "GetStringTypeW|0x4A",
+          "FreeHeapMemory|0x1000B960"
         ],
         "LoD/1.14d": [
-          "FreeHeapMemory|0x1000B960",
-          "GetStringTypeW|0x4A",
           "FUN_1000d4b0|0x1000D4B0",
+          "FreeHeapMemory|0x1000B960",
           "GetStringTypeA|0x4B",
+          "GetStringTypeW|0x4A",
           "MultiByteToWideChar|0x54"
         ]
       },
@@ -199960,32 +192841,32 @@ var FUNCTIONS_SmackW32_dll = {
           "InvokeOptionalHandler|0x1000C020"
         ],
         "Classic/1.01": [
-          "HeapAlloc|0x5E",
-          "InvokeOptionalHandler|0x1000C020"
-        ],
-        "Classic/1.02": [
           "InvokeOptionalHandler|0x1000C020",
           "HeapAlloc|0x5E"
         ],
-        "Classic/1.03": [
+        "Classic/1.02": [
           "HeapAlloc|0x5E",
           "InvokeOptionalHandler|0x1000C020"
+        ],
+        "Classic/1.03": [
+          "InvokeOptionalHandler|0x1000C020",
+          "HeapAlloc|0x5E"
         ],
         "Classic/1.04c": [
           "InvokeOptionalHandler|0x1000C020",
           "HeapAlloc|0x5E"
         ],
         "LoD/1.07": [
-          "HeapAlloc|0x5E",
-          "InvokeOptionalHandler|0x1000C020"
-        ],
-        "LoD/1.08": [
-          "HeapAlloc|0x5E",
-          "InvokeOptionalHandler|0x1000C020"
-        ],
-        "LoD/1.09": [
           "InvokeOptionalHandler|0x1000C020",
           "HeapAlloc|0x5E"
+        ],
+        "LoD/1.08": [
+          "InvokeOptionalHandler|0x1000C020",
+          "HeapAlloc|0x5E"
+        ],
+        "LoD/1.09": [
+          "HeapAlloc|0x5E",
+          "InvokeOptionalHandler|0x1000C020"
         ],
         "LoD/1.09b": [
           "HeapAlloc|0x5E",
@@ -200000,16 +192881,16 @@ var FUNCTIONS_SmackW32_dll = {
           "HeapAlloc|0x5E"
         ],
         "LoD/1.11": [
-          "InvokeOptionalHandler|0x1000C020",
-          "HeapAlloc|0x5E"
-        ],
-        "LoD/1.11b": [
           "HeapAlloc|0x5E",
           "InvokeOptionalHandler|0x1000C020"
         ],
-        "LoD/1.12a": [
+        "LoD/1.11b": [
           "InvokeOptionalHandler|0x1000C020",
           "HeapAlloc|0x5E"
+        ],
+        "LoD/1.12a": [
+          "HeapAlloc|0x5E",
+          "InvokeOptionalHandler|0x1000C020"
         ],
         "LoD/1.13c": [
           "InvokeOptionalHandler|0x1000C020",
@@ -200020,20 +192901,20 @@ var FUNCTIONS_SmackW32_dll = {
           "InvokeOptionalHandler|0x1000C020"
         ],
         "LoD/1.14a": [
-          "HeapAlloc|0x5E",
-          "InvokeOptionalHandler|0x1000C020"
+          "InvokeOptionalHandler|0x1000C020",
+          "HeapAlloc|0x5E"
         ],
         "LoD/1.14b": [
           "HeapAlloc|0x5E",
           "InvokeOptionalHandler|0x1000C020"
         ],
         "LoD/1.14c": [
-          "HeapAlloc|0x5E",
-          "InvokeOptionalHandler|0x1000C020"
+          "InvokeOptionalHandler|0x1000C020",
+          "HeapAlloc|0x5E"
         ],
         "LoD/1.14d": [
-          "HeapAlloc|0x5E",
-          "InvokeOptionalHandler|0x1000C020"
+          "InvokeOptionalHandler|0x1000C020",
+          "HeapAlloc|0x5E"
         ]
       },
       "callers": {
@@ -200886,7 +193767,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": "0x1000E0A0",
         "LoD/1.14b": "0x1000E0A0",
         "LoD/1.14c": "0x1000E0A0",
-        "LoD/1.14d": "0x1000E0A0"
+        "LoD/1.14d": "0x1000E0A0",
+        "LoD/PD2": "0x02E2E000"
       },
       "rvas": {
         "Classic/1.00": "0xE000",
@@ -200908,7 +193790,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": "0xE0A0",
         "LoD/1.14b": "0xE0A0",
         "LoD/1.14c": "0xE0A0",
-        "LoD/1.14d": "0xE0A0"
+        "LoD/1.14d": "0xE0A0",
+        "LoD/PD2": "0xE000"
       },
       "sizes": {
         "Classic/1.00": 148,
@@ -200930,7 +193813,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": 148,
         "LoD/1.14b": 148,
         "LoD/1.14c": 148,
-        "LoD/1.14d": 148
+        "LoD/1.14d": 148,
+        "LoD/PD2": 148
       },
       "name": "DecompressBitstream",
       "signature": "int DecompressBitstream(void)",
@@ -200954,12 +193838,12 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_1000e490|0x1000E490",
-          "FUN_10011f10|0x10011F10"
-        ],
-        "Classic/1.01": [
           "FUN_10011f10|0x10011F10",
           "FUN_1000e490|0x1000E490"
+        ],
+        "Classic/1.01": [
+          "FUN_1000e490|0x1000E490",
+          "FUN_10011f10|0x10011F10"
         ],
         "Classic/1.02": [
           "FUN_10011f10|0x10011F10"
@@ -201422,7 +194306,8 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14a": 4,
         "LoD/1.14b": 4,
         "LoD/1.14c": 4,
-        "LoD/1.14d": 4
+        "LoD/1.14d": 4,
+        "LoD/PD2": 0
       },
       "mnemonic_hashes": {
         "Classic/1.00": "44f46ef527bad070016e875770123fc1",
@@ -201676,115 +194561,6 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14b": "internal",
         "LoD/1.14c": "internal",
         "LoD/1.14d": "internal"
-      }
-    },
-    "SmackW32_MNE_44f46ef527ba": {
-      "addresses": {
-        "Classic/1.00": "0x1000E0A0",
-        "LoD/PD2": "0x02E2E000"
-      },
-      "rvas": {
-        "Classic/1.00": "0xE0A0",
-        "LoD/PD2": "0xE000"
-      },
-      "sizes": {
-        "Classic/1.00": 148,
-        "LoD/PD2": 148
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "int",
-      "method": "NOP",
-      "index": "NOP:1f543b2c30c476f63cdf412dadf47bd84f594fd88afd2cbb8cc16ba59af110ba",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "1f543b2c30c476f63cdf412dadf47bd84f594fd88afd2cbb8cc16ba59af110ba",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "44f46ef527bad070016e875770123fc1",
-        "CFG": "f840d9d1945c5c06d394cf4b42c2222c",
-        "PRO": "b82884e1a2c94ab2c42810c7eaa7f8d8"
-      },
-      "display_name": "NOP_1f543b2c30c476f6",
-      "callers": {
-        "Classic/1.00": [
-          "FUN_10011f10|0x10011F10"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0xE0A0|MOV|EAX, 0x80000000",
-          "0xE0A5|PUSH|-0x1",
-          "0xE0A7|PUSH|-0x2",
-          "0xE0A9|DEC|byte ptr [0x10014ac0]",
-          "0xE0AF|JNZ|0x1000e0bd",
-          "0xE0B1|MOV|EBP, dword ptr [ESI]",
-          "0xE0B3|ADD|ESI, 0x4",
-          "0xE0B6|MOV|byte ptr [0x10014ac0], 0x20",
-          "0xE0BD|SHR|EBP, 0x1",
-          "0xE0C0|JNC|0x1000e0d7",
-          "0xE0C2|POP|ECX",
-          "0xE0C3|CMP|ECX, -0x2",
-          "0xE0C6|JZ|0x1000e0cf",
-          "0xE0C8|PUSH|ECX",
-          "0xE0C9|PUSH|EDI"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 55
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 4,
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "44f46ef527bad070016e875770123fc1",
-        "Classic/1.01": "44f46ef527bad070016e875770123fc1",
-        "Classic/1.02": "44f46ef527bad070016e875770123fc1",
-        "Classic/1.03": "44f46ef527bad070016e875770123fc1",
-        "Classic/1.04c": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.07": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.08": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.09": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.09b": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.09d": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.10": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.11": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.11b": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.12a": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.13c": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.13d": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.14a": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.14b": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.14c": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.14d": "44f46ef527bad070016e875770123fc1",
-        "LoD/PD2": "44f46ef527bad070016e875770123fc1"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x14AC0|DAT_10014ac0|0x0"
-        ]
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "global_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_0",
-          "PROP_LOOPHEAVY",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
       }
     },
     "SmackW32_NOP_3119cf456a6b": {
@@ -203917,44 +196693,44 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "DecompressBitstream|0x1000E000",
           "ProcessSearchPattern|0x1000E420",
-          "BuildHuffmanTreeWithEscapes|0x1000E140"
+          "BuildHuffmanTreeWithEscapes|0x1000E140",
+          "DecompressBitstream|0x1000E000"
         ],
         "Classic/1.01": [
+          "BuildHuffmanTreeWithEscapes|0x1000E140",
           "DecompressBitstream|0x1000E000",
-          "ProcessSearchPattern|0x1000E420",
-          "BuildHuffmanTreeWithEscapes|0x1000E140"
+          "ProcessSearchPattern|0x1000E420"
         ],
         "Classic/1.02": [
-          "FUN_1000e000|0x1000E000",
           "BuildHuffmanTreeWithEscapes|0x1000E140",
-          "ProcessSearchPattern|0x1000E420"
+          "ProcessSearchPattern|0x1000E420",
+          "FUN_1000e000|0x1000E000"
         ],
         "Classic/1.03": [
           "ProcessSearchPattern|0x1000E420",
-          "FUN_1000e000|0x1000E000",
-          "BuildHuffmanTreeWithEscapes|0x1000E140"
+          "BuildHuffmanTreeWithEscapes|0x1000E140",
+          "FUN_1000e000|0x1000E000"
         ],
         "Classic/1.04c": [
           "FUN_1000e000|0x1000E000",
-          "BuildHuffmanTreeWithEscapes|0x1000E140",
-          "ProcessSearchPattern|0x1000E420"
-        ],
-        "LoD/1.07": [
-          "BuildHuffmanTreeWithEscapes|0x1000E140",
-          "DecompressBitstream|0x1000E000",
-          "ProcessSearchPattern|0x1000E420"
-        ],
-        "LoD/1.08": [
-          "FUN_1000e000|0x1000E000",
           "ProcessSearchPattern|0x1000E420",
           "BuildHuffmanTreeWithEscapes|0x1000E140"
         ],
+        "LoD/1.07": [
+          "DecompressBitstream|0x1000E000",
+          "ProcessSearchPattern|0x1000E420",
+          "BuildHuffmanTreeWithEscapes|0x1000E140"
+        ],
+        "LoD/1.08": [
+          "BuildHuffmanTreeWithEscapes|0x1000E140",
+          "ProcessSearchPattern|0x1000E420",
+          "FUN_1000e000|0x1000E000"
+        ],
         "LoD/1.09": [
           "ProcessSearchPattern|0x1000E420",
-          "BuildHuffmanTreeWithEscapes|0x1000E140",
-          "FUN_1000e000|0x1000E000"
+          "FUN_1000e000|0x1000E000",
+          "BuildHuffmanTreeWithEscapes|0x1000E140"
         ],
         "LoD/1.09b": [
           "ProcessSearchPattern|0x1000E420",
@@ -203963,8 +196739,8 @@ var FUNCTIONS_SmackW32_dll = {
         ],
         "LoD/1.09d": [
           "FUN_1000e000|0x1000E000",
-          "ProcessSearchPattern|0x1000E420",
-          "BuildHuffmanTreeWithEscapes|0x1000E140"
+          "BuildHuffmanTreeWithEscapes|0x1000E140",
+          "ProcessSearchPattern|0x1000E420"
         ],
         "LoD/1.10": [
           "BuildHuffmanTreeWithEscapes|0x1000E140",
@@ -203977,19 +196753,19 @@ var FUNCTIONS_SmackW32_dll = {
           "BuildHuffmanTreeWithEscapes|0x1000E140"
         ],
         "LoD/1.11b": [
-          "FUN_1000e000|0x1000E000",
           "BuildHuffmanTreeWithEscapes|0x1000E140",
-          "ProcessSearchPattern|0x1000E420"
+          "ProcessSearchPattern|0x1000E420",
+          "FUN_1000e000|0x1000E000"
         ],
         "LoD/1.12a": [
+          "FUN_1000e000|0x1000E000",
           "ProcessSearchPattern|0x1000E420",
-          "BuildHuffmanTreeWithEscapes|0x1000E140",
-          "FUN_1000e000|0x1000E000"
+          "BuildHuffmanTreeWithEscapes|0x1000E140"
         ],
         "LoD/1.13c": [
           "BuildHuffmanTreeWithEscapes|0x1000E140",
-          "FUN_1000e000|0x1000E000",
-          "ProcessSearchPattern|0x1000E420"
+          "ProcessSearchPattern|0x1000E420",
+          "FUN_1000e000|0x1000E000"
         ],
         "LoD/1.13d": [
           "ProcessSearchPattern|0x1000E420",
@@ -203997,14 +196773,14 @@ var FUNCTIONS_SmackW32_dll = {
           "BuildHuffmanTreeWithEscapes|0x1000E140"
         ],
         "LoD/1.14a": [
-          "BuildHuffmanTreeWithEscapes|0x1000E140",
+          "FUN_1000e000|0x1000E000",
           "ProcessSearchPattern|0x1000E420",
-          "FUN_1000e000|0x1000E000"
+          "BuildHuffmanTreeWithEscapes|0x1000E140"
         ],
         "LoD/1.14b": [
-          "ProcessSearchPattern|0x1000E420",
           "FUN_1000e000|0x1000E000",
-          "BuildHuffmanTreeWithEscapes|0x1000E140"
+          "BuildHuffmanTreeWithEscapes|0x1000E140",
+          "ProcessSearchPattern|0x1000E420"
         ],
         "LoD/1.14c": [
           "BuildHuffmanTreeWithEscapes|0x1000E140",
@@ -205450,89 +198226,89 @@ var FUNCTIONS_SmackW32_dll = {
       "display_name": "NOP_5413717e889b03bb",
       "callees": {
         "Classic/1.00": [
-          "SetBitInTable|0x1000E880",
+          "InitializeHuffmanTableEntries|0x1000E8B0",
           "DecompressBitStreamData|0x1000E490",
-          "InitializeHuffmanTableEntries|0x1000E8B0"
+          "SetBitInTable|0x1000E880"
         ],
         "Classic/1.01": [
+          "DecompressBitStreamData|0x1000E490",
+          "InitializeHuffmanTableEntries|0x1000E8B0",
+          "SetBitInTable|0x1000E880"
+        ],
+        "Classic/1.02": [
           "SetBitInTable|0x1000E880",
           "InitializeHuffmanTableEntries|0x1000E8B0",
           "DecompressBitStreamData|0x1000E490"
         ],
-        "Classic/1.02": [
-          "DecompressBitStreamData|0x1000E490",
-          "SetBitInTable|0x1000E880",
-          "InitializeHuffmanTableEntries|0x1000E8B0"
-        ],
         "Classic/1.03": [
-          "DecompressBitStreamData|0x1000E490",
+          "InitializeHuffmanTableEntries|0x1000E8B0",
           "SetBitInTable|0x1000E880",
-          "InitializeHuffmanTableEntries|0x1000E8B0"
+          "DecompressBitStreamData|0x1000E490"
         ],
         "Classic/1.04c": [
           "InitializeHuffmanTableEntries|0x1000E8B0",
-          "DecompressBitStreamData|0x1000E490",
-          "SetBitInTable|0x1000E880"
+          "SetBitInTable|0x1000E880",
+          "DecompressBitStreamData|0x1000E490"
         ],
         "LoD/1.07": [
-          "SetBitInTable|0x1000E880",
           "DecompressBitStreamData|0x1000E490",
+          "SetBitInTable|0x1000E880",
           "InitializeHuffmanTableEntries|0x1000E8B0"
         ],
         "LoD/1.08": [
-          "InitializeHuffmanTableEntries|0x1000E8B0",
+          "DecompressBitStreamData|0x1000E490",
           "SetBitInTable|0x1000E880",
-          "DecompressBitStreamData|0x1000E490"
+          "InitializeHuffmanTableEntries|0x1000E8B0"
         ],
         "LoD/1.09": [
           "InitializeHuffmanTableEntries|0x1000E8B0",
-          "DecompressBitStreamData|0x1000E490",
-          "SetBitInTable|0x1000E880"
+          "SetBitInTable|0x1000E880",
+          "DecompressBitStreamData|0x1000E490"
         ],
         "LoD/1.09b": [
-          "SetBitInTable|0x1000E880",
-          "DecompressBitStreamData|0x1000E490",
-          "InitializeHuffmanTableEntries|0x1000E8B0"
-        ],
-        "LoD/1.09d": [
           "InitializeHuffmanTableEntries|0x1000E8B0",
           "DecompressBitStreamData|0x1000E490",
           "SetBitInTable|0x1000E880"
         ],
+        "LoD/1.09d": [
+          "SetBitInTable|0x1000E880",
+          "InitializeHuffmanTableEntries|0x1000E8B0",
+          "DecompressBitStreamData|0x1000E490"
+        ],
         "LoD/1.10": [
+          "DecompressBitStreamData|0x1000E490",
+          "InitializeHuffmanTableEntries|0x1000E8B0",
+          "SetBitInTable|0x1000E880"
+        ],
+        "LoD/1.11": [
           "InitializeHuffmanTableEntries|0x1000E8B0",
           "SetBitInTable|0x1000E880",
           "DecompressBitStreamData|0x1000E490"
         ],
-        "LoD/1.11": [
-          "DecompressBitStreamData|0x1000E490",
-          "SetBitInTable|0x1000E880",
-          "InitializeHuffmanTableEntries|0x1000E8B0"
-        ],
         "LoD/1.11b": [
-          "SetBitInTable|0x1000E880",
           "DecompressBitStreamData|0x1000E490",
-          "InitializeHuffmanTableEntries|0x1000E8B0"
+          "InitializeHuffmanTableEntries|0x1000E8B0",
+          "SetBitInTable|0x1000E880"
         ],
         "LoD/1.12a": [
-          "SetBitInTable|0x1000E880",
           "DecompressBitStreamData|0x1000E490",
+          "SetBitInTable|0x1000E880",
           "InitializeHuffmanTableEntries|0x1000E8B0"
         ],
         "LoD/1.13c": [
           "InitializeHuffmanTableEntries|0x1000E8B0",
-          "SetBitInTable|0x1000E880",
-          "DecompressBitStreamData|0x1000E490"
+          "DecompressBitStreamData|0x1000E490",
+          "SetBitInTable|0x1000E880"
         ],
         "LoD/1.13d": [
-          "SetBitInTable|0x1000E880",
           "DecompressBitStreamData|0x1000E490",
-          "InitializeHuffmanTableEntries|0x1000E8B0"
+          "InitializeHuffmanTableEntries|0x1000E8B0",
+          "SetBitInTable|0x1000E880"
         ],
         "LoD/1.14a": [
-          "InitializeHuffmanTableEntries|0x1000E8B0",
+          "DecompressBitStreamData|0x1000E490",
           "SetBitInTable|0x1000E880",
-          "DecompressBitStreamData|0x1000E490"
+          "InitializeHuffmanTableEntries|0x1000E8B0"
         ],
         "LoD/1.14b": [
           "SetBitInTable|0x1000E880",
@@ -205540,14 +198316,14 @@ var FUNCTIONS_SmackW32_dll = {
           "DecompressBitStreamData|0x1000E490"
         ],
         "LoD/1.14c": [
+          "DecompressBitStreamData|0x1000E490",
           "InitializeHuffmanTableEntries|0x1000E8B0",
-          "SetBitInTable|0x1000E880",
-          "DecompressBitStreamData|0x1000E490"
+          "SetBitInTable|0x1000E880"
         ],
         "LoD/1.14d": [
-          "DecompressBitStreamData|0x1000E490",
           "SetBitInTable|0x1000E880",
-          "InitializeHuffmanTableEntries|0x1000E8B0"
+          "InitializeHuffmanTableEntries|0x1000E8B0",
+          "DecompressBitStreamData|0x1000E490"
         ]
       },
       "callers": {
@@ -210592,118 +203368,118 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_1000e0a0|0x1000E0A0"
         ],
         "Classic/1.01": [
-          "DecompressBitstream|0x1000E000",
-          "FUN_1000e0a0|0x1000E0A0"
+          "FUN_1000e0a0|0x1000E0A0",
+          "DecompressBitstream|0x1000E000"
         ],
         "Classic/1.02": [
           "FUN_1000e000|0x1000E000",
           "DecompressBitstream|0x1000E0A0"
         ],
         "Classic/1.03": [
-          "FUN_1000e000|0x1000E000",
-          "DecompressBitstream|0x1000E0A0"
+          "DecompressBitstream|0x1000E0A0",
+          "FUN_1000e000|0x1000E000"
         ],
         "Classic/1.04c": [
           "FUN_1000e000|0x1000E000",
           "DecompressBitstream|0x1000E0A0"
         ],
         "LoD/1.07": [
-          "DecompressBitstream|0x1000E0A0",
-          "DecompressBitstream|0x1000E000"
+          "DecompressBitstream|0x1000E000",
+          "DecompressBitstream|0x1000E0A0"
         ],
         "LoD/1.08": [
-          "FUN_1000e000|0x1000E000",
-          "DecompressBitstream|0x1000E0A0"
+          "DecompressBitstream|0x1000E0A0",
+          "FUN_1000e000|0x1000E000"
         ],
         "LoD/1.09": [
-          "FUN_1000e000|0x1000E000",
-          "DecompressBitstream|0x1000E0A0"
+          "DecompressBitstream|0x1000E0A0",
+          "FUN_1000e000|0x1000E000"
         ],
         "LoD/1.09b": [
-          "DecompressBitstream|0x1000E0A0",
-          "FUN_1000e000|0x1000E000"
+          "FUN_1000e000|0x1000E000",
+          "DecompressBitstream|0x1000E0A0"
         ],
         "LoD/1.09d": [
+          "FUN_1000e000|0x1000E000",
+          "DecompressBitstream|0x1000E0A0"
+        ],
+        "LoD/1.10": [
           "DecompressBitstream|0x1000E0A0",
           "FUN_1000e000|0x1000E000"
         ],
-        "LoD/1.10": [
-          "FUN_1000e000|0x1000E000",
-          "DecompressBitstream|0x1000E0A0"
-        ],
         "LoD/1.11": [
-          "FUN_1000e000|0x1000E000",
-          "DecompressBitstream|0x1000E0A0"
+          "DecompressBitstream|0x1000E0A0",
+          "FUN_1000e000|0x1000E000"
         ],
         "LoD/1.11b": [
           "DecompressBitstream|0x1000E0A0",
           "FUN_1000e000|0x1000E000"
         ],
         "LoD/1.12a": [
-          "DecompressBitstream|0x1000E0A0",
-          "FUN_1000e000|0x1000E000"
+          "FUN_1000e000|0x1000E000",
+          "DecompressBitstream|0x1000E0A0"
         ],
         "LoD/1.13c": [
           "DecompressBitstream|0x1000E0A0",
           "FUN_1000e000|0x1000E000"
         ],
         "LoD/1.13d": [
-          "FUN_1000e000|0x1000E000",
-          "DecompressBitstream|0x1000E0A0"
+          "DecompressBitstream|0x1000E0A0",
+          "FUN_1000e000|0x1000E000"
         ],
         "LoD/1.14a": [
-          "DecompressBitstream|0x1000E0A0",
-          "FUN_1000e000|0x1000E000"
+          "FUN_1000e000|0x1000E000",
+          "DecompressBitstream|0x1000E0A0"
         ],
         "LoD/1.14b": [
+          "FUN_1000e000|0x1000E000",
+          "DecompressBitstream|0x1000E0A0"
+        ],
+        "LoD/1.14c": [
           "DecompressBitstream|0x1000E0A0",
           "FUN_1000e000|0x1000E000"
         ],
-        "LoD/1.14c": [
-          "FUN_1000e000|0x1000E000",
-          "DecompressBitstream|0x1000E0A0"
-        ],
         "LoD/1.14d": [
-          "FUN_1000e000|0x1000E000",
-          "DecompressBitstream|0x1000E0A0"
+          "DecompressBitstream|0x1000E0A0",
+          "FUN_1000e000|0x1000E000"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "_SmackGetTrackData@12|0x10007070",
-          "FUN_10005dd0|0x10005DD0"
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackGetTrackData@12|0x10007070"
         ],
         "Classic/1.01": [
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackGetTrackData@12|0x10007070"
+        ],
+        "Classic/1.02": [
           "_SmackGetTrackData@12|0x10007070",
           "FUN_10005dd0|0x10005DD0"
         ],
-        "Classic/1.02": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackGetTrackData@12|0x10007070"
-        ],
         "Classic/1.03": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackGetTrackData@12|0x10007070"
+          "_SmackGetTrackData@12|0x10007070",
+          "FUN_10005dd0|0x10005DD0"
         ],
         "Classic/1.04c": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackGetTrackData@12|0x10007070"
+          "_SmackGetTrackData@12|0x10007070",
+          "FUN_10005dd0|0x10005DD0"
         ],
         "LoD/1.07": [
           "_SmackGetTrackData@12|0x10007070",
           "ProcessSmackAudioTracks|0x10005DD0"
         ],
         "LoD/1.08": [
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackGetTrackData@12|0x10007070"
+        ],
+        "LoD/1.09": [
           "_SmackGetTrackData@12|0x10007070",
           "FUN_10005dd0|0x10005DD0"
         ],
-        "LoD/1.09": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackGetTrackData@12|0x10007070"
-        ],
         "LoD/1.09b": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackGetTrackData@12|0x10007070"
+          "_SmackGetTrackData@12|0x10007070",
+          "FUN_10005dd0|0x10005DD0"
         ],
         "LoD/1.09d": [
           "_SmackGetTrackData@12|0x10007070",
@@ -210722,28 +203498,28 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackGetTrackData@12|0x10007070"
         ],
         "LoD/1.12a": [
+          "_SmackGetTrackData@12|0x10007070",
+          "FUN_10005dd0|0x10005DD0"
+        ],
+        "LoD/1.13c": [
           "FUN_10005dd0|0x10005DD0",
           "_SmackGetTrackData@12|0x10007070"
         ],
-        "LoD/1.13c": [
-          "_SmackGetTrackData@12|0x10007070",
-          "FUN_10005dd0|0x10005DD0"
-        ],
         "LoD/1.13d": [
-          "_SmackGetTrackData@12|0x10007070",
-          "FUN_10005dd0|0x10005DD0"
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackGetTrackData@12|0x10007070"
         ],
         "LoD/1.14a": [
           "FUN_10005dd0|0x10005DD0",
           "_SmackGetTrackData@12|0x10007070"
         ],
         "LoD/1.14b": [
-          "FUN_10005dd0|0x10005DD0",
-          "_SmackGetTrackData@12|0x10007070"
-        ],
-        "LoD/1.14c": [
           "_SmackGetTrackData@12|0x10007070",
           "FUN_10005dd0|0x10005DD0"
+        ],
+        "LoD/1.14c": [
+          "FUN_10005dd0|0x10005DD0",
+          "_SmackGetTrackData@12|0x10007070"
         ],
         "LoD/1.14d": [
           "FUN_10005dd0|0x10005DD0",
@@ -213599,28 +206375,28 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "_SmackColorTrans@8|0x10006DE0",
-          "_SmackColorRemap@16|0x10006E20"
+          "_SmackColorRemap@16|0x10006E20",
+          "_SmackColorTrans@8|0x10006DE0"
         ],
         "Classic/1.01": [
-          "_SmackColorTrans@8|0x10006DE0",
-          "_SmackColorRemap@16|0x10006E20"
+          "_SmackColorRemap@16|0x10006E20",
+          "_SmackColorTrans@8|0x10006DE0"
         ],
         "Classic/1.02": [
           "_SmackColorTrans@8|0x10006DE0",
           "_SmackColorRemap@16|0x10006E20"
         ],
         "Classic/1.03": [
-          "_SmackColorTrans@8|0x10006DE0",
-          "_SmackColorRemap@16|0x10006E20"
+          "_SmackColorRemap@16|0x10006E20",
+          "_SmackColorTrans@8|0x10006DE0"
         ],
         "Classic/1.04c": [
-          "_SmackColorTrans@8|0x10006DE0",
-          "_SmackColorRemap@16|0x10006E20"
+          "_SmackColorRemap@16|0x10006E20",
+          "_SmackColorTrans@8|0x10006DE0"
         ],
         "LoD/1.07": [
-          "_SmackColorTrans@8|0x10006DE0",
-          "_SmackColorRemap@16|0x10006E20"
+          "_SmackColorRemap@16|0x10006E20",
+          "_SmackColorTrans@8|0x10006DE0"
         ],
         "LoD/1.08": [
           "_SmackColorTrans@8|0x10006DE0",
@@ -213643,36 +206419,36 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackColorTrans@8|0x10006DE0"
         ],
         "LoD/1.11": [
-          "_SmackColorTrans@8|0x10006DE0",
-          "_SmackColorRemap@16|0x10006E20"
+          "_SmackColorRemap@16|0x10006E20",
+          "_SmackColorTrans@8|0x10006DE0"
         ],
         "LoD/1.11b": [
-          "_SmackColorTrans@8|0x10006DE0",
-          "_SmackColorRemap@16|0x10006E20"
+          "_SmackColorRemap@16|0x10006E20",
+          "_SmackColorTrans@8|0x10006DE0"
         ],
         "LoD/1.12a": [
-          "_SmackColorTrans@8|0x10006DE0",
-          "_SmackColorRemap@16|0x10006E20"
+          "_SmackColorRemap@16|0x10006E20",
+          "_SmackColorTrans@8|0x10006DE0"
         ],
         "LoD/1.13c": [
           "_SmackColorRemap@16|0x10006E20",
           "_SmackColorTrans@8|0x10006DE0"
         ],
         "LoD/1.13d": [
-          "_SmackColorTrans@8|0x10006DE0",
-          "_SmackColorRemap@16|0x10006E20"
+          "_SmackColorRemap@16|0x10006E20",
+          "_SmackColorTrans@8|0x10006DE0"
         ],
         "LoD/1.14a": [
           "_SmackColorTrans@8|0x10006DE0",
           "_SmackColorRemap@16|0x10006E20"
         ],
         "LoD/1.14b": [
-          "_SmackColorRemap@16|0x10006E20",
-          "_SmackColorTrans@8|0x10006DE0"
+          "_SmackColorTrans@8|0x10006DE0",
+          "_SmackColorRemap@16|0x10006E20"
         ],
         "LoD/1.14c": [
-          "_SmackColorRemap@16|0x10006E20",
-          "_SmackColorTrans@8|0x10006DE0"
+          "_SmackColorTrans@8|0x10006DE0",
+          "_SmackColorRemap@16|0x10006E20"
         ],
         "LoD/1.14d": [
           "_SmackColorRemap@16|0x10006E20",
@@ -214604,8 +207380,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackDoFrame@4|0x10005C70"
         ],
         "Classic/1.01": [
-          "_SmackDoFrame@4|0x10005C70",
-          "FUN_1000ac90|0x1000AC90"
+          "FUN_1000ac90|0x1000AC90",
+          "_SmackDoFrame@4|0x10005C70"
         ],
         "Classic/1.02": [
           "_SmackDoFrame@4|0x10005C70",
@@ -214616,20 +207392,20 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackDoFrame@4|0x10005C70"
         ],
         "Classic/1.04c": [
-          "FUN_1000ac90|0x1000AC90",
-          "_SmackDoFrame@4|0x10005C70"
+          "_SmackDoFrame@4|0x10005C70",
+          "FUN_1000ac90|0x1000AC90"
         ],
         "LoD/1.07": [
-          "_SmackDoFrame@4|0x10005C70",
-          "UpdateBlitContextPaletteAndFrame|0x1000AC90"
+          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
+          "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.08": [
           "FUN_1000ac90|0x1000AC90",
           "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.09": [
-          "FUN_1000ac90|0x1000AC90",
-          "_SmackDoFrame@4|0x10005C70"
+          "_SmackDoFrame@4|0x10005C70",
+          "FUN_1000ac90|0x1000AC90"
         ],
         "LoD/1.09b": [
           "FUN_1000ac90|0x1000AC90",
@@ -214640,32 +207416,32 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_1000ac90|0x1000AC90"
         ],
         "LoD/1.10": [
-          "_SmackDoFrame@4|0x10005C70",
-          "FUN_1000ac90|0x1000AC90"
+          "FUN_1000ac90|0x1000AC90",
+          "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.11": [
-          "_SmackDoFrame@4|0x10005C70",
-          "FUN_1000ac90|0x1000AC90"
+          "FUN_1000ac90|0x1000AC90",
+          "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.11b": [
           "FUN_1000ac90|0x1000AC90",
           "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.12a": [
-          "FUN_1000ac90|0x1000AC90",
-          "_SmackDoFrame@4|0x10005C70"
+          "_SmackDoFrame@4|0x10005C70",
+          "FUN_1000ac90|0x1000AC90"
         ],
         "LoD/1.13c": [
           "FUN_1000ac90|0x1000AC90",
           "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.13d": [
-          "_SmackDoFrame@4|0x10005C70",
-          "FUN_1000ac90|0x1000AC90"
-        ],
-        "LoD/1.14a": [
           "FUN_1000ac90|0x1000AC90",
           "_SmackDoFrame@4|0x10005C70"
+        ],
+        "LoD/1.14a": [
+          "_SmackDoFrame@4|0x10005C70",
+          "FUN_1000ac90|0x1000AC90"
         ],
         "LoD/1.14b": [
           "FUN_1000ac90|0x1000AC90",
@@ -215461,8 +208237,8 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackDoFrame@4|0x10005C70"
         ],
         "Classic/1.01": [
-          "_SmackDoFrame@4|0x10005C70",
-          "FUN_1000ac90|0x1000AC90"
+          "FUN_1000ac90|0x1000AC90",
+          "_SmackDoFrame@4|0x10005C70"
         ],
         "Classic/1.02": [
           "_SmackDoFrame@4|0x10005C70",
@@ -215473,20 +208249,20 @@ var FUNCTIONS_SmackW32_dll = {
           "_SmackDoFrame@4|0x10005C70"
         ],
         "Classic/1.04c": [
-          "FUN_1000ac90|0x1000AC90",
-          "_SmackDoFrame@4|0x10005C70"
+          "_SmackDoFrame@4|0x10005C70",
+          "FUN_1000ac90|0x1000AC90"
         ],
         "LoD/1.07": [
-          "_SmackDoFrame@4|0x10005C70",
-          "UpdateBlitContextPaletteAndFrame|0x1000AC90"
+          "UpdateBlitContextPaletteAndFrame|0x1000AC90",
+          "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.08": [
           "FUN_1000ac90|0x1000AC90",
           "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.09": [
-          "FUN_1000ac90|0x1000AC90",
-          "_SmackDoFrame@4|0x10005C70"
+          "_SmackDoFrame@4|0x10005C70",
+          "FUN_1000ac90|0x1000AC90"
         ],
         "LoD/1.09b": [
           "FUN_1000ac90|0x1000AC90",
@@ -215497,32 +208273,32 @@ var FUNCTIONS_SmackW32_dll = {
           "FUN_1000ac90|0x1000AC90"
         ],
         "LoD/1.10": [
-          "_SmackDoFrame@4|0x10005C70",
-          "FUN_1000ac90|0x1000AC90"
+          "FUN_1000ac90|0x1000AC90",
+          "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.11": [
-          "_SmackDoFrame@4|0x10005C70",
-          "FUN_1000ac90|0x1000AC90"
+          "FUN_1000ac90|0x1000AC90",
+          "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.11b": [
           "FUN_1000ac90|0x1000AC90",
           "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.12a": [
-          "FUN_1000ac90|0x1000AC90",
-          "_SmackDoFrame@4|0x10005C70"
+          "_SmackDoFrame@4|0x10005C70",
+          "FUN_1000ac90|0x1000AC90"
         ],
         "LoD/1.13c": [
           "FUN_1000ac90|0x1000AC90",
           "_SmackDoFrame@4|0x10005C70"
         ],
         "LoD/1.13d": [
-          "_SmackDoFrame@4|0x10005C70",
-          "FUN_1000ac90|0x1000AC90"
-        ],
-        "LoD/1.14a": [
           "FUN_1000ac90|0x1000AC90",
           "_SmackDoFrame@4|0x10005C70"
+        ],
+        "LoD/1.14a": [
+          "_SmackDoFrame@4|0x10005C70",
+          "FUN_1000ac90|0x1000AC90"
         ],
         "LoD/1.14b": [
           "FUN_1000ac90|0x1000AC90",
@@ -216294,224 +209070,224 @@ var FUNCTIONS_SmackW32_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_1000a5f0|0x1000A5F0",
-          "FUN_10012a1f|0x10012A1F",
-          "FUN_1000a54a|0x1000A54A",
           "FUN_1000a0f9|0x1000A0F9",
           "FUN_10011ab0|0x10011AB0",
-          "FUN_1000a323|0x1000A323",
-          "FUN_10009d38|0x10009D38",
-          "FUN_10009e87|0x10009E87",
-          "FUN_1000a6be|0x1000A6BE"
-        ],
-        "Classic/1.01": [
-          "FUN_1000a54a|0x1000A54A",
-          "FUN_1000a323|0x1000A323",
-          "FUN_10009d38|0x10009D38",
-          "FUN_1000a0f9|0x1000A0F9",
-          "FUN_10011ab0|0x10011AB0",
-          "FUN_10009e87|0x10009E87",
           "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a54a|0x1000A54A",
           "FUN_1000a6be|0x1000A6BE",
+          "FUN_1000a323|0x1000A323",
+          "FUN_10009d38|0x10009D38",
+          "FUN_10009e87|0x10009E87",
           "FUN_1000a5f0|0x1000A5F0"
         ],
-        "Classic/1.02": [
-          "FUN_1000a0f9|0x1000A0F9",
+        "Classic/1.01": [
           "FUN_10009d38|0x10009D38",
-          "FUN_10011ab0|0x10011AB0",
-          "FUN_1000a54a|0x1000A54A",
           "FUN_10009e87|0x10009E87",
-          "FUN_10012a1f|0x10012A1F",
-          "FUN_1000a5f0|0x1000A5F0",
+          "FUN_1000a323|0x1000A323",
+          "FUN_10011ab0|0x10011AB0",
           "FUN_1000a6be|0x1000A6BE",
-          "FUN_1000a323|0x1000A323"
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_1000a5f0|0x1000A5F0",
+          "FUN_1000a54a|0x1000A54A"
+        ],
+        "Classic/1.02": [
+          "FUN_1000a54a|0x1000A54A",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_1000a323|0x1000A323",
+          "FUN_10011ab0|0x10011AB0",
+          "FUN_10009e87|0x10009E87",
+          "FUN_10009d38|0x10009D38",
+          "FUN_1000a5f0|0x1000A5F0",
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a6be|0x1000A6BE"
         ],
         "Classic/1.03": [
-          "FUN_1000a54a|0x1000A54A",
-          "FUN_10009e87|0x10009E87",
-          "FUN_10012a1f|0x10012A1F",
-          "FUN_1000a323|0x1000A323",
-          "FUN_10009d38|0x10009D38",
-          "FUN_10011ab0|0x10011AB0",
-          "FUN_1000a6be|0x1000A6BE",
-          "FUN_1000a5f0|0x1000A5F0",
-          "FUN_1000a0f9|0x1000A0F9"
-        ],
-        "Classic/1.04c": [
-          "FUN_10011ab0|0x10011AB0",
-          "FUN_10012a1f|0x10012A1F",
-          "FUN_1000a5f0|0x1000A5F0",
           "FUN_1000a6be|0x1000A6BE",
           "FUN_10009d38|0x10009D38",
-          "FUN_1000a323|0x1000A323",
+          "FUN_1000a5f0|0x1000A5F0",
           "FUN_1000a0f9|0x1000A0F9",
+          "FUN_10011ab0|0x10011AB0",
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a323|0x1000A323",
           "FUN_1000a54a|0x1000A54A",
           "FUN_10009e87|0x10009E87"
         ],
-        "LoD/1.07": [
-          "BlitTransparent_SIMD|0x1000A54A",
+        "Classic/1.04c": [
+          "FUN_1000a6be|0x1000A6BE",
+          "FUN_10009e87|0x10009E87",
+          "FUN_10009d38|0x10009D38",
+          "FUN_1000a5f0|0x1000A5F0",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_1000a323|0x1000A323",
+          "FUN_1000a54a|0x1000A54A",
           "FUN_10012a1f|0x10012A1F",
-          "BlitMergeWithColorKey|0x1000A5F0",
+          "FUN_10011ab0|0x10011AB0"
+        ],
+        "LoD/1.07": [
           "ExpandByteToWord|0x10009D38",
           "ConvertIndexedPixelsToDualBuffer16|0x1000A0F9",
           "ExpandPaletteToDoublePixels|0x1000A323",
-          "ExpandPixelDataDouble|0x10009E87",
           "FUN_10011ab0|0x10011AB0",
-          "BlitMaskedBufferSIMD|0x1000A6BE"
+          "FUN_10012a1f|0x10012A1F",
+          "BlitMergeWithColorKey|0x1000A5F0",
+          "BlitMaskedBufferSIMD|0x1000A6BE",
+          "ExpandPixelDataDouble|0x10009E87",
+          "BlitTransparent_SIMD|0x1000A54A"
         ],
         "LoD/1.08": [
           "FUN_10011ab0|0x10011AB0",
-          "FUN_10009d38|0x10009D38",
-          "FUN_10009e87|0x10009E87",
+          "FUN_1000a0f9|0x1000A0F9",
           "FUN_10012a1f|0x10012A1F",
-          "FUN_1000a6be|0x1000A6BE",
+          "FUN_1000a323|0x1000A323",
           "FUN_1000a5f0|0x1000A5F0",
           "FUN_1000a54a|0x1000A54A",
-          "FUN_1000a0f9|0x1000A0F9",
-          "FUN_1000a323|0x1000A323"
+          "FUN_10009e87|0x10009E87",
+          "FUN_1000a6be|0x1000A6BE",
+          "FUN_10009d38|0x10009D38"
         ],
         "LoD/1.09": [
-          "FUN_1000a54a|0x1000A54A",
           "FUN_10009d38|0x10009D38",
-          "FUN_10009e87|0x10009E87",
-          "FUN_1000a323|0x1000A323",
           "FUN_10011ab0|0x10011AB0",
+          "FUN_1000a54a|0x1000A54A",
           "FUN_1000a5f0|0x1000A5F0",
-          "FUN_10012a1f|0x10012A1F",
+          "FUN_10009e87|0x10009E87",
           "FUN_1000a6be|0x1000A6BE",
-          "FUN_1000a0f9|0x1000A0F9"
+          "FUN_1000a323|0x1000A323",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_10012a1f|0x10012A1F"
         ],
         "LoD/1.09b": [
-          "FUN_1000a54a|0x1000A54A",
-          "FUN_1000a5f0|0x1000A5F0",
-          "FUN_10011ab0|0x10011AB0",
           "FUN_1000a6be|0x1000A6BE",
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a5f0|0x1000A5F0",
+          "FUN_1000a54a|0x1000A54A",
+          "FUN_10011ab0|0x10011AB0",
+          "FUN_10009d38|0x10009D38",
           "FUN_10009e87|0x10009E87",
           "FUN_1000a323|0x1000A323",
-          "FUN_10012a1f|0x10012A1F",
-          "FUN_10009d38|0x10009D38",
           "FUN_1000a0f9|0x1000A0F9"
         ],
         "LoD/1.09d": [
           "FUN_10009e87|0x10009E87",
+          "FUN_1000a323|0x1000A323",
+          "FUN_10009d38|0x10009D38",
           "FUN_10011ab0|0x10011AB0",
           "FUN_10012a1f|0x10012A1F",
-          "FUN_1000a5f0|0x1000A5F0",
-          "FUN_1000a6be|0x1000A6BE",
-          "FUN_10009d38|0x10009D38",
-          "FUN_1000a323|0x1000A323",
-          "FUN_1000a0f9|0x1000A0F9",
-          "FUN_1000a54a|0x1000A54A"
-        ],
-        "LoD/1.10": [
-          "FUN_10012a1f|0x10012A1F",
-          "FUN_1000a323|0x1000A323",
-          "FUN_10009e87|0x10009E87",
-          "FUN_1000a0f9|0x1000A0F9",
-          "FUN_1000a6be|0x1000A6BE",
           "FUN_1000a54a|0x1000A54A",
-          "FUN_10009d38|0x10009D38",
-          "FUN_10011ab0|0x10011AB0",
-          "FUN_1000a5f0|0x1000A5F0"
-        ],
-        "LoD/1.11": [
-          "FUN_1000a6be|0x1000A6BE",
-          "FUN_10011ab0|0x10011AB0",
-          "FUN_1000a54a|0x1000A54A",
-          "FUN_1000a5f0|0x1000A5F0",
-          "FUN_1000a323|0x1000A323",
-          "FUN_10009e87|0x10009E87",
-          "FUN_10009d38|0x10009D38",
-          "FUN_1000a0f9|0x1000A0F9",
-          "FUN_10012a1f|0x10012A1F"
-        ],
-        "LoD/1.11b": [
-          "FUN_1000a54a|0x1000A54A",
-          "FUN_10009e87|0x10009E87",
-          "FUN_10012a1f|0x10012A1F",
-          "FUN_10011ab0|0x10011AB0",
-          "FUN_1000a323|0x1000A323",
           "FUN_1000a0f9|0x1000A0F9",
           "FUN_1000a5f0|0x1000A5F0",
-          "FUN_10009d38|0x10009D38",
           "FUN_1000a6be|0x1000A6BE"
         ],
-        "LoD/1.12a": [
-          "FUN_1000a6be|0x1000A6BE",
-          "FUN_1000a0f9|0x1000A0F9",
+        "LoD/1.10": [
           "FUN_1000a323|0x1000A323",
-          "FUN_1000a54a|0x1000A54A",
           "FUN_1000a5f0|0x1000A5F0",
+          "FUN_10009e87|0x10009E87",
           "FUN_10011ab0|0x10011AB0",
           "FUN_10009d38|0x10009D38",
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a54a|0x1000A54A",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_1000a6be|0x1000A6BE"
+        ],
+        "LoD/1.11": [
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_1000a6be|0x1000A6BE",
+          "FUN_10009d38|0x10009D38",
           "FUN_10009e87|0x10009E87",
-          "FUN_10012a1f|0x10012A1F"
+          "FUN_10011ab0|0x10011AB0",
+          "FUN_1000a5f0|0x1000A5F0",
+          "FUN_1000a54a|0x1000A54A",
+          "FUN_1000a323|0x1000A323"
+        ],
+        "LoD/1.11b": [
+          "FUN_1000a6be|0x1000A6BE",
+          "FUN_1000a5f0|0x1000A5F0",
+          "FUN_1000a54a|0x1000A54A",
+          "FUN_10009e87|0x10009E87",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_10011ab0|0x10011AB0",
+          "FUN_1000a323|0x1000A323",
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_10009d38|0x10009D38"
+        ],
+        "LoD/1.12a": [
+          "FUN_1000a5f0|0x1000A5F0",
+          "FUN_10009e87|0x10009E87",
+          "FUN_1000a54a|0x1000A54A",
+          "FUN_1000a323|0x1000A323",
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_1000a6be|0x1000A6BE",
+          "FUN_10011ab0|0x10011AB0",
+          "FUN_10009d38|0x10009D38"
         ],
         "LoD/1.13c": [
           "FUN_10009d38|0x10009D38",
-          "FUN_10009e87|0x10009E87",
-          "FUN_10011ab0|0x10011AB0",
-          "FUN_1000a54a|0x1000A54A",
           "FUN_1000a5f0|0x1000A5F0",
-          "FUN_10012a1f|0x10012A1F",
           "FUN_1000a323|0x1000A323",
           "FUN_1000a0f9|0x1000A0F9",
-          "FUN_1000a6be|0x1000A6BE"
+          "FUN_10011ab0|0x10011AB0",
+          "FUN_1000a6be|0x1000A6BE",
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a54a|0x1000A54A",
+          "FUN_10009e87|0x10009E87"
         ],
         "LoD/1.13d": [
-          "FUN_10011ab0|0x10011AB0",
-          "FUN_10009d38|0x10009D38",
-          "FUN_10009e87|0x10009E87",
-          "FUN_1000a0f9|0x1000A0F9",
-          "FUN_10012a1f|0x10012A1F",
-          "FUN_1000a323|0x1000A323",
+          "FUN_1000a6be|0x1000A6BE",
           "FUN_1000a54a|0x1000A54A",
+          "FUN_10009d38|0x10009D38",
+          "FUN_10012a1f|0x10012A1F",
           "FUN_1000a5f0|0x1000A5F0",
-          "FUN_1000a6be|0x1000A6BE"
+          "FUN_10009e87|0x10009E87",
+          "FUN_10011ab0|0x10011AB0",
+          "FUN_1000a323|0x1000A323",
+          "FUN_1000a0f9|0x1000A0F9"
         ],
         "LoD/1.14a": [
-          "FUN_1000a0f9|0x1000A0F9",
-          "FUN_1000a323|0x1000A323",
-          "FUN_1000a6be|0x1000A6BE",
           "FUN_10011ab0|0x10011AB0",
-          "FUN_1000a54a|0x1000A54A",
-          "FUN_10012a1f|0x10012A1F",
-          "FUN_10009e87|0x10009E87",
+          "FUN_10009d38|0x10009D38",
+          "FUN_1000a6be|0x1000A6BE",
           "FUN_1000a5f0|0x1000A5F0",
-          "FUN_10009d38|0x10009D38"
+          "FUN_1000a323|0x1000A323",
+          "FUN_10009e87|0x10009E87",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_1000a54a|0x1000A54A",
+          "FUN_10012a1f|0x10012A1F"
         ],
         "LoD/1.14b": [
-          "FUN_1000a6be|0x1000A6BE",
-          "FUN_1000a5f0|0x1000A5F0",
           "FUN_1000a323|0x1000A323",
           "FUN_10009d38|0x10009D38",
           "FUN_10011ab0|0x10011AB0",
-          "FUN_1000a0f9|0x1000A0F9",
           "FUN_10009e87|0x10009E87",
           "FUN_1000a54a|0x1000A54A",
-          "FUN_10012a1f|0x10012A1F"
+          "FUN_1000a6be|0x1000A6BE",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a5f0|0x1000A5F0"
         ],
         "LoD/1.14c": [
+          "FUN_10009d38|0x10009D38",
+          "FUN_1000a0f9|0x1000A0F9",
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_1000a54a|0x1000A54A",
+          "FUN_1000a6be|0x1000A6BE",
           "FUN_10011ab0|0x10011AB0",
           "FUN_10009e87|0x10009E87",
-          "FUN_1000a323|0x1000A323",
           "FUN_1000a5f0|0x1000A5F0",
-          "FUN_1000a0f9|0x1000A0F9",
-          "FUN_1000a54a|0x1000A54A",
-          "FUN_1000a6be|0x1000A6BE",
-          "FUN_10009d38|0x10009D38",
-          "FUN_10012a1f|0x10012A1F"
+          "FUN_1000a323|0x1000A323"
         ],
         "LoD/1.14d": [
-          "FUN_1000a323|0x1000A323",
           "FUN_1000a54a|0x1000A54A",
-          "FUN_10009d38|0x10009D38",
-          "FUN_10012a1f|0x10012A1F",
-          "FUN_10009e87|0x10009E87",
-          "FUN_1000a6be|0x1000A6BE",
-          "FUN_1000a5f0|0x1000A5F0",
           "FUN_1000a0f9|0x1000A0F9",
-          "FUN_10011ab0|0x10011AB0"
+          "FUN_1000a5f0|0x1000A5F0",
+          "FUN_10011ab0|0x10011AB0",
+          "FUN_10012a1f|0x10012A1F",
+          "FUN_10009d38|0x10009D38",
+          "FUN_10009e87|0x10009E87",
+          "FUN_1000a323|0x1000A323",
+          "FUN_1000a6be|0x1000A6BE"
         ]
       },
       "instructions": {
@@ -218239,357 +211015,6 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14d": "internal"
       }
     },
-    "SmackW32_ADDR_10008C80": {
-      "addresses": {
-        "Classic/1.01": "0x10008C80"
-      },
-      "rvas": {
-        "Classic/1.01": "0x8C80"
-      },
-      "sizes": {
-        "Classic/1.01": 16
-      },
-      "name": "_SmackUseMMX@4",
-      "signature": "undefined _SmackUseMMX@4(uint param_1)",
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "name_source": "Classic/1.01",
-      "method": "NOP",
-      "index": "NOP:2706d6d1bcf031d4ae03848e8d75b8b96945a965c09d1df6628c8f3e3e87af08",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "2706d6d1bcf031d4ae03848e8d75b8b96945a965c09d1df6628c8f3e3e87af08",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "82a4681e028ce912ff418ce451dc2dfa",
-        "CFG": "708f6dc7dfeb6d65dfc09cc055561044",
-        "PRO": "3956d7a16aaa41f5cc2fbf211ae4ae41"
-      },
-      "callees": {
-        "Classic/1.01": [
-          "CloseWaveOutDevice|0x100089D0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.01": [
-          "0x8C80|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0x8C84|PUSH|EAX",
-          "0x8C85|CALL|0x100089d0",
-          "0x8C8A|ADD|ESP, 0x4",
-          "0x8C8D|RET|0x4"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.01": 5
-      },
-      "stack_frame_sizes": {
-        "Classic/1.01": 8
-      },
-      "loop_counts": {
-        "Classic/1.01": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "82a4681e028ce912ff418ce451dc2dfa",
-        "Classic/1.01": "82a4681e028ce912ff418ce451dc2dfa",
-        "Classic/1.02": "82a4681e028ce912ff418ce451dc2dfa",
-        "Classic/1.03": "82a4681e028ce912ff418ce451dc2dfa",
-        "Classic/1.04c": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.07": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.08": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.09": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.09b": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.09d": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.10": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.11": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.11b": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.12a": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.13c": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.13d": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.14a": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.14b": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.14c": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/1.14d": "82a4681e028ce912ff418ce451dc2dfa",
-        "LoD/PD2": "82a4681e028ce912ff418ce451dc2dfa"
-      },
-      "callee_counts": {
-        "Classic/1.01": 1
-      },
-      "param_counts": {
-        "Classic/1.01": 1
-      },
-      "tags": {
-        "Classic/1.01": [
-          "PROP_NOCALLER",
-          "PARAM_1",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.01": "internal"
-      },
-      "candidates": {
-        "Classic/1.00": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "Classic/1.02": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "Classic/1.03": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "Classic/1.04c": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.07": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.08": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.09": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.09b": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.09d": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.10": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.11": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.11b": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.12a": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.13c": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.13d": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.14a": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.14b": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.14c": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        },
-        "LoD/1.14d": {
-          "address": "0x10007710",
-          "rva": "0x7710",
-          "confidence": 1.0,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "_SmackSoundCheck@0"
-        }
-      }
-    },
-    "SmackW32_ADDR_1000E0A0": {
-      "addresses": {
-        "Classic/1.01": "0x1000E0A0"
-      },
-      "rvas": {
-        "Classic/1.01": "0xE0A0"
-      },
-      "sizes": {
-        "Classic/1.01": 148
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "int",
-      "method": "NOP",
-      "index": "NOP:1f543b2c30c476f63cdf412dadf47bd84f594fd88afd2cbb8cc16ba59af110ba",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "1f543b2c30c476f63cdf412dadf47bd84f594fd88afd2cbb8cc16ba59af110ba",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "44f46ef527bad070016e875770123fc1",
-        "CFG": "f840d9d1945c5c06d394cf4b42c2222c",
-        "PRO": "b82884e1a2c94ab2c42810c7eaa7f8d8"
-      },
-      "display_name": "NOP_1f543b2c30c476f6",
-      "callers": {
-        "Classic/1.01": [
-          "FUN_10011f10|0x10011F10"
-        ]
-      },
-      "instructions": {
-        "Classic/1.01": [
-          "0xE0A0|MOV|EAX, 0x80000000",
-          "0xE0A5|PUSH|-0x1",
-          "0xE0A7|PUSH|-0x2",
-          "0xE0A9|DEC|byte ptr [0x10014ac0]",
-          "0xE0AF|JNZ|0x1000e0bd",
-          "0xE0B1|MOV|EBP, dword ptr [ESI]",
-          "0xE0B3|ADD|ESI, 0x4",
-          "0xE0B6|MOV|byte ptr [0x10014ac0], 0x20",
-          "0xE0BD|SHR|EBP, 0x1",
-          "0xE0C0|JNC|0x1000e0d7",
-          "0xE0C2|POP|ECX",
-          "0xE0C3|CMP|ECX, -0x2",
-          "0xE0C6|JZ|0x1000e0cf",
-          "0xE0C8|PUSH|ECX",
-          "0xE0C9|PUSH|EDI"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.01": 55
-      },
-      "stack_frame_sizes": {
-        "Classic/1.01": 4
-      },
-      "loop_counts": {
-        "Classic/1.01": 4
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "44f46ef527bad070016e875770123fc1",
-        "Classic/1.01": "44f46ef527bad070016e875770123fc1",
-        "Classic/1.02": "44f46ef527bad070016e875770123fc1",
-        "Classic/1.03": "44f46ef527bad070016e875770123fc1",
-        "Classic/1.04c": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.07": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.08": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.09": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.09b": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.09d": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.10": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.11": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.11b": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.12a": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.13c": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.13d": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.14a": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.14b": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.14c": "44f46ef527bad070016e875770123fc1",
-        "LoD/1.14d": "44f46ef527bad070016e875770123fc1",
-        "LoD/PD2": "44f46ef527bad070016e875770123fc1"
-      },
-      "globals": {
-        "Classic/1.01": [
-          "0x14AC0|DAT_10014ac0|0x0"
-        ]
-      },
-      "caller_counts": {
-        "Classic/1.01": 1
-      },
-      "global_counts": {
-        "Classic/1.01": 1
-      },
-      "tags": {
-        "Classic/1.01": [
-          "PARAM_0",
-          "PROP_LOOPHEAVY",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.01": "internal"
-      }
-    },
     "SmackW32_NOP_e9c86e189962": {
       "addresses": {
         "LoD/1.07": "0x10001160"
@@ -218738,88 +211163,6 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14c": "2043487ec0ce2238c03195f2d42cad4f",
         "LoD/1.14d": "2043487ec0ce2238c03195f2d42cad4f",
         "LoD/PD2": "2043487ec0ce2238c03195f2d42cad4f"
-      },
-      "param_counts": {
-        "LoD/1.07": 4
-      },
-      "tags": {
-        "LoD/1.07": [
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_4",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "LoD/1.07": "internal"
-      }
-    },
-    "SmackW32_MNE_546c17e22a38": {
-      "addresses": {
-        "LoD/1.07": "0x10003F10"
-      },
-      "rvas": {
-        "LoD/1.07": "0x3F10"
-      },
-      "sizes": {
-        "LoD/1.07": 1
-      },
-      "name": "SmackCursorWindowProc",
-      "signature": "LRESULT SmackCursorWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)",
-      "calling_convention": "__stdcall",
-      "return_type": "LRESULT",
-      "comment": "Window procedure for the Smack cursor detection window.\n\n  Handles window messages for a temporary window created during software\n  cursor detection in SmackIsSoftwareCursor.\n\n  Algorithm:\n    1. Compare uMsg against known message types\n    2. For WM_DESTROY (0x2): Return 0\n    3. For WM_PAINT (0xF): Call BeginPaint/EndPaint, return 0\n    4. For WM_ERASEBKGND (0x14): Return 1 (background erased)\n    5. Default: Forward to DefWindowProcA\n\n  Parameters:\n    hWnd   [Stack+0x4]  - Handle to the cursor detection window\n    uMsg   [Stack+0x8]  - Window message identifier\n    wParam [Stack+0xC]  - Message-specific parameter\n    lParam [Stack+0x10] - Message-specific parameter\n\n  Returns:\n    LRESULT - 0 for WM_DESTROY/WM_PAINT, 1 for WM_ERASEBKGND,\n              DefWindowProcA result for other messages\n\n  Special Cases:\n    - WM_PAINT handler calls BeginPaint/EndPaint but performs no drawing\n    - WM_ERASEBKGND returns 1 to prevent default background erase\n\n  Note:\n    Function body appears truncated in Ghidra (shows 1 byte).\n    Actual function spans 0x10003f10 to 0x10003f8f (128 bytes).",
-      "name_source": "LoD/1.07",
-      "method": "NOP",
-      "index": "NOP:e9c86e189962a0d4ec7996bd4cc91563e29cc74b714e1d9fdc21bdb0e11ed074",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "e9c86e189962a0d4ec7996bd4cc91563e29cc74b714e1d9fdc21bdb0e11ed074",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "546c17e22a38a8e15c8829671ea3e893",
-        "CFG": "8b3a02cf55ac6883db9f6d64d036a5a4",
-        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
-      },
-      "instructions": {
-        "LoD/1.07": [
-          "0x3F10|MOV|ECX, dword ptr [ESP + 0x8]"
-        ]
-      },
-      "instruction_counts": {
-        "LoD/1.07": 1
-      },
-      "stack_frame_sizes": {
-        "LoD/1.07": 20
-      },
-      "loop_counts": {
-        "LoD/1.07": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "546c17e22a38a8e15c8829671ea3e893",
-        "Classic/1.01": "546c17e22a38a8e15c8829671ea3e893",
-        "Classic/1.02": "546c17e22a38a8e15c8829671ea3e893",
-        "Classic/1.03": "546c17e22a38a8e15c8829671ea3e893",
-        "Classic/1.04c": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.07": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.08": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.09": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.09b": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.09d": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.10": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.11": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.11b": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.12a": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.13c": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.13d": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.14a": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.14b": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.14c": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.14d": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/PD2": "546c17e22a38a8e15c8829671ea3e893"
       },
       "param_counts": {
         "LoD/1.07": 4
@@ -219000,249 +211343,6 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.07": "internal"
       }
     },
-    "SmackW32_MNE_2043487ec0ce": {
-      "addresses": {
-        "LoD/1.07": "0x100083B0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x83B0"
-      },
-      "sizes": {
-        "LoD/1.07": 1
-      },
-      "name": "RemoveSmackBuffer",
-      "signature": "void RemoveSmackBuffer(int nBuffer)",
-      "calling_convention": "__cdecl",
-      "return_type": "void",
-      "comment": "Removes a SmackBuffer from the global linked list and frees its resources.\n\nAlgorithm:\n  1. Check if global list head (g_pSmackBufferListHead) is non-NULL\n  2. Call cleanup callback function at offset 0x60+0xe for buffer resources\n  3. Free internal buffer data allocation at offset 0x60+0x4 using radfree()\n  4. Free buffer structure itself (offset 0x60) using radfree()\n  5. If buffer is head of list, update head to buffer.next (offset 0x3c)\n  6. Otherwise find predecessor by traversing linked list at offset 0x3c\n  7. If predecessor found, unlink by setting predecessor.next to buffer.next\n\nParameters:\n  nBuffer: Address of SmackBuffer structure to remove from list\n\nReturns:\n  void: Always returns without error status\n\nSpecial Cases:\n  Returns without action if buffer is not in the list\n  Returns without action if list head becomes NULL after removal",
-      "name_source": "LoD/1.07",
-      "method": "NOP",
-      "index": "NOP:9db11e698232286e35080f0200ba9aa7ae918ef404fda698bd8e4691563407e5",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "9db11e698232286e35080f0200ba9aa7ae918ef404fda698bd8e4691563407e5",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
-        "CFG": "c15460ab20a163c60767502d30d66e4c",
-        "PRO": "dae96fc0046a5ae1864d9a66e6715da8"
-      },
-      "instructions": {
-        "LoD/1.07": [
-          "0x83B0|PUSH|ESI"
-        ]
-      },
-      "instruction_counts": {
-        "LoD/1.07": 1
-      },
-      "stack_frame_sizes": {
-        "LoD/1.07": 8
-      },
-      "loop_counts": {
-        "LoD/1.07": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.01": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.02": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.03": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.04c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.07": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.08": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.10": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.12a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/PD2": "2043487ec0ce2238c03195f2d42cad4f"
-      },
-      "param_counts": {
-        "LoD/1.07": 1
-      },
-      "tags": {
-        "LoD/1.07": [
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_1",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "LoD/1.07": "internal"
-      }
-    },
-    "SmackW32_ADDR_10008660": {
-      "addresses": {
-        "LoD/1.07": "0x10008660"
-      },
-      "rvas": {
-        "LoD/1.07": "0x8660"
-      },
-      "sizes": {
-        "LoD/1.07": 1
-      },
-      "name": "ResetSmackSoundStream",
-      "signature": "undefined ResetSmackSoundStream(void)",
-      "calling_convention": "unknown",
-      "return_type": "undefined",
-      "comment": "Resets a Smack sound stream by discarding its sound buffer and clearing state fields.\n\nAlgorithm:\n  1. Get sound buffer pointer from pSmackSound+0x60\n  2. Read buffer parameter (word) from buffer+0x0E\n  3. Call g_pfnSmackBufferCleanup (dws_DDiscard) with buffer parameter\n  4. Clear four DWORD fields at offsets 0x6C, 0x70, 0x74, 0x78 in pSmackSound\n\nParameters:\n  pSmackSound - Pointer to Smack sound structure (passed via stack, __stdcall)\n\nReturns:\n  void\n\nStructure Layout (SmackSound offsets accessed):\n  Offset | Size | Field         | Description\n  0x60   | 4    | pSoundBuffer  | Pointer to sound buffer structure\n  0x6C   | 4    | dwField6C     | Cleared to 0 on reset\n  0x70   | 4    | dwField70     | Cleared to 0 on reset\n  0x74   | 4    | dwField74     | Cleared to 0 on reset\n  0x78   | 4    | dwField78     | Cleared to 0 on reset\n\nNote: Function body is malformed in Ghidra (only PUSH ESI visible).\n      Full assembly: PUSH ESI; XOR ECX,ECX; MOV ESI,[ESP+8]; MOV EAX,[ESI+0x60];\n      MOV CX,[EAX+0x0E]; PUSH ECX; CALL [g_pfnSmackBufferCleanup];\n      XOR EAX,EAX; MOV [ESI+0x78],EAX; MOV [ESI+0x74],EAX;\n      MOV [ESI+0x70],EAX; MOV [ESI+0x6C],EAX; POP ESI; RET 4",
-      "name_source": "LoD/1.07",
-      "method": "NOP",
-      "index": "NOP:9db11e698232286e35080f0200ba9aa7ae918ef404fda698bd8e4691563407e5",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "9db11e698232286e35080f0200ba9aa7ae918ef404fda698bd8e4691563407e5",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
-        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
-        "PRO": "dae96fc0046a5ae1864d9a66e6715da8"
-      },
-      "instructions": {
-        "LoD/1.07": [
-          "0x8660|PUSH|ESI"
-        ]
-      },
-      "instruction_counts": {
-        "LoD/1.07": 1
-      },
-      "stack_frame_sizes": {
-        "LoD/1.07": 4
-      },
-      "loop_counts": {
-        "LoD/1.07": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.01": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.02": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.03": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.04c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.07": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.08": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.10": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.12a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/PD2": "2043487ec0ce2238c03195f2d42cad4f"
-      },
-      "tags": {
-        "LoD/1.07": [
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "LoD/1.07": "internal"
-      }
-    },
-    "SmackW32_ADDR_10008C10": {
-      "addresses": {
-        "LoD/1.07": "0x10008C10"
-      },
-      "rvas": {
-        "LoD/1.07": "0x8C10"
-      },
-      "sizes": {
-        "LoD/1.07": 1
-      },
-      "name": "RemoveSmackSoundNode",
-      "signature": "void RemoveSmackSoundNode(int nNode)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Removes a Smack sound node from the global linked list and cleans up resources.\n\nAlgorithm:\n  1. Check if global sound list head is valid (g_pSmackSoundListHead != 0)\n  2. Close wave output device associated with node\n  3. Free audio data buffer at offset 0x64 (100 bytes)\n  4. If node is list head, update head to next node (offset 0x3c) and return\n  5. Otherwise, traverse list to find previous node\n  6. Update previous node's next pointer to skip current node\n  7. Return\n\nParameters:\n  pNode (ECX or stack) - Pointer to SmackSoundNode structure to remove\n\nReturns:\n  None - void function\n\nSpecial Cases:\n  - If list is empty (g_pSmackSoundListHead == 0), function returns immediately\n  - If node is list head, directly update global head pointer\n  - If node not found in list, function returns without error\n\nStructure Layout (SmackSoundNode at pNode):\n  Offset | Size | Field      | Type    | Description\n  0x3C   | 4    | pNextNode  | void*   | Pointer to next node in linked list\n  0x64   | 4    | pAudioData | void*   | Pointer to audio buffer to be freed",
-      "name_source": "LoD/1.07",
-      "method": "NOP",
-      "index": "NOP:9db11e698232286e35080f0200ba9aa7ae918ef404fda698bd8e4691563407e5",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "9db11e698232286e35080f0200ba9aa7ae918ef404fda698bd8e4691563407e5",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
-        "CFG": "c15460ab20a163c60767502d30d66e4c",
-        "PRO": "dae96fc0046a5ae1864d9a66e6715da8"
-      },
-      "instructions": {
-        "LoD/1.07": [
-          "0x8C10|PUSH|ESI"
-        ]
-      },
-      "instruction_counts": {
-        "LoD/1.07": 1
-      },
-      "stack_frame_sizes": {
-        "LoD/1.07": 8
-      },
-      "loop_counts": {
-        "LoD/1.07": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.01": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.02": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.03": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.04c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.07": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.08": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.10": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.12a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/PD2": "2043487ec0ce2238c03195f2d42cad4f"
-      },
-      "param_counts": {
-        "LoD/1.07": 1
-      },
-      "tags": {
-        "LoD/1.07": [
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_1",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "LoD/1.07": "internal"
-      }
-    },
     "SmackW32_NOP_2a5d94093808": {
       "addresses": {
         "LoD/1.07": "0x10008C80"
@@ -219309,334 +211409,6 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/1.14c": "546c17e22a38a8e15c8829671ea3e893",
         "LoD/1.14d": "546c17e22a38a8e15c8829671ea3e893",
         "LoD/PD2": "546c17e22a38a8e15c8829671ea3e893"
-      },
-      "param_counts": {
-        "LoD/1.07": 1
-      },
-      "tags": {
-        "LoD/1.07": [
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_1",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "LoD/1.07": "internal"
-      }
-    },
-    "SmackW32_ADDR_10009630": {
-      "addresses": {
-        "LoD/1.07": "0x10009630"
-      },
-      "rvas": {
-        "LoD/1.07": "0x9630"
-      },
-      "sizes": {
-        "LoD/1.07": 1
-      },
-      "name": "InitializeAudioStream",
-      "signature": "int InitializeAudioStream(int nStream, uint dwFlags)",
-      "calling_convention": "__cdecl",
-      "return_type": "int",
-      "comment": "Initialize audio stream for DirectSound or MSS playback\n\nAlgorithm:\n  1. Calculate buffer size from stream frequency: (freq >> 1) + 0xfff & 0xfffff000\n  2. Output debug info if g_bDebugAudio enabled\n  3. Verify audio subsystem initialized via FUN_10009910\n  4. Configure audio flags from param_2 flags (0x40, 0x20)\n  5. Initialize DirectSound buffer via FUN_10009770\n  6. If no existing stream list, register timer callback (0x4b ms, 0x19 ms resolution)\n  7. Add stream to linked list via g_pAudioStreamList\n\nParameters:\n  param_1: Pointer to audio stream structure (offset +0x14: freq, +0x44: bufsize, +0x70/0x90: flags, +0x3c: next)\n  param_2: Audio flags (0x40/0x20 for buffer format)\n\nReturns:\n  0 (failure): audio subsystem not ready or buffer init failed\n  1 (success): stream linked and initialized\n\nSpecial Cases:\n  - Acquires locks via LOCK/UNLOCK for ref counting\n  - Calls audio callbacks (PreCallback, PostCallback) if registered\n  - Creates timer via timeSetEvent or AIL function depending on callback availability",
-      "name_source": "LoD/1.07",
-      "method": "NOP",
-      "index": "NOP:579f245b0e9c567c41865aa66b113a5dad4e4a7f675e2084fdfd9dd62ce87402",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "579f245b0e9c567c41865aa66b113a5dad4e4a7f675e2084fdfd9dd62ce87402",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
-        "CFG": "af6441629daf4f85a0c18d58dc74d889",
-        "PRO": "3696ad59777e09d5f2daacb544022d43"
-      },
-      "instructions": {
-        "LoD/1.07": [
-          "0x9630|PUSH|EBX"
-        ]
-      },
-      "instruction_counts": {
-        "LoD/1.07": 1
-      },
-      "stack_frame_sizes": {
-        "LoD/1.07": 12
-      },
-      "loop_counts": {
-        "LoD/1.07": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.01": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.02": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.03": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.04c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.07": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.08": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.10": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.12a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/PD2": "2043487ec0ce2238c03195f2d42cad4f"
-      },
-      "param_counts": {
-        "LoD/1.07": 2
-      },
-      "tags": {
-        "LoD/1.07": [
-          "PARAM_2",
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "LoD/1.07": "internal"
-      }
-    },
-    "SmackW32_ADDR_100099F0": {
-      "addresses": {
-        "LoD/1.07": "0x100099F0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x99F0"
-      },
-      "sizes": {
-        "LoD/1.07": 1
-      },
-      "name": "ResetSmackAudioStream",
-      "signature": "void ResetSmackAudioStream(AudioDeviceContext * pAudioContext)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Resets a Smack audio stream to its initial state\\n\\nAlgorithm:\\n  1. Check if DirectSound buffer exists at offset 0x60\\n  2. If buffer exists:\\n     a. Acquire audio lock (atomic increment g_dwAudioLockCount)\\n     b. Call pre-lock callback g_pfnAudioPreLock if registered\\n     c. Call DirectSound buffer Stop method (vtable offset 0x48)\\n     d. Call DirectSound buffer SetCurrentPosition(0) (vtable offset 0x34)\\n     e. Release audio lock (atomic decrement g_dwAudioLockCount)\\n     f. Call post-lock callback g_pfnAudioPostLock if registered\\n  3. Reset stream state fields:\\n     - offset 0x6c: dwStreamFlags = 1 (stream initialized)\\n     - offset 0x7c: dwTrackIndex = 0xFFFFFFFF (-1, no active track)\\n     - offset 0x84: dwBytesProcessed = 0\\n     - offset 0x8c: dwSampleCount = 0\\n     - offset 0x70: dwBufferPosition = 0\\n\\nParameters:\\n  pAudioContext (ESP+4): Pointer to AudioDeviceContext structure\\n    Offset 0x60: IDirectSoundBuffer* pSoundBuffer\\n    Offset 0x6c: DWORD dwStreamFlags\\n    Offset 0x70: DWORD dwBufferPosition\\n    Offset 0x7c: DWORD dwTrackIndex\\n    Offset 0x84: DWORD dwBytesProcessed\\n    Offset 0x8c: DWORD dwSampleCount\\n\\nReturns:\\n  void (no return value)\\n\\nSpecial Cases:\\n  If pSoundBuffer at offset 0x60 is NULL, buffer operations are skipped\\n  Uses LOCK/UNLOCK intrinsics for atomic counter modification\\n  Thread-safe via global lock counter and optional callbacks\\n\\nStructure Layout (AudioDeviceContext extended):\\n  Offset | Size | Field           | Type                 | Description\\n  -------|------|-----------------|----------------------|-----------------------\\n  0x60   | 4    | pSoundBuffer    | IDirectSoundBuffer*  | DirectSound buffer interface\\n  0x6c   | 4    | dwStreamFlags   | DWORD                | Stream state flags (1=init)\\n  0x70   | 4    | dwBufferPosition| DWORD                | Current buffer position\\n  0x7c   | 4    | dwTrackIndex    | DWORD                | Active track (-1=none)\\n  0x84   | 4    | dwBytesProcessed| DWORD                | Total bytes processed\\n  0x8c   | 4    | dwSampleCount   | DWORD                | Sample counter",
-      "name_source": "LoD/1.07",
-      "method": "NOP",
-      "index": "NOP:579f245b0e9c567c41865aa66b113a5dad4e4a7f675e2084fdfd9dd62ce87402",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "579f245b0e9c567c41865aa66b113a5dad4e4a7f675e2084fdfd9dd62ce87402",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
-        "CFG": "c15460ab20a163c60767502d30d66e4c",
-        "PRO": "3696ad59777e09d5f2daacb544022d43"
-      },
-      "instructions": {
-        "LoD/1.07": [
-          "0x99F0|PUSH|EBX"
-        ]
-      },
-      "instruction_counts": {
-        "LoD/1.07": 1
-      },
-      "stack_frame_sizes": {
-        "LoD/1.07": 8
-      },
-      "loop_counts": {
-        "LoD/1.07": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.01": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.02": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.03": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.04c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.07": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.08": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.10": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.12a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/PD2": "2043487ec0ce2238c03195f2d42cad4f"
-      },
-      "param_counts": {
-        "LoD/1.07": 1
-      },
-      "tags": {
-        "LoD/1.07": [
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_1",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "LoD/1.07": "internal"
-      }
-    },
-    "SmackW32_ADDR_10009A60": {
-      "addresses": {
-        "LoD/1.07": "0x10009A60"
-      },
-      "rvas": {
-        "LoD/1.07": "0x9A60"
-      },
-      "sizes": {
-        "LoD/1.07": 1
-      },
-      "name": "ReleaseAudioLock",
-      "signature": "void ReleaseAudioLock(AudioDeviceContext * pAudioContext)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Releases audio device lock and performs cleanup for DirectSound playback\n  \nAlgorithm:\n  1. Load audio device state from pAudioContext at offset 0x60\n  2. If device state is active, push context and call handler\n  3. Check global audio state variable\n  4. If set, invoke cleanup callback function\n  5. Return to caller with stack cleanup\n  \nParameters:\n  pAudioContext [ESP+4]: Pointer to AudioDeviceContext structure\n  \nReturns:\n  Void (stdcall cleanup - caller balances stack)\n  \nSpecial Cases:\n  Called as WaveOut device callback when DirectSound audio cleanup needed\n  Properly handles uninitialized audio contexts by checking offset 0x60 state\n  Uses global callback pointers for notification of cleanup completion",
-      "name_source": "LoD/1.07",
-      "method": "NOP",
-      "index": "NOP:2a5d94093808b86c0a72baec8161c138009dd798a890751ab59a966e008da8f9",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "2a5d94093808b86c0a72baec8161c138009dd798a890751ab59a966e008da8f9",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "546c17e22a38a8e15c8829671ea3e893",
-        "CFG": "c15460ab20a163c60767502d30d66e4c",
-        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
-      },
-      "instructions": {
-        "LoD/1.07": [
-          "0x9A60|MOV|EAX, dword ptr [ESP + 0x4]"
-        ]
-      },
-      "instruction_counts": {
-        "LoD/1.07": 1
-      },
-      "stack_frame_sizes": {
-        "LoD/1.07": 8
-      },
-      "loop_counts": {
-        "LoD/1.07": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "546c17e22a38a8e15c8829671ea3e893",
-        "Classic/1.01": "546c17e22a38a8e15c8829671ea3e893",
-        "Classic/1.02": "546c17e22a38a8e15c8829671ea3e893",
-        "Classic/1.03": "546c17e22a38a8e15c8829671ea3e893",
-        "Classic/1.04c": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.07": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.08": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.09": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.09b": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.09d": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.10": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.11": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.11b": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.12a": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.13c": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.13d": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.14a": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.14b": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.14c": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/1.14d": "546c17e22a38a8e15c8829671ea3e893",
-        "LoD/PD2": "546c17e22a38a8e15c8829671ea3e893"
-      },
-      "param_counts": {
-        "LoD/1.07": 1
-      },
-      "tags": {
-        "LoD/1.07": [
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_1",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "LoD/1.07": "internal"
-      }
-    },
-    "SmackW32_ADDR_10009B90": {
-      "addresses": {
-        "LoD/1.07": "0x10009B90"
-      },
-      "rvas": {
-        "LoD/1.07": "0x9B90"
-      },
-      "sizes": {
-        "LoD/1.07": 1
-      },
-      "name": "RemoveAudioStream",
-      "signature": "void RemoveAudioStream(AudioDeviceContext * pStream)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Removes an audio stream from the global linked list and cleans up associated resources.\n\nAlgorithm:\n  1. Check if global audio stream list exists (is not NULL)\n  2. If target stream is the list head, update head to next stream (at offset 0x3c)\n  3. Otherwise, traverse linked list to find previous node\n  4. Update previous node's next pointer to skip target stream\n  5. If list becomes empty after removal, stop audio timer or call cleanup function\n  6. Unlock the audio device\n  7. If list is empty, acquire audio lock and reset flag\n\nParameters:\n  pStream - AudioDeviceContext pointer to remove from list\n\nReturns:\n  void - Always returns successfully (no error handling)\n\nSpecial Cases:\n  Head removal - Directly updates global list pointer\n  Empty list result - Triggers audio timer/cleanup callback and reset flag",
-      "name_source": "LoD/1.07",
-      "method": "NOP",
-      "index": "NOP:579f245b0e9c567c41865aa66b113a5dad4e4a7f675e2084fdfd9dd62ce87402",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "579f245b0e9c567c41865aa66b113a5dad4e4a7f675e2084fdfd9dd62ce87402",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
-        "CFG": "c15460ab20a163c60767502d30d66e4c",
-        "PRO": "3696ad59777e09d5f2daacb544022d43"
-      },
-      "instructions": {
-        "LoD/1.07": [
-          "0x9B90|PUSH|EBX"
-        ]
-      },
-      "instruction_counts": {
-        "LoD/1.07": 1
-      },
-      "stack_frame_sizes": {
-        "LoD/1.07": 8
-      },
-      "loop_counts": {
-        "LoD/1.07": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.01": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.02": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.03": "2043487ec0ce2238c03195f2d42cad4f",
-        "Classic/1.04c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.07": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.08": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.09d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.10": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.11b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.12a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.13d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14a": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14b": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14c": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/1.14d": "2043487ec0ce2238c03195f2d42cad4f",
-        "LoD/PD2": "2043487ec0ce2238c03195f2d42cad4f"
       },
       "param_counts": {
         "LoD/1.07": 1
@@ -219787,7 +211559,7 @@ var FUNCTIONS_SmackW32_dll = {
         "LoD/PD2": "acced0f419d933c69fe541a66d38a73a"
       }
     },
-    "SmackW32_MNE_20ccb1fb6d4d": {
+    "SmackW32_ADDR_02E2B310": {
       "addresses": {
         "LoD/PD2": "0x02E2B310"
       },

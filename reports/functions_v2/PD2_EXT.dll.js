@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-16T18:31:58.018344
+// Generated: 2025-12-16T20:37:06.337995
 // Functions for PD2_EXT.dll
 // Versions: LoD/PD2
 

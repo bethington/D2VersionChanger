@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-16T18:31:58.018344
+// Generated: 2025-12-16T20:37:06.337995
 // Functions for D2Server.dll
 // Versions: Classic/1.00
 
@@ -40,9 +40,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "ValidatePluginInterface|0x68001820",
           "SetLastError|0x7",
-          "InitializeGameServerHooks|0x68021590",
-          "ValidatePluginInterface|0x68001820"
+          "InitializeGameServerHooks|0x68021590"
         ]
       },
       "instructions": {
@@ -231,16 +231,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "LoadLibraryA|0x8",
-          "InitializeApiHooks|0x68002510",
-          "SetLastError|0x7",
-          "InitializeGameServerSlots|0x68006488",
           "InitializeDiabloLibraries|0x68002390",
+          "ProcessGameObjectEntries|0x68002150",
           "SetMaxGameNumberLimit|0x680021A0",
+          "InitializeApiHooks|0x68002510",
           "NoOpStubFunction|0x68001A90",
           "InitializeSystemInfo|0x68004030",
-          "ProcessGameObjectEntries|0x68002150",
-          "InitializeServerComponents|0x68001AA0"
+          "SetLastError|0x7",
+          "LoadLibraryA|0x8",
+          "InitializeServerComponents|0x68001AA0",
+          "InitializeGameServerSlots|0x68006488"
         ]
       },
       "callers": {
@@ -420,10 +420,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "SetLastError|0x7",
+          "InitializeCallbackDispatchTable|0x68007540",
           "NoOpStubFunction|0x68001A90",
           "InitializeSystemInfo|0x68004030",
-          "InitializeCallbackDispatchTable|0x68007540"
+          "SetLastError|0x7"
         ]
       },
       "callers": {
@@ -589,9 +589,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "ProcessTimedServerUpdates|0x680058C0",
           "GetTickCount|0xA",
-          "Sleep|0x9",
-          "ProcessTimedServerUpdates|0x680058C0"
+          "Sleep|0x9"
         ]
       },
       "instructions": {
@@ -685,12 +685,12 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "GetShutdownSuccess|0x680024F0",
           "FUN_68002880|0x68002880",
           "InitializeServerCleanup|0x68001EC0",
-          "GetModuleHandleA|0xC",
           "NoOpStubFunction|0x68001A90",
-          "GetShutdownSuccess|0x680024F0",
-          "FreeLibrary|0xB"
+          "FreeLibrary|0xB",
+          "GetModuleHandleA|0xC"
         ]
       },
       "callers": {
@@ -811,8 +811,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "IsBadCodePtr|0xD",
-          "IsBadReadPtr|0xE"
+          "IsBadReadPtr|0xE",
+          "IsBadCodePtr|0xD"
         ]
       },
       "callers": {
@@ -1257,79 +1257,6 @@ var FUNCTIONS_D2Server_dll = {
           "0x1955|CALL|0x680064d8",
           "0x195A|POP|ECX",
           "0x195B|RET|0x4"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 5
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "4b4c682e658ec250269cf0bc7ef0f9c6"
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_1",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_MNE_4b4c682e658e": {
-      "addresses": {
-        "Classic/1.00": "0x68001960"
-      },
-      "rvas": {
-        "Classic/1.00": "0x1960"
-      },
-      "sizes": {
-        "Classic/1.00": 14
-      },
-      "name": "InitializeAntiCheatConfiguration",
-      "signature": "void InitializeAntiCheatConfiguration(char * lpszConfigPath)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Initializes anti-cheat configuration from specified configuration path.\n\nAlgorithm:\n1. Pass configuration file path directly to ParseAntiCheatConfiguration\n2. Return to caller after configuration parsing completes\n\nParameters:\nlpszConfigPath (char *): Path to anti-cheat configuration file to parse\n\nReturns:\nvoid: No return value (configuration parsing errors handled internally)\n\nSpecial Cases:\n- Function acts as wrapper with no validation or error handling\n- All configuration parsing logic delegated to ParseAntiCheatConfiguration",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:85ade622e5e92f9c46a46781a9d79686a2f13098a797accc5333e3583d066b29",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "85ade622e5e92f9c46a46781a9d79686a2f13098a797accc5333e3583d066b29",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "4b4c682e658ec250269cf0bc7ef0f9c6",
-        "CFG": "708f6dc7dfeb6d65dfc09cc055561044",
-        "PRO": "29bf09ebcf7d7dccadaf373b77fa5197"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "ParseAntiCheatConfiguration|0x68006368"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x1960|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0x1964|PUSH|EAX",
-          "0x1965|CALL|0x68006368",
-          "0x196A|POP|ECX",
-          "0x196B|RET|0x4"
         ]
       },
       "instruction_counts": {
@@ -1859,7 +1786,7 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_EXP_10000": {
+    "D2Server_NOP_4b3b7941c984": {
       "addresses": {
         "Classic/1.00": "0x68001A80"
       },
@@ -1875,8 +1802,8 @@ var FUNCTIONS_D2Server_dll = {
       "return_type": "void *",
       "comment": "Returns a pointer to the COM interface virtual function table.\n\nAlgorithm:\n1. Load address of global interface vtable (g_pComInterfaceVTable)\n2. Return pointer to caller\n\nParameters:\n(none)\n\nReturns:\nvoid* - Pointer to COM interface vtable at g_pComInterfaceVTable (0x6800d048)\n\nSpecial Cases:\nThis function provides access to the COM interface implementation by returning\nthe virtual function table pointer. The returned pointer can be cast to the\nappropriate interface type by the caller for method invocation.\n\nMagic Numbers Reference:\n0x6800d048 - Address of global COM interface vtable structure",
       "name_source": "Classic/1.00",
-      "method": "EXP",
-      "index": "EXP:10000",
+      "method": "NOP",
+      "index": "NOP:4b3b7941c984680d3538682670f1ad5c6eccd3fa89535922210396140a30494c",
       "indexes": {
         "EXP": "10000",
         "STR": null,
@@ -1959,17 +1886,17 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "D2GSServerShutdown|0x68001760",
-          "FUN_6800102e|0x6800102E",
           "InitializePatchFogPool|0x680022C0",
-          "InitializeGameServerHooks|0x68021590",
+          "FUN_6800102e|0x6800102E",
           "LoadItemDataFromConfigFile|0x68007980",
-          "FUN_68001b30|0x68001B30",
           "InitializeSystemInfo|0x68004030",
-          "LoadScriptFilePatches|0x68003100",
+          "D2GSServerShutdown|0x68001760",
           "D2GameServerPreInit|0x680010C0",
-          "InitializeGameServer|0x680013F0",
-          "LoadWorldEventConfiguration|0x68007A10"
+          "FUN_68001b30|0x68001B30",
+          "InitializeGameServerHooks|0x68021590",
+          "LoadScriptFilePatches|0x68003100",
+          "LoadWorldEventConfiguration|0x68007A10",
+          "InitializeGameServer|0x680013F0"
         ]
       },
       "stack_frame_sizes": {
@@ -2024,11 +1951,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "AlwaysReturnSuccess|0x68002270",
-          "InitializeServerSubsystems|0x68002210",
-          "FUN_68001b30|0x68001B30",
           "ProcessGameObjectEntries|0x68002150",
-          "LoadScriptFilePatches|0x68003100"
+          "FUN_68001b30|0x68001B30",
+          "InitializeServerSubsystems|0x68002210",
+          "LoadScriptFilePatches|0x68003100",
+          "AlwaysReturnSuccess|0x68002270"
         ]
       },
       "callers": {
@@ -2124,15 +2051,15 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_21b3de961bc77d4b",
       "callees": {
         "Classic/1.00": [
-          "SecureMemoryCopy|0x68004FA0",
-          "GetModuleHandleA|0xC",
-          "NoOpStubFunction|0x68001A90",
-          "FUN_68005240|0x68005240",
-          "free|0x49",
-          "malloc|0x4A",
-          "ProcessParameterString|0x68001F20",
-          "GetPeFileEntryPoint|0x68004E90",
           "AddToAccumulator|0x68001F00",
+          "malloc|0x4A",
+          "FUN_68005240|0x68005240",
+          "SecureMemoryCopy|0x68004FA0",
+          "free|0x49",
+          "ProcessParameterString|0x68001F20",
+          "NoOpStubFunction|0x68001A90",
+          "GetPeFileEntryPoint|0x68004E90",
+          "GetModuleHandleA|0xC",
           "FUN_68005100|0x68005100"
         ]
       },
@@ -2415,13 +2342,13 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "SplitStringWithDelimiters|0x68004870",
-          "strtoul|0x48",
-          "free|0x49",
           "malloc|0x4A",
+          "free|0x49",
           "FindPatternInBuffer|0x68001FE0",
           "GetPEOptionalHeaderSize|0x68004EC0",
-          "ParseHexStringToBytes|0x68002090"
+          "ParseHexStringToBytes|0x68002090",
+          "strtoul|0x48",
+          "SplitStringWithDelimiters|0x68004870"
         ]
       },
       "callers": {
@@ -2699,8 +2626,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "strtoul|0x48",
-          "strncpy|0x4B"
+          "strncpy|0x4B",
+          "strtoul|0x48"
         ]
       },
       "callers": {
@@ -3072,9 +2999,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "InitializePatchFogPool|0x680022C0",
           "ProcessServerHandleCounters|0x68002230",
-          "CopyLogHandlerPointer|0x680022B0",
-          "InitializePatchFogPool|0x680022C0"
+          "CopyLogHandlerPointer|0x680022B0"
         ]
       },
       "callers": {
@@ -3701,8 +3628,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "LoadLibraryA|0x8",
-          "ProcessDynamicImportLinks|0x680024A0"
+          "ProcessDynamicImportLinks|0x680024A0",
+          "LoadLibraryA|0x8"
         ]
       },
       "callers": {
@@ -3891,73 +3818,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_MNE_7b4de9f0cf35": {
-      "addresses": {
-        "Classic/1.00": "0x680024F0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x24F0"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "GetShutdownSuccess",
-      "signature": "int GetShutdownSuccess(void)",
-      "calling_convention": "__stdcall",
-      "return_type": "int",
-      "comment": "Returns success status for server shutdown operation.\n\nAlgorithm:\n1. Return constant success value (1)\n\nParameters:\nNone\n\nReturns:\nint - Always returns 1 indicating successful shutdown status\n\nSpecial Cases:\nMagic Numbers Reference:\n0x1 (1) - Success indicator for shutdown completion",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:f642bc2dc7456f6d8f0ea3af790505aa998a50fd08bd5e3dc6b985ce79b1c185",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "f642bc2dc7456f6d8f0ea3af790505aa998a50fd08bd5e3dc6b985ce79b1c185",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
-        "CFG": "b7f90134d714fda5bab257770e7cad4b",
-        "PRO": "e8c4878271c43478299bd50e7f56b825"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "D2GSServerShutdown|0x68001760"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x24F0|MOV|EAX, 0x1",
-          "0x24F5|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 2
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "7b4de9f0cf357b113d12e0c7e214792b"
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_NOP_24f5faee492d": {
       "addresses": {
         "Classic/1.00": "0x68002500"
@@ -4066,8 +3926,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InstallApiHooks|0x68002560",
-          "GetModuleHandleA|0xC"
+          "GetModuleHandleA|0xC",
+          "InstallApiHooks|0x68002560"
         ]
       },
       "callers": {
@@ -4173,15 +4033,15 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "SetLastErrorEx|0x2",
-          "IsBadWritePtr|0x15",
-          "SetLastError|0x7",
-          "IsBadCodePtr|0xD",
-          "VirtualProtect|0x12",
-          "IsWindowsNTPlatform|0x68002830",
           "VirtualQuery|0x13",
-          "FindExportDirectoryByName|0x680027A0",
-          "lstrcmpiA|0x14"
+          "lstrcmpiA|0x14",
+          "IsBadWritePtr|0x15",
+          "VirtualProtect|0x12",
+          "IsBadCodePtr|0xD",
+          "SetLastErrorEx|0x2",
+          "SetLastError|0x7",
+          "IsWindowsNTPlatform|0x68002830",
+          "FindExportDirectoryByName|0x680027A0"
         ]
       },
       "callers": {
@@ -4294,9 +4154,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "SetLastErrorEx|0x2",
+          "IsBadReadPtr|0xE",
           "lstrcmpiA|0x14",
-          "IsBadReadPtr|0xE"
+          "SetLastErrorEx|0x2"
         ]
       },
       "callers": {
@@ -4470,70 +4330,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_ADDR_68002880": {
-      "addresses": {
-        "Classic/1.00": "0x68002880"
-      },
-      "rvas": {
-        "Classic/1.00": "0x2880"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined4",
-      "method": "NOP",
-      "index": "NOP:f642bc2dc7456f6d8f0ea3af790505aa998a50fd08bd5e3dc6b985ce79b1c185",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "f642bc2dc7456f6d8f0ea3af790505aa998a50fd08bd5e3dc6b985ce79b1c185",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
-        "CFG": "4d3896ea93374c9114ea275e6989bed4",
-        "PRO": "e8c4878271c43478299bd50e7f56b825"
-      },
-      "display_name": "NOP_f642bc2dc7456f6d",
-      "callers": {
-        "Classic/1.00": [
-          "D2GSServerShutdown|0x68001760"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x2880|MOV|EAX, 0x1",
-          "0x2885|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 2
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "7b4de9f0cf357b113d12e0c7e214792b"
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_STR_b9a4f952d395": {
       "addresses": {
         "Classic/1.00": "0x68002890"
@@ -4568,8 +4364,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "FormatPacketDataDump|0x68007060",
           "FUN_680029b0|0x680029B0",
-          "ValidateClientSession|0x680068F8",
-          "WriteFormattedLogEntry|0x68007140"
+          "WriteFormattedLogEntry|0x68007140",
+          "ValidateClientSession|0x680068F8"
         ]
       },
       "strings": {
@@ -4933,8 +4729,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FindStringLength|0x68005270",
-          "ValidateColonPrefixAndProcess|0x680030D0"
+          "ValidateColonPrefixAndProcess|0x680030D0",
+          "FindStringLength|0x68005270"
         ]
       },
       "instructions": {
@@ -5023,70 +4819,6 @@ var FUNCTIONS_D2Server_dll = {
           "0x2D69|SBB|EAX, EAX",
           "0x2D6B|AND|EAX, 0x3",
           "0x2D6E|RET|0x8"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 6
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "2788d7b1a8642d946a4eca4912c98456"
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_1",
-          "PROP_LEAF",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_MNE_2788d7b1a864": {
-      "addresses": {
-        "Classic/1.00": "0x68002D80"
-      },
-      "rvas": {
-        "Classic/1.00": "0x2D80"
-      },
-      "sizes": {
-        "Classic/1.00": 17
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "byte",
-      "method": "NOP",
-      "index": "NOP:39cfc46906442668b58b6ff4960422544601c2bdcff6d635794cb9b648859983",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "39cfc46906442668b58b6ff4960422544601c2bdcff6d635794cb9b648859983",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "2788d7b1a8642d946a4eca4912c98456",
-        "CFG": "ac113377e583d4d26f6616eda6c8287e",
-        "PRO": "c8ceb5883b97c2f8e32173db42aa205a"
-      },
-      "display_name": "NOP_39cfc46906442668",
-      "instructions": {
-        "Classic/1.00": [
-          "0x2D80|MOV|ECX, dword ptr [ESP + 0x4]",
-          "0x2D84|MOV|AL, 0x9",
-          "0x2D86|CMP|AL, byte ptr [ECX + 0x1]",
-          "0x2D89|SBB|EAX, EAX",
-          "0x2D8B|AND|EAX, 0x3",
-          "0x2D8E|RET|0x8"
         ]
       },
       "instruction_counts": {
@@ -5518,8 +5250,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_a57f4bc9a2d87ab3",
       "callees": {
         "Classic/1.00": [
-          "GetTickCount|0xA",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "InitializeDebugLogAndWrite|0x68006258",
+          "GetTickCount|0xA"
         ]
       },
       "strings": {
@@ -5784,12 +5516,12 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ParseConfigFromCommandLine|0x680032E0",
-          "fgets|0x44",
-          "FreeCleanupResources|0x68003260",
           "fopen|0x43",
-          "NoOpStubFunction|0x68001A90",
+          "fgets|0x44",
           "realloc|0x45",
+          "FreeCleanupResources|0x68003260",
+          "ParseConfigFromCommandLine|0x680032E0",
+          "NoOpStubFunction|0x68001A90",
           "fclose|0x46"
         ]
       },
@@ -6026,10 +5758,10 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "ParseHexStringToBuffer|0x68004EF0",
-          "strtoul|0x48",
+          "_strdup|0x4D",
           "free|0x49",
           "ParseCommandLineArguments|0x68004AA0",
-          "_strdup|0x4D"
+          "strtoul|0x48"
         ]
       },
       "callers": {
@@ -6955,9 +6687,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetTickCount|0xA",
+          "InitializeDebugLogAndWrite|0x68006258",
           "IsActiveConnection|0x68003A80",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "GetTickCount|0xA"
         ]
       },
       "strings": {
@@ -7076,8 +6808,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ProcessClientPacketValidation|0x68003930",
-          "ValidateClientAntiCheatInfo|0x68003E30"
+          "ValidateClientAntiCheatInfo|0x68003E30",
+          "ProcessClientPacketValidation|0x68003930"
         ]
       },
       "instructions": {
@@ -7213,95 +6945,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_NOP_a46cd70a6b20": {
-      "addresses": {
-        "Classic/1.00": "0x68003AE0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x3AE0"
-      },
-      "sizes": {
-        "Classic/1.00": 80
-      },
-      "calling_convention": "__fastcall",
-      "return_type": "undefined4",
-      "method": "NOP",
-      "index": "NOP:a46cd70a6b201a9b2b2598927125661b1322acf8fc797c722ac43da7108dd19f",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "a46cd70a6b201a9b2b2598927125661b1322acf8fc797c722ac43da7108dd19f",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "506918f8900f53d19ed389605c119eb2",
-        "CFG": "b2aaecbbabd9e2b4e0294fde470b952c",
-        "PRO": "1d73d88a51b3671cc0a7b0dee3b22680"
-      },
-      "display_name": "NOP_a46cd70a6b201a9b",
-      "callees": {
-        "Classic/1.00": [
-          "ValidateAndReleaseClientInfo|0x68006798"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x3AE0|PUSH|EBX",
-          "0x3AE1|PUSH|EDI",
-          "0x3AE2|MOV|EDI, ECX",
-          "0x3AE4|CALL|dword ptr [0x68014638]",
-          "0x3AEA|MOV|EBX, EAX",
-          "0x3AEC|TEST|EBX, EBX",
-          "0x3AEE|JZ|0x68003b29",
-          "0x3AF0|PUSH|ESI",
-          "0x3AF1|MOV|EDX, EDI",
-          "0x3AF3|MOV|ECX, EBX",
-          "0x3AF5|CALL|dword ptr [0x68014610]",
-          "0x3AFB|MOV|ESI, EAX",
-          "0x3AFD|TEST|ESI, ESI",
-          "0x3AFF|JZ|0x68003b19",
-          "0x3B01|MOV|EAX, dword ptr [ESI + 0x68]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 33
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "506918f8900f53d19ed389605c119eb2"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x14638|g_pfnGetClientContext|00000000",
-          "0x14610|g_pfnGetClientInfo|00000000",
-          "0x14644|g_pfnFinalizeEntity|00000000"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "global_counts": {
-        "Classic/1.00": 3
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_1"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_STR_e98fd3498060": {
       "addresses": {
         "Classic/1.00": "0x68003B40"
@@ -7334,10 +6977,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ValidateGameIdAndGetEntry|0x680064E8",
           "FormatStringToCallback|0x68003500",
-          "ValidateClientInfoAndUpdateCrypto|0x68003C50",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "InitializeDebugLogAndWrite|0x68006258",
+          "ValidateGameIdAndGetEntry|0x680064E8",
+          "ValidateClientInfoAndUpdateCrypto|0x68003C50"
         ]
       },
       "strings": {
@@ -7455,14 +7098,14 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetAntiCheatAddressPairs|0x68003DB0",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "InitializeDebugLogAndWrite|0x68006258",
+          "GetAntiCheatAddressPairs|0x68003DB0"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateClientAndProcess|0x68003B40",
-          "ValidateClientAntiCheatInfo|0x68003E30"
+          "ValidateClientAntiCheatInfo|0x68003E30",
+          "ValidateClientAndProcess|0x68003B40"
         ]
       },
       "strings": {
@@ -7659,63 +7302,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_NOP_ec85d2cd4d05": {
-      "addresses": {
-        "Classic/1.00": "0x68003E20"
-      },
-      "rvas": {
-        "Classic/1.00": "0x3E20"
-      },
-      "sizes": {
-        "Classic/1.00": 8
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined4",
-      "method": "NOP",
-      "index": "NOP:ec85d2cd4d05ecc6e5875f3a7e2b442a1c8406b303eb531544b6ac694481181a",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "ec85d2cd4d05ecc6e5875f3a7e2b442a1c8406b303eb531544b6ac694481181a",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
-        "CFG": "4d3896ea93374c9114ea275e6989bed4",
-        "PRO": "14bd713c40963adf40bc3bbeed7b3524"
-      },
-      "display_name": "NOP_ec85d2cd4d05ecc6",
-      "instructions": {
-        "Classic/1.00": [
-          "0x3E20|MOV|EAX, 0x3",
-          "0x3E25|RET|0x4"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 2
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "d7897101f3cb99eb3b89274dfb087bc9"
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_STR_13942e83cde9": {
       "addresses": {
         "Classic/1.00": "0x68003E30"
@@ -7748,9 +7334,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ValidateClientInfoAndUpdateCrypto|0x68003C50",
+          "InitializeDebugLogAndWrite|0x68006258",
           "IsActiveConnection|0x68003A80",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "ValidateClientInfoAndUpdateCrypto|0x68003C50"
         ]
       },
       "strings": {
@@ -8023,17 +7609,17 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetUserNameA|0x27",
-          "GetProcessAffinityMask|0x17",
-          "FUN_68004420|0x68004420",
-          "GetCurrentProcess|0x18",
-          "NoOpStubFunction|0x68001A90",
           "MeasureCpuFrequency|0x68004340",
           "GetSystemInfo|0x1B",
+          "FUN_68004420|0x68004420",
           "GetVersionExA|0x16",
-          "GlobalMemoryStatus|0x1A",
+          "GetCurrentProcess|0x18",
           "GetComputerNameA|0x19",
-          "FormatCpuInfo|0x680042C0"
+          "FormatCpuInfo|0x680042C0",
+          "NoOpStubFunction|0x68001A90",
+          "GetUserNameA|0x27",
+          "GetProcessAffinityMask|0x17",
+          "GlobalMemoryStatus|0x1A"
         ]
       },
       "callers": {
@@ -8288,13 +7874,13 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "QueryPerformanceCounter|0x1C",
-          "GetCurrentThread|0x1F",
-          "__alldiv|0x68009A80",
-          "GetThreadPriority|0x1E",
-          "GetTickCount|0xA",
           "__allmul|0x68009B30",
+          "GetThreadPriority|0x1E",
+          "__alldiv|0x68009A80",
+          "QueryPerformanceFrequency|0x20",
           "SetThreadPriority|0x1D",
-          "QueryPerformanceFrequency|0x20"
+          "GetCurrentThread|0x1F",
+          "GetTickCount|0xA"
         ]
       },
       "callers": {
@@ -8390,8 +7976,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_78013422f1a366f0",
       "callees": {
         "Classic/1.00": [
-          "GetVersionExA|0x16",
-          "sprintf|0x68009A6E"
+          "sprintf|0x68009A6E",
+          "GetVersionExA|0x16"
         ]
       },
       "callers": {
@@ -8805,8 +8391,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ProcessEscapeSequences|0x680046D0",
-          "_strdup|0x4D"
+          "_strdup|0x4D",
+          "ProcessEscapeSequences|0x680046D0"
         ]
       },
       "instructions": {
@@ -8897,8 +8483,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "_isctype|0x40",
-          "ConvertCharToHexDigit|0x680045A0"
+          "ConvertCharToHexDigit|0x680045A0",
+          "_isctype|0x40"
         ]
       },
       "callers": {
@@ -9003,15 +8589,15 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "free|0x49",
           "realloc|0x45",
-          "malloc|0x4A"
+          "malloc|0x4A",
+          "free|0x49"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ParseAntiCheatConfiguration|0x68006368",
           "ProcessParameterString|0x68001F20",
+          "ParseAntiCheatConfiguration|0x68006368",
           "LoadWorldEventConfiguration|0x68007A10"
         ]
       },
@@ -9114,8 +8700,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "realloc|0x45",
-          "free|0x49",
-          "malloc|0x4A"
+          "malloc|0x4A",
+          "free|0x49"
         ]
       },
       "callers": {
@@ -9224,8 +8810,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "realloc|0x45",
-          "free|0x49",
-          "malloc|0x4A"
+          "malloc|0x4A",
+          "free|0x49"
         ]
       },
       "instructions": {
@@ -9330,9 +8916,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "GetLastError|0x22",
           "LocalFree|0x23",
-          "FormatMessageA|0x21",
-          "GetLastError|0x22"
+          "FormatMessageA|0x21"
         ]
       },
       "instructions": {
@@ -9611,9 +9197,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "strtoul|0x48",
           "malloc|0x4A",
-          "strncpy|0x4B"
+          "strncpy|0x4B",
+          "strtoul|0x48"
         ]
       },
       "callers": {
@@ -9716,11 +9302,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FlushInstructionCache|0x24",
-          "VirtualProtect|0x12",
           "g_pfnDebugLogger|0x6800D7D0",
+          "GetLastError|0x22",
+          "FlushInstructionCache|0x24",
           "GetCurrentProcess|0x18",
-          "GetLastError|0x22"
+          "VirtualProtect|0x12"
         ]
       },
       "callers": {
@@ -9840,9 +9426,9 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_b191d661883a01c8",
       "callees": {
         "Classic/1.00": [
-          "VirtualProtect|0x12",
           "g_pfnDebugLogger|0x6800D7D0",
-          "GetLastError|0x22"
+          "GetLastError|0x22",
+          "VirtualProtect|0x12"
         ]
       },
       "callers": {
@@ -9959,8 +9545,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_c8fb3b0e799ab3de",
       "callees": {
         "Classic/1.00": [
-          "SecureMemoryCopy|0x68004FA0",
-          "malloc|0x4A"
+          "malloc|0x4A",
+          "SecureMemoryCopy|0x68004FA0"
         ]
       },
       "callers": {
@@ -10226,10 +9812,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "GetAntiCheatAddressPairs|0x68003DB0",
-          "InitializeBaseStats|0x680059E0",
           "TriggerRandomEvent|0x680234C5",
-          "ProcessTimedServerUpdates|0x680058C0"
+          "ProcessTimedServerUpdates|0x680058C0",
+          "InitializeBaseStats|0x680059E0",
+          "GetAntiCheatAddressPairs|0x68003DB0"
         ]
       },
       "instructions": {
@@ -10498,8 +10084,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_214bd86727ebaf9f",
       "callees": {
         "Classic/1.00": [
-          "FUN_680056b0|0x680056B0",
-          "TriggerRandomEvent|0x680234C5"
+          "TriggerRandomEvent|0x680234C5",
+          "FUN_680056b0|0x680056B0"
         ]
       },
       "instructions": {
@@ -10964,8 +10550,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "CreateStatSnapshot|0x680019B0",
-          "ProcessTimedServerUpdates|0x680058C0"
+          "ProcessTimedServerUpdates|0x680058C0",
+          "CreateStatSnapshot|0x680019B0"
         ]
       },
       "instructions": {
@@ -11059,13 +10645,13 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "time|0x3B",
-          "CalculateModifiedStatTotal|0x68005860",
-          "GetTickCount|0xA",
-          "ValidateTimedSecurityCheck|0x68007F60",
-          "ProcessEntityWithCallback|0x68005A10",
-          "InitializeBaseStats|0x680059E0",
           "srand|0x3C",
+          "ValidateTimedSecurityCheck|0x68007F60",
+          "CalculateModifiedStatTotal|0x68005860",
+          "ProcessEntityWithCallback|0x68005A10",
+          "time|0x3B",
+          "InitializeBaseStats|0x680059E0",
+          "GetTickCount|0xA",
           "GenerateRandomInRange|0x680055A0"
         ]
       },
@@ -11282,10 +10868,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ValidateGameIdAndGetEntry|0x680064E8",
-          "FUN_68005b20|0x68005B20",
           "ProcessEntityCallback|0x680220DD",
-          "cleanup_and_exit|0x68005AFE"
+          "ValidateGameIdAndGetEntry|0x680064E8",
+          "cleanup_and_exit|0x68005AFE",
+          "FUN_68005b20|0x68005B20"
         ]
       },
       "callers": {
@@ -11799,8 +11385,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "ProbeStackAllocation|0x68009B90",
-          "FUN_68005e00|0x68005E00",
-          "WriteFormattedLogEntry|0x68007140"
+          "WriteFormattedLogEntry|0x68007140",
+          "FUN_68005e00|0x68005E00"
         ]
       },
       "strings": {
@@ -11980,9 +11566,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FUN_68005e00|0x68005E00",
           "WriteFormattedLogEntry|0x68007140",
-          "DumpCurrentThreadInformation|0x68006DC8"
+          "DumpCurrentThreadInformation|0x68006DC8",
+          "FUN_68005e00|0x68005E00"
         ]
       },
       "strings": {
@@ -12085,8 +11671,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_1a105018d382356d",
       "callers": {
         "Classic/1.00": [
-          "FUN_68005c90|0x68005C90",
-          "ExceptionHandlerCopyAndLog|0x68005D77"
+          "ExceptionHandlerCopyAndLog|0x68005D77",
+          "FUN_68005c90|0x68005C90"
         ]
       },
       "instructions": {
@@ -12561,8 +12147,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_d25b051436323380",
       "callees": {
         "Classic/1.00": [
-          "InitializeDebugLogAndWrite|0x68006258",
-          "FUN_68005fe8|0x68005FE8"
+          "FUN_68005fe8|0x68005FE8",
+          "InitializeDebugLogAndWrite|0x68006258"
         ]
       },
       "strings": {
@@ -12751,8 +12337,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_dd00cdfb1b1caefb",
       "callers": {
         "Classic/1.00": [
-          "ValidateAndDispatch|0x68005FA8",
-          "FUN_68005f58|0x68005F58"
+          "FUN_68005f58|0x68005F58",
+          "ValidateAndDispatch|0x68005FA8"
         ]
       },
       "instructions": {
@@ -12778,63 +12364,6 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_MNE_f5b0d4999cef": {
-      "addresses": {
-        "Classic/1.00": "0x68005FF8"
-      },
-      "rvas": {
-        "Classic/1.00": "0x5FF8"
-      },
-      "sizes": {
-        "Classic/1.00": 5
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined4",
-      "method": "NOP",
-      "index": "NOP:fdbadf3bbb642073fe0670285851bbd07e31dfc6895f57207a341e43bb3bab89",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "fdbadf3bbb642073fe0670285851bbd07e31dfc6895f57207a341e43bb3bab89",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "f5b0d4999cef381bea9a054131983f79",
-        "CFG": "4d3896ea93374c9114ea275e6989bed4",
-        "PRO": "86ffe9e76e720076fa0a9a543035b74c"
-      },
-      "display_name": "NOP_fdbadf3bbb642073",
-      "instructions": {
-        "Classic/1.00": [
-          "0x5FF8|XOR|EAX, EAX",
-          "0x5FFA|RET|0x8"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 2
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "f5b0d4999cef381bea9a054131983f79"
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
           "PROP_TINY",
           "PARAM_0",
           "PROP_LEAF"
@@ -12873,8 +12402,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_03455a8feb008d65",
       "callees": {
         "Classic/1.00": [
-          "DebugDumpUnitInfo|0x680060A8",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "InitializeDebugLogAndWrite|0x68006258",
+          "DebugDumpUnitInfo|0x680060A8"
         ]
       },
       "callers": {
@@ -12996,8 +12525,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetUnitDimensions|0x680061A8",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "InitializeDebugLogAndWrite|0x68006258",
+          "GetUnitDimensions|0x680061A8"
         ]
       },
       "callers": {
@@ -13286,22 +12815,22 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateClientInfoAndUpdateCrypto|0x68003C50",
-          "LogGameObjectDebugInfo|0x68005EF8",
-          "FUN_68006fd8|0x68006FD8",
           "FUN_68005f58|0x68005F58",
-          "DumpCurrentThreadInformation|0x68006DC8",
           "ValidateClientAntiCheatInfo|0x68003E30",
+          "ProcessClientPacketValidation|0x68003930",
           "ValidateGameIdAndGetEntry|0x680064E8",
-          "ValidateClientAndProcess|0x68003B40",
+          "FUN_68002f90|0x68002F90",
+          "DebugDumpUnitInfo|0x680060A8",
           "FUN_68005620|0x68005620",
           "ParseAntiCheatConfiguration|0x68006368",
-          "FUN_68006008|0x68006008",
-          "ValidateAndReleaseClientInfo|0x68006798",
-          "DebugDumpUnitInfo|0x680060A8",
           "ValidateClientSession|0x680068F8",
-          "ProcessClientPacketValidation|0x68003930",
-          "FUN_68002f90|0x68002F90"
+          "LogGameObjectDebugInfo|0x68005EF8",
+          "ValidateAndReleaseClientInfo|0x68006798",
+          "ValidateClientAndProcess|0x68003B40",
+          "FUN_68006008|0x68006008",
+          "FUN_68006fd8|0x68006FD8",
+          "DumpCurrentThreadInformation|0x68006DC8",
+          "ValidateClientInfoAndUpdateCrypto|0x68003C50"
         ]
       },
       "strings": {
@@ -13404,17 +12933,17 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "fprintf|0x37",
-          "fputc|0x39",
           "GetLocalTime|0x25",
+          "vfprintf|0x38",
           "fflush|0x3A",
-          "vfprintf|0x38"
+          "fprintf|0x37",
+          "fputc|0x39"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "WriteFormattedLogEntry|0x68007140",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "InitializeDebugLogAndWrite|0x68006258",
+          "WriteFormattedLogEntry|0x68007140"
         ]
       },
       "strings": {
@@ -13536,11 +13065,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "SplitStringWithDelimiters|0x68004870",
-          "strtoul|0x48",
           "free|0x49",
+          "InitializeDebugLogAndWrite|0x68006258",
           "ParseCommandLineArguments|0x68004AA0",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "strtoul|0x48",
+          "SplitStringWithDelimiters|0x68004870"
         ]
       },
       "callers": {
@@ -13667,9 +13196,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ProcessGameEntryIfValid|0x68006528",
+          "InitializeGameServerState|0x68007950",
           "FUN_680064b8|0x680064B8",
-          "InitializeGameServerState|0x68007950"
+          "ProcessGameEntryIfValid|0x68006528"
         ]
       },
       "callers": {
@@ -13946,16 +13475,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ProcessGameEntryIfValid|0x68006528",
-          "ConditionalMessageHandler|0x680056F0",
-          "ValidateClientAndProcess|0x68003B40",
-          "CleanupAndShutdownGameServer|0x6802104E",
-          "SetGameEntryFlag|0x68006568",
           "GetGameEntryFlags|0x68022EBF",
+          "ValidateClientAndProcess|0x68003B40",
+          "GameMessageHandler|0x6802387B",
+          "ConditionalMessageHandler|0x680056F0",
           "ProcessEntityWithValidation|0x680065C8",
           "ProcessEntityWithCallback|0x68005A10",
           "ValidateGameIdOnly|0x68006548",
-          "GameMessageHandler|0x6802387B"
+          "SetGameEntryFlag|0x68006568",
+          "ProcessGameEntryIfValid|0x68006528",
+          "CleanupAndShutdownGameServer|0x6802104E"
         ]
       },
       "strings": {
@@ -14949,8 +14478,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "CleanupClientResource|0x68003FE0",
-          "FUN_68003ae0|0x68003AE0"
+          "FUN_68003ae0|0x68003AE0",
+          "CleanupClientResource|0x68003FE0"
         ]
       },
       "strings": {
@@ -15156,11 +14685,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FormatBufferAndCallback|0x68003430",
           "sprintf|0x42",
-          "GetTickCount|0xA",
+          "InitializeDebugLogAndWrite|0x68006258",
           "WriteFormattedLogEntry|0x68007140",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "GetTickCount|0xA",
+          "FormatBufferAndCallback|0x68003430"
         ]
       },
       "callers": {
@@ -15323,10 +14852,10 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "sprintf|0x42",
-          "fprintf|0x37",
+          "IsBadReadPtr|0xE",
           "_isctype|0x40",
           "fflush|0x3A",
-          "IsBadReadPtr|0xE"
+          "fprintf|0x37"
         ]
       },
       "callers": {
@@ -15465,8 +14994,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_68005620|0x68005620",
-          "ExceptionHandlerCopyAndLog|0x68005D77"
+          "ExceptionHandlerCopyAndLog|0x68005D77",
+          "FUN_68005620|0x68005620"
         ]
       },
       "strings": {
@@ -15793,8 +15322,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ProbeStackAllocation|0x68009B90",
           "sprintf|0x42",
+          "ProbeStackAllocation|0x68009B90",
           "WriteFormattedLogEntry|0x68007140"
         ]
       },
@@ -15928,21 +15457,21 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "sprintf|0x42",
-          "FormatFunctionSignature|0x68007200",
           "fopen|0x43",
-          "WriteTimestampedLogEntry|0x68006298",
-          "GetEntityNameString|0x68007250"
+          "GetEntityNameString|0x68007250",
+          "FormatFunctionSignature|0x68007200",
+          "WriteTimestampedLogEntry|0x68006298"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ProcessPacketHandler|0x68002890",
           "FormatPacketDataDump|0x68007060",
-          "FUN_68005c90|0x68005C90",
+          "ProcessPacketHandler|0x68002890",
+          "ExceptionHandlerCopyAndLog|0x68005D77",
           "HandleCharacterSaveError|0x68006708",
-          "ValidateSystemPacket|0x68003880",
           "ValidateClientSession|0x680068F8",
-          "ExceptionHandlerCopyAndLog|0x68005D77"
+          "FUN_68005c90|0x68005C90",
+          "ValidateSystemPacket|0x68003880"
         ]
       },
       "strings": {
@@ -17894,8 +17423,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "fprintf|0x37",
-          "fflush|0x3A"
+          "fflush|0x3A",
+          "fprintf|0x37"
         ]
       },
       "strings": {
@@ -17972,63 +17501,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_MNE_fdad073544ac": {
-      "addresses": {
-        "Classic/1.00": "0x68007830"
-      },
-      "rvas": {
-        "Classic/1.00": "0x7830"
-      },
-      "sizes": {
-        "Classic/1.00": 5
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "fdad073544ac1586678f808b3470f76a",
-        "CFG": "02a30cff357c3ab4c37d08324437520e",
-        "PRO": "847c477d03d8c137863955e0c98fa4c0"
-      },
-      "display_name": "NOP_6a59889aa8f1e82e",
-      "instructions": {
-        "Classic/1.00": [
-          "0x7830|JMP|0x68007840"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "fdad073544ac1586678f808b3470f76a"
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
     "D2Server_STR_e9c54aa5c7db": {
       "addresses": {
         "Classic/1.00": "0x68007840"
@@ -18058,9 +17530,9 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_e9c54aa5c7db68cd",
       "callees": {
         "Classic/1.00": [
-          "LoadLibraryA|0x8",
+          "GetProcAddress|0x11",
           "GetModuleHandleA|0xC",
-          "GetProcAddress|0x11"
+          "LoadLibraryA|0x8"
         ]
       },
       "strings": {
@@ -18107,320 +17579,6 @@ var FUNCTIONS_D2Server_dll = {
           "0xB028|PTR_GetModuleHandleA_6800b028|0000b6ec",
           "0xB03C|PTR_DAT_6800b03c|0000b73e",
           "0x13248|g_abFormattedStringBuffer[112]|",
-          "0xB018|PTR_LoadLibraryA_6800b018|0000b6b6"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 3
-      },
-      "string_counts": {
-        "Classic/1.00": 4
-      },
-      "global_counts": {
-        "Classic/1.00": 4
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_0"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_ADDR_68007890": {
-      "addresses": {
-        "Classic/1.00": "0x68007890"
-      },
-      "rvas": {
-        "Classic/1.00": "0x7890"
-      },
-      "sizes": {
-        "Classic/1.00": 5
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "fdad073544ac1586678f808b3470f76a",
-        "CFG": "02a30cff357c3ab4c37d08324437520e",
-        "PRO": "847c477d03d8c137863955e0c98fa4c0"
-      },
-      "display_name": "NOP_6a59889aa8f1e82e",
-      "instructions": {
-        "Classic/1.00": [
-          "0x7890|JMP|0x680078a0"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "fdad073544ac1586678f808b3470f76a"
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
-    "D2Server_STR_c11583ef6b98": {
-      "addresses": {
-        "Classic/1.00": "0x680078A0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x78A0"
-      },
-      "sizes": {
-        "Classic/1.00": 74
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "STR",
-      "index": "STR:c11583ef6b981caf5194e4a9d2f4da6b",
-      "indexes": {
-        "EXP": null,
-        "STR": "c11583ef6b981caf5194e4a9d2f4da6b",
-        "NOP": "81ff90afb4be215f80b5276279276dc000e039f2c902757a56f399b1fb946c20",
-        "CAL": "4fb114c8030686bca39c66c54233a5e7",
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "2b4341e17a7b21a232a42b2c68733b7b",
-        "CFG": "c8b2493ac43ea03ecf98c5a0b3b06b94",
-        "PRO": "b4d3848464e4bfdf37fc5a3583096e80"
-      },
-      "display_name": "STR_c11583ef6b981caf",
-      "callees": {
-        "Classic/1.00": [
-          "LoadLibraryA|0x8",
-          "GetModuleHandleA|0xC",
-          "GetProcAddress|0x11"
-        ]
-      },
-      "strings": {
-        "Classic/1.00": [
-          "0x10A04|s_ntdll.dll_68010a04|ntdll.dll",
-          "0x10A1C|s_ntdll.dll_68010a1c|ntdll.dll",
-          "0x10A10|s_ntdll.dll_68010a10|ntdll.dll",
-          "0x109E8|s_NtQueryInformationProcess_680109e8|NtQueryInformationProcess"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x78A0|PUSH|ESI",
-          "0x78A1|MOV|ESI, dword ptr [0x6800b028]",
-          "0x78A7|PUSH|0x68010a04",
-          "0x78AC|CALL|ESI",
-          "0x78AE|TEST|EAX, EAX",
-          "0x78B0|JZ|0x680078cc",
-          "0x78B2|PUSH|0x68010a10",
-          "0x78B7|CALL|ESI",
-          "0x78B9|PUSH|0x680109e8",
-          "0x78BE|PUSH|EAX",
-          "0x78BF|CALL|dword ptr [0x6800b03c]",
-          "0x78C5|MOV|[0x6801324c], EAX",
-          "0x78CA|POP|ESI",
-          "0x78CB|RET|",
-          "0x78CC|PUSH|0x68010a1c"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 22
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "2b4341e17a7b21a232a42b2c68733b7b"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0xB028|PTR_GetModuleHandleA_6800b028|0000b6ec",
-          "0xB03C|PTR_DAT_6800b03c|0000b73e",
-          "0x1324C|g_abFormattedStringBuffer[116]|",
-          "0xB018|PTR_LoadLibraryA_6800b018|0000b6b6"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 3
-      },
-      "string_counts": {
-        "Classic/1.00": 4
-      },
-      "global_counts": {
-        "Classic/1.00": 4
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_0"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_ADDR_680078F0": {
-      "addresses": {
-        "Classic/1.00": "0x680078F0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x78F0"
-      },
-      "sizes": {
-        "Classic/1.00": 5
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "fdad073544ac1586678f808b3470f76a",
-        "CFG": "02a30cff357c3ab4c37d08324437520e",
-        "PRO": "847c477d03d8c137863955e0c98fa4c0"
-      },
-      "display_name": "NOP_6a59889aa8f1e82e",
-      "instructions": {
-        "Classic/1.00": [
-          "0x78F0|JMP|0x68007900"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "fdad073544ac1586678f808b3470f76a"
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
-    "D2Server_STR_abbffd7ced4c": {
-      "addresses": {
-        "Classic/1.00": "0x68007900"
-      },
-      "rvas": {
-        "Classic/1.00": "0x7900"
-      },
-      "sizes": {
-        "Classic/1.00": 74
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "STR",
-      "index": "STR:abbffd7ced4c024e8abd5b7545a13450",
-      "indexes": {
-        "EXP": null,
-        "STR": "abbffd7ced4c024e8abd5b7545a13450",
-        "NOP": "81ff90afb4be215f80b5276279276dc000e039f2c902757a56f399b1fb946c20",
-        "CAL": "4fb114c8030686bca39c66c54233a5e7",
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "2b4341e17a7b21a232a42b2c68733b7b",
-        "CFG": "c8b2493ac43ea03ecf98c5a0b3b06b94",
-        "PRO": "72853c0a974e972d4130c6c7216e4ec1"
-      },
-      "display_name": "STR_abbffd7ced4c024e",
-      "callees": {
-        "Classic/1.00": [
-          "LoadLibraryA|0x8",
-          "GetModuleHandleA|0xC",
-          "GetProcAddress|0x11"
-        ]
-      },
-      "strings": {
-        "Classic/1.00": [
-          "0x10A5C|s_ntdll.dll_68010a5c|ntdll.dll",
-          "0x10A50|s_ntdll.dll_68010a50|ntdll.dll",
-          "0x10A28|s_NtQueryInformationThread_68010a28|NtQueryInformationThread",
-          "0x10A44|s_ntdll.dll_68010a44|ntdll.dll"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x7900|PUSH|ESI",
-          "0x7901|MOV|ESI, dword ptr [0x6800b028]",
-          "0x7907|PUSH|0x68010a44",
-          "0x790C|CALL|ESI",
-          "0x790E|TEST|EAX, EAX",
-          "0x7910|JZ|0x6800792c",
-          "0x7912|PUSH|0x68010a50",
-          "0x7917|CALL|ESI",
-          "0x7919|PUSH|0x68010a28",
-          "0x791E|PUSH|EAX",
-          "0x791F|CALL|dword ptr [0x6800b03c]",
-          "0x7925|MOV|[0x68013250], EAX",
-          "0x792A|POP|ESI",
-          "0x792B|RET|",
-          "0x792C|PUSH|0x68010a5c"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 22
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "2b4341e17a7b21a232a42b2c68733b7b"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0xB028|PTR_GetModuleHandleA_6800b028|0000b6ec",
-          "0xB03C|PTR_DAT_6800b03c|0000b73e",
-          "0x13250|g_pfnNtQueryInformationThread|",
           "0xB018|PTR_LoadLibraryA_6800b018|0000b6b6"
         ]
       },
@@ -18564,10 +17722,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "NoOpStubFunction|0x68001A90",
-          "strncpy|0x4B",
           "DestroyLinkedListAndReleaseBuffers|0x680087D0",
-          "ParseItemConfigFile|0x680081A0"
+          "ParseItemConfigFile|0x680081A0",
+          "strncpy|0x4B",
+          "NoOpStubFunction|0x68001A90"
         ]
       },
       "callers": {
@@ -18689,19 +17847,19 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ParseStringPairToUnsigned|0x68007DF0",
-          "ReadConfigValue|0x68007DA0",
-          "ValidateConfigurationStringPair|0x68007E20",
-          "NoOpStubFunction|0x68001A90",
           "free|0x49",
           "SafeDestroyObject|0x68008C70",
-          "ParseConfigurationString|0x68008C20",
-          "SplitStringWithDelimiters|0x68004870",
-          "_stricmp|0x4C",
           "LoadItemDataFromConfigFile|0x68007980",
-          "strncpy|0x4B",
+          "_stricmp|0x4C",
+          "NoOpStubFunction|0x68001A90",
+          "_access|0x68009BD8",
           "DestroyLinkedListAndReleaseBuffers|0x680087D0",
-          "_access|0x68009BD8"
+          "ReadConfigValue|0x68007DA0",
+          "strncpy|0x4B",
+          "ParseConfigurationString|0x68008C20",
+          "ParseStringPairToUnsigned|0x68007DF0",
+          "SplitStringWithDelimiters|0x68004870",
+          "ValidateConfigurationStringPair|0x68007E20"
         ]
       },
       "callers": {
@@ -18957,8 +18115,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ParseStringPairToUnsigned|0x68007DF0",
-          "LoadWorldEventConfiguration|0x68007A10"
+          "LoadWorldEventConfiguration|0x68007A10",
+          "ParseStringPairToUnsigned|0x68007DF0"
         ]
       },
       "instructions": {
@@ -19057,14 +18215,14 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "strtoul|0x48",
-          "ReadConfigValue|0x68007DA0"
+          "ReadConfigValue|0x68007DA0",
+          "strtoul|0x48"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateConfigurationStringPair|0x68007E20",
-          "LoadWorldEventConfiguration|0x68007A10"
+          "LoadWorldEventConfiguration|0x68007A10",
+          "ValidateConfigurationStringPair|0x68007E20"
         ]
       },
       "instructions": {
@@ -19348,9 +18506,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "fread|0x35",
-          "ValidateAndCalculateChecksum|0x68007F40",
           "fopen|0x43",
+          "ValidateAndCalculateChecksum|0x68007F40",
+          "fread|0x35",
           "fclose|0x46"
         ]
       },
@@ -19473,8 +18631,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateTimedSecurityCheck|0x68007F60",
-          "ValidateGameStatisticsHeader|0x68007EB0"
+          "ValidateGameStatisticsHeader|0x68007EB0",
+          "ValidateTimedSecurityCheck|0x68007F60"
         ]
       },
       "instructions": {
@@ -19555,9 +18713,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "ValidateAndCalculateChecksum|0x68007F40",
           "WriteStatisticsDataToFile|0x68008000",
-          "GetTickCount|0xA",
-          "ValidateAndCalculateChecksum|0x68007F40"
+          "GetTickCount|0xA"
         ]
       },
       "callers": {
@@ -19675,8 +18833,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "fwrite|0x28",
           "fopen|0x43",
+          "fwrite|0x28",
           "fclose|0x46"
         ]
       },
@@ -20118,9 +19276,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "Unwind@68009ff9|0x68009FF9",
           "DestroyLinkedListAndReleaseBuffers|0x680087D0",
-          "DestroyBufferManagerList|0x68008D80"
+          "DestroyBufferManagerList|0x68008D80",
+          "Unwind@68009ff9|0x68009FF9"
         ]
       },
       "instructions": {
@@ -20215,26 +19373,26 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "open|0x62",
-          "_Tidy|0x67",
-          "GetLine|0x68009F56",
-          "GetItemDataValue|0x68008DE0",
-          "_Init|0x6A",
-          "~basic_ios<char,struct_std::char_traits<char>_>|0x66",
-          "basic_istream<char,struct_std::char_traits<char>_>|0x5F",
-          "InitializeConfigContainer|0x68008D50",
-          "basic_filebuf<char,struct_std::char_traits<char>_>|0x60",
-          "~basic_filebuf<char,struct_std::char_traits<char>_>|0x64",
-          "InvokeCallbackArrayWithSeh|0x68009E70",
           "ios_base|0x5C",
           "SwapBufferDescriptors|0x68008E20",
-          "ParseAndAddNameListToQueue|0x680084A0",
+          "GetLine|0x68009F56",
           "setstate|0x63",
+          "ParseAndAddNameListToQueue|0x680084A0",
+          "DestroyBufferManagerList|0x68008D80",
+          "open|0x62",
+          "_Init|0x6A",
+          "fclose|0x46",
+          "GetItemDataValue|0x68008DE0",
+          "basic_filebuf<char,struct_std::char_traits<char>_>|0x60",
+          "basic_istream<char,struct_std::char_traits<char>_>|0x5F",
+          "ExecuteProtectedCallback|0x68009D7C",
+          "InitializeConfigContainer|0x68008D50",
+          "~basic_ios<char,struct_std::char_traits<char>_>|0x66",
+          "InvokeCallbackArrayWithSeh|0x68009E70",
           "TransferListNode|0x68008E50",
           "MergeSortedConfigLists|0x68008EB0",
-          "fclose|0x46",
-          "DestroyBufferManagerList|0x68008D80",
-          "ExecuteProtectedCallback|0x68009D7C"
+          "~basic_filebuf<char,struct_std::char_traits<char>_>|0x64",
+          "_Tidy|0x67"
         ]
       },
       "callers": {
@@ -20378,18 +19536,18 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "strchr|0x2D",
+          "strrchr|0x2B",
+          "CopyStringPairWithExceptionHandling|0x68008FD0",
+          "_Eos|0x59",
+          "_Grow|0x56",
           "tolower|0x3F",
           "OperatorDelete|0x68009D76",
           "_Xlen|0x58",
           "AllocateListNode|0x68008FA0",
-          "isspace|0x2C",
-          "strrchr|0x2B",
           "_Tidy|0x67",
-          "strchr|0x2D",
-          "CopyStringPairWithExceptionHandling|0x68008FD0",
-          "_Grow|0x56",
           "OperatorNew|0x68009D32",
-          "_Eos|0x59"
+          "isspace|0x2C"
         ]
       },
       "callers": {
@@ -20524,8 +19682,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "OperatorDelete|0x68009D76",
-          "ReleaseDualBufferReferences|0x68008130"
+          "ReleaseDualBufferReferences|0x68008130",
+          "OperatorDelete|0x68009D76"
         ]
       },
       "callers": {
@@ -20629,16 +19787,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "tolower|0x3F",
-          "_Xlen|0x58",
-          "OperatorDelete|0x68009D76",
-          "isspace|0x2C",
-          "_Tidy|0x67",
-          "_Grow|0x56",
-          "append|0x55",
-          "OperatorNew|0x68009D32",
           "SearchStringInList|0x68008A90",
-          "_Eos|0x59"
+          "append|0x55",
+          "_Eos|0x59",
+          "_Grow|0x56",
+          "tolower|0x3F",
+          "OperatorDelete|0x68009D76",
+          "_Xlen|0x58",
+          "_Tidy|0x67",
+          "isspace|0x2C",
+          "OperatorNew|0x68009D32"
         ]
       },
       "callers": {
@@ -20771,10 +19929,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "_Tidy|0x67",
           "_strnicmp|0x3E",
           "erase|0x54",
-          "_Grow|0x56"
+          "_Grow|0x56",
+          "_Tidy|0x67"
         ]
       },
       "callers": {
@@ -20850,107 +20008,6 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_NOP_0a3c0f9628ff": {
-      "addresses": {
-        "Classic/1.00": "0x68008C20"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8C20"
-      },
-      "sizes": {
-        "Classic/1.00": 45
-      },
-      "name": "ParseConfigurationString",
-      "signature": "void * ParseConfigurationString(char * lpszConfigString)",
-      "calling_convention": "__cdecl",
-      "return_type": "void *",
-      "comment": "Parse configuration string into game state context object.\n\nAlgorithm:\n\n1. Convert input configuration string to lowercase using ProcessStringToLowercase\n2. Validate that lowercase conversion succeeded (null check)\n3. If conversion failed, return NULL immediately\n4. Parse the lowercase string into context object using FUN_68009610\n5. Clean up temporary lowercase string using operator_delete\n6. Return the parsed context object or NULL if parsing failed\n\nParameters:\n\nlpszConfigString - Input configuration string to parse\n\nReturns:\n\nNon-NULL - Pointer to successfully parsed game state context object\nNULL - Parsing failed or invalid input string\n\nSpecial Cases:\n\nEmpty or NULL input strings return NULL without processing\nMemory allocation failures during processing return NULL\n\nError Handling:\n\nInput validation performed at entry with early return for NULL input\nTemporary memory cleaned up even when parsing fails\nAll error conditions return NULL for consistent error indication",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:0a3c0f9628ffbee3ea8b556ea52716e1657049a28203a05fee47bcf2163b07d3",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "0a3c0f9628ffbee3ea8b556ea52716e1657049a28203a05fee47bcf2163b07d3",
-        "CAL": "5f0a81f4c810eac42ab0e8163609b129",
-        "API": "981f08d9c72bf87efc04d1a74ba879c2",
-        "APS": null,
-        "CON": null,
-        "MNE": "c12cde19256c9d9e69d47dc54d44a7cb",
-        "CFG": "d9b8dc5cb2cef57071596c52edbe90ce",
-        "PRO": "149cf07294852f27e87b0df7927972bc"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "OperatorDelete|0x68009D76",
-          "ProcessStringToLowercase|0x68008820",
-          "CreateParserByDelimiter|0x68009610"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "LoadWorldEventConfiguration|0x68007A10",
-          "FUN_68008c90|0x68008C90"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8C20|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0x8C24|PUSH|ESI",
-          "0x8C25|PUSH|EAX",
-          "0x8C26|CALL|0x68008820",
-          "0x8C2B|MOV|ESI, EAX",
-          "0x8C2D|ADD|ESP, 0x4",
-          "0x8C30|TEST|ESI, ESI",
-          "0x8C32|JNZ|0x68008c36",
-          "0x8C34|POP|ESI",
-          "0x8C35|RET|",
-          "0x8C36|PUSH|EDI",
-          "0x8C37|PUSH|ESI",
-          "0x8C38|CALL|0x68009610",
-          "0x8C3D|PUSH|ESI",
-          "0x8C3E|MOV|EDI, EAX"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 21
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "c12cde19256c9d9e69d47dc54d44a7cb"
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "operator_delete"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 3
-      },
-      "caller_counts": {
-        "Classic/1.00": 2
-      },
-      "api_counts": {
-        "Classic/1.00": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_1",
-          "PROP_SMALL"
         ]
       },
       "function_types": {
@@ -21036,102 +20093,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_NOP_614982dddc5d": {
-      "addresses": {
-        "Classic/1.00": "0x68008C70"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8C70"
-      },
-      "sizes": {
-        "Classic/1.00": 27
-      },
-      "name": "SafeDestroyObject",
-      "signature": "void SafeDestroyObject(void * pObject)",
-      "calling_convention": "__cdecl",
-      "return_type": "void",
-      "comment": "Safely destroys an object by calling its destructor and freeing memory.\n\nAlgorithm:\n1. Validate input object pointer for null check\n2. If object is valid, call destructor function to perform cleanup\n3. Call operator_delete to free allocated memory and return to heap\n4. Return void (no error checking - assumes valid destruction)\n\nParameters:\npObject (void *): Pointer to object that needs destruction and deallocation\n\nReturns:\nvoid: No return value, function always completes destruction if object is valid\n\nSpecial Cases:\nFunction performs null pointer check before destruction operations\nIf pObject is NULL, function returns immediately without any operations\nNo error handling for destructor failures - assumes cleanup always succeeds\nUses standard C++ destruction pattern: destructor followed by delete operator\n\nMagic Numbers Reference:\n0x0: NULL pointer constant for validation check",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:614982dddc5d6a2cad4e6c1ac093789ae89c48cefb04968557da433198ff79db",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "614982dddc5d6a2cad4e6c1ac093789ae89c48cefb04968557da433198ff79db",
-        "CAL": "28b621a22a1d4e39e654061efbc6a5a1",
-        "API": "981f08d9c72bf87efc04d1a74ba879c2",
-        "APS": null,
-        "CON": null,
-        "MNE": "87f88a21f1cdf5c9e6a8b861d696f43f",
-        "CFG": "c99a396140bf49fb454c6cef4ad0742b",
-        "PRO": "53cf39658d1d22ac73b79e3ce8879080"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "OperatorDelete|0x68009D76",
-          "InitializeFunctionPointerWithAddress|0x68009940"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "LoadWorldEventConfiguration|0x68007A10",
-          "FUN_68008c90|0x68008C90"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8C70|PUSH|ESI",
-          "0x8C71|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x8C75|TEST|ESI, ESI",
-          "0x8C77|JZ|0x68008c89",
-          "0x8C79|MOV|ECX, ESI",
-          "0x8C7B|CALL|0x68009940",
-          "0x8C80|PUSH|ESI",
-          "0x8C81|CALL|0x68009d76",
-          "0x8C86|ADD|ESP, 0x4",
-          "0x8C89|POP|ESI",
-          "0x8C8A|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 11
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "87f88a21f1cdf5c9e6a8b861d696f43f"
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "operator_delete"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 2
-      },
-      "caller_counts": {
-        "Classic/1.00": 2
-      },
-      "api_counts": {
-        "Classic/1.00": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_1",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_NOP_9dcf4fd80760": {
       "addresses": {
         "Classic/1.00": "0x68008C90"
@@ -21161,9 +20122,9 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_9dcf4fd807602ed1",
       "callees": {
         "Classic/1.00": [
+          "InvokePluginVirtualMethod|0x68008C50",
           "ParseConfigurationString|0x68008C20",
-          "SafeDestroyObject|0x68008C70",
-          "InvokePluginVirtualMethod|0x68008C50"
+          "SafeDestroyObject|0x68008C70"
         ]
       },
       "instructions": {
@@ -21207,71 +20168,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "PARAM_2",
           "PROP_NOCALLER"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_MNE_306c1c5f75a0": {
-      "addresses": {
-        "Classic/1.00": "0x68008CD0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8CD0"
-      },
-      "sizes": {
-        "Classic/1.00": 10
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:8ed9bb37f7464b63a8d69f6ace19e5c310e631250a9a0f26d526cc219bd0139c",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "8ed9bb37f7464b63a8d69f6ace19e5c310e631250a9a0f26d526cc219bd0139c",
-        "CAL": "bbf009f363fd683426b7fd3237e92c0d",
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "306c1c5f75a08eacfb0a9f1323d22a40",
-        "CFG": "12cc67c3c0ca9c7b788a56ab2a7cd385",
-        "PRO": "bcb805e372ebb2537185b58d9cc437e3"
-      },
-      "display_name": "NOP_8ed9bb37f7464b63",
-      "callees": {
-        "Classic/1.00": [
-          "RegisterExitHandler|0x68008CF0",
-          "InitializeIostreams|0x68008CE0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8CD0|CALL|0x68008ce0",
-          "0x8CD5|JMP|0x68008cf0"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 2
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "306c1c5f75a08eacfb0a9f1323d22a40"
-      },
-      "callee_counts": {
-        "Classic/1.00": 2
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0"
         ]
       },
       "function_types": {
@@ -21347,512 +20243,6 @@ var FUNCTIONS_D2Server_dll = {
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_MNE_bba6787b3ee5": {
-      "addresses": {
-        "Classic/1.00": "0x68008CF0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8CF0"
-      },
-      "sizes": {
-        "Classic/1.00": 12
-      },
-      "name": "RegisterExitHandler",
-      "signature": "void RegisterExitHandler(void)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Registers an exit handler function to be called during program termination.\n\nAlgorithm:\n1. Push the address of the exit handler function (0x68008d00) onto the stack\n2. Call the onexit registration function (FUN_68009d64)\n3. Clean up the stack and return\n\nParameters:\nNone\n\nReturns:\nvoid - Function does not return a value\n\nSpecial Cases:\n- Exit handler registration may fail if onexit table is full\n- Handler at 0x68008d00 will be called during program termination\n\nMagic Numbers Reference:\n0x68008d00 - Address of the exit handler function to be registered",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:a3cfd9b47ee177ff0d396f5514a073f18097386c77f27a8fc9ce2e7ec28a24e5",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "a3cfd9b47ee177ff0d396f5514a073f18097386c77f27a8fc9ce2e7ec28a24e5",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "bba6787b3ee574ab1a3904a4931976c2",
-        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
-        "PRO": "1b0f5cf7a8f5b3d6c566cf26d5afa3bb"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "RegisterOnExitHandler|0x68009D64"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "FUN_68008cd0|0x68008CD0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8CF0|PUSH|0x68008d00",
-          "0x8CF5|CALL|0x68009d64",
-          "0x8CFA|POP|ECX",
-          "0x8CFB|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 4
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "bba6787b3ee574ab1a3904a4931976c2"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x8D00|ExitHandlerFunction|013469b9"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "global_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_0",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_ADDR_68008D10": {
-      "addresses": {
-        "Classic/1.00": "0x68008D10"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8D10"
-      },
-      "sizes": {
-        "Classic/1.00": 10
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:8ed9bb37f7464b63a8d69f6ace19e5c310e631250a9a0f26d526cc219bd0139c",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "8ed9bb37f7464b63a8d69f6ace19e5c310e631250a9a0f26d526cc219bd0139c",
-        "CAL": "7484d80d6924d23a4e0329fc3326a0b7",
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "306c1c5f75a08eacfb0a9f1323d22a40",
-        "CFG": "12cc67c3c0ca9c7b788a56ab2a7cd385",
-        "PRO": "bcb805e372ebb2537185b58d9cc437e3"
-      },
-      "display_name": "NOP_8ed9bb37f7464b63",
-      "callees": {
-        "Classic/1.00": [
-          "InitializeWinitStaticObject|0x68008D20",
-          "RegisterExitHandler|0x68008D30"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8D10|CALL|0x68008d20",
-          "0x8D15|JMP|0x68008d30"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 2
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "306c1c5f75a08eacfb0a9f1323d22a40"
-      },
-      "callee_counts": {
-        "Classic/1.00": 2
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_MNE_f1bb9983d9dc": {
-      "addresses": {
-        "Classic/1.00": "0x68008D20"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8D20"
-      },
-      "sizes": {
-        "Classic/1.00": 11
-      },
-      "name": "InitializeWinitStaticObject",
-      "signature": "void InitializeWinitStaticObject(void)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Initialize Windows C++ runtime static object for stream I/O operations\n\nAlgorithm:\n1. Load address of global _Winit object (g_WinitStaticInitializer) into ECX register\n2. Jump to std::_Winit constructor to initialize the static Windows runtime helper\n\nParameters:\nNone - this is a parameterless initialization function called during static initialization\n\nReturns:\nvoid - no return value, performs initialization side effects only\n\nSpecial Cases:\n- Called only once during static initialization phase before main()\n- Part of Visual C++ runtime initialization sequence for Windows stream operations\n- Uses indirect jump through import table at 0x6800b09c to std::_Winit::_Winit constructor\n\nMagic Numbers Reference:\n0x68013468 - Address of g_WinitStaticInitializer global _Winit object\n0x6800b09c - Import table entry for std::_Winit::_Winit constructor\n\nError Handling:\nNone - static initialization functions typically do not handle errors, relying on runtime system",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:4867e20f0f20b695d606275b6f13651ad0c44b5ad505ec1a8088b98fa956d4e0",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "4867e20f0f20b695d606275b6f13651ad0c44b5ad505ec1a8088b98fa956d4e0",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "f1bb9983d9dc1f8301d508469cee24d7",
-        "CFG": "39876719a648587deae032ea7b66c3c3",
-        "PRO": "d7daae08997b8a0cf047c5c5e01bdddc"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "FUN_68008d10|0x68008D10"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8D20|MOV|ECX, 0x68013468",
-          "0x8D25|JMP|dword ptr [0x6800b09c]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 2
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "f1bb9983d9dc1f8301d508469cee24d7"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x13468|g_WinitStaticInitializer|"
-        ]
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "global_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_0",
-          "PROP_LEAF",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_ADDR_68008D30": {
-      "addresses": {
-        "Classic/1.00": "0x68008D30"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8D30"
-      },
-      "sizes": {
-        "Classic/1.00": 12
-      },
-      "name": "RegisterExitHandler",
-      "signature": "void RegisterExitHandler(void)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Registers an exit handler function to be called during program termination.\n\nAlgorithm:\n1. Push address of exit handler routine (ExitHandlerRoutine) onto stack\n2. Call exit registration function (FUN_68009d64) to register the handler\n3. Clean up stack parameter by popping into ECX\n4. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nUses __stdcall calling convention with stack cleanup by callee.\nRegistration function FUN_68009d64 likely corresponds to atexit() or _onexit().\n\nMagic Numbers Reference:\n0x68008d40 - Address of ExitHandlerRoutine function to be called at exit",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:a3cfd9b47ee177ff0d396f5514a073f18097386c77f27a8fc9ce2e7ec28a24e5",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "a3cfd9b47ee177ff0d396f5514a073f18097386c77f27a8fc9ce2e7ec28a24e5",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "bba6787b3ee574ab1a3904a4931976c2",
-        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
-        "PRO": "2e124d22fe3aa567635e6683e8efc03e"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "RegisterOnExitHandler|0x68009D64"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "FUN_68008d10|0x68008D10"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8D30|PUSH|0x68008d40",
-          "0x8D35|CALL|0x68009d64",
-          "0x8D3A|POP|ECX",
-          "0x8D3B|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 4
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "bba6787b3ee574ab1a3904a4931976c2"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x8D40|ExitHandlerRoutine|013468b9"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "global_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_0",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_NOP_fd6214c79b7e": {
-      "addresses": {
-        "Classic/1.00": "0x68008D50"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8D50"
-      },
-      "sizes": {
-        "Classic/1.00": 42
-      },
-      "name": "InitializeConfigContainer",
-      "signature": "ConfigContainer * InitializeConfigContainer(void * this, ConfigContainer * pContainer, byte * pbConfigValue)",
-      "calling_convention": "__thiscall",
-      "return_type": "ConfigContainer *",
-      "comment": "Initializes a configuration container object with a byte configuration value and creates an internal list structure.\n\nAlgorithm:\n\n1. Copy configuration byte from input parameter to container object at offset 0\n2. Allocate 44-byte ListNode structure using operator_new\n3. Initialize allocated ListNode with self-referencing pointers at offsets 0 and 4\n4. Store pointer to allocated ListNode in container at offset 4\n5. Zero-initialize container field at offset 8\n6. Return pointer to initialized container object\n\nParameters:\n\nthis - Pointer to ConfigContainer object to initialize (thiscall parameter in ECX)\npbConfigValue - Pointer to byte value containing configuration parameter\n\nIMPLICIT:\nECX - this pointer (ConfigContainer * - container object to initialize)\n\nReturns:\n\nReturns pointer to the initialized ConfigContainer object (same as this parameter)\nSuccess: Always returns valid ConfigContainer pointer\nError: None - function cannot fail\n\nSpecial Cases:\n\nConfiguration byte can be any 8-bit value from 0x00 to 0xFF\nListNode allocation uses standard operator_new and cannot fail in this context\nSelf-referencing pointers create circular reference pattern for list management\n\nStructure Layout:\n\nConfigContainer Object Layout (12 bytes):\nOffset | Size | Field Name        | Type           | Description\n-------|------|-------------------|----------------|---------------------------\n0x0    | 1    | byConfigValue     | byte           | Configuration byte value\n0x1    | 3    | padding           | byte[3]        | Alignment padding\n0x4    | 4    | pListHead         | ListNode *     | Pointer to ListNode structure\n0x8    | 4    | dwFlags           | uint           | Zero-initialized flags field\n\nListNode Structure (44 bytes allocated):\nOffset | Size | Field Name        | Type    | Description  \n-------|------|-------------------|---------|---------------------------\n0x0    | 4    | pSelf1            | void *  | Self-referencing pointer\n0x4    | 4    | pSelf2            | void *  | Self-referencing pointer\n...    | 36   | ...               | ...     | Additional fields (36 bytes)\n\nMagic Numbers Reference:\n\n0x2c (44 decimal) - Size of ListNode structure allocation",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:fd6214c79b7ec962c0143e6dd5512f53c0d3cdf37771df27caabdbf0a8ff6d9a",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "fd6214c79b7ec962c0143e6dd5512f53c0d3cdf37771df27caabdbf0a8ff6d9a",
-        "CAL": null,
-        "API": "e64f0996c43094112fb542c2709fa175",
-        "APS": null,
-        "CON": null,
-        "MNE": "28489c0a2dc81b21e1a130454d9c93d1",
-        "CFG": "0456183f7568c6bf6d35ff5a854dbfc4",
-        "PRO": "4f3e6b62f6c2300330eee86d68dfa363"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "OperatorNew|0x68009D32"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "ParseItemConfigFile|0x680081A0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8D50|MOV|EAX, dword ptr [ESP + 0x4]",
-          "0x8D54|PUSH|ESI",
-          "0x8D55|MOV|ESI, ECX",
-          "0x8D57|PUSH|0x2c",
-          "0x8D59|MOV|CL, byte ptr [EAX]",
-          "0x8D5B|MOV|byte ptr [ESI], CL",
-          "0x8D5D|CALL|0x68009d32",
-          "0x8D62|ADD|ESP, 0x4",
-          "0x8D65|MOV|dword ptr [EAX], EAX",
-          "0x8D67|MOV|dword ptr [EAX + 0x4], EAX",
-          "0x8D6A|MOV|dword ptr [ESI + 0x4], EAX",
-          "0x8D6D|MOV|dword ptr [ESI + 0x8], 0x0",
-          "0x8D74|MOV|EAX, ESI",
-          "0x8D76|POP|ESI",
-          "0x8D77|RET|0x4"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 15
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 12
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "28489c0a2dc81b21e1a130454d9c93d1"
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "operator_new"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "api_counts": {
-        "Classic/1.00": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 3
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_3",
-          "RET_STRUCT_PTR",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_NOP_c3ed4b0e3997": {
-      "addresses": {
-        "Classic/1.00": "0x68008D80"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8D80"
-      },
-      "sizes": {
-        "Classic/1.00": 88
-      },
-      "name": "DestroyBufferManagerList",
-      "signature": "void DestroyBufferManagerList(BufferManagerList * pList)",
-      "calling_convention": "__fastcall",
-      "return_type": "void",
-      "comment": "Destroys a linked list of DualBufferManager nodes and releases all resources\n\nAlgorithm:\n1. Retrieve list head pointer from container structure at offset +4\n2. Initialize current node pointer to first node in list\n3. While current node is not equal to head (list not empty):\n   a. Store next node pointer before unlinking current node\n   b. Update previous node's next pointer to skip current node\n   c. Update next node's previous pointer to skip current node  \n   d. Release DualBufferManager resources at current node +8\n   e. Delete current node memory using operator_delete\n   f. Decrement node count at container +8\n   g. Advance to next node\n4. Delete list head node using operator_delete\n5. Zero container list head pointer at offset +4\n6. Zero container node count at offset +8\n\nParameters:\npBufferManagerList - BufferManagerList* pointer to container holding linked list\n                     +0x4: ListNode* head pointer to dummy head node\n                     +0x8: int count of nodes in list\n\nReturns:\nvoid - No return value, function always succeeds\n\nSpecial Cases:\nEmpty list - Function safely handles case where head->next == head\nMemory cleanup - All DualBufferManager resources released before node deletion\nNode unlinking - Doubly-linked list maintained until node deletion\n\nStructure Layout:\nBufferManagerList:\nOffset | Size | Field Name | Type      | Description\n+0x00  |  4   | (unknown)  | unknown   | First field not accessed\n+0x04  |  4   | pHead      | ListNode* | Pointer to dummy head node\n+0x08  |  4   | nCount     | int       | Number of data nodes in list\n\nListNode (44 bytes total):\nOffset | Size | Field Name | Type              | Description  \n+0x00  |  4   | pNext      | ListNode*         | Next node pointer\n+0x04  |  4   | pPrev      | ListNode*         | Previous node pointer\n+0x08  | 28   | bufMgr     | DualBufferManager | Buffer management data\n\nError Handling:\nNo error checking - Function assumes valid container pointer\nMemory safety - operator_delete handles NULL pointers safely\nResource cleanup - ReleaseDualBufferReferences called before deletion",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:c3ed4b0e39978306e9d7089a6589b2f641a270c1177f37e38e80370baacf66e4",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "c3ed4b0e39978306e9d7089a6589b2f641a270c1177f37e38e80370baacf66e4",
-        "CAL": "9d085189653c287f475f7c93255b9657",
-        "API": "8c2a3d67815e8bc8f36f9f74e085822d",
-        "APS": "8c2a3d67815e8bc8f36f9f74e085822d",
-        "CON": null,
-        "MNE": "3495368ad447aa8c6c51531f64d89def",
-        "CFG": "c82f324833728a0718e8d17d2b73003a",
-        "PRO": "42d18f4d08d328c4dd54408ee484edce"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "OperatorDelete|0x68009D76",
-          "ReleaseDualBufferReferences|0x68008130"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "ParseItemConfigFile|0x680081A0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8D80|PUSH|EBX",
-          "0x8D81|MOV|EBX, ECX",
-          "0x8D83|PUSH|EBP",
-          "0x8D84|PUSH|EDI",
-          "0x8D85|MOV|EBP, dword ptr [EBX + 0x4]",
-          "0x8D88|MOV|EDI, dword ptr [EBP]",
-          "0x8D8B|CMP|EDI, EBP",
-          "0x8D8D|JZ|0x68008dc0",
-          "0x8D8F|PUSH|ESI",
-          "0x8D90|MOV|ESI, EDI",
-          "0x8D92|MOV|EDI, dword ptr [EDI]",
-          "0x8D94|MOV|EAX, dword ptr [ESI + 0x4]",
-          "0x8D97|MOV|ECX, dword ptr [ESI]",
-          "0x8D99|MOV|dword ptr [EAX], ECX",
-          "0x8D9B|MOV|EDX, dword ptr [ESI]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 39
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 1
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "3495368ad447aa8c6c51531f64d89def"
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "operator_delete",
-          "operator_delete"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 2
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "api_counts": {
-        "Classic/1.00": 2
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_1"
         ]
       },
       "function_types": {
@@ -22199,105 +20589,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_NOP_e478a80df4e9": {
-      "addresses": {
-        "Classic/1.00": "0x68008FA0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x8FA0"
-      },
-      "sizes": {
-        "Classic/1.00": 42
-      },
-      "name": "AllocateListNode",
-      "signature": "ListNode * AllocateListNode(ListNode * pPrevNode, int nData)",
-      "calling_convention": "__stdcall",
-      "return_type": "ListNode *",
-      "comment": "Allocates and initializes a new list node with linking logic for doubly-linked list management.\n\nAlgorithm:\n1. Allocate memory for new ListNode structure (44 bytes via operator_new)\n2. Check if pPrevNode parameter is NULL to determine linking strategy\n3. If pPrevNode is NULL, use newly allocated node as reference for circular linking\n4. Set pNext field to point to previous node (or self if circular)\n5. Check nData parameter to determine pPrev field assignment\n6. If nData is non-zero, cast nData to void* and store in pPrev field\n7. If nData is zero, create self-reference by storing node address in pPrev field\n8. Return pointer to newly allocated and initialized node\n\nParameters:\npPrevNode - Pointer to previous node in list, or NULL for first/circular node\nnData - Integer data value to store; zero creates self-referencing circular node\n\nReturns:\nListNode* - Pointer to newly allocated and initialized list node\n\nSpecial Cases:\n- pPrevNode=NULL with nData=0: Creates isolated circular node (pNext=self, pPrev=self)\n- pPrevNode=NULL with nData!=0: Creates node with pNext=self, pPrev=nData\n- pPrevNode!=NULL with nData=0: Creates node with pNext=pPrevNode, pPrev=self\n- pPrevNode!=NULL with nData!=0: Creates node with pNext=pPrevNode, pPrev=nData\n\nMagic Numbers Reference:\n0x2c (44) - Size of ListNode structure allocation",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:e478a80df4e96270ab3a1c0de56128a86927e049786331c5a48ba6b297540bbd",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "e478a80df4e96270ab3a1c0de56128a86927e049786331c5a48ba6b297540bbd",
-        "CAL": null,
-        "API": "e64f0996c43094112fb542c2709fa175",
-        "APS": null,
-        "CON": null,
-        "MNE": "54793ace4d95ee77a6d9416c9f5da6ff",
-        "CFG": "d654b883a25f768719ec671354236abf",
-        "PRO": "6c37ffed475f13c7b1454094e4d79e67"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "OperatorNew|0x68009D32"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "ParseAndAddNameListToQueue|0x680084A0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x8FA0|PUSH|0x2c",
-          "0x8FA2|CALL|0x68009d32",
-          "0x8FA7|MOV|ECX, dword ptr [ESP + 0x8]",
-          "0x8FAB|ADD|ESP, 0x4",
-          "0x8FAE|TEST|ECX, ECX",
-          "0x8FB0|JNZ|0x68008fb4",
-          "0x8FB2|MOV|ECX, EAX",
-          "0x8FB4|MOV|dword ptr [EAX], ECX",
-          "0x8FB6|MOV|ECX, dword ptr [ESP + 0x8]",
-          "0x8FBA|TEST|ECX, ECX",
-          "0x8FBC|JZ|0x68008fc4",
-          "0x8FBE|MOV|dword ptr [EAX + 0x4], ECX",
-          "0x8FC1|RET|0x8",
-          "0x8FC4|MOV|dword ptr [EAX + 0x4], EAX",
-          "0x8FC7|RET|0x8"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 15
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 12
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "54793ace4d95ee77a6d9416c9f5da6ff"
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "operator_new"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "api_counts": {
-        "Classic/1.00": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 2
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PARAM_2",
-          "RET_STRUCT_PTR",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_NOP_77bb405bc95d": {
       "addresses": {
         "Classic/1.00": "0x68008FD0"
@@ -22330,10 +20621,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "erase|0x54",
-          "_Grow|0x56",
           "assign|0x52",
-          "_Eos|0x59"
+          "erase|0x54",
+          "_Eos|0x59",
+          "_Grow|0x56"
         ]
       },
       "callers": {
@@ -22414,129 +20705,6 @@ var FUNCTIONS_D2Server_dll = {
       },
       "function_types": {
         "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_MNE_5c73446e6da2": {
-      "addresses": {
-        "Classic/1.00": "0x68009120"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9120"
-      },
-      "sizes": {
-        "Classic/1.00": 1
-      },
-      "name": "NoOpStub",
-      "signature": "void NoOpStub(void)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "No-operation stub function used in unwind contexts.\n\nAlgorithm:\n1. Return immediately without performing any operations\n\nParameters:\n   None\n\nReturns:\n   void - No return value\n\nSpecial Cases:\n   Function serves as a placeholder in unwind/cleanup call chains where\n   a function pointer is required but no actual operation is needed.",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:0222b0f175032e104598b396be50bb731f7b9126292139f2bb1f5187670644bb",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "0222b0f175032e104598b396be50bb731f7b9126292139f2bb1f5187670644bb",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "5c73446e6da2bc552d6d981beccb1347",
-        "CFG": "07f9de888f99b67d0b50d2267cca56b9",
-        "PRO": "e1ef49ce6ed8909600367da1748e3fa9"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "Unwind@6800a010|0x6800A010"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9120|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "5c73446e6da2bc552d6d981beccb1347"
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_ADDR_68009130": {
-      "addresses": {
-        "Classic/1.00": "0x68009130"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9130"
-      },
-      "sizes": {
-        "Classic/1.00": 5
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "fdad073544ac1586678f808b3470f76a",
-        "CFG": "02a30cff357c3ab4c37d08324437520e",
-        "PRO": "847c477d03d8c137863955e0c98fa4c0"
-      },
-      "display_name": "NOP_6a59889aa8f1e82e",
-      "instructions": {
-        "Classic/1.00": [
-          "0x9130|JMP|0x68009140"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "fdad073544ac1586678f808b3470f76a"
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
       }
     },
     "D2Server_NOP_2c4fd9c0c0e9": {
@@ -22651,8 +20819,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_680091d0|0x680091D0",
-          "FUN_68009140|0x68009140"
+          "FUN_68009140|0x68009140",
+          "FUN_680091d0|0x680091D0"
         ]
       },
       "instructions": {
@@ -22808,138 +20976,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_ADDR_680091C0": {
-      "addresses": {
-        "Classic/1.00": "0x680091C0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x91C0"
-      },
-      "sizes": {
-        "Classic/1.00": 5
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "fdad073544ac1586678f808b3470f76a",
-        "CFG": "02a30cff357c3ab4c37d08324437520e",
-        "PRO": "847c477d03d8c137863955e0c98fa4c0"
-      },
-      "display_name": "NOP_6a59889aa8f1e82e",
-      "instructions": {
-        "Classic/1.00": [
-          "0x91C0|JMP|0x680091d0"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "fdad073544ac1586678f808b3470f76a"
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
-    "D2Server_MNE_323943898abb": {
-      "addresses": {
-        "Classic/1.00": "0x680091D0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x91D0"
-      },
-      "sizes": {
-        "Classic/1.00": 19
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:2c4fd9c0c0e91df5940da2140e9e66daf336026910158350102a89d6704703b7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "2c4fd9c0c0e91df5940da2140e9e66daf336026910158350102a89d6704703b7",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "323943898abb87878ba61117228f786c",
-        "CFG": "c7d6b0d73f35f87f2d09099c04fe3939",
-        "PRO": "a7ad856e57734d829c0d504cb14a9785"
-      },
-      "display_name": "NOP_2c4fd9c0c0e91df5",
-      "callees": {
-        "Classic/1.00": [
-          "DispatchStringTableEntry|0x68009160"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x91D0|PUSH|0xffd63901",
-          "0x91D5|CALL|0x68009160",
-          "0x91DA|ADD|ESP, 0x4",
-          "0x91DD|MOV|[0x68013480], EAX",
-          "0x91E2|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 5
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "323943898abb87878ba61117228f786c"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x13480|DAT_68013480|0x0"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "global_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_0",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_NOP_da7f85b4d124": {
       "addresses": {
         "Classic/1.00": "0x680091F0"
@@ -23013,63 +21049,6 @@ var FUNCTIONS_D2Server_dll = {
       },
       "function_types": {
         "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_ADDR_68009210": {
-      "addresses": {
-        "Classic/1.00": "0x68009210"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9210"
-      },
-      "sizes": {
-        "Classic/1.00": 5
-      },
-      "calling_convention": "__stdcall",
-      "return_type": "undefined",
-      "method": "NOP",
-      "index": "NOP:6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "6a59889aa8f1e82e77ceabe70f2b736b788da865d7bd49165696663bb4204647",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "fdad073544ac1586678f808b3470f76a",
-        "CFG": "02a30cff357c3ab4c37d08324437520e",
-        "PRO": "847c477d03d8c137863955e0c98fa4c0"
-      },
-      "display_name": "NOP_6a59889aa8f1e82e",
-      "instructions": {
-        "Classic/1.00": [
-          "0x9210|JMP|0x68009220"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "fdad073544ac1586678f808b3470f76a"
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
       }
     },
     "D2Server_STR_d9ecc827b888": {
@@ -23718,19 +21697,19 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "OperatorDelete|0x68009D76",
-          "strchr|0x2D",
           "InitializeDelimiterParser|0x68009790",
+          "strchr|0x2D",
+          "InitializeSingleItemParser|0x68009920",
           "InitializeFunctionPointerWithAddress|0x68009940",
-          "OperatorNew|0x68009D32",
           "DelimiterParserDestructor|0x680097B0",
-          "InitializeSingleItemParser|0x68009920"
+          "OperatorDelete|0x68009D76",
+          "OperatorNew|0x68009D32"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ParseConfigurationString|0x68008C20",
-          "SplitStringWithDelimiter|0x68009830"
+          "SplitStringWithDelimiter|0x68009830",
+          "ParseConfigurationString|0x68008C20"
         ]
       },
       "instructions": {
@@ -23922,9 +21901,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "SplitStringWithDelimiter|0x68009830",
           "Unwind@6800a060|0x6800A060",
           "InitializeFunctionPointerWithAddress|0x68009940",
+          "SplitStringWithDelimiter|0x68009830",
           "DelimiterParserDestructor|0x680097B0"
         ]
       },
@@ -24068,225 +22047,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_NOP_f727556de219": {
-      "addresses": {
-        "Classic/1.00": "0x680097B0"
-      },
-      "rvas": {
-        "Classic/1.00": "0x97B0"
-      },
-      "sizes": {
-        "Classic/1.00": 128
-      },
-      "name": "DelimiterParserDestructor",
-      "signature": "void DelimiterParserDestructor(DelimiterParser * pThis)",
-      "calling_convention": "__fastcall",
-      "return_type": "void",
-      "comment": "Destructor for DelimiterParser class that safely cleans up allocated buffers and manages exception handling.\n\nAlgorithm:\n1. Set up structured exception handling chain with FS:[0x0]\n2. Initialize vtable pointer to DelimiterParser virtual function table (0x6800b31c)\n3. Clear parser state fields at offsets 0x4 and 0x8\n4. Check first buffer pointer at offset 0xC - if valid, initialize then delete\n5. Check second buffer pointer at offset 0x10 - if valid, initialize then delete  \n6. Perform final cleanup by calling InitializeFunctionPointer on parser object\n7. Restore previous exception handler and return\n\nParameters:\n   pThis (DelimiterParser *): Pointer to DelimiterParser object being destroyed\n\nReturns:\n   void: No return value (destructor)\n\nSpecial Cases:\n   - Null buffer pointers are safely ignored (null checks prevent crashes)\n   - Exception handling ensures cleanup occurs even if destruction fails\n   - InitializeFunctionPointer calls prepare objects for deletion\n\nStructure Layout:\nOffset | Size | Field Name      | Type      | Description\n-------|------|-----------------|-----------|----------------------------------\n0x00   | 4    | vtable          | void*     | Virtual function table pointer\n0x04   | 4    | field_04        | void*     | Parser state field (cleared on destroy)\n0x08   | 4    | field_08        | void*     | Parser state field (cleared on destroy)\n0x0C   | 4    | pFirstBuffer    | void*     | First allocated buffer pointer\n0x10   | 4    | pSecondBuffer   | void*     | Second allocated buffer pointer",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:f727556de219ce64e4ab8a96e2a134248d3b0eec36448c684069674e62e79218",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "f727556de219ce64e4ab8a96e2a134248d3b0eec36448c684069674e62e79218",
-        "CAL": "dc3a637a17516d72173e09ea56f9b940",
-        "API": "8c2a3d67815e8bc8f36f9f74e085822d",
-        "APS": "8c2a3d67815e8bc8f36f9f74e085822d",
-        "CON": null,
-        "MNE": "356742a411a6595c0f386a6353b40e11",
-        "CFG": "56f36eabe2f5db1f8d0fe02869f3a3fb",
-        "PRO": "f42b6b898b65214fdd5a57ea097ba7ea"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "InitializeFunctionPointer|0x68009780",
-          "OperatorDelete|0x68009D76"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "CreateParserByDelimiter|0x68009610"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x97B0|PUSH|-0x1",
-          "0x97B2|PUSH|0x6800a068",
-          "0x97B7|MOV|EAX, FS:[0x0]",
-          "0x97BD|PUSH|EAX",
-          "0x97BE|MOV|dword ptr FS:[0x0], ESP",
-          "0x97C5|PUSH|ECX",
-          "0x97C6|PUSH|ESI",
-          "0x97C7|MOV|ESI, ECX",
-          "0x97C9|PUSH|EDI",
-          "0x97CA|MOV|dword ptr [ESP + 0x8], ESI",
-          "0x97CE|MOV|dword ptr [ESI], 0x6800b31c",
-          "0x97D4|MOV|EDI, dword ptr [ESI + 0xc]",
-          "0x97D7|MOV|dword ptr [ESP + 0x14], 0x0",
-          "0x97DF|TEST|EDI, EDI",
-          "0x97E1|MOV|dword ptr [ESI + 0x4], 0x0"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 38
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 20
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "356742a411a6595c0f386a6353b40e11"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0xA068|g_pbExceptionHandlerAddress|00b3f0b8",
-          "0x97DFF000|ExceptionList|00000000",
-          "0xB31C|PTR_SplitStringWithDelimiter_6800b31c|68009830"
-        ]
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "operator_delete",
-          "operator_delete"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 2
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "global_counts": {
-        "Classic/1.00": 3
-      },
-      "api_counts": {
-        "Classic/1.00": 2
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_1",
-          "STRUCT_UnitAny",
-          "STRUCT_Control",
-          "STRUCT_PlayerData"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_NOP_a0c149d6bbdd": {
-      "addresses": {
-        "Classic/1.00": "0x68009830"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9830"
-      },
-      "sizes": {
-        "Classic/1.00": 144
-      },
-      "name": "SplitStringWithDelimiter",
-      "signature": "int SplitStringWithDelimiter(void * this, char * lpszInputString)",
-      "calling_convention": "__thiscall",
-      "return_type": "int",
-      "comment": "Splits a string using a configured delimiter and creates two parsers.\n\nAlgorithm:\n1. Validate that both delimiter character (offset +0x4) and state flag (offset +0x8) are non-zero\n2. Clean up existing first parser at offset +0xc if present (call InitializeFunctionPointer then operator_delete)\n3. Clean up existing second parser at offset +0x10 if present (call InitializeFunctionPointer then operator_delete)\n4. Search for delimiter character in input string using strchr\n5. If delimiter found, null-terminate first part and create two parsers\n6. Store first parser (before delimiter) at offset +0xc using CreateParserByDelimiter\n7. Store second parser (after delimiter) at offset +0x10 using CreateParserByDelimiter\n8. Return 1 if both parsers created successfully, 0 otherwise\n\nParameters:\nthis - Pointer to StringSplitter object (auto-parameter, cannot apply Hungarian notation)\nIMPLICIT: ECX register contains StringSplitter* pointer with delimiter, state, parser fields\nlpszInputString - Input string to split at configured delimiter\n\nReturns:\n1 on successful split and parser creation\n0 on validation failure, delimiter not found, or parser creation failure\n\nStructure Layout:\nOffset | Size | Field Name     | Type    | Description\n0x0    | 4    | vtable         | void*   | Virtual function table pointer\n0x4    | 4    | delimiter      | int     | Character code to split on\n0x8    | 4    | state          | int     | State flag (must be non-zero)\n0xc    | 4    | pFirstParser   | void*   | Parser for string before delimiter\n0x10   | 4    | pSecondParser  | void*   | Parser for string after delimiter\n\nVariable Mapping:\nppParser (void**): Double pointer used for cleanup of existing parsers\nlpszDelimiterPos (char*): Result from strchr, points to delimiter in string\npParser (void*): Temporary storage for newly created parser objects\n\nNote: Auto-parameter 'this' cannot be renamed per Ghidra restrictions. Structure type StringSplitter defined but not usable in prototype due to Ghidra type system limitations.",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:a0c149d6bbdd5f8eb67c40eb7229a52b3c264b022ea8e61a930f7a9ac1ab21bd",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "a0c149d6bbdd5f8eb67c40eb7229a52b3c264b022ea8e61a930f7a9ac1ab21bd",
-        "CAL": "9bc347e29f44919f56c69c78179bf8d2",
-        "API": "8c2a3d67815e8bc8f36f9f74e085822d",
-        "APS": "8c2a3d67815e8bc8f36f9f74e085822d",
-        "CON": null,
-        "MNE": "4f58bf93bcbd8121aa726c862e49ab19",
-        "CFG": "5918eacb2ec8792e537ec2f2ad5aaffc",
-        "PRO": "d5ea684e38e6e68b993bc0afb3d13d19"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "InitializeFunctionPointer|0x68009780",
-          "OperatorDelete|0x68009D76",
-          "strchr|0x2D",
-          "CreateParserByDelimiter|0x68009610"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9830|PUSH|EBX",
-          "0x9831|PUSH|ESI",
-          "0x9832|MOV|ESI, ECX",
-          "0x9834|PUSH|EDI",
-          "0x9835|MOV|EAX, dword ptr [ESI + 0x4]",
-          "0x9838|TEST|EAX, EAX",
-          "0x983A|JZ|0x680098b8",
-          "0x983C|MOV|EAX, dword ptr [ESI + 0x8]",
-          "0x983F|TEST|EAX, EAX",
-          "0x9841|JZ|0x680098b8",
-          "0x9843|MOV|EDI, dword ptr [ESI + 0xc]",
-          "0x9846|TEST|EDI, EDI",
-          "0x9848|JZ|0x6800985a",
-          "0x984A|MOV|ECX, EDI",
-          "0x984C|CALL|0x68009780"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 59
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "4f58bf93bcbd8121aa726c862e49ab19"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0xB11C|PTR_strchr_6800b11c|0000ba5e"
-        ]
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "operator_delete",
-          "operator_delete"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 4
-      },
-      "global_counts": {
-        "Classic/1.00": 1
-      },
-      "api_counts": {
-        "Classic/1.00": 2
-      },
-      "param_counts": {
-        "Classic/1.00": 2
-      },
-      "tags": {
-        "Classic/1.00": [
-          "STRUCT_Inventory",
-          "PARAM_2",
-          "PROP_NOCALLER",
-          "STRUCT_UnitAny",
-          "STRUCT_Control"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_NOP_87a26a765c5c": {
       "addresses": {
         "Classic/1.00": "0x680098C0"
@@ -24363,104 +22123,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_MNE_a2e18e801aee": {
-      "addresses": {
-        "Classic/1.00": "0x68009920"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9920"
-      },
-      "sizes": {
-        "Classic/1.00": 32
-      },
-      "name": "InitializeSingleItemParser",
-      "signature": "SingleItemParser * InitializeSingleItemParser(SingleItemParser * pParser)",
-      "calling_convention": "__fastcall",
-      "return_type": "SingleItemParser *",
-      "comment": "Initialize single-item parser object with default state and vtable\n\nAlgorithm:\n1. Call InitializeBaseObjectVTable to set up base object vtable\n2. Set parser vtable pointer to single-item parser implementation (0x6800b324)\n3. Zero-initialize all parser fields (offsets 0x4, 0x8, 0xc, 0x10)\n4. Return initialized parser object pointer\n\nParameters:\npParser - Pointer to allocated SingleItemParser structure to initialize\n\nReturns:\nPointer to initialized SingleItemParser object (same as input parameter)\nNever returns NULL - input pointer is returned as-is after initialization\n\nStructure Layout:\nOffset Size Field Name    Type        Description\n0x0    4    vtable        void*       Pointer to virtual function table\n0x4    4    field1        uint        Parser state field 1 (initialized to 0)\n0x8    4    field2        uint        Parser state field 2 (initialized to 0)\n0xc    4    field3        uint        Parser state field 3 (initialized to 0)\n0x10   4    field4        uint        Parser state field 4 (initialized to 0)\n\nMagic Numbers Reference:\n0x6800b324 - Single-item parser vtable address\n0x4, 0x8, 0xc, 0x10 - Field offsets for parser state initialization",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:d21ec8750980b1df742668ca31006791b9a015f913f82808fcba99d1099adf5f",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "d21ec8750980b1df742668ca31006791b9a015f913f82808fcba99d1099adf5f",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "a2e18e801aee8f43921eed101a36d572",
-        "CFG": "87f2b8c9a17c013c9f79242ba0af15ad",
-        "PRO": "ab5f26512e0d580f761a04522c4cd922"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "InitializeBaseObjectVTable|0x68009770"
-        ]
-      },
-      "callers": {
-        "Classic/1.00": [
-          "CreateParserByDelimiter|0x68009610"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9920|PUSH|ESI",
-          "0x9921|MOV|ESI, ECX",
-          "0x9923|CALL|0x68009770",
-          "0x9928|XOR|EAX, EAX",
-          "0x992A|MOV|dword ptr [ESI], 0x6800b324",
-          "0x9930|MOV|dword ptr [ESI + 0x4], EAX",
-          "0x9933|MOV|dword ptr [ESI + 0x8], EAX",
-          "0x9936|MOV|dword ptr [ESI + 0xc], EAX",
-          "0x9939|MOV|dword ptr [ESI + 0x10], EAX",
-          "0x993C|MOV|EAX, ESI",
-          "0x993E|POP|ESI",
-          "0x993F|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 12
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "a2e18e801aee8f43921eed101a36d572"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0xB324|PTR_LAB_6800b324|680094a0"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "global_counts": {
-        "Classic/1.00": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "STRUCT_Inventory",
-          "RET_Item",
-          "PARAM_1",
-          "RET_STRUCT_PTR",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_NOP_513a7fe09b8c": {
       "addresses": {
         "Classic/1.00": "0x68009940"
@@ -24498,8 +22160,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "SafeDestroyObject|0x68008C70",
-          "CreateParserByDelimiter|0x68009610"
+          "CreateParserByDelimiter|0x68009610",
+          "SafeDestroyObject|0x68008C70"
         ]
       },
       "instructions": {
@@ -24545,139 +22207,6 @@ var FUNCTIONS_D2Server_dll = {
       },
       "function_types": {
         "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_MNE_e3e7225badfc": {
-      "addresses": {
-        "Classic/1.00": "0x68009950"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9950"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "SetLastErrorEx",
-      "signature": "void SetLastErrorEx(DWORD dwErrCode, DWORD dwType)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
-        "PRO": "7522bb6fb702097c1d65c0d00cf5b6bd"
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9950|JMP|dword ptr [0x6800b1b4]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 12
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "param_counts": {
-        "Classic/1.00": 2
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PARAM_2",
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
-    "D2Server_ADDR_68009A6E": {
-      "addresses": {
-        "Classic/1.00": "0x68009A6E"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9A6E"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "sprintf",
-      "signature": "int sprintf(char * lpszDestBuffer, char * lpszFormatString, ...)",
-      "calling_convention": "__cdecl",
-      "return_type": "int",
-      "comment": "Formats and prints a string to a destination buffer using printf-style formatting.\n\nAlgorithm:\n1. Receive destination buffer and format string parameters\n2. Forward call to actual sprintf implementation via indirect jump through import table\n3. Return number of characters written to buffer (excluding null terminator)\n\nParameters:\n- lpszDestBuffer (char *): Target buffer to write formatted string\n- lpszFormatString (char *): Printf-style format string with conversion specifiers\n- ... (variadic): Variable arguments matching format specifiers\n\nReturns:\n- nResult (int): Number of characters written to destination buffer (excluding null terminator)\n                 Returns negative value on error\n\nSpecial Cases:\n- Buffer overflow protection depends on underlying implementation\n- Variadic arguments must match format string specifiers exactly\n- Null destination buffer results in undefined behavior\n\nError Handling:\n- Returns negative value if formatting fails\n- No bounds checking on destination buffer\n- Caller responsible for ensuring sufficient buffer space",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "8ffa2a1dc4d9ee6dfed4979b0a09d313",
-        "PRO": "ae2a1f25ad93cf061ea857f3872fee61"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "FUN_68004420|0x68004420",
-          "FormatCpuInfo|0x680042C0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9A6E|JMP|dword ptr [0x6800b170]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 12
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "caller_counts": {
-        "Classic/1.00": 2
-      },
-      "param_counts": {
-        "Classic/1.00": 2
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PARAM_2",
-          "PROP_TINY",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
       }
     },
     "D2Server_NOP_48f49a1d6c23": {
@@ -24882,8 +22411,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FormatPacketDataDump|0x68007060",
-          "FUN_68005c90|0x68005C90"
+          "FUN_68005c90|0x68005C90",
+          "FormatPacketDataDump|0x68007060"
         ]
       },
       "instructions": {
@@ -24942,76 +22471,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_ADDR_68009BD8": {
-      "addresses": {
-        "Classic/1.00": "0x68009BD8"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9BD8"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "_access",
-      "signature": "int _access(char * lpszFilename, int nAccessMode)",
-      "calling_convention": "__cdecl",
-      "return_type": "int",
-      "comment": "C Runtime Wrapper: Check file accessibility using C library _access function.\n\nAlgorithm:\n1. Forward all parameters to C runtime _access implementation via indirect jump\n2. Return result directly from C runtime function\n\nParameters:\nlpszFilename (char *): Path to file to check for accessibility\nnAccessMode (int): Access mode flags to test (R_OK=4, W_OK=2, X_OK=1, F_OK=0)\n\nReturns:\nint: 0 on success if file has requested access permissions, -1 on failure\n\nSpecial Cases:\nThis is an import thunk that provides no additional logic beyond forwarding to msvcrt._access\n\nMagic Numbers Reference:\n0x6800b140: Import Address Table entry for msvcrt._access function",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "8ffa2a1dc4d9ee6dfed4979b0a09d313",
-        "PRO": "89565ba994370c376b3dfc6578b1712e"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "LoadWorldEventConfiguration|0x68007A10"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9BD8|JMP|dword ptr [0x6800b140]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 12
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 2
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PARAM_2",
-          "PROP_TINY",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
     "D2Server_NOP_14394370b59c": {
       "addresses": {
         "Classic/1.00": "0x68009BEA"
@@ -25045,8 +22504,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "InitTerm|0x68009F10",
-          "free|0x49",
-          "malloc|0x4A"
+          "malloc|0x4A",
+          "free|0x49"
         ]
       },
       "callers": {
@@ -25161,8 +22620,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "DllProcessAttachDetach|0x68009BEA",
-          "DllProcessAttachHandler|0x68009F16"
+          "DllProcessAttachHandler|0x68009F16",
+          "DllProcessAttachDetach|0x68009BEA"
         ]
       },
       "instructions": {
@@ -25223,81 +22682,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "entry"
       }
     },
-    "D2Server_ADDR_68009D32": {
-      "addresses": {
-        "Classic/1.00": "0x68009D32"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9D32"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "OperatorNew",
-      "signature": "void * OperatorNew(uint dwSize)",
-      "calling_convention": "__cdecl",
-      "return_type": "void *",
-      "comment": "Allocates memory block by dispatching to runtime operator new implementation\n\nAlgorithm:\n1. Load function pointer from import table at 0x6800b10c\n2. Jump directly to external operator new implementation\n3. Pass through size parameter and return allocated pointer\n\nParameters:\n  dwSize (uint): Size in bytes of memory block to allocate\n\nReturns:\n  void*: Pointer to allocated memory block on success\n  NULL: On allocation failure or insufficient memory\n\nSpecial Cases:\n  - Zero size allocation behavior depends on runtime implementation\n  - Memory alignment follows system default (typically 8-byte on x86)\n  - No local validation or error handling - all handled by target function\n\nMagic Numbers Reference:\n  0x6800b10c: Import table entry for external operator new function pointer\n\nError Handling:\n  - No local error handling - all error conditions passed through from target\n  - Allocation failures return NULL from external implementation\n  - Out of memory conditions handled by runtime heap manager\n\nImplementation Details:\n  - Thunk function providing indirection through import table\n  - Single JMP instruction with no stack frame or local processing\n  - Preserves calling convention (__cdecl) for external function\n  - Function pointer loaded at runtime during DLL initialization\n\nNote: Function uses 1 decompiler-generated temporary variable (pvVar1) optimized away by compiler",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "bd0764cc96300dd3bfcdf7e0b331f281",
-        "PRO": "c4f0e988a9902f26bdf1666a2844bc3c"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "AllocateListNode|0x68008FA0",
-          "ProcessStringToLowercase|0x68008820",
-          "CreateParserByDelimiter|0x68009610",
-          "ParseAndAddNameListToQueue|0x680084A0",
-          "InitializeListWithConfig|0x68008080",
-          "InitializeConfigContainer|0x68008D50"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9D32|JMP|dword ptr [0x6800b10c]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "caller_counts": {
-        "Classic/1.00": 6
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_TINY",
-          "PARAM_1",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
     "D2Server_NOP_3fc0ccf97351": {
       "addresses": {
         "Classic/1.00": "0x68009D38"
@@ -25330,8 +22714,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "DllOnExit|0x68009F36",
-          "_onexit|0x33"
+          "_onexit|0x33",
+          "DllOnExit|0x68009F36"
         ]
       },
       "callers": {
@@ -25441,8 +22825,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "RegisterExitHandler|0x68008CF0",
           "RegisterExitHandler|0x680080B0",
+          "RegisterExitHandler|0x68008CF0",
           "RegisterExitHandler|0x68008D30"
         ]
       },
@@ -25487,87 +22871,6 @@ var FUNCTIONS_D2Server_dll = {
       },
       "function_types": {
         "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_ADDR_68009D76": {
-      "addresses": {
-        "Classic/1.00": "0x68009D76"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9D76"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "OperatorDelete",
-      "signature": "void OperatorDelete(void * pMemory)",
-      "calling_convention": "__cdecl",
-      "return_type": "void",
-      "comment": "Deallocates memory previously allocated by operator new\n\nAlgorithm:\n1. Receives pointer to memory block to deallocate\n2. Transfers execution to MSVCRT.DLL operator delete implementation\n3. MSVCRT performs actual heap deallocation and cleanup\n\nParameters:\npMemory (void *): Pointer to memory block allocated by operator new\n                  Must be valid pointer from previous new allocation\n                  NULL pointer is safe (no operation performed)\n                  NOTE: void* is correct type for C++ operator delete standard\n\nReturns:\nvoid: No return value (void function)\n\nSpecial Cases:\n- NULL pointer passed: Safe operation, no action taken\n- Invalid pointer: Undefined behavior, may cause heap corruption\n- Double delete: Undefined behavior, may cause crash\n\nImport Thunk Details:\nTarget DLL: MSVCRT.DLL\nImport Address: 0x6800b110\nThunk Type: Indirect jump through import address table\nC++ Standard: Standard operator delete implementation\n\nType Quality Note:\nThe void* parameter type is correct and required by C++ standard.\nCannot be replaced with specific structure type as this function\nmust accept any pointer type for memory deallocation.",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
-        "PRO": "8d370d7e7232721cfda0ee89451eb894"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "ParseConfigurationString|0x68008C20",
-          "SafeDestroyObject|0x68008C70",
-          "ProcessStringToLowercase|0x68008820",
-          "Unwind@6800a040|0x6800A040",
-          "CreateParserByDelimiter|0x68009610",
-          "Unwind@6800a04b|0x6800A04B",
-          "SplitStringWithDelimiter|0x68009830",
-          "ParseAndAddNameListToQueue|0x680084A0",
-          "ReleaseDualBufferReferences|0x68008130",
-          "DestroyLinkedListAndReleaseBuffers|0x680087D0",
-          "DestroyBufferManagerList|0x68008D80",
-          "DelimiterParserDestructor|0x680097B0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9D76|JMP|dword ptr [0x6800b110]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "caller_counts": {
-        "Classic/1.00": 12
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_TINY",
-          "PARAM_1",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
       }
     },
     "D2Server_NOP_1bcfc422e889": {
@@ -25791,8 +23094,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ExecuteDestructorCleanup|0x68009EDA",
-          "SehFinalizerCallback|0x68009DE4"
+          "SehFinalizerCallback|0x68009DE4",
+          "ExecuteDestructorCleanup|0x68009EDA"
         ]
       },
       "instructions": {
@@ -26129,132 +23432,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_ADDR_68009F04": {
-      "addresses": {
-        "Classic/1.00": "0x68009F04"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9F04"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "__CxxFrameHandler",
-      "signature": "undefined __CxxFrameHandler(void)",
-      "calling_convention": "unknown",
-      "return_type": "undefined",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "02a30cff357c3ab4c37d08324437520e",
-        "PRO": "c17741356d7ef370f3bd0b9718826168"
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9F04|JMP|dword ptr [0x6800b120]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
-    "D2Server_ADDR_68009F10": {
-      "addresses": {
-        "Classic/1.00": "0x68009F10"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9F10"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "InitTerm",
-      "signature": "void InitTerm(void)",
-      "calling_convention": "__cdecl",
-      "return_type": "void",
-      "comment": "Runtime constructor initialization thunk function.\n\nAlgorithm:\n1. Perform indirect jump through import table to CRT initterm function\n2. Execute initialization of C++ static constructors and global objects\n3. Process function pointer table from DAT_6800d000 to DAT_6800d028 range\n4. Call each constructor function pointer in sequence\n5. Return control to caller after initialization completion\n\nParameters:\nNone - Parameters are passed directly to actual CRT initterm function\n\nReturns:\nvoid - No explicit return value, control returns after constructor execution\n\nSpecial Cases:\nIndirect jump through import address table at 0x6800b128\nFunction is import thunk, not actual implementation\nActual parameters (start/end pointers) handled by import resolution\nUsed exclusively during DLL process attach for runtime initialization\n\nError Handling:\nNo error handling in thunk - errors handled by actual CRT initterm function\nImport resolution failure would prevent function execution entirely",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "02a30cff357c3ab4c37d08324437520e",
-        "PRO": "0dcf6b4e91d421885b16483cc2287664"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "DllProcessAttachDetach|0x68009BEA"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9F10|JMP|dword ptr [0x6800b128]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
     "D2Server_NOP_3c5005b2ff3c": {
       "addresses": {
         "Classic/1.00": "0x68009F16"
@@ -26347,272 +23524,6 @@ var FUNCTIONS_D2Server_dll = {
       },
       "function_types": {
         "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_ADDR_68009F36": {
-      "addresses": {
-        "Classic/1.00": "0x68009F36"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9F36"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "DllOnExit",
-      "signature": "int DllOnExit(void)",
-      "calling_convention": "__cdecl",
-      "return_type": "int",
-      "comment": "DLL-specific exit handler implementation thunk.\n\nAlgorithm:\n1. Perform indirect jump to actual exit handler through function pointer table\n2. The target function is loaded from pointer at 0x6800b130\n3. No validation or processing - direct transfer of control\n\nParameters:\nNone (void function)\n\nReturns:\nint - Return value from actual exit handler implementation\n     - Success/failure codes depend on the target function\n     - Function does not return directly due to indirect jump\n\nSpecial Cases:\n- This is a thunk function that redirects to the actual exit handler\n- Used when DLL is initialized to provide DLL-specific exit cleanup\n- Target function pointer is resolved at runtime from import table\n- Function transfer control and does not return to caller\n\nMagic Numbers Reference:\n0x6800b130 - Function pointer table entry for actual exit handler",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
-        "PRO": "717b3f3c064d6a86c1e91de47898a92e"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "RegisterDllExitHandler|0x68009D38"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9F36|JMP|dword ptr [0x6800b130]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
-    "D2Server_ADDR_68009F3C": {
-      "addresses": {
-        "Classic/1.00": "0x68009F3C"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9F3C"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "terminate",
-      "signature": "void terminate(void)",
-      "calling_convention": "__cdecl",
-      "return_type": "void",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "02a30cff357c3ab4c37d08324437520e",
-        "PRO": "f0976f0cf5cebc0d1cbfc8e3695bf7f3"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "CheckVcppExceptionAndTerminate|0x68009E5A"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9F3C|JMP|dword ptr [0x6800b138]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_TINY",
-          "PARAM_0",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
-    "D2Server_ADDR_68009F50": {
-      "addresses": {
-        "Classic/1.00": "0x68009F50"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9F50"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "_Init",
-      "signature": "void _Init(basic_filebuf<char,struct_std::char_traits<char>_> * this, _iobuf * param_1, _Initfl param_2)",
-      "calling_convention": "__thiscall",
-      "return_type": "void",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "10cff49d5847e9d6f4eac5371981dc5e",
-        "PRO": "8cc0611cbf66feb7265d1f3b18845a10"
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9F50|JMP|dword ptr [0x6800b100]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 12
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "param_counts": {
-        "Classic/1.00": 3
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PROP_NOCALLER",
-          "PROP_TINY",
-          "PARAM_3",
-          "PROP_LEAF"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
-      }
-    },
-    "D2Server_ADDR_68009F56": {
-      "addresses": {
-        "Classic/1.00": "0x68009F56"
-      },
-      "rvas": {
-        "Classic/1.00": "0x9F56"
-      },
-      "sizes": {
-        "Classic/1.00": 6
-      },
-      "name": "GetLine",
-      "signature": "basic_istream<char,struct_std::char_traits<char>_> * GetLine(basic_istream<char,struct_std::char_traits<char>_> * pInputStream, basic_string<char,struct_std::char_traits<char>,class_std::allocator<char>_> * pString)",
-      "calling_convention": "__cdecl",
-      "return_type": "basic_istream<char,struct_std::char_traits<char>_> *",
-      "comment": "C++ standard library getline wrapper thunk function\n\nAlgorithm:\n1. Receive input stream pointer and string pointer as parameters\n2. Execute indirect jump to imported std::getline function via import table\n3. Return result from imported function to caller\n\nParameters:\npInputStream - Pointer to C++ input stream (basic_istream) for reading data\npString - Pointer to C++ string (basic_string) to store the read line\n\nReturns:\nPointer to the input stream for chaining operations, or NULL on error\n\nSpecial Cases:\nThis is a thunk function that provides a direct interface to the imported\nC++ standard library getline function. The actual line reading logic is\nimplemented in the external library function.",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "b91ad0969159ba75db9b7718a9b2861da226e69538c5a1188139deb67e8061dc",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
-        "CFG": "5b14cc1a1bb48e63f904701c29af6034",
-        "PRO": "faa5b79d92edcabdf9d608a08e2b276b"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "ParseItemConfigFile|0x680081A0"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x9F56|JMP|dword ptr [0x6800b0f8]"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 1
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 12
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "e3e7225badfcf3c2e051c42d71d7237a"
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 2
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_THUNK",
-          "PARAM_2",
-          "PROP_TINY",
-          "PROP_LEAF",
-          "RET_STRUCT_PTR"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "thunk"
       }
     },
     "D2Server_NOP_eafa142662ea": {
@@ -26874,165 +23785,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_NOP_6fa9c7cb5566": {
-      "addresses": {
-        "Classic/1.00": "0x6800A040"
-      },
-      "rvas": {
-        "Classic/1.00": "0xA040"
-      },
-      "sizes": {
-        "Classic/1.00": 11
-      },
-      "name": "Unwind@6800a040",
-      "signature": "void Unwind@6800a040(void * pMemory)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Destructor/cleanup function for memory deallocation.\n\nAlgorithm:\n1. Access pointer to memory object from stack parameter\n2. Call OperatorDelete to deallocate the memory\n3. Return void (cleanup complete)\n\nParameters:\npMemory - void * - Pointer to memory block to be deallocated\n\nReturns:\nvoid - No return value, function performs cleanup only\n\nSpecial Cases:\nThis function appears to be an exception unwinding cleanup handler\nthat ensures proper memory deallocation during stack unwinding.\nFunction uses EBP register access (unaff_EBP) optimized by decompiler.\n\nError Handling:\nNo explicit error handling - relies on OperatorDelete implementation\nfor proper memory deallocation.\n\nNote: Function uses 1 phantom variable (unaff_EBP) representing EBP register\naccess that was optimized away by decompiler and cannot be renamed.",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:6fa9c7cb55660f5d09369be16dbce57ea76b38f229252d6b4093ac50d615b56d",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "6fa9c7cb55660f5d09369be16dbce57ea76b38f229252d6b4093ac50d615b56d",
-        "CAL": null,
-        "API": "981f08d9c72bf87efc04d1a74ba879c2",
-        "APS": null,
-        "CON": null,
-        "MNE": "4d22a30a732053c48a8d18245d57d3bd",
-        "CFG": "708f6dc7dfeb6d65dfc09cc055561044",
-        "PRO": "a5fb20b97937a1f18d107dc37aba32b9"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "OperatorDelete|0x68009D76"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0xA040|MOV|EAX, dword ptr [EBP + 0x4]",
-          "0xA043|PUSH|EAX",
-          "0xA044|CALL|0x68009d76",
-          "0xA049|POP|ECX",
-          "0xA04A|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 5
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 8
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "4d22a30a732053c48a8d18245d57d3bd"
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "operator_delete"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "api_counts": {
-        "Classic/1.00": 1
-      },
-      "param_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_1",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
-    "D2Server_API_981f08d9c72b": {
-      "addresses": {
-        "Classic/1.00": "0x6800A04B"
-      },
-      "rvas": {
-        "Classic/1.00": "0xA04B"
-      },
-      "sizes": {
-        "Classic/1.00": 11
-      },
-      "name": "Unwind@6800a04b",
-      "signature": "void Unwind@6800a04b(void)",
-      "calling_convention": "__stdcall",
-      "return_type": "void",
-      "comment": "Cleanup destructor function that deletes dynamically allocated memory.\n\nAlgorithm:\n1. Extract pointer from stack frame at offset +4\n2. Pass pointer to OperatorDelete for memory deallocation  \n3. Return to caller\n\nParameters:\nIMPLICIT: Stack frame pointer in EBP register containing pointer to cleanup\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Function called via function pointer from address 0x6800b3ec\n- Assumes valid pointer at [EBP + 0x4] - no null pointer validation performed\n- Used as cleanup handler in exception unwinding or destructor chain",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:6fa9c7cb55660f5d09369be16dbce57ea76b38f229252d6b4093ac50d615b56d",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "6fa9c7cb55660f5d09369be16dbce57ea76b38f229252d6b4093ac50d615b56d",
-        "CAL": null,
-        "API": "981f08d9c72bf87efc04d1a74ba879c2",
-        "APS": null,
-        "CON": null,
-        "MNE": "4d22a30a732053c48a8d18245d57d3bd",
-        "CFG": "c7d6b0d73f35f87f2d09099c04fe3939",
-        "PRO": "bc7d67b6a20d854192930536c25c09f5"
-      },
-      "callees": {
-        "Classic/1.00": [
-          "OperatorDelete|0x68009D76"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0xA04B|MOV|EAX, dword ptr [EBP + 0x4]",
-          "0xA04E|PUSH|EAX",
-          "0xA04F|CALL|0x68009d76",
-          "0xA054|POP|ECX",
-          "0xA055|RET|"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 5
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 4
-      },
-      "loop_counts": {
-        "Classic/1.00": 0
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "4d22a30a732053c48a8d18245d57d3bd"
-      },
-      "api_calls": {
-        "Classic/1.00": [
-          "operator_delete"
-        ]
-      },
-      "callee_counts": {
-        "Classic/1.00": 1
-      },
-      "api_counts": {
-        "Classic/1.00": 1
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_NOCALLER",
-          "PARAM_0",
-          "PROP_SMALL"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_NOP_b1142865df2d": {
       "addresses": {
         "Classic/1.00": "0x6800A060"
@@ -27255,8 +24007,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "ValidateGameIdAndGetEntry|0x680064E8",
-          "D2GSServerShutdown|0x68001760",
-          "free|0x49"
+          "free|0x49",
+          "D2GSServerShutdown|0x68001760"
         ]
       },
       "instructions": {
@@ -27354,10 +24106,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeFunctionPointers|0x68022D2F",
           "NoOpStubFunction|0x68001A90",
+          "D2GameServerPreInit|0x680010C0",
           "GetProcAddress|0x11",
-          "D2GameServerPreInit|0x680010C0"
+          "InitializeFunctionPointers|0x68022D2F"
         ]
       },
       "callers": {
@@ -27494,8 +24246,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "EnableServerResourceFlags|0x68022CCD",
-          "InitializeGameServer|0x680013F0"
+          "InitializeGameServer|0x680013F0",
+          "EnableServerResourceFlags|0x68022CCD"
         ]
       },
       "callers": {
@@ -27604,9 +24356,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "ComputeExponentialProgressionTable|0x68023512",
           "PrepareCodeSectionForPatching|0x68023471",
+          "ChangeModuleSectionProtection|0x680233B5",
           "SetCodeSectionExecutable|0x680233E9",
-          "SetModuleSectionProtections|0x6802341D",
-          "ChangeModuleSectionProtection|0x680233B5"
+          "SetModuleSectionProtections|0x6802341D"
         ]
       },
       "instructions": {
@@ -28213,9 +24965,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetGameEntryFlags|0x68022EBF",
           "GenerateRandomWithModulo|0x68022CEC",
-          "SetEntityValidationFlags|0x68022C7B"
+          "SetEntityValidationFlags|0x68022C7B",
+          "GetGameEntryFlags|0x68022EBF"
         ]
       },
       "instructions": {
@@ -28318,9 +25070,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetGameEntryFlags|0x68022EBF",
           "GenerateRandomWithModulo|0x68022CEC",
-          "SetEntityValidationFlags|0x68022C7B"
+          "SetEntityValidationFlags|0x68022C7B",
+          "GetGameEntryFlags|0x68022EBF"
         ]
       },
       "instructions": {
@@ -28480,95 +25232,6 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": "internal"
       }
     },
-    "D2Server_MNE_8a1f700e23e6": {
-      "addresses": {
-        "Classic/1.00": "0x68022C20"
-      },
-      "rvas": {
-        "Classic/1.00": "0x22C20"
-      },
-      "sizes": {
-        "Classic/1.00": 91
-      },
-      "name": "ProcessInitializationMessage",
-      "signature": "void ProcessInitializationMessage(uint dwMessageType, MessageObject * pSourceMessage, MessageObject * pTargetMessage, int * pnProcessedCount)",
-      "calling_convention": "__fastcall",
-      "return_type": "void",
-      "comment": "Process initialization message and validate against core system parameters.\n\nAlgorithm:\n1. Validate source message pointer differs from target message\n2. Verify target message pointer is not NULL\n3. Check message type equals 1 (initialization message)\n4. Iterate through core process parameter table backwards\n5. Compare message ID field (offset 0x4) against table entries\n6. If match found, check message status field (offset 0x10)\n7. If status is 0xC or 0x0, call entity processor function\n8. Otherwise increment processed count and return\n9. If no match found in table, return without action\n\nParameters:\n- dwMessageType: Message type identifier (fastcall ECX register)\n- pSourceMessage: Pointer to source MessageObject structure (fastcall EDX register)\n- pTargetMessage: Pointer to target MessageObject structure to validate\n- pnProcessedCount: Pointer to counter incremented for non-processor messages\n\nReturns:\n- void: No return value, side effects through function calls and counter increment\n\nSpecial Cases:\n- Returns early if source equals target message pointers\n- Returns early if target message is NULL\n- Returns early if message type is not 1 (non-initialization)\n- Status 0xC (12): Special processor status, calls entity processor\n- Status 0x0: Default processor status, calls entity processor\n- Other status values: Increment counter only, no processor call\n\nMagic Numbers Reference:\n- 0x1: Required message type for initialization processing\n- 0x4: Offset to message ID field in MessageObject structure\n- 0x10: Offset to message status field in MessageObject structure  \n- 0xC: Special processor status code (decimal 12)\n- 0x0: Default processor status code\n\nStructure Layout:\nMessageObject (44 bytes total):\nOffset | Size | Field Name    | Type | Description\n0x00   | 4    | dwType        | uint | Message type identifier\n0x04   | 4    | dwMessageId   | uint | Message ID for table lookup\n0x10   | 4    | dwStatus      | uint | Message processing status\n...    | ...  | ...           | ...  | Additional fields not accessed",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:41f50fc2de8b66e0c2d774b2b5bf439192c79e578c4447a87af71aac66f01f27",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "41f50fc2de8b66e0c2d774b2b5bf439192c79e578c4447a87af71aac66f01f27",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": null,
-        "MNE": "8a1f700e23e6a143217003f3620dbac5",
-        "CFG": "77d9bb34d37f738757346449715fe58e",
-        "PRO": "271aac7672b8b0f8d494222538dbe25e"
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x22C20|PUSH|ESI",
-          "0x22C21|MOV|ESI, dword ptr [ESP + 0x8]",
-          "0x22C25|CMP|EDX, ESI",
-          "0x22C27|JZ|0x68022c75",
-          "0x22C29|TEST|ESI, ESI",
-          "0x22C2B|JZ|0x68022c75",
-          "0x22C2D|CMP|dword ptr [ESI], 0x1",
-          "0x22C30|JNZ|0x68022c75",
-          "0x22C32|PUSH|EBX",
-          "0x22C33|PUSH|ECX",
-          "0x22C34|MOV|EAX, dword ptr [ESI + 0x4]",
-          "0x22C37|MOV|EBX, dword ptr [0x68022a21]",
-          "0x22C3D|DEC|EBX",
-          "0x22C3E|MOV|ECX, dword ptr [EBX*0x4 + 0x68022a25]",
-          "0x22C45|CMP|ECX, EAX"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 41
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 12
-      },
-      "loop_counts": {
-        "Classic/1.00": 1
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "8a1f700e23e6a143217003f3620dbac5"
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x22A21|g_dwCoreProcessParam|0x6",
-          "0x22A39|DAT_68022a39|0x2da",
-          "0x22A35|DAT_68022a35|0x2d9",
-          "0x22425|g_pfnEntityProcessor|00000000"
-        ]
-      },
-      "global_counts": {
-        "Classic/1.00": 4
-      },
-      "param_counts": {
-        "Classic/1.00": 4
-      },
-      "tags": {
-        "Classic/1.00": [
-          "STRUCT_Inventory",
-          "PROP_NOCALLER",
-          "PARAM_4",
-          "STRUCT_UnitAny",
-          "PROP_LEAF",
-          "STRUCT_Control"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      }
-    },
     "D2Server_NOP_bf4e28cfdf44": {
       "addresses": {
         "Classic/1.00": "0x68022C7B"
@@ -28601,8 +25264,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateAndProcessEntities|0x68022B09",
-          "ValidateAndProcessThresholds|0x68022A4D"
+          "ValidateAndProcessThresholds|0x68022A4D",
+          "ValidateAndProcessEntities|0x68022B09"
         ]
       },
       "instructions": {
@@ -28790,8 +25453,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateAndProcessEntities|0x68022B09",
           "ValidateAndProcessThresholds|0x68022A4D",
+          "ValidateAndProcessEntities|0x68022B09",
           "InitializeConfigData|0x68022451"
         ]
       },
@@ -29116,8 +25779,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateAndProcessEntities|0x68022B09",
-          "ValidateAndProcessThresholds|0x68022A4D"
+          "ValidateAndProcessThresholds|0x68022A4D",
+          "ValidateAndProcessEntities|0x68022B09"
         ]
       },
       "instructions": {
@@ -29395,8 +26058,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "LoadLibraryA|0x8",
-          "GetProcAddress|0x11",
-          "FreeLibrary|0xB"
+          "FreeLibrary|0xB",
+          "GetProcAddress|0x11"
         ]
       },
       "strings": {

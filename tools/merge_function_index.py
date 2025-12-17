@@ -993,6 +993,97 @@ class FunctionMerger:
         # Remove merged entry
         del self.functions[merge_id]
 
+    def deduplicate_by_hash(self):
+        """Merge canonical entries that share the same high-priority hash.
+
+        This pass catches fragmentation caused by export ordinal collisions,
+        where multiple functions have the same EXP ordinal but different addresses,
+        causing the merge pipeline to create separate canonical entries for what
+        is actually the same function.
+
+        Strategy:
+        1. Group functions by DLL
+        2. For each DLL, build lookup by NOP and API hashes
+        3. Find canonical entries that share the same hash
+        4. Merge entries with matching hashes (prefer entry with more versions)
+        """
+        print("\nDeduplicating canonical entries by hash...")
+
+        # Group functions by DLL
+        dll_functions = defaultdict(list)
+        for canonical_id, func in self.functions.items():
+            dll_functions[func["dll"]].append(canonical_id)
+
+        total_merged = 0
+
+        for dll_name, canonical_ids in dll_functions.items():
+            # Build hash lookups: hash -> [canonical_ids]
+            nop_lookup = defaultdict(list)
+            api_lookup = defaultdict(list)
+
+            for cid in canonical_ids:
+                func = self.functions.get(cid)
+                if not func:
+                    continue
+                indexes = func.get("indexes", {})
+
+                nop = indexes.get("NOP")
+                api = indexes.get("API")
+
+                if nop:
+                    nop_lookup[nop].append(cid)
+                if api:
+                    api_lookup[api].append(cid)
+
+            # Find duplicates (multiple canonical IDs with same hash)
+            merged_ids = set()  # Track already merged IDs
+
+            # Check NOP duplicates first (higher priority)
+            for hash_val, cids in nop_lookup.items():
+                if len(cids) <= 1:
+                    continue
+                # Filter out already merged
+                cids = [c for c in cids if c not in merged_ids and c in self.functions]
+                if len(cids) <= 1:
+                    continue
+
+                # Sort by version count (most versions first) then by name presence
+                cids.sort(key=lambda c: (
+                    -len(self.functions[c].get("versions", {})),
+                    -int(bool(self.functions[c].get("name")))
+                ))
+
+                # Keep first (most versions), merge rest into it
+                keep_id = cids[0]
+                for merge_id in cids[1:]:
+                    if merge_id in self.functions:
+                        self._merge_canonical_entries(keep_id, merge_id)
+                        merged_ids.add(merge_id)
+                        total_merged += 1
+
+            # Check API duplicates
+            for hash_val, cids in api_lookup.items():
+                if len(cids) <= 1:
+                    continue
+                cids = [c for c in cids if c not in merged_ids and c in self.functions]
+                if len(cids) <= 1:
+                    continue
+
+                cids.sort(key=lambda c: (
+                    -len(self.functions[c].get("versions", {})),
+                    -int(bool(self.functions[c].get("name")))
+                ))
+
+                keep_id = cids[0]
+                for merge_id in cids[1:]:
+                    if merge_id in self.functions:
+                        self._merge_canonical_entries(keep_id, merge_id)
+                        merged_ids.add(merge_id)
+                        total_merged += 1
+
+        print(f"  Deduplicated {total_merged} fragmented canonical entries")
+        self.stats["deduplication_merged"] = total_merged
+
     def generate_registry(self):
         """Generate the unified function registry."""
         print("\n" + "=" * 70)
@@ -1015,6 +1106,9 @@ class FunctionMerger:
         # Process each DLL
         for dll_name in sorted(exports.keys()):
             self.process_dll(dll_name, exports[dll_name])
+
+        # Post-processing: deduplicate fragmented entries by hash
+        self.deduplicate_by_hash()
 
         # Post-processing: resolve callee names to canonical names
         self.resolve_callees()
@@ -1049,6 +1143,9 @@ class FunctionMerger:
         # Process each DLL
         for dll_name in sorted(exports.keys()):
             self.process_dll(dll_name, exports[dll_name])
+
+        # Post-processing: deduplicate fragmented entries by hash
+        self.deduplicate_by_hash()
 
         # Post-processing: resolve callee names to canonical names
         self.resolve_callees()

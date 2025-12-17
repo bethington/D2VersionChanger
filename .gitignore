@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pyo
+.venv/
+venv/
 
 # IDE
 .vscode/
@@ -13,8 +15,20 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Game files
+# Game files (large binaries - download separately)
 *.mpq
 *.MPQ
 *.lng
 *.LNG
+
+# Cache directories (regenerable)
+cache/
+.playwright-mcp/
+
+# Large generated files (use functions_v2/ split files instead)
+reports/function_registry_v2.json
+
+# Temporary/debug files
+*.log
+*.tmp
+*.bak

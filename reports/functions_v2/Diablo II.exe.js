@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-16T18:31:58.018344
+// Generated: 2025-12-16T20:37:06.337995
 // Functions for Diablo II.exe
 // Versions: Classic/1.00, Classic/1.01, Classic/1.02, Classic/1.03, Classic/1.04c, LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d
 
@@ -113,264 +113,264 @@ var FUNCTIONS_Diablo_II_exe = {
       "display_name": "STR_ae689863bdfe95ba",
       "callees": {
         "Classic/1.00": [
-          "MessageBoxA|0x2B",
-          "GetExitCodeProcess|0x2",
-          "FUN_0040146d|0x40146D",
-          "GetCommandLineA|0x5",
-          "LoadStringA|0x2C",
-          "CreateProcessA|0x4",
           "CreateEventA|0x7",
-          "CloseHandle|0x17",
-          "GetLastError|0x6",
+          "CreateProcessA|0x4",
+          "GetExitCodeProcess|0x2",
+          "GetCommandLineA|0x5",
+          "FUN_0040146d|0x40146D",
           "FUN_004013b0|0x4013B0",
-          "WaitForMultipleObjects|0x3"
+          "MessageBoxA|0x2B",
+          "LoadStringA|0x2C",
+          "WaitForMultipleObjects|0x3",
+          "GetLastError|0x6",
+          "CloseHandle|0x17"
         ],
         "Classic/1.01": [
-          "CloseHandle|0x17",
           "GetCommandLineA|0x5",
-          "GetExitCodeProcess|0x2",
-          "GetLastError|0x6",
           "MessageBoxA|0x2B",
-          "FUN_004013b0|0x4013B0",
           "WaitForMultipleObjects|0x3",
+          "FUN_0040146d|0x40146D",
+          "FUN_004013b0|0x4013B0",
+          "GetExitCodeProcess|0x2",
           "CreateEventA|0x7",
+          "CloseHandle|0x17",
           "LoadStringA|0x2C",
           "CreateProcessA|0x4",
-          "FUN_0040146d|0x40146D"
+          "GetLastError|0x6"
         ],
         "Classic/1.02": [
-          "GetExitCodeProcess|0x2",
-          "WaitForMultipleObjects|0x3",
-          "FUN_0040146d|0x40146D",
-          "GetCommandLineA|0x5",
-          "CreateEventA|0x7",
-          "GetLastError|0x6",
-          "FUN_004013b0|0x4013B0",
+          "LoadStringA|0x2C",
           "CreateProcessA|0x4",
+          "GetCommandLineA|0x5",
           "MessageBoxA|0x2B",
-          "CloseHandle|0x17",
-          "LoadStringA|0x2C"
+          "GetExitCodeProcess|0x2",
+          "GetLastError|0x6",
+          "CreateEventA|0x7",
+          "FUN_004013b0|0x4013B0",
+          "FUN_0040146d|0x40146D",
+          "WaitForMultipleObjects|0x3",
+          "CloseHandle|0x17"
         ],
         "Classic/1.03": [
-          "GetLastError|0x6",
-          "GetCommandLineA|0x5",
-          "FUN_004013b0|0x4013B0",
-          "CreateEventA|0x7",
-          "WaitForMultipleObjects|0x3",
-          "GetExitCodeProcess|0x2",
-          "CloseHandle|0x17",
-          "FUN_0040146d|0x40146D",
-          "MessageBoxA|0x2B",
           "LoadStringA|0x2C",
-          "CreateProcessA|0x4"
+          "CreateProcessA|0x4",
+          "WaitForMultipleObjects|0x3",
+          "FUN_0040146d|0x40146D",
+          "CloseHandle|0x17",
+          "GetCommandLineA|0x5",
+          "GetExitCodeProcess|0x2",
+          "CreateEventA|0x7",
+          "MessageBoxA|0x2B",
+          "GetLastError|0x6",
+          "FUN_004013b0|0x4013B0"
         ],
         "Classic/1.04c": [
           "GetLastError|0x6",
+          "CloseHandle|0x17",
           "FUN_004013b0|0x4013B0",
-          "GetExitCodeProcess|0x2",
-          "FUN_0040146d|0x40146D",
-          "GetCommandLineA|0x5",
-          "LoadStringA|0x2C",
-          "CreateProcessA|0x4",
           "CreateEventA|0x7",
+          "GetCommandLineA|0x5",
+          "GetExitCodeProcess|0x2",
+          "LoadStringA|0x2C",
           "MessageBoxA|0x2B",
-          "WaitForMultipleObjects|0x3",
-          "CloseHandle|0x17"
+          "FUN_0040146d|0x40146D",
+          "CreateProcessA|0x4",
+          "WaitForMultipleObjects|0x3"
         ],
         "LoD/1.07": [
           "GetLastError|0x6",
-          "FUN_004013b0|0x4013B0",
-          "MessageBoxA|0x2B",
-          "GetExitCodeProcess|0x2",
-          "LoadStringA|0x2C",
-          "CloseHandle|0x17",
-          "CreateEventA|0x7",
           "FUN_0040146d|0x40146D",
           "CreateProcessA|0x4",
+          "CloseHandle|0x17",
+          "MessageBoxA|0x2B",
           "WaitForMultipleObjects|0x3",
-          "GetCommandLineA|0x5"
+          "GetCommandLineA|0x5",
+          "CreateEventA|0x7",
+          "LoadStringA|0x2C",
+          "FUN_004013b0|0x4013B0",
+          "GetExitCodeProcess|0x2"
         ],
         "LoD/1.08": [
-          "GetExitCodeProcess|0x2",
-          "WaitForMultipleObjects|0x3",
-          "CloseHandle|0x17",
-          "GetLastError|0x6",
-          "FUN_0040146d|0x40146D",
+          "CreateEventA|0x7",
           "MessageBoxA|0x2B",
+          "GetExitCodeProcess|0x2",
+          "LoadStringA|0x2C",
+          "FUN_0040146d|0x40146D",
+          "CloseHandle|0x17",
+          "FUN_004013b0|0x4013B0",
           "GetCommandLineA|0x5",
           "CreateProcessA|0x4",
-          "CreateEventA|0x7",
-          "LoadStringA|0x2C",
-          "FUN_004013b0|0x4013B0"
+          "WaitForMultipleObjects|0x3",
+          "GetLastError|0x6"
         ],
         "LoD/1.09": [
-          "CreateEventA|0x7",
           "CreateProcessA|0x4",
+          "LoadStringA|0x2C",
+          "MessageBoxA|0x2B",
+          "GetExitCodeProcess|0x2",
+          "CreateEventA|0x7",
+          "GetCommandLineA|0x5",
+          "FUN_004013b0|0x4013B0",
+          "CloseHandle|0x17",
           "GetLastError|0x6",
           "FUN_0040146d|0x40146D",
-          "CloseHandle|0x17",
-          "MessageBoxA|0x2B",
-          "FUN_004013b0|0x4013B0",
-          "GetExitCodeProcess|0x2",
-          "LoadStringA|0x2C",
-          "GetCommandLineA|0x5",
           "WaitForMultipleObjects|0x3"
         ],
         "LoD/1.09b": [
-          "GetCommandLineA|0x5",
           "FUN_0040146d|0x40146D",
-          "GetExitCodeProcess|0x2",
-          "CreateProcessA|0x4",
           "WaitForMultipleObjects|0x3",
+          "FUN_004013b0|0x4013B0",
+          "MessageBoxA|0x2B",
+          "CreateProcessA|0x4",
+          "CloseHandle|0x17",
+          "LoadStringA|0x2C",
+          "GetExitCodeProcess|0x2",
+          "GetCommandLineA|0x5",
+          "CreateEventA|0x7",
+          "GetLastError|0x6"
+        ],
+        "LoD/1.09d": [
+          "LoadStringA|0x2C",
+          "GetCommandLineA|0x5",
+          "WaitForMultipleObjects|0x3",
+          "CreateProcessA|0x4",
+          "GetExitCodeProcess|0x2",
           "MessageBoxA|0x2B",
           "FUN_004013b0|0x4013B0",
           "CloseHandle|0x17",
           "CreateEventA|0x7",
-          "GetLastError|0x6",
-          "LoadStringA|0x2C"
-        ],
-        "LoD/1.09d": [
           "FUN_0040146d|0x40146D",
-          "CreateEventA|0x7",
-          "GetLastError|0x6",
-          "GetExitCodeProcess|0x2",
-          "MessageBoxA|0x2B",
-          "LoadStringA|0x2C",
-          "FUN_004013b0|0x4013B0",
-          "GetCommandLineA|0x5",
-          "CreateProcessA|0x4",
-          "WaitForMultipleObjects|0x3",
-          "CloseHandle|0x17"
+          "GetLastError|0x6"
         ],
         "LoD/1.10": [
           "GetLastError|0x6",
-          "GetExitCodeProcess|0x2",
-          "FUN_004013b0|0x4013B0",
-          "GetCommandLineA|0x5",
-          "FUN_0040146d|0x40146D",
-          "CreateProcessA|0x4",
-          "MessageBoxA|0x2B",
-          "WaitForMultipleObjects|0x3",
-          "CloseHandle|0x17",
           "LoadStringA|0x2C",
-          "CreateEventA|0x7"
-        ],
-        "LoD/1.11": [
           "CreateEventA|0x7",
-          "CloseHandle|0x17",
-          "WaitForMultipleObjects|0x3",
-          "GetExitCodeProcess|0x2",
-          "GetLastError|0x6",
           "GetCommandLineA|0x5",
+          "GetExitCodeProcess|0x2",
           "FUN_0040146d|0x40146D",
           "MessageBoxA|0x2B",
+          "CloseHandle|0x17",
           "FUN_004013b0|0x4013B0",
-          "LoadStringA|0x2C",
+          "WaitForMultipleObjects|0x3",
           "CreateProcessA|0x4"
         ],
-        "LoD/1.11b": [
-          "LoadStringA|0x2C",
+        "LoD/1.11": [
           "GetCommandLineA|0x5",
-          "WaitForMultipleObjects|0x3",
-          "CreateEventA|0x7",
-          "CreateProcessA|0x4",
-          "MessageBoxA|0x2B",
-          "FUN_0040146d|0x40146D",
+          "FUN_004013b0|0x4013B0",
           "CloseHandle|0x17",
+          "GetExitCodeProcess|0x2",
+          "MessageBoxA|0x2B",
+          "CreateProcessA|0x4",
+          "CreateEventA|0x7",
+          "WaitForMultipleObjects|0x3",
+          "GetLastError|0x6",
+          "LoadStringA|0x2C",
+          "FUN_0040146d|0x40146D"
+        ],
+        "LoD/1.11b": [
+          "WaitForMultipleObjects|0x3",
+          "CloseHandle|0x17",
+          "FUN_0040146d|0x40146D",
+          "CreateEventA|0x7",
+          "GetCommandLineA|0x5",
+          "FUN_004013b0|0x4013B0",
+          "LoadStringA|0x2C",
           "GetLastError|0x6",
           "GetExitCodeProcess|0x2",
-          "FUN_004013b0|0x4013B0"
+          "CreateProcessA|0x4",
+          "MessageBoxA|0x2B"
         ],
         "LoD/1.12a": [
           "CreateProcessA|0x4",
           "GetExitCodeProcess|0x2",
-          "LoadStringA|0x2C",
-          "WaitForMultipleObjects|0x3",
-          "FUN_004013b0|0x4013B0",
-          "CloseHandle|0x17",
-          "GetCommandLineA|0x5",
-          "MessageBoxA|0x2B",
-          "CreateEventA|0x7",
           "GetLastError|0x6",
-          "FUN_0040146d|0x40146D"
+          "MessageBoxA|0x2B",
+          "CloseHandle|0x17",
+          "WaitForMultipleObjects|0x3",
+          "LoadStringA|0x2C",
+          "GetCommandLineA|0x5",
+          "CreateEventA|0x7",
+          "FUN_0040146d|0x40146D",
+          "FUN_004013b0|0x4013B0"
         ],
         "LoD/1.13c": [
+          "FUN_004013b0|0x4013B0",
+          "MessageBoxA|0x2B",
+          "FUN_0040146d|0x40146D",
+          "GetExitCodeProcess|0x2",
+          "LoadStringA|0x2C",
           "WaitForMultipleObjects|0x3",
           "GetLastError|0x6",
-          "GetExitCodeProcess|0x2",
-          "FUN_004013b0|0x4013B0",
           "CloseHandle|0x17",
+          "CreateProcessA|0x4",
           "GetCommandLineA|0x5",
-          "FUN_0040146d|0x40146D",
-          "CreateEventA|0x7",
-          "LoadStringA|0x2C",
-          "MessageBoxA|0x2B",
-          "CreateProcessA|0x4"
+          "CreateEventA|0x7"
         ],
         "LoD/1.13d": [
-          "GetCommandLineA|0x5",
-          "FUN_004013b0|0x4013B0",
-          "CreateEventA|0x7",
-          "FUN_0040146d|0x40146D",
-          "LoadStringA|0x2C",
-          "MessageBoxA|0x2B",
-          "GetLastError|0x6",
           "WaitForMultipleObjects|0x3",
+          "FUN_004013b0|0x4013B0",
           "CreateProcessA|0x4",
           "GetExitCodeProcess|0x2",
-          "CloseHandle|0x17"
+          "MessageBoxA|0x2B",
+          "FUN_0040146d|0x40146D",
+          "CreateEventA|0x7",
+          "GetCommandLineA|0x5",
+          "CloseHandle|0x17",
+          "GetLastError|0x6",
+          "LoadStringA|0x2C"
         ],
         "LoD/1.14a": [
-          "GetCommandLineA|0x5",
-          "WaitForMultipleObjects|0x3",
-          "GetLastError|0x6",
           "FUN_004013b0|0x4013B0",
-          "LoadStringA|0x2C",
+          "WaitForMultipleObjects|0x3",
           "MessageBoxA|0x2B",
-          "CreateEventA|0x7",
           "GetExitCodeProcess|0x2",
+          "GetCommandLineA|0x5",
+          "CreateProcessA|0x4",
           "CloseHandle|0x17",
+          "LoadStringA|0x2C",
+          "GetLastError|0x6",
           "FUN_0040146d|0x40146D",
-          "CreateProcessA|0x4"
+          "CreateEventA|0x7"
         ],
         "LoD/1.14b": [
-          "FUN_0040146d|0x40146D",
-          "GetLastError|0x6",
-          "CreateProcessA|0x4",
-          "CreateEventA|0x7",
-          "FUN_004013b0|0x4013B0",
-          "LoadStringA|0x2C",
           "GetCommandLineA|0x5",
           "MessageBoxA|0x2B",
-          "WaitForMultipleObjects|0x3",
+          "CreateEventA|0x7",
+          "LoadStringA|0x2C",
+          "FUN_0040146d|0x40146D",
+          "CloseHandle|0x17",
           "GetExitCodeProcess|0x2",
-          "CloseHandle|0x17"
+          "CreateProcessA|0x4",
+          "FUN_004013b0|0x4013B0",
+          "WaitForMultipleObjects|0x3",
+          "GetLastError|0x6"
         ],
         "LoD/1.14c": [
+          "CreateProcessA|0x4",
           "CloseHandle|0x17",
-          "WaitForMultipleObjects|0x3",
-          "CreateEventA|0x7",
           "GetLastError|0x6",
-          "FUN_004013b0|0x4013B0",
+          "MessageBoxA|0x2B",
           "LoadStringA|0x2C",
           "GetCommandLineA|0x5",
-          "MessageBoxA|0x2B",
           "FUN_0040146d|0x40146D",
-          "CreateProcessA|0x4",
-          "GetExitCodeProcess|0x2"
+          "CreateEventA|0x7",
+          "FUN_004013b0|0x4013B0",
+          "GetExitCodeProcess|0x2",
+          "WaitForMultipleObjects|0x3"
         ],
         "LoD/1.14d": [
-          "LoadStringA|0x2C",
-          "FUN_0040146d|0x40146D",
           "MessageBoxA|0x2B",
-          "WaitForMultipleObjects|0x3",
-          "FUN_004013b0|0x4013B0",
-          "CloseHandle|0x17",
-          "CreateProcessA|0x4",
           "GetExitCodeProcess|0x2",
-          "CreateEventA|0x7",
           "GetLastError|0x6",
-          "GetCommandLineA|0x5"
+          "LoadStringA|0x2C",
+          "WaitForMultipleObjects|0x3",
+          "CloseHandle|0x17",
+          "GetCommandLineA|0x5",
+          "FUN_0040146d|0x40146D",
+          "CreateEventA|0x7",
+          "FUN_004013b0|0x4013B0",
+          "CreateProcessA|0x4"
         ]
       },
       "callers": {
@@ -2642,8 +2642,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_00401a02|0x401A02"
         ],
         "Classic/1.02": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "FUN_00401a02|0x401A02",
+          "_strncat|0x401A40"
         ],
         "Classic/1.03": [
           "_strncat|0x401A40",
@@ -2654,16 +2654,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_00401a02|0x401A02"
         ],
         "LoD/1.07": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "FUN_00401a02|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.08": [
           "_strncat|0x401A40",
           "FUN_00401a02|0x401A02"
         ],
         "LoD/1.09": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
+          "_strncat|0x401A40",
+          "FUN_00401a02|0x401A02"
         ],
         "LoD/1.09b": [
           "FUN_00401a02|0x401A02",
@@ -2674,40 +2674,40 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_00401a02|0x401A02"
         ],
         "LoD/1.10": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
+          "_strncat|0x401A40",
+          "FUN_00401a02|0x401A02"
         ],
         "LoD/1.11": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
+          "_strncat|0x401A40",
+          "FUN_00401a02|0x401A02"
         ],
         "LoD/1.11b": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "FUN_00401a02|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.12a": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
-        ],
-        "LoD/1.13c": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
-        ],
-        "LoD/1.13d": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
-        ],
-        "LoD/1.14a": [
           "_strncat|0x401A40",
           "FUN_00401a02|0x401A02"
         ],
-        "LoD/1.14b": [
+        "LoD/1.13c": [
+          "_strncat|0x401A40",
+          "FUN_00401a02|0x401A02"
+        ],
+        "LoD/1.13d": [
+          "_strncat|0x401A40",
+          "FUN_00401a02|0x401A02"
+        ],
+        "LoD/1.14a": [
           "FUN_00401a02|0x401A02",
           "_strncat|0x401A40"
         ],
+        "LoD/1.14b": [
+          "_strncat|0x401A40",
+          "FUN_00401a02|0x401A02"
+        ],
         "LoD/1.14c": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
+          "_strncat|0x401A40",
+          "FUN_00401a02|0x401A02"
         ],
         "LoD/1.14d": [
           "_strncat|0x401A40",
@@ -3651,44 +3651,44 @@ var FUNCTIONS_Diablo_II_exe = {
       "display_name": "NOP_019a732ba011ad14",
       "callees": {
         "Classic/1.00": [
-          "_strstr|0x401C00",
           "_strlen|0x401B80",
+          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63"
         ],
         "Classic/1.01": [
-          "_strstr|0x401C00",
           "_strlen|0x401B80",
+          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63"
         ],
         "Classic/1.02": [
-          "_strstr|0x401C00",
           "_strlen|0x401B80",
+          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63"
         ],
         "Classic/1.03": [
-          "_strstr|0x401C00",
-          "FUN_00401b63|0x401B63",
-          "_strlen|0x401B80"
-        ],
-        "Classic/1.04c": [
-          "_strstr|0x401C00",
           "_strlen|0x401B80",
+          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63"
         ],
-        "LoD/1.07": [
-          "FUN_00401c00|0x401C00",
+        "Classic/1.04c": [
           "FUN_00401b63|0x401B63",
+          "_strstr|0x401C00",
+          "_strlen|0x401B80"
+        ],
+        "LoD/1.07": [
+          "FUN_00401b63|0x401B63",
+          "FUN_00401c00|0x401C00",
           "_strlen|0x401B80"
         ],
         "LoD/1.08": [
+          "FUN_00401b63|0x401B63",
           "_strlen|0x401B80",
-          "_strstr|0x401C00",
-          "FUN_00401b63|0x401B63"
+          "_strstr|0x401C00"
         ],
         "LoD/1.09": [
-          "_strstr|0x401C00",
           "_strlen|0x401B80",
-          "FUN_00401b63|0x401B63"
+          "FUN_00401b63|0x401B63",
+          "_strstr|0x401C00"
         ],
         "LoD/1.09b": [
           "_strlen|0x401B80",
@@ -3696,19 +3696,19 @@ var FUNCTIONS_Diablo_II_exe = {
           "_strstr|0x401C00"
         ],
         "LoD/1.09d": [
-          "_strlen|0x401B80",
           "_strstr|0x401C00",
+          "_strlen|0x401B80",
           "FUN_00401b63|0x401B63"
         ],
         "LoD/1.10": [
-          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63",
+          "_strstr|0x401C00",
           "_strlen|0x401B80"
         ],
         "LoD/1.11": [
-          "_strlen|0x401B80",
           "FUN_00401b63|0x401B63",
-          "_strstr|0x401C00"
+          "_strstr|0x401C00",
+          "_strlen|0x401B80"
         ],
         "LoD/1.11b": [
           "_strstr|0x401C00",
@@ -3716,29 +3716,29 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_00401b63|0x401B63"
         ],
         "LoD/1.12a": [
-          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63",
-          "_strlen|0x401B80"
+          "_strlen|0x401B80",
+          "_strstr|0x401C00"
         ],
         "LoD/1.13c": [
-          "FUN_00401b63|0x401B63",
           "_strlen|0x401B80",
-          "_strstr|0x401C00"
+          "_strstr|0x401C00",
+          "FUN_00401b63|0x401B63"
         ],
         "LoD/1.13d": [
+          "_strlen|0x401B80",
+          "_strstr|0x401C00",
+          "FUN_00401b63|0x401B63"
+        ],
+        "LoD/1.14a": [
           "FUN_00401b63|0x401B63",
           "_strlen|0x401B80",
           "_strstr|0x401C00"
         ],
-        "LoD/1.14a": [
-          "_strstr|0x401C00",
-          "FUN_00401b63|0x401B63",
-          "_strlen|0x401B80"
-        ],
         "LoD/1.14b": [
-          "_strstr|0x401C00",
+          "_strlen|0x401B80",
           "FUN_00401b63|0x401B63",
-          "_strlen|0x401B80"
+          "_strstr|0x401C00"
         ],
         "LoD/1.14c": [
           "FUN_00401b63|0x401B63",
@@ -3746,9 +3746,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "_strstr|0x401C00"
         ],
         "LoD/1.14d": [
+          "_strstr|0x401C00",
           "_strlen|0x401B80",
-          "FUN_00401b63|0x401B63",
-          "_strstr|0x401C00"
+          "FUN_00401b63|0x401B63"
         ]
       },
       "callers": {
@@ -4564,344 +4564,344 @@ var FUNCTIONS_Diablo_II_exe = {
       "display_name": "NOP_801b028bb58cac0e",
       "callees": {
         "Classic/1.00": [
-          "GetStartupInfoA|0xC",
-          "GetModuleHandleA|0xB",
-          "ReportError|0x401CAD",
-          "FUN_004015fe|0x4015FE",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetVersion|0xD",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401d82|0x401D82",
-          "FUN_00401000|0x401000",
-          "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401f06|0x401F06",
           "GetCommandLineA|0x5",
-          "InitializeModuleData|0x402017",
-          "InitializeDllHeapAndResources|0x402541"
-        ],
-        "Classic/1.01": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetVersion|0xD",
-          "GetStartupInfoA|0xC",
-          "FUN_00401f06|0x401F06",
-          "GetCommandLineA|0x5",
-          "FUN_00401000|0x401000",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401d82|0x401D82",
-          "GetEnvironmentStringsConverted|0x402264",
-          "GetModuleHandleA|0xB",
           "FUN_004015fe|0x4015FE",
-          "ReportError|0x401CAD",
-          "InitializeDllHeapAndResources|0x402541"
-        ],
-        "Classic/1.02": [
           "InitializeDllHeapAndResources|0x402541",
-          "InitializeFileDescriptors|0x402396",
           "GetModuleHandleA|0xB",
-          "GetCommandLineA|0x5",
-          "GetEnvironmentStringsConverted|0x402264",
-          "FUN_004015fe|0x4015FE",
-          "InitializeModuleData|0x402017",
           "FUN_00401000|0x401000",
-          "ReportError|0x401CAD",
-          "FUN_00401d82|0x401D82",
-          "GetVersion|0xD",
-          "InitializeGlobalConstructors|0x401C80",
           "FUN_00401f06|0x401F06",
+          "FUN_00401d82|0x401D82",
+          "InitializeModuleData|0x402017",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396",
+          "ReportError|0x401CAD",
           "GetStartupInfoA|0xC",
+          "GetVersion|0xD",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
+        "Classic/1.01": [
+          "GetCommandLineA|0x5",
+          "ReportError|0x401CAD",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "GetModuleHandleA|0xB",
+          "GetVersion|0xD",
+          "FUN_00401000|0x401000",
+          "InitializeModuleData|0x402017",
+          "GetStartupInfoA|0xC",
+          "FUN_00401d82|0x401D82",
+          "InitializeDllHeapAndResources|0x402541",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeGlobalConstructors|0x401C80",
+          "FUN_004015fe|0x4015FE",
+          "FUN_00401f06|0x401F06"
+        ],
+        "Classic/1.02": [
+          "FUN_00401d82|0x401D82",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_004015fe|0x4015FE",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetVersion|0xD",
+          "GetModuleHandleA|0xB",
+          "InitializeModuleData|0x402017",
+          "GetStartupInfoA|0xC",
+          "GetCommandLineA|0x5",
+          "ReportError|0x401CAD",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeDllHeapAndResources|0x402541",
+          "InitializeFileDescriptors|0x402396",
+          "FUN_00401f06|0x401F06",
+          "FUN_00401000|0x401000"
+        ],
         "Classic/1.03": [
+          "InitializeGlobalConstructors|0x401C80",
+          "GetStartupInfoA|0xC",
           "GetCommandLineA|0x5",
           "FUN_00401f06|0x401F06",
-          "GetModuleHandleA|0xB",
+          "ReportError|0x401CAD",
+          "InitializeDllHeapAndResources|0x402541",
+          "InitializeModuleData|0x402017",
+          "FUN_00401000|0x401000",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_004015fe|0x4015FE",
           "FUN_00401d82|0x401D82",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetStartupInfoA|0xC",
-          "InitializeGlobalConstructors|0x401C80",
           "GetVersion|0xD",
-          "ReportError|0x401CAD",
-          "FUN_00401000|0x401000",
-          "FUN_004015fe|0x4015FE",
-          "InitializeDllHeapAndResources|0x402541",
-          "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "Classic/1.04c": [
-          "FUN_004015fe|0x4015FE",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
-          "InitializeDllHeapAndResources|0x402541",
-          "FUN_00401f06|0x401F06",
-          "InitializeGlobalConstructors|0x401C80",
-          "ReportError|0x401CAD",
           "GetModuleHandleA|0xB",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetStartupInfoA|0xC",
-          "GetCommandLineA|0x5",
-          "GetVersion|0xD",
-          "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401000|0x401000",
-          "FUN_00401d82|0x401D82"
-        ],
-        "LoD/1.07": [
-          "InitializeModuleData|0x402017",
-          "GetModuleHandleA|0xB",
-          "FUN_00401000|0x401000",
-          "GetVersion|0xD",
-          "GetStartupInfoA|0xC",
-          "FUN_00401f06|0x401F06",
           "InitializeFileDescriptors|0x402396",
-          "FUN_00401d82|0x401D82",
-          "InitializeGlobalConstructors|0x401C80",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeDllHeapAndResources|0x402541",
-          "ReportError|0x401CAD",
-          "FUN_004015fe|0x4015FE",
-          "GetCommandLineA|0x5",
           "GetEnvironmentStringsConverted|0x402264"
         ],
-        "LoD/1.08": [
+        "Classic/1.04c": [
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeGlobalConstructors|0x401C80",
+          "FUN_00401000|0x401000",
+          "FUN_00401f06|0x401F06",
+          "GetStartupInfoA|0xC",
+          "ReportError|0x401CAD",
           "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetModuleHandleA|0xB",
+          "FUN_00401d82|0x401D82",
+          "GetCommandLineA|0x5",
+          "GetVersion|0xD",
+          "InitializeFileDescriptors|0x402396",
+          "FUN_004015fe|0x4015FE",
+          "InitializeDllHeapAndResources|0x402541"
+        ],
+        "LoD/1.07": [
+          "FUN_004015fe|0x4015FE",
+          "InitializeFileDescriptors|0x402396",
+          "GetModuleHandleA|0xB",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeDllHeapAndResources|0x402541",
+          "GetStartupInfoA|0xC",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401000|0x401000",
+          "InitializeModuleData|0x402017",
+          "GetCommandLineA|0x5",
+          "GetVersion|0xD",
+          "FUN_00401d82|0x401D82",
+          "FUN_00401f06|0x401F06",
+          "ReportError|0x401CAD",
+          "InitializeGlobalConstructors|0x401C80"
+        ],
+        "LoD/1.08": [
+          "InitializeDllHeapAndResources|0x402541",
+          "FUN_00401f06|0x401F06",
+          "GetModuleHandleA|0xB",
+          "GetCommandLineA|0x5",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetVersion|0xD",
           "GetStartupInfoA|0xC",
           "FUN_004015fe|0x4015FE",
-          "GetCommandLineA|0x5",
-          "FUN_00401d82|0x401D82",
+          "ReportError|0x401CAD",
           "InitializeFileDescriptors|0x402396",
-          "FUN_00401f06|0x401F06",
-          "InitializeDllHeapAndResources|0x402541",
-          "GetModuleHandleA|0xB",
           "InitializeEnvironmentVariables|0x401F5E",
-          "GetVersion|0xD",
-          "InitializeGlobalConstructors|0x401C80",
-          "GetEnvironmentStringsConverted|0x402264",
           "FUN_00401000|0x401000",
-          "ReportError|0x401CAD"
+          "FUN_00401d82|0x401D82",
+          "InitializeModuleData|0x402017",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.09": [
-          "FUN_004015fe|0x4015FE",
-          "GetStartupInfoA|0xC",
-          "InitializeDllHeapAndResources|0x402541",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401d82|0x401D82",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401000|0x401000",
-          "GetVersion|0xD",
-          "GetModuleHandleA|0xB",
+          "InitializeModuleData|0x402017",
+          "GetCommandLineA|0x5",
           "ReportError|0x401CAD",
+          "FUN_004015fe|0x4015FE",
+          "GetVersion|0xD",
           "FUN_00401f06|0x401F06",
-          "GetCommandLineA|0x5"
+          "InitializeDllHeapAndResources|0x402541",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetModuleHandleA|0xB",
+          "InitializeGlobalConstructors|0x401C80",
+          "FUN_00401000|0x401000",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetStartupInfoA|0xC",
+          "FUN_00401d82|0x401D82"
         ],
         "LoD/1.09b": [
-          "InitializeGlobalConstructors|0x401C80",
-          "GetStartupInfoA|0xC",
           "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401f06|0x401F06",
-          "InitializeDllHeapAndResources|0x402541",
           "GetModuleHandleA|0xB",
-          "FUN_00401000|0x401000",
-          "InitializeModuleData|0x402017",
+          "GetVersion|0xD",
+          "InitializeDllHeapAndResources|0x402541",
+          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_004015fe|0x4015FE",
           "GetCommandLineA|0x5",
-          "FUN_00401d82|0x401D82",
           "ReportError|0x401CAD",
-          "GetVersion|0xD",
-          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401d82|0x401D82",
+          "FUN_00401000|0x401000",
+          "InitializeModuleData|0x402017",
+          "GetStartupInfoA|0xC",
+          "InitializeGlobalConstructors|0x401C80",
+          "FUN_00401f06|0x401F06",
           "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.09d": [
-          "FUN_004015fe|0x4015FE",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401f06|0x401F06",
-          "FUN_00401d82|0x401D82",
-          "GetStartupInfoA|0xC",
-          "InitializeDllHeapAndResources|0x402541",
-          "ReportError|0x401CAD",
           "InitializeFileDescriptors|0x402396",
-          "GetVersion|0xD",
-          "GetModuleHandleA|0xB",
+          "GetEnvironmentStringsConverted|0x402264",
+          "FUN_00401d82|0x401D82",
+          "InitializeDllHeapAndResources|0x402541",
+          "FUN_00401f06|0x401F06",
+          "ReportError|0x401CAD",
+          "GetStartupInfoA|0xC",
+          "FUN_004015fe|0x4015FE",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
+          "GetVersion|0xD",
           "GetCommandLineA|0x5",
+          "GetModuleHandleA|0xB",
+          "InitializeModuleData|0x402017",
           "FUN_00401000|0x401000",
-          "GetEnvironmentStringsConverted|0x402264"
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.10": [
-          "InitializeGlobalConstructors|0x401C80",
-          "InitializeDllHeapAndResources|0x402541",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401d82|0x401D82",
           "GetCommandLineA|0x5",
+          "GetStartupInfoA|0xC",
+          "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264",
           "ReportError|0x401CAD",
-          "InitializeModuleData|0x402017",
-          "GetStartupInfoA|0xC",
-          "InitializeFileDescriptors|0x402396",
           "FUN_00401f06|0x401F06",
-          "GetModuleHandleA|0xB",
-          "FUN_004015fe|0x4015FE",
           "GetVersion|0xD",
-          "FUN_00401000|0x401000"
+          "InitializeDllHeapAndResources|0x402541",
+          "FUN_004015fe|0x4015FE",
+          "InitializeGlobalConstructors|0x401C80",
+          "FUN_00401000|0x401000",
+          "FUN_00401d82|0x401D82",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetModuleHandleA|0xB"
         ],
         "LoD/1.11": [
-          "ReportError|0x401CAD",
-          "InitializeDllHeapAndResources|0x402541",
-          "FUN_00401f06|0x401F06",
-          "GetModuleHandleA|0xB",
-          "InitializeGlobalConstructors|0x401C80",
           "GetVersion|0xD",
           "GetCommandLineA|0x5",
-          "FUN_00401000|0x401000",
-          "FUN_00401d82|0x401D82",
-          "GetStartupInfoA|0xC",
-          "FUN_004015fe|0x4015FE",
-          "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "FUN_00401d82|0x401D82",
+          "GetModuleHandleA|0xB",
+          "FUN_004015fe|0x4015FE",
+          "GetStartupInfoA|0xC",
+          "ReportError|0x401CAD",
+          "FUN_00401000|0x401000",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeDllHeapAndResources|0x402541",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "InitializeGlobalConstructors|0x401C80",
+          "FUN_00401f06|0x401F06"
         ],
         "LoD/1.11b": [
-          "InitializeFileDescriptors|0x402396",
-          "GetCommandLineA|0x5",
-          "GetModuleHandleA|0xB",
-          "GetEnvironmentStringsConverted|0x402264",
-          "ReportError|0x401CAD",
           "InitializeModuleData|0x402017",
-          "FUN_00401000|0x401000",
-          "InitializeDllHeapAndResources|0x402541",
-          "FUN_00401d82|0x401D82",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_004015fe|0x4015FE",
-          "GetVersion|0xD",
           "InitializeGlobalConstructors|0x401C80",
+          "FUN_00401d82|0x401D82",
+          "GetCommandLineA|0x5",
+          "GetVersion|0xD",
           "FUN_00401f06|0x401F06",
-          "GetStartupInfoA|0xC"
+          "ReportError|0x401CAD",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetStartupInfoA|0xC",
+          "FUN_004015fe|0x4015FE",
+          "InitializeDllHeapAndResources|0x402541",
+          "InitializeFileDescriptors|0x402396",
+          "GetModuleHandleA|0xB",
+          "FUN_00401000|0x401000"
         ],
         "LoD/1.12a": [
-          "GetVersion|0xD",
+          "InitializeModuleData|0x402017",
           "GetStartupInfoA|0xC",
+          "InitializeFileDescriptors|0x402396",
+          "FUN_00401000|0x401000",
+          "FUN_004015fe|0x4015FE",
+          "InitializeGlobalConstructors|0x401C80",
+          "FUN_00401f06|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264",
+          "FUN_00401d82|0x401D82",
+          "GetVersion|0xD",
           "GetModuleHandleA|0xB",
           "InitializeDllHeapAndResources|0x402541",
-          "InitializeFileDescriptors|0x402396",
-          "FUN_00401f06|0x401F06",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_004015fe|0x4015FE",
-          "FUN_00401d82|0x401D82",
-          "GetEnvironmentStringsConverted|0x402264",
-          "ReportError|0x401CAD",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401000|0x401000",
           "GetCommandLineA|0x5",
-          "InitializeModuleData|0x402017"
+          "ReportError|0x401CAD"
         ],
         "LoD/1.13c": [
-          "FUN_00401d82|0x401D82",
-          "InitializeModuleData|0x402017",
-          "ReportError|0x401CAD",
-          "GetCommandLineA|0x5",
-          "FUN_004015fe|0x4015FE",
-          "InitializeDllHeapAndResources|0x402541",
-          "InitializeFileDescriptors|0x402396",
-          "GetStartupInfoA|0xC",
-          "FUN_00401000|0x401000",
-          "FUN_00401f06|0x401F06",
-          "GetModuleHandleA|0xB",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeGlobalConstructors|0x401C80",
+          "InitializeFileDescriptors|0x402396",
           "GetVersion|0xD",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetStartupInfoA|0xC",
+          "FUN_00401f06|0x401F06",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetModuleHandleA|0xB",
+          "InitializeDllHeapAndResources|0x402541",
+          "GetEnvironmentStringsConverted|0x402264",
+          "FUN_004015fe|0x4015FE",
+          "InitializeModuleData|0x402017",
+          "FUN_00401000|0x401000",
+          "GetCommandLineA|0x5",
+          "FUN_00401d82|0x401D82",
+          "ReportError|0x401CAD"
         ],
         "LoD/1.13d": [
-          "GetStartupInfoA|0xC",
-          "InitializeDllHeapAndResources|0x402541",
+          "FUN_004015fe|0x4015FE",
           "InitializeFileDescriptors|0x402396",
-          "FUN_00401d82|0x401D82",
+          "GetModuleHandleA|0xB",
+          "InitializeModuleData|0x402017",
           "FUN_00401000|0x401000",
-          "FUN_00401f06|0x401F06",
+          "GetVersion|0xD",
+          "InitializeDllHeapAndResources|0x402541",
+          "ReportError|0x401CAD",
+          "FUN_00401d82|0x401D82",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetStartupInfoA|0xC",
+          "GetEnvironmentStringsConverted|0x402264",
           "GetCommandLineA|0x5",
           "InitializeGlobalConstructors|0x401C80",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "ReportError|0x401CAD",
-          "GetEnvironmentStringsConverted|0x402264",
-          "GetVersion|0xD",
-          "FUN_004015fe|0x4015FE",
-          "GetModuleHandleA|0xB",
-          "InitializeModuleData|0x402017"
+          "FUN_00401f06|0x401F06"
         ],
         "LoD/1.14a": [
-          "FUN_004015fe|0x4015FE",
-          "InitializeGlobalConstructors|0x401C80",
-          "ReportError|0x401CAD",
-          "FUN_00401d82|0x401D82",
-          "InitializeFileDescriptors|0x402396",
           "GetVersion|0xD",
-          "GetModuleHandleA|0xB",
-          "FUN_00401000|0x401000",
-          "GetStartupInfoA|0xC",
-          "InitializeDllHeapAndResources|0x402541",
-          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "GetEnvironmentStringsConverted|0x402264",
           "FUN_00401f06|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "ReportError|0x401CAD",
+          "FUN_00401000|0x401000",
+          "InitializeDllHeapAndResources|0x402541",
           "GetCommandLineA|0x5",
           "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetStartupInfoA|0xC",
+          "FUN_004015fe|0x4015FE",
+          "GetModuleHandleA|0xB",
+          "InitializeGlobalConstructors|0x401C80",
+          "FUN_00401d82|0x401D82"
         ],
         "LoD/1.14b": [
+          "InitializeDllHeapAndResources|0x402541",
+          "FUN_00401d82|0x401D82",
+          "GetVersion|0xD",
+          "FUN_004015fe|0x4015FE",
           "InitializeEnvironmentVariables|0x401F5E",
           "GetStartupInfoA|0xC",
-          "ReportError|0x401CAD",
-          "FUN_004015fe|0x4015FE",
-          "FUN_00401d82|0x401D82",
-          "InitializeModuleData|0x402017",
-          "GetCommandLineA|0x5",
-          "InitializeGlobalConstructors|0x401C80",
           "GetModuleHandleA|0xB",
-          "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401f06|0x401F06",
-          "FUN_00401000|0x401000",
-          "InitializeDllHeapAndResources|0x402541",
           "InitializeFileDescriptors|0x402396",
-          "GetVersion|0xD"
+          "GetCommandLineA|0x5",
+          "FUN_00401000|0x401000",
+          "GetEnvironmentStringsConverted|0x402264",
+          "ReportError|0x401CAD",
+          "FUN_00401f06|0x401F06",
+          "InitializeModuleData|0x402017",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.14c": [
+          "InitializeModuleData|0x402017",
+          "FUN_00401000|0x401000",
+          "FUN_00401d82|0x401D82",
+          "GetCommandLineA|0x5",
           "GetEnvironmentStringsConverted|0x402264",
           "GetVersion|0xD",
-          "InitializeDllHeapAndResources|0x402541",
-          "InitializeModuleData|0x402017",
           "InitializeGlobalConstructors|0x401C80",
-          "GetCommandLineA|0x5",
-          "FUN_00401d82|0x401D82",
-          "FUN_00401000|0x401000",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetModuleHandleA|0xB",
+          "InitializeDllHeapAndResources|0x402541",
           "FUN_004015fe|0x4015FE",
+          "GetModuleHandleA|0xB",
+          "InitializeFileDescriptors|0x402396",
           "GetStartupInfoA|0xC",
+          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_00401f06|0x401F06",
           "ReportError|0x401CAD"
         ],
         "LoD/1.14d": [
-          "FUN_004015fe|0x4015FE",
-          "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06",
-          "GetStartupInfoA|0xC",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeDllHeapAndResources|0x402541",
-          "GetVersion|0xD",
           "FUN_00401000|0x401000",
-          "InitializeFileDescriptors|0x402396",
-          "ReportError|0x401CAD",
-          "GetModuleHandleA|0xB",
-          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_004015fe|0x4015FE",
           "FUN_00401d82|0x401D82",
           "GetCommandLineA|0x5",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeDllHeapAndResources|0x402541",
+          "GetStartupInfoA|0xC",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeModuleData|0x402017",
+          "GetModuleHandleA|0xB",
+          "GetVersion|0xD",
+          "InitializeFileDescriptors|0x402396",
+          "FUN_00401f06|0x401F06",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "ReportError|0x401CAD"
         ]
       },
       "instructions": {
@@ -6018,53 +6018,53 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
           "__exit|0x401CBE"
         ],
         "Classic/1.01": [
-          "__exit|0x401CBE",
           "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE",
           "CleanupConsoleOutput|0x402750"
         ],
         "Classic/1.02": [
-          "__exit|0x401CBE",
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE"
         ],
         "Classic/1.03": [
           "CleanupConsoleOutput|0x402750",
+          "__exit|0x401CBE",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.04c": [
+          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
           "__exit|0x401CBE"
         ],
-        "Classic/1.04c": [
+        "LoD/1.07": [
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.08": [
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.09": [
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE"
+        ],
+        "LoD/1.09b": [
           "CleanupConsoleOutput|0x402750",
           "__exit|0x401CBE",
           "DisplayRuntimeError|0x402789"
         ],
-        "LoD/1.07": [
-          "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.08": [
-          "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.09": [
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.09b": [
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "__exit|0x401CBE"
-        ],
         "LoD/1.09d": [
-          "__exit|0x401CBE",
           "CleanupConsoleOutput|0x402750",
+          "__exit|0x401CBE",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.10": [
@@ -6078,96 +6078,96 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.11b": [
+          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE",
-          "CleanupConsoleOutput|0x402750"
+          "__exit|0x401CBE"
         ],
         "LoD/1.12a": [
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE"
+        ],
+        "LoD/1.13c": [
           "DisplayRuntimeError|0x402789",
           "__exit|0x401CBE",
           "CleanupConsoleOutput|0x402750"
         ],
-        "LoD/1.13c": [
+        "LoD/1.13d": [
+          "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750"
+        ],
+        "LoD/1.14a": [
+          "DisplayRuntimeError|0x402789",
+          "CleanupConsoleOutput|0x402750",
+          "__exit|0x401CBE"
+        ],
+        "LoD/1.14b": [
           "CleanupConsoleOutput|0x402750",
           "__exit|0x401CBE",
           "DisplayRuntimeError|0x402789"
         ],
-        "LoD/1.13d": [
-          "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.14a": [
-          "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.14b": [
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "__exit|0x401CBE"
-        ],
         "LoD/1.14c": [
-          "__exit|0x401CBE",
           "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "__exit|0x401CBE"
         ],
         "LoD/1.14d": [
-          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750"
+          "__exit|0x401CBE"
         ]
       },
       "callers": {
         "Classic/1.00": [
+          "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "Classic/1.01": [
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017"
         ],
-        "Classic/1.01": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
         "Classic/1.02": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "Classic/1.03": [
-          "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "Classic/1.04c": [
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017"
+        ],
+        "Classic/1.03": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017"
+        ],
+        "Classic/1.04c": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.07": [
-          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.08": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.09": [
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.09b": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017"
         ],
-        "LoD/1.09d": [
-          "InitializeEnvironmentVariables|0x401F5E",
+        "LoD/1.09": [
+          "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.09b": [
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396"
+        ],
+        "LoD/1.09d": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.10": [
           "InitializeModuleData|0x402017",
@@ -6175,24 +6175,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.11": [
-          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.11b": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017"
-        ],
-        "LoD/1.12a": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017"
-        ],
-        "LoD/1.13c": [
           "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396"
+        ],
+        "LoD/1.12a": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396"
+        ],
+        "LoD/1.13c": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.13d": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -6200,19 +6200,19 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.14a": [
-          "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14b": [
+          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396"
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.14c": [
-          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017"
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14d": [
           "InitializeModuleData|0x402017",
@@ -6851,19 +6851,19 @@ var FUNCTIONS_Diablo_II_exe = {
       "display_name": "NOP_439add363376dec0",
       "callees": {
         "Classic/1.00": [
+          "ExitProcess|0xE",
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.01": [
           "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750",
           "ExitProcess|0xE"
         ],
-        "Classic/1.01": [
-          "ExitProcess|0xE",
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750"
-        ],
         "Classic/1.02": [
-          "ExitProcess|0xE",
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "ExitProcess|0xE"
         ],
         "Classic/1.03": [
           "CleanupConsoleOutput|0x402750",
@@ -6871,9 +6871,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "ExitProcess|0xE"
         ],
         "Classic/1.04c": [
-          "ExitProcess|0xE",
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "ExitProcess|0xE"
         ],
         "LoD/1.07": [
           "ExitProcess|0xE",
@@ -6881,24 +6881,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.08": [
-          "ExitProcess|0xE",
           "CleanupConsoleOutput|0x402750",
+          "ExitProcess|0xE",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09": [
-          "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE"
         ],
         "LoD/1.09b": [
-          "ExitProcess|0xE",
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750"
-        ],
-        "LoD/1.09d": [
           "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE"
+        ],
+        "LoD/1.09d": [
+          "CleanupConsoleOutput|0x402750",
+          "ExitProcess|0xE",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.10": [
           "DisplayRuntimeError|0x402789",
@@ -6906,49 +6906,49 @@ var FUNCTIONS_Diablo_II_exe = {
           "ExitProcess|0xE"
         ],
         "LoD/1.11": [
+          "ExitProcess|0xE",
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.11b": [
           "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE"
-        ],
-        "LoD/1.11b": [
-          "DisplayRuntimeError|0x402789",
-          "ExitProcess|0xE",
-          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.12a": [
           "ExitProcess|0xE",
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.13c": [
-          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE",
-          "DisplayRuntimeError|0x402789"
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.13d": [
+          "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE",
-          "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789"
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.14a": [
-          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
+          "CleanupConsoleOutput|0x402750",
           "ExitProcess|0xE"
         ],
         "LoD/1.14b": [
-          "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE"
         ],
         "LoD/1.14c": [
           "DisplayRuntimeError|0x402789",
-          "ExitProcess|0xE",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "ExitProcess|0xE"
         ],
         "LoD/1.14d": [
-          "ExitProcess|0xE",
+          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750"
+          "ExitProcess|0xE"
         ]
       },
       "callers": {
@@ -7667,144 +7667,144 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeCharacterTables|0x401861",
+          "MapCodePageIdentifier|0x401805",
           "InitializeLocaleDataBuffers|0x401838",
-          "GetCPInfo|0xF",
           "ResolveCodePageIdentifier|0x4017BB",
-          "MapCodePageIdentifier|0x401805"
+          "InitializeCharacterTables|0x401861",
+          "GetCPInfo|0xF"
         ],
         "Classic/1.01": [
           "InitializeCharacterTables|0x401861",
-          "InitializeLocaleDataBuffers|0x401838",
           "ResolveCodePageIdentifier|0x4017BB",
           "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805"
+          "MapCodePageIdentifier|0x401805",
+          "InitializeLocaleDataBuffers|0x401838"
         ],
         "Classic/1.02": [
-          "InitializeLocaleDataBuffers|0x401838",
-          "GetCPInfo|0xF",
           "MapCodePageIdentifier|0x401805",
+          "InitializeLocaleDataBuffers|0x401838",
           "InitializeCharacterTables|0x401861",
+          "GetCPInfo|0xF",
           "ResolveCodePageIdentifier|0x4017BB"
         ],
         "Classic/1.03": [
-          "InitializeCharacterTables|0x401861",
-          "InitializeLocaleDataBuffers|0x401838",
-          "ResolveCodePageIdentifier|0x4017BB",
           "MapCodePageIdentifier|0x401805",
-          "GetCPInfo|0xF"
+          "ResolveCodePageIdentifier|0x4017BB",
+          "GetCPInfo|0xF",
+          "InitializeCharacterTables|0x401861",
+          "InitializeLocaleDataBuffers|0x401838"
         ],
         "Classic/1.04c": [
-          "MapCodePageIdentifier|0x401805",
-          "InitializeLocaleDataBuffers|0x401838",
-          "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF",
-          "ResolveCodePageIdentifier|0x4017BB"
-        ],
-        "LoD/1.07": [
-          "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805",
-          "InitializeLocaleDataBuffers|0x401838",
-          "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeCharacterTables|0x401861"
-        ],
-        "LoD/1.08": [
-          "ResolveCodePageIdentifier|0x4017BB",
-          "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805",
-          "InitializeCharacterTables|0x401861",
-          "InitializeLocaleDataBuffers|0x401838"
-        ],
-        "LoD/1.09": [
-          "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805",
-          "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeCharacterTables|0x401861",
-          "InitializeLocaleDataBuffers|0x401838"
-        ],
-        "LoD/1.09b": [
-          "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805",
-          "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeLocaleDataBuffers|0x401838",
-          "InitializeCharacterTables|0x401861"
-        ],
-        "LoD/1.09d": [
-          "InitializeLocaleDataBuffers|0x401838",
-          "MapCodePageIdentifier|0x401805",
-          "InitializeCharacterTables|0x401861",
-          "ResolveCodePageIdentifier|0x4017BB",
-          "GetCPInfo|0xF"
-        ],
-        "LoD/1.10": [
           "InitializeCharacterTables|0x401861",
           "GetCPInfo|0xF",
           "InitializeLocaleDataBuffers|0x401838",
           "ResolveCodePageIdentifier|0x4017BB",
           "MapCodePageIdentifier|0x401805"
         ],
-        "LoD/1.11": [
+        "LoD/1.07": [
+          "InitializeLocaleDataBuffers|0x401838",
+          "InitializeCharacterTables|0x401861",
           "GetCPInfo|0xF",
+          "MapCodePageIdentifier|0x401805",
+          "ResolveCodePageIdentifier|0x4017BB"
+        ],
+        "LoD/1.08": [
+          "MapCodePageIdentifier|0x401805",
+          "ResolveCodePageIdentifier|0x4017BB",
+          "InitializeLocaleDataBuffers|0x401838",
+          "GetCPInfo|0xF",
+          "InitializeCharacterTables|0x401861"
+        ],
+        "LoD/1.09": [
+          "ResolveCodePageIdentifier|0x4017BB",
+          "GetCPInfo|0xF",
+          "InitializeCharacterTables|0x401861",
+          "InitializeLocaleDataBuffers|0x401838",
+          "MapCodePageIdentifier|0x401805"
+        ],
+        "LoD/1.09b": [
           "InitializeLocaleDataBuffers|0x401838",
           "MapCodePageIdentifier|0x401805",
           "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeCharacterTables|0x401861"
+          "InitializeCharacterTables|0x401861",
+          "GetCPInfo|0xF"
+        ],
+        "LoD/1.09d": [
+          "InitializeCharacterTables|0x401861",
+          "InitializeLocaleDataBuffers|0x401838",
+          "MapCodePageIdentifier|0x401805",
+          "GetCPInfo|0xF",
+          "ResolveCodePageIdentifier|0x4017BB"
+        ],
+        "LoD/1.10": [
+          "InitializeLocaleDataBuffers|0x401838",
+          "ResolveCodePageIdentifier|0x4017BB",
+          "MapCodePageIdentifier|0x401805",
+          "InitializeCharacterTables|0x401861",
+          "GetCPInfo|0xF"
+        ],
+        "LoD/1.11": [
+          "ResolveCodePageIdentifier|0x4017BB",
+          "MapCodePageIdentifier|0x401805",
+          "InitializeLocaleDataBuffers|0x401838",
+          "InitializeCharacterTables|0x401861",
+          "GetCPInfo|0xF"
         ],
         "LoD/1.11b": [
           "InitializeCharacterTables|0x401861",
-          "MapCodePageIdentifier|0x401805",
           "GetCPInfo|0xF",
           "ResolveCodePageIdentifier|0x4017BB",
+          "MapCodePageIdentifier|0x401805",
           "InitializeLocaleDataBuffers|0x401838"
         ],
         "LoD/1.12a": [
-          "InitializeLocaleDataBuffers|0x401838",
           "ResolveCodePageIdentifier|0x4017BB",
           "InitializeCharacterTables|0x401861",
+          "InitializeLocaleDataBuffers|0x401838",
           "GetCPInfo|0xF",
           "MapCodePageIdentifier|0x401805"
         ],
         "LoD/1.13c": [
           "InitializeLocaleDataBuffers|0x401838",
+          "MapCodePageIdentifier|0x401805",
+          "InitializeCharacterTables|0x401861",
+          "ResolveCodePageIdentifier|0x4017BB",
+          "GetCPInfo|0xF"
+        ],
+        "LoD/1.13d": [
+          "InitializeLocaleDataBuffers|0x401838",
           "GetCPInfo|0xF",
           "InitializeCharacterTables|0x401861",
           "MapCodePageIdentifier|0x401805",
           "ResolveCodePageIdentifier|0x4017BB"
         ],
-        "LoD/1.13d": [
-          "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeLocaleDataBuffers|0x401838",
-          "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805"
-        ],
         "LoD/1.14a": [
-          "MapCodePageIdentifier|0x401805",
-          "InitializeLocaleDataBuffers|0x401838",
           "ResolveCodePageIdentifier|0x4017BB",
           "GetCPInfo|0xF",
+          "InitializeLocaleDataBuffers|0x401838",
+          "MapCodePageIdentifier|0x401805",
           "InitializeCharacterTables|0x401861"
         ],
         "LoD/1.14b": [
           "GetCPInfo|0xF",
-          "ResolveCodePageIdentifier|0x4017BB",
           "MapCodePageIdentifier|0x401805",
           "InitializeLocaleDataBuffers|0x401838",
+          "ResolveCodePageIdentifier|0x4017BB",
           "InitializeCharacterTables|0x401861"
         ],
         "LoD/1.14c": [
+          "MapCodePageIdentifier|0x401805",
+          "ResolveCodePageIdentifier|0x4017BB",
           "InitializeLocaleDataBuffers|0x401838",
           "InitializeCharacterTables|0x401861",
-          "ResolveCodePageIdentifier|0x4017BB",
-          "MapCodePageIdentifier|0x401805",
           "GetCPInfo|0xF"
         ],
         "LoD/1.14d": [
-          "ResolveCodePageIdentifier|0x4017BB",
-          "GetCPInfo|0xF",
-          "InitializeCharacterTables|0x401861",
           "MapCodePageIdentifier|0x401805",
-          "InitializeLocaleDataBuffers|0x401838"
+          "InitializeCharacterTables|0x401861",
+          "ResolveCodePageIdentifier|0x4017BB",
+          "InitializeLocaleDataBuffers|0x401838",
+          "GetCPInfo|0xF"
         ]
       },
       "callers": {
@@ -12125,49 +12125,49 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "LocaleMapStringWithConversion|0x4028DC",
           "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC",
           "GetCPInfo|0xF"
         ],
         "Classic/1.01": [
-          "GetCPInfo|0xF",
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
-        ],
-        "Classic/1.02": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF",
-          "GetCharacterTypeInfo|0x402B2B"
-        ],
-        "Classic/1.03": [
-          "GetCharacterTypeInfo|0x402B2B",
-          "GetCPInfo|0xF",
-          "LocaleMapStringWithConversion|0x4028DC"
-        ],
-        "Classic/1.04c": [
-          "GetCPInfo|0xF",
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
-        ],
-        "LoD/1.07": [
           "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC",
           "GetCPInfo|0xF"
         ],
-        "LoD/1.08": [
-          "GetCPInfo|0xF",
+        "Classic/1.02": [
+          "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCPInfo|0xF"
         ],
-        "LoD/1.09": [
-          "GetCPInfo|0xF",
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
-        ],
-        "LoD/1.09b": [
+        "Classic/1.03": [
           "GetCPInfo|0xF",
           "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
+        ],
+        "Classic/1.04c": [
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCPInfo|0xF",
+          "GetCharacterTypeInfo|0x402B2B"
+        ],
+        "LoD/1.07": [
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCPInfo|0xF",
+          "GetCharacterTypeInfo|0x402B2B"
+        ],
+        "LoD/1.08": [
+          "GetCharacterTypeInfo|0x402B2B",
+          "GetCPInfo|0xF",
+          "LocaleMapStringWithConversion|0x4028DC"
+        ],
+        "LoD/1.09": [
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B",
+          "GetCPInfo|0xF"
+        ],
+        "LoD/1.09b": [
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCPInfo|0xF"
         ],
         "LoD/1.09d": [
           "LocaleMapStringWithConversion|0x4028DC",
@@ -12176,38 +12176,38 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.10": [
           "GetCharacterTypeInfo|0x402B2B",
-          "GetCPInfo|0xF",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCPInfo|0xF"
         ],
         "LoD/1.11": [
-          "GetCPInfo|0xF",
+          "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCPInfo|0xF"
         ],
         "LoD/1.11b": [
-          "GetCharacterTypeInfo|0x402B2B",
           "GetCPInfo|0xF",
+          "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.12a": [
-          "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B",
           "GetCPInfo|0xF"
         ],
         "LoD/1.13c": [
-          "GetCPInfo|0xF",
           "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCPInfo|0xF"
         ],
         "LoD/1.13d": [
-          "LocaleMapStringWithConversion|0x4028DC",
           "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC",
           "GetCPInfo|0xF"
         ],
         "LoD/1.14a": [
-          "GetCharacterTypeInfo|0x402B2B",
+          "GetCPInfo|0xF",
           "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF"
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.14b": [
           "GetCPInfo|0xF",
@@ -12215,14 +12215,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.14c": [
-          "GetCPInfo|0xF",
           "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCPInfo|0xF"
         ],
         "LoD/1.14d": [
-          "GetCPInfo|0xF",
+          "LocaleMapStringWithConversion|0x4028DC",
           "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "GetCPInfo|0xF"
         ]
       },
       "callers": {
@@ -13546,78 +13546,78 @@ var FUNCTIONS_Diablo_II_exe = {
       "callers": {
         "Classic/1.00": [
           "FUN_00401f06|0x401F06",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017"
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.01": [
-          "FUN_00401f06|0x401F06",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "Classic/1.02": [
-          "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "Classic/1.03": [
-          "FUN_00401f06|0x401F06",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "Classic/1.04c": [
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
           "FUN_00401f06|0x401F06"
         ],
-        "LoD/1.07": [
-          "InitializeModuleData|0x402017",
+        "Classic/1.02": [
           "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401f06|0x401F06",
+          "InitializeModuleData|0x402017"
+        ],
+        "Classic/1.03": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401f06|0x401F06",
+          "InitializeModuleData|0x402017"
+        ],
+        "Classic/1.04c": [
+          "FUN_00401f06|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017"
+        ],
+        "LoD/1.07": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
           "FUN_00401f06|0x401F06"
         ],
         "LoD/1.08": [
+          "FUN_00401f06|0x401F06",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06"
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.09": [
           "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401f06|0x401F06"
         ],
         "LoD/1.09b": [
-          "FUN_00401f06|0x401F06",
+          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017"
+          "FUN_00401f06|0x401F06"
         ],
         "LoD/1.09d": [
-          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401f06|0x401F06",
           "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06"
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.10": [
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06"
-        ],
-        "LoD/1.11": [
           "FUN_00401f06|0x401F06",
-          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
-        "LoD/1.11b": [
+        "LoD/1.11": [
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
+          "FUN_00401f06|0x401F06"
+        ],
+        "LoD/1.11b": [
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_00401f06|0x401F06"
         ],
         "LoD/1.12a": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_00401f06|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.13c": [
+          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_00401f06|0x401F06",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.13d": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -13626,8 +13626,8 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.14a": [
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06"
+          "FUN_00401f06|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14b": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -13635,8 +13635,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.14c": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_00401f06|0x401F06"
         ],
         "LoD/1.14d": [
@@ -16855,49 +16855,49 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "DisplayRuntimeError|0x402789",
           "FUN_0040146d|0x40146D",
+          "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.01": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D"
+          "FUN_0040146d|0x40146D",
+          "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.02": [
-          "FUN_0040146d|0x40146D",
           "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_0040146d|0x40146D"
         ],
         "Classic/1.03": [
-          "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "Classic/1.04c": [
           "InitializeEnvironmentVariables|0x401F5E",
           "FUN_0040146d|0x40146D",
           "DisplayRuntimeError|0x402789"
         ],
-        "LoD/1.07": [
+        "Classic/1.04c": [
           "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E",
           "FUN_0040146d|0x40146D"
         ],
-        "LoD/1.08": [
-          "InitializeEnvironmentVariables|0x401F5E",
+        "LoD/1.07": [
           "FUN_0040146d|0x40146D",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.08": [
+          "FUN_0040146d|0x40146D",
+          "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09": [
-          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_0040146d|0x40146D",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09b": [
           "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09d": [
           "FUN_0040146d|0x40146D",
@@ -16905,19 +16905,19 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.10": [
-          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789",
           "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789"
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11": [
-          "FUN_0040146d|0x40146D",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "LoD/1.11b": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789",
           "FUN_0040146d|0x40146D"
+        ],
+        "LoD/1.11b": [
+          "FUN_0040146d|0x40146D",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.12a": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -16926,13 +16926,13 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.13c": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "FUN_0040146d|0x40146D"
         ],
         "LoD/1.13d": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "FUN_0040146d|0x40146D"
         ],
         "LoD/1.14a": [
           "DisplayRuntimeError|0x402789",
@@ -16940,19 +16940,19 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_0040146d|0x40146D"
         ],
         "LoD/1.14b": [
+          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14c": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D"
+          "FUN_0040146d|0x40146D",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14d": [
-          "FUN_0040146d|0x40146D",
+          "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
+          "FUN_0040146d|0x40146D"
         ]
       },
       "instructions": {
@@ -20814,82 +20814,82 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "RunConstructorArray|0x401D68",
           "ExitProcess|0xE",
+          "RunConstructorArray|0x401D68",
           "GetCurrentProcess|0x13",
           "TerminateProcess|0x12"
         ],
         "Classic/1.01": [
-          "RunConstructorArray|0x401D68",
-          "ExitProcess|0xE",
           "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13"
-        ],
-        "Classic/1.02": [
-          "TerminateProcess|0x12",
-          "ExitProcess|0xE",
           "RunConstructorArray|0x401D68",
-          "GetCurrentProcess|0x13"
-        ],
-        "Classic/1.03": [
           "GetCurrentProcess|0x13",
-          "RunConstructorArray|0x401D68",
-          "TerminateProcess|0x12",
           "ExitProcess|0xE"
         ],
-        "Classic/1.04c": [
+        "Classic/1.02": [
+          "GetCurrentProcess|0x13",
+          "TerminateProcess|0x12",
+          "RunConstructorArray|0x401D68",
+          "ExitProcess|0xE"
+        ],
+        "Classic/1.03": [
+          "TerminateProcess|0x12",
           "ExitProcess|0xE",
+          "GetCurrentProcess|0x13",
+          "RunConstructorArray|0x401D68"
+        ],
+        "Classic/1.04c": [
           "RunConstructorArray|0x401D68",
           "GetCurrentProcess|0x13",
-          "TerminateProcess|0x12"
+          "TerminateProcess|0x12",
+          "ExitProcess|0xE"
         ],
         "LoD/1.07": [
           "ExitProcess|0xE",
           "RunConstructorArray|0x401D68",
-          "GetCurrentProcess|0x13",
-          "TerminateProcess|0x12"
+          "TerminateProcess|0x12",
+          "GetCurrentProcess|0x13"
         ],
         "LoD/1.08": [
+          "RunConstructorArray|0x401D68",
+          "TerminateProcess|0x12",
+          "ExitProcess|0xE",
+          "GetCurrentProcess|0x13"
+        ],
+        "LoD/1.09": [
+          "RunConstructorArray|0x401D68",
+          "TerminateProcess|0x12",
+          "ExitProcess|0xE",
+          "GetCurrentProcess|0x13"
+        ],
+        "LoD/1.09b": [
+          "GetCurrentProcess|0x13",
+          "RunConstructorArray|0x401D68",
+          "TerminateProcess|0x12",
+          "ExitProcess|0xE"
+        ],
+        "LoD/1.09d": [
+          "TerminateProcess|0x12",
+          "RunConstructorArray|0x401D68",
+          "ExitProcess|0xE",
+          "GetCurrentProcess|0x13"
+        ],
+        "LoD/1.10": [
+          "GetCurrentProcess|0x13",
+          "ExitProcess|0xE",
+          "RunConstructorArray|0x401D68",
+          "TerminateProcess|0x12"
+        ],
+        "LoD/1.11": [
+          "GetCurrentProcess|0x13",
+          "ExitProcess|0xE",
+          "TerminateProcess|0x12",
+          "RunConstructorArray|0x401D68"
+        ],
+        "LoD/1.11b": [
           "ExitProcess|0xE",
           "RunConstructorArray|0x401D68",
           "GetCurrentProcess|0x13",
           "TerminateProcess|0x12"
-        ],
-        "LoD/1.09": [
-          "GetCurrentProcess|0x13",
-          "TerminateProcess|0x12",
-          "ExitProcess|0xE",
-          "RunConstructorArray|0x401D68"
-        ],
-        "LoD/1.09b": [
-          "ExitProcess|0xE",
-          "RunConstructorArray|0x401D68",
-          "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13"
-        ],
-        "LoD/1.09d": [
-          "RunConstructorArray|0x401D68",
-          "GetCurrentProcess|0x13",
-          "TerminateProcess|0x12",
-          "ExitProcess|0xE"
-        ],
-        "LoD/1.10": [
-          "RunConstructorArray|0x401D68",
-          "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13",
-          "ExitProcess|0xE"
-        ],
-        "LoD/1.11": [
-          "TerminateProcess|0x12",
-          "RunConstructorArray|0x401D68",
-          "GetCurrentProcess|0x13",
-          "ExitProcess|0xE"
-        ],
-        "LoD/1.11b": [
-          "TerminateProcess|0x12",
-          "RunConstructorArray|0x401D68",
-          "ExitProcess|0xE",
-          "GetCurrentProcess|0x13"
         ],
         "LoD/1.12a": [
           "ExitProcess|0xE",
@@ -20898,122 +20898,122 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCurrentProcess|0x13"
         ],
         "LoD/1.13c": [
-          "GetCurrentProcess|0x13",
-          "ExitProcess|0xE",
+          "RunConstructorArray|0x401D68",
           "TerminateProcess|0x12",
-          "RunConstructorArray|0x401D68"
+          "ExitProcess|0xE",
+          "GetCurrentProcess|0x13"
         ],
         "LoD/1.13d": [
-          "ExitProcess|0xE",
           "RunConstructorArray|0x401D68",
-          "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13"
-        ],
-        "LoD/1.14a": [
           "ExitProcess|0xE",
           "GetCurrentProcess|0x13",
-          "RunConstructorArray|0x401D68",
           "TerminateProcess|0x12"
         ],
-        "LoD/1.14b": [
-          "GetCurrentProcess|0x13",
+        "LoD/1.14a": [
+          "RunConstructorArray|0x401D68",
           "TerminateProcess|0x12",
-          "ExitProcess|0xE",
-          "RunConstructorArray|0x401D68"
+          "GetCurrentProcess|0x13",
+          "ExitProcess|0xE"
+        ],
+        "LoD/1.14b": [
+          "TerminateProcess|0x12",
+          "RunConstructorArray|0x401D68",
+          "GetCurrentProcess|0x13",
+          "ExitProcess|0xE"
         ],
         "LoD/1.14c": [
-          "RunConstructorArray|0x401D68",
-          "TerminateProcess|0x12",
-          "ExitProcess|0xE",
-          "GetCurrentProcess|0x13"
-        ],
-        "LoD/1.14d": [
-          "RunConstructorArray|0x401D68",
           "GetCurrentProcess|0x13",
           "TerminateProcess|0x12",
+          "RunConstructorArray|0x401D68",
+          "ExitProcess|0xE"
+        ],
+        "LoD/1.14d": [
+          "GetCurrentProcess|0x13",
+          "TerminateProcess|0x12",
+          "RunConstructorArray|0x401D68",
           "ExitProcess|0xE"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ],
         "Classic/1.01": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "Classic/1.02": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "Classic/1.03": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ],
         "Classic/1.04c": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "LoD/1.07": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "LoD/1.08": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.09": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.09b": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.09d": [
           "__exit|0x401CBE",
           "ReportError|0x401CAD"
         ],
-        "LoD/1.10": [
+        "LoD/1.09": [
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
+        ],
+        "LoD/1.09b": [
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
+        ],
+        "LoD/1.09d": [
           "ReportError|0x401CAD",
           "__exit|0x401CBE"
+        ],
+        "LoD/1.10": [
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ],
         "LoD/1.11": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ],
         "LoD/1.11b": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ],
         "LoD/1.12a": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ],
         "LoD/1.13c": [
           "__exit|0x401CBE",
           "ReportError|0x401CAD"
         ],
         "LoD/1.13d": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ],
         "LoD/1.14a": [
           "ReportError|0x401CAD",
           "__exit|0x401CBE"
         ],
         "LoD/1.14b": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "LoD/1.14c": [
           "__exit|0x401CBE",
           "ReportError|0x401CAD"
         ],
         "LoD/1.14d": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ]
       },
       "instructions": {
@@ -22194,12 +22194,12 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
-        ],
-        "Classic/1.01": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
+        ],
+        "Classic/1.01": [
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "Classic/1.02": [
           "ProcessTerminationHandler|0x401CCF",
@@ -22210,60 +22210,60 @@ var FUNCTIONS_Diablo_II_exe = {
           "ProcessTerminationHandler|0x401CCF"
         ],
         "Classic/1.04c": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.07": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.08": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
-        ],
-        "LoD/1.09": [
           "ProcessTerminationHandler|0x401CCF",
           "InitializeGlobalConstructors|0x401C80"
+        ],
+        "LoD/1.09": [
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.09b": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.09d": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.10": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.11": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.11b": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
-        ],
-        "LoD/1.12a": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
-        ],
-        "LoD/1.13c": [
           "ProcessTerminationHandler|0x401CCF",
           "InitializeGlobalConstructors|0x401C80"
         ],
-        "LoD/1.13d": [
+        "LoD/1.12a": [
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
+        ],
+        "LoD/1.13c": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
+        ],
+        "LoD/1.13d": [
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.14a": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.14b": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.14c": [
           "ProcessTerminationHandler|0x401CCF",
@@ -22899,52 +22899,52 @@ var FUNCTIONS_Diablo_II_exe = {
       "display_name": "NOP_2e230da4a429e3b9",
       "callees": {
         "Classic/1.00": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "FUN_00401ec3|0x401EC3",
+          "UnhandledExceptionFilter|0x14"
         ],
         "Classic/1.01": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "FUN_00401ec3|0x401EC3",
+          "UnhandledExceptionFilter|0x14"
         ],
         "Classic/1.02": [
           "FUN_00401ec3|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
         "Classic/1.03": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
         ],
         "Classic/1.04c": [
           "UnhandledExceptionFilter|0x14",
           "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.07": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "FUN_00401ec3|0x401EC3",
+          "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.08": [
           "UnhandledExceptionFilter|0x14",
           "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.09": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "FUN_00401ec3|0x401EC3",
+          "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.09b": [
           "FUN_00401ec3|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.09d": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.10": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.11": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.11b": [
           "FUN_00401ec3|0x401EC3",
@@ -22955,16 +22955,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.13c": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.13d": [
           "UnhandledExceptionFilter|0x14",
           "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.14a": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.14b": [
           "FUN_00401ec3|0x401EC3",
@@ -22975,8 +22975,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.14d": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
         ]
       },
       "callers": {
@@ -25041,8 +25041,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_00402d8c|0x402D8C"
         ],
         "Classic/1.03": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "Classic/1.04c": [
           "InitializeCodePageOnce|0x4019E6",
@@ -25053,24 +25053,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.08": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.09": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.09b": [
           "InitializeCodePageOnce|0x4019E6",
           "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.09d": [
-          "InitializeCodePageOnce|0x4019E6",
-          "FUN_00402d8c|0x402D8C"
-        ],
-        "LoD/1.10": [
           "FUN_00402d8c|0x402D8C",
           "InitializeCodePageOnce|0x4019E6"
+        ],
+        "LoD/1.10": [
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.11": [
           "InitializeCodePageOnce|0x4019E6",
@@ -25085,24 +25085,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.13c": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.13d": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.14a": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.14b": [
           "FUN_00402d8c|0x402D8C",
           "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.14c": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.14d": [
           "FUN_00402d8c|0x402D8C",
@@ -25944,163 +25944,163 @@ var FUNCTIONS_Diablo_II_exe = {
       "callees": {
         "Classic/1.00": [
           "InitializeCodePageOnce|0x4019E6",
-          "SmartFree|0x402DCE",
-          "_strlen|0x401B80",
           "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
+          "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9"
+          "SmartFree|0x402DCE"
         ],
         "Classic/1.01": [
-          "SmartFree|0x402DCE",
-          "CopyStringOptimized|0x402E00",
           "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
           "_strlen|0x401B80",
           "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0"
+          "CopyStringOptimized|0x402E00",
+          "SmartFree|0x402DCE"
         ],
         "Classic/1.02": [
-          "InitializeCodePageOnce|0x4019E6",
+          "_strlen|0x401B80",
           "AmsgExit|0x4015D9",
+          "SmartFree|0x402DCE",
           "_malloc|0x402EF0",
           "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "SmartFree|0x402DCE"
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "Classic/1.03": [
           "CopyStringOptimized|0x402E00",
-          "AmsgExit|0x4015D9",
-          "_strlen|0x401B80",
-          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
-          "InitializeCodePageOnce|0x4019E6"
+          "_strlen|0x401B80",
+          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9"
         ],
         "Classic/1.04c": [
           "InitializeCodePageOnce|0x4019E6",
-          "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "AmsgExit|0x4015D9",
           "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80"
+          "_strlen|0x401B80",
+          "AmsgExit|0x4015D9",
+          "SmartFree|0x402DCE",
+          "_malloc|0x402EF0"
         ],
         "LoD/1.07": [
-          "AmsgExit|0x4015D9",
           "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
           "InitializeCodePageOnce|0x4019E6",
-          "SmartFree|0x402DCE",
-          "_malloc|0x402EF0"
-        ],
-        "LoD/1.08": [
-          "CopyStringOptimized|0x402E00",
-          "AmsgExit|0x4015D9",
           "_strlen|0x401B80",
           "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9",
+          "SmartFree|0x402DCE"
+        ],
+        "LoD/1.08": [
+          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9",
+          "_strlen|0x401B80",
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.09": [
+          "_malloc|0x402EF0",
+          "SmartFree|0x402DCE",
           "CopyStringOptimized|0x402E00",
-          "AmsgExit|0x4015D9",
           "InitializeCodePageOnce|0x4019E6",
           "_strlen|0x401B80",
-          "SmartFree|0x402DCE",
-          "_malloc|0x402EF0"
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.09b": [
           "InitializeCodePageOnce|0x4019E6",
-          "SmartFree|0x402DCE",
           "AmsgExit|0x4015D9",
           "_strlen|0x401B80",
+          "CopyStringOptimized|0x402E00",
           "_malloc|0x402EF0",
-          "CopyStringOptimized|0x402E00"
+          "SmartFree|0x402DCE"
         ],
         "LoD/1.09d": [
           "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0",
+          "SmartFree|0x402DCE",
           "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
+          "AmsgExit|0x4015D9"
+        ],
+        "LoD/1.10": [
+          "AmsgExit|0x4015D9",
+          "CopyStringOptimized|0x402E00",
+          "InitializeCodePageOnce|0x4019E6",
+          "_strlen|0x401B80",
+          "_malloc|0x402EF0",
+          "SmartFree|0x402DCE"
+        ],
+        "LoD/1.11": [
+          "AmsgExit|0x4015D9",
+          "CopyStringOptimized|0x402E00",
+          "_malloc|0x402EF0",
+          "SmartFree|0x402DCE",
+          "_strlen|0x401B80",
+          "InitializeCodePageOnce|0x4019E6"
+        ],
+        "LoD/1.11b": [
+          "AmsgExit|0x4015D9",
+          "_strlen|0x401B80",
+          "SmartFree|0x402DCE",
+          "CopyStringOptimized|0x402E00",
+          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6"
+        ],
+        "LoD/1.12a": [
+          "_malloc|0x402EF0",
+          "_strlen|0x401B80",
+          "CopyStringOptimized|0x402E00",
+          "AmsgExit|0x4015D9",
+          "SmartFree|0x402DCE",
+          "InitializeCodePageOnce|0x4019E6"
+        ],
+        "LoD/1.13c": [
+          "_malloc|0x402EF0",
+          "CopyStringOptimized|0x402E00",
+          "InitializeCodePageOnce|0x4019E6",
           "_strlen|0x401B80",
           "AmsgExit|0x4015D9",
           "SmartFree|0x402DCE"
         ],
-        "LoD/1.10": [
-          "InitializeCodePageOnce|0x4019E6",
-          "CopyStringOptimized|0x402E00",
-          "AmsgExit|0x4015D9",
-          "SmartFree|0x402DCE",
-          "_strlen|0x401B80",
-          "_malloc|0x402EF0"
-        ],
-        "LoD/1.11": [
-          "_malloc|0x402EF0",
-          "CopyStringOptimized|0x402E00",
-          "InitializeCodePageOnce|0x4019E6",
-          "_strlen|0x401B80",
-          "SmartFree|0x402DCE",
-          "AmsgExit|0x4015D9"
-        ],
-        "LoD/1.11b": [
-          "InitializeCodePageOnce|0x4019E6",
-          "_strlen|0x401B80",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "CopyStringOptimized|0x402E00"
-        ],
-        "LoD/1.12a": [
-          "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6",
-          "CopyStringOptimized|0x402E00",
-          "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "_strlen|0x401B80"
-        ],
-        "LoD/1.13c": [
-          "SmartFree|0x402DCE",
-          "_strlen|0x401B80",
-          "CopyStringOptimized|0x402E00",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
-          "InitializeCodePageOnce|0x4019E6"
-        ],
         "LoD/1.13d": [
-          "SmartFree|0x402DCE",
-          "CopyStringOptimized|0x402E00",
           "_strlen|0x401B80",
-          "_malloc|0x402EF0",
           "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6"
+          "CopyStringOptimized|0x402E00",
+          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
+          "SmartFree|0x402DCE"
         ],
         "LoD/1.14a": [
-          "AmsgExit|0x4015D9",
-          "CopyStringOptimized|0x402E00",
           "InitializeCodePageOnce|0x4019E6",
-          "SmartFree|0x402DCE",
+          "AmsgExit|0x4015D9",
+          "_strlen|0x401B80",
           "_malloc|0x402EF0",
-          "_strlen|0x401B80"
+          "CopyStringOptimized|0x402E00",
+          "SmartFree|0x402DCE"
         ],
         "LoD/1.14b": [
-          "CopyStringOptimized|0x402E00",
-          "_malloc|0x402EF0",
           "_strlen|0x401B80",
+          "CopyStringOptimized|0x402E00",
           "AmsgExit|0x4015D9",
-          "SmartFree|0x402DCE",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
+          "SmartFree|0x402DCE"
         ],
         "LoD/1.14c": [
-          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
           "AmsgExit|0x4015D9",
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "InitializeCodePageOnce|0x4019E6"
-        ],
-        "LoD/1.14d": [
-          "_strlen|0x401B80",
           "_malloc|0x402EF0",
           "InitializeCodePageOnce|0x4019E6",
           "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80"
+        ],
+        "LoD/1.14d": [
+          "CopyStringOptimized|0x402E00",
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
-          "AmsgExit|0x4015D9"
+          "InitializeCodePageOnce|0x4019E6",
+          "_strlen|0x401B80"
         ]
       },
       "callers": {
@@ -26958,143 +26958,143 @@ var FUNCTIONS_Diablo_II_exe = {
       "callees": {
         "Classic/1.00": [
           "InitializeCodePageOnce|0x4019E6",
-          "ParseCommandLineArguments|0x4020B0",
           "GetModuleFileNameA|0x15",
+          "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9"
+          "ParseCommandLineArguments|0x4020B0"
         ],
         "Classic/1.01": [
-          "GetModuleFileNameA|0x15",
           "InitializeCodePageOnce|0x4019E6",
-          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
           "ParseCommandLineArguments|0x4020B0",
-          "_malloc|0x402EF0"
+          "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15"
         ],
         "Classic/1.02": [
-          "ParseCommandLineArguments|0x4020B0",
-          "InitializeCodePageOnce|0x4019E6",
           "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6",
+          "ParseCommandLineArguments|0x4020B0",
           "GetModuleFileNameA|0x15"
         ],
         "Classic/1.03": [
+          "InitializeCodePageOnce|0x4019E6",
           "GetModuleFileNameA|0x15",
-          "AmsgExit|0x4015D9",
-          "ParseCommandLineArguments|0x4020B0",
           "_malloc|0x402EF0",
-          "InitializeCodePageOnce|0x4019E6"
+          "AmsgExit|0x4015D9",
+          "ParseCommandLineArguments|0x4020B0"
         ],
         "Classic/1.04c": [
+          "GetModuleFileNameA|0x15",
+          "ParseCommandLineArguments|0x4020B0",
           "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0"
+        ],
+        "LoD/1.07": [
+          "GetModuleFileNameA|0x15",
+          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
+          "ParseCommandLineArguments|0x4020B0",
+          "AmsgExit|0x4015D9"
+        ],
+        "LoD/1.08": [
           "ParseCommandLineArguments|0x4020B0",
           "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6",
           "AmsgExit|0x4015D9",
           "GetModuleFileNameA|0x15"
         ],
-        "LoD/1.07": [
-          "AmsgExit|0x4015D9",
-          "ParseCommandLineArguments|0x4020B0",
-          "InitializeCodePageOnce|0x4019E6",
-          "GetModuleFileNameA|0x15",
-          "_malloc|0x402EF0"
-        ],
-        "LoD/1.08": [
-          "AmsgExit|0x4015D9",
-          "ParseCommandLineArguments|0x4020B0",
-          "_malloc|0x402EF0",
-          "GetModuleFileNameA|0x15",
-          "InitializeCodePageOnce|0x4019E6"
-        ],
         "LoD/1.09": [
+          "_malloc|0x402EF0",
           "ParseCommandLineArguments|0x4020B0",
-          "AmsgExit|0x4015D9",
           "InitializeCodePageOnce|0x4019E6",
-          "GetModuleFileNameA|0x15",
-          "_malloc|0x402EF0"
+          "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15"
         ],
         "LoD/1.09b": [
           "InitializeCodePageOnce|0x4019E6",
+          "ParseCommandLineArguments|0x4020B0",
           "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
-          "ParseCommandLineArguments|0x4020B0",
           "GetModuleFileNameA|0x15"
         ],
         "LoD/1.09d": [
           "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9",
           "ParseCommandLineArguments|0x4020B0",
+          "AmsgExit|0x4015D9",
           "GetModuleFileNameA|0x15"
         ],
         "LoD/1.10": [
-          "InitializeCodePageOnce|0x4019E6",
           "GetModuleFileNameA|0x15",
-          "ParseCommandLineArguments|0x4020B0",
           "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0"
+          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
+          "ParseCommandLineArguments|0x4020B0"
         ],
         "LoD/1.11": [
-          "_malloc|0x402EF0",
-          "InitializeCodePageOnce|0x4019E6",
-          "ParseCommandLineArguments|0x4020B0",
-          "GetModuleFileNameA|0x15",
-          "AmsgExit|0x4015D9"
-        ],
-        "LoD/1.11b": [
-          "InitializeCodePageOnce|0x4019E6",
-          "ParseCommandLineArguments|0x4020B0",
-          "GetModuleFileNameA|0x15",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0"
-        ],
-        "LoD/1.12a": [
-          "ParseCommandLineArguments|0x4020B0",
-          "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6",
-          "GetModuleFileNameA|0x15",
-          "_malloc|0x402EF0"
-        ],
-        "LoD/1.13c": [
           "ParseCommandLineArguments|0x4020B0",
           "GetModuleFileNameA|0x15",
           "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
           "InitializeCodePageOnce|0x4019E6"
+        ],
+        "LoD/1.11b": [
+          "ParseCommandLineArguments|0x4020B0",
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
+          "GetModuleFileNameA|0x15",
+          "InitializeCodePageOnce|0x4019E6"
+        ],
+        "LoD/1.12a": [
+          "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9",
+          "InitializeCodePageOnce|0x4019E6",
+          "ParseCommandLineArguments|0x4020B0",
+          "GetModuleFileNameA|0x15"
+        ],
+        "LoD/1.13c": [
+          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15",
+          "ParseCommandLineArguments|0x4020B0"
         ],
         "LoD/1.13d": [
           "GetModuleFileNameA|0x15",
-          "ParseCommandLineArguments|0x4020B0",
-          "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6"
-        ],
-        "LoD/1.14a": [
-          "ParseCommandLineArguments|0x4020B0",
           "AmsgExit|0x4015D9",
           "InitializeCodePageOnce|0x4019E6",
-          "GetModuleFileNameA|0x15",
+          "ParseCommandLineArguments|0x4020B0",
           "_malloc|0x402EF0"
+        ],
+        "LoD/1.14a": [
+          "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
+          "GetModuleFileNameA|0x15",
+          "ParseCommandLineArguments|0x4020B0"
         ],
         "LoD/1.14b": [
           "GetModuleFileNameA|0x15",
-          "_malloc|0x402EF0",
-          "ParseCommandLineArguments|0x4020B0",
           "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "ParseCommandLineArguments|0x4020B0",
+          "_malloc|0x402EF0"
         ],
         "LoD/1.14c": [
-          "ParseCommandLineArguments|0x4020B0",
-          "_malloc|0x402EF0",
-          "GetModuleFileNameA|0x15",
           "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6"
-        ],
-        "LoD/1.14d": [
           "_malloc|0x402EF0",
           "InitializeCodePageOnce|0x4019E6",
           "GetModuleFileNameA|0x15",
-          "ParseCommandLineArguments|0x4020B0",
-          "AmsgExit|0x4015D9"
+          "ParseCommandLineArguments|0x4020B0"
+        ],
+        "LoD/1.14d": [
+          "GetModuleFileNameA|0x15",
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6",
+          "ParseCommandLineArguments|0x4020B0"
         ]
       },
       "callers": {
@@ -29191,203 +29191,203 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStringsW|0x1A",
-          "FreeEnvironmentStringsW|0x1",
           "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0",
           "OptimizedMemoryMove|0x402F70",
-          "WideCharToMultiByte|0x18"
+          "WideCharToMultiByte|0x18",
+          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsA|0x16",
+          "FreeEnvironmentStringsW|0x1",
+          "SmartFree|0x402DCE",
+          "GetEnvironmentStringsW|0x1A"
         ],
         "Classic/1.01": [
-          "SmartFree|0x402DCE",
+          "OptimizedMemoryMove|0x402F70",
+          "WideCharToMultiByte|0x18",
+          "_malloc|0x402EF0",
+          "GetEnvironmentStrings|0x19",
           "FreeEnvironmentStringsA|0x16",
           "GetEnvironmentStringsW|0x1A",
-          "OptimizedMemoryMove|0x402F70",
-          "FreeEnvironmentStringsW|0x1",
-          "WideCharToMultiByte|0x18",
-          "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0"
+          "SmartFree|0x402DCE",
+          "FreeEnvironmentStringsW|0x1"
         ],
         "Classic/1.02": [
-          "FreeEnvironmentStringsW|0x1",
-          "OptimizedMemoryMove|0x402F70",
-          "FreeEnvironmentStringsA|0x16",
-          "_malloc|0x402EF0",
           "GetEnvironmentStringsW|0x1A",
+          "SmartFree|0x402DCE",
+          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsW|0x1",
+          "FreeEnvironmentStringsA|0x16",
           "GetEnvironmentStrings|0x19",
           "WideCharToMultiByte|0x18",
-          "SmartFree|0x402DCE"
+          "OptimizedMemoryMove|0x402F70"
         ],
         "Classic/1.03": [
           "WideCharToMultiByte|0x18",
-          "GetEnvironmentStringsW|0x1A",
-          "GetEnvironmentStrings|0x19",
-          "OptimizedMemoryMove|0x402F70",
-          "FreeEnvironmentStringsW|0x1",
-          "_malloc|0x402EF0",
-          "FreeEnvironmentStringsA|0x16",
-          "SmartFree|0x402DCE"
-        ],
-        "Classic/1.04c": [
-          "GetEnvironmentStringsW|0x1A",
-          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsA|0x16",
-          "FreeEnvironmentStringsW|0x1",
-          "GetEnvironmentStrings|0x19",
-          "OptimizedMemoryMove|0x402F70",
-          "WideCharToMultiByte|0x18"
-        ],
-        "LoD/1.07": [
           "GetEnvironmentStringsW|0x1A",
-          "GetEnvironmentStrings|0x19",
-          "WideCharToMultiByte|0x18",
           "FreeEnvironmentStringsW|0x1",
-          "OptimizedMemoryMove|0x402F70",
-          "SmartFree|0x402DCE",
           "_malloc|0x402EF0",
+          "OptimizedMemoryMove|0x402F70",
+          "GetEnvironmentStrings|0x19",
           "FreeEnvironmentStringsA|0x16"
         ],
-        "LoD/1.08": [
+        "Classic/1.04c": [
+          "FreeEnvironmentStringsA|0x16",
+          "GetEnvironmentStringsW|0x1A",
+          "FreeEnvironmentStringsW|0x1",
           "GetEnvironmentStrings|0x19",
-          "GetEnvironmentStringsW|0x1A",
-          "WideCharToMultiByte|0x18",
-          "FreeEnvironmentStringsA|0x16",
-          "_malloc|0x402EF0",
-          "FreeEnvironmentStringsW|0x1",
-          "SmartFree|0x402DCE",
-          "OptimizedMemoryMove|0x402F70"
-        ],
-        "LoD/1.09": [
-          "GetEnvironmentStrings|0x19",
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStringsW|0x1A",
-          "WideCharToMultiByte|0x18",
-          "FreeEnvironmentStringsW|0x1",
-          "SmartFree|0x402DCE",
-          "_malloc|0x402EF0",
-          "OptimizedMemoryMove|0x402F70"
-        ],
-        "LoD/1.09b": [
-          "SmartFree|0x402DCE",
-          "OptimizedMemoryMove|0x402F70",
-          "FreeEnvironmentStringsW|0x1",
-          "GetEnvironmentStringsW|0x1A",
-          "WideCharToMultiByte|0x18",
-          "_malloc|0x402EF0",
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStrings|0x19"
-        ],
-        "LoD/1.09d": [
-          "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0",
-          "FreeEnvironmentStringsW|0x1",
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStringsW|0x1A",
           "OptimizedMemoryMove|0x402F70",
           "WideCharToMultiByte|0x18",
-          "SmartFree|0x402DCE"
-        ],
-        "LoD/1.10": [
-          "WideCharToMultiByte|0x18",
-          "OptimizedMemoryMove|0x402F70",
-          "GetEnvironmentStrings|0x19",
-          "FreeEnvironmentStringsW|0x1",
-          "GetEnvironmentStringsW|0x1A",
           "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsA|0x16",
           "_malloc|0x402EF0"
         ],
-        "LoD/1.11": [
-          "WideCharToMultiByte|0x18",
-          "_malloc|0x402EF0",
-          "FreeEnvironmentStringsA|0x16",
-          "OptimizedMemoryMove|0x402F70",
+        "LoD/1.07": [
           "GetEnvironmentStrings|0x19",
+          "FreeEnvironmentStringsA|0x16",
+          "WideCharToMultiByte|0x18",
+          "OptimizedMemoryMove|0x402F70",
+          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
           "GetEnvironmentStringsW|0x1A",
           "FreeEnvironmentStringsW|0x1"
         ],
-        "LoD/1.11b": [
+        "LoD/1.08": [
           "FreeEnvironmentStringsW|0x1",
-          "OptimizedMemoryMove|0x402F70",
-          "GetEnvironmentStrings|0x19",
-          "WideCharToMultiByte|0x18",
           "_malloc|0x402EF0",
-          "FreeEnvironmentStringsA|0x16",
           "SmartFree|0x402DCE",
-          "GetEnvironmentStringsW|0x1A"
-        ],
-        "LoD/1.12a": [
           "FreeEnvironmentStringsA|0x16",
-          "FreeEnvironmentStringsW|0x1",
           "GetEnvironmentStringsW|0x1A",
           "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0",
           "WideCharToMultiByte|0x18",
+          "OptimizedMemoryMove|0x402F70"
+        ],
+        "LoD/1.09": [
+          "_malloc|0x402EF0",
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsW|0x1",
+          "OptimizedMemoryMove|0x402F70",
+          "SmartFree|0x402DCE",
+          "FreeEnvironmentStringsA|0x16",
+          "GetEnvironmentStrings|0x19"
+        ],
+        "LoD/1.09b": [
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsW|0x1",
+          "GetEnvironmentStrings|0x19",
+          "_malloc|0x402EF0",
+          "OptimizedMemoryMove|0x402F70",
+          "SmartFree|0x402DCE",
+          "FreeEnvironmentStringsA|0x16"
+        ],
+        "LoD/1.09d": [
+          "WideCharToMultiByte|0x18",
+          "GetEnvironmentStrings|0x19",
+          "GetEnvironmentStringsW|0x1A",
+          "_malloc|0x402EF0",
+          "OptimizedMemoryMove|0x402F70",
+          "SmartFree|0x402DCE",
+          "FreeEnvironmentStringsA|0x16",
+          "FreeEnvironmentStringsW|0x1"
+        ],
+        "LoD/1.10": [
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsW|0x1",
+          "GetEnvironmentStrings|0x19",
+          "FreeEnvironmentStringsA|0x16",
+          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
           "OptimizedMemoryMove|0x402F70"
         ],
-        "LoD/1.13c": [
+        "LoD/1.11": [
+          "FreeEnvironmentStringsA|0x16",
+          "GetEnvironmentStringsW|0x1A",
+          "GetEnvironmentStrings|0x19",
+          "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsW|0x1",
+          "_malloc|0x402EF0",
+          "SmartFree|0x402DCE",
+          "OptimizedMemoryMove|0x402F70"
+        ],
+        "LoD/1.11b": [
+          "WideCharToMultiByte|0x18",
+          "GetEnvironmentStringsW|0x1A",
+          "SmartFree|0x402DCE",
+          "FreeEnvironmentStringsA|0x16",
+          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsW|0x1",
+          "GetEnvironmentStrings|0x19",
+          "OptimizedMemoryMove|0x402F70"
+        ],
+        "LoD/1.12a": [
+          "_malloc|0x402EF0",
           "WideCharToMultiByte|0x18",
           "OptimizedMemoryMove|0x402F70",
           "SmartFree|0x402DCE",
-          "GetEnvironmentStrings|0x19",
+          "GetEnvironmentStringsW|0x1A",
           "FreeEnvironmentStringsW|0x1",
           "FreeEnvironmentStringsA|0x16",
+          "GetEnvironmentStrings|0x19"
+        ],
+        "LoD/1.13c": [
+          "FreeEnvironmentStringsA|0x16",
+          "_malloc|0x402EF0",
           "GetEnvironmentStringsW|0x1A",
-          "_malloc|0x402EF0"
+          "FreeEnvironmentStringsW|0x1",
+          "OptimizedMemoryMove|0x402F70",
+          "GetEnvironmentStrings|0x19",
+          "WideCharToMultiByte|0x18",
+          "SmartFree|0x402DCE"
         ],
         "LoD/1.13d": [
           "GetEnvironmentStringsW|0x1A",
           "OptimizedMemoryMove|0x402F70",
+          "WideCharToMultiByte|0x18",
+          "GetEnvironmentStrings|0x19",
+          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
           "FreeEnvironmentStringsW|0x1",
-          "GetEnvironmentStrings|0x19",
-          "WideCharToMultiByte|0x18",
-          "_malloc|0x402EF0",
           "FreeEnvironmentStringsA|0x16"
         ],
         "LoD/1.14a": [
-          "FreeEnvironmentStringsA|0x16",
           "GetEnvironmentStrings|0x19",
+          "_malloc|0x402EF0",
           "OptimizedMemoryMove|0x402F70",
+          "GetEnvironmentStringsW|0x1A",
+          "FreeEnvironmentStringsA|0x16",
           "WideCharToMultiByte|0x18",
           "SmartFree|0x402DCE",
-          "GetEnvironmentStringsW|0x1A",
-          "_malloc|0x402EF0",
           "FreeEnvironmentStringsW|0x1"
         ],
         "LoD/1.14b": [
-          "GetEnvironmentStringsW|0x1A",
-          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsW|0x1",
           "OptimizedMemoryMove|0x402F70",
           "GetEnvironmentStrings|0x19",
-          "FreeEnvironmentStringsA|0x16",
+          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsW|0x1",
-          "WideCharToMultiByte|0x18"
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsA|0x16"
         ],
         "LoD/1.14c": [
-          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
-          "OptimizedMemoryMove|0x402F70",
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStrings|0x19",
-          "WideCharToMultiByte|0x18",
-          "GetEnvironmentStringsW|0x1A",
-          "FreeEnvironmentStringsW|0x1"
-        ],
-        "LoD/1.14d": [
           "_malloc|0x402EF0",
           "FreeEnvironmentStringsW|0x1",
-          "SmartFree|0x402DCE",
           "OptimizedMemoryMove|0x402F70",
-          "GetEnvironmentStringsW|0x1A",
           "GetEnvironmentStrings|0x19",
+          "GetEnvironmentStringsW|0x1A",
           "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsA|0x16"
+        ],
+        "LoD/1.14d": [
+          "WideCharToMultiByte|0x18",
+          "GetEnvironmentStringsW|0x1A",
+          "_malloc|0x402EF0",
+          "SmartFree|0x402DCE",
+          "GetEnvironmentStrings|0x19",
+          "OptimizedMemoryMove|0x402F70",
+          "FreeEnvironmentStringsW|0x1",
           "FreeEnvironmentStringsA|0x16"
         ]
       },
@@ -30305,164 +30305,164 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetStartupInfoA|0xC",
-          "SetHandleCount|0x8",
           "GetFileType|0x1C",
           "GetStdHandle|0x9",
+          "SetHandleCount|0x8",
+          "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9"
+          "GetStartupInfoA|0xC"
         ],
         "Classic/1.01": [
+          "GetStdHandle|0x9",
+          "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9",
           "GetFileType|0x1C",
           "SetHandleCount|0x8",
-          "AmsgExit|0x4015D9",
-          "GetStdHandle|0x9",
-          "GetStartupInfoA|0xC",
-          "_malloc|0x402EF0"
+          "GetStartupInfoA|0xC"
         ],
         "Classic/1.02": [
-          "GetStdHandle|0x9",
+          "GetStartupInfoA|0xC",
           "AmsgExit|0x4015D9",
-          "GetFileType|0x1C",
-          "SetHandleCount|0x8",
           "_malloc|0x402EF0",
-          "GetStartupInfoA|0xC"
+          "GetFileType|0x1C",
+          "GetStdHandle|0x9",
+          "SetHandleCount|0x8"
         ],
         "Classic/1.03": [
-          "AmsgExit|0x4015D9",
-          "GetStdHandle|0x9",
-          "SetHandleCount|0x8",
-          "_malloc|0x402EF0",
-          "GetFileType|0x1C",
-          "GetStartupInfoA|0xC"
-        ],
-        "Classic/1.04c": [
           "GetStartupInfoA|0xC",
+          "GetFileType|0x1C",
           "GetStdHandle|0x9",
           "_malloc|0x402EF0",
-          "GetFileType|0x1C",
           "AmsgExit|0x4015D9",
           "SetHandleCount|0x8"
         ],
-        "LoD/1.07": [
-          "AmsgExit|0x4015D9",
-          "SetHandleCount|0x8",
+        "Classic/1.04c": [
           "GetFileType|0x1C",
           "GetStartupInfoA|0xC",
+          "SetHandleCount|0x8",
+          "AmsgExit|0x4015D9",
           "GetStdHandle|0x9",
           "_malloc|0x402EF0"
         ],
-        "LoD/1.08": [
+        "LoD/1.07": [
           "GetStdHandle|0x9",
+          "SetHandleCount|0x8",
+          "_malloc|0x402EF0",
           "AmsgExit|0x4015D9",
+          "GetFileType|0x1C",
+          "GetStartupInfoA|0xC"
+        ],
+        "LoD/1.08": [
           "GetStartupInfoA|0xC",
           "_malloc|0x402EF0",
+          "GetStdHandle|0x9",
+          "AmsgExit|0x4015D9",
           "GetFileType|0x1C",
           "SetHandleCount|0x8"
         ],
         "LoD/1.09": [
-          "GetStartupInfoA|0xC",
-          "SetHandleCount|0x8",
-          "AmsgExit|0x4015D9",
-          "GetStdHandle|0x9",
+          "_malloc|0x402EF0",
           "GetFileType|0x1C",
-          "_malloc|0x402EF0"
+          "SetHandleCount|0x8",
+          "GetStartupInfoA|0xC",
+          "GetStdHandle|0x9",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.09b": [
-          "GetStartupInfoA|0xC",
           "GetFileType|0x1C",
           "AmsgExit|0x4015D9",
+          "GetStartupInfoA|0xC",
           "_malloc|0x402EF0",
           "GetStdHandle|0x9",
           "SetHandleCount|0x8"
         ],
         "LoD/1.09d": [
-          "_malloc|0x402EF0",
-          "GetFileType|0x1C",
-          "AmsgExit|0x4015D9",
-          "SetHandleCount|0x8",
           "GetStdHandle|0x9",
-          "GetStartupInfoA|0xC"
+          "GetFileType|0x1C",
+          "SetHandleCount|0x8",
+          "_malloc|0x402EF0",
+          "GetStartupInfoA|0xC",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.10": [
-          "GetStartupInfoA|0xC",
           "SetHandleCount|0x8",
-          "GetStdHandle|0x9",
           "AmsgExit|0x4015D9",
+          "GetStartupInfoA|0xC",
+          "GetStdHandle|0x9",
           "GetFileType|0x1C",
           "_malloc|0x402EF0"
         ],
         "LoD/1.11": [
-          "SetHandleCount|0x8",
-          "GetStartupInfoA|0xC",
-          "_malloc|0x402EF0",
-          "GetFileType|0x1C",
           "GetStdHandle|0x9",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
+          "GetStartupInfoA|0xC",
+          "GetFileType|0x1C",
+          "SetHandleCount|0x8"
         ],
         "LoD/1.11b": [
-          "GetFileType|0x1C",
-          "SetHandleCount|0x8",
           "AmsgExit|0x4015D9",
-          "GetStdHandle|0x9",
+          "SetHandleCount|0x8",
+          "GetFileType|0x1C",
           "_malloc|0x402EF0",
+          "GetStdHandle|0x9",
           "GetStartupInfoA|0xC"
         ],
         "LoD/1.12a": [
-          "AmsgExit|0x4015D9",
-          "GetStartupInfoA|0xC",
           "_malloc|0x402EF0",
-          "GetFileType|0x1C",
+          "GetStartupInfoA|0xC",
           "GetStdHandle|0x9",
+          "AmsgExit|0x4015D9",
+          "GetFileType|0x1C",
           "SetHandleCount|0x8"
         ],
         "LoD/1.13c": [
-          "GetFileType|0x1C",
-          "SetHandleCount|0x8",
-          "GetStdHandle|0x9",
           "GetStartupInfoA|0xC",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0"
+          "_malloc|0x402EF0",
+          "SetHandleCount|0x8",
+          "GetFileType|0x1C",
+          "GetStdHandle|0x9",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.13d": [
-          "GetStartupInfoA|0xC",
-          "GetFileType|0x1C",
-          "SetHandleCount|0x8",
           "GetStdHandle|0x9",
+          "AmsgExit|0x4015D9",
+          "GetStartupInfoA|0xC",
           "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9"
+          "SetHandleCount|0x8",
+          "GetFileType|0x1C"
         ],
         "LoD/1.14a": [
           "AmsgExit|0x4015D9",
-          "GetFileType|0x1C",
           "_malloc|0x402EF0",
-          "GetStartupInfoA|0xC",
+          "GetFileType|0x1C",
           "GetStdHandle|0x9",
+          "GetStartupInfoA|0xC",
           "SetHandleCount|0x8"
         ],
         "LoD/1.14b": [
+          "GetFileType|0x1C",
+          "AmsgExit|0x4015D9",
+          "SetHandleCount|0x8",
           "_malloc|0x402EF0",
           "GetStartupInfoA|0xC",
-          "SetHandleCount|0x8",
-          "AmsgExit|0x4015D9",
-          "GetFileType|0x1C",
           "GetStdHandle|0x9"
         ],
         "LoD/1.14c": [
-          "_malloc|0x402EF0",
           "AmsgExit|0x4015D9",
-          "GetStdHandle|0x9",
+          "_malloc|0x402EF0",
           "SetHandleCount|0x8",
+          "GetFileType|0x1C",
           "GetStartupInfoA|0xC",
-          "GetFileType|0x1C"
+          "GetStdHandle|0x9"
         ],
         "LoD/1.14d": [
-          "GetFileType|0x1C",
-          "GetStdHandle|0x9",
-          "_malloc|0x402EF0",
           "GetStartupInfoA|0xC",
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
+          "GetFileType|0x1C",
           "SetHandleCount|0x8",
-          "AmsgExit|0x4015D9"
+          "GetStdHandle|0x9"
         ]
       },
       "callers": {
@@ -31663,29 +31663,29 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "HeapCreate|0x1E",
           "HeapDestroy|0x1D",
+          "HeapCreate|0x1E",
           "InitializeBufferManager|0x4032A5"
         ],
         "Classic/1.01": [
-          "InitializeBufferManager|0x4032A5",
-          "HeapCreate|0x1E",
-          "HeapDestroy|0x1D"
-        ],
-        "Classic/1.02": [
           "HeapCreate|0x1E",
           "HeapDestroy|0x1D",
           "InitializeBufferManager|0x4032A5"
+        ],
+        "Classic/1.02": [
+          "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D",
+          "HeapCreate|0x1E"
         ],
         "Classic/1.03": [
           "HeapDestroy|0x1D",
-          "HeapCreate|0x1E",
-          "InitializeBufferManager|0x4032A5"
+          "InitializeBufferManager|0x4032A5",
+          "HeapCreate|0x1E"
         ],
         "Classic/1.04c": [
           "HeapCreate|0x1E",
-          "HeapDestroy|0x1D",
-          "InitializeBufferManager|0x4032A5"
+          "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D"
         ],
         "LoD/1.07": [
           "HeapDestroy|0x1D",
@@ -31693,39 +31693,39 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapCreate|0x1E"
         ],
         "LoD/1.08": [
-          "HeapCreate|0x1E",
           "HeapDestroy|0x1D",
-          "InitializeBufferManager|0x4032A5"
+          "InitializeBufferManager|0x4032A5",
+          "HeapCreate|0x1E"
         ],
         "LoD/1.09": [
           "HeapCreate|0x1E",
-          "InitializeBufferManager|0x4032A5",
-          "HeapDestroy|0x1D"
+          "HeapDestroy|0x1D",
+          "InitializeBufferManager|0x4032A5"
         ],
         "LoD/1.09b": [
-          "InitializeBufferManager|0x4032A5",
           "HeapDestroy|0x1D",
+          "InitializeBufferManager|0x4032A5",
           "HeapCreate|0x1E"
         ],
         "LoD/1.09d": [
-          "InitializeBufferManager|0x4032A5",
-          "HeapCreate|0x1E",
-          "HeapDestroy|0x1D"
-        ],
-        "LoD/1.10": [
-          "HeapDestroy|0x1D",
-          "InitializeBufferManager|0x4032A5",
-          "HeapCreate|0x1E"
-        ],
-        "LoD/1.11": [
-          "InitializeBufferManager|0x4032A5",
-          "HeapDestroy|0x1D",
-          "HeapCreate|0x1E"
-        ],
-        "LoD/1.11b": [
           "HeapCreate|0x1E",
           "HeapDestroy|0x1D",
           "InitializeBufferManager|0x4032A5"
+        ],
+        "LoD/1.10": [
+          "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D",
+          "HeapCreate|0x1E"
+        ],
+        "LoD/1.11": [
+          "HeapCreate|0x1E",
+          "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D"
+        ],
+        "LoD/1.11b": [
+          "HeapCreate|0x1E",
+          "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D"
         ],
         "LoD/1.12a": [
           "HeapDestroy|0x1D",
@@ -31733,29 +31733,29 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapCreate|0x1E"
         ],
         "LoD/1.13c": [
-          "InitializeBufferManager|0x4032A5",
-          "HeapDestroy|0x1D",
-          "HeapCreate|0x1E"
-        ],
-        "LoD/1.13d": [
-          "InitializeBufferManager|0x4032A5",
-          "HeapCreate|0x1E",
-          "HeapDestroy|0x1D"
-        ],
-        "LoD/1.14a": [
-          "InitializeBufferManager|0x4032A5",
-          "HeapDestroy|0x1D",
-          "HeapCreate|0x1E"
-        ],
-        "LoD/1.14b": [
           "HeapCreate|0x1E",
           "HeapDestroy|0x1D",
           "InitializeBufferManager|0x4032A5"
         ],
-        "LoD/1.14c": [
+        "LoD/1.13d": [
+          "HeapCreate|0x1E",
           "HeapDestroy|0x1D",
+          "InitializeBufferManager|0x4032A5"
+        ],
+        "LoD/1.14a": [
+          "HeapDestroy|0x1D",
+          "HeapCreate|0x1E",
+          "InitializeBufferManager|0x4032A5"
+        ],
+        "LoD/1.14b": [
           "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D",
           "HeapCreate|0x1E"
+        ],
+        "LoD/1.14c": [
+          "HeapCreate|0x1E",
+          "HeapDestroy|0x1D",
+          "InitializeBufferManager|0x4032A5"
         ],
         "LoD/1.14d": [
           "InitializeBufferManager|0x4032A5",
@@ -36267,52 +36267,52 @@ var FUNCTIONS_Diablo_II_exe = {
           "AmsgExit|0x4015D9"
         ],
         "Classic/1.01": [
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
         ],
         "Classic/1.02": [
           "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE"
         ],
         "Classic/1.03": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
-        ],
-        "Classic/1.04c": [
           "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
-        "LoD/1.07": [
+        "Classic/1.04c": [
           "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE"
         ],
+        "LoD/1.07": [
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
+        ],
         "LoD/1.08": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.09": [
           "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.09b": [
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.09d": [
           "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.10": [
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.11": [
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.11b": [
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.12a": [
           "AmsgExit|0x4015D9",
@@ -36323,20 +36323,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.13d": [
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.14a": [
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.14b": [
           "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.14c": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14d": [
           "FUN_004015fe|0x4015FE",
@@ -37115,204 +37115,204 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "OptimizedStringCopy|0x402E10",
-          "_strlen|0x401B80",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetStdHandle|0x9",
-          "GetModuleFileNameA|0x15",
           "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
+          "_strncpy|0x403B80",
+          "OptimizedStringCopy|0x402E10",
+          "GetStdHandle|0x9",
           "WriteFile|0x22",
-          "_strncpy|0x403B80"
+          "GetModuleFileNameA|0x15",
+          "ShowMessageBoxWithActiveWindow|0x403AEE"
         ],
         "Classic/1.01": [
+          "GetStdHandle|0x9",
+          "WriteFile|0x22",
+          "_strlen|0x401B80",
           "OptimizedStringCopy|0x402E10",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetModuleFileNameA|0x15",
           "CopyStringOptimized|0x402E00",
           "_strncpy|0x403B80",
-          "_strlen|0x401B80",
-          "WriteFile|0x22",
-          "GetStdHandle|0x9"
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "GetModuleFileNameA|0x15"
         ],
         "Classic/1.02": [
-          "GetStdHandle|0x9",
+          "_strlen|0x401B80",
           "_strncpy|0x403B80",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "WriteFile|0x22",
           "CopyStringOptimized|0x402E00",
           "GetModuleFileNameA|0x15",
-          "_strlen|0x401B80",
-          "OptimizedStringCopy|0x402E10"
+          "GetStdHandle|0x9",
+          "WriteFile|0x22",
+          "OptimizedStringCopy|0x402E10",
+          "ShowMessageBoxWithActiveWindow|0x403AEE"
         ],
         "Classic/1.03": [
           "CopyStringOptimized|0x402E00",
+          "OptimizedStringCopy|0x402E10",
           "_strncpy|0x403B80",
+          "_strlen|0x401B80",
           "GetModuleFileNameA|0x15",
           "GetStdHandle|0x9",
-          "OptimizedStringCopy|0x402E10",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "_strlen|0x401B80",
           "WriteFile|0x22"
         ],
         "Classic/1.04c": [
-          "GetStdHandle|0x9",
-          "WriteFile|0x22",
-          "OptimizedStringCopy|0x402E10",
+          "GetModuleFileNameA|0x15",
+          "_strncpy|0x403B80",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
           "CopyStringOptimized|0x402E00",
-          "_strncpy|0x403B80",
           "_strlen|0x401B80",
-          "GetModuleFileNameA|0x15"
+          "WriteFile|0x22",
+          "GetStdHandle|0x9",
+          "OptimizedStringCopy|0x402E10"
         ],
         "LoD/1.07": [
           "CopyStringOptimized|0x402E00",
+          "GetModuleFileNameA|0x15",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "_strncpy|0x403B80",
-          "_strlen|0x401B80",
           "GetStdHandle|0x9",
           "WriteFile|0x22",
-          "GetModuleFileNameA|0x15",
+          "_strlen|0x401B80",
+          "_strncpy|0x403B80",
           "OptimizedStringCopy|0x402E10"
         ],
         "LoD/1.08": [
           "GetStdHandle|0x9",
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "OptimizedStringCopy|0x402E10",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetModuleFileNameA|0x15",
           "WriteFile|0x22",
-          "_strncpy|0x403B80"
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "OptimizedStringCopy|0x402E10",
+          "_strlen|0x401B80",
+          "GetModuleFileNameA|0x15",
+          "_strncpy|0x403B80",
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.09": [
-          "WriteFile|0x22",
-          "CopyStringOptimized|0x402E00",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "CopyStringOptimized|0x402E00",
           "GetStdHandle|0x9",
           "_strncpy|0x403B80",
           "_strlen|0x401B80",
+          "WriteFile|0x22",
           "GetModuleFileNameA|0x15",
           "OptimizedStringCopy|0x402E10"
         ],
         "LoD/1.09b": [
-          "_strncpy|0x403B80",
           "OptimizedStringCopy|0x402E10",
-          "_strlen|0x401B80",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
           "GetStdHandle|0x9",
           "WriteFile|0x22",
           "GetModuleFileNameA|0x15",
-          "CopyStringOptimized|0x402E00"
-        ],
-        "LoD/1.09d": [
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "OptimizedStringCopy|0x402E10",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetStdHandle|0x9",
-          "_strncpy|0x403B80",
-          "WriteFile|0x22",
-          "GetModuleFileNameA|0x15"
-        ],
-        "LoD/1.10": [
-          "OptimizedStringCopy|0x402E10",
-          "WriteFile|0x22",
-          "GetModuleFileNameA|0x15",
-          "GetStdHandle|0x9",
-          "CopyStringOptimized|0x402E00",
-          "_strncpy|0x403B80",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "_strlen|0x401B80"
-        ],
-        "LoD/1.11": [
-          "_strncpy|0x403B80",
-          "OptimizedStringCopy|0x402E10",
-          "WriteFile|0x22",
-          "CopyStringOptimized|0x402E00",
-          "GetStdHandle|0x9",
-          "_strlen|0x401B80",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetModuleFileNameA|0x15"
-        ],
-        "LoD/1.11b": [
-          "OptimizedStringCopy|0x402E10",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "_strlen|0x401B80",
-          "GetModuleFileNameA|0x15",
-          "GetStdHandle|0x9",
-          "WriteFile|0x22",
-          "_strncpy|0x403B80",
-          "CopyStringOptimized|0x402E00"
-        ],
-        "LoD/1.12a": [
-          "_strncpy|0x403B80",
-          "WriteFile|0x22",
-          "CopyStringOptimized|0x402E00",
-          "GetModuleFileNameA|0x15",
-          "OptimizedStringCopy|0x402E10",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "_strlen|0x401B80",
-          "GetStdHandle|0x9"
-        ],
-        "LoD/1.13c": [
-          "GetStdHandle|0x9",
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "WriteFile|0x22",
-          "GetModuleFileNameA|0x15",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "_strncpy|0x403B80",
-          "OptimizedStringCopy|0x402E10"
-        ],
-        "LoD/1.13d": [
-          "GetModuleFileNameA|0x15",
-          "_strncpy|0x403B80",
-          "WriteFile|0x22",
-          "CopyStringOptimized|0x402E00",
-          "OptimizedStringCopy|0x402E10",
-          "_strlen|0x401B80",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetStdHandle|0x9"
-        ],
-        "LoD/1.14a": [
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "OptimizedStringCopy|0x402E10",
-          "CopyStringOptimized|0x402E00",
-          "GetModuleFileNameA|0x15",
-          "WriteFile|0x22",
-          "_strlen|0x401B80",
-          "GetStdHandle|0x9",
           "_strncpy|0x403B80"
         ],
-        "LoD/1.14b": [
-          "CopyStringOptimized|0x402E00",
+        "LoD/1.09d": [
+          "OptimizedStringCopy|0x402E10",
+          "GetStdHandle|0x9",
           "_strncpy|0x403B80",
+          "CopyStringOptimized|0x402E00",
+          "WriteFile|0x22",
+          "_strlen|0x401B80",
+          "GetModuleFileNameA|0x15",
+          "ShowMessageBoxWithActiveWindow|0x403AEE"
+        ],
+        "LoD/1.10": [
+          "GetModuleFileNameA|0x15",
+          "CopyStringOptimized|0x402E00",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "OptimizedStringCopy|0x402E10",
+          "GetStdHandle|0x9",
+          "_strncpy|0x403B80",
+          "_strlen|0x401B80",
+          "WriteFile|0x22"
+        ],
+        "LoD/1.11": [
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "GetStdHandle|0x9",
           "WriteFile|0x22",
           "GetModuleFileNameA|0x15",
+          "CopyStringOptimized|0x402E00",
+          "_strncpy|0x403B80",
+          "_strlen|0x401B80",
+          "OptimizedStringCopy|0x402E10"
+        ],
+        "LoD/1.11b": [
+          "_strncpy|0x403B80",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "OptimizedStringCopy|0x402E10",
+          "_strlen|0x401B80",
+          "CopyStringOptimized|0x402E00",
+          "GetModuleFileNameA|0x15",
+          "GetStdHandle|0x9",
+          "WriteFile|0x22"
+        ],
+        "LoD/1.12a": [
+          "OptimizedStringCopy|0x402E10",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
           "_strlen|0x401B80",
+          "GetStdHandle|0x9",
+          "CopyStringOptimized|0x402E00",
+          "_strncpy|0x403B80",
+          "GetModuleFileNameA|0x15",
+          "WriteFile|0x22"
+        ],
+        "LoD/1.13c": [
           "OptimizedStringCopy|0x402E10",
+          "_strncpy|0x403B80",
+          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
+          "GetStdHandle|0x9",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "WriteFile|0x22",
+          "GetModuleFileNameA|0x15"
+        ],
+        "LoD/1.13d": [
+          "GetStdHandle|0x9",
+          "GetModuleFileNameA|0x15",
+          "_strlen|0x401B80",
+          "WriteFile|0x22",
+          "CopyStringOptimized|0x402E00",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "OptimizedStringCopy|0x402E10",
+          "_strncpy|0x403B80"
+        ],
+        "LoD/1.14a": [
+          "_strncpy|0x403B80",
+          "_strlen|0x401B80",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "OptimizedStringCopy|0x402E10",
+          "GetStdHandle|0x9",
+          "WriteFile|0x22",
+          "GetModuleFileNameA|0x15",
+          "CopyStringOptimized|0x402E00"
+        ],
+        "LoD/1.14b": [
+          "_strlen|0x401B80",
+          "WriteFile|0x22",
+          "GetModuleFileNameA|0x15",
+          "CopyStringOptimized|0x402E00",
+          "OptimizedStringCopy|0x402E10",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "_strncpy|0x403B80",
           "GetStdHandle|0x9"
         ],
         "LoD/1.14c": [
-          "GetModuleFileNameA|0x15",
           "_strncpy|0x403B80",
-          "CopyStringOptimized|0x402E00",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetStdHandle|0x9",
+          "CopyStringOptimized|0x402E00",
+          "OptimizedStringCopy|0x402E10",
+          "GetModuleFileNameA|0x15",
           "_strlen|0x401B80",
           "WriteFile|0x22",
-          "OptimizedStringCopy|0x402E10"
+          "GetStdHandle|0x9"
         ],
         "LoD/1.14d": [
-          "OptimizedStringCopy|0x402E10",
-          "_strlen|0x401B80",
-          "GetStdHandle|0x9",
           "WriteFile|0x22",
           "CopyStringOptimized|0x402E00",
           "GetModuleFileNameA|0x15",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
           "_strncpy|0x403B80",
-          "ShowMessageBoxWithActiveWindow|0x403AEE"
+          "OptimizedStringCopy|0x402E10",
+          "_strlen|0x401B80",
+          "GetStdHandle|0x9"
         ]
       },
       "callers": {
@@ -37322,34 +37322,34 @@ var FUNCTIONS_Diablo_II_exe = {
           "AmsgExit|0x4015D9"
         ],
         "Classic/1.01": [
-          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE"
         ],
         "Classic/1.02": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE",
-          "CleanupConsoleOutput|0x402750"
-        ],
-        "Classic/1.03": [
           "CleanupConsoleOutput|0x402750",
           "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE"
         ],
-        "Classic/1.04c": [
+        "Classic/1.03": [
           "FUN_004015fe|0x4015FE",
           "CleanupConsoleOutput|0x402750",
           "AmsgExit|0x4015D9"
         ],
-        "LoD/1.07": [
-          "AmsgExit|0x4015D9",
+        "Classic/1.04c": [
           "CleanupConsoleOutput|0x402750",
+          "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE"
         ],
-        "LoD/1.08": [
-          "AmsgExit|0x4015D9",
+        "LoD/1.07": [
           "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9",
           "CleanupConsoleOutput|0x402750"
+        ],
+        "LoD/1.08": [
+          "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.09": [
           "FUN_004015fe|0x4015FE",
@@ -37357,64 +37357,64 @@ var FUNCTIONS_Diablo_II_exe = {
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.09b": [
-          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9",
           "CleanupConsoleOutput|0x402750",
-          "AmsgExit|0x4015D9"
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.09d": [
-          "FUN_004015fe|0x4015FE",
           "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.10": [
-          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.11": [
+          "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE",
-          "CleanupConsoleOutput|0x402750",
-          "AmsgExit|0x4015D9"
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.11b": [
-          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE",
           "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.12a": [
+          "CleanupConsoleOutput|0x402750",
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
+        ],
+        "LoD/1.13c": [
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9",
+          "CleanupConsoleOutput|0x402750"
+        ],
+        "LoD/1.13d": [
           "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE",
           "CleanupConsoleOutput|0x402750"
         ],
-        "LoD/1.13c": [
-          "CleanupConsoleOutput|0x402750",
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
-        ],
-        "LoD/1.13d": [
-          "CleanupConsoleOutput|0x402750",
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
-        ],
         "LoD/1.14a": [
-          "FUN_004015fe|0x4015FE",
-          "CleanupConsoleOutput|0x402750",
-          "AmsgExit|0x4015D9"
-        ],
-        "LoD/1.14b": [
-          "CleanupConsoleOutput|0x402750",
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
-        ],
-        "LoD/1.14c": [
           "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE",
+          "CleanupConsoleOutput|0x402750"
+        ],
+        "LoD/1.14b": [
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9",
+          "CleanupConsoleOutput|0x402750"
+        ],
+        "LoD/1.14c": [
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9",
           "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.14d": [
           "FUN_004015fe|0x4015FE",
-          "CleanupConsoleOutput|0x402750",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "CleanupConsoleOutput|0x402750"
         ]
       },
       "strings": {
@@ -38900,163 +38900,163 @@ var FUNCTIONS_Diablo_II_exe = {
       "callees": {
         "Classic/1.00": [
           "LCMapStringW|0x25",
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23",
           "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringA|0x24",
-          "WideCharToMultiByte|0x18"
+          "WideCharToMultiByte|0x18",
+          "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23"
         ],
         "Classic/1.01": [
-          "MultiByteToWideChar|0x23",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "AllocateStackSpace|0x403C80",
+          "LCMapStringA|0x24",
           "WideCharToMultiByte|0x18",
+          "AllocateStackSpace|0x403C80",
+          "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringW|0x25",
-          "LCMapStringA|0x24"
+          "MultiByteToWideChar|0x23"
         ],
         "Classic/1.02": [
-          "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringA|0x24",
-          "MultiByteToWideChar|0x23",
-          "WideCharToMultiByte|0x18",
-          "AllocateStackSpace|0x403C80",
-          "LCMapStringW|0x25"
-        ],
-        "Classic/1.03": [
-          "MultiByteToWideChar|0x23",
-          "WideCharToMultiByte|0x18",
-          "LCMapStringA|0x24",
-          "AllocateStackSpace|0x403C80",
-          "LCMapStringW|0x25",
-          "CalculateStringLengthWithLimit|0x402B00"
-        ],
-        "Classic/1.04c": [
-          "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringA|0x24",
           "LCMapStringW|0x25",
           "MultiByteToWideChar|0x23",
+          "LCMapStringA|0x24",
+          "CalculateStringLengthWithLimit|0x402B00",
           "AllocateStackSpace|0x403C80",
           "WideCharToMultiByte|0x18"
         ],
-        "LoD/1.07": [
+        "Classic/1.03": [
+          "WideCharToMultiByte|0x18",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
           "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringA|0x24",
+          "LCMapStringW|0x25"
+        ],
+        "Classic/1.04c": [
           "LCMapStringW|0x25",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "MultiByteToWideChar|0x23",
           "WideCharToMultiByte|0x18",
           "LCMapStringA|0x24",
-          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80"
+        ],
+        "LoD/1.07": [
+          "WideCharToMultiByte|0x18",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringA|0x24",
+          "LCMapStringW|0x25",
+          "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23"
         ],
         "LoD/1.08": [
           "MultiByteToWideChar|0x23",
-          "WideCharToMultiByte|0x18",
-          "CalculateStringLengthWithLimit|0x402B00",
           "AllocateStackSpace|0x403C80",
-          "LCMapStringW|0x25",
-          "LCMapStringA|0x24"
-        ],
-        "LoD/1.09": [
           "LCMapStringA|0x24",
           "CalculateStringLengthWithLimit|0x402B00",
-          "AllocateStackSpace|0x403C80",
           "LCMapStringW|0x25",
-          "WideCharToMultiByte|0x18",
-          "MultiByteToWideChar|0x23"
-        ],
-        "LoD/1.09b": [
-          "WideCharToMultiByte|0x18",
-          "LCMapStringW|0x25",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "MultiByteToWideChar|0x23",
-          "LCMapStringA|0x24",
-          "AllocateStackSpace|0x403C80"
-        ],
-        "LoD/1.09d": [
-          "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringA|0x24",
-          "AllocateStackSpace|0x403C80",
-          "LCMapStringW|0x25",
-          "MultiByteToWideChar|0x23",
           "WideCharToMultiByte|0x18"
         ],
-        "LoD/1.10": [
+        "LoD/1.09": [
+          "MultiByteToWideChar|0x23",
           "WideCharToMultiByte|0x18",
-          "AllocateStackSpace|0x403C80",
-          "LCMapStringW|0x25",
           "LCMapStringA|0x24",
           "CalculateStringLengthWithLimit|0x402B00",
-          "MultiByteToWideChar|0x23"
+          "LCMapStringW|0x25",
+          "AllocateStackSpace|0x403C80"
+        ],
+        "LoD/1.09b": [
+          "CalculateStringLengthWithLimit|0x402B00",
+          "AllocateStackSpace|0x403C80",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24",
+          "MultiByteToWideChar|0x23",
+          "LCMapStringW|0x25"
+        ],
+        "LoD/1.09d": [
+          "WideCharToMultiByte|0x18",
+          "LCMapStringW|0x25",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "LCMapStringA|0x24",
+          "CalculateStringLengthWithLimit|0x402B00"
+        ],
+        "LoD/1.10": [
+          "MultiByteToWideChar|0x23",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringW|0x25",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "AllocateStackSpace|0x403C80",
+          "LCMapStringA|0x24"
         ],
         "LoD/1.11": [
           "WideCharToMultiByte|0x18",
-          "LCMapStringW|0x25",
-          "AllocateStackSpace|0x403C80",
-          "CalculateStringLengthWithLimit|0x402B00",
           "MultiByteToWideChar|0x23",
-          "LCMapStringA|0x24"
+          "LCMapStringA|0x24",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringW|0x25",
+          "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.11b": [
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23",
           "LCMapStringW|0x25",
-          "CalculateStringLengthWithLimit|0x402B00",
           "WideCharToMultiByte|0x18",
-          "LCMapStringA|0x24"
+          "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringA|0x24",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.12a": [
           "LCMapStringA|0x24",
-          "AllocateStackSpace|0x403C80",
+          "LCMapStringW|0x25",
+          "WideCharToMultiByte|0x18",
           "MultiByteToWideChar|0x23",
           "CalculateStringLengthWithLimit|0x402B00",
-          "WideCharToMultiByte|0x18",
-          "LCMapStringW|0x25"
+          "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.13c": [
           "LCMapStringA|0x24",
-          "WideCharToMultiByte|0x18",
+          "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23",
           "LCMapStringW|0x25",
           "CalculateStringLengthWithLimit|0x402B00",
+          "WideCharToMultiByte|0x18"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringW|0x25",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24",
           "AllocateStackSpace|0x403C80",
           "MultiByteToWideChar|0x23"
         ],
-        "LoD/1.13d": [
-          "LCMapStringW|0x25",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "WideCharToMultiByte|0x18",
-          "MultiByteToWideChar|0x23",
-          "LCMapStringA|0x24",
-          "AllocateStackSpace|0x403C80"
-        ],
         "LoD/1.14a": [
-          "LCMapStringW|0x25",
           "LCMapStringA|0x24",
-          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
           "CalculateStringLengthWithLimit|0x402B00",
-          "WideCharToMultiByte|0x18",
-          "AllocateStackSpace|0x403C80"
+          "MultiByteToWideChar|0x23",
+          "LCMapStringW|0x25",
+          "WideCharToMultiByte|0x18"
         ],
         "LoD/1.14b": [
           "CalculateStringLengthWithLimit|0x402B00",
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23",
-          "LCMapStringW|0x25",
           "LCMapStringA|0x24",
+          "AllocateStackSpace|0x403C80",
+          "LCMapStringW|0x25",
+          "MultiByteToWideChar|0x23",
           "WideCharToMultiByte|0x18"
         ],
         "LoD/1.14c": [
-          "LCMapStringW|0x25",
           "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringA|0x24",
+          "MultiByteToWideChar|0x23",
+          "LCMapStringW|0x25",
           "AllocateStackSpace|0x403C80",
           "WideCharToMultiByte|0x18",
-          "MultiByteToWideChar|0x23"
+          "LCMapStringA|0x24"
         ],
         "LoD/1.14d": [
-          "LCMapStringA|0x24",
-          "LCMapStringW|0x25",
           "AllocateStackSpace|0x403C80",
+          "WideCharToMultiByte|0x18",
           "MultiByteToWideChar|0x23",
           "CalculateStringLengthWithLimit|0x402B00",
-          "WideCharToMultiByte|0x18"
+          "LCMapStringA|0x24",
+          "LCMapStringW|0x25"
         ]
       },
       "callers": {
@@ -41147,46 +41147,46 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23",
-          "GetStringTypeW|0x27",
+          "GetStringTypeA|0x26",
           "_memset|0x403CB0",
-          "GetStringTypeA|0x26"
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23"
         ],
         "Classic/1.01": [
-          "MultiByteToWideChar|0x23",
-          "GetStringTypeW|0x27",
-          "GetStringTypeA|0x26",
           "AllocateStackSpace|0x403C80",
-          "_memset|0x403CB0"
+          "_memset|0x403CB0",
+          "GetStringTypeA|0x26",
+          "MultiByteToWideChar|0x23",
+          "GetStringTypeW|0x27"
         ],
         "Classic/1.02": [
           "MultiByteToWideChar|0x23",
+          "_memset|0x403CB0",
           "GetStringTypeW|0x27",
           "GetStringTypeA|0x26",
-          "_memset|0x403CB0",
           "AllocateStackSpace|0x403C80"
         ],
         "Classic/1.03": [
-          "MultiByteToWideChar|0x23",
-          "GetStringTypeW|0x27",
+          "GetStringTypeA|0x26",
           "_memset|0x403CB0",
+          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80",
-          "GetStringTypeA|0x26"
+          "GetStringTypeW|0x27"
         ],
         "Classic/1.04c": [
-          "MultiByteToWideChar|0x23",
-          "GetStringTypeW|0x27",
           "_memset|0x403CB0",
           "GetStringTypeA|0x26",
+          "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.07": [
+          "_memset|0x403CB0",
           "GetStringTypeW|0x27",
           "GetStringTypeA|0x26",
-          "_memset|0x403CB0",
-          "MultiByteToWideChar|0x23",
-          "AllocateStackSpace|0x403C80"
+          "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23"
         ],
         "LoD/1.08": [
           "MultiByteToWideChar|0x23",
@@ -41196,95 +41196,95 @@ var FUNCTIONS_Diablo_II_exe = {
           "_memset|0x403CB0"
         ],
         "LoD/1.09": [
-          "_memset|0x403CB0",
+          "MultiByteToWideChar|0x23",
           "GetStringTypeA|0x26",
           "AllocateStackSpace|0x403C80",
-          "GetStringTypeW|0x27",
-          "MultiByteToWideChar|0x23"
+          "_memset|0x403CB0",
+          "GetStringTypeW|0x27"
         ],
         "LoD/1.09b": [
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeW|0x27",
+          "_memset|0x403CB0",
+          "GetStringTypeA|0x26",
+          "MultiByteToWideChar|0x23"
+        ],
+        "LoD/1.09d": [
+          "GetStringTypeW|0x27",
+          "GetStringTypeA|0x26",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "_memset|0x403CB0"
+        ],
+        "LoD/1.10": [
+          "MultiByteToWideChar|0x23",
+          "_memset|0x403CB0",
+          "GetStringTypeW|0x27",
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeA|0x26"
+        ],
+        "LoD/1.11": [
+          "MultiByteToWideChar|0x23",
+          "_memset|0x403CB0",
+          "GetStringTypeA|0x26",
+          "GetStringTypeW|0x27",
+          "AllocateStackSpace|0x403C80"
+        ],
+        "LoD/1.11b": [
           "MultiByteToWideChar|0x23",
           "_memset|0x403CB0",
           "GetStringTypeW|0x27",
           "GetStringTypeA|0x26",
           "AllocateStackSpace|0x403C80"
         ],
-        "LoD/1.09d": [
-          "AllocateStackSpace|0x403C80",
-          "_memset|0x403CB0",
-          "GetStringTypeA|0x26",
-          "GetStringTypeW|0x27",
-          "MultiByteToWideChar|0x23"
-        ],
-        "LoD/1.10": [
-          "GetStringTypeA|0x26",
-          "AllocateStackSpace|0x403C80",
-          "_memset|0x403CB0",
-          "GetStringTypeW|0x27",
-          "MultiByteToWideChar|0x23"
-        ],
-        "LoD/1.11": [
-          "AllocateStackSpace|0x403C80",
-          "GetStringTypeA|0x26",
-          "MultiByteToWideChar|0x23",
-          "_memset|0x403CB0",
-          "GetStringTypeW|0x27"
-        ],
-        "LoD/1.11b": [
-          "AllocateStackSpace|0x403C80",
-          "GetStringTypeA|0x26",
-          "MultiByteToWideChar|0x23",
-          "_memset|0x403CB0",
-          "GetStringTypeW|0x27"
-        ],
         "LoD/1.12a": [
-          "AllocateStackSpace|0x403C80",
+          "GetStringTypeA|0x26",
           "GetStringTypeW|0x27",
           "MultiByteToWideChar|0x23",
-          "_memset|0x403CB0",
-          "GetStringTypeA|0x26"
+          "AllocateStackSpace|0x403C80",
+          "_memset|0x403CB0"
         ],
         "LoD/1.13c": [
           "AllocateStackSpace|0x403C80",
-          "GetStringTypeA|0x26",
-          "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
           "_memset|0x403CB0",
-          "MultiByteToWideChar|0x23"
+          "GetStringTypeW|0x27",
+          "GetStringTypeA|0x26"
         ],
         "LoD/1.13d": [
+          "AllocateStackSpace|0x403C80",
           "_memset|0x403CB0",
-          "GetStringTypeA|0x26",
-          "GetStringTypeW|0x27",
           "MultiByteToWideChar|0x23",
-          "AllocateStackSpace|0x403C80"
+          "GetStringTypeW|0x27",
+          "GetStringTypeA|0x26"
         ],
         "LoD/1.14a": [
           "GetStringTypeW|0x27",
-          "GetStringTypeA|0x26",
-          "MultiByteToWideChar|0x23",
-          "_memset|0x403CB0",
-          "AllocateStackSpace|0x403C80"
-        ],
-        "LoD/1.14b": [
-          "GetStringTypeW|0x27",
           "AllocateStackSpace|0x403C80",
-          "_memset|0x403CB0",
-          "MultiByteToWideChar|0x23",
-          "GetStringTypeA|0x26"
-        ],
-        "LoD/1.14c": [
-          "_memset|0x403CB0",
           "GetStringTypeA|0x26",
-          "GetStringTypeW|0x27",
-          "AllocateStackSpace|0x403C80",
+          "_memset|0x403CB0",
           "MultiByteToWideChar|0x23"
         ],
-        "LoD/1.14d": [
-          "AllocateStackSpace|0x403C80",
+        "LoD/1.14b": [
           "_memset|0x403CB0",
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeA|0x26",
           "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23"
+        ],
+        "LoD/1.14c": [
           "MultiByteToWideChar|0x23",
-          "GetStringTypeA|0x26"
+          "_memset|0x403CB0",
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeA|0x26",
+          "GetStringTypeW|0x27"
+        ],
+        "LoD/1.14d": [
+          "GetStringTypeA|0x26",
+          "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23",
+          "_memset|0x403CB0",
+          "GetStringTypeW|0x27"
         ]
       },
       "callers": {
@@ -46387,24 +46387,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "FindMemoryDescriptorByAddress|0x4032E3"
         ],
         "Classic/1.01": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20"
         ],
         "Classic/1.02": [
-          "FindMemoryDescriptorByAddress|0x4032E3",
+          "HeapFree|0x20",
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
-          "HeapFree|0x20"
+          "FindMemoryDescriptorByAddress|0x4032E3"
         ],
         "Classic/1.03": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3"
         ],
         "Classic/1.04c": [
-          "HeapFree|0x20",
           "FindMemoryDescriptorByAddress|0x4032E3",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
+          "HeapFree|0x20"
         ],
         "LoD/1.07": [
           "FindMemoryDescriptorByAddress|0x4032E3",
@@ -46412,19 +46412,19 @@ var FUNCTIONS_Diablo_II_exe = {
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.08": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3",
-          "HeapFree|0x20"
+          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.09": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3",
-          "HeapFree|0x20"
+          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.09b": [
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20",
-          "FindMemoryDescriptorByAddress|0x4032E3",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "FindMemoryDescriptorByAddress|0x4032E3"
         ],
         "LoD/1.09d": [
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
@@ -46432,14 +46432,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapFree|0x20"
         ],
         "LoD/1.10": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3",
-          "HeapFree|0x20"
+          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.11": [
           "FindMemoryDescriptorByAddress|0x4032E3",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
-          "HeapFree|0x20"
+          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.11b": [
           "FindMemoryDescriptorByAddress|0x4032E3",
@@ -46452,56 +46452,56 @@ var FUNCTIONS_Diablo_II_exe = {
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.13c": [
+          "FindMemoryDescriptorByAddress|0x4032E3",
           "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
-          "FindMemoryDescriptorByAddress|0x4032E3"
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.13d": [
-          "FindMemoryDescriptorByAddress|0x4032E3",
-          "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
-        ],
-        "LoD/1.14a": [
-          "FindMemoryDescriptorByAddress|0x4032E3",
-          "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
-        ],
-        "LoD/1.14b": [
           "FindMemoryDescriptorByAddress|0x4032E3",
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20"
         ],
-        "LoD/1.14c": [
+        "LoD/1.14a": [
           "HeapFree|0x20",
-          "FindMemoryDescriptorByAddress|0x4032E3",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
+          "FindMemoryDescriptorByAddress|0x4032E3"
         ],
-        "LoD/1.14d": [
+        "LoD/1.14b": [
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
+          "FindMemoryDescriptorByAddress|0x4032E3",
+          "HeapFree|0x20"
+        ],
+        "LoD/1.14c": [
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20",
+          "FindMemoryDescriptorByAddress|0x4032E3"
+        ],
+        "LoD/1.14d": [
+          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.01": [
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.02": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "Classic/1.03": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "Classic/1.04c": [
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "Classic/1.03": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "Classic/1.04c": [
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.07": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -46512,32 +46512,32 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.09": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.09b": [
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.09d": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.10": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11b": [
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.12a": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.13c": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -46556,12 +46556,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.14c": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14d": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ]
       },
       "instructions": {
@@ -47370,36 +47370,36 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.03": [
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "Classic/1.04c": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
         ],
-        "LoD/1.07": [
+        "Classic/1.04c": [
           "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.07": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.08": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09": [
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09b": [
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09d": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.10": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -47426,16 +47426,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14b": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.14c": [
           "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
-        "LoD/1.14c": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
-        ],
         "LoD/1.14d": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
         ]
       },
       "instructions": {
@@ -48820,94 +48820,94 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.01": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017"
         ],
         "Classic/1.02": [
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
           "GetEnvironmentStringsConverted|0x402264",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeModuleData|0x402017"
         ],
         "Classic/1.03": [
-          "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeModuleData|0x402017"
         ],
         "Classic/1.04c": [
-          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.07": [
-          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396",
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.08": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.09": [
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.09b": [
           "GetEnvironmentStringsConverted|0x402264",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396"
+        ],
+        "LoD/1.09d": [
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.10": [
+          "InitializeModuleData|0x402017",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396"
+        ],
+        "LoD/1.11": [
+          "GetEnvironmentStringsConverted|0x402264",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017"
         ],
-        "LoD/1.09d": [
+        "LoD/1.11b": [
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "LoD/1.12a": [
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396"
         ],
-        "LoD/1.10": [
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264"
-        ],
-        "LoD/1.11": [
-          "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
-        ],
-        "LoD/1.11b": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeModuleData|0x402017"
-        ],
-        "LoD/1.12a": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017"
-        ],
         "LoD/1.13c": [
-          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264"
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.13d": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -48916,28 +48916,28 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.14a": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.14b": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeModuleData|0x402017"
+        ],
+        "LoD/1.14c": [
           "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
-        "LoD/1.14b": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.14c": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeModuleData|0x402017"
-        ],
         "LoD/1.14d": [
           "InitializeModuleData|0x402017",
+          "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "InitializeEnvironmentVariables|0x401F5E"
         ]
       },
       "instructions": {
@@ -49534,12 +49534,12 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "AllocateMemoryWithCache|0x402F2E",
-          "InvokeCallbackHandler|0x403D08"
-        ],
-        "Classic/1.01": [
           "InvokeCallbackHandler|0x403D08",
           "AllocateMemoryWithCache|0x402F2E"
+        ],
+        "Classic/1.01": [
+          "AllocateMemoryWithCache|0x402F2E",
+          "InvokeCallbackHandler|0x403D08"
         ],
         "Classic/1.02": [
           "InvokeCallbackHandler|0x403D08",
@@ -49550,12 +49550,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "Classic/1.04c": [
-          "InvokeCallbackHandler|0x403D08",
-          "AllocateMemoryWithCache|0x402F2E"
+          "AllocateMemoryWithCache|0x402F2E",
+          "InvokeCallbackHandler|0x403D08"
         ],
         "LoD/1.07": [
-          "InvokeCallbackHandler|0x403D08",
-          "AllocateMemoryWithCache|0x402F2E"
+          "AllocateMemoryWithCache|0x402F2E",
+          "InvokeCallbackHandler|0x403D08"
         ],
         "LoD/1.08": [
           "InvokeCallbackHandler|0x403D08",
@@ -49570,24 +49570,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.09d": [
-          "AllocateMemoryWithCache|0x402F2E",
-          "InvokeCallbackHandler|0x403D08"
-        ],
-        "LoD/1.10": [
           "InvokeCallbackHandler|0x403D08",
           "AllocateMemoryWithCache|0x402F2E"
         ],
-        "LoD/1.11": [
+        "LoD/1.10": [
           "AllocateMemoryWithCache|0x402F2E",
           "InvokeCallbackHandler|0x403D08"
+        ],
+        "LoD/1.11": [
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.11b": [
           "InvokeCallbackHandler|0x403D08",
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.12a": [
-          "AllocateMemoryWithCache|0x402F2E",
-          "InvokeCallbackHandler|0x403D08"
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.13c": [
           "InvokeCallbackHandler|0x403D08",
@@ -49606,12 +49606,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "InvokeCallbackHandler|0x403D08"
         ],
         "LoD/1.14c": [
-          "AllocateMemoryWithCache|0x402F2E",
-          "InvokeCallbackHandler|0x403D08"
-        ],
-        "LoD/1.14d": [
           "InvokeCallbackHandler|0x403D08",
           "AllocateMemoryWithCache|0x402F2E"
+        ],
+        "LoD/1.14d": [
+          "AllocateMemoryWithCache|0x402F2E",
+          "InvokeCallbackHandler|0x403D08"
         ]
       },
       "callers": {
@@ -50370,16 +50370,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "Classic/1.01": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ],
         "Classic/1.02": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ],
         "Classic/1.03": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ],
         "Classic/1.04c": [
           "HeapAlloc|0x28",
@@ -50390,24 +50390,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapAlloc|0x28"
         ],
         "LoD/1.08": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.09": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.09b": [
           "HeapAlloc|0x28",
           "AllocateMemoryDescriptorBlock|0x403639"
+        ],
+        "LoD/1.09": [
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
+        ],
+        "LoD/1.09b": [
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ],
         "LoD/1.09d": [
           "AllocateMemoryDescriptorBlock|0x403639",
           "HeapAlloc|0x28"
         ],
         "LoD/1.10": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ],
         "LoD/1.11": [
           "AllocateMemoryDescriptorBlock|0x403639",
@@ -50418,16 +50418,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapAlloc|0x28"
         ],
         "LoD/1.12a": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ],
         "LoD/1.13c": [
           "AllocateMemoryDescriptorBlock|0x403639",
           "HeapAlloc|0x28"
         ],
         "LoD/1.13d": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ],
         "LoD/1.14a": [
           "HeapAlloc|0x28",
@@ -50438,12 +50438,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapAlloc|0x28"
         ],
         "LoD/1.14c": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
-        ],
-        "LoD/1.14d": [
           "AllocateMemoryDescriptorBlock|0x403639",
           "HeapAlloc|0x28"
+        ],
+        "LoD/1.14d": [
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
         ]
       },
       "callers": {
@@ -54732,24 +54732,24 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
+          "VirtualFree|0x1F",
           "HeapFree|0x20",
-          "OptimizedMemoryMove|0x403D30",
-          "VirtualFree|0x1F"
+          "OptimizedMemoryMove|0x403D30"
         ],
         "Classic/1.01": [
-          "OptimizedMemoryMove|0x403D30",
           "VirtualFree|0x1F",
+          "OptimizedMemoryMove|0x403D30",
           "HeapFree|0x20"
         ],
         "Classic/1.02": [
-          "VirtualFree|0x1F",
+          "OptimizedMemoryMove|0x403D30",
           "HeapFree|0x20",
-          "OptimizedMemoryMove|0x403D30"
+          "VirtualFree|0x1F"
         ],
         "Classic/1.03": [
-          "VirtualFree|0x1F",
+          "OptimizedMemoryMove|0x403D30",
           "HeapFree|0x20",
-          "OptimizedMemoryMove|0x403D30"
+          "VirtualFree|0x1F"
         ],
         "Classic/1.04c": [
           "HeapFree|0x20",
@@ -54758,77 +54758,77 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.07": [
           "VirtualFree|0x1F",
+          "OptimizedMemoryMove|0x403D30",
+          "HeapFree|0x20"
+        ],
+        "LoD/1.08": [
+          "VirtualFree|0x1F",
           "HeapFree|0x20",
           "OptimizedMemoryMove|0x403D30"
         ],
-        "LoD/1.08": [
-          "OptimizedMemoryMove|0x403D30",
-          "VirtualFree|0x1F",
-          "HeapFree|0x20"
-        ],
         "LoD/1.09": [
-          "OptimizedMemoryMove|0x403D30",
           "VirtualFree|0x1F",
-          "HeapFree|0x20"
+          "HeapFree|0x20",
+          "OptimizedMemoryMove|0x403D30"
         ],
         "LoD/1.09b": [
-          "HeapFree|0x20",
           "VirtualFree|0x1F",
+          "HeapFree|0x20",
           "OptimizedMemoryMove|0x403D30"
         ],
         "LoD/1.09d": [
-          "OptimizedMemoryMove|0x403D30",
           "VirtualFree|0x1F",
+          "OptimizedMemoryMove|0x403D30",
           "HeapFree|0x20"
         ],
         "LoD/1.10": [
+          "HeapFree|0x20",
           "VirtualFree|0x1F",
-          "OptimizedMemoryMove|0x403D30",
-          "HeapFree|0x20"
+          "OptimizedMemoryMove|0x403D30"
         ],
         "LoD/1.11": [
+          "HeapFree|0x20",
           "OptimizedMemoryMove|0x403D30",
-          "VirtualFree|0x1F",
-          "HeapFree|0x20"
+          "VirtualFree|0x1F"
         ],
         "LoD/1.11b": [
           "OptimizedMemoryMove|0x403D30",
-          "HeapFree|0x20",
-          "VirtualFree|0x1F"
+          "VirtualFree|0x1F",
+          "HeapFree|0x20"
         ],
         "LoD/1.12a": [
+          "OptimizedMemoryMove|0x403D30",
           "VirtualFree|0x1F",
-          "HeapFree|0x20",
-          "OptimizedMemoryMove|0x403D30"
+          "HeapFree|0x20"
         ],
         "LoD/1.13c": [
           "HeapFree|0x20",
+          "VirtualFree|0x1F",
+          "OptimizedMemoryMove|0x403D30"
+        ],
+        "LoD/1.13d": [
+          "OptimizedMemoryMove|0x403D30",
+          "HeapFree|0x20",
+          "VirtualFree|0x1F"
+        ],
+        "LoD/1.14a": [
+          "HeapFree|0x20",
           "OptimizedMemoryMove|0x403D30",
           "VirtualFree|0x1F"
         ],
-        "LoD/1.13d": [
-          "HeapFree|0x20",
-          "VirtualFree|0x1F",
-          "OptimizedMemoryMove|0x403D30"
-        ],
-        "LoD/1.14a": [
-          "VirtualFree|0x1F",
-          "OptimizedMemoryMove|0x403D30",
-          "HeapFree|0x20"
-        ],
         "LoD/1.14b": [
+          "HeapFree|0x20",
           "OptimizedMemoryMove|0x403D30",
-          "VirtualFree|0x1F",
-          "HeapFree|0x20"
+          "VirtualFree|0x1F"
         ],
         "LoD/1.14c": [
-          "VirtualFree|0x1F",
           "HeapFree|0x20",
-          "OptimizedMemoryMove|0x403D30"
+          "OptimizedMemoryMove|0x403D30",
+          "VirtualFree|0x1F"
         ],
         "LoD/1.14d": [
-          "OptimizedMemoryMove|0x403D30",
           "VirtualFree|0x1F",
+          "OptimizedMemoryMove|0x403D30",
           "HeapFree|0x20"
         ]
       },
@@ -56080,16 +56080,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemorySlot|0x4039F3"
         ],
         "Classic/1.02": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
-        ],
-        "Classic/1.03": [
           "AllocateMemoryDescriptor|0x403942",
           "AllocateMemorySlot|0x4039F3"
         ],
-        "Classic/1.04c": [
+        "Classic/1.03": [
           "AllocateMemorySlot|0x4039F3",
           "AllocateMemoryDescriptor|0x403942"
+        ],
+        "Classic/1.04c": [
+          "AllocateMemoryDescriptor|0x403942",
+          "AllocateMemorySlot|0x4039F3"
         ],
         "LoD/1.07": [
           "AllocateMemorySlot|0x4039F3",
@@ -56104,12 +56104,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemorySlot|0x4039F3"
         ],
         "LoD/1.09b": [
-          "AllocateMemoryDescriptor|0x403942",
-          "AllocateMemorySlot|0x4039F3"
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.09d": [
-          "AllocateMemoryDescriptor|0x403942",
-          "AllocateMemorySlot|0x4039F3"
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.10": [
           "AllocateMemoryDescriptor|0x403942",
@@ -56140,16 +56140,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.14b": [
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
+        ],
+        "LoD/1.14c": [
           "AllocateMemoryDescriptor|0x403942",
           "AllocateMemorySlot|0x4039F3"
         ],
-        "LoD/1.14c": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
-        ],
         "LoD/1.14d": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
+          "AllocateMemoryDescriptor|0x403942",
+          "AllocateMemorySlot|0x4039F3"
         ]
       },
       "callers": {
@@ -57273,122 +57273,122 @@ var FUNCTIONS_Diablo_II_exe = {
       "callees": {
         "Classic/1.00": [
           "HeapReAlloc|0x2A",
-          "HeapFree|0x20",
-          "HeapAlloc|0x28",
-          "VirtualAlloc|0x29"
-        ],
-        "Classic/1.01": [
-          "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
-          "HeapFree|0x20"
-        ],
-        "Classic/1.02": [
-          "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
-          "HeapFree|0x20"
-        ],
-        "Classic/1.03": [
-          "HeapFree|0x20",
-          "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29"
-        ],
-        "Classic/1.04c": [
-          "HeapFree|0x20",
-          "VirtualAlloc|0x29",
-          "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A"
-        ],
-        "LoD/1.07": [
-          "HeapReAlloc|0x2A",
           "VirtualAlloc|0x29",
           "HeapFree|0x20",
           "HeapAlloc|0x28"
         ],
-        "LoD/1.08": [
+        "Classic/1.01": [
           "HeapReAlloc|0x2A",
           "HeapAlloc|0x28",
+          "VirtualAlloc|0x29",
+          "HeapFree|0x20"
+        ],
+        "Classic/1.02": [
+          "HeapFree|0x20",
+          "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29",
+          "HeapAlloc|0x28"
+        ],
+        "Classic/1.03": [
+          "HeapAlloc|0x28",
+          "HeapFree|0x20",
+          "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29"
+        ],
+        "Classic/1.04c": [
+          "HeapAlloc|0x28",
+          "HeapFree|0x20",
+          "VirtualAlloc|0x29",
+          "HeapReAlloc|0x2A"
+        ],
+        "LoD/1.07": [
+          "VirtualAlloc|0x29",
+          "HeapReAlloc|0x2A",
+          "HeapFree|0x20",
+          "HeapAlloc|0x28"
+        ],
+        "LoD/1.08": [
+          "HeapAlloc|0x28",
+          "HeapReAlloc|0x2A",
           "VirtualAlloc|0x29",
           "HeapFree|0x20"
         ],
         "LoD/1.09": [
           "HeapAlloc|0x28",
+          "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29",
+          "HeapFree|0x20"
+        ],
+        "LoD/1.09b": [
+          "HeapFree|0x20",
+          "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29",
+          "HeapAlloc|0x28"
+        ],
+        "LoD/1.09d": [
+          "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29",
+          "HeapAlloc|0x28",
+          "HeapFree|0x20"
+        ],
+        "LoD/1.10": [
+          "HeapFree|0x20",
+          "VirtualAlloc|0x29",
+          "HeapReAlloc|0x2A",
+          "HeapAlloc|0x28"
+        ],
+        "LoD/1.11": [
+          "HeapAlloc|0x28",
           "VirtualAlloc|0x29",
           "HeapReAlloc|0x2A",
           "HeapFree|0x20"
         ],
-        "LoD/1.09b": [
+        "LoD/1.11b": [
+          "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29",
+          "HeapFree|0x20",
+          "HeapAlloc|0x28"
+        ],
+        "LoD/1.12a": [
+          "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29",
+          "HeapFree|0x20",
+          "HeapAlloc|0x28"
+        ],
+        "LoD/1.13c": [
           "HeapAlloc|0x28",
           "HeapFree|0x20",
           "HeapReAlloc|0x2A",
           "VirtualAlloc|0x29"
         ],
-        "LoD/1.09d": [
-          "VirtualAlloc|0x29",
+        "LoD/1.13d": [
           "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29",
+          "HeapAlloc|0x28",
+          "HeapFree|0x20"
+        ],
+        "LoD/1.14a": [
           "HeapFree|0x20",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.10": [
-          "HeapReAlloc|0x2A",
           "VirtualAlloc|0x29",
           "HeapAlloc|0x28",
-          "HeapFree|0x20"
+          "HeapReAlloc|0x2A"
         ],
-        "LoD/1.11": [
-          "VirtualAlloc|0x29",
-          "HeapReAlloc|0x2A",
-          "HeapAlloc|0x28",
-          "HeapFree|0x20"
-        ],
-        "LoD/1.11b": [
+        "LoD/1.14b": [
           "HeapFree|0x20",
           "HeapAlloc|0x28",
           "VirtualAlloc|0x29",
           "HeapReAlloc|0x2A"
         ],
-        "LoD/1.12a": [
-          "HeapAlloc|0x28",
-          "HeapFree|0x20",
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29"
-        ],
-        "LoD/1.13c": [
-          "VirtualAlloc|0x29",
-          "HeapFree|0x20",
-          "HeapReAlloc|0x2A",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.13d": [
-          "HeapAlloc|0x28",
-          "VirtualAlloc|0x29",
-          "HeapReAlloc|0x2A",
-          "HeapFree|0x20"
-        ],
-        "LoD/1.14a": [
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
-          "HeapAlloc|0x28",
-          "HeapFree|0x20"
-        ],
-        "LoD/1.14b": [
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
-          "HeapFree|0x20",
-          "HeapAlloc|0x28"
-        ],
         "LoD/1.14c": [
-          "HeapAlloc|0x28",
           "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29",
           "HeapFree|0x20",
-          "VirtualAlloc|0x29"
+          "HeapAlloc|0x28"
         ],
         "LoD/1.14d": [
           "VirtualAlloc|0x29",
-          "HeapAlloc|0x28",
           "HeapFree|0x20",
+          "HeapAlloc|0x28",
           "HeapReAlloc|0x2A"
         ]
       },
@@ -59762,36 +59762,36 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetProcAddress|0xA"
         ],
         "Classic/1.03": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
-        ],
-        "Classic/1.04c": [
           "GetProcAddress|0xA",
           "LoadLibraryA|0x1B"
         ],
-        "LoD/1.07": [
+        "Classic/1.04c": [
           "LoadLibraryA|0x1B",
           "GetProcAddress|0xA"
+        ],
+        "LoD/1.07": [
+          "GetProcAddress|0xA",
+          "LoadLibraryA|0x1B"
         ],
         "LoD/1.08": [
           "LoadLibraryA|0x1B",
           "GetProcAddress|0xA"
         ],
         "LoD/1.09": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
-        ],
-        "LoD/1.09b": [
           "GetProcAddress|0xA",
           "LoadLibraryA|0x1B"
+        ],
+        "LoD/1.09b": [
+          "LoadLibraryA|0x1B",
+          "GetProcAddress|0xA"
         ],
         "LoD/1.09d": [
           "GetProcAddress|0xA",
           "LoadLibraryA|0x1B"
         ],
         "LoD/1.10": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
+          "GetProcAddress|0xA",
+          "LoadLibraryA|0x1B"
         ],
         "LoD/1.11": [
           "LoadLibraryA|0x1B",
@@ -59802,28 +59802,28 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetProcAddress|0xA"
         ],
         "LoD/1.12a": [
-          "GetProcAddress|0xA",
-          "LoadLibraryA|0x1B"
+          "LoadLibraryA|0x1B",
+          "GetProcAddress|0xA"
         ],
         "LoD/1.13c": [
           "LoadLibraryA|0x1B",
           "GetProcAddress|0xA"
         ],
         "LoD/1.13d": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
+          "GetProcAddress|0xA",
+          "LoadLibraryA|0x1B"
         ],
         "LoD/1.14a": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
+          "GetProcAddress|0xA",
+          "LoadLibraryA|0x1B"
         ],
         "LoD/1.14b": [
           "GetProcAddress|0xA",
           "LoadLibraryA|0x1B"
         ],
         "LoD/1.14c": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
+          "GetProcAddress|0xA",
+          "LoadLibraryA|0x1B"
         ],
         "LoD/1.14d": [
           "LoadLibraryA|0x1B",
@@ -61946,16 +61946,16 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "Classic/1.01": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "Classic/1.02": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "Classic/1.03": [
           "GetCharacterTypeInfo|0x402B2B",
@@ -61974,8 +61974,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.09": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.09b": [
           "GetCharacterTypeInfo|0x402B2B",
@@ -61994,20 +61994,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.11b": [
-          "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.12a": [
-          "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.13c": [
           "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.13d": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.14a": [
           "LocaleMapStringWithConversion|0x4028DC",
@@ -62018,12 +62018,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.14c": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
-        ],
-        "LoD/1.14d": [
           "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
+        ],
+        "LoD/1.14d": [
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B"
         ]
       },
       "instructions": {
@@ -64287,304 +64287,6 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14d": "internal"
       }
     },
-    "Diablo II_MNE_bff09423b51f": {
-      "addresses": {
-        "Classic/1.00": "0x00403D30"
-      },
-      "rvas": {
-        "Classic/1.00": "0x3D30"
-      },
-      "sizes": {
-        "Classic/1.00": 664
-      },
-      "name": "OptimizedMemoryMove",
-      "signature": "void * OptimizedMemoryMove(void * pDestination, void * pSource, uint dwByteCount)",
-      "calling_convention": "__cdecl",
-      "return_type": "void *",
-      "comment": "Optimized memory move implementation with overlap detection and alignment optimization.\n\nAlgorithm:\n1. Check for overlapping memory regions (source and destination ranges overlap)\n2. If overlapping regions detected, copy backwards from end to start to avoid corruption\n3. If no overlap, copy forwards from start to end for better cache performance\n4. For both directions, optimize copying using 4-byte aligned transfers when possible\n5. Handle misaligned data by copying individual bytes first to reach alignment\n6. Perform bulk 4-byte transfers in optimized loop (unroll threshold of 8 iterations)\n7. Copy remaining bytes (0-3) using individual byte transfers\n\nParameters:\npDestination - Destination memory buffer to copy data to\npSource - Source memory buffer to copy data from  \ndwByteCount - Number of bytes to copy between buffers\n\nReturns:\nvoid * - Returns original destination pointer (pDestination) for function chaining\n\nSpecial Cases:\nZero byte count - Returns immediately without any memory operations\nMisaligned pointers - Falls back to byte-by-byte copying with alignment handling\nLarge transfers - Uses optimized 4-byte transfers with loop unrolling for performance\n\nMagic Numbers Reference:\n0x4 (4) - Alignment boundary and 4-byte transfer size\n0x3 (3) - Alignment mask to check 4-byte boundary alignment  \n0x7 (7) - Loop unrolling threshold for optimized bulk transfer\n\nError Handling:\nNo explicit error checking - assumes valid memory regions and non-null pointers\nOverlap detection prevents memory corruption during overlapping copies\nAlignment optimization ensures optimal performance on x86 architecture",
-      "name_source": "Classic/1.00",
-      "method": "NOP",
-      "index": "NOP:46bb504a06a93a3e41764a61fac82aef236ba6e2f7665c4c1facdbc31e45a6ad",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "46bb504a06a93a3e41764a61fac82aef236ba6e2f7665c4c1facdbc31e45a6ad",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": "b4526beb7f7ee2f0ad52cc5ebb23b21b",
-        "MNE": "bff09423b51fd121ea30afec957819f4",
-        "CFG": "b8bcea0773ca2dfa689f3f8d23e7384e",
-        "PRO": "ff38c497c82643f818ac8c3950b7223d"
-      },
-      "callers": {
-        "Classic/1.00": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
-        ]
-      },
-      "instructions": {
-        "Classic/1.00": [
-          "0x3D30|PUSH|EBP",
-          "0x3D31|MOV|EBP, ESP",
-          "0x3D33|PUSH|EDI",
-          "0x3D34|PUSH|ESI",
-          "0x3D35|MOV|ESI, dword ptr [EBP + 0xc]",
-          "0x3D38|MOV|ECX, dword ptr [EBP + 0x10]",
-          "0x3D3B|MOV|EDI, dword ptr [EBP + 0x8]",
-          "0x3D3E|MOV|EAX, ECX",
-          "0x3D40|MOV|EDX, ECX",
-          "0x3D42|ADD|EAX, ESI",
-          "0x3D44|CMP|EDI, ESI",
-          "0x3D46|JBE|0x00403d50",
-          "0x3D48|CMP|EDI, EAX",
-          "0x3D4A|JC|0x00403ec8",
-          "0x3D50|TEST|EDI, 0x3"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.00": 231
-      },
-      "stack_frame_sizes": {
-        "Classic/1.00": 16
-      },
-      "loop_counts": {
-        "Classic/1.00": 6
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "bff09423b51fd121ea30afec957819f4",
-        "Classic/1.01": "bff09423b51fd121ea30afec957819f4",
-        "Classic/1.02": "bff09423b51fd121ea30afec957819f4",
-        "Classic/1.03": "bff09423b51fd121ea30afec957819f4",
-        "Classic/1.04c": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.07": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.08": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.09": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.09b": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.09d": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.10": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.11": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.11b": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.12a": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.13c": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.13d": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.14a": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.14b": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.14c": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.14d": "bff09423b51fd121ea30afec957819f4"
-      },
-      "constants": {
-        "Classic/1.00": [
-          "0x3D65||0x403E78",
-          "0x3D7D||0x403D90",
-          "0x3D84||0x403E88",
-          "0x3D8C||0x403E0C",
-          "0x3DC2||0x403E78",
-          "0x3DE8||0x403E78",
-          "0x3E02||0x403E78",
-          "0x3E6F||0x403E78",
-          "0x3EE7||0x404010",
-          "0x3EF2||0x403FC0",
-          "0x3F0D||0x403F18",
-          "0x3F14||0x404010",
-          "0x3F3E||0x404010",
-          "0x3F68||0x404010",
-          "0x3F9A||0x404010",
-          "0x4007||0x404010"
-        ]
-      },
-      "globals": {
-        "Classic/1.00": [
-          "0x3E78|switchdataD_00403e78|00403e88",
-          "0x3D94|switchdataD_00403d94|00403da0",
-          "0x3E0C|switchdataD_00403e0c|00403e6f",
-          "0x4010|switchdataD_00404010|00404020",
-          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
-          "0x3F1C|switchdataD_00403f1c|00403f28"
-        ]
-      },
-      "caller_counts": {
-        "Classic/1.00": 1
-      },
-      "constant_counts": {
-        "Classic/1.00": 16
-      },
-      "global_counts": {
-        "Classic/1.00": 6
-      },
-      "param_counts": {
-        "Classic/1.00": 3
-      },
-      "tags": {
-        "Classic/1.00": [
-          "PROP_LARGE",
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_3",
-          "PROP_LOOPHEAVY",
-          "STRUCT_UnitAny",
-          "PROP_LEAF",
-          "STRUCT_Control",
-          "STRUCT_PlayerData"
-        ]
-      },
-      "function_types": {
-        "Classic/1.00": "internal"
-      },
-      "candidates": {
-        "Classic/1.01": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "Classic/1.02": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "Classic/1.03": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "Classic/1.04c": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.07": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.08": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.09": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.09b": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.09d": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.10": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.11": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.11b": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.12a": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.13c": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.13d": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.14a": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.14b": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.14c": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.14d": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.00",
-          "matched_to": "LocaleMapStringWithConversion"
-        }
-      }
-    },
     "Diablo II_NOP_b91ad0969159": {
       "addresses": {
         "Classic/1.00": "0x00404066",
@@ -65070,304 +64772,6 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "thunk",
         "LoD/1.14c": "thunk",
         "LoD/1.14d": "thunk"
-      }
-    },
-    "Diablo II_ADDR_00403D30": {
-      "addresses": {
-        "Classic/1.01": "0x00403D30"
-      },
-      "rvas": {
-        "Classic/1.01": "0x3D30"
-      },
-      "sizes": {
-        "Classic/1.01": 664
-      },
-      "name": "OptimizedMemoryMove",
-      "signature": "void * OptimizedMemoryMove(void * pDestination, void * pSource, uint dwByteCount)",
-      "calling_convention": "__cdecl",
-      "return_type": "void *",
-      "comment": "Optimized memory move implementation with overlap detection and alignment optimization.\n\nAlgorithm:\n1. Check for overlapping memory regions (source and destination ranges overlap)\n2. If overlapping regions detected, copy backwards from end to start to avoid corruption\n3. If no overlap, copy forwards from start to end for better cache performance\n4. For both directions, optimize copying using 4-byte aligned transfers when possible\n5. Handle misaligned data by copying individual bytes first to reach alignment\n6. Perform bulk 4-byte transfers in optimized loop (unroll threshold of 8 iterations)\n7. Copy remaining bytes (0-3) using individual byte transfers\n\nParameters:\npDestination - Destination memory buffer to copy data to\npSource - Source memory buffer to copy data from  \ndwByteCount - Number of bytes to copy between buffers\n\nReturns:\nvoid * - Returns original destination pointer (pDestination) for function chaining\n\nSpecial Cases:\nZero byte count - Returns immediately without any memory operations\nMisaligned pointers - Falls back to byte-by-byte copying with alignment handling\nLarge transfers - Uses optimized 4-byte transfers with loop unrolling for performance\n\nMagic Numbers Reference:\n0x4 (4) - Alignment boundary and 4-byte transfer size\n0x3 (3) - Alignment mask to check 4-byte boundary alignment  \n0x7 (7) - Loop unrolling threshold for optimized bulk transfer\n\nError Handling:\nNo explicit error checking - assumes valid memory regions and non-null pointers\nOverlap detection prevents memory corruption during overlapping copies\nAlignment optimization ensures optimal performance on x86 architecture",
-      "name_source": "Classic/1.01",
-      "method": "NOP",
-      "index": "NOP:46bb504a06a93a3e41764a61fac82aef236ba6e2f7665c4c1facdbc31e45a6ad",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "NOP": "46bb504a06a93a3e41764a61fac82aef236ba6e2f7665c4c1facdbc31e45a6ad",
-        "CAL": null,
-        "API": null,
-        "APS": null,
-        "CON": "b4526beb7f7ee2f0ad52cc5ebb23b21b",
-        "MNE": "bff09423b51fd121ea30afec957819f4",
-        "CFG": "b8bcea0773ca2dfa689f3f8d23e7384e",
-        "PRO": "ff38c497c82643f818ac8c3950b7223d"
-      },
-      "callers": {
-        "Classic/1.01": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
-        ]
-      },
-      "instructions": {
-        "Classic/1.01": [
-          "0x3D30|PUSH|EBP",
-          "0x3D31|MOV|EBP, ESP",
-          "0x3D33|PUSH|EDI",
-          "0x3D34|PUSH|ESI",
-          "0x3D35|MOV|ESI, dword ptr [EBP + 0xc]",
-          "0x3D38|MOV|ECX, dword ptr [EBP + 0x10]",
-          "0x3D3B|MOV|EDI, dword ptr [EBP + 0x8]",
-          "0x3D3E|MOV|EAX, ECX",
-          "0x3D40|MOV|EDX, ECX",
-          "0x3D42|ADD|EAX, ESI",
-          "0x3D44|CMP|EDI, ESI",
-          "0x3D46|JBE|0x00403d50",
-          "0x3D48|CMP|EDI, EAX",
-          "0x3D4A|JC|0x00403ec8",
-          "0x3D50|TEST|EDI, 0x3"
-        ]
-      },
-      "instruction_counts": {
-        "Classic/1.01": 231
-      },
-      "stack_frame_sizes": {
-        "Classic/1.01": 16
-      },
-      "loop_counts": {
-        "Classic/1.01": 6
-      },
-      "mnemonic_hashes": {
-        "Classic/1.00": "bff09423b51fd121ea30afec957819f4",
-        "Classic/1.01": "bff09423b51fd121ea30afec957819f4",
-        "Classic/1.02": "bff09423b51fd121ea30afec957819f4",
-        "Classic/1.03": "bff09423b51fd121ea30afec957819f4",
-        "Classic/1.04c": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.07": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.08": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.09": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.09b": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.09d": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.10": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.11": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.11b": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.12a": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.13c": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.13d": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.14a": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.14b": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.14c": "bff09423b51fd121ea30afec957819f4",
-        "LoD/1.14d": "bff09423b51fd121ea30afec957819f4"
-      },
-      "constants": {
-        "Classic/1.01": [
-          "0x3D65||0x403E78",
-          "0x3D7D||0x403D90",
-          "0x3D84||0x403E88",
-          "0x3D8C||0x403E0C",
-          "0x3DC2||0x403E78",
-          "0x3DE8||0x403E78",
-          "0x3E02||0x403E78",
-          "0x3E6F||0x403E78",
-          "0x3EE7||0x404010",
-          "0x3EF2||0x403FC0",
-          "0x3F0D||0x403F18",
-          "0x3F14||0x404010",
-          "0x3F3E||0x404010",
-          "0x3F68||0x404010",
-          "0x3F9A||0x404010",
-          "0x4007||0x404010"
-        ]
-      },
-      "globals": {
-        "Classic/1.01": [
-          "0x3E78|switchdataD_00403e78|00403e88",
-          "0x3D94|switchdataD_00403d94|00403da0",
-          "0x3E0C|switchdataD_00403e0c|00403e6f",
-          "0x4010|switchdataD_00404010|00404020",
-          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
-          "0x3F1C|switchdataD_00403f1c|00403f28"
-        ]
-      },
-      "caller_counts": {
-        "Classic/1.01": 1
-      },
-      "constant_counts": {
-        "Classic/1.01": 16
-      },
-      "global_counts": {
-        "Classic/1.01": 6
-      },
-      "param_counts": {
-        "Classic/1.01": 3
-      },
-      "tags": {
-        "Classic/1.01": [
-          "PROP_LARGE",
-          "STRUCT_Act",
-          "STRUCT_Inventory",
-          "PARAM_3",
-          "PROP_LOOPHEAVY",
-          "STRUCT_UnitAny",
-          "PROP_LEAF",
-          "STRUCT_Control",
-          "STRUCT_PlayerData"
-        ]
-      },
-      "function_types": {
-        "Classic/1.01": "internal"
-      },
-      "candidates": {
-        "Classic/1.00": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "Classic/1.02": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "Classic/1.03": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "Classic/1.04c": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.07": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.08": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.09": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.09b": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.09d": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.10": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.11": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.11b": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.12a": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.13c": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.13d": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.14a": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.14b": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.14c": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        },
-        "LoD/1.14d": {
-          "address": "0x004028DC",
-          "rva": "0x28DC",
-          "confidence": 0.903,
-          "method": "vector",
-          "source": "Classic/1.01",
-          "matched_to": "LocaleMapStringWithConversion"
-        }
       }
     },
     "Diablo II_NOP_0597d102cd3e": {

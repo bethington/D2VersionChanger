@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-16T18:31:58.018344
+// Generated: 2025-12-16T20:37:06.337995
 // Functions for D2sound.dll
 // Versions: LoD/PD2
 
@@ -5827,88 +5827,6 @@ var FUNCTIONS_D2sound_dll = {
         "LoD/PD2": 1
       }
     },
-    "D2sound_MNE_11df4b5a5564": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B67F0"
-      },
-      "rvas": {
-        "LoD/PD2": "0x67F0"
-      },
-      "sizes": {
-        "LoD/PD2": 39
-      },
-      "name": "SetStructFieldWithValidation",
-      "signature": "void SetStructFieldWithValidation(int * pBasePtr, undefined4 fieldValue)",
-      "calling_convention": "__fastcall",
-      "comment": "Stores a value at offset +0x44 (field index 0x11) within a structure with null pointer validation.\n\nAlgorithm:\n1. Test if pBasePtr (in ECX) is null\n2. If null, retrieve return address via GetReturnAddress(0x33a)\n3. Call CleanupAndAbort with error context and return address\n4. Exit with code -1 (non-returning)\n5. If not null, store fieldValue (in EDX) at pBasePtr[0x11] (+0x44 bytes)\n6. Return void\n\nParameters:\n  pBasePtr (int *) - Pointer to base structure, validated for null. If null triggers error handling.\n  fieldValue (int) - Value to store at offset +0x44 within the structure.\n\nReturns:\n  void - No return value. Function either stores the field or terminates process.\n\nSpecial Cases:\n  - Null pointer triggers error sequence: GetReturnAddress(0x33a) \u2192 CleanupAndAbort() \u2192 exit(-1)\n  - Error code 0x33a is passed to GetReturnAddress for logging/context\n  - Function uses __fastcall: ECX=pBasePtr, EDX=fieldValue\n  - CleanupAndAbort is non-returning, so exit(-1) acts as failsafe",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "11df4b5a55647da5d3738f182f2a73f5",
-        "CFG": "3faa1a24a3d4c996032f03064ca761f6",
-        "PRO": "a551eb55670ce10d9b4afc52aadd034e"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "11df4b5a55647da5d3738f182f2a73f5"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 2
-      }
-    },
-    "D2sound_ADDR_6F9B6820": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B6820"
-      },
-      "rvas": {
-        "LoD/PD2": "0x6820"
-      },
-      "sizes": {
-        "LoD/PD2": 39
-      },
-      "name": "ValidatePointerAndSetField",
-      "signature": "void ValidatePointerAndSetField(void * pObject, uint dwValue)",
-      "calling_convention": "__fastcall",
-      "comment": "Validates object pointer and stores a DWORD value at offset +0x40.\n\nAlgorithm:\n1. Test if pObject pointer is null (ECX register in __fastcall)\n2. If null, retrieve return address using GetReturnAddress(0x32f)\n3. Call CleanupAndAbort with error context data at 0x6f9c0684\n4. Call _exit(-1) to terminate process with error code\n5. If pointer valid, store dwValue (in EDX) at offset +0x40 from pObject base\n6. Return to caller\n\nParameters:\n  pObject: Pointer to object to validate and modify (first param in ECX, __fastcall)\n  dwValue: DWORD value to store at offset +0x40 (second param in EDX, __fastcall)\n\nReturns:\n  void - No return value. Terminates process on null pointer; returns normally if successful.\n\nSpecial Cases:\n  - Magic number 0x32f passed to GetReturnAddress indicates ordinal import 10038\n  - Error context data at 0x6f9c0684 shared across multiple validation functions\n  - Process terminates with exit code -1 on validation failure\n  - Offset +0x40 (64 bytes from base) is consistent target across related functions",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "11df4b5a55647da5d3738f182f2a73f5",
-        "CFG": "90c4f17418cec0d76ed106d2d34ca67f",
-        "PRO": "ee410d429ff82a8399e15364efd98905"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "11df4b5a55647da5d3738f182f2a73f5"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 2
-      }
-    },
     "D2sound_API_aba62c510a15": {
       "addresses": {
         "LoD/PD2": "0x6F9B6850"
@@ -5945,129 +5863,6 @@ var FUNCTIONS_D2sound_dll = {
           "GetReturnAddress",
           "CleanupAndAbort",
           "FindItemById"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 1
-      }
-    },
-    "D2sound_MNE_7af59b7920d8": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B68D0"
-      },
-      "rvas": {
-        "LoD/PD2": "0x68D0"
-      },
-      "sizes": {
-        "LoD/PD2": 75
-      },
-      "name": "InvokeObjectCallback",
-      "signature": "void InvokeObjectCallback(void * this, void * pObject, uint dwCallbackParam1, uint dwCallbackParam2, uint dwCallbackParam3)",
-      "calling_convention": "__thiscall",
-      "comment": "Setting prototype: void InvokeObjectCallback(void * this, void * pObject, uint dwCallbackParam1, uint dwCallbackParam2, uint dwCallbackParam3)",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "7af59b7920d8493637fab9982fb6ea5f",
-        "CFG": "d4a4f7f07eed1fb0c24bfad08eb98295",
-        "PRO": "9e28843cc6bd376a54e36cd1904aa393"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "7af59b7920d8493637fab9982fb6ea5f"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 5
-      }
-    },
-    "D2sound_ADDR_6F9B6920": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B6920"
-      },
-      "rvas": {
-        "LoD/PD2": "0x6920"
-      },
-      "sizes": {
-        "LoD/PD2": 39
-      },
-      "name": "GetObjectField_0x38_OrAbort",
-      "signature": "uint GetObjectField_0x38_OrAbort(void * pObject)",
-      "calling_convention": "__fastcall",
-      "comment": "Safely retrieves a dword value from offset 0x38 within an object structure, validating the pointer first.\n\nAlgorithm:\n1. TEST ECX,ECX to check if pObject pointer is NULL\n2. If NULL (JNZ fails): retrieve return address via GetReturnAddress(0x2e4)\n3. Call CleanupAndAbort with return address and error data at 0x6f9c0684\n4. Call _exit(-1) to terminate process\n5. If pObject valid: MOV EAX, [ECX+0x38] to load field at offset +0x38\n6. RET to return the loaded value in EAX\n\nParameters:\n- pObject (ECX): Pointer to object structure with minimum size 0x3C bytes\n\nReturns:\n- EAX: Value of the dword field at offset +0x38 within the object\n- If pObject is NULL: Function terminates process and does not return\n\nSpecial Cases:\n- NULL pointer handling: Triggers error sequence and immediate process termination\n- Offset 0x38: Hardcoded offset suggests fixed structure layout\n- Return Address Magic: Uses offset 0x2e4 passed to GetReturnAddress for stack unwinding\n- Error Data: References static error data at 0x6f9c0684 (44 xrefs across binary)\n\nStructure Layout:\nThe function accesses a structure with:\nOffset  Size  Field Name             Type        Description\n------  ----  -----                  ----        -----------\n0x38    4     field_at_0x38          uint        Value returned on valid pointer",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "11df4b5a55647da5d3738f182f2a73f5",
-        "CFG": "90c4f17418cec0d76ed106d2d34ca67f",
-        "PRO": "285107c6c751daa87adb21b45705813b"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "11df4b5a55647da5d3738f182f2a73f5"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 1
-      }
-    },
-    "D2sound_MNE_234371c39429": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B6950"
-      },
-      "rvas": {
-        "LoD/PD2": "0x6950"
-      },
-      "sizes": {
-        "LoD/PD2": 44
-      },
-      "name": "ValidatePointerAndGetField",
-      "signature": "uint ValidatePointerAndGetField(void * pData)",
-      "calling_convention": "__fastcall",
-      "comment": "Validates pointer and retrieves field at offset 0x1c.\n\nAlgorithm:\n1. Validate that pData pointer is not NULL\n2. Validate that first dword at pData is not zero\n3. If both validations pass, load and return dword from offset 0x1c\n4. If validation fails, call GetReturnAddress() with parameter 0x2a5\n5. Call CleanupAndAbort() with address 0x6f9c0684 and return address\n6. Call _exit(-1) to terminate program\n\nParameters:\npData (ECX) - Pointer to data structure containing validation field at offset 0 and return value at offset 0x1c\n\nReturns:\nunsigned int - Value from offset 0x1c if validation succeeds\nIf validation fails: Function does not return (calls _exit)\n\nSpecial Cases:\n- pData NULL triggers validation failure\n- First dword at pData being zero triggers validation failure\n- Failure cases result in immediate program termination via CleanupAndAbort\n\nStructure Layout:\nOffset  Size  Field Name        Type      Description\n------  ----  ---------------   --------  ----------------------------------\n  0x00   0x04  validation_flag   uint      Must be non-zero to pass validation\n  0x1c   0x04  return_value      uint      Value returned on successful validation\n\nNote: returnAddress variable requires type change from undefined4 to void* for proper documentation. DAT_6f9c0684 global should be renamed with Hungarian notation.",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "234371c394297c5d1138265585799ca0",
-        "CFG": "4955fb5f7256e9d15042d1a65fae17a0",
-        "PRO": "1eec3ffc34392e5a8f52f1e427bbc9a9"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "234371c394297c5d1138265585799ca0"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
         ]
       },
       "param_counts": {
@@ -6153,47 +5948,6 @@ var FUNCTIONS_D2sound_dll = {
         ]
       }
     },
-    "D2sound_MNE_32670fe22160": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B6A40"
-      },
-      "rvas": {
-        "LoD/PD2": "0x6A40"
-      },
-      "sizes": {
-        "LoD/PD2": 173
-      },
-      "name": "ClearAudioBuffer",
-      "signature": "int ClearAudioBuffer(void * pAudioBuffer)",
-      "calling_convention": "__stdcall",
-      "comment": "Clears audio buffer memory and releases associated resources.\n\nAlgorithm:\n1. Validate pAudioBuffer is not NULL; abort with cleanup if NULL\n2. Enter critical section to serialize access\n3. Call virtual method at [pAudioBuffer + 0x2c] to get buffer size\n4. Return 0 immediately if size is negative (error condition)\n5. Zero buffer memory using STOSD (dword) and STOSB (byte) for alignment\n6. Call virtual method at [pAudioBuffer + 0x4c] to release/finalize resources\n7. Leave critical section\n8. Return 1 for success\n\nParameters:\n  pAudioBuffer (via ESI): Pointer to audio buffer object with vtable\n\nReturns:\n  1 if buffer cleared successfully\n  0 if buffer size is invalid (negative)\n\nSpecial Cases:\n  - Function aborts if pAudioBuffer is NULL\n  - Negative buffer size triggers error return\n  - REP STOSD/STOSB for efficient bulk zeroing\n  - Critical section protects concurrent access",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "32670fe22160decbe28f4d2e1fbb3de6",
-        "CFG": "d5585b0749df433944c3d439899d8172",
-        "PRO": "47552fdd6940d9170be0f3f1a20202da"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "32670fe22160decbe28f4d2e1fbb3de6"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 1
-      }
-    },
     "D2sound_MNE_7c44e2f3f2d9": {
       "addresses": {
         "LoD/PD2": "0x6F9B6AF0"
@@ -6258,47 +6012,6 @@ var FUNCTIONS_D2sound_dll = {
         "LoD/PD2": "af413c75688c051388954706b235eefd"
       }
     },
-    "D2sound_MNE_17507b7151e0": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B6B80"
-      },
-      "rvas": {
-        "LoD/PD2": "0x6B80"
-      },
-      "sizes": {
-        "LoD/PD2": 116
-      },
-      "name": "InitializeGameObjectTiming",
-      "signature": "void InitializeGameObjectTiming(void * pGameObject, uint dwTimeoutMs, int nUnknown)",
-      "calling_convention": "__fastcall",
-      "comment": "Initializes timing-related fields in a game object structure for synchronization.\n\nAlgorithm:\n1. Validate pGameObject pointer (check for null)\n2. If null, retrieve return address and abort with error code 0x39e\n3. Check if global synchronization flag (DAT_6f9c658c) is enabled\n4. If disabled, exit early without initializing\n5. Enter critical section to protect shared data\n6. Write magic value 1 to offset +0x4c (sync flag)\n7. Copy value from offset +0x38 to offset +0x50 (initialize from template)\n8. Store timeout parameter to offset +0x54\n9. Get current tick count via GetTickCount()\n10. Write tick count to offset +0x58 (sync start time)\n11. Calculate expiration time: tick count + timeout, store at offset +0x5c\n12. Call LeaveCriticalSection to release lock and exit\n\nParameters:\n  pGameObject: Pointer to game object structure requiring timing initialization\n  dwTimeoutMs: Timeout duration in milliseconds for sync operations\n  nUnknown: Unknown parameter purpose (possibly reserved/unused)\n\nReturns:\n  void - function does not return a value to caller\n\nSpecial Cases:\n  - Null pointer check triggers fatal error with code 0x39e\n  - Synchronization disabled (DAT_6f9c658c == 0) causes early exit without initialization\n  - Critical section ensures thread-safe access to shared data\n  - Uses system GetTickCount() for timing, may wrap after ~49.7 days\n\nOffset Layout (Game Object Structure):\n  Offset  Size  Field Name            Type      Description\n  0x38    4     sync_template_value   uint      Template value copied to offset 0x50\n  0x4c    4     sync_enabled_flag     uint      Set to 1 when sync initialized\n  0x50    4     sync_copy_value       uint      Initialized from template at 0x38\n  0x54    4     timeout_duration      uint      Stores dwTimeoutMs parameter\n  0x58    4     sync_start_time       uint      GetTickCount() at initialization\n  0x5c    4     sync_expiry_time      uint      Start time + timeout duration",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "17507b7151e023f2997bc2b953455a74",
-        "CFG": "d9946050ad34ddb0b8760198a469fd62",
-        "PRO": "29d6b69b067374dbb2e6104eb1940eda"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "17507b7151e023f2997bc2b953455a74"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 3
-      }
-    },
     "D2sound_API_0c63a2582d83": {
       "addresses": {
         "LoD/PD2": "0x6F9B6C00"
@@ -6339,48 +6052,6 @@ var FUNCTIONS_D2sound_dll = {
       },
       "param_counts": {
         "LoD/PD2": 3
-      }
-    },
-    "D2sound_MNE_69e7901095da": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B6CE0"
-      },
-      "rvas": {
-        "LoD/PD2": "0x6CE0"
-      },
-      "sizes": {
-        "LoD/PD2": 147
-      },
-      "name": "SetObjectProperty",
-      "signature": "void SetObjectProperty(void * this, float value)",
-      "calling_convention": "__thiscall",
-      "comment": "Sets a property value on an object and triggers vtable method if conditions are met.\n\nAlgorithm:\n1. Validate object pointer (this) - abort if NULL with error code 0x345\n2. Load vtable pointer from object offset 0x10\n3. Store property value at object offset 0x3c\n4. Check trigger conditions: vtable exists AND global mode flag equals 2\n5. Check secondary conditions: flag bit 2 set OR value equals global threshold\n6. If all conditions met: clamp value difference, convert to int64, call vtable method\n\nParameters:\n  this: Object pointer with vtable at offset 0x10 (void *)\n  value: Property value to set (float)\n\nReturns:\n  void - No return value\n\nSpecial Cases:\n  - NULL object pointer: Calls CleanupAndAbort with return address 0x345, exits with code -1\n  - Invalid vtable: Skips method call entirely\n  - Global mode != 2: Skips conditional processing\n  - Flag bit 2 clear AND value != threshold: Skips method call\n\nMagic Numbers:\n  0x10: Vtable pointer offset in object structure\n  0x3c: Property value storage offset in object structure\n  0x34: Flags byte offset in object structure\n  0x04: Bit mask for flag bit 2 (conditional trigger)\n  0x345: Error code passed to CleanupAndAbort for NULL object\n  0x10: Vtable method offset (method index 4, 4-byte pointers)\n  2: Required global mode value for conditional processing\n\nError Handling:\n  - NULL object validation with immediate abort and process exit\n  - No bounds checking on property value\n  - Graceful handling of NULL vtable (skips method call)\n\nStructure Layout:\nOffset | Size | Field Name | Type    | Description\n-------|------|------------|---------|----------------------------------\n0x10   | 4    | pVTable    | int *   | Virtual method table pointer\n0x34   | 1    | bFlags     | byte    | Object state flags (bit 2 = conditional trigger)\n0x3c   | 4    | flValue    | float   | Current property value storage\n\nFlag Bits (offset 0x34):\nBit | Hex  | Description\n----|------|------------------------------------------\n2   | 0x04 | Conditional trigger flag for vtable call",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:0c63a2582d8388ab3e18046a99121e04",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "0c63a2582d8388ab3e18046a99121e04",
-        "MNE": "69e7901095da830f1bbfb99739aeadd5",
-        "CFG": "d7905c8e8a8e6d05ceded444a342b415",
-        "PRO": "fbc31eb09cd62eaa97ebefc208da600a"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "69e7901095da830f1bbfb99739aeadd5"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort",
-          "ClampFloatValue"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 2
       }
     },
     "D2sound_API_caf7184fdc1c": {
@@ -6466,88 +6137,6 @@ var FUNCTIONS_D2sound_dll = {
       },
       "param_counts": {
         "LoD/PD2": 2
-      }
-    },
-    "D2sound_MNE_bb28d7e90cd8": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B6EC0"
-      },
-      "rvas": {
-        "LoD/PD2": "0x6EC0"
-      },
-      "sizes": {
-        "LoD/PD2": 105
-      },
-      "name": "ValidateObjectMethod",
-      "signature": "uint ValidateObjectMethod(void * pObject)",
-      "calling_convention": "__fastcall",
-      "comment": "Validates an object and invokes its virtual method at offset +0x24.\n\nAlgorithm:\n1. Validate that pObject pointer is not NULL\n2. Dereference pObject and check if dereferenced value is not NULL\n3. Enter critical section lock (0x6f9c6530)\n4. Retrieve virtual method from vtable at [pObject][0x24]\n5. Call virtual method with pObject and stack buffer as parameters\n6. Test if method return value is negative\n7. Leave critical section lock\n8. Return 1 if method succeeded (non-negative), 0 if failed\n9. If validation fails, retrieve return address and call CleanupAndAbort with error\n\nParameters:\n- pObject: void* - Pointer to object; must not be NULL and dereferenced value must be non-NULL. Must point to vtable with method at offset +0x24\n\nReturns:\n- uint: Returns 1 (true) if object validation passes and virtual method returns non-negative value, 0 (false) if method returns negative value or validation fails. If pObject is NULL, triggers fatal error handler.\n\nSpecial Cases:\n- If pObject is NULL or *pObject is NULL: calls CleanupAndAbort and terminates with _exit(-1)\n- If virtual method at [pObject][0x24] returns negative value: returns 0\n- Return value is masked with 0x1 to ensure boolean 0 or 1 result\n- Critical section 0x6f9c6530 is held during virtual method invocation",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "bb28d7e90cd8dd20307c808240a82993",
-        "CFG": "1b9fe5ef5362b7d2a891f265591a0cd0",
-        "PRO": "05abba31e70231e17559f4f0c556929d"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "bb28d7e90cd8dd20307c808240a82993"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 1
-      }
-    },
-    "D2sound_MNE_2b79c90a5aad": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B6F30"
-      },
-      "rvas": {
-        "LoD/PD2": "0x6F30"
-      },
-      "sizes": {
-        "LoD/PD2": 102
-      },
-      "name": "ActivateGameObject",
-      "signature": "int ActivateGameObject(void * pGameObject)",
-      "calling_convention": "__fastcall",
-      "comment": "Activates a game object by calling its activation virtual method and setting an active flag.\\n\\nAlgorithm:\\n1. Validates input parameter (pGameObject) is not null, aborts if null with error 0x279\\n2. Acquires critical section lock at DAT_6f9c6530 to ensure thread-safe access\\n3. Calls the virtual method at offset +0x30 in the object's vtable with parameters (object, 0, 0, 1)\\n4. Checks activation result; returns 0 (failure) if result < 0 and releases lock\\n5. Sets activation flag at object offset +0x1c to 1 if activation succeeded\\n6. Releases critical section lock\\n7. Returns 1 (success) if activation succeeded, 0 (failure) otherwise\\n\\nParameters:\\n  pGameObject: Pointer to game object with vtable at offset +0x0 and active flag at offset +0x1c\\n\\nReturns:\\n  1 if object was successfully activated\\n  0 if object pointer was null or activation virtual method returned error\\n\\nStructure Layout:\\n  Offset  Size  Field                Type    Description\\n  ------  ----  -----                ----    -----------\\n  +0x00   4     vtable_ptr           void*   Pointer to virtual method table\\n  +0x30   4     activate_vmethod     func    Virtual method for activation (3rd entry in vtable)\\n  +0x1c   4     is_active_flag       dword   Active state flag (0=inactive, 1=active)\\n\\nSpecial Cases:\\n  - If pGameObject is null, calls GetReturnAddress(0x279) and CleanupAndAbort(), never returns\\n  - Synchronization: Uses critical section (DAT_6f9c6530) to serialize access\\n  - Virtual method returns negative value on failure",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "2b79c90a5aad8f36110f0cef7630246f",
-        "CFG": "2482a870273702f3bdc5b197d1d06a89",
-        "PRO": "b33912ebebf8816ec00067b56137e7bb"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "2b79c90a5aad8f36110f0cef7630246f"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 1
       }
     },
     "D2sound_API_48c5b050028b": {
@@ -6668,47 +6257,6 @@ var FUNCTIONS_D2sound_dll = {
         ]
       }
     },
-    "D2sound_MNE_385fa249d026": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B72D0"
-      },
-      "rvas": {
-        "LoD/PD2": "0x72D0"
-      },
-      "sizes": {
-        "LoD/PD2": 418
-      },
-      "name": "ReadCircularBuffer",
-      "signature": "uint ReadCircularBuffer(uint bufferOffset, uint bytesToRead, void * pOutputBuffer)",
-      "calling_convention": "__stdcall",
-      "comment": "Reads data from a circular buffer into an output buffer with thread-safe synchronization.\\nThis function implements circular buffer read operations, handling wraparound logic\\nand boundary conditions for reading arbitrary amounts of data from a managed buffer.\\n\\nAlgorithm:\\n1. Validate critical preconditions: object pointer (EBX), buffer base (EBX[5]), output buffer\\n2. Acquire critical section lock for thread-safe buffer access\\n3. Call virtual method at offset 0x2c to execute initial read operation\\n4. If read fails (negative return), release lock and return 0\\n5. Enter main loop to process read data:\\n   a. If bufferOffset >= buffer end, apply modulo to wrap around to valid range\\n   b. Calculate available contiguous bytes from current offset to end\\n   c. Cap read to available bytes or requested size, whichever is smaller\\n   d. Copy data in 4-byte chunks (DWORD) using REP MOVSD for efficiency\\n   e. Copy remaining 0-3 bytes individually using REP MOVSB\\n   f. Advance output buffer pointer and counters\\n   g. Check if more reads needed (EBX[0x10] indicates multi-read scenario)\\n6. Call virtual method at offset 0x4c to finalize read operation\\n7. If no pending reads and buffer full, set completion flag (EBX[0xb] = 1)\\n8. If bytes remain to fill and limit specified (EBX[0xc] != -1), zero-fill remaining space\\n9. Release critical section lock and return 1 (success)\\n\\nParameters:\\n  bufferOffset (uint): Starting position in circular buffer to read from\\n  bytesToRead (uint): Number of bytes to read from buffer into output\\n  pOutputBuffer (void *): Destination buffer where read data is copied\\n\\nReturns:\\n  uint: 1 if operation succeeded and completed, 0 if read operation failed\\n\\nSpecial Cases:\\n  - Wraparound: When bufferOffset exceeds buffer end, modulo wrapping applies\\n  - Zero-fill: If buffer limit (EBX[0xc]) specified and unread space exists\\n  - Multi-read: Flag at EBX[0x10] indicates whether more reads required\\n  - Thread Safety: Critical section lock (DAT_6f9c6530) protects all buffer access\\n\\nStructure Layout:\\n  Offset  Size  Field Name        Type      Description\\n  ------  ----  ----------------  --------  ------\\n  +0x00   4     vftable           pointer   Virtual function table\\n  +0x04   4     unknown_1         uint      Unknown field\\n  +0x14   4     bufferBase        pointer   Base address of data buffer\\n  +0x18   4     bufferEnd         uint      End position of circular buffer\\n  +0x24   4     readOffset        uint      Current read position counter\\n  +0x30   4     readLimit         uint      Maximum bytes to read (-1 = unlimited)\\n  +0x40   4     continueRead      uint      Flag: more reads needed\\n  +0x44   4     wrapStart         uint      Wraparound start offset\\\"",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "385fa249d0263b86ff0856b08fb77a84",
-        "CFG": "7dc396ce0d0ae3209014a19c90358d6e",
-        "PRO": "cddd815f23e88c96ab7b7af4dd924f63"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "385fa249d0263b86ff0856b08fb77a84"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 3
-      }
-    },
     "D2sound_API_13d2012fc7c4": {
       "addresses": {
         "LoD/PD2": "0x6F9B7480"
@@ -6743,47 +6291,6 @@ var FUNCTIONS_D2sound_dll = {
       "api_calls": {
         "LoD/PD2": [
           "SetAudioParameterValue",
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      },
-      "param_counts": {
-        "LoD/PD2": 1
-      }
-    },
-    "D2sound_MNE_c7342149fd99": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B7510"
-      },
-      "rvas": {
-        "LoD/PD2": "0x7510"
-      },
-      "sizes": {
-        "LoD/PD2": 49
-      },
-      "name": "FadeOutAudioParameter",
-      "signature": "void FadeOutAudioParameter(uint durationMs)",
-      "calling_convention": "__fastcall",
-      "comment": "Gradually fades out the current audio parameter to zero over a specified duration.\n\nAlgorithm:\n1. Check if audio system is enabled (DAT_6f9c658c != 0)\n2. Validate duration parameter is at least 1 (checks if ECX > 0 after fastcall)\n3. If invalid duration, retrieve return address via GetReturnAddress(0x387) and abort with CleanupAndAbort\n4. Calculate decrementPerSleep as (totalValue * 20) / duration, where 20ms is the sleep interval\n5. Initialize currentParameter to totalValue (DAT_6f9c5994)\n6. While currentParameter is not zero:\n   a. Sleep for 20 milliseconds\n   b. Subtract decrementPerSleep from currentParameter (bounds check prevents negative values)\n   c. Call SetGlobalAudioParameter with updated currentParameter value\n7. Return to caller\n\nParameters:\ndwDurationMs (ECX): Duration in time units for the fade-out operation. Must be greater than 0. Used to calculate the rate of parameter decrease. Invalid durations (<=0) trigger immediate abort.\n\nReturns:\nvoid - Function does not return a value. Calls _exit(-1) on validation failure.\n\nSpecial Cases:\n- If audio system is disabled (DAT_6f9c658c == 0), function returns immediately without doing anything\n- If duration is <= 0, function calls CleanupAndAbort and _exit, terminating the process\n- If totalValue is 0, the loop is skipped entirely\n- Each iteration sleeps for exactly 20ms (0x14 milliseconds)\n- Decrements are rounded down due to integer division\n- When decrementPerSleep > currentParameter, currentParameter is set to 0 instead of going negative\n\nMagic Numbers Reference:\n0x387 - Error code passed to GetReturnAddress for duration validation failure\n0x14 - Sleep interval in milliseconds (20ms) for fade stepping\n-1 - Exit code used when terminating on invalid duration\n\nError Handling:\n- Invalid duration (<=0): GetReturnAddress(0x387), CleanupAndAbort, _exit(-1)\n- Audio system disabled: Silent early return\n- Underflow protection: Set currentParameter to 0 when decrement would cause negative value",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "c7342149fd992105040af106150ced41",
-        "CFG": "6c3b0aa07951c5e00ecf5c0f67c56cb3",
-        "PRO": "d2d25b459a503d9214b828869328e2b1"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "c7342149fd992105040af106150ced41"
-      },
-      "api_calls": {
-        "LoD/PD2": [
           "GetReturnAddress",
           "CleanupAndAbort"
         ]
@@ -7006,44 +6513,6 @@ var FUNCTIONS_D2sound_dll = {
         ]
       }
     },
-    "D2sound_MNE_b21f881c7f32": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B7AA0"
-      },
-      "rvas": {
-        "LoD/PD2": "0x7AA0"
-      },
-      "sizes": {
-        "LoD/PD2": 90
-      },
-      "name": "InitializeAudioContextQueue",
-      "signature": "void InitializeAudioContextQueue(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Initializes the audio context queue processing system with thread and event management.\n\nAlgorithm:\n1. Check if thread wait handle is already initialized (g_threadWaitHandle != NULL)\n2. If already initialized, get return address using GetReturnAddress(0xbc)\n3. Call CleanupAndAbort with error message and return address, then exit(-1)\n4. Create manual-reset event using CreateEventA(NULL, bManualReset=1, bInitialState=0, NULL)\n5. Store event handle in g_eventSignalHandle global variable\n6. Create worker thread using CreateThread with ProcessAudioContextQueue as entry point\n7. Store thread handle in g_threadWaitHandle global variable\n\nParameters:\nNone\n\nReturns:\nvoid - No return value, function initializes global state\n\nSpecial Cases:\n- If called multiple times, terminates process with error code -1\n- Thread ID is stored in local stack variable dwThreadId\n- Event object created with manual reset mode for persistent signaling\n- Uses __stdcall calling convention\n\nError Handling:\n- Double initialization triggers cleanup and process termination\n- CleanupAndAbort called with error message pointer and return address\n- Process exits with code -1 after cleanup\n\nMagic Numbers Reference:\n0xbc - Parameter passed to GetReturnAddress for stack frame calculation\n1 - bManualReset=TRUE for event creation (manual reset mode)\n0 - bInitialState=FALSE for event creation (initially non-signaled)\n-1 - Exit code for double initialization error",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "b21f881c7f3216efb485bfffb98c01f0",
-        "CFG": "c5d962dcda6c5eaa07bed312c848de2f",
-        "PRO": "37f1be870f6fd1e3d992bc5f986a0b66"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "b21f881c7f3216efb485bfffb98c01f0"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      }
-    },
     "D2sound_MNE_7b4de9f0cf35": {
       "addresses": {
         "LoD/PD2": "0x6F9B7B00"
@@ -7143,44 +6612,6 @@ var FUNCTIONS_D2sound_dll = {
         "LoD/PD2": [
           "DestroyGameContext",
           "DestroyAllGameObjects"
-        ]
-      }
-    },
-    "D2sound_MNE_b40e163105ac": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B7BC0"
-      },
-      "rvas": {
-        "LoD/PD2": "0x7BC0"
-      },
-      "sizes": {
-        "LoD/PD2": 158
-      },
-      "name": "InitializeMusicData",
-      "signature": "void InitializeMusicData(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Initializes music data structures by clearing flag fields in array elements.\n\nAlgorithm:\n1. Load configuration value from global flag (DAT_6f9c65b4)\n2. Load item count from global counter (DAT_6f9c5948)\n3. Initialize loop counter to 0\n4. Return early if item count <= 0\n5. For each item in array:\n   a. Check if initialization flag (DAT_6f9c65e0) is set\n   b. If not set, set flag to 1 and store config value (DAT_6f9c65dc)\n   c. Validate item count hasn't changed during processing (DAT_6f9c5990)\n   d. If count mismatch, call error handler with code 0x52\n   e. Validate loop index is within bounds\n   f. If index >= count, call error handler with code 0x53\n   g. Select array based on config flag:\n      - If DAT_6f9c65dc == 0: use common_options array (0x6f9c5908)\n      - Else: use introedit array (0x6f9c5950)\n   h. Calculate entry address: base + (index * 2 * sizeof(pointer))\n   i. Clear flag field at offset +4 (second element of entry)\n   j. Increment loop counter\n6. Return normally when all items processed\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\nOn error: Calls CleanupAndAbort() and _exit(-1), does not return\n\nSpecial Cases:\nEmpty array (count <= 0): Returns immediately without processing\nCount validation failure: Calls error handler with code 0x52 (count mismatch)\nIndex bounds violation: Calls error handler with code 0x53 (bounds failed)\n\nMagic Numbers Reference:\n0x52 (82 decimal) - Error code for item count mismatch validation\n0x53 (83 decimal) - Error code for array index bounds violation\n0x6f9c5908 - Base address of common_options array\n0x6f9c5950 - Base address of introedit array\n2 - Array stride multiplier (each entry is 2 pointers: data + flags)\n-1 - Exit code passed to _exit() on fatal error\n\nError Handling:\nCount mismatch during processing triggers error code 0x52\nArray bounds violation triggers error code 0x53\nBoth errors call GetReturnAddress() for debugging info\nErrors call CleanupAndAbort() with error string and return address\nFatal errors call _exit(-1) - function never returns on error\n\nStructure Layout:\nMusic data arrays contain entries with 2-element structure:\nOffset  Size  Field Name  Type       Description\n0x00    4     pData       void*      Pointer to music data\n0x04    4     dwFlags     uint       Status/initialization flags\n\nFlag Bits:\nThe flag field at offset +4 is cleared to 0 during initialization\nPurpose appears to be reset/initialization state tracking",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "b40e163105ac1e681f80641c630009a1",
-        "CFG": "c53fc15315e1bf97c60bf976631deab8",
-        "PRO": "34821bae2f2ca8015fe63f7ac72c26dd"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "b40e163105ac1e681f80641c630009a1"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
         ]
       }
     },
@@ -7443,83 +6874,6 @@ var FUNCTIONS_D2sound_dll = {
       },
       "mnemonic_hashes": {
         "LoD/PD2": "7b4de9f0cf357b113d12e0c7e214792b"
-      }
-    },
-    "D2sound_MNE_03dd7fceaa94": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B8020"
-      },
-      "rvas": {
-        "LoD/PD2": "0x8020"
-      },
-      "sizes": {
-        "LoD/PD2": 127
-      },
-      "name": "ProcessAllContextsCleanup",
-      "signature": "void ProcessAllContextsCleanup(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Processes cleanup operations for all active game contexts.\n\nAlgorithm:\n1. Check if game is initialized (DAT_6f9c65b8 != 0)\n   - If not initialized, return immediately\n2. Save non-volatile registers (EBX, EDI, ESI)\n3. Load critical section address from DAT_6f9c6530\n4. Initialize pointer to context array base (0x6f9c6560)\n5. Loop through all context array slots (up to 0x6f9c6580):\n   a. Load context pointer from current array slot\n   b. Validate context pointer (not null)\n   c. Check context header (offset +0x0)\n   d. If invalid context: report fatal error and call _exit(-1)\n   e. Enter critical section lock\n   f. Check if cleanup flag set (offset +0x48)\n   g. If cleanup needed: call ProcessContextCleanup(context)\n   h. Call context vtable method at [vtable + 0x48]\n   i. Clear context field at offset +0x1c to 0\n   j. Leave critical section lock\n   k. Advance to next array slot and continue\n6. Return to caller\n\nParameters:\nNone (accesses global state via:\n  - DAT_6f9c65b8: Game initialization flag\n  - DAT_6f9c6530: Critical section lock\n  - DAT_6f9c6560: Start of context array\n  - 0x6f9c6580: End of context array)\n\nReturns:\nvoid (terminates with _exit(-1) on fatal error)\n\nStructure Layout:\nContext Object Header:\nOffset  Size  Field Name      Type      Description\n+0x00   4     pVTable         void*     Virtual method table pointer\n+0x1c   4     cleanup_state   uint      Cleanup tracking field\n+0x48   4     cleanup_flag    uint      Non-zero indicates cleanup needed\n\nArray Layout:\nBase:    0x6f9c6560 (context array)\nEnd:     0x6f9c6580\nStride:  4 bytes per slot\nSlots:   8 (32 bytes / 4 bytes per entry)\n\nError Codes:\n0x292 (658): Offset/line number where error originated\nError message address: 0x6f9c0684\n\nSpecial Cases:\n- Function is called from CleanupGameResources during shutdown\n- Validates critical context objects before cleanup\n- Fatal error if context array contains null/invalid pointers\n- Unconditional _exit(-1) on validation failure (no recovery)",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c345355fc1c5a5280351897d7124e0a2",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c345355fc1c5a5280351897d7124e0a2",
-        "MNE": "03dd7fceaa94aaeca0af9608babc5c4b",
-        "CFG": "255f3e5d7f45b64b73ce459d3401e54e",
-        "PRO": "9d7ca967d0bf89da7e032eebe440f2c9"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "03dd7fceaa94aaeca0af9608babc5c4b"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "ProcessContextCleanup",
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
-      }
-    },
-    "D2sound_MNE_dd4822909025": {
-      "addresses": {
-        "LoD/PD2": "0x6F9B80A0"
-      },
-      "rvas": {
-        "LoD/PD2": "0x80A0"
-      },
-      "sizes": {
-        "LoD/PD2": 85
-      },
-      "name": "CheckUnitActAssignment",
-      "signature": "int CheckUnitActAssignment(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Checks if any unit in the unit array has an assigned Act structure.\n\nAlgorithm:\n1. Check if global unit array pointer (DAT_6f9c65b8) is initialized\n2. If not initialized, return 0 (no act assignment found)\n3. Iterate through unit pointer array starting at DAT_6f9c6560\n4. For each unit pointer entry:\n   a. Dereference pointer to get UnitAny structure\n   b. Validate pointer is non-null and first field (dwType) is non-zero\n   c. If validation fails, trigger assertion and exit process\n   d. Check if Act pointer field (offset 0x1C / piVar1[7]) is non-null\n   e. If Act pointer is assigned, return 1 (found)\n   f. Move to next array entry (+4 bytes for next pointer)\n5. Continue until reaching array boundary at 0x6f9c6580\n6. If no unit has assigned Act, return 0\n\nParameters:\nNone - function uses global unit array pointers\n\nReturns:\nEAX = 1 if any unit has non-null pAct field\nEAX = 0 if no units found or all have null pAct\n\nSpecial Cases:\n- Array length determined by boundary 0x6f9c6580 - 0x6f9c6560 = 32 bytes = 8 unit pointers\n- Assertion failure (0x2a5) triggers if unit pointer is null or dwType field is zero\n- Function appears to check Act assignment status on startup or initialization\n- Calls CleanupAndAbort (0x6f9b5f50) on validation failure, which triggers fatal error\n\nStructure Layout (UnitAny at unit pointer):\nOffset | Size | Field      | Type    | Description\n0x00   | 4    | dwType     | DWORD   | Unit type (checked for non-zero)\n0x04   | 4    | dwTxtFileNo| DWORD   | Txt file index\n...    | ...  | ...        | ...     | ...\n0x1C   | 4    | pAct       | Act*    | Pointer to Act structure (checked here)",
-      "name_source": "LoD/PD2",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
-        "MNE": "dd4822909025236612fa4e9e7bba8c2c",
-        "CFG": "e5e3123a5bb8e17a31d8df3762047d21",
-        "PRO": "c9b4bf2e614a0990808455e6ce68d480"
-      },
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "dd4822909025236612fa4e9e7bba8c2c"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetReturnAddress",
-          "CleanupAndAbort"
-        ]
       }
     },
     "D2sound_API_0153fc3fd82b": {

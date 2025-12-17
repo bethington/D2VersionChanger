@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-16T18:31:58.018344
+// Generated: 2025-12-16T20:37:06.337995
 // Functions for SGD2FreeRes.dll
 // Versions: LoD/PD2
 
@@ -1748,40 +1748,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
         "LoD/PD2": "1add466b4642e573f57b2901d96ee39d"
       }
     },
-    "SGD2FreeRes_MNE_186ae01c1635": {
-      "addresses": {
-        "LoD/PD2": "0x7B943900"
-      },
-      "rvas": {
-        "LoD/PD2": "0x3900"
-      },
-      "sizes": {
-        "LoD/PD2": 275
-      },
-      "method": "API",
-      "index": "API:888239ea54962f967156f85984e5e792",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "888239ea54962f967156f85984e5e792",
-        "MNE": "186ae01c1635f336b53974abe69c1ff3",
-        "CFG": "f7a5e793ab2afa8e6bc4e51d6bf1f5ac",
-        "PRO": "f116931e616ed687cfb6677056735a9a"
-      },
-      "display_name": "API_888239ea54962f96",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "186ae01c1635f336b53974abe69c1ff3"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memmove",
-          "memcpy"
-        ]
-      }
-    },
     "SGD2FreeRes_MNE_c92d351ff57f": {
       "addresses": {
         "LoD/PD2": "0x7B943A20"
@@ -1956,42 +1922,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
       },
       "mnemonic_hashes": {
         "LoD/PD2": "c64754fef99404ec2414ddc31b535148"
-      }
-    },
-    "SGD2FreeRes_API_935dad40fdb1": {
-      "addresses": {
-        "LoD/PD2": "0x7B943F80"
-      },
-      "rvas": {
-        "LoD/PD2": "0x3F80"
-      },
-      "sizes": {
-        "LoD/PD2": 369
-      },
-      "method": "API",
-      "index": "API:935dad40fdb135a69114d1db8beb75a0",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "935dad40fdb135a69114d1db8beb75a0",
-        "MNE": "716b7cdd52741ab0d7076c15628a9e85",
-        "CFG": "b137c0c587286b53ebeb7930c8c777a2",
-        "PRO": "d6bbb8e27e07179c3c54ace7eaee66c3"
-      },
-      "display_name": "API_935dad40fdb135a6",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "716b7cdd52741ab0d7076c15628a9e85"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "GetFileVersionInfoSizeW",
-          "memset",
-          "GetFileVersionInfoW",
-          "VerQueryValueW"
-        ]
       }
     },
     "SGD2FreeRes_MNE_de420e103426": {
@@ -2658,74 +2588,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
         "LoD/PD2": 1
       }
     },
-    "SGD2FreeRes_MNE_61ff8121ed4c": {
-      "addresses": {
-        "LoD/PD2": "0x7B945210"
-      },
-      "rvas": {
-        "LoD/PD2": "0x5210"
-      },
-      "sizes": {
-        "LoD/PD2": 298
-      },
-      "method": "API",
-      "index": "API:888239ea54962f967156f85984e5e792",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "888239ea54962f967156f85984e5e792",
-        "MNE": "61ff8121ed4c0385138be060a2ace32b",
-        "CFG": "cd6039a7885db4fdb2d138f09300b200",
-        "PRO": "ef0124b6865466d57ef025d7d9bb0e7f"
-      },
-      "display_name": "API_888239ea54962f96",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "61ff8121ed4c0385138be060a2ace32b"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memmove",
-          "memcpy"
-        ]
-      }
-    },
-    "SGD2FreeRes_MNE_8abfa4ad13b7": {
-      "addresses": {
-        "LoD/PD2": "0x7B945340"
-      },
-      "rvas": {
-        "LoD/PD2": "0x5340"
-      },
-      "sizes": {
-        "LoD/PD2": 140
-      },
-      "method": "API",
-      "index": "API:888239ea54962f967156f85984e5e792",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "888239ea54962f967156f85984e5e792",
-        "MNE": "8abfa4ad13b78e8d24b431bf84f120e7",
-        "CFG": "e68b7688884d68f20d908ef015201416",
-        "PRO": "2cf96b9ca18cfe2b1e423e027b87b8f7"
-      },
-      "display_name": "API_888239ea54962f96",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "8abfa4ad13b78e8d24b431bf84f120e7"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memmove",
-          "memcpy"
-        ]
-      }
-    },
     "SGD2FreeRes_MNE_726212ebcbe6": {
       "addresses": {
         "LoD/PD2": "0x7B9453D0"
@@ -2752,40 +2614,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
       },
       "mnemonic_hashes": {
         "LoD/PD2": "726212ebcbe6557d2fda37f36196ef26"
-      }
-    },
-    "SGD2FreeRes_MNE_ef18354e271a": {
-      "addresses": {
-        "LoD/PD2": "0x7B9454D0"
-      },
-      "rvas": {
-        "LoD/PD2": "0x54D0"
-      },
-      "sizes": {
-        "LoD/PD2": 169
-      },
-      "method": "API",
-      "index": "API:888239ea54962f967156f85984e5e792",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "888239ea54962f967156f85984e5e792",
-        "MNE": "ef18354e271aeb9752a6ebcfdf4dd0c6",
-        "CFG": "2ba55cac38599c953397a80a5258ed8b",
-        "PRO": "77e198ba5ff819b8d4ce3673951be767"
-      },
-      "display_name": "API_888239ea54962f96",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "ef18354e271aeb9752a6ebcfdf4dd0c6"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memmove",
-          "memcpy"
-        ]
       }
     },
     "SGD2FreeRes_MNE_eaa4656369cc": {
@@ -2941,40 +2769,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
       },
       "mnemonic_hashes": {
         "LoD/PD2": "65849f7ce3fb077ef7d4cc1f1af54382"
-      }
-    },
-    "SGD2FreeRes_MNE_b540101ea8b7": {
-      "addresses": {
-        "LoD/PD2": "0x7B945980"
-      },
-      "rvas": {
-        "LoD/PD2": "0x5980"
-      },
-      "sizes": {
-        "LoD/PD2": 181
-      },
-      "method": "API",
-      "index": "API:888239ea54962f967156f85984e5e792",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "888239ea54962f967156f85984e5e792",
-        "MNE": "b540101ea8b77e460446d349ea7ea18b",
-        "CFG": "a284343e23972075358e9b181e5050c7",
-        "PRO": "f98d848c4798d35cd0e67ef71b770898"
-      },
-      "display_name": "API_888239ea54962f96",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "b540101ea8b77e460446d349ea7ea18b"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memmove",
-          "memcpy"
-        ]
       }
     },
     "SGD2FreeRes_ADDR_7B945A40": {
@@ -3313,40 +3107,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
       },
       "mnemonic_hashes": {
         "LoD/PD2": "a5113cc2bcd9f4f1a0ab3f4049916a0b"
-      }
-    },
-    "SGD2FreeRes_MNE_8d24c49ad652": {
-      "addresses": {
-        "LoD/PD2": "0x7B945E40"
-      },
-      "rvas": {
-        "LoD/PD2": "0x5E40"
-      },
-      "sizes": {
-        "LoD/PD2": 697
-      },
-      "method": "API",
-      "index": "API:888239ea54962f967156f85984e5e792",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "888239ea54962f967156f85984e5e792",
-        "MNE": "8d24c49ad652abc30ed40884fe96a872",
-        "CFG": "d8d3558879ad0556afebe3f4c95a5925",
-        "PRO": "a77f6a2dae0da9198fa98ee1eea60b17"
-      },
-      "display_name": "API_888239ea54962f96",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "8d24c49ad652abc30ed40884fe96a872"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memmove",
-          "memcpy"
-        ]
       }
     },
     "SGD2FreeRes_MNE_d357fe72812e": {
@@ -3951,40 +3711,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
       },
       "mnemonic_hashes": {
         "LoD/PD2": "f8cfa9333460665971549fb23d2e6b0d"
-      }
-    },
-    "SGD2FreeRes_STR_562b9c4e3de5": {
-      "addresses": {
-        "LoD/PD2": "0x7B946B90"
-      },
-      "rvas": {
-        "LoD/PD2": "0x6B90"
-      },
-      "sizes": {
-        "LoD/PD2": 701
-      },
-      "method": "STR",
-      "index": "STR:562b9c4e3de5a5cd28c2ddbe5aefcf7c",
-      "indexes": {
-        "EXP": null,
-        "STR": "562b9c4e3de5a5cd28c2ddbe5aefcf7c",
-        "API": "888239ea54962f967156f85984e5e792",
-        "MNE": "9819d09328ceb8b3bfa86162ae8d2cfd",
-        "CFG": "0abe273850de9f5405c114c41e41ce66",
-        "PRO": "c7c049d9780b5b84aa84216fadb81917"
-      },
-      "display_name": "STR_562b9c4e3de5a5cd",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "9819d09328ceb8b3bfa86162ae8d2cfd"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memmove",
-          "memcpy"
-        ]
       }
     },
     "SGD2FreeRes_MNE_dc99dd04ad64": {
@@ -7677,40 +7403,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
         "LoD/PD2": "7a06d4d535a3eaaf9254716ad830fb60"
       }
     },
-    "SGD2FreeRes_MNE_3596504ae9e8": {
-      "addresses": {
-        "LoD/PD2": "0x7B94E640"
-      },
-      "rvas": {
-        "LoD/PD2": "0xE640"
-      },
-      "sizes": {
-        "LoD/PD2": 246
-      },
-      "method": "API",
-      "index": "API:c0a0c784ab2d399d9fd901a7bc7d034c",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c0a0c784ab2d399d9fd901a7bc7d034c",
-        "MNE": "3596504ae9e83fa49b145acdb9d98435",
-        "CFG": "232777e84286700e2af2c08bd27219c3",
-        "PRO": "448a9a81d3afd943f83666f70ab45478"
-      },
-      "display_name": "API_c0a0c784ab2d399d",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "3596504ae9e83fa49b145acdb9d98435"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memcpy",
-          "memcpy"
-        ]
-      }
-    },
     "SGD2FreeRes_STR_9c6b2fe1fdef": {
       "addresses": {
         "LoD/PD2": "0x7B94E740"
@@ -8263,40 +7955,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
       },
       "mnemonic_hashes": {
         "LoD/PD2": "72c7737cbb7b405bdec00d6b48259617"
-      }
-    },
-    "SGD2FreeRes_MNE_cf754dd42692": {
-      "addresses": {
-        "LoD/PD2": "0x7B94F520"
-      },
-      "rvas": {
-        "LoD/PD2": "0xF520"
-      },
-      "sizes": {
-        "LoD/PD2": 271
-      },
-      "method": "API",
-      "index": "API:c0a0c784ab2d399d9fd901a7bc7d034c",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c0a0c784ab2d399d9fd901a7bc7d034c",
-        "MNE": "cf754dd42692ef531b347c63b33def32",
-        "CFG": "7e55d372a572c49e4bd884003077b10a",
-        "PRO": "a3813808338a28d6c631101671dfb391"
-      },
-      "display_name": "API_c0a0c784ab2d399d",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "cf754dd42692ef531b347c63b33def32"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memcpy",
-          "memcpy"
-        ]
       }
     },
     "SGD2FreeRes_MNE_acd5d5c1da0f": {
@@ -15969,40 +15627,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
         "LoD/PD2": "c882abf04964528979c097c64557b1cc"
       }
     },
-    "SGD2FreeRes_MNE_fb7f5fd6cc1f": {
-      "addresses": {
-        "LoD/PD2": "0x7B961A20"
-      },
-      "rvas": {
-        "LoD/PD2": "0x21A20"
-      },
-      "sizes": {
-        "LoD/PD2": 148
-      },
-      "method": "API",
-      "index": "API:888239ea54962f967156f85984e5e792",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "888239ea54962f967156f85984e5e792",
-        "MNE": "fb7f5fd6cc1f19085551745198748eea",
-        "CFG": "73c70e2fccbc6347bc43a33ccc1cab5e",
-        "PRO": "f51875ff6b39baedb9f20dd73d5e4bd9"
-      },
-      "display_name": "API_888239ea54962f96",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "fb7f5fd6cc1f19085551745198748eea"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memmove",
-          "memcpy"
-        ]
-      }
-    },
     "SGD2FreeRes_MNE_50a80058913f": {
       "addresses": {
         "LoD/PD2": "0x7B961AC0"
@@ -17352,40 +16976,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
         "LoD/PD2": "4c609d564d011f04d0dfdd6a8a53788c"
       }
     },
-    "SGD2FreeRes_MNE_dc61bed04091": {
-      "addresses": {
-        "LoD/PD2": "0x7B963460"
-      },
-      "rvas": {
-        "LoD/PD2": "0x23460"
-      },
-      "sizes": {
-        "LoD/PD2": 255
-      },
-      "method": "API",
-      "index": "API:888239ea54962f967156f85984e5e792",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "888239ea54962f967156f85984e5e792",
-        "MNE": "dc61bed040918be29829d28f892bb044",
-        "CFG": "82948863a7fee3b80e1cd7ddf73de742",
-        "PRO": "ec96b68cfc4fd9479486f02a3c02a524"
-      },
-      "display_name": "API_888239ea54962f96",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "dc61bed040918be29829d28f892bb044"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memmove",
-          "memcpy"
-        ]
-      }
-    },
     "SGD2FreeRes_ADDR_7B963560": {
       "addresses": {
         "LoD/PD2": "0x7B963560"
@@ -17900,40 +17490,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
       },
       "mnemonic_hashes": {
         "LoD/PD2": "90adeafa662d51324983befaa9bef87c"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "_Getgloballocale",
-          "_Incref"
-        ]
-      }
-    },
-    "SGD2FreeRes_MNE_4c79a1ef7717": {
-      "addresses": {
-        "LoD/PD2": "0x7B964770"
-      },
-      "rvas": {
-        "LoD/PD2": "0x24770"
-      },
-      "sizes": {
-        "LoD/PD2": 440
-      },
-      "method": "API",
-      "index": "API:893db64643ee074dd9d80cf018c80c37",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "893db64643ee074dd9d80cf018c80c37",
-        "MNE": "4c79a1ef77177f3b7c1e3310fe205a35",
-        "CFG": "c5ba99cb9d8a776cd709ba32cc673a72",
-        "PRO": "23cf03433bf871cf481dd6e4f85c81c2"
-      },
-      "display_name": "API_893db64643ee074d",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "4c79a1ef77177f3b7c1e3310fe205a35"
       },
       "api_calls": {
         "LoD/PD2": [
@@ -19846,41 +19402,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
         "LoD/PD2": "acbc2c857bf1a8401ca8fe5de1c0ec70"
       }
     },
-    "SGD2FreeRes_MNE_e15c78253dfd": {
-      "addresses": {
-        "LoD/PD2": "0x7B966410"
-      },
-      "rvas": {
-        "LoD/PD2": "0x26410"
-      },
-      "sizes": {
-        "LoD/PD2": 847
-      },
-      "method": "API",
-      "index": "API:7c54706c50ac7aa5aa1517c7aabcebb4",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "7c54706c50ac7aa5aa1517c7aabcebb4",
-        "MNE": "e15c78253dfd29ad7bb920f90ae47ffe",
-        "CFG": "3de1752b1bc183102aeb31ea688005eb",
-        "PRO": "16a7626031f07693ec5bbc621b05fb2f"
-      },
-      "display_name": "API_7c54706c50ac7aa5",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "e15c78253dfd29ad7bb920f90ae47ffe"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memcpy",
-          "memcpy",
-          "memmove"
-        ]
-      }
-    },
     "SGD2FreeRes_MNE_46d27a510736": {
       "addresses": {
         "LoD/PD2": "0x7B966760"
@@ -19944,40 +19465,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
         "LoD/PD2": "63e1c0d1b090f64a49f91768a051c1a5"
       }
     },
-    "SGD2FreeRes_MNE_f6d664e262f3": {
-      "addresses": {
-        "LoD/PD2": "0x7B9667A0"
-      },
-      "rvas": {
-        "LoD/PD2": "0x267A0"
-      },
-      "sizes": {
-        "LoD/PD2": 445
-      },
-      "method": "API",
-      "index": "API:c0a0c784ab2d399d9fd901a7bc7d034c",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c0a0c784ab2d399d9fd901a7bc7d034c",
-        "MNE": "f6d664e262f3850ad4e13ee9e94771fb",
-        "CFG": "400179f17c27416396d335f9574d0085",
-        "PRO": "f45fa2deb24481069facfdc3594192ce"
-      },
-      "display_name": "API_c0a0c784ab2d399d",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "f6d664e262f3850ad4e13ee9e94771fb"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memcpy",
-          "memcpy"
-        ]
-      }
-    },
     "SGD2FreeRes_MNE_0175a44581ff": {
       "addresses": {
         "LoD/PD2": "0x7B966960"
@@ -20016,40 +19503,6 @@ var FUNCTIONS_SGD2FreeRes_dll = {
       },
       "param_counts": {
         "LoD/PD2": 3
-      }
-    },
-    "SGD2FreeRes_MNE_edf962e47845": {
-      "addresses": {
-        "LoD/PD2": "0x7B966A30"
-      },
-      "rvas": {
-        "LoD/PD2": "0x26A30"
-      },
-      "sizes": {
-        "LoD/PD2": 399
-      },
-      "method": "API",
-      "index": "API:c0a0c784ab2d399d9fd901a7bc7d034c",
-      "indexes": {
-        "EXP": null,
-        "STR": null,
-        "API": "c0a0c784ab2d399d9fd901a7bc7d034c",
-        "MNE": "edf962e478451d09e694e28660b9ecbe",
-        "CFG": "50b2c06e2e4ffcc8b97d6c236df672d0",
-        "PRO": "2a9099c71ca30af292bc7441eba9b5cd"
-      },
-      "display_name": "API_c0a0c784ab2d399d",
-      "loop_counts": {
-        "LoD/PD2": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/PD2": "edf962e478451d09e694e28660b9ecbe"
-      },
-      "api_calls": {
-        "LoD/PD2": [
-          "memcpy",
-          "memcpy"
-        ]
       }
     },
     "SGD2FreeRes_MNE_910a17d60b54": {
