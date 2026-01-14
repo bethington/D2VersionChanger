@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-27T22:44:31.463304
+// Generated: 2026-01-14T14:43:48.362374
 // Functions for ddraw.dll
 // Versions: LoD/PD2
 

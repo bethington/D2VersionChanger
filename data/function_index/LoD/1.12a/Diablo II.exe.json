@@ -4,7 +4,7 @@
   "version": "1.12a",
   "image_base": "0x00400000",
   "total_functions": 65,
-  "export_timestamp": "Sun Jan 11 22:21:23 CST 2026",
+  "export_timestamp": "Wed Jan 14 14:48:23 CST 2026",
   "functions": [
     {
       "address": "0x00401000",
@@ -40,7 +40,7 @@
       "param_count": 3,
       "parameters": [{"name": "hInstance", "type": "HINSTANCE", "storage": "Stack[0x4]:4"}, {"name": "hPrevInstance", "type": "HINSTANCE", "storage": "Stack[0x8]:4"}, {"name": "lpszCmdLine", "type": "char *", "storage": "Stack[0xc]:4"}],
       "callee_count": 11,
-      "callees": ["MessageBoxA|0x2B", "CloseHandle|0x17", "GetCommandLineA|0x5", "ConcatStringMBCS|0x4013B0", "CreateProcessA|0x4", "GetExitCodeProcess|0x2", "LoadStringA|0x2C", "GetLastError|0x6", "CreateEventA|0x7", "WaitForMultipleObjects|0x3", "FindSubstringMultibyte|0x40146D"],
+      "callees": ["FindSubstringMultibyte|0x40146D", "CreateEventA|0x7", "GetCommandLineA|0x5", "GetExitCodeProcess|0x2", "CloseHandle|0x17", "GetLastError|0x6", "WaitForMultipleObjects|0x3", "CreateProcessA|0x4", "MessageBoxA|0x2B", "ConcatStringMBCS|0x4013B0", "LoadStringA|0x2C"],
       "caller_count": 1,
       "callers": ["entry|0x4014E3"],
       "string_count": 10,
@@ -53,7 +53,7 @@
       "api_calls": [],
       "instructions": ["0x1000|SUB|ESP, 0x680", "0x1006|PUSH|ESI", "0x1007|PUSH|EDI", "0x1008|XOR|ESI, ESI", "0x100A|PUSH|0x406038", "0x100F|PUSH|ESI", "0x1010|PUSH|ESI", "0x1011|PUSH|ESI", "0x1012|MOV|dword ptr [ESP + 0x18], ESI", "0x1016|XOR|EDI, EDI", "0x1018|CALL|dword ptr [0x00405018]", "0x101E|MOV|dword ptr [ESP + 0xc], EAX", "0x1022|CALL|dword ptr [0x00405014]", "0x1028|CMP|EAX, 0xb7", "0x102D|JNZ|0x00401034"],
       "comment": "Launches the Diablo II game process and manages its execution lifecycle.\n\nThis is the main launcher entry point that handles single-instance enforcement,\ncommand line construction, process creation, and exit code handling with retry logic.\n\nAlgorithm:\n1. Create named event \"DIABLO II OK\" for single-instance check\n2. If event already exists (ERROR_ALREADY_EXISTS = 0xB7), exit immediately\n3. Initialize STARTUPINFO and PROCESS_INFORMATION structures\n4. Load game executable name from string resource ID 1 (e.g., \"Game.exe\")\n5. Load search pattern from string resource ID 7 for path parsing\n6. Get current command line via GetCommandLineA\n7. Parse command line using FUN_0040146d to locate pattern match\n8. Build full executable path by concatenating:\n   - Base directory path (from g_bData_004064b0)\n   - Game executable name\n   - Space separator (g_bData_00406030)\n   - Original command line arguments\n9. Call CreateProcessA to launch the game\n10. If process creation fails, show error message (string ID 9) with retry option\n11. Wait for either: process termination (index 0) or instance event signal (index 1)\n12. On process exit, map exit code to error string resource:\n    - 0,3,4,6-12: String ID 3 (generic error)\n    - 1: String ID 4 (specific error type 1)\n    - 2: String ID 5 (specific error type 2)\n    - 5: String ID 6 (specific error type 5)\n    - default: String ID 8 (unknown error)\n13. Display MessageBox with retry/cancel option (MB_RETRYCANCEL = 5)\n14. If user clicks Retry, loop back to step 3\n15. If user clicks Cancel or event signals, clean up and exit\n\nParameters:\n  hInstance     - HINSTANCE: Application instance handle for LoadStringA calls\n  hPrevInstance - HINSTANCE: Previous instance handle (unused, legacy parameter)\n  lpszCmdLine   - char*: Command line arguments to pass to game process\n\nReturns:\n  DWORD - Wait result from WaitForMultipleObjects:\n    0 = Process terminated (check exit code for reason)\n    1 = Instance event signaled (another launcher took control)\n    Error code from GetLastError if CreateProcessA failed\n\nMagic Numbers:\n  0xB7 (183) - ERROR_ALREADY_EXISTS: Event already exists\n  0x104 (260) - MAX_PATH: String buffer size\n  0x11 (17)  - STARTUPINFO DWORD count for zero-initialization\n  5          - MB_RETRYCANCEL: MessageBox style\n  2          - IDCANCEL: Cancel button result\n  0xFFFFFFFF - INFINITE: Wait timeout\n\nError Handling:\n  - Single instance violation: Exits silently without message\n  - CreateProcess failure: Shows error message with retry option\n  - Process exit codes: Mapped to user-friendly error strings\n  - User can retry or cancel at any error prompt",
-      "tags": ["CALLEE_11", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "STRUCT_ItemData", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData", "PROP_LARGE", "STRUCT_Path", "PARAM_3", "STRUCT_Skill", "CALLEE_9", "PROP_LOOPHEAVY"]
+      "tags": ["CALLEE_11", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "STRUCT_ItemData", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData", "PROP_LARGE", "STRUCT_Path", "PARAM_3", "STRUCT_Skill", "PROP_LOOPHEAVY"]
     },
     {
       "address": "0x004013B0",
@@ -89,7 +89,7 @@
       "param_count": 3,
       "parameters": [{"name": "lpszDest", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "lpszSrc", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nMaxChars", "type": "size_t", "storage": "Stack[0xc]:4"}],
       "callee_count": 2,
-      "callees": ["_strncat|0x401A40", "GetTrailingLeadByteState|0x401A02"],
+      "callees": ["GetTrailingLeadByteState|0x401A02", "_strncat|0x401A40"],
       "caller_count": 1,
       "callers": ["LaunchGameProcess|0x401000"],
       "string_count": 0,
@@ -187,7 +187,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 15,
-      "callees": ["GetEnvironmentStringsConverted|0x402264", "FilterFloatingPointException|0x401D82", "InitializeDllHeapAndResources|0x402541", "InitializeGlobalConstructors|0x401C80", "LaunchGameProcess|0x401000", "GetCommandLineArgs|0x401F06", "GetModuleHandleA|0xB", "InitializeModuleData|0x402017", "FUN_004015fe|0x4015FE", "InitializeFileDescriptors|0x402396", "GetVersion|0xD", "GetCommandLineA|0x5", "ReportError|0x401CAD", "GetStartupInfoA|0xC", "InitializeEnvironmentVariables|0x401F5E"],
+      "callees": ["InitializeFileDescriptors|0x402396", "GetVersion|0xD", "InitializeEnvironmentVariables|0x401F5E", "GetStartupInfoA|0xC", "GetModuleHandleA|0xB", "InitializeDllHeapAndResources|0x402541", "GetEnvironmentStringsConverted|0x402264", "InitializeModuleData|0x402017", "FilterFloatingPointException|0x401D82", "GetCommandLineA|0x5", "ReportError|0x401CAD", "GetCommandLineArgs|0x401F06", "InitializeGlobalConstructors|0x401C80", "LaunchGameProcess|0x401000", "FUN_004015fe|0x4015FE"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -285,7 +285,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["DisplayRuntimeError|0x402789", "ExitProcess|0xE", "CleanupConsoleOutput|0x402750"],
+      "callees": ["ExitProcess|0xE", "DisplayRuntimeError|0x402789", "CleanupConsoleOutput|0x402750"],
       "caller_count": 1,
       "callers": ["entry|0x4014E3"],
       "string_count": 0,
@@ -334,7 +334,7 @@
       "param_count": 1,
       "parameters": [{"name": "dwCodePage", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 5,
-      "callees": ["MapCodePageIdentifier|0x401805", "InitializeLocaleDataBuffers|0x401838", "ResolveCodePageIdentifier|0x4017BB", "GetCPInfo|0xF", "InitializeCharacterTables|0x401861"],
+      "callees": ["MapCodePageIdentifier|0x401805", "InitializeCharacterTables|0x401861", "ResolveCodePageIdentifier|0x4017BB", "GetCPInfo|0xF", "InitializeLocaleDataBuffers|0x401838"],
       "caller_count": 1,
       "callers": ["InitializeCodePageOnce|0x4019E6"],
       "string_count": 0,
@@ -530,7 +530,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 3,
-      "callees": ["LocaleMapStringWithConversion|0x4028DC", "GetCPInfo|0xF", "GetCharacterTypeInfo|0x402B2B"],
+      "callees": ["LocaleMapStringWithConversion|0x4028DC", "GetCharacterTypeInfo|0x402B2B", "GetCPInfo|0xF"],
       "caller_count": 1,
       "callers": ["InitializeCodePageLocale|0x401622"],
       "string_count": 0,
@@ -581,7 +581,7 @@
       "callee_count": 1,
       "callees": ["InitializeCodePageLocale|0x401622"],
       "caller_count": 3,
-      "callers": ["GetCommandLineArgs|0x401F06", "InitializeModuleData|0x402017", "InitializeEnvironmentVariables|0x401F5E"],
+      "callers": ["InitializeModuleData|0x402017", "GetCommandLineArgs|0x401F06", "InitializeEnvironmentVariables|0x401F5E"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -777,7 +777,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["DisplayRuntimeError|0x402789", "FindSubstringMultibyte|0x40146D", "InitializeEnvironmentVariables|0x401F5E"],
+      "callers": ["FindSubstringMultibyte|0x40146D", "DisplayRuntimeError|0x402789", "InitializeEnvironmentVariables|0x401F5E"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -788,7 +788,7 @@
       "api_calls": [],
       "instructions": ["0x1B80|MOV|ECX, dword ptr [ESP + 0x4]", "0x1B84|TEST|ECX, 0x3", "0x1B8A|JZ|0x00401ba0", "0x1B8C|MOV|AL, byte ptr [ECX]", "0x1B8E|INC|ECX", "0x1B8F|TEST|AL, AL", "0x1B91|JZ|0x00401bd3", "0x1B93|TEST|ECX, 0x3", "0x1B99|JNZ|0x00401b8c", "0x1B9B|ADD|EAX, 0x0", "0x1BA0|MOV|EAX, dword ptr [ECX]", "0x1BA2|MOV|EDX, 0x7efefeff", "0x1BA7|ADD|EDX, EAX", "0x1BA9|XOR|EAX, 0xffffffff", "0x1BAC|XOR|EAX, EDX"],
       "comment": "Library Function - Single Match\n _strlen\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
-      "tags": ["CALLER_2", "CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LOOPHEAVY", "PROP_LEAF"]
+      "tags": ["CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LOOPHEAVY", "PROP_LEAF"]
     },
     {
       "address": "0x00401C00",
@@ -886,7 +886,7 @@
       "api_calls": [],
       "instructions": ["0x1C80|MOV|EAX, [0x00406794]", "0x1C85|TEST|EAX, EAX", "0x1C87|JZ|0x00401c8b", "0x1C89|CALL|EAX", "0x1C8B|PUSH|0x406010", "0x1C90|PUSH|0x406008", "0x1C95|CALL|0x00401d68", "0x1C9A|PUSH|0x406004", "0x1C9F|PUSH|0x406000", "0x1CA4|CALL|0x00401d68", "0x1CA9|ADD|ESP, 0x10", "0x1CAC|RET|"],
       "comment": "Initialize global constructors and destructors during DLL loading.\n\nAlgorithm:\n1. Check if optional InitializeSubsystem function pointer exists (0x1002e468)\n2. If present, call the InitializeSubsystem function\n3. Call constructor array iterator with constructor table range (0x1002a008 to 0x1002a010)\n4. Call destructor array iterator with destructor table range (0x1002a000 to 0x1002a004)\n5. Return to caller (DllMain)\n\nParameters:\nNone\n\nReturns:\nvoid - No return value, initialization always completes\n\nSpecial Cases:\n- If g_pfnInitializeSubsystem is NULL, step 2 is skipped safely\n- Constructor/destructor arrays may be empty (start == end), iterator handles gracefully\n- Function called during DLL_PROCESS_ATTACH in DllMain\n\nMagic Numbers Reference:\n0x1002e468 - g_pfnInitializeSubsystem function pointer storage\n0x1002a008 - g_ppfnStaticCtorsStart (constructor array beginning)\n0x1002a010 - g_ppfnStaticCtorsEnd (constructor array end)\n0x1002a000 - g_ppfnStaticDtorsStart (destructor array beginning) \n0x1002a004 - g_ppfnStaticDtorsEnd (destructor array end)",
-      "tags": ["CALLER_1", "CALLEE_1", "CALLEE_2", "PARAM_0", "PROP_SMALL"]
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x00401CAD",
@@ -1020,9 +1020,9 @@
       "param_count": 3,
       "parameters": [{"name": "dwExitCode", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "nCleanupMode", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nDeferExit", "type": "int", "storage": "Stack[0xc]:4"}],
       "callee_count": 4,
-      "callees": ["TerminateProcess|0x12", "ExitProcess|0xE", "GetCurrentProcess|0x13", "RunConstructorArray|0x401D68"],
+      "callees": ["GetCurrentProcess|0x13", "ExitProcess|0xE", "RunConstructorArray|0x401D68", "TerminateProcess|0x12"],
       "caller_count": 2,
-      "callers": ["ReportError|0x401CAD", "__exit|0x401CBE"],
+      "callers": ["__exit|0x401CBE", "ReportError|0x401CAD"],
       "string_count": 0,
       "strings": [],
       "constant_count": 4,
@@ -1118,7 +1118,7 @@
       "param_count": 2,
       "parameters": [{"name": "dwExceptionCode", "type": "DWORD", "storage": "Stack[0x4]:4"}, {"name": "pExceptionInfo", "type": "_EXCEPTION_POINTERS *", "storage": "Stack[0x8]:4"}],
       "callee_count": 2,
-      "callees": ["GetExceptionActionRecord|0x401EC3", "UnhandledExceptionFilter|0x14"],
+      "callees": ["UnhandledExceptionFilter|0x14", "GetExceptionActionRecord|0x401EC3"],
       "caller_count": 1,
       "callers": ["entry|0x4014E3"],
       "string_count": 0,
@@ -1265,7 +1265,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["CopyStringOptimized|0x402E00", "InitializeCodePageOnce|0x4019E6", "_malloc|0x402EF0", "DeallocateMemory|0x402DCE", "AmsgExit|0x4015D9", "_strlen|0x401B80"],
+      "callees": ["InitializeCodePageOnce|0x4019E6", "DeallocateMemory|0x402DCE", "AmsgExit|0x4015D9", "_malloc|0x402EF0", "CopyStringOptimized|0x402E00", "_strlen|0x401B80"],
       "caller_count": 1,
       "callers": ["entry|0x4014E3"],
       "string_count": 0,
@@ -1314,7 +1314,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["ParseCommandLineArguments|0x4020B0", "InitializeCodePageOnce|0x4019E6", "GetModuleFileNameA|0x15", "_malloc|0x402EF0", "AmsgExit|0x4015D9"],
+      "callees": ["InitializeCodePageOnce|0x4019E6", "ParseCommandLineArguments|0x4020B0", "AmsgExit|0x4015D9", "_malloc|0x402EF0", "GetModuleFileNameA|0x15"],
       "caller_count": 1,
       "callers": ["entry|0x4014E3"],
       "string_count": 0,
@@ -1412,7 +1412,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 8,
-      "callees": ["GetEnvironmentStrings|0x19", "WideCharToMultiByte|0x18", "FreeEnvironmentStringsW|0x1", "_malloc|0x402EF0", "OptimizedMemoryMove|0x402F70", "DeallocateMemory|0x402DCE", "GetEnvironmentStringsW|0x1A", "FreeEnvironmentStringsA|0x16"],
+      "callees": ["FreeEnvironmentStringsW|0x1", "WideCharToMultiByte|0x18", "DeallocateMemory|0x402DCE", "GetEnvironmentStringsW|0x1A", "FreeEnvironmentStringsA|0x16", "_malloc|0x402EF0", "GetEnvironmentStrings|0x19", "OptimizedMemoryMove|0x402F70"],
       "caller_count": 1,
       "callers": ["entry|0x4014E3"],
       "string_count": 0,
@@ -1461,7 +1461,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["GetFileType|0x1C", "GetStdHandle|0x9", "_malloc|0x402EF0", "SetHandleCount|0x8", "AmsgExit|0x4015D9", "GetStartupInfoA|0xC"],
+      "callees": ["AmsgExit|0x4015D9", "SetHandleCount|0x8", "_malloc|0x402EF0", "GetStartupInfoA|0xC", "GetStdHandle|0x9", "GetFileType|0x1C"],
       "caller_count": 1,
       "callers": ["entry|0x4014E3"],
       "string_count": 0,
@@ -1510,7 +1510,7 @@
       "param_count": 1,
       "parameters": [{"name": "nSerializationFlag", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["InitializeBufferManager|0x4032A5", "HeapDestroy|0x1D", "HeapCreate|0x1E"],
+      "callees": ["HeapCreate|0x1E", "HeapDestroy|0x1D", "InitializeBufferManager|0x4032A5"],
       "caller_count": 1,
       "callers": ["entry|0x4014E3"],
       "string_count": 0,
@@ -1670,7 +1670,7 @@
       "api_calls": [],
       "instructions": ["0x2656|PUSH|EBX", "0x2657|PUSH|ECX", "0x2658|MOV|EBX, 0x4061e4", "0x265D|MOV|ECX, dword ptr [EBP + 0x8]", "0x2660|MOV|dword ptr [EBX + 0x8], ECX", "0x2663|MOV|dword ptr [EBX + 0x4], EAX", "0x2666|MOV|dword ptr [EBX + 0xc], EBP", "0x2669|POP|ECX", "0x266A|POP|EBX", "0x266B|RET|0x4"],
       "comment": "Stores exception handling context for SEH frame setup.\n\nAlgorithm:\n1. Load static exception frame structure pointer into EBX\n2. Write return address from stack [EBP+8] to frame offset +8\n3. Write exception context (EAX) to frame offset +4\n4. Write current frame pointer (EBP) to frame offset +C (12)\n5. Return with stack cleanup (RET 0x4)\n\nParameters:\n- dwExceptionContext (EAX): Exception context value to store\n\nReturns:\n- void\n\nRelated Functions:\n- Called by __local_unwind2 exception unwinding handler",
-      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x00402735",
@@ -1804,7 +1804,7 @@
       "param_count": 1,
       "parameters": [{"name": "dwErrorCode", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 8,
-      "callees": ["CopyStringOptimized|0x402E00", "OptimizedStringCopy|0x402E10", "WriteFile|0x22", "GetModuleFileNameA|0x15", "GetStdHandle|0x9", "_strncpy|0x403B80", "ShowMessageBoxWithActiveWindow|0x403AEE", "_strlen|0x401B80"],
+      "callees": ["WriteFile|0x22", "ShowMessageBoxWithActiveWindow|0x403AEE", "_strncpy|0x403B80", "GetStdHandle|0x9", "CopyStringOptimized|0x402E00", "OptimizedStringCopy|0x402E10", "GetModuleFileNameA|0x15", "_strlen|0x401B80"],
       "caller_count": 3,
       "callers": ["AmsgExit|0x4015D9", "FUN_004015fe|0x4015FE", "CleanupConsoleOutput|0x402750"],
       "string_count": 4,
@@ -1817,7 +1817,7 @@
       "api_calls": [],
       "instructions": ["0x2789|PUSH|EBP", "0x278A|MOV|EBP, ESP", "0x278C|SUB|ESP, 0x1a4", "0x2792|MOV|EDX, dword ptr [EBP + 0x8]", "0x2795|XOR|ECX, ECX", "0x2797|MOV|EAX, 0x4061f8", "0x279C|CMP|EDX, dword ptr [EAX]", "0x279E|JZ|0x004027ab", "0x27A0|ADD|EAX, 0x8", "0x27A3|INC|ECX", "0x27A4|CMP|EAX, 0x406288", "0x27A9|JL|0x0040279c", "0x27AB|PUSH|ESI", "0x27AC|MOV|ESI, ECX", "0x27AE|SHL|ESI, 0x3"],
       "comment": "Displays runtime error messages either to console or as message box dialog\n\nAlgorithm:\n1. Search error lookup table at 0x1002e678 for matching error code\n2. Iterate through (error_code, string_pointer) pairs until match found or table end (0x1002e708)\n3. If error code found in table, determine display method:\n   a. If console display enabled (g_dwConsoleDisplayFlag == 1), write to stdout\n   b. If console disabled but alternate flag set (DAT_1003c8c0 == 1), write to stdout  \n   c. Otherwise show message box (except for error code 0xfc which is suppressed)\n4. For console output: Get error message string, write to stdout handle using WriteFile\n5. For message box: Build formatted error message with program name and error text\n6. Get module filename using GetModuleFileNameA, truncate if longer than 60 characters\n7. Concatenate \"Runtime Error!\" + program name + newlines + error message text\n8. Display message box using Microsoft Visual C++ Runtime Library title\n\nParameters:\ndwErrorCode - Runtime error code to display (DWORD values from error table)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Error code 0xfc is suppressed (no dialog or console output)\n- Module name truncated with \"...\" if path exceeds 60 characters\n- Falls back to \"<program name unknown>\" if GetModuleFileNameA fails\n- Console output bypasses message box formatting\n\nMagic Numbers Reference:\n0x1002e678 - Base address of error lookup table (error_code, string_pointer pairs)\n0x1002e708 - End address of error lookup table \n0x1002e67c - Base address of error message string pointers (offset +4 from codes)\n0xfc - Special error code that suppresses all output\n0xfffffff4 - STD_OUTPUT_HANDLE constant for GetStdHandle\n0x12010 - Message box flags (MB_ICONHAND | MB_SETFOREGROUND | MB_TASKMODAL)\n0x3c - Maximum characters (60) before truncating program name\n0x104 - Buffer size (260) for module filename\n60 - Character limit for program name display\n\nError Handling:\n- GetModuleFileNameA failure: Use fallback \"<program name unknown>\"\n- String length overflow: Truncate with \"...\" suffix\n- Table search failure: Function returns without action\n\nStructure Layout:\nError Table Entry (8 bytes):\nOffset | Size | Field Name    | Type | Description\n0x00   | 4    | dwErrorCode   | uint | Runtime error identifier  \n0x04   | 4    | pszMessage    | char*| Pointer to error message string",
-      "tags": ["STRUCT_Inventory", "CALLER_2", "CALLER_3", "PARAM_1", "STRUCT_Control", "CALLEE_8"]
+      "tags": ["STRUCT_Inventory", "CALLER_3", "PARAM_1", "STRUCT_Control", "CALLEE_8"]
     },
     {
       "address": "0x004028DC",
@@ -1853,7 +1853,7 @@
       "param_count": 8,
       "parameters": [{"name": "dwLcid", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "dwMapFlags", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "lpszSrcStr", "type": "char *", "storage": "Stack[0xc]:4"}, {"name": "nSrcLen", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "lpszDestStr", "type": "char *", "storage": "Stack[0x14]:4"}, {"name": "nDestLen", "type": "int", "storage": "Stack[0x18]:4"}, {"name": "dwCodePage", "type": "uint", "storage": "Stack[0x1c]:4"}, {"name": "nFlags", "type": "int", "storage": "Stack[0x20]:4"}],
       "callee_count": 6,
-      "callees": ["CalculateStringLengthWithLimit|0x402B00", "MultiByteToWideChar|0x23", "AllocateStackSpace|0x403C80", "LCMapStringA|0x24", "WideCharToMultiByte|0x18", "LCMapStringW|0x25"],
+      "callees": ["WideCharToMultiByte|0x18", "MultiByteToWideChar|0x23", "AllocateStackSpace|0x403C80", "CalculateStringLengthWithLimit|0x402B00", "LCMapStringA|0x24", "LCMapStringW|0x25"],
       "caller_count": 1,
       "callers": ["InitializeCharacterTables|0x401861"],
       "string_count": 0,
@@ -1866,7 +1866,7 @@
       "api_calls": [],
       "instructions": ["0x28DC|PUSH|EBP", "0x28DD|MOV|EBP, ESP", "0x28DF|PUSH|-0x1", "0x28E1|PUSH|0x4053c0", "0x28E6|PUSH|0x402678", "0x28EB|MOV|EAX, FS:[0x0]", "0x28F1|PUSH|EAX", "0x28F2|MOV|dword ptr FS:[0x0], ESP", "0x28F9|SUB|ESP, 0x1c", "0x28FC|PUSH|EBX", "0x28FD|PUSH|ESI", "0x28FE|PUSH|EDI", "0x28FF|MOV|dword ptr [EBP + -0x18], ESP", "0x2902|XOR|EDI, EDI", "0x2904|CMP|dword ptr [0x00406640], EDI"],
       "comment": "Performs locale-aware string mapping with automatic character encoding conversion.\n\nAlgorithm:\n1. Set up structured exception handling (SEH) frame\n2. Initialize Unicode support detection if not already done\n   a. Test LCMapStringW with empty string to detect Unicode support\n   b. If Unicode fails, test LCMapStringA for ANSI support\n   c. Set global flag (1=Unicode, 2=ANSI) based on results\n3. Validate source string length using FUN_1001fb97 if positive length\n4. Branch based on detected encoding support:\n   - If ANSI mode (flag=2): Call LCMapStringA directly and return result\n   - If Unicode mode (flag=1): Perform conversion sequence\n5. Unicode conversion sequence:\n   a. Use default code page if dwCodePage is 0\n   b. Calculate required wide character buffer size with MultiByteToWideChar\n   c. Allocate stack space for wide character conversion buffer\n   d. Convert source string from multibyte to wide character\n   e. Get required output buffer size with LCMapStringW\n   f. If LCMAP_SORTKEY flag (0x400) is set:\n      - Return required size if output buffer is NULL\n      - Validate output buffer size and perform mapping directly\n   g. If normal mapping:\n      - Allocate second stack buffer for wide character output\n      - Perform LCMapStringW mapping to wide character buffer\n      - Convert result back to multibyte using WideCharToMultiByte\n6. Clean up SEH frame and return result\n\nParameters:\ndwLcid (uint): Locale identifier for mapping operation\ndwMapFlags (uint): Mapping flags controlling case conversion and sorting\nlpszSrcStr (char *): Source string in multibyte encoding\nnSrcLen (int): Length of source string (-1 for null-terminated)\nlpszDestStr (char *): Output buffer for mapped string\nnDestLen (int): Size of output buffer in characters\ndwCodePage (uint): Code page for character conversion (0 = default)\nnFlags (int): Additional conversion flags for MultiByteToWideChar\n\nReturns:\nNumber of characters written to output buffer on success\n0 on failure (insufficient buffer, conversion error, or unsupported operation)\n\nSpecial Cases:\nIf lpszDestStr is NULL, returns required buffer size\nLCMAP_SORTKEY flag (0x400) returns sort key instead of mapped string\nAutomatic fallback from Unicode to ANSI if Unicode APIs unavailable\n\nMagic Numbers Reference:\n0x100 - LCMAP_LOWERCASE flag for case conversion test\n0x400 - LCMAP_SORTKEY flag for sort key generation\n0x220 - WC_NO_BEST_FIT_CHARS | WC_COMPOSITECHECK flags\n0x1003ca54 - Global Unicode support flag (1=Unicode, 2=ANSI)\n0x1003c8e4 - Default code page storage\n\nError Handling:\nReturns 0 for all error conditions including:\n- Unsupported locale or mapping flags\n- Insufficient output buffer space\n- Character conversion failures\n- Stack allocation failures",
-      "tags": ["PROP_LARGE", "PARAM_8", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "CALLER_3", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "CALLEE_6", "STRUCT_Control", "STRUCT_PlayerData"]
+      "tags": ["PROP_LARGE", "PARAM_8", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "CALLEE_6", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00402B00",
@@ -1951,7 +1951,7 @@
       "param_count": 7,
       "parameters": [{"name": "dwInfoType", "type": "DWORD", "storage": "Stack[0x4]:4"}, {"name": "lpszString", "type": "LPCSTR", "storage": "Stack[0x8]:4"}, {"name": "nStringLength", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "lpwCharType", "type": "LPWORD", "storage": "Stack[0x10]:4"}, {"name": "uiCodePage", "type": "UINT", "storage": "Stack[0x14]:4"}, {"name": "dwLocaleId", "type": "LCID", "storage": "Stack[0x18]:4"}, {"name": "nConversionFlags", "type": "int", "storage": "Stack[0x1c]:4"}],
       "callee_count": 5,
-      "callees": ["MultiByteToWideChar|0x23", "AllocateStackSpace|0x403C80", "GetStringTypeW|0x27", "GetStringTypeA|0x26", "_memset|0x403CB0"],
+      "callees": ["_memset|0x403CB0", "GetStringTypeA|0x26", "MultiByteToWideChar|0x23", "AllocateStackSpace|0x403C80", "GetStringTypeW|0x27"],
       "caller_count": 1,
       "callers": ["InitializeCharacterTables|0x401861"],
       "string_count": 0,
@@ -1964,7 +1964,7 @@
       "api_calls": [],
       "instructions": ["0x2B2B|PUSH|EBP", "0x2B2C|MOV|EBP, ESP", "0x2B2E|PUSH|-0x1", "0x2B30|PUSH|0x4053d8", "0x2B35|PUSH|0x402678", "0x2B3A|MOV|EAX, FS:[0x0]", "0x2B40|PUSH|EAX", "0x2B41|MOV|dword ptr FS:[0x0], ESP", "0x2B48|SUB|ESP, 0x18", "0x2B4B|PUSH|EBX", "0x2B4C|PUSH|ESI", "0x2B4D|PUSH|EDI", "0x2B4E|MOV|dword ptr [EBP + -0x18], ESP", "0x2B51|MOV|EAX, [0x00406644]", "0x2B56|XOR|EBX, EBX"],
       "comment": "Retrieves character type information for a string using either Unicode or ANSI APIs based on system capability detection.\n\nAlgorithm:\n1. Set up structured exception handling frame with stack-based exception list\n2. Initialize global character type detection state (DAT_1003ca98) on first call\n3. Test Unicode capability by calling GetStringTypeW with empty string\n4. Fall back to ANSI mode if Unicode fails by calling GetStringTypeA  \n5. Store detected capability (1=Unicode, 2=ANSI) in global state for subsequent calls\n6. Branch execution based on detected character handling mode:\n   - Unicode mode (1): Convert ANSI input to Unicode then call GetStringTypeW\n   - ANSI mode (2): Call GetStringTypeA directly with input parameters\n7. Apply default locale if codepage/locale parameters are zero\n8. Restore exception handling state and return API result\n\nParameters:\ndwInfoType - Character type flags (CT_CTYPE1, CT_CTYPE2, CT_CTYPE3)\nlpszString - Input string to analyze for character types\ncchString - Length of input string in characters, or -1 for null-terminated\nlpwCharType - Output buffer receiving character type information per character\nuiCodePage - Code page for Unicode conversion, 0 uses thread default\ndwLocaleId - Locale identifier for character analysis, 0 uses system default\ndwFlags - Conversion flags affecting MultiByteToWideChar behavior\n\nReturns:\nTRUE on successful character type analysis\nFALSE on failure (invalid parameters, conversion errors, or unsupported locale)\n\nSpecial Cases:\nMagic number 0xffffffff indicates exception handling state marker\nGlobal DAT_1003ca98 stores capability: 0=uninitialized, 1=Unicode, 2=ANSI only\nDynamic stack allocation used for Unicode conversion buffer sizing\nException handler DAT_10028758 protects against conversion failures\n\nError Handling:\nUnicode detection failure falls back to ANSI mode automatically\nZero codepage/locale parameters use system defaults (g_dwThreadLocaleCodePage, g_dwLocaleFlags)\nMultiByteToWideChar failure returns FALSE without character analysis\nStack allocation failure detected via null pointer check",
-      "tags": ["PARAM_7", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "CALLER_2", "STRUCT_UnitAny", "CALLEE_5", "STRUCT_Control", "STRUCT_PlayerData"]
+      "tags": ["PARAM_7", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "STRUCT_UnitAny", "CALLEE_5", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00402C74",
@@ -2245,9 +2245,9 @@
       "param_count": 1,
       "parameters": [{"name": "pMemory", "type": "void *", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["FreeMemoryBlockWithLinkedListCleanup|0x40330E", "HeapFree|0x20", "FindMemoryDescriptorByAddress|0x4032E3"],
+      "callees": ["FreeMemoryBlockWithLinkedListCleanup|0x40330E", "FindMemoryDescriptorByAddress|0x4032E3", "HeapFree|0x20"],
       "caller_count": 2,
-      "callers": ["GetEnvironmentStringsConverted|0x402264", "InitializeEnvironmentVariables|0x401F5E"],
+      "callers": ["InitializeEnvironmentVariables|0x401F5E", "GetEnvironmentStringsConverted|0x402264"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2258,7 +2258,7 @@
       "api_calls": [],
       "instructions": ["0x2DCE|PUSH|ESI", "0x2DCF|MOV|ESI, dword ptr [ESP + 0x8]", "0x2DD3|TEST|ESI, ESI", "0x2DD5|JZ|0x00402dfb", "0x2DD7|PUSH|ESI", "0x2DD8|CALL|0x004032e3", "0x2DDD|POP|ECX", "0x2DDE|TEST|EAX, EAX", "0x2DE0|PUSH|ESI", "0x2DE1|JZ|0x00402ded", "0x2DE3|PUSH|EAX", "0x2DE4|CALL|0x0040330e", "0x2DE9|POP|ECX", "0x2DEA|POP|ECX", "0x2DEB|POP|ESI"],
       "comment": "Smart memory deallocation function with managed pool fallback to system heap\n\nAlgorithm:\n1. Check if memory pointer is not null (early return if null)\n2. Call FUN_1001d50f to get control block for managed memory allocation\n3. If control block exists, call FUN_1001d53a for managed deallocation\n4. If no control block found, fallback to system HeapFree with global heap handle\n5. Return without value (void function)\n\nParameters:\n  pMemory - void* pointer to memory block to deallocate (may be null)\n\nReturns:\n  void (no return value)\n\nSpecial Cases:\n  - Null pointer: function returns immediately without action\n  - Memory not in managed pool: falls back to HeapFree\n  - Uses global heap handle g_hHeap for system memory deallocation\n\nError Handling:\n  - Graceful handling of null pointer input\n  - Fallback mechanism when managed deallocation unavailable\n  - No explicit error return codes (void function)",
-      "tags": ["CALLER_2", "CALLER_4", "CALLEE_3", "PARAM_1", "PROP_SMALL"]
+      "tags": ["CALLER_2", "CALLEE_3", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x00402E00",
@@ -2394,7 +2394,7 @@
       "callee_count": 1,
       "callees": ["__nh_malloc|0x402F02"],
       "caller_count": 4,
-      "callers": ["GetEnvironmentStringsConverted|0x402264", "InitializeModuleData|0x402017", "InitializeFileDescriptors|0x402396", "InitializeEnvironmentVariables|0x401F5E"],
+      "callers": ["InitializeModuleData|0x402017", "InitializeFileDescriptors|0x402396", "InitializeEnvironmentVariables|0x401F5E", "GetEnvironmentStringsConverted|0x402264"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2441,7 +2441,7 @@
       "param_count": 2,
       "parameters": [{"name": "_Size", "type": "size_t", "storage": "Stack[0x4]:4"}, {"name": "_NhFlag", "type": "int", "storage": "Stack[0x8]:4"}],
       "callee_count": 2,
-      "callees": ["AllocateMemoryWithCache|0x402F2E", "InvokeCallbackHandler|0x403D08"],
+      "callees": ["InvokeCallbackHandler|0x403D08", "AllocateMemoryWithCache|0x402F2E"],
       "caller_count": 1,
       "callers": ["_malloc|0x402EF0"],
       "string_count": 0,
@@ -2490,7 +2490,7 @@
       "param_count": 1,
       "parameters": [{"name": "dwRequestedSize", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 2,
-      "callees": ["AllocateMemoryDescriptorBlock|0x403639", "HeapAlloc|0x28"],
+      "callees": ["HeapAlloc|0x28", "AllocateMemoryDescriptorBlock|0x403639"],
       "caller_count": 1,
       "callers": ["__nh_malloc|0x402F02"],
       "string_count": 0,
@@ -2650,7 +2650,7 @@
       "api_calls": [],
       "instructions": ["0x32E3|MOV|EAX, [0x0040666c]", "0x32E8|LEA|ECX, [EAX + EAX*0x4]", "0x32EB|MOV|EAX, [0x00406670]", "0x32F0|LEA|ECX, [EAX + ECX*0x4]", "0x32F3|CMP|EAX, ECX", "0x32F5|JNC|0x0040330b", "0x32F7|MOV|EDX, dword ptr [ESP + 0x4]", "0x32FB|SUB|EDX, dword ptr [EAX + 0xc]", "0x32FE|CMP|EDX, 0x100000", "0x3304|JC|0x0040330d", "0x3306|ADD|EAX, 0x14", "0x3309|JMP|0x004032f3", "0x330B|XOR|EAX, EAX", "0x330D|RET|"],
       "comment": "Searches for a MemoryDescriptor entry containing a target address within a 1MB range.\n\nAlgorithm:\n1. Initialize iterator to start of MemoryDescriptor array (PTR_1003ce08)\n2. Calculate array end boundary using count (INT_1003ce04) * 20-byte element size\n3. Loop through array until end boundary reached:\n   a. Calculate address difference from target to descriptor base address (offset 0xc)\n   b. Check if difference is within 0x100000 (1MB) range using unsigned comparison\n   c. If match found, return pointer to current MemoryDescriptor\n   d. Otherwise advance iterator by 20 bytes (0x14) to next descriptor\n4. Return 0 if no matching descriptor found\n\nParameters:\n- nTargetAddress (int): Target address to locate within memory descriptors\n\nReturns:\n- MemoryDescriptor *: Pointer to descriptor containing target address\n- 0: No descriptor found containing target address within 1MB range\n\nSpecial Cases:\n- Empty array (count = 0): Returns 0 immediately\n- Target address beyond all descriptors: Returns 0 after full iteration\n\nMagic Numbers Reference:\n- 0x14 (20): MemoryDescriptor structure size in bytes\n- 0xc (12): Offset to base address field within MemoryDescriptor\n- 0x100000 (1048576): Maximum address range tolerance (1MB)\n\nStructure Layout:\nOffset | Size | Field Name       | Type | Description\n-------|------|------------------|------|------------------\n+0x00  | ?    | [Unknown fields] | ?    | Structure prefix\n+0x0c  | 4    | dwBaseAddress    | uint | Base memory address\n+0x10  | ?    | [Unknown fields] | ?    | Additional data\nTotal: 20 bytes (0x14)",
-      "tags": ["CALLER_1", "CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LEAF", "RET_STRUCT_PTR", "PROP_SMALL"]
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF", "RET_STRUCT_PTR", "PROP_SMALL"]
     },
     {
       "address": "0x0040330E",
@@ -2735,7 +2735,7 @@
       "param_count": 1,
       "parameters": [{"name": "dwRequestedSize", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 2,
-      "callees": ["AllocateMemoryDescriptor|0x403942", "AllocateMemorySlot|0x4039F3"],
+      "callees": ["AllocateMemorySlot|0x4039F3", "AllocateMemoryDescriptor|0x403942"],
       "caller_count": 1,
       "callers": ["AllocateMemoryWithCache|0x402F2E"],
       "string_count": 0,
@@ -2748,7 +2748,7 @@
       "api_calls": [],
       "instructions": ["0x3639|PUSH|EBP", "0x363A|MOV|EBP, ESP", "0x363C|SUB|ESP, 0x14", "0x363F|MOV|EAX, [0x0040666c]", "0x3644|MOV|EDX, dword ptr [0x00406670]", "0x364A|PUSH|EBX", "0x364B|PUSH|ESI", "0x364C|LEA|EAX, [EAX + EAX*0x4]", "0x364F|PUSH|EDI", "0x3650|LEA|EDI, [EDX + EAX*0x4]", "0x3653|MOV|EAX, dword ptr [EBP + 0x8]", "0x3656|MOV|dword ptr [EBP + -0x4], EDI", "0x3659|LEA|ECX, [EAX + 0x17]", "0x365C|AND|ECX, 0xfffffff0", "0x365F|MOV|dword ptr [EBP + -0x10], ECX"],
       "comment": "Allocates memory block from descriptor-based allocator with size-class free lists\n\nAlgorithm:\n1. Align requested size to 16-byte boundary and calculate size class index\n2. Generate bitmasks for free block tracking based on size class (splits at 32-bit boundary)\n3. Search descriptor array for available descriptor with matching free blocks\n4. If no descriptor found, search from beginning for any available descriptor\n5. If still no descriptor, search for descriptor with zero reserved field\n6. If no descriptor available, call allocation expansion function (FUN_1001db6e)\n7. If expansion fails, initialize new descriptor with FUN_1001dc1f\n8. Locate appropriate free list and find block of suitable size\n9. Calculate bit position for free block tracking within size class\n10. Remove block from free list by unlinking (doubly-linked list operations)\n11. If block larger than needed, split block and reinsert remainder into appropriate size class\n12. Update bit tracking arrays and reference counts for block allocation\n13. Set block headers with size information for boundary tag system\n14. Update global state if this was the last block in descriptor\n15. Return pointer to allocated memory (block pointer + 4 for header skip)\n\nParameters:\n- nRequestedSize (uint): Size in bytes to allocate, will be aligned to 16-byte boundary\n\nReturns:\n- void*: Pointer to allocated memory block, or NULL if allocation fails\n\nSpecial Cases:\n- Sizes are rounded up to next 16-byte boundary (add 0x17, mask with 0xfffffff0)\n- Free blocks tracked using dual bitmask system (low 32 bits, high 32 bits)\n- Size classes use bit positions 0-63 for different allocation sizes\n- Block splitting occurs when allocated block significantly larger than request\n- Boundary tag system maintains size at block start and end for coalescing\n\nMagic Numbers Reference:\n- 0x17 (23): Alignment padding for 16-byte boundaries\n- 0xfffffff0: Mask for 16-byte alignment\n- 0x20 (32): Bit boundary for high/low bitmask split\n- 0x3f (63): Maximum size class index\n- 0x81 (129): Stride for free list array access (129 dwords per size class)\n- 0x51 (81): Base offset for free list pointers in allocator data\n- 0x31 (49): Offset to high bitmask in allocator data\n- 0x11 (17): Offset to low bitmask in allocator data\n- 0x80000000: High bit mask for bit manipulation operations\n\nStructure Layout:\nOffset | Size | Field Name    | Type              | Description\n-------|------|---------------|-------------------|---------------------------\n0x00   | 4    | pHeapMemory   | void*             | Pointer to heap memory base\n0x04   | 4    | pVirtualMemory| void*             | Pointer to virtual memory\n0x08   | 4    | dwReserved1   | uint              | Reserved field, 0=available\n0x0C   | 4    | dwFlags       | uint              | Descriptor flags/status\n0x10   | 4    | pAllocatorData| AllocatorData*    | Pointer to allocator metadata\n\nError Handling:\n- Returns NULL if expansion function (FUN_1001db6e) fails to provide new descriptor\n- Returns NULL if descriptor initialization (FUN_1001dc1f) returns -1\n- Gracefully handles empty free lists by searching alternate size classes\n- Validates descriptor boundaries before proceeding with allocation",
-      "tags": ["PROP_LARGE", "STRUCT_Inventory", "CALLER_1", "CALLER_2", "CALLEE_2", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
+      "tags": ["PROP_LARGE", "STRUCT_Inventory", "CALLER_1", "CALLEE_2", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00403942",
@@ -2784,7 +2784,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 4,
-      "callees": ["HeapReAlloc|0x2A", "VirtualAlloc|0x29", "HeapFree|0x20", "HeapAlloc|0x28"],
+      "callees": ["HeapAlloc|0x28", "HeapReAlloc|0x2A", "HeapFree|0x20", "VirtualAlloc|0x29"],
       "caller_count": 1,
       "callers": ["AllocateMemoryDescriptorBlock|0x403639"],
       "string_count": 0,
@@ -2895,7 +2895,7 @@
       "api_calls": [],
       "instructions": ["0x3AEE|PUSH|EBX", "0x3AEF|XOR|EBX, EBX", "0x3AF1|CMP|dword ptr [0x00406648], EBX", "0x3AF7|PUSH|ESI", "0x3AF8|PUSH|EDI", "0x3AF9|JNZ|0x00403b3d", "0x3AFB|PUSH|0x405414", "0x3B00|CALL|dword ptr [0x00405068]", "0x3B06|MOV|EDI, EAX", "0x3B08|CMP|EDI, EBX", "0x3B0A|JZ|0x00403b73", "0x3B0C|MOV|ESI, dword ptr [0x00405024]", "0x3B12|PUSH|0x405408", "0x3B17|PUSH|EDI", "0x3B18|CALL|ESI"],
       "comment": "Displays a message box using dynamic loading of user32.dll functions with active window detection.\n\nAlgorithm:\n\n1. Check if MessageBoxA function pointer is already loaded (DAT_1003ca8c)\n2. If not loaded, dynamically load user32.dll using LoadLibraryA\n3. Get function pointers for MessageBoxA, GetActiveWindow, and GetLastActivePopup\n4. Store function pointers in global variables (DAT_1003ca8c, DAT_1003ca90, DAT_1003ca94)\n5. If GetActiveWindow is available, call it to get active window handle\n6. If active window exists and GetLastActivePopup is available, get last active popup\n7. Call MessageBoxA with detected window handle and provided text, caption, and type\n8. Return the result from MessageBoxA\n\nParameters:\n\nlpszText - Pointer to null-terminated string containing message text to display\nlpszCaption - Pointer to null-terminated string containing dialog caption/title\nnType - Message box type flags controlling buttons and icon (MB_OK, MB_ICONERROR, etc.)\n\nReturns:\n\nInteger result from MessageBoxA indicating which button was pressed:\n- IDOK (1) if OK button clicked\n- IDCANCEL (2) if Cancel button clicked  \n- IDABORT (3) if Abort button clicked\n- IDRETRY (4) if Retry button clicked\n- IDIGNORE (5) if Ignore button clicked\n- IDYES (6) if Yes button clicked\n- IDNO (7) if No button clicked\n- 0 if function initialization failed\n\nSpecial Cases:\n\nIf user32.dll cannot be loaded or required functions cannot be found, returns 0.\nUses lazy loading pattern - initializes function pointers only on first call.\nWindow handle detection provides proper message box parenting for modal behavior.\n\nGlobal Variables:\n\nDAT_1003ca8c - Function pointer to MessageBoxA (FARPROC)\nDAT_1003ca90 - Function pointer to GetActiveWindow (FARPROC) \nDAT_1003ca94 - Function pointer to GetLastActivePopup (FARPROC)",
-      "tags": ["PARAM_3", "CALLER_1", "PARAM_4", "CALLEE_2"]
+      "tags": ["PARAM_3", "CALLER_1", "CALLEE_2"]
     },
     {
       "address": "0x00403B80",
@@ -2993,7 +2993,7 @@
       "api_calls": [],
       "instructions": ["0x3C80|PUSH|ECX", "0x3C81|CMP|EAX, 0x1000", "0x3C86|LEA|ECX, [ESP + 0x8]", "0x3C8A|JC|0x00403ca0", "0x3C8C|SUB|ECX, 0x1000", "0x3C92|SUB|EAX, 0x1000", "0x3C97|TEST|dword ptr [ECX], EAX", "0x3C99|CMP|EAX, 0x1000", "0x3C9E|JNC|0x00403c8c", "0x3CA0|SUB|ECX, EAX", "0x3CA2|MOV|EAX, ESP", "0x3CA4|TEST|dword ptr [ECX], EAX", "0x3CA6|MOV|ESP, ECX", "0x3CA8|MOV|ECX, dword ptr [EAX]", "0x3CAA|MOV|EAX, dword ptr [EAX + 0x4]"],
       "comment": "Dynamically allocates stack space with page probing to ensure proper memory commitment.\n\nAlgorithm:\n1. Initialize stack pointer to current position plus 8 bytes (beyond return address and saved ECX)\n2. Check if requested allocation size exceeds one page (0x1000 bytes)\n3. If multi-page allocation needed, enter probing loop:\n   - Subtract one page (0x1000 bytes) from stack pointer\n   - Subtract one page from remaining allocation size\n   - Touch memory at stack pointer to trigger page commitment\n   - Repeat until remaining size is less than one page\n4. Subtract final remaining bytes from stack pointer\n5. Touch memory at final stack position to commit last page\n6. Update ESP register to new stack pointer position\n7. Restore original ECX and return address from saved stack frame\n8. Return to caller with stack space allocated and committed\n\nParameters:\ndwStackSize (uint) - Number of bytes to allocate on stack\n\nReturns:\nvoid - No return value, modifies stack pointer directly\n\nSpecial Cases:\n- Single page allocations (≤ 0xFFF bytes) skip the probing loop\n- Memory touches use TEST instruction to trigger page faults for uncommitted pages\n- Stack grows downward, so allocation decreases stack pointer\n- Function preserves ECX register across call\n\nMagic Numbers Reference:\n0x1000 (4096) - Windows page size for stack probing\n0xFFF (4095) - Maximum single-page allocation without probing\n\nError Handling:\n- No explicit error handling - relies on Windows page fault mechanism\n- Invalid memory access triggers system page fault handler\n- Stack overflow protection handled by system guard pages",
-      "tags": ["CALLER_2", "CALLEE_0", "CALLER_3", "PARAM_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
+      "tags": ["CALLER_2", "CALLEE_0", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x00403CB0",
@@ -3042,7 +3042,7 @@
       "api_calls": [],
       "instructions": ["0x3CB0|MOV|EDX, dword ptr [ESP + 0xc]", "0x3CB4|MOV|ECX, dword ptr [ESP + 0x4]", "0x3CB8|TEST|EDX, EDX", "0x3CBA|JZ|0x00403d03", "0x3CBC|XOR|EAX, EAX", "0x3CBE|MOV|AL, byte ptr [ESP + 0x8]", "0x3CC2|PUSH|EDI", "0x3CC3|MOV|EDI, ECX", "0x3CC5|CMP|EDX, 0x4", "0x3CC8|JC|0x00403cf7", "0x3CCA|NEG|ECX", "0x3CCC|AND|ECX, 0x3", "0x3CCF|JZ|0x00403cd9", "0x3CD1|SUB|EDX, ECX", "0x3CD3|MOV|byte ptr [EDI], AL"],
       "comment": "Library Function - Single Match\n _memset\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
-      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "CALLER_4", "PROP_LEAF"]
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x00403D08",
@@ -3091,7 +3091,7 @@
       "api_calls": [],
       "instructions": ["0x3D08|MOV|EAX, [0x00406658]", "0x3D0D|TEST|EAX, EAX", "0x3D0F|JZ|0x00403d20", "0x3D11|PUSH|dword ptr [ESP + 0x4]", "0x3D15|CALL|EAX", "0x3D17|TEST|EAX, EAX", "0x3D19|POP|ECX", "0x3D1A|JZ|0x00403d20", "0x3D1C|PUSH|0x1", "0x3D1E|POP|EAX", "0x3D1F|RET|", "0x3D20|XOR|EAX, EAX", "0x3D22|RET|"],
       "comment": "Setting prototype: int InvokeCallbackHandler(int nParameter)",
-      "tags": ["CALLER_1", "CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x00403D30",

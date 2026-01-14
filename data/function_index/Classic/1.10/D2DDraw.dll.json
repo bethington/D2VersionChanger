@@ -4,7 +4,7 @@
   "version": "1.10",
   "image_base": "0x6F880000",
   "total_functions": 192,
-  "export_timestamp": "Sun Jan 11 22:12:18 CST 2026",
+  "export_timestamp": "Wed Jan 14 14:39:11 CST 2026",
   "functions": [
     {
       "address": "0x6F881000",
@@ -53,7 +53,7 @@
       "api_calls": [],
       "instructions": ["0x1000|MOV|EAX, 0x6f88d030", "0x1005|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F881010",
@@ -102,7 +102,7 @@
       "api_calls": [],
       "instructions": ["0x1010|MOV|EAX, 0x1", "0x1015|RET|0xc"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F881020",
@@ -138,7 +138,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 26,
-      "callees": ["_BinkDDSurfaceType@4|0x23", "_BinkSetSoundSystem@8|0x24", "Ordinal_10027|0x6F884E72", "PeekMessageA|0x70", "Ordinal_268|0x6F884EA8", "_BinkOpen@8|0x22", "Ordinal_422|0x6F884EBA", "DispatchMessageA|0x72", "EnterCriticalSection|0x40", "FUN_6f884eff|0x6F884EFF", "_BinkCopyToBuffer@28|0x1E", "Ordinal_423|0x6F884EB4", "CloseHandle|0x42", "GetTickCount|0x41", "_BinkNextFrame@4|0x1D", "Sleep|0x3E", "Ordinal_10022|0x6F884E8A", "Ordinal_10117|0x6F884E84", "_BinkWait@4|0x20", "Ordinal_421|0x6F884EAE", "...+6 more"],
+      "callees": ["CloseHandle|0x42", "_BinkOpen@8|0x22", "_BinkSetSoundSystem@8|0x24", "Ordinal_10027|0x6F884E72", "_BinkDDSurfaceType@4|0x23", "Ordinal_423|0x6F884EB4", "_BinkWait@4|0x20", "_BinkNextFrame@4|0x1D", "Ordinal_422|0x6F884EBA", "LeaveCriticalSection|0x3F", "Ordinal_10023|0x6F884E78", "FUN_6f884eff|0x6F884EFF", "Ordinal_421|0x6F884EAE", "TranslateMessage|0x71", "EnterCriticalSection|0x40", "Ordinal_10117|0x6F884E84", "Ordinal_10029|0x6F884E7E", "PeekMessageA|0x70", "Ordinal_268|0x6F884EA8", "_BinkCopyToBuffer@28|0x1E", "...+6 more"],
       "caller_count": 0,
       "callers": [],
       "string_count": 12,
@@ -151,7 +151,7 @@
       "api_calls": ["Ordinal_10117", "Ordinal_268", "Ordinal_10029", "Ordinal_10029", "Ordinal_10027", "Ordinal_10027", "Ordinal_10023", "Ordinal_10022", "Ordinal_10023", "Ordinal_10029", "...+4 more"],
       "instructions": ["0x1020|SUB|ESP, 0x94", "0x1026|MOV|EAX, [0x6f891150]", "0x102B|PUSH|EBX", "0x102C|PUSH|EBP", "0x102D|XOR|EBP, EBP", "0x102F|PUSH|ESI", "0x1030|PUSH|EDI", "0x1031|CMP|EAX, EBP", "0x1033|MOV|EDI, EDX", "0x1035|MOV|EBX, ECX", "0x1037|MOV|dword ptr [ESP + 0x14], EBP", "0x103B|MOV|dword ptr [0x6f89115c], EBP", "0x1041|JNZ|0x6f88110d", "0x1047|CMP|dword ptr [0x6f891bfc], EBP", "0x104D|JNZ|0x6f88110d"],
       "comment": "",
-      "tags": []
+      "tags": ["SRC_ddCore.cpp", "STRUCT_Act", "CALLEE_26", "STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_0", "GFX_DRAW", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData", "PROP_LARGE", "GFX_VIDEO", "STRUCT_Skill", "PROP_LOOPHEAVY", "SRC_ddBink.cpp"]
     },
     {
       "address": "0x6F881780",
@@ -187,7 +187,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "ECX:4"}],
       "callee_count": 5,
-      "callees": ["FUN_6f8823e0|0x6F8823E0", "Ordinal_10029|0x6F884E7E", "FUN_6f884eff|0x6F884EFF", "FUN_6f8843a0|0x6F8843A0", "Ordinal_10023|0x6F884E78"],
+      "callees": ["FUN_6f8823e0|0x6F8823E0", "Ordinal_10029|0x6F884E7E", "FUN_6f8843a0|0x6F8843A0", "Ordinal_10023|0x6F884E78", "FUN_6f884eff|0x6F884EFF"],
       "caller_count": 0,
       "callers": [],
       "string_count": 16,
@@ -200,7 +200,7 @@
       "api_calls": ["Ordinal_10023", "Ordinal_10029", "Ordinal_10023", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029"],
       "instructions": ["0x1780|MOV|EAX, [0x6f891bc8]", "0x1785|SUB|ESP, 0x70", "0x1788|TEST|EAX, EAX", "0x178A|PUSH|EBX", "0x178B|PUSH|ESI", "0x178C|PUSH|EDI", "0x178D|MOV|ESI, ECX", "0x178F|JZ|0x6f8817af", "0x1791|PUSH|0x131", "0x1796|PUSH|0x6f88d408", "0x179B|PUSH|0x6f88d754", "0x17A0|CALL|0x6f884e78", "0x17A5|ADD|ESP, 0xc", "0x17A8|PUSH|-0x1", "0x17AA|CALL|0x6f884eff"],
       "comment": "",
-      "tags": []
+      "tags": ["SRC_ddCore.cpp", "STRUCT_Act", "STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "STRUCT_Room2", "PARAM_1", "GFX_DRAW", "STRUCT_UnitAny", "CALLEE_5", "STRUCT_Control", "STRUCT_PlayerData", "PROP_LARGE", "GFX_VIDEO", "STRUCT_Skill"]
     },
     {
       "address": "0x6F881BB0",
@@ -236,7 +236,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 3,
-      "callees": ["Ordinal_10029|0x6F884E7E", "FUN_6f883e00|0x6F883E00", "FUN_6f881fd0|0x6F881FD0"],
+      "callees": ["Ordinal_10029|0x6F884E7E", "FUN_6f881fd0|0x6F881FD0", "FUN_6f883e00|0x6F883E00"],
       "caller_count": 0,
       "callers": [],
       "string_count": 2,
@@ -249,7 +249,7 @@
       "api_calls": ["Ordinal_10029", "Ordinal_10029"],
       "instructions": ["0x1BB0|MOV|EAX, [0x6f891bc8]", "0x1BB5|PUSH|EDI", "0x1BB6|XOR|EDI, EDI", "0x1BB8|CMP|EAX, EDI", "0x1BBA|JZ|0x6f881c48", "0x1BC0|PUSH|ESI", "0x1BC1|PUSH|0x6f88d784", "0x1BC6|CALL|0x6f884e7e", "0x1BCB|ADD|ESP, 0x4", "0x1BCE|MOV|ESI, 0x3", "0x1BD3|XOR|ECX, ECX", "0x1BD5|CALL|0x6f883e00", "0x1BDA|CALL|0x6f881fd0", "0x1BDF|DEC|ESI", "0x1BE0|JNZ|0x6f881bd3"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "GFX_VIDEO", "PARAM_0", "CALLEE_3"]
     },
     {
       "address": "0x6F881FD0",
@@ -298,7 +298,7 @@
       "api_calls": [],
       "instructions": ["0x1FD0|MOV|EAX, [0x6f891bf8]", "0x1FD5|MOV|ECX, dword ptr [0x6f891be4]", "0x1FDB|SUB|ESP, 0x10", "0x1FDE|PUSH|ESI", "0x1FDF|XOR|ESI, ESI", "0x1FE1|CMP|EAX, ESI", "0x1FE3|PUSH|EDI", "0x1FE4|JZ|0x6f882093", "0x1FEA|CMP|ECX, ESI", "0x1FEC|JZ|0x6f88203f", "0x1FEE|MOV|EAX, [0x6f891be0]", "0x1FF3|CMP|EAX, ESI", "0x1FF5|JZ|0x6f88203f", "0x1FF7|CMP|ECX, EAX", "0x1FF9|JZ|0x6f88203f"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_1", "PARAM_0", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F8822A0",
@@ -347,7 +347,7 @@
       "api_calls": [],
       "instructions": ["0x22A0|PUSH|ESI", "0x22A1|PUSH|EDI", "0x22A2|MOV|ESI, ECX", "0x22A4|MOV|ECX, 0x48", "0x22A9|MOV|EDI, 0x6f891570", "0x22AE|MOVSD.REP|ES:EDI, ESI", "0x22B0|POP|EDI", "0x22B1|MOV|dword ptr [0x6f891568], 0x6f891570", "0x22BB|POP|ESI", "0x22BC|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "CALLEE_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F8823E0",
@@ -385,7 +385,7 @@
       "callee_count": 1,
       "callees": ["Ordinal_10029|0x6F884E7E"],
       "caller_count": 3,
-      "callers": ["FUN_6f883e00|0x6F883E00", "FUN_6f881fd0|0x6F881FD0", "FUN_6f881780|0x6F881780"],
+      "callers": ["FUN_6f881780|0x6F881780", "FUN_6f881fd0|0x6F881FD0", "FUN_6f883e00|0x6F883E00"],
       "string_count": 109,
       "strings": ["0xDF64|s_DDERR_NORASTEROPHW_6f88df64|DDERR_NORASTEROPHW", "0xDEB0|s_DDERR_NOZOVERLAYHW_6f88deb0|DDERR_NOZOVERLAYHW", "0xDE00|s_DDERR_SURFACEALREADYATTACHED_6f88de00|DDERR_SURFACEALREADYATTACHED", "0xDD18|s_DDERR_UNSUPPORTEDFORMAT_6f88dd18|DDERR_UNSUPPORTEDFORMAT", "0xE000|s_DDERR_NOCOLORKEYHW_6f88e000|DDERR_NOCOLORKEYHW", "0xE20C|s_DDERR_GENERIC_6f88e20c|DDERR_GENERIC", "0xD9F8|s_DDERR_NOMIPMAPHW_6f88d9f8|DDERR_NOMIPMAPHW", "0xDF78|s_DDERR_NOOVERLAYHW_6f88df78|DDERR_NOOVERLAYHW", "0xDA6C|s_DDERR_CANTCREATEDC_6f88da6c|DDERR_CANTCREATEDC", "0xD95C|s_DDERR_CANTPAGEUNLOCK_6f88d95c|DDERR_CANTPAGEUNLOCK", "0xE154|s_DDERR_EXCEPTION_6f88e154|DDERR_EXCEPTION", "0xD9C8|s_DDERR_NOOPTIMIZEHW_6f88d9c8|DDERR_NOOPTIMIZEHW", "0xE014|s_DDERR_NOCOLORKEY_6f88e014|DDERR_NOCOLORKEY", "0xDE20|s_DDERR_COLORKEYNOTSET_6f88de20|DDERR_COLORKEYNOTSET", "0xDC2C|s_DDERR_NOEMULATION_6f88dc2c|DDERR_NOEMULATION", "0xDC14|s_DDERR_REGIONTOOSMALL_6f88dc14|DDERR_REGIONTOOSMALL", "0xE1B4|s_DDERR_INVALIDPARAMS_6f88e1b4|DDERR_INVALIDPARAMS", "0xE044|s_DDERR_NOCOLORCONVHW_6f88e044|DDERR_NOCOLORCONVHW", "0xD974|s_DDERR_NOTPAGELOCKED_6f88d974|DDERR_NOTPAGELOCKED", "0xDA38|s_DDERR_IMPLICITLYCREATED_6f88da38|DDERR_IMPLICITLYCREATED", "0xDB4C|s_DDERR_NOBLTHW_6f88db4c|DDERR_NOBLTHW", "0xDB5C|s_DDERR_BLTFASTCANTCLIP_6f88db5c|DDERR_BLTFASTCANTCLIP", "0xDB88|s_DDERR_NOPALETTEATTACHED_6f88db88|DDERR_NOPALETTEATTACHED", "0xDD44|s_DDERR_TOOBIGSIZE_6f88dd44|DDERR_TOOBIGSIZE", "0xDD6C|s_DDERR_SURFACENOTATTACHED_6f88dd6c|DDERR_SURFACENOTATTACHED", "0xDF9C|s_DDERR_NOMIRRORHW_6f88df9c|DDERR_NOMIRRORHW", "0xDB0C|s_DDERR_NOOVERLAYDEST_6f88db0c|DDERR_NOOVERLAYDEST", "0xE21C|s_*****_DirectDraw_error:_%s_-_%s_(_6f88e21c|***** DirectDraw error: %s - %s (0x%x)", "0xDC40|s_DDERR_PRIMARYSURFACEALREADYEXIST_6f88dc40|DDERR_PRIMARYSURFACEALREADYEXISTS", "0xDA50|s_DDERR_WRONGMODE_6f88da50|DDERR_WRONGMODE", "0xDC9C|s_DDERR_INVALIDDIRECTDRAWGUID_6f88dc9c|DDERR_INVALIDDIRECTDRAWGUID", "0xDB74|s_DDERR_NOPALETTEHW_6f88db74|DDERR_NOPALETTEHW", "0xDFB0|s_DDERR_NOGDI_6f88dfb0|DDERR_NOGDI", "0xD904|s_DDERR_DEVICEDOESNTOWNSURFACE_6f88d904|DDERR_DEVICEDOESNTOWNSURFACE", "0xE0E4|s_DDERR_INVALIDMODE_6f88e0e4|DDERR_INVALIDMODE", "0xDD9C|s_DDERR_SURFACEISOBSCURED_6f88dd9c|DDERR_SURFACEISOBSCURED", "0xDA60|s_DDERR_NODC_6f88da60|DDERR_NODC", "0xDFCC|s_DDERR_NOEXCLUSIVEMODE_6f88dfcc|DDERR_NOEXCLUSIVEMODE", "0xDCE0|s_DDERR_VERTICALBLANKINPROGRESS_6f88dce0|DDERR_VERTICALBLANKINPROGRESS", "0xDDB4|s_DDERR_CANTLOCKSURFACE_6f88ddb4|DDERR_CANTLOCKSURFACE", "0xDE4C|s_DDERR_OVERLAYCOLORKEYONLYONEACTI_6f88de4c|DDERR_OVERLAYCOLORKEYONLYONEACTIVE", "0xDBB8|s_DDERR_HWNDSUBCLASSED_6f88dbb8|DDERR_HWNDSUBCLASSED", "0xDD58|s_DDERR_TOOBIGHEIGHT_6f88dd58|DDERR_TOOBIGHEIGHT", "0xE124|s_DDERR_INCOMPATIBLEPRIMARY_6f88e124|DDERR_INCOMPATIBLEPRIMARY", "0xE140|s_DDERR_HEIGHTALIGN_6f88e140|DDERR_HEIGHTALIGN", "0xD92C|s_<_unknown_>_6f88d92c|< unknown >", "0xE0D0|s_DDERR_INVALIDOBJECT_6f88e0d0|DDERR_INVALIDOBJECT", "0xDB38|s_DDERR_NODDROPSHW_6f88db38|DDERR_NODDROPSHW", "0xDA0C|s_DDERR_UNSUPPORTEDMODE_6f88da0c|DDERR_UNSUPPORTEDMODE", "0xD988|s_DDERR_NONONLOCALVIDMEM_6f88d988|DDERR_NONONLOCALVIDMEM", "0xDAA4|s_DDERR_NOTFLIPPABLE_6f88daa4|DDERR_NOTFLIPPABLE", "0xDBF8|s_DDERR_CLIPPERISUSINGHWND_6f88dbf8|DDERR_CLIPPERISUSINGHWND", "0xE058|s_DDERR_NOCLIPLIST_6f88e058|DDERR_NOCLIPLIST", "0xDED8|s_DDERR_NOVSYNCHW_6f88ded8|DDERR_NOVSYNCHW", "0xE244|s_DDERR_NOTINITIALIZED_6f88e244|DDERR_NOTINITIALIZED", "0xE07C|s_DDERR_NO3D_6f88e07c|DDERR_NO3D", "0xDEA0|s_DDERR_OUTOFCAPS_6f88dea0|DDERR_OUTOFCAPS", "0xDE38|s_DDERR_PALETTEBUSY_6f88de38|DDERR_PALETTEBUSY", "0xDEC4|s_DDERR_NOZBUFFERHW_6f88dec4|DDERR_NOZBUFFERHW", "0xDDE0|s_DDERR_SURFACEALREADYDEPENDENT_6f88dde0|DDERR_SURFACEALREADYDEPENDENT", "0xD924|s_DD_OK_6f88d924|DD_OK", "0xE1F8|s_DDERR_UNSUPPORTED_6f88e1f8|DDERR_UNSUPPORTED", "0xDFE4|s_DDERR_NODIRECTDRAWSUPPORT_6f88dfe4|DDERR_NODIRECTDRAWSUPPORT", "0xD9B8|s_DDERR_NOTLOADED_6f88d9b8|DDERR_NOTLOADED", "0xDA90|s_DDERR_CANTDUPLICATE_6f88da90|DDERR_CANTDUPLICATE", "0xE1E4|s_DDERR_OUTOFMEMORY_6f88e1e4|DDERR_OUTOFMEMORY", "0xDF8C|s_DDERR_NOTFOUND_6f88df8c|DDERR_NOTFOUND", "0xDBD0|s_DDERR_NOHWND_6f88dbd0|DDERR_NOHWND", "0xDF50|s_DDERR_NOROTATIONHW_6f88df50|DDERR_NOROTATIONHW", "0xDEFC|s_DDERR_NOT8BITCOLOR_6f88defc|DDERR_NOT8BITCOLOR", "0xDD00|s_DDERR_UNSUPPORTEDMASK_6f88dd00|DDERR_UNSUPPORTEDMASK", "0xDB20|s_DDERR_OVERLAYNOTVISIBLE_6f88db20|DDERR_OVERLAYNOTVISIBLE", "0xDCB8|s_DDERR_XALIGN_6f88dcb8|DDERR_XALIGN", "0xE1C8|s_DDERR_ALREADYINITIALIZED_6f88e1c8|DDERR_ALREADYINITIALIZED", "0xDF10|s_DDERR_NOT4BITCOLORINDEX_6f88df10|DDERR_NOT4BITCOLORINDEX", "0xDCC8|s_DDERR_WASSTILLDRAWING_6f88dcc8|DDERR_WASSTILLDRAWING", "0xE0F8|s_DDERR_INVALIDCLIPLIST_6f88e0f8|DDERR_INVALIDCLIPLIST", "0xDD88|s_DDERR_SURFACELOST_6f88dd88|DDERR_SURFACELOST", "0xE164|s_DDERR_CURRENTLYNOTAVAIL_6f88e164|DDERR_CURRENTLYNOTAVAIL", "0xE198|s_DDERR_CANNOTATTACHSURFACE_6f88e198|DDERR_CANNOTATTACHSURFACE", "0xE17C|s_DDERR_CANNOTDETACHSURFACE_6f88e17c|DDERR_CANNOTDETACHSURFACE", "0xDBE0|s_DDERR_NOCLIPPERATTACHED_6f88dbe0|DDERR_NOCLIPPERATTACHED", "0xDA24|s_DDERR_NOTPALETTIZED_6f88da24|DDERR_NOTPALETTIZED", "0xDC64|s_DDERR_NODIRECTDRAWHW_6f88dc64|DDERR_NODIRECTDRAWHW", "0xDAD8|s_DDERR_NOTAOVERLAYSURFACE_6f88dad8|DDERR_NOTAOVERLAYSURFACE", "0xD938|s_DDERR_MOREDATA_6f88d938|DDERR_MOREDATA", "0xDA80|s_DDERR_NOTLOCKED_6f88da80|DDERR_NOTLOCKED", "0xDF28|s_DDERR_NOT4BITCOLOR_6f88df28|DDERR_NOT4BITCOLOR", "0xD9A0|s_DDERR_DCALREADYCREATED_6f88d9a0|DDERR_DCALREADYCREATED", "0xDE70|s_DDERR_OVERLAYCANTCLIP_6f88de70|DDERR_OVERLAYCANTCLIP", "0xDFBC|s_DDERR_NOFLIPHW_6f88dfbc|DDERR_NOFLIPHW", "0xD948|s_DDERR_CANTPAGELOCK_6f88d948|DDERR_CANTPAGELOCK", "0xE06C|s_DDERR_NOALPHAHW_6f88e06c|DDERR_NOALPHAHW", "0xDC7C|s_DDERR_DIRECTDRAWALREADYCREATED_6f88dc7c|DDERR_DIRECTDRAWALREADYCREATED", "0xE110|s_DDERR_INVALIDCAPS_6f88e110|DDERR_INVALIDCAPS", "0xDEE8|s_DDERR_NOTEXTUREHW_6f88dee8|DDERR_NOTEXTUREHW", "0xE0B4|s_DDERR_INVALIDPIXELFORMAT_6f88e0b4|DDERR_INVALIDPIXELFORMAT", "0xE0A0|s_DDERR_INVALIDRECT_6f88e0a0|DDERR_INVALIDRECT", "0xDBA0|s_DDERR_HWNDALREADYSET_6f88dba0|DDERR_HWNDALREADYSET", "0xD8EC|s_DDERR_VIDEONOTACTIVE_6f88d8ec|DDERR_VIDEONOTACTIVE", "0xDAB8|s_DDERR_EXCLUSIVEMODEALREADYSET_6f88dab8|DDERR_EXCLUSIVEMODEALREADYSET", "0xDF3C|s_DDERR_NOSTRETCHHW_6f88df3c|DDERR_NOSTRETCHHW", "0xDDCC|s_DDERR_SURFACEBUSY_6f88ddcc|DDERR_SURFACEBUSY", "0xDAF4|s_DDERR_INVALIDPOSITION_6f88daf4|DDERR_INVALIDPOSITION", "0xDD30|s_DDERR_TOOBIGWIDTH_6f88dd30|DDERR_TOOBIGWIDTH", "0xE088|s_DDERR_LOCKEDSURFACES_6f88e088|DDERR_LOCKEDSURFACES", "0xDE88|s_DDERR_OUTOFVIDEOMEMORY_6f88de88|DDERR_OUTOFVIDEOMEMORY", "0xD9DC|s_DDERR_INVALIDSURFACETYPE_6f88d9dc|DDERR_INVALIDSURFACETYPE", "0xE028|s_DDERR_NOCOOPERATIVELEVELSET_6f88e028|DDERR_NOCOOPERATIVELEVELSET"],
       "constant_count": 0,
@@ -396,7 +396,7 @@
       "api_calls": ["Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "...+98 more"],
       "instructions": ["0x23E0|PUSH|ESI", "0x23E1|CMP|EDX, 0x887601ae", "0x23E7|MOV|ESI, ECX", "0x23E9|JZ|0x6f882f21", "0x23EF|CMP|EDX, 0x887601c2", "0x23F5|JZ|0x6f882f21", "0x23FB|CMP|EDX, 0x887601b8", "0x2401|JG|0x6f8829b3", "0x2407|JZ|0x6f88299c", "0x240D|CMP|EDX, 0x887600de", "0x2413|JG|0x6f882726", "0x2419|JZ|0x6f88270f", "0x241F|CMP|EDX, 0x8876006e", "0x2425|JG|0x6f8825dd", "0x242B|JZ|0x6f8825c6"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "PARAM_2", "GFX_VIDEO", "CALLER_3", "CALLEE_1"]
     },
     {
       "address": "0x6F8832E0",
@@ -432,7 +432,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 14,
-      "callees": ["GetCharWidthA|0x2E", "DrawTextA|0x6F", "SetTextColor|0x2A", "GetPixel|0x2D", "SelectObject|0x29", "DeleteObject|0x2F", "CreateBitmap|0x28", "SetRect|0x6E", "Ordinal_10042|0x6F884E90", "SetBkMode|0x26", "CreateDCA|0x2C", "DeleteDC|0x30", "SetBkColor|0x2B", "CreateFontA|0x27"],
+      "callees": ["DeleteDC|0x30", "CreateBitmap|0x28", "SetTextColor|0x2A", "GetPixel|0x2D", "GetCharWidthA|0x2E", "SelectObject|0x29", "SetBkMode|0x26", "CreateDCA|0x2C", "DeleteObject|0x2F", "CreateFontA|0x27", "SetRect|0x6E", "SetBkColor|0x2B", "DrawTextA|0x6F", "Ordinal_10042|0x6F884E90"],
       "caller_count": 0,
       "callers": [],
       "string_count": 3,
@@ -445,7 +445,7 @@
       "api_calls": ["Ordinal_10042"],
       "instructions": ["0x32E0|SUB|ESP, 0x28", "0x32E3|PUSH|EBX", "0x32E4|PUSH|EBP", "0x32E5|PUSH|ESI", "0x32E6|PUSH|EDI", "0x32E7|PUSH|0x0", "0x32E9|PUSH|0x0", "0x32EB|PUSH|0x0", "0x32ED|PUSH|0x6f88e2a8", "0x32F2|CALL|dword ptr [0x6f88b07c]", "0x32F8|MOV|ESI, EAX", "0x32FA|PUSH|0x6f88e2a0", "0x32FF|PUSH|0x1", "0x3301|PUSH|0x0", "0x3303|PUSH|0x0"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "SRC_ddDebugFont.cpp", "CALLEE_14", "STRUCT_Skill", "PARAM_0", "GFX_DRAW", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F883460",
@@ -494,7 +494,7 @@
       "api_calls": ["Ordinal_10043"],
       "instructions": ["0x3460|MOV|ECX, dword ptr [0x6f891f0c]", "0x3466|TEST|ECX, ECX", "0x3468|JZ|0x6f883482", "0x346A|PUSH|0x0", "0x346C|PUSH|0x5d", "0x346E|MOV|EDX, 0x6f88e260", "0x3473|CALL|0x6f884e96", "0x3478|MOV|dword ptr [0x6f891f0c], 0x0", "0x3482|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "SRC_ddDebugFont.cpp", "CALLEE_1", "PARAM_0", "GFX_DRAW", "PROP_SMALL"]
     },
     {
       "address": "0x6F8835A0",
@@ -543,7 +543,7 @@
       "api_calls": [],
       "instructions": ["0x35A0|MOV|EAX, [0x6f8917a4]", "0x35A5|MOV|EAX, dword ptr [EAX + 0x14]", "0x35A8|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F8839D0",
@@ -592,7 +592,7 @@
       "api_calls": [],
       "instructions": ["0x39D0|MOV|EAX, dword ptr [EDX]", "0x39D2|SUB|ESP, 0x14", "0x39D5|PUSH|EBX", "0x39D6|PUSH|EBP", "0x39D7|MOV|EBP, dword ptr [ECX + 0x4]", "0x39DA|PUSH|ESI", "0x39DB|MOV|ESI, dword ptr [ECX]", "0x39DD|MOV|ECX, dword ptr [EDX + 0x4]", "0x39E0|SUB|EAX, ESI", "0x39E2|SUB|ECX, EBP", "0x39E4|TEST|EAX, EAX", "0x39E6|PUSH|EDI", "0x39E7|JNZ|0x6f8839f1", "0x39E9|TEST|ECX, ECX", "0x39EB|JZ|0x6f883b99"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_3", "CALLEE_0", "PROP_LOOPHEAVY", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F883C80",
@@ -628,7 +628,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int *", "storage": "ECX:4"}],
       "callee_count": 2,
-      "callees": ["FUN_6f884eff|0x6F884EFF", "Ordinal_10023|0x6F884E78"],
+      "callees": ["Ordinal_10023|0x6F884E78", "FUN_6f884eff|0x6F884EFF"],
       "caller_count": 0,
       "callers": [],
       "string_count": 3,
@@ -641,7 +641,7 @@
       "api_calls": ["Ordinal_10023", "Ordinal_10023"],
       "instructions": ["0x3C80|SUB|ESP, 0x8", "0x3C83|MOV|EAX, dword ptr [ECX]", "0x3C85|MOV|byte ptr [ESP], DL", "0x3C89|MOV|EDX, dword ptr [ECX + 0x8]", "0x3C8C|PUSH|EBX", "0x3C8D|PUSH|ESI", "0x3C8E|CMP|EAX, EDX", "0x3C90|PUSH|EDI", "0x3C91|JLE|0x6f883cb1", "0x3C93|PUSH|0x165", "0x3C98|PUSH|0x6f88e2bc", "0x3C9D|PUSH|0x6f88e310", "0x3CA2|CALL|0x6f884e78", "0x3CA7|ADD|ESP, 0xc", "0x3CAA|PUSH|-0x1"],
       "comment": "",
-      "tags": []
+      "tags": ["SRC_ddEngine.cpp", "STRUCT_Act", "STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "CALLEE_2", "PARAM_1", "GFX_DRAW", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F883E00",
@@ -690,7 +690,7 @@
       "api_calls": [],
       "instructions": ["0x3E00|SUB|ESP, 0x64", "0x3E03|PUSH|ESI", "0x3E04|PUSH|EDI", "0x3E05|MOV|ESI, ECX", "0x3E07|MOV|ECX, 0x18", "0x3E0C|XOR|EAX, EAX", "0x3E0E|LEA|EDI, [ESP + 0xc]", "0x3E12|MOV|dword ptr [ESP + 0x8], 0x64", "0x3E1A|STOSD.REP|ES:EDI", "0x3E1C|MOV|dword ptr [ESP + 0x58], EAX", "0x3E20|MOV|EAX, [0x6f891be4]", "0x3E25|TEST|EAX, EAX", "0x3E27|JZ|0x6f883e8d", "0x3E29|MOV|ECX, dword ptr [EAX]", "0x3E2B|LEA|EDX, [ESP + 0x8]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_1", "PARAM_1", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F883EA0",
@@ -739,7 +739,7 @@
       "api_calls": ["Ordinal_10091"],
       "instructions": ["0x3EA0|PUSH|ESI", "0x3EA1|PUSH|EDI", "0x3EA2|MOV|ESI, ECX", "0x3EA4|PUSH|0x0", "0x3EA6|PUSH|0x1", "0x3EA8|PUSH|ESI", "0x3EA9|MOV|EDI, EDX", "0x3EAB|CALL|0x6f884e30", "0x3EB0|TEST|EAX, EAX", "0x3EB2|JZ|0x6f883ef9", "0x3EB4|MOV|ECX, dword ptr [ESP + 0xc]", "0x3EB8|MOV|EAX, dword ptr [ESP + 0x20]", "0x3EBC|SUB|ECX, 0x50", "0x3EBF|DEC|EAX", "0x3EC0|JZ|0x6f883ed5"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_0", "PROP_NOCALLER", "CALLEE_1", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F8842D0",
@@ -775,7 +775,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int *", "storage": "ECX:4"}],
       "callee_count": 2,
-      "callees": ["Ordinal_10043|0x6F884E96", "_SmackClose@4|0x6A"],
+      "callees": ["_SmackClose@4|0x6A", "Ordinal_10043|0x6F884E96"],
       "caller_count": 0,
       "callers": [],
       "string_count": 1,
@@ -788,7 +788,7 @@
       "api_calls": ["Ordinal_10043"],
       "instructions": ["0x42D0|PUSH|ESI", "0x42D1|MOV|ESI, ECX", "0x42D3|MOV|ECX, dword ptr [0x6f892010]", "0x42D9|TEST|ECX, ECX", "0x42DB|JZ|0x6f8842f8", "0x42DD|PUSH|0x0", "0x42DF|PUSH|0xf0", "0x42E4|MOV|EDX, 0x6f88e344", "0x42E9|CALL|0x6f884e96", "0x42EE|MOV|dword ptr [0x6f892010], 0x0", "0x42F8|CMP|byte ptr [ESI + 0x4], 0x73", "0x42FC|JNZ|0x6f884311", "0x42FE|MOV|EAX, dword ptr [ESI]", "0x4300|TEST|EAX, EAX", "0x4302|JZ|0x6f884311"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "CALLEE_2", "PARAM_1", "GFX_DRAW", "SRC_ddSmack.cpp"]
     },
     {
       "address": "0x6F884320",
@@ -837,7 +837,7 @@
       "api_calls": [],
       "instructions": ["0x4320|MOV|EAX, dword ptr [ECX*0x4 + 0x6f88e380]", "0x4327|CMP|ECX, 0x6", "0x432A|MOV|dword ptr [EDX], EAX", "0x432C|JA|0x6f884377", "0x432E|JMP|dword ptr [ECX*0x4 + 0x6f88437c]", "0x4335|MOV|ECX, dword ptr [0x6f891568]", "0x433B|MOV|EAX, dword ptr [ECX + 0x8]", "0x433E|RET|", "0x433F|MOV|EDX, dword ptr [0x6f891568]", "0x4345|MOV|EAX, dword ptr [EDX + 0x4]", "0x4348|RET|", "0x4349|MOV|EAX, [0x6f891568]", "0x434E|MOV|EAX, dword ptr [EAX]", "0x4350|RET|", "0x4351|MOV|ECX, dword ptr [0x6f891568]"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_0", "PROP_NOCALLER", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F8843A0",
@@ -886,7 +886,7 @@
       "api_calls": [],
       "instructions": ["0x43A0|XOR|EAX, EAX", "0x43A2|MOV|dword ptr [0x6f892018], 0x280", "0x43AC|CMP|ECX, EAX", "0x43AE|MOV|[0x6f89201c], EAX", "0x43B3|JZ|0x6f8843bf", "0x43B5|MOV|dword ptr [0x6f892018], 0x320", "0x43BF|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F8843E0",
@@ -922,7 +922,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "undefined4 *", "storage": "ECX:4"}],
       "callee_count": 6,
-      "callees": ["Ordinal_10033|0x6F884E3C", "Ordinal_10038|0x6F884E4E", "Ordinal_10037|0x6F884E54", "Ordinal_10039|0x6F884E48", "Ordinal_10055|0x6F884E5A", "Ordinal_10040|0x6F884E42"],
+      "callees": ["Ordinal_10039|0x6F884E48", "Ordinal_10033|0x6F884E3C", "Ordinal_10038|0x6F884E4E", "Ordinal_10037|0x6F884E54", "Ordinal_10055|0x6F884E5A", "Ordinal_10040|0x6F884E42"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -935,7 +935,7 @@
       "api_calls": ["Ordinal_10055", "Ordinal_10037", "Ordinal_10038", "Ordinal_10039", "Ordinal_10040", "Ordinal_10033"],
       "instructions": ["0x43E0|PUSH|ECX", "0x43E1|PUSH|EBX", "0x43E2|PUSH|EBP", "0x43E3|PUSH|ESI", "0x43E4|PUSH|EDI", "0x43E5|MOV|EBP, ECX", "0x43E7|PUSH|0x1", "0x43E9|PUSH|0x0", "0x43EB|PUSH|EBP", "0x43EC|MOV|dword ptr [ESP + 0x1c], EDX", "0x43F0|CALL|0x6f884e5a", "0x43F5|TEST|EAX, EAX", "0x43F7|JNZ|0x6f884401", "0x43F9|POP|EDI", "0x43FA|POP|ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "STRUCT_Skill", "STRUCT_ItemData", "PARAM_1", "STRUCT_UnitAny", "CALLEE_6", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F884E30",
@@ -984,7 +984,7 @@
       "api_calls": [],
       "instructions": ["0x4E30|JMP|dword ptr [0x6f88b018]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E36",
@@ -1033,7 +1033,7 @@
       "api_calls": [],
       "instructions": ["0x4E36|JMP|dword ptr [0x6f88b004]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E3C",
@@ -1082,7 +1082,7 @@
       "api_calls": [],
       "instructions": ["0x4E3C|JMP|dword ptr [0x6f88b008]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E42",
@@ -1131,7 +1131,7 @@
       "api_calls": [],
       "instructions": ["0x4E42|JMP|dword ptr [0x6f88b00c]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E48",
@@ -1180,7 +1180,7 @@
       "api_calls": [],
       "instructions": ["0x4E48|JMP|dword ptr [0x6f88b010]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E4E",
@@ -1229,7 +1229,7 @@
       "api_calls": [],
       "instructions": ["0x4E4E|JMP|dword ptr [0x6f88b014]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E54",
@@ -1278,7 +1278,7 @@
       "api_calls": [],
       "instructions": ["0x4E54|JMP|dword ptr [0x6f88b000]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E5A",
@@ -1327,7 +1327,7 @@
       "api_calls": [],
       "instructions": ["0x4E5A|JMP|dword ptr [0x6f88b01c]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E60",
@@ -1376,7 +1376,7 @@
       "api_calls": [],
       "instructions": ["0x4E60|JMP|dword ptr [0x6f88b020]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E66",
@@ -1425,7 +1425,7 @@
       "api_calls": [],
       "instructions": ["0x4E66|JMP|dword ptr [0x6f88b024]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E72",
@@ -1474,7 +1474,7 @@
       "api_calls": [],
       "instructions": ["0x4E72|JMP|dword ptr [0x6f88b030]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E78",
@@ -1512,7 +1512,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["FUN_6f881020|0x6F881020", "FUN_6f881780|0x6F881780", "FUN_6f883c80|0x6F883C80"],
+      "callers": ["FUN_6f881020|0x6F881020", "FUN_6f883c80|0x6F883C80", "FUN_6f881780|0x6F881780"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -1523,7 +1523,7 @@
       "api_calls": [],
       "instructions": ["0x4E78|JMP|dword ptr [0x6f88b048]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLEE_0", "CALLER_3", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E7E",
@@ -1561,7 +1561,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 4,
-      "callers": ["FUN_6f881020|0x6F881020", "FUN_6f8823e0|0x6F8823E0", "FUN_6f881bb0|0x6F881BB0", "FUN_6f881780|0x6F881780"],
+      "callers": ["FUN_6f881020|0x6F881020", "FUN_6f8823e0|0x6F8823E0", "FUN_6f881780|0x6F881780", "FUN_6f881bb0|0x6F881BB0"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -1572,7 +1572,7 @@
       "api_calls": [],
       "instructions": ["0x4E7E|JMP|dword ptr [0x6f88b054]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLEE_0", "CALLER_4", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E84",
@@ -1621,7 +1621,7 @@
       "api_calls": [],
       "instructions": ["0x4E84|JMP|dword ptr [0x6f88b044]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E8A",
@@ -1670,7 +1670,7 @@
       "api_calls": [],
       "instructions": ["0x4E8A|JMP|dword ptr [0x6f88b05c]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E90",
@@ -1719,7 +1719,7 @@
       "api_calls": [],
       "instructions": ["0x4E90|JMP|dword ptr [0x6f88b058]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E96",
@@ -1768,7 +1768,7 @@
       "api_calls": [],
       "instructions": ["0x4E96|JMP|dword ptr [0x6f88b04c]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_2", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884E9C",
@@ -1817,7 +1817,7 @@
       "api_calls": [],
       "instructions": ["0x4E9C|JMP|dword ptr [0x6f88b050]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884EA2",
@@ -1866,7 +1866,7 @@
       "api_calls": [],
       "instructions": ["0x4EA2|JMP|dword ptr [0x6f88b170]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884EA8",
@@ -1915,7 +1915,7 @@
       "api_calls": [],
       "instructions": ["0x4EA8|JMP|dword ptr [0x6f88b17c]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884EAE",
@@ -1964,7 +1964,7 @@
       "api_calls": [],
       "instructions": ["0x4EAE|JMP|dword ptr [0x6f88b178]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884EB4",
@@ -2013,7 +2013,7 @@
       "api_calls": [],
       "instructions": ["0x4EB4|JMP|dword ptr [0x6f88b184]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884EBA",
@@ -2062,7 +2062,7 @@
       "api_calls": [],
       "instructions": ["0x4EBA|JMP|dword ptr [0x6f88b188]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884EC0",
@@ -2111,7 +2111,7 @@
       "api_calls": [],
       "instructions": ["0x4EC0|JMP|dword ptr [0x6f88b180]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884EC6",
@@ -2160,7 +2160,7 @@
       "api_calls": [],
       "instructions": ["0x4EC6|JMP|dword ptr [0x6f88b174]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884ECC",
@@ -2209,7 +2209,7 @@
       "api_calls": [],
       "instructions": ["0x4ECC|JMP|dword ptr [0x6f88b038]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F884ED2",
@@ -2245,7 +2245,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 2,
-      "callees": ["FUN_6f8850c0|0x6F8850C0", "FUN_6f884fe7|0x6F884FE7"],
+      "callees": ["FUN_6f884fe7|0x6F884FE7", "FUN_6f8850c0|0x6F8850C0"],
       "caller_count": 1,
       "callers": ["FUN_6f885110|0x6F885110"],
       "string_count": 0,
@@ -2258,7 +2258,7 @@
       "api_calls": [],
       "instructions": ["0x4ED2|MOV|EAX, [0x6f88e444]", "0x4ED7|TEST|EAX, EAX", "0x4ED9|JZ|0x6f884edd", "0x4EDB|CALL|EAX", "0x4EDD|PUSH|0x6f88d014", "0x4EE2|PUSH|0x6f88d008", "0x4EE7|CALL|0x6f884fe7", "0x4EEC|PUSH|0x6f88d004", "0x4EF1|PUSH|0x6f88d000", "0x4EF6|CALL|0x6f884fe7", "0x4EFB|ADD|ESP, 0x10", "0x4EFE|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_2", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x6F884EFF",
@@ -2296,7 +2296,7 @@
       "callee_count": 1,
       "callees": ["FUN_6f884f30|0x6F884F30"],
       "caller_count": 3,
-      "callers": ["FUN_6f881020|0x6F881020", "FUN_6f881780|0x6F881780", "FUN_6f883c80|0x6F883C80"],
+      "callers": ["FUN_6f881020|0x6F881020", "FUN_6f883c80|0x6F883C80", "FUN_6f881780|0x6F881780"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2307,7 +2307,7 @@
       "api_calls": [],
       "instructions": ["0x4EFF|PUSH|0x0", "0x4F01|PUSH|0x0", "0x4F03|PUSH|dword ptr [ESP + 0xc]", "0x4F07|CALL|0x6f884f30", "0x4F0C|ADD|ESP, 0xc", "0x4F0F|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_3", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F884F10",
@@ -2356,7 +2356,7 @@
       "api_calls": [],
       "instructions": ["0x4F10|PUSH|0x0", "0x4F12|PUSH|0x1", "0x4F14|PUSH|dword ptr [ESP + 0xc]", "0x4F18|CALL|0x6f884f30", "0x4F1D|ADD|ESP, 0xc", "0x4F20|RET|"],
       "comment": "Library Function - Single Match\n __exit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F884F21",
@@ -2405,7 +2405,7 @@
       "api_calls": [],
       "instructions": ["0x4F21|PUSH|0x1", "0x4F23|PUSH|0x0", "0x4F25|PUSH|0x0", "0x4F27|CALL|0x6f884f30", "0x4F2C|ADD|ESP, 0xc", "0x4F2F|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x6F884F30",
@@ -2441,9 +2441,9 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "UINT", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}],
       "callee_count": 6,
-      "callees": ["ExitProcess|0x4C", "FUN_6f884fd5|0x6F884FD5", "FUN_6f884fde|0x6F884FDE", "FUN_6f884fe7|0x6F884FE7", "TerminateProcess|0x4D", "GetCurrentProcess|0x4E"],
+      "callees": ["TerminateProcess|0x4D", "FUN_6f884fde|0x6F884FDE", "FUN_6f884fe7|0x6F884FE7", "ExitProcess|0x4C", "FUN_6f884fd5|0x6F884FD5", "GetCurrentProcess|0x4E"],
       "caller_count": 3,
-      "callers": ["FUN_6f884f21|0x6F884F21", "FUN_6f884eff|0x6F884EFF", "__exit|0x6F884F10"],
+      "callers": ["FUN_6f884f21|0x6F884F21", "__exit|0x6F884F10", "FUN_6f884eff|0x6F884EFF"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2454,7 +2454,7 @@
       "api_calls": [],
       "instructions": ["0x4F30|PUSH|EDI", "0x4F31|CALL|0x6f884fd5", "0x4F36|PUSH|0x1", "0x4F38|POP|EDI", "0x4F39|CMP|dword ptr [0x6f892060], EDI", "0x4F3F|JNZ|0x6f884f52", "0x4F41|PUSH|dword ptr [ESP + 0x8]", "0x4F45|CALL|dword ptr [0x6f88b108]", "0x4F4B|PUSH|EAX", "0x4F4C|CALL|dword ptr [0x6f88b104]", "0x4F52|CMP|dword ptr [ESP + 0xc], 0x0", "0x4F57|PUSH|EBX", "0x4F58|MOV|EBX, dword ptr [ESP + 0x14]", "0x4F5C|MOV|dword ptr [0x6f89205c], EDI", "0x4F62|MOV|byte ptr [0x6f892058], BL"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_3", "STRUCT_UnitAny", "CALLEE_6", "STRUCT_Control"]
     },
     {
       "address": "0x6F884FD5",
@@ -2503,7 +2503,7 @@
       "api_calls": [],
       "instructions": ["0x4FD5|PUSH|0xd", "0x4FD7|CALL|0x6f88534e", "0x4FDC|POP|ECX", "0x4FDD|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_2", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F884FDE",
@@ -2552,7 +2552,7 @@
       "api_calls": [],
       "instructions": ["0x4FDE|PUSH|0xd", "0x4FE0|CALL|0x6f8853af", "0x4FE5|POP|ECX", "0x4FE6|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_2", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F884FE7",
@@ -2590,7 +2590,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 2,
-      "callers": ["FUN_6f884f30|0x6F884F30", "FUN_6f884ed2|0x6F884ED2"],
+      "callers": ["FUN_6f884ed2|0x6F884ED2", "FUN_6f884f30|0x6F884F30"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2601,7 +2601,7 @@
       "api_calls": [],
       "instructions": ["0x4FE7|PUSH|ESI", "0x4FE8|MOV|ESI, dword ptr [ESP + 0x8]", "0x4FEC|CMP|ESI, dword ptr [ESP + 0xc]", "0x4FF0|JNC|0x6f884fff", "0x4FF2|MOV|EAX, dword ptr [ESI]", "0x4FF4|TEST|EAX, EAX", "0x4FF6|JZ|0x6f884ffa", "0x4FF8|CALL|EAX", "0x4FFA|ADD|ESI, 0x4", "0x4FFD|JMP|0x6f884fec", "0x4FFF|POP|ESI", "0x5000|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_2", "CALLEE_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F885001",
@@ -2637,7 +2637,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}],
       "callee_count": 4,
-      "callees": ["FUN_6f884fd5|0x6F884FD5", "FUN_6f8853c4|0x6F8853C4", "FUN_6f8856f3|0x6F8856F3", "FUN_6f884fde|0x6F884FDE"],
+      "callees": ["FUN_6f884fde|0x6F884FDE", "FUN_6f8853c4|0x6F8853C4", "FUN_6f8856f3|0x6F8856F3", "FUN_6f884fd5|0x6F884FD5"],
       "caller_count": 1,
       "callers": ["FUN_6f88507f|0x6F88507F"],
       "string_count": 0,
@@ -2650,7 +2650,7 @@
       "api_calls": [],
       "instructions": ["0x5001|PUSH|ESI", "0x5002|CALL|0x6f884fd5", "0x5007|PUSH|dword ptr [0x6f892718]", "0x500D|CALL|0x6f8856f3", "0x5012|MOV|EDX, dword ptr [0x6f892718]", "0x5018|POP|ECX", "0x5019|MOV|ECX, dword ptr [0x6f892714]", "0x501F|MOV|ESI, ECX", "0x5021|SUB|ESI, EDX", "0x5023|ADD|ESI, 0x4", "0x5026|CMP|EAX, ESI", "0x5028|JNC|0x6f885067", "0x502A|PUSH|EDX", "0x502B|CALL|0x6f8856f3", "0x5030|ADD|EAX, 0x10"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_1", "CALLEE_4"]
     },
     {
       "address": "0x6F88507F",
@@ -2699,7 +2699,7 @@
       "api_calls": [],
       "instructions": ["0x507F|PUSH|dword ptr [ESP + 0x4]", "0x5083|CALL|0x6f885001", "0x5088|NEG|EAX", "0x508A|SBB|EAX, EAX", "0x508C|POP|ECX", "0x508D|NEG|EAX", "0x508F|DEC|EAX", "0x5090|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F8850C0",
@@ -2735,7 +2735,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 3,
-      "callees": ["FUN_6f88596b|0x6F88596B", "FUN_6f8850d8|0x6F8850D8", "FUN_6f88591b|0x6F88591B"],
+      "callees": ["FUN_6f88596b|0x6F88596B", "FUN_6f88591b|0x6F88591B", "FUN_6f8850d8|0x6F8850D8"],
       "caller_count": 1,
       "callers": ["FUN_6f884ed2|0x6F884ED2"],
       "string_count": 0,
@@ -2748,7 +2748,7 @@
       "api_calls": [],
       "instructions": ["0x50C0|CALL|0x6f8850d8", "0x50C5|CALL|0x6f88596b", "0x50CA|MOV|[0x6f892068], EAX", "0x50CF|CALL|0x6f88591b", "0x50D4|FNCLEX|", "0x50D6|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_3", "PROP_SMALL"]
     },
     {
       "address": "0x6F8850D8",
@@ -2797,7 +2797,7 @@
       "api_calls": [],
       "instructions": ["0x50D8|MOV|EAX, 0x6f885d44", "0x50DD|MOV|dword ptr [0x6f88e518], 0x6f8859ee", "0x50E7|MOV|[0x6f88e514], EAX", "0x50EC|MOV|dword ptr [0x6f88e51c], 0x6f885a54", "0x50F6|MOV|dword ptr [0x6f88e520], 0x6f885994", "0x5100|MOV|dword ptr [0x6f88e524], 0x6f885a3c", "0x510A|MOV|[0x6f88e528], EAX", "0x510F|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F885110",
@@ -2833,7 +2833,7 @@
       "param_count": 2,
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
       "callee_count": 14,
-      "callees": ["GetVersion|0x39", "FUN_6f886760|0x6F886760", "FUN_6f884f21|0x6F884F21", "FUN_6f886102|0x6F886102", "FUN_6f885dba|0x6F885DBA", "FUN_6f885f46|0x6F885F46", "FUN_6f886703|0x6F886703", "FUN_6f885ea6|0x6F885EA6", "FUN_6f88645c|0x6F88645C", "FUN_6f88620f|0x6F88620F", "GetCommandLineA|0x4F", "FUN_6f886156|0x6F886156", "FUN_6f885e0e|0x6F885E0E", "FUN_6f884ed2|0x6F884ED2"],
+      "callees": ["FUN_6f885f46|0x6F885F46", "FUN_6f88645c|0x6F88645C", "FUN_6f885dba|0x6F885DBA", "FUN_6f886156|0x6F886156", "GetVersion|0x39", "FUN_6f886760|0x6F886760", "FUN_6f886102|0x6F886102", "FUN_6f88620f|0x6F88620F", "GetCommandLineA|0x4F", "FUN_6f884f21|0x6F884F21", "FUN_6f886703|0x6F886703", "FUN_6f884ed2|0x6F884ED2", "FUN_6f885e0e|0x6F885E0E", "FUN_6f885ea6|0x6F885EA6"],
       "caller_count": 1,
       "callers": ["entry|0x6F8851E9"],
       "string_count": 0,
@@ -2846,7 +2846,7 @@
       "api_calls": [],
       "instructions": ["0x5110|MOV|EAX, dword ptr [ESP + 0x8]", "0x5114|CMP|EAX, 0x1", "0x5117|JNZ|0x6f8851a5", "0x511D|CALL|dword ptr [0x6f88b0b4]", "0x5123|PUSH|0x1", "0x5125|MOV|[0x6f892024], EAX", "0x512A|CALL|0x6f886703", "0x512F|TEST|EAX, EAX", "0x5131|POP|ECX", "0x5132|JZ|0x6f885170", "0x5134|MOV|EAX, [0x6f892024]", "0x5139|XOR|ECX, ECX", "0x513B|MOV|CL, byte ptr [0x6f892025]", "0x5141|AND|EAX, 0xff", "0x5146|SHR|dword ptr [0x6f892024], 0x10"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLEE_14", "CALLER_1"]
     },
     {
       "address": "0x6F8851E9",
@@ -2895,7 +2895,7 @@
       "api_calls": [],
       "instructions": ["0x51E9|PUSH|EBP", "0x51EA|MOV|EBP, ESP", "0x51EC|PUSH|EBX", "0x51ED|MOV|EBX, dword ptr [EBP + 0x8]", "0x51F0|PUSH|ESI", "0x51F1|MOV|ESI, dword ptr [EBP + 0xc]", "0x51F4|PUSH|EDI", "0x51F5|MOV|EDI, dword ptr [EBP + 0x10]", "0x51F8|TEST|ESI, ESI", "0x51FA|JNZ|0x6f885205", "0x51FC|CMP|dword ptr [0x6f89206c], 0x0", "0x5203|JMP|0x6f88522b", "0x5205|CMP|ESI, 0x1", "0x5208|JZ|0x6f88520f", "0x520A|CMP|ESI, 0x2"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_3", "CALLEE_2", "STRUCT_Control"]
     },
     {
       "address": "0x6F885286",
@@ -2931,9 +2931,9 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_6f886808|0x6F886808", "FUN_6f886841|0x6F886841", "__exit|0x6F884F10"],
+      "callees": ["FUN_6f886841|0x6F886841", "__exit|0x6F884F10", "FUN_6f886808|0x6F886808"],
       "caller_count": 5,
-      "callers": ["FUN_6f88620f|0x6F88620F", "FUN_6f885e3f|0x6F885E3F", "FUN_6f885f46|0x6F885F46", "FUN_6f88534e|0x6F88534E", "FUN_6f886156|0x6F886156"],
+      "callers": ["FUN_6f88534e|0x6F88534E", "FUN_6f885f46|0x6F885F46", "FUN_6f886156|0x6F886156", "FUN_6f885e3f|0x6F885E3F", "FUN_6f88620f|0x6F88620F"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2944,7 +2944,7 @@
       "api_calls": [],
       "instructions": ["0x5286|MOV|EAX, [0x6f892078]", "0x528B|CMP|EAX, 0x1", "0x528E|JZ|0x6f88529d", "0x5290|TEST|EAX, EAX", "0x5292|JNZ|0x6f8852a2", "0x5294|CMP|dword ptr [0x6f89207c], 0x1", "0x529B|JNZ|0x6f8852a2", "0x529D|CALL|0x6f886808", "0x52A2|PUSH|dword ptr [ESP + 0x4]", "0x52A6|CALL|0x6f886841", "0x52AB|PUSH|0xff", "0x52B0|CALL|dword ptr [0x6f88e450]"],
       "comment": "Library Function - Single Match\n __amsg_exit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_5", "CALLEE_3", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F8852B9",
@@ -2993,7 +2993,7 @@
       "api_calls": [],
       "instructions": ["0x52B9|PUSH|ESI", "0x52BA|MOV|ESI, dword ptr [0x6f88b0dc]", "0x52C0|PUSH|dword ptr [0x6f88e498]", "0x52C6|CALL|ESI", "0x52C8|PUSH|dword ptr [0x6f88e488]", "0x52CE|CALL|ESI", "0x52D0|PUSH|dword ptr [0x6f88e478]", "0x52D6|CALL|ESI", "0x52D8|PUSH|dword ptr [0x6f88e458]", "0x52DE|CALL|ESI", "0x52E0|POP|ESI", "0x52E1|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x6F8852E2",
@@ -3029,7 +3029,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 2,
-      "callees": ["FUN_6f886994|0x6F886994", "DeleteCriticalSection|0x44"],
+      "callees": ["DeleteCriticalSection|0x44", "FUN_6f886994|0x6F886994"],
       "caller_count": 1,
       "callers": ["FUN_6f885e0e|0x6F885E0E"],
       "string_count": 0,
@@ -3042,7 +3042,7 @@
       "api_calls": [],
       "instructions": ["0x52E2|PUSH|ESI", "0x52E3|PUSH|EDI", "0x52E4|MOV|EDI, dword ptr [0x6f88b0e0]", "0x52EA|MOV|ESI, 0x6f88e454", "0x52EF|MOV|EAX, dword ptr [ESI]", "0x52F1|TEST|EAX, EAX", "0x52F3|JZ|0x6f885320", "0x52F5|CMP|ESI, 0x6f88e498", "0x52FB|JZ|0x6f885320", "0x52FD|CMP|ESI, 0x6f88e488", "0x5303|JZ|0x6f885320", "0x5305|CMP|ESI, 0x6f88e478", "0x530B|JZ|0x6f885320", "0x530D|CMP|ESI, 0x6f88e458", "0x5313|JZ|0x6f885320"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_2", "PARAM_0"]
     },
     {
       "address": "0x6F88534E",
@@ -3078,9 +3078,9 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 7,
-      "callees": ["_malloc|0x6F8857E1", "FUN_6f886994|0x6F886994", "EnterCriticalSection|0x40", "InitializeCriticalSection|0x43", "__amsg_exit|0x6F885286", "FUN_6f88534e|0x6F88534E", "FUN_6f8853af|0x6F8853AF"],
+      "callees": ["FUN_6f88534e|0x6F88534E", "InitializeCriticalSection|0x43", "FUN_6f886994|0x6F886994", "EnterCriticalSection|0x40", "__amsg_exit|0x6F885286", "FUN_6f8853af|0x6F8853AF", "_malloc|0x6F8857E1"],
       "caller_count": 12,
-      "callers": ["FUN_6f88ac70|0x6F88AC70", "FUN_6f886994|0x6F886994", "FUN_6f884fd5|0x6F884FD5", "FUN_6f8853c4|0x6F8853C4", "FUN_6f8856f3|0x6F8856F3", "FUN_6f8890a1|0x6F8890A1", "FUN_6f88534e|0x6F88534E", "FUN_6f88581f|0x6F88581F", "FUN_6f88a6b4|0x6F88A6B4", "FUN_6f888393|0x6F888393", "FUN_6f888f64|0x6F888F64", "FUN_6f88aba0|0x6F88ABA0"],
+      "callers": ["FUN_6f88534e|0x6F88534E", "FUN_6f88aba0|0x6F88ABA0", "FUN_6f888393|0x6F888393", "FUN_6f88ac70|0x6F88AC70", "FUN_6f886994|0x6F886994", "FUN_6f888f64|0x6F888F64", "FUN_6f8853c4|0x6F8853C4", "FUN_6f8890a1|0x6F8890A1", "FUN_6f8856f3|0x6F8856F3", "FUN_6f884fd5|0x6F884FD5", "FUN_6f88581f|0x6F88581F", "FUN_6f88a6b4|0x6F88A6B4"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -3091,7 +3091,7 @@
       "api_calls": [],
       "instructions": ["0x534E|PUSH|EBP", "0x534F|MOV|EBP, ESP", "0x5351|MOV|EAX, dword ptr [EBP + 0x8]", "0x5354|PUSH|ESI", "0x5355|CMP|dword ptr [EAX*0x4 + 0x6f88e454], 0x0", "0x535D|LEA|ESI, [EAX*0x4 + 0x6f88e454]", "0x5364|JNZ|0x6f8853a4", "0x5366|PUSH|EDI", "0x5367|PUSH|0x18", "0x5369|CALL|0x6f8857e1", "0x536E|MOV|EDI, EAX", "0x5370|POP|ECX", "0x5371|TEST|EDI, EDI", "0x5373|JNZ|0x6f88537d", "0x5375|PUSH|0x11"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_12", "PARAM_1", "CALLEE_7"]
     },
     {
       "address": "0x6F8853AF",
@@ -3129,7 +3129,7 @@
       "callee_count": 1,
       "callees": ["LeaveCriticalSection|0x3F"],
       "caller_count": 17,
-      "callers": ["FUN_6f88569d|0x6F88569D", "FUN_6f88575d|0x6F88575D", "FUN_6f8869fe|0x6F8869FE", "FUN_6f885886|0x6F885886", "FUN_6f886a56|0x6F886A56", "FUN_6f88534e|0x6F88534E", "FUN_6f889086|0x6F889086", "FUN_6f88a6b4|0x6F88A6B4", "FUN_6f8857d8|0x6F8857D8", "FUN_6f88554f|0x6F88554F", "FUN_6f88aba0|0x6F88ABA0", "FUN_6f8858e5|0x6F8858E5", "FUN_6f88ac70|0x6F88AC70", "FUN_6f884fde|0x6F884FDE", "FUN_6f8890a1|0x6F8890A1", "FUN_6f888ffd|0x6F888FFD", "FUN_6f888393|0x6F888393"],
+      "callers": ["FUN_6f88569d|0x6F88569D", "FUN_6f88aba0|0x6F88ABA0", "FUN_6f888393|0x6F888393", "FUN_6f888ffd|0x6F888FFD", "FUN_6f88ac70|0x6F88AC70", "FUN_6f884fde|0x6F884FDE", "FUN_6f885886|0x6F885886", "FUN_6f8857d8|0x6F8857D8", "FUN_6f88534e|0x6F88534E", "FUN_6f886a56|0x6F886A56", "FUN_6f889086|0x6F889086", "FUN_6f8890a1|0x6F8890A1", "FUN_6f88575d|0x6F88575D", "FUN_6f88a6b4|0x6F88A6B4", "FUN_6f8858e5|0x6F8858E5", "FUN_6f8869fe|0x6F8869FE", "FUN_6f88554f|0x6F88554F"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -3140,7 +3140,7 @@
       "api_calls": [],
       "instructions": ["0x53AF|PUSH|EBP", "0x53B0|MOV|EBP, ESP", "0x53B2|MOV|EAX, dword ptr [EBP + 0x8]", "0x53B5|PUSH|dword ptr [EAX*0x4 + 0x6f88e454]", "0x53BC|CALL|dword ptr [0x6f88b0cc]", "0x53C2|POP|EBP", "0x53C3|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLEE_1", "PARAM_1", "CALLER_17", "PROP_SMALL"]
     },
     {
       "address": "0x6F8853C4",
@@ -3176,7 +3176,7 @@
       "param_count": 2,
       "parameters": [{"name": "param_1", "type": "byte *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint *", "storage": "Stack[0x8]:4"}],
       "callee_count": 17,
-      "callees": ["FUN_6f886ac5|0x6F886AC5", "FUN_6f8878bc|0x6F8878BC", "FUN_6f88569d|0x6F88569D", "FUN_6f887820|0x6F887820", "FUN_6f887be8|0x6F887BE8", "FUN_6f88534e|0x6F88534E", "FUN_6f886af0|0x6F886AF0", "FUN_6f88554f|0x6F88554F", "FUN_6f887877|0x6F887877", "FUN_6f887cb0|0x6F887CB0", "_malloc|0x6F8857E1", "HeapAlloc|0x32", "FUN_6f887c91|0x6F887C91", "FUN_6f886994|0x6F886994", "FUN_6f886e19|0x6F886E19", "HeapReAlloc|0x52", "FUN_6f8872ce|0x6F8872CE"],
+      "callees": ["FUN_6f886af0|0x6F886AF0", "FUN_6f88569d|0x6F88569D", "HeapReAlloc|0x52", "FUN_6f887c91|0x6F887C91", "FUN_6f887be8|0x6F887BE8", "FUN_6f8872ce|0x6F8872CE", "_malloc|0x6F8857E1", "FUN_6f887cb0|0x6F887CB0", "FUN_6f88534e|0x6F88534E", "FUN_6f886994|0x6F886994", "FUN_6f8878bc|0x6F8878BC", "FUN_6f886ac5|0x6F886AC5", "FUN_6f887820|0x6F887820", "HeapAlloc|0x32", "FUN_6f886e19|0x6F886E19", "FUN_6f887877|0x6F887877", "FUN_6f88554f|0x6F88554F"],
       "caller_count": 1,
       "callers": ["FUN_6f885001|0x6F885001"],
       "string_count": 0,
@@ -3189,7 +3189,7 @@
       "api_calls": [],
       "instructions": ["0x53C4|PUSH|EBP", "0x53C5|MOV|EBP, ESP", "0x53C7|PUSH|-0x1", "0x53C9|PUSH|0x6f88b210", "0x53CE|PUSH|0x6f8880e0", "0x53D3|MOV|EAX, FS:[0x0]", "0x53D9|PUSH|EAX", "0x53DA|MOV|dword ptr FS:[0x0], ESP", "0x53E1|SUB|ESP, 0x28", "0x53E4|PUSH|EBX", "0x53E5|PUSH|ESI", "0x53E6|PUSH|EDI", "0x53E7|MOV|EBX, dword ptr [EBP + 0x8]", "0x53EA|XOR|EDI, EDI", "0x53EC|CMP|EBX, EDI"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "PARAM_2", "CALLER_1", "STRUCT_Skill", "CALLEE_17", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F88554F",
@@ -3238,7 +3238,7 @@
       "api_calls": [],
       "instructions": ["0x554F|PUSH|0x9", "0x5551|CALL|0x6f8853af", "0x5556|POP|ECX", "0x5557|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F88569D",
@@ -3287,7 +3287,7 @@
       "api_calls": [],
       "instructions": ["0x569D|PUSH|0x9", "0x569F|CALL|0x6f8853af", "0x56A4|POP|ECX", "0x56A5|XOR|EDI, EDI", "0x56A7|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x6F8856F3",
@@ -3323,7 +3323,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "undefined *", "storage": "Stack[0x4]:4"}],
       "callee_count": 6,
-      "callees": ["FUN_6f886ac5|0x6F886AC5", "FUN_6f887820|0x6F887820", "FUN_6f88575d|0x6F88575D", "FUN_6f88534e|0x6F88534E", "HeapSize|0x33", "FUN_6f8857d8|0x6F8857D8"],
+      "callees": ["FUN_6f88534e|0x6F88534E", "FUN_6f886ac5|0x6F886AC5", "FUN_6f887820|0x6F887820", "FUN_6f88575d|0x6F88575D", "FUN_6f8857d8|0x6F8857D8", "HeapSize|0x33"],
       "caller_count": 1,
       "callers": ["FUN_6f885001|0x6F885001"],
       "string_count": 0,
@@ -3336,7 +3336,7 @@
       "api_calls": [],
       "instructions": ["0x56F3|PUSH|EBP", "0x56F4|MOV|EBP, ESP", "0x56F6|PUSH|-0x1", "0x56F8|PUSH|0x6f88b228", "0x56FD|PUSH|0x6f8880e0", "0x5702|MOV|EAX, FS:[0x0]", "0x5708|PUSH|EAX", "0x5709|MOV|dword ptr FS:[0x0], ESP", "0x5710|SUB|ESP, 0x1c", "0x5713|PUSH|EBX", "0x5714|PUSH|ESI", "0x5715|PUSH|EDI", "0x5716|MOV|EAX, [0x6f8925e8]", "0x571B|CMP|EAX, 0x3", "0x571E|JNZ|0x6f885766"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_1", "CALLEE_6"]
     },
     {
       "address": "0x6F88575D",
@@ -3385,7 +3385,7 @@
       "api_calls": [],
       "instructions": ["0x575D|PUSH|0x9", "0x575F|CALL|0x6f8853af", "0x5764|POP|ECX", "0x5765|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F8857D8",
@@ -3434,7 +3434,7 @@
       "api_calls": [],
       "instructions": ["0x57D8|PUSH|0x9", "0x57DA|CALL|0x6f8853af", "0x57DF|POP|ECX", "0x57E0|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F8857E1",
@@ -3472,7 +3472,7 @@
       "callee_count": 1,
       "callees": ["__nh_malloc|0x6F8857F3"],
       "caller_count": 6,
-      "callers": ["FUN_6f88620f|0x6F88620F", "FUN_6f88645c|0x6F88645C", "FUN_6f8853c4|0x6F8853C4", "FUN_6f885f46|0x6F885F46", "FUN_6f88534e|0x6F88534E", "FUN_6f886156|0x6F886156"],
+      "callers": ["FUN_6f88534e|0x6F88534E", "FUN_6f885f46|0x6F885F46", "FUN_6f88645c|0x6F88645C", "FUN_6f8853c4|0x6F8853C4", "FUN_6f886156|0x6F886156", "FUN_6f88620f|0x6F88620F"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -3483,7 +3483,7 @@
       "api_calls": [],
       "instructions": ["0x57E1|PUSH|dword ptr [0x6f8921f4]", "0x57E7|PUSH|dword ptr [ESP + 0x8]", "0x57EB|CALL|0x6f8857f3", "0x57F0|POP|ECX", "0x57F1|POP|ECX", "0x57F2|RET|"],
       "comment": "Library Function - Single Match\n _malloc\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_1", "CALLER_6", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F8857F3",
@@ -3532,7 +3532,7 @@
       "api_calls": [],
       "instructions": ["0x57F3|CMP|dword ptr [ESP + 0x4], -0x20", "0x57F8|JA|0x6f88581c", "0x57FA|PUSH|dword ptr [ESP + 0x4]", "0x57FE|CALL|0x6f88581f", "0x5803|TEST|EAX, EAX", "0x5805|POP|ECX", "0x5806|JNZ|0x6f88581e", "0x5808|CMP|dword ptr [ESP + 0x8], EAX", "0x580C|JZ|0x6f88581e", "0x580E|PUSH|dword ptr [ESP + 0x4]", "0x5812|CALL|0x6f887c91", "0x5817|TEST|EAX, EAX", "0x5819|POP|ECX", "0x581A|JNZ|0x6f8857fa", "0x581C|XOR|EAX, EAX"],
       "comment": "Library Function - Single Match\n __nh_malloc\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_2", "PROP_SMALL"]
     },
     {
       "address": "0x6F88581F",
@@ -3568,7 +3568,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "uint *", "storage": "Stack[0x4]:4"}],
       "callee_count": 6,
-      "callees": ["HeapAlloc|0x32", "FUN_6f8878bc|0x6F8878BC", "FUN_6f8858e5|0x6F8858E5", "FUN_6f886e19|0x6F886E19", "FUN_6f885886|0x6F885886", "FUN_6f88534e|0x6F88534E"],
+      "callees": ["FUN_6f88534e|0x6F88534E", "FUN_6f885886|0x6F885886", "FUN_6f8878bc|0x6F8878BC", "HeapAlloc|0x32", "FUN_6f886e19|0x6F886E19", "FUN_6f8858e5|0x6F8858E5"],
       "caller_count": 1,
       "callers": ["__nh_malloc|0x6F8857F3"],
       "string_count": 0,
@@ -3581,7 +3581,7 @@
       "api_calls": [],
       "instructions": ["0x581F|PUSH|EBP", "0x5820|MOV|EBP, ESP", "0x5822|PUSH|-0x1", "0x5824|PUSH|0x6f88b240", "0x5829|PUSH|0x6f8880e0", "0x582E|MOV|EAX, FS:[0x0]", "0x5834|PUSH|EAX", "0x5835|MOV|dword ptr FS:[0x0], ESP", "0x583C|SUB|ESP, 0xc", "0x583F|PUSH|EBX", "0x5840|PUSH|ESI", "0x5841|PUSH|EDI", "0x5842|MOV|EAX, [0x6f8925e8]", "0x5847|CMP|EAX, 0x3", "0x584A|JNZ|0x6f88588f"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_1", "STRUCT_UnitAny", "CALLEE_6", "STRUCT_Control"]
     },
     {
       "address": "0x6F885886",
@@ -3630,7 +3630,7 @@
       "api_calls": [],
       "instructions": ["0x5886|PUSH|0x9", "0x5888|CALL|0x6f8853af", "0x588D|POP|ECX", "0x588E|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F8858E5",
@@ -3679,7 +3679,7 @@
       "api_calls": [],
       "instructions": ["0x58E5|PUSH|0x9", "0x58E7|CALL|0x6f8853af", "0x58EC|POP|ECX", "0x58ED|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F88591B",
@@ -3728,7 +3728,7 @@
       "api_calls": [],
       "instructions": ["0x591B|PUSH|0x30000", "0x5920|PUSH|0x10000", "0x5925|CALL|0x6f8881ed", "0x592A|POP|ECX", "0x592B|POP|ECX", "0x592C|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F88592D",
@@ -3777,7 +3777,7 @@
       "api_calls": [],
       "instructions": ["0x592D|PUSH|EBP", "0x592E|MOV|EBP, ESP", "0x5930|SUB|ESP, 0x18", "0x5933|FLD|double ptr [0x6f88b268]", "0x5939|FSTP|double ptr [EBP + -0x8]", "0x593C|FLD|double ptr [0x6f88b260]", "0x5942|FSTP|double ptr [EBP + -0x10]", "0x5945|FLD|double ptr [EBP + -0x10]", "0x5948|FDIV|double ptr [EBP + -0x8]", "0x594B|FMUL|double ptr [EBP + -0x8]", "0x594E|FSUBR|double ptr [EBP + -0x10]", "0x5951|FSTP|double ptr [EBP + -0x18]", "0x5954|FLD|double ptr [EBP + -0x18]", "0x5957|FCOMP|double ptr [0x6f88b258]", "0x595D|FNSTSW|AX"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F88596B",
@@ -3813,7 +3813,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 3,
-      "callees": ["FUN_6f88592d|0x6F88592D", "GetModuleHandleA|0x31", "GetProcAddress|0x54"],
+      "callees": ["GetModuleHandleA|0x31", "GetProcAddress|0x54", "FUN_6f88592d|0x6F88592D"],
       "caller_count": 1,
       "callers": ["FUN_6f8850c0|0x6F8850C0"],
       "string_count": 1,
@@ -3826,7 +3826,7 @@
       "api_calls": [],
       "instructions": ["0x596B|PUSH|0x6f88b28c", "0x5970|CALL|dword ptr [0x6f88b094]", "0x5976|TEST|EAX, EAX", "0x5978|JZ|0x6f88598f", "0x597A|PUSH|0x6f88b270", "0x597F|PUSH|EAX", "0x5980|CALL|dword ptr [0x6f88b120]", "0x5986|TEST|EAX, EAX", "0x5988|JZ|0x6f88598f", "0x598A|PUSH|0x0", "0x598C|CALL|EAX", "0x598E|RET|", "0x598F|JMP|0x6f88592d"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_3", "PROP_SMALL"]
     },
     {
       "address": "0x6F885994",
@@ -3875,7 +3875,7 @@
       "api_calls": [],
       "instructions": ["0x5994|PUSH|ESI", "0x5995|MOV|ESI, dword ptr [ESP + 0x8]", "0x5999|MOVSX|EAX, byte ptr [ESI]", "0x599C|PUSH|EAX", "0x599D|CALL|0x6f888393", "0x59A2|CMP|EAX, 0x65", "0x59A5|POP|ECX", "0x59A6|JZ|0x6f8859d4", "0x59A8|INC|ESI", "0x59A9|CMP|dword ptr [0x6f890620], 0x1", "0x59B0|JLE|0x6f8859c1", "0x59B2|MOVSX|EAX, byte ptr [ESI]", "0x59B5|PUSH|0x4", "0x59B7|PUSH|EAX", "0x59B8|CALL|0x6f88831e"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "CALLEE_2", "PARAM_1"]
     },
     {
       "address": "0x6F885A54",
@@ -3924,7 +3924,7 @@
       "api_calls": [],
       "instructions": ["0x5A54|PUSH|EBP", "0x5A55|MOV|EBP, ESP", "0x5A57|PUSH|ECX", "0x5A58|PUSH|ECX", "0x5A59|CMP|dword ptr [EBP + 0x8], 0x0", "0x5A5D|PUSH|dword ptr [EBP + 0x10]", "0x5A60|JZ|0x6f885a7d", "0x5A62|LEA|EAX, [EBP + -0x8]", "0x5A65|PUSH|EAX", "0x5A66|CALL|0x6f88885f", "0x5A6B|MOV|EAX, dword ptr [EBP + 0xc]", "0x5A6E|POP|ECX", "0x5A6F|POP|ECX", "0x5A70|MOV|ECX, dword ptr [EBP + -0x8]", "0x5A73|MOV|dword ptr [EAX], ECX"],
       "comment": "Library Function - Single Match\n __fassign\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_3", "CALLEE_2", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x6F885A92",
@@ -3960,7 +3960,7 @@
       "param_count": 4,
       "parameters": [{"name": "param_1", "type": "undefined8 *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined1 *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "int", "storage": "Stack[0x10]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_6f885af3|0x6F885AF3", "FUN_6f888930|0x6F888930", "FUN_6f8888b9|0x6F8888B9"],
+      "callees": ["FUN_6f885af3|0x6F885AF3", "FUN_6f8888b9|0x6F8888B9", "FUN_6f888930|0x6F888930"],
       "caller_count": 1,
       "callers": ["__cfltcvt|0x6F885D44"],
       "string_count": 0,
@@ -3973,7 +3973,7 @@
       "api_calls": [],
       "instructions": ["0x5A92|PUSH|EBP", "0x5A93|MOV|EBP, ESP", "0x5A95|SUB|ESP, 0x28", "0x5A98|LEA|EAX, [EBP + -0x28]", "0x5A9B|PUSH|ESI", "0x5A9C|PUSH|EAX", "0x5A9D|LEA|EAX, [EBP + -0x10]", "0x5AA0|PUSH|EAX", "0x5AA1|MOV|EAX, dword ptr [EBP + 0x8]", "0x5AA4|PUSH|ECX", "0x5AA5|PUSH|ECX", "0x5AA6|FLD|double ptr [EAX]", "0x5AA8|FSTP|double ptr [ESP]", "0x5AAB|CALL|0x6f888930", "0x5AB0|MOV|ESI, dword ptr [EBP + 0x10]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "STRUCT_Skill", "PARAM_4", "CALLEE_3", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F885AF3",
@@ -4009,9 +4009,9 @@
       "param_count": 5,
       "parameters": [{"name": "param_1", "type": "undefined1 *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "int *", "storage": "Stack[0x10]:4"}, {"name": "param_5", "type": "char", "storage": "Stack[0x14]:1"}],
       "callee_count": 2,
-      "callees": ["FUN_6f885d95|0x6F885D95", "FUN_6f888a50|0x6F888A50"],
+      "callees": ["FUN_6f888a50|0x6F888A50", "FUN_6f885d95|0x6F885D95"],
       "caller_count": 2,
-      "callers": ["FUN_6f885cb1|0x6F885CB1", "FUN_6f885a92|0x6F885A92"],
+      "callers": ["FUN_6f885a92|0x6F885A92", "FUN_6f885cb1|0x6F885CB1"],
       "string_count": 1,
       "strings": ["0xB2A0|s_e+000_6f88b2a0|e+000"],
       "constant_count": 0,
@@ -4022,7 +4022,7 @@
       "api_calls": [],
       "instructions": ["0x5AF3|PUSH|EBP", "0x5AF4|MOV|EBP, ESP", "0x5AF6|PUSH|EBX", "0x5AF7|XOR|EBX, EBX", "0x5AF9|CMP|byte ptr [EBP + 0x18], BL", "0x5AFC|PUSH|ESI", "0x5AFD|MOV|ESI, dword ptr [EBP + 0x14]", "0x5B00|PUSH|EDI", "0x5B01|MOV|EDI, dword ptr [EBP + 0x8]", "0x5B04|JZ|0x6f885b21", "0x5B06|XOR|EAX, EAX", "0x5B08|CMP|dword ptr [EBP + 0xc], EBX", "0x5B0B|SETG|AL", "0x5B0E|PUSH|EAX", "0x5B0F|XOR|EAX, EAX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_2", "PARAM_5", "CALLEE_2", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F885BB5",
@@ -4058,7 +4058,7 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "undefined8 *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "size_t", "storage": "Stack[0xc]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_6f888930|0x6F888930", "FUN_6f8888b9|0x6F8888B9", "FUN_6f885c0a|0x6F885C0A"],
+      "callees": ["FUN_6f885c0a|0x6F885C0A", "FUN_6f8888b9|0x6F8888B9", "FUN_6f888930|0x6F888930"],
       "caller_count": 1,
       "callers": ["__cfltcvt|0x6F885D44"],
       "string_count": 0,
@@ -4071,7 +4071,7 @@
       "api_calls": [],
       "instructions": ["0x5BB5|PUSH|EBP", "0x5BB6|MOV|EBP, ESP", "0x5BB8|SUB|ESP, 0x28", "0x5BBB|LEA|EAX, [EBP + -0x28]", "0x5BBE|PUSH|ESI", "0x5BBF|PUSH|EAX", "0x5BC0|LEA|EAX, [EBP + -0x10]", "0x5BC3|PUSH|EAX", "0x5BC4|MOV|EAX, dword ptr [EBP + 0x8]", "0x5BC7|PUSH|ECX", "0x5BC8|PUSH|ECX", "0x5BC9|FLD|double ptr [EAX]", "0x5BCB|FSTP|double ptr [ESP]", "0x5BCE|CALL|0x6f888930", "0x5BD3|MOV|ESI, dword ptr [EBP + 0x10]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "STRUCT_ItemData", "CALLEE_3", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x6F885C0A",
@@ -4120,7 +4120,7 @@
       "api_calls": [],
       "instructions": ["0x5C0A|PUSH|EBP", "0x5C0B|MOV|EBP, ESP", "0x5C0D|PUSH|EBX", "0x5C0E|PUSH|ESI", "0x5C0F|MOV|ESI, dword ptr [EBP + 0x10]", "0x5C12|MOV|EBX, dword ptr [EBP + 0x8]", "0x5C15|PUSH|EDI", "0x5C16|MOV|EAX, dword ptr [ESI + 0x4]", "0x5C19|DEC|EAX", "0x5C1A|CMP|byte ptr [EBP + 0x14], 0x0", "0x5C1E|JZ|0x6f885c3a", "0x5C20|CMP|EAX, dword ptr [EBP + 0xc]", "0x5C23|JNZ|0x6f885c3a", "0x5C25|XOR|ECX, ECX", "0x5C27|CMP|dword ptr [ESI], 0x2d"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "STRUCT_Skill", "PARAM_4", "CALLER_2", "CALLEE_2", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F885CB1",
@@ -4156,7 +4156,7 @@
       "param_count": 4,
       "parameters": [{"name": "param_1", "type": "undefined8 *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "size_t", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "int", "storage": "Stack[0x10]:4"}],
       "callee_count": 4,
-      "callees": ["FUN_6f885af3|0x6F885AF3", "FUN_6f888930|0x6F888930", "FUN_6f8888b9|0x6F8888B9", "FUN_6f885c0a|0x6F885C0A"],
+      "callees": ["FUN_6f885c0a|0x6F885C0A", "FUN_6f885af3|0x6F885AF3", "FUN_6f8888b9|0x6F8888B9", "FUN_6f888930|0x6F888930"],
       "caller_count": 1,
       "callers": ["__cfltcvt|0x6F885D44"],
       "string_count": 0,
@@ -4169,7 +4169,7 @@
       "api_calls": [],
       "instructions": ["0x5CB1|PUSH|EBP", "0x5CB2|MOV|EBP, ESP", "0x5CB4|SUB|ESP, 0x28", "0x5CB7|PUSH|EBX", "0x5CB8|PUSH|ESI", "0x5CB9|LEA|EAX, [EBP + -0x28]", "0x5CBC|PUSH|EDI", "0x5CBD|PUSH|EAX", "0x5CBE|LEA|EAX, [EBP + -0x10]", "0x5CC1|PUSH|EAX", "0x5CC2|MOV|EAX, dword ptr [EBP + 0x8]", "0x5CC5|PUSH|ECX", "0x5CC6|PUSH|ECX", "0x5CC7|FLD|double ptr [EAX]", "0x5CC9|FSTP|double ptr [ESP]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_4", "CALLEE_4", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F885D44",
@@ -4205,7 +4205,7 @@
       "param_count": 6,
       "parameters": [{"name": "arg", "type": "double *", "storage": "Stack[0x4]:4"}, {"name": "buffer", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "sizeInBytes", "type": "size_t", "storage": "Stack[0xc]:4"}, {"name": "format", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "precision", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "caps", "type": "int", "storage": "Stack[0x18]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_6f885bb5|0x6F885BB5", "FUN_6f885cb1|0x6F885CB1", "FUN_6f885a92|0x6F885A92"],
+      "callees": ["FUN_6f885bb5|0x6F885BB5", "FUN_6f885a92|0x6F885A92", "FUN_6f885cb1|0x6F885CB1"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -4218,7 +4218,7 @@
       "api_calls": [],
       "instructions": ["0x5D44|PUSH|EBP", "0x5D45|MOV|EBP, ESP", "0x5D47|CMP|dword ptr [EBP + 0x10], 0x65", "0x5D4B|JZ|0x6f885d7f", "0x5D4D|CMP|dword ptr [EBP + 0x10], 0x45", "0x5D51|JZ|0x6f885d7f", "0x5D53|CMP|dword ptr [EBP + 0x10], 0x66", "0x5D57|JNZ|0x6f885d6c", "0x5D59|PUSH|dword ptr [EBP + 0x14]", "0x5D5C|PUSH|dword ptr [EBP + 0xc]", "0x5D5F|PUSH|dword ptr [EBP + 0x8]", "0x5D62|CALL|0x6f885bb5", "0x5D67|ADD|ESP, 0xc", "0x5D6A|POP|EBP", "0x5D6B|RET|"],
       "comment": "Library Function - Single Match\n __cfltcvt\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PARAM_6", "STRUCT_Act", "STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "CALLEE_3", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F885D95",
@@ -4254,9 +4254,9 @@
       "param_count": 2,
       "parameters": [{"name": "param_1", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
       "callee_count": 2,
-      "callees": ["_strlen|0x6F888EE0", "FUN_6f888ba0|0x6F888BA0"],
+      "callees": ["FUN_6f888ba0|0x6F888BA0", "_strlen|0x6F888EE0"],
       "caller_count": 2,
-      "callers": ["FUN_6f885af3|0x6F885AF3", "FUN_6f885c0a|0x6F885C0A"],
+      "callers": ["FUN_6f885c0a|0x6F885C0A", "FUN_6f885af3|0x6F885AF3"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -4267,7 +4267,7 @@
       "api_calls": [],
       "instructions": ["0x5D95|PUSH|EDI", "0x5D96|MOV|EDI, dword ptr [ESP + 0xc]", "0x5D9A|TEST|EDI, EDI", "0x5D9C|JZ|0x6f885db8", "0x5D9E|PUSH|ESI", "0x5D9F|MOV|ESI, dword ptr [ESP + 0xc]", "0x5DA3|PUSH|ESI", "0x5DA4|CALL|0x6f888ee0", "0x5DA9|INC|EAX", "0x5DAA|PUSH|EAX", "0x5DAB|PUSH|ESI", "0x5DAC|ADD|ESI, EDI", "0x5DAE|PUSH|ESI", "0x5DAF|CALL|0x6f888ba0", "0x5DB4|ADD|ESP, 0x10"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_2", "CALLEE_2", "PROP_SMALL"]
     },
     {
       "address": "0x6F885DBA",
@@ -4303,7 +4303,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["FUN_6f885e2c|0x6F885E2C", "TlsAlloc|0x58", "TlsSetValue|0x57", "FUN_6f8852b9|0x6F8852B9", "FUN_6f888f64|0x6F888F64", "GetCurrentThreadId|0x45"],
+      "callees": ["TlsAlloc|0x58", "FUN_6f8852b9|0x6F8852B9", "FUN_6f885e2c|0x6F885E2C", "FUN_6f888f64|0x6F888F64", "TlsSetValue|0x57", "GetCurrentThreadId|0x45"],
       "caller_count": 1,
       "callers": ["FUN_6f885110|0x6F885110"],
       "string_count": 0,
@@ -4316,7 +4316,7 @@
       "api_calls": [],
       "instructions": ["0x5DBA|PUSH|ESI", "0x5DBB|CALL|0x6f8852b9", "0x5DC0|CALL|dword ptr [0x6f88b130]", "0x5DC6|CMP|EAX, -0x1", "0x5DC9|MOV|[0x6f88e52c], EAX", "0x5DCE|JZ|0x6f885e0a", "0x5DD0|PUSH|0x74", "0x5DD2|PUSH|0x1", "0x5DD4|CALL|0x6f888f64", "0x5DD9|MOV|ESI, EAX", "0x5DDB|POP|ECX", "0x5DDC|TEST|ESI, ESI", "0x5DDE|POP|ECX", "0x5DDF|JZ|0x6f885e0a", "0x5DE1|PUSH|ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_6"]
     },
     {
       "address": "0x6F885E0E",
@@ -4365,7 +4365,7 @@
       "api_calls": [],
       "instructions": ["0x5E0E|CALL|0x6f8852e2", "0x5E13|MOV|EAX, [0x6f88e52c]", "0x5E18|CMP|EAX, -0x1", "0x5E1B|JZ|0x6f885e2b", "0x5E1D|PUSH|EAX", "0x5E1E|CALL|dword ptr [0x6f88b134]", "0x5E24|OR|dword ptr [0x6f88e52c], 0xffffffff", "0x5E2B|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_2", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x6F885E2C",
@@ -4414,7 +4414,7 @@
       "api_calls": [],
       "instructions": ["0x5E2C|MOV|EAX, dword ptr [ESP + 0x4]", "0x5E30|MOV|dword ptr [EAX + 0x50], 0x6f890870", "0x5E37|MOV|dword ptr [EAX + 0x14], 0x1", "0x5E3E|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_2", "CALLEE_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F885E3F",
@@ -4450,7 +4450,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 8,
-      "callees": ["GetLastError|0x5C", "FUN_6f885e2c|0x6F885E2C", "SetLastError|0x5A", "TlsSetValue|0x57", "__amsg_exit|0x6F885286", "TlsGetValue|0x5B", "FUN_6f888f64|0x6F888F64", "GetCurrentThreadId|0x45"],
+      "callees": ["FUN_6f885e2c|0x6F885E2C", "GetLastError|0x5C", "FUN_6f888f64|0x6F888F64", "TlsSetValue|0x57", "TlsGetValue|0x5B", "__amsg_exit|0x6F885286", "SetLastError|0x5A", "GetCurrentThreadId|0x45"],
       "caller_count": 1,
       "callers": ["FUN_6f88a6ab|0x6F88A6AB"],
       "string_count": 0,
@@ -4463,7 +4463,7 @@
       "api_calls": [],
       "instructions": ["0x5E3F|PUSH|ESI", "0x5E40|PUSH|EDI", "0x5E41|CALL|dword ptr [0x6f88b140]", "0x5E47|PUSH|dword ptr [0x6f88e52c]", "0x5E4D|MOV|EDI, EAX", "0x5E4F|CALL|dword ptr [0x6f88b13c]", "0x5E55|MOV|ESI, EAX", "0x5E57|TEST|ESI, ESI", "0x5E59|JNZ|0x6f885e9a", "0x5E5B|PUSH|0x74", "0x5E5D|PUSH|0x1", "0x5E5F|CALL|0x6f888f64", "0x5E64|MOV|ESI, EAX", "0x5E66|POP|ECX", "0x5E67|TEST|ESI, ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_8"]
     },
     {
       "address": "0x6F885EA6",
@@ -4512,7 +4512,7 @@
       "api_calls": [],
       "instructions": ["0x5EA6|MOV|EAX, [0x6f88e52c]", "0x5EAB|CMP|EAX, -0x1", "0x5EAE|JZ|0x6f885f45", "0x5EB4|PUSH|ESI", "0x5EB5|MOV|ESI, dword ptr [ESP + 0x8]", "0x5EB9|TEST|ESI, ESI", "0x5EBB|JNZ|0x6f885eca", "0x5EBD|PUSH|EAX", "0x5EBE|CALL|dword ptr [0x6f88b13c]", "0x5EC4|MOV|ESI, EAX", "0x5EC6|TEST|ESI, ESI", "0x5EC8|JZ|0x6f885f36", "0x5ECA|MOV|EAX, dword ptr [ESI + 0x24]", "0x5ECD|TEST|EAX, EAX", "0x5ECF|JZ|0x6f885ed8"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "STRUCT_Skill", "CALLEE_3", "PARAM_1"]
     },
     {
       "address": "0x6F885F46",
@@ -4548,7 +4548,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["_malloc|0x6F8857E1", "GetStdHandle|0x5E", "SetHandleCount|0x53", "__amsg_exit|0x6F885286", "GetFileType|0x56", "GetStartupInfoA|0x60"],
+      "callees": ["SetHandleCount|0x53", "__amsg_exit|0x6F885286", "GetFileType|0x56", "GetStartupInfoA|0x60", "_malloc|0x6F8857E1", "GetStdHandle|0x5E"],
       "caller_count": 1,
       "callers": ["FUN_6f885110|0x6F885110"],
       "string_count": 0,
@@ -4561,7 +4561,7 @@
       "api_calls": [],
       "instructions": ["0x5F46|PUSH|EBP", "0x5F47|MOV|EBP, ESP", "0x5F49|SUB|ESP, 0x48", "0x5F4C|PUSH|EBX", "0x5F4D|PUSH|ESI", "0x5F4E|PUSH|EDI", "0x5F4F|PUSH|0x480", "0x5F54|CALL|0x6f8857e1", "0x5F59|MOV|ESI, EAX", "0x5F5B|POP|ECX", "0x5F5C|TEST|ESI, ESI", "0x5F5E|JNZ|0x6f885f68", "0x5F60|PUSH|0x1b", "0x5F62|CALL|0x6f885286", "0x5F67|POP|ECX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_0", "PROP_LOOPHEAVY", "CALLEE_6"]
     },
     {
       "address": "0x6F886102",
@@ -4597,7 +4597,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 2,
-      "callees": ["FUN_6f886994|0x6F886994", "DeleteCriticalSection|0x44"],
+      "callees": ["DeleteCriticalSection|0x44", "FUN_6f886994|0x6F886994"],
       "caller_count": 1,
       "callers": ["FUN_6f885110|0x6F885110"],
       "string_count": 0,
@@ -4610,7 +4610,7 @@
       "api_calls": [],
       "instructions": ["0x6102|PUSH|EBX", "0x6103|PUSH|ESI", "0x6104|PUSH|EDI", "0x6105|MOV|ESI, 0x6f892600", "0x610A|MOV|EAX, dword ptr [ESI]", "0x610C|TEST|EAX, EAX", "0x610E|JZ|0x6f886147", "0x6110|MOV|EDI, EAX", "0x6112|ADD|EAX, 0x480", "0x6117|CMP|EDI, EAX", "0x6119|JNC|0x6f88613c", "0x611B|LEA|EBX, [EDI + 0xc]", "0x611E|CMP|dword ptr [EBX + -0x4], 0x0", "0x6122|JZ|0x6f88612b", "0x6124|PUSH|EBX"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_2", "PARAM_0"]
     },
     {
       "address": "0x6F886156",
@@ -4646,7 +4646,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["_strlen|0x6F888EE0", "_malloc|0x6F8857E1", "FUN_6f886994|0x6F886994", "FUN_6f888a50|0x6F888A50", "__amsg_exit|0x6F885286", "FUN_6f889479|0x6F889479"],
+      "callees": ["FUN_6f886994|0x6F886994", "FUN_6f888a50|0x6F888A50", "FUN_6f889479|0x6F889479", "__amsg_exit|0x6F885286", "_strlen|0x6F888EE0", "_malloc|0x6F8857E1"],
       "caller_count": 1,
       "callers": ["FUN_6f885110|0x6F885110"],
       "string_count": 0,
@@ -4659,7 +4659,7 @@
       "api_calls": [],
       "instructions": ["0x6156|PUSH|EBX", "0x6157|XOR|EBX, EBX", "0x6159|CMP|dword ptr [0x6f892710], EBX", "0x615F|PUSH|ESI", "0x6160|PUSH|EDI", "0x6161|JNZ|0x6f886168", "0x6163|CALL|0x6f889479", "0x6168|MOV|ESI, dword ptr [0x6f892070]", "0x616E|XOR|EDI, EDI", "0x6170|MOV|AL, byte ptr [ESI]", "0x6172|CMP|AL, BL", "0x6174|JZ|0x6f886188", "0x6176|CMP|AL, 0x3d", "0x6178|JZ|0x6f88617b", "0x617A|INC|EDI"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_6"]
     },
     {
       "address": "0x6F88620F",
@@ -4695,7 +4695,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["_malloc|0x6F8857E1", "FUN_6f8862a8|0x6F8862A8", "__amsg_exit|0x6F885286", "FUN_6f889479|0x6F889479", "GetModuleFileNameA|0x61"],
+      "callees": ["FUN_6f889479|0x6F889479", "__amsg_exit|0x6F885286", "GetModuleFileNameA|0x61", "FUN_6f8862a8|0x6F8862A8", "_malloc|0x6F8857E1"],
       "caller_count": 1,
       "callers": ["FUN_6f885110|0x6F885110"],
       "string_count": 0,
@@ -4708,7 +4708,7 @@
       "api_calls": [],
       "instructions": ["0x620F|PUSH|EBP", "0x6210|MOV|EBP, ESP", "0x6212|PUSH|ECX", "0x6213|PUSH|ECX", "0x6214|PUSH|EBX", "0x6215|XOR|EBX, EBX", "0x6217|CMP|dword ptr [0x6f892710], EBX", "0x621D|PUSH|ESI", "0x621E|PUSH|EDI", "0x621F|JNZ|0x6f886226", "0x6221|CALL|0x6f889479", "0x6226|MOV|ESI, 0x6f8920e0", "0x622B|PUSH|0x104", "0x6230|PUSH|ESI", "0x6231|PUSH|EBX"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_5"]
     },
     {
       "address": "0x6F8862A8",
@@ -4757,7 +4757,7 @@
       "api_calls": [],
       "instructions": ["0x62A8|PUSH|EBP", "0x62A9|MOV|EBP, ESP", "0x62AB|MOV|ECX, dword ptr [EBP + 0x18]", "0x62AE|MOV|EAX, dword ptr [EBP + 0x14]", "0x62B1|PUSH|EBX", "0x62B2|PUSH|ESI", "0x62B3|AND|dword ptr [ECX], 0x0", "0x62B6|MOV|ESI, dword ptr [EBP + 0x10]", "0x62B9|PUSH|EDI", "0x62BA|MOV|EDI, dword ptr [EBP + 0xc]", "0x62BD|MOV|dword ptr [EAX], 0x1", "0x62C3|MOV|EAX, dword ptr [EBP + 0x8]", "0x62C6|TEST|EDI, EDI", "0x62C8|JZ|0x6f8862d2", "0x62CA|MOV|dword ptr [EDI], ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_5", "CALLEE_0", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F88645C",
@@ -4793,7 +4793,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 8,
-      "callees": ["GetEnvironmentStrings|0x64", "FUN_6f887cb0|0x6F887CB0", "_malloc|0x6F8857E1", "FUN_6f886994|0x6F886994", "GetEnvironmentStringsW|0x65", "FreeEnvironmentStringsA|0x62", "WideCharToMultiByte|0x5F", "FreeEnvironmentStringsW|0x5D"],
+      "callees": ["GetEnvironmentStrings|0x64", "FUN_6f886994|0x6F886994", "FreeEnvironmentStringsA|0x62", "WideCharToMultiByte|0x5F", "_malloc|0x6F8857E1", "FreeEnvironmentStringsW|0x5D", "GetEnvironmentStringsW|0x65", "FUN_6f887cb0|0x6F887CB0"],
       "caller_count": 1,
       "callers": ["FUN_6f885110|0x6F885110"],
       "string_count": 0,
@@ -4806,7 +4806,7 @@
       "api_calls": [],
       "instructions": ["0x645C|PUSH|ECX", "0x645D|PUSH|ECX", "0x645E|MOV|EAX, [0x6f8921e4]", "0x6463|PUSH|EBX", "0x6464|PUSH|EBP", "0x6465|MOV|EBP, dword ptr [0x6f88b164]", "0x646B|PUSH|ESI", "0x646C|PUSH|EDI", "0x646D|XOR|EBX, EBX", "0x646F|XOR|ESI, ESI", "0x6471|XOR|EDI, EDI", "0x6473|CMP|EAX, EBX", "0x6475|JNZ|0x6f8864aa", "0x6477|CALL|EBP", "0x6479|MOV|ESI, EAX"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "PROP_LOOPHEAVY", "CALLEE_8"]
     },
     {
       "address": "0x6F88658E",
@@ -4855,7 +4855,7 @@
       "api_calls": [],
       "instructions": ["0x658E|PUSH|ESI", "0x658F|MOV|ESI, dword ptr [ESP + 0x8]", "0x6593|PUSH|0x0", "0x6595|AND|dword ptr [ESI], 0x0", "0x6598|CALL|dword ptr [0x6f88b094]", "0x659E|CMP|word ptr [EAX], 0x5a4d", "0x65A3|JNZ|0x6f8865b9", "0x65A5|MOV|ECX, dword ptr [EAX + 0x3c]", "0x65A8|TEST|ECX, ECX", "0x65AA|JZ|0x6f8865b9", "0x65AC|ADD|EAX, ECX", "0x65AE|MOV|CL, byte ptr [EAX + 0x1a]", "0x65B1|MOV|byte ptr [ESI], CL", "0x65B3|MOV|AL, byte ptr [EAX + 0x1b]", "0x65B6|MOV|byte ptr [ESI + 0x1], AL"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F8865BB",
@@ -4891,7 +4891,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 9,
-      "callees": ["_strchr|0x6F8896D0", "_strncmp|0x6F889810", "FUN_6f88658e|0x6F88658E", "FUN_6f889850|0x6F889850", "_strstr|0x6F889790", "GetEnvironmentVariableA|0x63", "GetVersionExA|0x66", "FUN_6f889495|0x6F889495", "GetModuleFileNameA|0x61"],
+      "callees": ["_strstr|0x6F889790", "_strncmp|0x6F889810", "FUN_6f889495|0x6F889495", "FUN_6f889850|0x6F889850", "GetVersionExA|0x66", "_strchr|0x6F8896D0", "GetEnvironmentVariableA|0x63", "GetModuleFileNameA|0x61", "FUN_6f88658e|0x6F88658E"],
       "caller_count": 1,
       "callers": ["FUN_6f886703|0x6F886703"],
       "string_count": 2,
@@ -4904,7 +4904,7 @@
       "api_calls": [],
       "instructions": ["0x65BB|PUSH|EBP", "0x65BC|MOV|EBP, ESP", "0x65BE|MOV|EAX, 0x122c", "0x65C3|CALL|0x6f889850", "0x65C8|LEA|EAX, [EBP + 0xffffff68]", "0x65CE|PUSH|EBX", "0x65CF|PUSH|EAX", "0x65D0|MOV|dword ptr [EBP + 0xffffff68], 0x94", "0x65DA|CALL|dword ptr [0x6f88b168]", "0x65E0|TEST|EAX, EAX", "0x65E2|JZ|0x6f8865fe", "0x65E4|CMP|dword ptr [EBP + 0xffffff78], 0x2", "0x65EB|JNZ|0x6f8865fe", "0x65ED|CMP|dword ptr [EBP + 0xffffff6c], 0x5", "0x65F4|JC|0x6f8865fe"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLEE_9", "CALLER_1", "PARAM_0", "PROP_LOOPHEAVY"]
     },
     {
       "address": "0x6F886703",
@@ -4940,7 +4940,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 5,
-      "callees": ["FUN_6f8865bb|0x6F8865BB", "HeapDestroy|0x50", "FUN_6f886a7d|0x6F886A7D", "FUN_6f8875c4|0x6F8875C4", "HeapCreate|0x3D"],
+      "callees": ["FUN_6f886a7d|0x6F886A7D", "HeapCreate|0x3D", "FUN_6f8865bb|0x6F8865BB", "HeapDestroy|0x50", "FUN_6f8875c4|0x6F8875C4"],
       "caller_count": 1,
       "callers": ["FUN_6f885110|0x6F885110"],
       "string_count": 0,
@@ -4953,7 +4953,7 @@
       "api_calls": [],
       "instructions": ["0x6703|XOR|EAX, EAX", "0x6705|PUSH|0x0", "0x6707|CMP|dword ptr [ESP + 0x8], EAX", "0x670B|PUSH|0x1000", "0x6710|SETZ|AL", "0x6713|PUSH|EAX", "0x6714|CALL|dword ptr [0x6f88b0c4]", "0x671A|TEST|EAX, EAX", "0x671C|MOV|[0x6f8925e4], EAX", "0x6721|JZ|0x6f886759", "0x6723|CALL|0x6f8865bb", "0x6728|CMP|EAX, 0x3", "0x672B|MOV|[0x6f8925e8], EAX", "0x6730|JNZ|0x6f88673f", "0x6732|PUSH|0x3f8"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_1", "CALLEE_5"]
     },
     {
       "address": "0x6F886760",
@@ -4989,7 +4989,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 3,
-      "callees": ["HeapDestroy|0x50", "HeapFree|0x3B", "VirtualFree|0x51"],
+      "callees": ["HeapFree|0x3B", "HeapDestroy|0x50", "VirtualFree|0x51"],
       "caller_count": 1,
       "callers": ["FUN_6f885110|0x6F885110"],
       "string_count": 0,
@@ -5002,7 +5002,7 @@
       "api_calls": [],
       "instructions": ["0x6760|MOV|EAX, [0x6f8925e8]", "0x6765|PUSH|ESI", "0x6766|CMP|EAX, 0x3", "0x6769|PUSH|EDI", "0x676A|JNZ|0x6f8867d2", "0x676C|PUSH|EBX", "0x676D|XOR|EBX, EBX", "0x676F|CMP|dword ptr [0x6f8925d8], EBX", "0x6775|PUSH|EBP", "0x6776|MOV|EBP, dword ptr [0x6f88b0bc]", "0x677C|JLE|0x6f8867be", "0x677E|MOV|EAX, [0x6f8925dc]", "0x6783|MOV|EDI, dword ptr [0x6f88b114]", "0x6789|LEA|ESI, [EAX + 0xc]", "0x678C|PUSH|0x4000"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_0", "CALLEE_3", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F886808",
@@ -5051,7 +5051,7 @@
       "api_calls": [],
       "instructions": ["0x6808|MOV|EAX, [0x6f892078]", "0x680D|CMP|EAX, 0x1", "0x6810|JZ|0x6f88681f", "0x6812|TEST|EAX, EAX", "0x6814|JNZ|0x6f886840", "0x6816|CMP|dword ptr [0x6f89207c], 0x1", "0x681D|JNZ|0x6f886840", "0x681F|PUSH|0xfc", "0x6824|CALL|0x6f886841", "0x6829|MOV|EAX, [0x6f8921e8]", "0x682E|POP|ECX", "0x682F|TEST|EAX, EAX", "0x6831|JZ|0x6f886835", "0x6833|CALL|EAX", "0x6835|PUSH|0xff"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F886841",
@@ -5087,7 +5087,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "DWORD", "storage": "Stack[0x4]:4"}],
       "callee_count": 8,
-      "callees": ["_strlen|0x6F888EE0", "FUN_6f88987f|0x6F88987F", "GetStdHandle|0x5E", "WriteFile|0x3A", "FUN_6f888a50|0x6F888A50", "_strncpy|0x6F889910", "FUN_6f888a60|0x6F888A60", "GetModuleFileNameA|0x61"],
+      "callees": ["FUN_6f888a50|0x6F888A50", "FUN_6f88987f|0x6F88987F", "GetModuleFileNameA|0x61", "_strncpy|0x6F889910", "_strlen|0x6F888EE0", "WriteFile|0x3A", "GetStdHandle|0x5E", "FUN_6f888a60|0x6F888A60"],
       "caller_count": 2,
       "callers": ["FUN_6f886808|0x6F886808", "__amsg_exit|0x6F885286"],
       "string_count": 4,
@@ -5100,7 +5100,7 @@
       "api_calls": [],
       "instructions": ["0x6841|PUSH|EBP", "0x6842|MOV|EBP, ESP", "0x6844|SUB|ESP, 0x1a4", "0x684A|MOV|EDX, dword ptr [EBP + 0x8]", "0x684D|XOR|ECX, ECX", "0x684F|MOV|EAX, 0x6f88e558", "0x6854|CMP|EDX, dword ptr [EAX]", "0x6856|JZ|0x6f886863", "0x6858|ADD|EAX, 0x8", "0x685B|INC|ECX", "0x685C|CMP|EAX, 0x6f88e5e8", "0x6861|JL|0x6f886854", "0x6863|PUSH|ESI", "0x6864|MOV|ESI, ECX", "0x6866|SHL|ESI, 0x3"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_2", "PARAM_1", "STRUCT_Control", "CALLEE_8"]
     },
     {
       "address": "0x6F886994",
@@ -5136,9 +5136,9 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "undefined *", "storage": "Stack[0x4]:4"}],
       "callee_count": 8,
-      "callees": ["FUN_6f886ac5|0x6F886AC5", "FUN_6f887820|0x6F887820", "HeapFree|0x3B", "FUN_6f8869fe|0x6F8869FE", "FUN_6f886a56|0x6F886A56", "FUN_6f88534e|0x6F88534E", "FUN_6f886af0|0x6F886AF0", "FUN_6f887877|0x6F887877"],
+      "callees": ["FUN_6f88534e|0x6F88534E", "FUN_6f886af0|0x6F886AF0", "FUN_6f886a56|0x6F886A56", "FUN_6f886ac5|0x6F886AC5", "FUN_6f887820|0x6F887820", "HeapFree|0x3B", "FUN_6f887877|0x6F887877", "FUN_6f8869fe|0x6F8869FE"],
       "caller_count": 7,
-      "callers": ["FUN_6f88645c|0x6F88645C", "FUN_6f886102|0x6F886102", "FUN_6f8853c4|0x6F8853C4", "FUN_6f885ea6|0x6F885EA6", "FUN_6f88534e|0x6F88534E", "FUN_6f886156|0x6F886156", "FUN_6f8852e2|0x6F8852E2"],
+      "callers": ["FUN_6f88534e|0x6F88534E", "FUN_6f88645c|0x6F88645C", "FUN_6f8853c4|0x6F8853C4", "FUN_6f886156|0x6F886156", "FUN_6f886102|0x6F886102", "FUN_6f8852e2|0x6F8852E2", "FUN_6f885ea6|0x6F885EA6"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -5149,7 +5149,7 @@
       "api_calls": [],
       "instructions": ["0x6994|PUSH|EBP", "0x6995|MOV|EBP, ESP", "0x6997|PUSH|-0x1", "0x6999|PUSH|0x6f88b5c8", "0x699E|PUSH|0x6f8880e0", "0x69A3|MOV|EAX, FS:[0x0]", "0x69A9|PUSH|EAX", "0x69AA|MOV|dword ptr FS:[0x0], ESP", "0x69B1|SUB|ESP, 0x18", "0x69B4|PUSH|EBX", "0x69B5|PUSH|ESI", "0x69B6|PUSH|EDI", "0x69B7|MOV|ESI, dword ptr [EBP + 0x8]", "0x69BA|TEST|ESI, ESI", "0x69BC|JZ|0x6f886a6e"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_1", "CALLER_7", "STRUCT_Control", "CALLEE_8"]
     },
     {
       "address": "0x6F8869FE",
@@ -5198,7 +5198,7 @@
       "api_calls": [],
       "instructions": ["0x69FE|PUSH|0x9", "0x6A00|CALL|0x6f8853af", "0x6A05|POP|ECX", "0x6A06|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F886A56",
@@ -5247,7 +5247,7 @@
       "api_calls": [],
       "instructions": ["0x6A56|PUSH|0x9", "0x6A58|CALL|0x6f8853af", "0x6A5D|POP|ECX", "0x6A5E|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F886A7D",
@@ -5296,7 +5296,7 @@
       "api_calls": [],
       "instructions": ["0x6A7D|PUSH|0x140", "0x6A82|PUSH|0x0", "0x6A84|PUSH|dword ptr [0x6f8925e4]", "0x6A8A|CALL|dword ptr [0x6f88b098]", "0x6A90|TEST|EAX, EAX", "0x6A92|MOV|[0x6f8925dc], EAX", "0x6A97|JNZ|0x6f886a9a", "0x6A99|RET|", "0x6A9A|MOV|ECX, dword ptr [ESP + 0x4]", "0x6A9E|AND|dword ptr [0x6f8925d4], 0x0", "0x6AA5|AND|dword ptr [0x6f8925d8], 0x0", "0x6AAC|PUSH|0x1", "0x6AAE|MOV|[0x6f8925d0], EAX", "0x6AB3|MOV|dword ptr [0x6f8925e0], ECX", "0x6AB9|MOV|dword ptr [0x6f8925c8], 0x10"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1"]
     },
     {
       "address": "0x6F886AC5",
@@ -5345,7 +5345,7 @@
       "api_calls": [],
       "instructions": ["0x6AC5|MOV|EAX, [0x6f8925d8]", "0x6ACA|LEA|ECX, [EAX + EAX*0x4]", "0x6ACD|MOV|EAX, [0x6f8925dc]", "0x6AD2|LEA|ECX, [EAX + ECX*0x4]", "0x6AD5|CMP|EAX, ECX", "0x6AD7|JNC|0x6f886aed", "0x6AD9|MOV|EDX, dword ptr [ESP + 0x4]", "0x6ADD|SUB|EDX, dword ptr [EAX + 0xc]", "0x6AE0|CMP|EDX, 0x100000", "0x6AE6|JC|0x6f886aef", "0x6AE8|ADD|EAX, 0x14", "0x6AEB|JMP|0x6f886ad5", "0x6AED|XOR|EAX, EAX", "0x6AEF|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F886AF0",
@@ -5381,7 +5381,7 @@
       "param_count": 2,
       "parameters": [{"name": "param_1", "type": "uint *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_6f888ba0|0x6F888BA0", "HeapFree|0x3B", "VirtualFree|0x51"],
+      "callees": ["HeapFree|0x3B", "FUN_6f888ba0|0x6F888BA0", "VirtualFree|0x51"],
       "caller_count": 2,
       "callers": ["FUN_6f886994|0x6F886994", "FUN_6f8853c4|0x6F8853C4"],
       "string_count": 0,
@@ -5394,7 +5394,7 @@
       "api_calls": [],
       "instructions": ["0x6AF0|PUSH|EBP", "0x6AF1|MOV|EBP, ESP", "0x6AF3|SUB|ESP, 0x10", "0x6AF6|MOV|ECX, dword ptr [EBP + 0x8]", "0x6AF9|PUSH|EBX", "0x6AFA|PUSH|ESI", "0x6AFB|MOV|ESI, dword ptr [EBP + 0xc]", "0x6AFE|MOV|EAX, dword ptr [ECX + 0x10]", "0x6B01|PUSH|EDI", "0x6B02|MOV|EDI, ESI", "0x6B04|ADD|ESI, -0x4", "0x6B07|SUB|EDI, dword ptr [ECX + 0xc]", "0x6B0A|SHR|EDI, 0xf", "0x6B0D|MOV|ECX, EDI", "0x6B0F|IMUL|ECX, ECX, 0x204"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "PARAM_2", "CALLER_2", "STRUCT_ItemData", "CALLEE_3", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F886E19",
@@ -5432,7 +5432,7 @@
       "callee_count": 2,
       "callees": ["FUN_6f8871d3|0x6F8871D3", "FUN_6f887122|0x6F887122"],
       "caller_count": 3,
-      "callers": ["FUN_6f8853c4|0x6F8853C4", "FUN_6f88581f|0x6F88581F", "FUN_6f888f64|0x6F888F64"],
+      "callers": ["FUN_6f888f64|0x6F888F64", "FUN_6f8853c4|0x6F8853C4", "FUN_6f88581f|0x6F88581F"],
       "string_count": 0,
       "strings": [],
       "constant_count": 2,
@@ -5443,7 +5443,7 @@
       "api_calls": [],
       "instructions": ["0x6E19|PUSH|EBP", "0x6E1A|MOV|EBP, ESP", "0x6E1C|SUB|ESP, 0x14", "0x6E1F|MOV|EAX, [0x6f8925d8]", "0x6E24|MOV|EDX, dword ptr [0x6f8925dc]", "0x6E2A|PUSH|EBX", "0x6E2B|PUSH|ESI", "0x6E2C|LEA|EAX, [EAX + EAX*0x4]", "0x6E2F|PUSH|EDI", "0x6E30|LEA|EDI, [EDX + EAX*0x4]", "0x6E33|MOV|EAX, dword ptr [EBP + 0x8]", "0x6E36|MOV|dword ptr [EBP + -0x4], EDI", "0x6E39|LEA|ECX, [EAX + 0x17]", "0x6E3C|AND|ECX, 0xfffffff0", "0x6E3F|MOV|dword ptr [EBP + -0x10], ECX"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Inventory", "CALLER_3", "CALLEE_2", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F887122",
@@ -5479,7 +5479,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 4,
-      "callees": ["HeapAlloc|0x32", "HeapReAlloc|0x52", "HeapFree|0x3B", "VirtualAlloc|0x3C"],
+      "callees": ["HeapReAlloc|0x52", "HeapFree|0x3B", "HeapAlloc|0x32", "VirtualAlloc|0x3C"],
       "caller_count": 1,
       "callers": ["FUN_6f886e19|0x6F886E19"],
       "string_count": 0,
@@ -5492,7 +5492,7 @@
       "api_calls": [],
       "instructions": ["0x7122|MOV|EAX, [0x6f8925d8]", "0x7127|MOV|ECX, dword ptr [0x6f8925c8]", "0x712D|PUSH|ESI", "0x712E|PUSH|EDI", "0x712F|XOR|EDI, EDI", "0x7131|CMP|EAX, ECX", "0x7133|JNZ|0x6f887165", "0x7135|LEA|EAX, [ECX + ECX*0x4 + 0x50]", "0x7139|SHL|EAX, 0x2", "0x713C|PUSH|EAX", "0x713D|PUSH|dword ptr [0x6f8925dc]", "0x7143|PUSH|EDI", "0x7144|PUSH|dword ptr [0x6f8925e4]", "0x714A|CALL|dword ptr [0x6f88b118]", "0x7150|CMP|EAX, EDI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_0", "CALLEE_4"]
     },
     {
       "address": "0x6F8871D3",
@@ -5541,7 +5541,7 @@
       "api_calls": [],
       "instructions": ["0x71D3|PUSH|EBP", "0x71D4|MOV|EBP, ESP", "0x71D6|PUSH|ECX", "0x71D7|MOV|ECX, dword ptr [EBP + 0x8]", "0x71DA|PUSH|EBX", "0x71DB|PUSH|ESI", "0x71DC|PUSH|EDI", "0x71DD|MOV|ESI, dword ptr [ECX + 0x10]", "0x71E0|MOV|EAX, dword ptr [ECX + 0x8]", "0x71E3|XOR|EBX, EBX", "0x71E5|TEST|EAX, EAX", "0x71E7|JL|0x6f8871ee", "0x71E9|SHL|EAX, 0x1", "0x71EB|INC|EBX", "0x71EC|JMP|0x6f8871e5"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_1", "STRUCT_ItemData", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x6F8872CE",
@@ -5590,7 +5590,7 @@
       "api_calls": [],
       "instructions": ["0x72CE|PUSH|EBP", "0x72CF|MOV|EBP, ESP", "0x72D1|SUB|ESP, 0xc", "0x72D4|MOV|ECX, dword ptr [EBP + 0x8]", "0x72D7|MOV|EAX, dword ptr [EBP + 0x10]", "0x72DA|PUSH|EBX", "0x72DB|PUSH|ESI", "0x72DC|PUSH|EDI", "0x72DD|MOV|EDI, dword ptr [EBP + 0xc]", "0x72E0|MOV|EDX, EDI", "0x72E2|LEA|ESI, [EAX + 0x17]", "0x72E5|SUB|EDX, dword ptr [ECX + 0xc]", "0x72E8|MOV|EAX, dword ptr [ECX + 0x10]", "0x72EB|AND|ESI, 0xfffffff0", "0x72EE|SHR|EDX, 0xf"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "STRUCT_ItemData", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control"]
     },
     {
       "address": "0x6F8875C4",
@@ -5626,7 +5626,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["HeapAlloc|0x32", "HeapFree|0x3B", "_memset|0x6F888B40", "VirtualAlloc|0x3C", "VirtualFree|0x51"],
+      "callees": ["_memset|0x6F888B40", "HeapFree|0x3B", "HeapAlloc|0x32", "VirtualAlloc|0x3C", "VirtualFree|0x51"],
       "caller_count": 2,
       "callers": ["FUN_6f8878bc|0x6F8878BC", "FUN_6f886703|0x6F886703"],
       "string_count": 0,
@@ -5639,7 +5639,7 @@
       "api_calls": [],
       "instructions": ["0x75C4|CMP|dword ptr [0x6f88e5f8], -0x1", "0x75CB|PUSH|EBX", "0x75CC|PUSH|EBP", "0x75CD|PUSH|ESI", "0x75CE|PUSH|EDI", "0x75CF|JNZ|0x6f8875d8", "0x75D1|MOV|ESI, 0x6f88e5e8", "0x75D6|JMP|0x6f8875f5", "0x75D8|PUSH|0x2020", "0x75DD|PUSH|0x0", "0x75DF|PUSH|dword ptr [0x6f8925e4]", "0x75E5|CALL|dword ptr [0x6f88b098]", "0x75EB|MOV|ESI, EAX", "0x75ED|TEST|ESI, ESI", "0x75EF|JZ|0x6f887701"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_2", "PARAM_0", "STRUCT_UnitAny", "CALLEE_5", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F887708",
@@ -5688,7 +5688,7 @@
       "api_calls": [],
       "instructions": ["0x7708|PUSH|ESI", "0x7709|MOV|ESI, dword ptr [ESP + 0x8]", "0x770D|PUSH|0x8000", "0x7712|PUSH|0x0", "0x7714|PUSH|dword ptr [ESI + 0x10]", "0x7717|CALL|dword ptr [0x6f88b114]", "0x771D|CMP|dword ptr [0x6f890608], ESI", "0x7723|JNZ|0x6f88772d", "0x7725|MOV|EAX, dword ptr [ESI + 0x4]", "0x7728|MOV|[0x6f890608], EAX", "0x772D|CMP|ESI, 0x6f88e5e8", "0x7733|JZ|0x6f887755", "0x7735|MOV|EAX, dword ptr [ESI + 0x4]", "0x7738|MOV|ECX, dword ptr [ESI]", "0x773A|PUSH|ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_2", "PARAM_1"]
     },
     {
       "address": "0x6F88775E",
@@ -5724,7 +5724,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 2,
-      "callees": ["VirtualFree|0x51", "FUN_6f887708|0x6F887708"],
+      "callees": ["FUN_6f887708|0x6F887708", "VirtualFree|0x51"],
       "caller_count": 1,
       "callers": ["FUN_6f887877|0x6F887877"],
       "string_count": 0,
@@ -5737,7 +5737,7 @@
       "api_calls": [],
       "instructions": ["0x775E|PUSH|EBP", "0x775F|MOV|EBP, ESP", "0x7761|PUSH|ECX", "0x7762|PUSH|EBX", "0x7763|PUSH|ESI", "0x7764|MOV|ESI, dword ptr [0x6f88e5ec]", "0x776A|PUSH|EDI", "0x776B|CMP|dword ptr [ESI + 0x10], -0x1", "0x776F|JZ|0x6f887809", "0x7775|AND|dword ptr [EBP + -0x4], 0x0", "0x7779|LEA|EDI, [ESI + 0x2010]", "0x777F|MOV|EBX, 0x3ff000", "0x7784|CMP|dword ptr [EDI], 0xf0", "0x778A|JNZ|0x6f8877c5", "0x778C|MOV|EAX, EBX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_2", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F887820",
@@ -5786,7 +5786,7 @@
       "api_calls": [],
       "instructions": ["0x7820|MOV|EAX, dword ptr [ESP + 0x4]", "0x7824|MOV|EDX, 0x6f88e5e8", "0x7829|PUSH|ESI", "0x782A|MOV|ECX, EDX", "0x782C|CMP|EAX, dword ptr [ECX + 0x10]", "0x782F|JBE|0x6f887836", "0x7831|CMP|EAX, dword ptr [ECX + 0x14]", "0x7834|JC|0x6f88783e", "0x7836|MOV|ECX, dword ptr [ECX]", "0x7838|CMP|ECX, EDX", "0x783A|JZ|0x6f887873", "0x783C|JMP|0x6f88782c", "0x783E|TEST|AL, 0xf", "0x7840|JNZ|0x6f887873", "0x7842|MOV|ESI, EAX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLEE_0", "CALLER_3", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control"]
     },
     {
       "address": "0x6F887877",
@@ -5835,7 +5835,7 @@
       "api_calls": [],
       "instructions": ["0x7877|MOV|EAX, dword ptr [ESP + 0x4]", "0x787B|MOV|ECX, dword ptr [ESP + 0x8]", "0x787F|SUB|ECX, dword ptr [EAX + 0x10]", "0x7882|SAR|ECX, 0xc", "0x7885|LEA|EAX, [EAX + ECX*0x8 + 0x18]", "0x7889|MOV|ECX, dword ptr [ESP + 0xc]", "0x788D|MOVZX|EDX, byte ptr [ECX]", "0x7890|ADD|dword ptr [EAX], EDX", "0x7892|AND|byte ptr [ECX], 0x0", "0x7895|CMP|dword ptr [EAX], 0xf0", "0x789B|MOV|dword ptr [EAX + 0x4], 0xf1", "0x78A2|JNZ|0x6f8878bb", "0x78A4|INC|dword ptr [0x6f8921ec]", "0x78AA|CMP|dword ptr [0x6f8921ec], 0x20", "0x78B1|JNZ|0x6f8878bb"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_2", "CALLEE_1", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F8878BC",
@@ -5871,9 +5871,9 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 4,
-      "callees": ["FUN_6f887ac4|0x6F887AC4", "_memset|0x6F888B40", "VirtualAlloc|0x3C", "FUN_6f8875c4|0x6F8875C4"],
+      "callees": ["_memset|0x6F888B40", "FUN_6f887ac4|0x6F887AC4", "VirtualAlloc|0x3C", "FUN_6f8875c4|0x6F8875C4"],
       "caller_count": 3,
-      "callers": ["FUN_6f8853c4|0x6F8853C4", "FUN_6f88581f|0x6F88581F", "FUN_6f888f64|0x6F888F64"],
+      "callers": ["FUN_6f888f64|0x6F888F64", "FUN_6f8853c4|0x6F8853C4", "FUN_6f88581f|0x6F88581F"],
       "string_count": 0,
       "strings": [],
       "constant_count": 9,
@@ -5884,7 +5884,7 @@
       "api_calls": [],
       "instructions": ["0x78BC|PUSH|EBP", "0x78BD|MOV|EBP, ESP", "0x78BF|PUSH|ECX", "0x78C0|PUSH|ECX", "0x78C1|PUSH|EBX", "0x78C2|PUSH|ESI", "0x78C3|MOV|ESI, dword ptr [0x6f890608]", "0x78C9|PUSH|EDI", "0x78CA|MOV|EDX, dword ptr [ESI + 0x10]", "0x78CD|CMP|EDX, -0x1", "0x78D0|JZ|0x6f887975", "0x78D6|MOV|EDI, dword ptr [ESI + 0x8]", "0x78D9|LEA|ECX, [ESI + 0x2018]", "0x78DF|MOV|EAX, EDI", "0x78E1|SUB|EAX, ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Inventory", "CALLER_3", "PARAM_1", "CALLEE_4", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F887AC4",
@@ -5933,7 +5933,7 @@
       "api_calls": [],
       "instructions": ["0x7AC4|PUSH|EBP", "0x7AC5|MOV|EBP, ESP", "0x7AC7|PUSH|ECX", "0x7AC8|MOV|ECX, dword ptr [EBP + 0x8]", "0x7ACB|MOV|EDX, dword ptr [EBP + 0x10]", "0x7ACE|PUSH|EBX", "0x7ACF|PUSH|ESI", "0x7AD0|MOV|ESI, dword ptr [ECX + 0x4]", "0x7AD3|PUSH|EDI", "0x7AD4|MOV|EDI, dword ptr [ECX]", "0x7AD6|LEA|EBX, [ECX + 0xf8]", "0x7ADC|CMP|ESI, EDX", "0x7ADE|MOV|dword ptr [EBP + -0x4], EDI", "0x7AE1|MOV|EAX, EDI", "0x7AE3|MOV|dword ptr [EBP + 0x8], EBX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control"]
     },
     {
       "address": "0x6F887BE8",
@@ -5982,7 +5982,7 @@
       "api_calls": [],
       "instructions": ["0x7BE8|PUSH|EBP", "0x7BE9|MOV|EBP, ESP", "0x7BEB|PUSH|ECX", "0x7BEC|MOV|EDX, dword ptr [EBP + 0x10]", "0x7BEF|PUSH|EBX", "0x7BF0|MOV|EBX, dword ptr [EBP + 0xc]", "0x7BF3|PUSH|ESI", "0x7BF4|MOVZX|ECX, byte ptr [EDX]", "0x7BF7|PUSH|EDI", "0x7BF8|MOV|EDI, dword ptr [EBP + 0x8]", "0x7BFB|AND|dword ptr [EBP + -0x4], 0x0", "0x7BFF|MOV|EAX, EBX", "0x7C01|SUB|EAX, dword ptr [EDI + 0x10]", "0x7C04|SAR|EAX, 0xc", "0x7C07|CMP|ECX, dword ptr [EBP + 0x14]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_4", "CALLEE_0", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F887C91",
@@ -6020,7 +6020,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["FUN_6f8853c4|0x6F8853C4", "__nh_malloc|0x6F8857F3", "FUN_6f888f64|0x6F888F64"],
+      "callers": ["__nh_malloc|0x6F8857F3", "FUN_6f888f64|0x6F888F64", "FUN_6f8853c4|0x6F8853C4"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -6031,7 +6031,7 @@
       "api_calls": [],
       "instructions": ["0x7C91|MOV|EAX, [0x6f8921f0]", "0x7C96|TEST|EAX, EAX", "0x7C98|JZ|0x6f887ca9", "0x7C9A|PUSH|dword ptr [ESP + 0x4]", "0x7C9E|CALL|EAX", "0x7CA0|TEST|EAX, EAX", "0x7CA2|POP|ECX", "0x7CA3|JZ|0x6f887ca9", "0x7CA5|PUSH|0x1", "0x7CA7|POP|EAX", "0x7CA8|RET|", "0x7CA9|XOR|EAX, EAX", "0x7CAB|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F887CB0",
@@ -6080,7 +6080,7 @@
       "api_calls": [],
       "instructions": ["0x7CB0|PUSH|EBP", "0x7CB1|MOV|EBP, ESP", "0x7CB3|PUSH|EDI", "0x7CB4|PUSH|ESI", "0x7CB5|MOV|ESI, dword ptr [EBP + 0xc]", "0x7CB8|MOV|ECX, dword ptr [EBP + 0x10]", "0x7CBB|MOV|EDI, dword ptr [EBP + 0x8]", "0x7CBE|MOV|EAX, ECX", "0x7CC0|MOV|EDX, ECX", "0x7CC2|ADD|EAX, ESI", "0x7CC4|CMP|EDI, ESI", "0x7CC6|JBE|0x6f887cd0", "0x7CC8|CMP|EDI, EAX", "0x7CCA|JC|0x6f887e48", "0x7CD0|TEST|EDI, 0x3"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLER_2", "CALLEE_0", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F887FE8",
@@ -6129,7 +6129,7 @@
       "api_calls": ["RtlUnwind"],
       "instructions": ["0x7FE8|PUSH|EBP", "0x7FE9|MOV|EBP, ESP", "0x7FEB|PUSH|EBX", "0x7FEC|PUSH|ESI", "0x7FED|PUSH|EDI", "0x7FEE|PUSH|EBP", "0x7FEF|PUSH|0x0", "0x7FF1|PUSH|0x0", "0x7FF3|PUSH|0x6f888000", "0x7FF8|PUSH|dword ptr [EBP + 0x8]", "0x7FFB|CALL|0x6f88aea4", "0x8000|POP|EBP", "0x8001|POP|EDI", "0x8002|POP|ESI", "0x8003|POP|EBX"],
       "comment": "Library Function - Single Match\n __global_unwind2\n\nLibrary: Visual Studio",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F88802A",
@@ -6178,7 +6178,7 @@
       "api_calls": [],
       "instructions": ["0x802A|PUSH|EBX", "0x802B|PUSH|ESI", "0x802C|PUSH|EDI", "0x802D|MOV|EAX, dword ptr [ESP + 0x10]", "0x8031|PUSH|EAX", "0x8032|PUSH|-0x2", "0x8034|PUSH|0x6f888008", "0x8039|PUSH|dword ptr FS:[0x0]", "0x8040|MOV|dword ptr FS:[0x0], ESP", "0x8047|MOV|EAX, dword ptr [ESP + 0x20]", "0x804B|MOV|EBX, dword ptr [EAX + 0x8]", "0x804E|MOV|ESI, dword ptr [EAX + 0xc]", "0x8051|CMP|ESI, -0x1", "0x8054|JZ|0x6f888084", "0x8056|CMP|ESI, dword ptr [ESP + 0x24]"],
       "comment": "Library Function - Single Match\n __local_unwind2\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release, Visual Studio 2003 Debug, Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_1", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x6F8880BE",
@@ -6227,7 +6227,7 @@
       "api_calls": [],
       "instructions": ["0x80BE|PUSH|EBX", "0x80BF|PUSH|ECX", "0x80C0|MOV|EBX, 0x6f890610", "0x80C5|MOV|ECX, dword ptr [EBP + 0x8]", "0x80C8|MOV|dword ptr [EBX + 0x8], ECX", "0x80CB|MOV|dword ptr [EBX + 0x4], EAX", "0x80CE|MOV|dword ptr [EBX + 0xc], EBP", "0x80D1|POP|ECX", "0x80D2|POP|EBX", "0x80D3|RET|0x4"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F88819D",
@@ -6276,7 +6276,7 @@
       "api_calls": [],
       "instructions": ["0x819D|PUSH|EBP", "0x819E|MOV|ECX, dword ptr [ESP + 0x8]", "0x81A2|MOV|EBP, dword ptr [ECX]", "0x81A4|MOV|EAX, dword ptr [ECX + 0x1c]", "0x81A7|PUSH|EAX", "0x81A8|MOV|EAX, dword ptr [ECX + 0x18]", "0x81AB|PUSH|EAX", "0x81AC|CALL|0x6f88802a", "0x81B1|ADD|ESP, 0x8", "0x81B4|POP|EBP", "0x81B5|RET|0x4"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F8881B8",
@@ -6312,7 +6312,7 @@
       "param_count": 3,
       "parameters": [{"name": "this", "type": "void *", "storage": "ECX:4 (auto)"}, {"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}],
       "callee_count": 2,
-      "callees": ["FUN_6f888203|0x6F888203", "FUN_6f888295|0x6F888295"],
+      "callees": ["FUN_6f888295|0x6F888295", "FUN_6f888203|0x6F888203"],
       "caller_count": 1,
       "callers": ["FUN_6f8881ed|0x6F8881ED"],
       "string_count": 0,
@@ -6325,7 +6325,7 @@
       "api_calls": [],
       "instructions": ["0x81B8|PUSH|EBP", "0x81B9|MOV|EBP, ESP", "0x81BB|PUSH|ECX", "0x81BC|PUSH|ESI", "0x81BD|FSTCW|word ptr [EBP + -0x4]", "0x81C1|PUSH|dword ptr [EBP + -0x4]", "0x81C4|CALL|0x6f888203", "0x81C9|MOV|ESI, EAX", "0x81CB|MOV|EAX, dword ptr [EBP + 0xc]", "0x81CE|NOT|EAX", "0x81D0|AND|ESI, EAX", "0x81D2|MOV|EAX, dword ptr [EBP + 0x8]", "0x81D5|AND|EAX, dword ptr [EBP + 0xc]", "0x81D8|OR|ESI, EAX", "0x81DA|PUSH|ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_3", "CALLER_1", "CALLEE_2"]
     },
     {
       "address": "0x6F8881ED",
@@ -6374,7 +6374,7 @@
       "api_calls": [],
       "instructions": ["0x81ED|MOV|EAX, dword ptr [ESP + 0x8]", "0x81F1|AND|EAX, 0xfff7ffff", "0x81F6|PUSH|EAX", "0x81F7|PUSH|dword ptr [ESP + 0x8]", "0x81FB|CALL|0x6f8881b8", "0x8200|POP|ECX", "0x8201|POP|ECX", "0x8202|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_3", "CALLER_1", "CALLEE_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F888203",
@@ -6423,7 +6423,7 @@
       "api_calls": [],
       "instructions": ["0x8203|PUSH|EBX", "0x8204|MOV|EBX, dword ptr [ESP + 0x8]", "0x8208|XOR|EAX, EAX", "0x820A|PUSH|EBP", "0x820B|TEST|BL, 0x1", "0x820E|PUSH|EDI", "0x820F|JZ|0x6f888214", "0x8211|PUSH|0x10", "0x8213|POP|EAX", "0x8214|TEST|BL, 0x4", "0x8217|JZ|0x6f88821b", "0x8219|OR|AL, 0x8", "0x821B|TEST|BL, 0x8", "0x821E|JZ|0x6f888222", "0x8220|OR|AL, 0x4"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF"]
     },
     {
       "address": "0x6F888295",
@@ -6472,7 +6472,7 @@
       "api_calls": [],
       "instructions": ["0x8295|PUSH|EBX", "0x8296|MOV|EBX, dword ptr [ESP + 0x8]", "0x829A|XOR|EAX, EAX", "0x829C|PUSH|ESI", "0x829D|TEST|BL, 0x10", "0x82A0|JZ|0x6f8882a5", "0x82A2|PUSH|0x1", "0x82A4|POP|EAX", "0x82A5|TEST|BL, 0x8", "0x82A8|JZ|0x6f8882ac", "0x82AA|OR|AL, 0x4", "0x82AC|TEST|BL, 0x4", "0x82AF|JZ|0x6f8882b3", "0x82B1|OR|AL, 0x8", "0x82B3|TEST|BL, 0x2"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF"]
     },
     {
       "address": "0x6F88831E",
@@ -6510,7 +6510,7 @@
       "callee_count": 1,
       "callees": ["FUN_6f889a0e|0x6F889A0E"],
       "caller_count": 5,
-      "callers": ["FUN_6f88a723|0x6F88A723", "FUN_6f888402|0x6F888402", "FUN_6f889f47|0x6F889F47", "FUN_6f885994|0x6F885994", "FUN_6f8894ac|0x6F8894AC"],
+      "callers": ["FUN_6f885994|0x6F885994", "FUN_6f88a723|0x6F88A723", "FUN_6f889f47|0x6F889F47", "FUN_6f8894ac|0x6F8894AC", "FUN_6f888402|0x6F888402"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -6521,7 +6521,7 @@
       "api_calls": [],
       "instructions": ["0x831E|PUSH|EBP", "0x831F|MOV|EBP, ESP", "0x8321|PUSH|ECX", "0x8322|MOV|EAX, dword ptr [EBP + 0x8]", "0x8325|LEA|ECX, [EAX + 0x1]", "0x8328|CMP|ECX, 0x100", "0x832E|JA|0x6f88833c", "0x8330|MOV|ECX, dword ptr [0x6f89062c]", "0x8336|MOVZX|EAX, word ptr [ECX + EAX*0x2]", "0x833A|JMP|0x6f88838e", "0x833C|MOV|ECX, EAX", "0x833E|PUSH|ESI", "0x833F|MOV|ESI, dword ptr [0x6f89062c]", "0x8345|SAR|ECX, 0x8", "0x8348|MOVZX|EDX, CL"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLEE_1", "CALLER_5"]
     },
     {
       "address": "0x6F888393",
@@ -6557,7 +6557,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 5,
-      "callees": ["FUN_6f888402|0x6F888402", "InterlockedIncrement|0x4A", "FUN_6f88534e|0x6F88534E", "FUN_6f8853af|0x6F8853AF", "InterlockedDecrement|0x4B"],
+      "callees": ["FUN_6f88534e|0x6F88534E", "InterlockedDecrement|0x4B", "InterlockedIncrement|0x4A", "FUN_6f8853af|0x6F8853AF", "FUN_6f888402|0x6F888402"],
       "caller_count": 1,
       "callers": ["FUN_6f885994|0x6F885994"],
       "string_count": 0,
@@ -6570,7 +6570,7 @@
       "api_calls": [],
       "instructions": ["0x8393|PUSH|EBX", "0x8394|XOR|EBX, EBX", "0x8396|CMP|dword ptr [0x6f892234], EBX", "0x839C|JNZ|0x6f8883b1", "0x839E|MOV|EAX, dword ptr [ESP + 0x8]", "0x83A2|CMP|EAX, 0x41", "0x83A5|JL|0x6f888400", "0x83A7|CMP|EAX, 0x5a", "0x83AA|JG|0x6f888400", "0x83AC|ADD|EAX, 0x20", "0x83AF|POP|EBX", "0x83B0|RET|", "0x83B1|PUSH|ESI", "0x83B2|MOV|ESI, 0x6f892394", "0x83B7|PUSH|EDI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_1", "CALLEE_5"]
     },
     {
       "address": "0x6F888402",
@@ -6608,7 +6608,7 @@
       "callee_count": 2,
       "callees": ["FUN_6f889b57|0x6F889B57", "FUN_6f88831e|0x6F88831E"],
       "caller_count": 3,
-      "callers": ["FUN_6f88ac70|0x6F88AC70", "FUN_6f888393|0x6F888393", "FUN_6f88aba0|0x6F88ABA0"],
+      "callers": ["FUN_6f88aba0|0x6F88ABA0", "FUN_6f888393|0x6F888393", "FUN_6f88ac70|0x6F88AC70"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -6619,7 +6619,7 @@
       "api_calls": [],
       "instructions": ["0x8402|PUSH|EBP", "0x8403|MOV|EBP, ESP", "0x8405|PUSH|ECX", "0x8406|CMP|dword ptr [0x6f892234], 0x0", "0x840D|PUSH|EBX", "0x840E|PUSH|ESI", "0x840F|PUSH|EDI", "0x8410|JNZ|0x6f88842f", "0x8412|MOV|EAX, dword ptr [EBP + 0x8]", "0x8415|CMP|EAX, 0x41", "0x8418|JL|0x6f8884c8", "0x841E|CMP|EAX, 0x5a", "0x8421|JG|0x6f8884c8", "0x8427|ADD|EAX, 0x20", "0x842A|JMP|0x6f8884c8"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_3", "CALLEE_2"]
     },
     {
       "address": "0x6F8884CD",
@@ -6668,7 +6668,7 @@
       "api_calls": [],
       "instructions": ["0x84CD|MOV|EAX, dword ptr [ESP + 0x8]", "0x84D1|PUSH|ESI", "0x84D2|PUSH|0x20", "0x84D4|CDQ|", "0x84D5|POP|ECX", "0x84D6|IDIV|ECX", "0x84D8|PUSH|0x1f", "0x84DA|MOV|ESI, EAX", "0x84DC|MOV|EAX, dword ptr [ESP + 0x10]", "0x84E0|CDQ|", "0x84E1|IDIV|ECX", "0x84E3|POP|ECX", "0x84E4|MOV|EAX, dword ptr [ESP + 0x8]", "0x84E8|SUB|ECX, EDX", "0x84EA|OR|EDX, 0xffffffff"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F888516",
@@ -6717,7 +6717,7 @@
       "api_calls": [],
       "instructions": ["0x8516|MOV|EAX, dword ptr [ESP + 0x8]", "0x851A|PUSH|EBX", "0x851B|PUSH|ESI", "0x851C|PUSH|EDI", "0x851D|PUSH|0x20", "0x851F|MOV|EBX, dword ptr [ESP + 0x14]", "0x8523|CDQ|", "0x8524|POP|ECX", "0x8525|IDIV|ECX", "0x8527|MOV|ESI, EAX", "0x8529|MOV|EAX, dword ptr [ESP + 0x14]", "0x852D|CDQ|", "0x852E|IDIV|ECX", "0x8530|LEA|EDI, [EBX + ESI*0x4]", "0x8533|PUSH|EDI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_1"]
     },
     {
       "address": "0x6F88856C",
@@ -6766,7 +6766,7 @@
       "api_calls": [],
       "instructions": ["0x856C|PUSH|EBP", "0x856D|MOV|EBP, ESP", "0x856F|PUSH|ECX", "0x8570|PUSH|ECX", "0x8571|MOV|EAX, dword ptr [EBP + 0xc]", "0x8574|PUSH|EBX", "0x8575|PUSH|ESI", "0x8576|PUSH|EDI", "0x8577|LEA|EDI, [EAX + -0x1]", "0x857A|PUSH|0x20", "0x857C|POP|ECX", "0x857D|AND|dword ptr [EBP + -0x4], 0x0", "0x8581|LEA|EBX, [EDI + 0x1]", "0x8584|PUSH|0x20", "0x8586|MOV|EAX, EBX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_2"]
     },
     {
       "address": "0x6F8885F8",
@@ -6815,7 +6815,7 @@
       "api_calls": [],
       "instructions": ["0x85F8|MOV|EAX, dword ptr [ESP + 0x8]", "0x85FC|MOV|ECX, dword ptr [ESP + 0x4]", "0x8600|PUSH|ESI", "0x8601|PUSH|0x3", "0x8603|SUB|ECX, EAX", "0x8605|POP|EDX", "0x8606|MOV|ESI, dword ptr [EAX]", "0x8608|MOV|dword ptr [ECX + EAX*0x1], ESI", "0x860B|ADD|EAX, 0x4", "0x860E|DEC|EDX", "0x860F|JNZ|0x6f888606", "0x8611|POP|ESI", "0x8612|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F888613",
@@ -6864,7 +6864,7 @@
       "api_calls": [],
       "instructions": ["0x8613|PUSH|EDI", "0x8614|MOV|EDI, dword ptr [ESP + 0x8]", "0x8618|XOR|EAX, EAX", "0x861A|STOSD|ES:EDI", "0x861B|STOSD|ES:EDI", "0x861C|STOSD|ES:EDI", "0x861D|POP|EDI", "0x861E|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F88861F",
@@ -6913,7 +6913,7 @@
       "api_calls": [],
       "instructions": ["0x861F|MOV|EAX, dword ptr [ESP + 0x4]", "0x8623|XOR|ECX, ECX", "0x8625|CMP|dword ptr [EAX], 0x0", "0x8628|JNZ|0x6f888637", "0x862A|INC|ECX", "0x862B|ADD|EAX, 0x4", "0x862E|CMP|ECX, 0x3", "0x8631|JL|0x6f888625", "0x8633|PUSH|0x1", "0x8635|POP|EAX", "0x8636|RET|", "0x8637|XOR|EAX, EAX", "0x8639|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F88863A",
@@ -6962,7 +6962,7 @@
       "api_calls": [],
       "instructions": ["0x863A|PUSH|EBP", "0x863B|MOV|EBP, ESP", "0x863D|SUB|ESP, 0xc", "0x8640|MOV|EAX, dword ptr [EBP + 0xc]", "0x8643|PUSH|EBX", "0x8644|PUSH|ESI", "0x8645|PUSH|EDI", "0x8646|PUSH|0x20", "0x8648|MOV|EDI, dword ptr [EBP + 0x8]", "0x864B|POP|EBX", "0x864C|OR|ESI, 0xffffffff", "0x864F|CDQ|", "0x8650|MOV|ECX, EBX", "0x8652|MOV|dword ptr [EBP + -0x4], 0x3", "0x8659|IDIV|ECX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F8886C7",
@@ -6998,7 +6998,7 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "ushort *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int *", "storage": "Stack[0xc]:4"}],
       "callee_count": 5,
-      "callees": ["FUN_6f888613|0x6F888613", "FUN_6f88861f|0x6F88861F", "FUN_6f88856c|0x6F88856C", "FUN_6f8885f8|0x6F8885F8", "FUN_6f88863a|0x6F88863A"],
+      "callees": ["FUN_6f8885f8|0x6F8885F8", "FUN_6f88861f|0x6F88861F", "FUN_6f888613|0x6F888613", "FUN_6f88863a|0x6F88863A", "FUN_6f88856c|0x6F88856C"],
       "caller_count": 2,
       "callers": ["FUN_6f888833|0x6F888833", "FUN_6f888849|0x6F888849"],
       "string_count": 0,
@@ -7011,7 +7011,7 @@
       "api_calls": [],
       "instructions": ["0x86C7|PUSH|EBP", "0x86C8|MOV|EBP, ESP", "0x86CA|SUB|ESP, 0x18", "0x86CD|MOV|EAX, dword ptr [EBP + 0x8]", "0x86D0|PUSH|EBX", "0x86D1|PUSH|ESI", "0x86D2|PUSH|EDI", "0x86D3|MOVZX|ECX, word ptr [EAX + 0xa]", "0x86D7|MOV|EBX, ECX", "0x86D9|AND|ECX, 0x8000", "0x86DF|MOV|dword ptr [EBP + 0x8], ECX", "0x86E2|MOV|ECX, dword ptr [EAX + 0x6]", "0x86E5|MOV|dword ptr [EBP + -0xc], ECX", "0x86E8|MOV|ECX, dword ptr [EAX + 0x2]", "0x86EB|MOVZX|EAX, word ptr [EAX]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLER_2", "STRUCT_UnitAny", "CALLEE_5", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F888833",
@@ -7060,7 +7060,7 @@
       "api_calls": [],
       "instructions": ["0x8833|PUSH|0x6f890838", "0x8838|PUSH|dword ptr [ESP + 0xc]", "0x883C|PUSH|dword ptr [ESP + 0xc]", "0x8840|CALL|0x6f8886c7", "0x8845|ADD|ESP, 0xc", "0x8848|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F888849",
@@ -7109,7 +7109,7 @@
       "api_calls": [],
       "instructions": ["0x8849|PUSH|0x6f890850", "0x884E|PUSH|dword ptr [ESP + 0xc]", "0x8852|PUSH|dword ptr [ESP + 0xc]", "0x8856|CALL|0x6f8886c7", "0x885B|ADD|ESP, 0xc", "0x885E|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F88885F",
@@ -7158,7 +7158,7 @@
       "api_calls": [],
       "instructions": ["0x885F|PUSH|EBP", "0x8860|MOV|EBP, ESP", "0x8862|SUB|ESP, 0xc", "0x8865|XOR|EAX, EAX", "0x8867|PUSH|EAX", "0x8868|PUSH|EAX", "0x8869|PUSH|EAX", "0x886A|PUSH|EAX", "0x886B|PUSH|dword ptr [EBP + 0xc]", "0x886E|LEA|EAX, [EBP + 0xc]", "0x8871|PUSH|EAX", "0x8872|LEA|EAX, [EBP + -0xc]", "0x8875|PUSH|EAX", "0x8876|CALL|0x6f889f47", "0x887B|PUSH|dword ptr [EBP + 0x8]"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_3", "CALLER_1", "CALLEE_2", "PROP_SMALL"]
     },
     {
       "address": "0x6F88888C",
@@ -7207,7 +7207,7 @@
       "api_calls": [],
       "instructions": ["0x888C|PUSH|EBP", "0x888D|MOV|EBP, ESP", "0x888F|SUB|ESP, 0xc", "0x8892|XOR|EAX, EAX", "0x8894|PUSH|EAX", "0x8895|PUSH|EAX", "0x8896|PUSH|EAX", "0x8897|PUSH|EAX", "0x8898|PUSH|dword ptr [EBP + 0xc]", "0x889B|LEA|EAX, [EBP + 0xc]", "0x889E|PUSH|EAX", "0x889F|LEA|EAX, [EBP + -0xc]", "0x88A2|PUSH|EAX", "0x88A3|CALL|0x6f889f47", "0x88A8|PUSH|dword ptr [EBP + 0x8]"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_3", "CALLER_1", "CALLEE_2", "PROP_SMALL"]
     },
     {
       "address": "0x6F8888B9",
@@ -7243,9 +7243,9 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}],
       "callee_count": 2,
-      "callees": ["_strlen|0x6F888EE0", "FUN_6f888ba0|0x6F888BA0"],
+      "callees": ["FUN_6f888ba0|0x6F888BA0", "_strlen|0x6F888EE0"],
       "caller_count": 3,
-      "callers": ["FUN_6f885bb5|0x6F885BB5", "FUN_6f885cb1|0x6F885CB1", "FUN_6f885a92|0x6F885A92"],
+      "callers": ["FUN_6f885bb5|0x6F885BB5", "FUN_6f885a92|0x6F885A92", "FUN_6f885cb1|0x6F885CB1"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -7256,7 +7256,7 @@
       "api_calls": [],
       "instructions": ["0x88B9|PUSH|EBP", "0x88BA|MOV|EBP, ESP", "0x88BC|MOV|EDX, dword ptr [EBP + 0x10]", "0x88BF|PUSH|EBX", "0x88C0|MOV|EBX, dword ptr [EBP + 0xc]", "0x88C3|PUSH|ESI", "0x88C4|MOV|ESI, dword ptr [EBP + 0x8]", "0x88C7|MOV|ECX, dword ptr [EDX + 0xc]", "0x88CA|PUSH|EDI", "0x88CB|LEA|EDI, [ESI + 0x1]", "0x88CE|MOV|byte ptr [ESI], 0x30", "0x88D1|TEST|EBX, EBX", "0x88D3|MOV|EAX, EDI", "0x88D5|JLE|0x6f8888f6", "0x88D7|MOV|dword ptr [EBP + 0x8], EBX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "STRUCT_Skill", "CALLER_3", "CALLEE_2", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x6F888930",
@@ -7292,9 +7292,9 @@
       "param_count": 4,
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int *", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint *", "storage": "Stack[0x10]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_6f888a50|0x6F888A50", "FUN_6f88898c|0x6F88898C", "FUN_6f88a418|0x6F88A418"],
+      "callees": ["FUN_6f88a418|0x6F88A418", "FUN_6f888a50|0x6F888A50", "FUN_6f88898c|0x6F88898C"],
       "caller_count": 3,
-      "callers": ["FUN_6f885bb5|0x6F885BB5", "FUN_6f885cb1|0x6F885CB1", "FUN_6f885a92|0x6F885A92"],
+      "callers": ["FUN_6f885bb5|0x6F885BB5", "FUN_6f885a92|0x6F885A92", "FUN_6f885cb1|0x6F885CB1"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -7305,7 +7305,7 @@
       "api_calls": [],
       "instructions": ["0x8930|PUSH|EBP", "0x8931|MOV|EBP, ESP", "0x8933|SUB|ESP, 0x28", "0x8936|PUSH|ESI", "0x8937|LEA|EAX, [EBP + 0x8]", "0x893A|PUSH|EDI", "0x893B|PUSH|EAX", "0x893C|LEA|EAX, [EBP + -0xc]", "0x893F|PUSH|EAX", "0x8940|CALL|0x6f88898c", "0x8945|POP|ECX", "0x8946|LEA|EAX, [EBP + -0x28]", "0x8949|POP|ECX", "0x894A|LEA|ESI, [EBP + -0xc]", "0x894D|PUSH|EAX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "STRUCT_Skill", "PARAM_4", "CALLER_3", "CALLEE_3", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F88898C",
@@ -7354,7 +7354,7 @@
       "api_calls": [],
       "instructions": ["0x898C|PUSH|EBP", "0x898D|MOV|EBP, ESP", "0x898F|PUSH|ECX", "0x8990|MOV|EDX, dword ptr [EBP + 0xc]", "0x8993|PUSH|EBX", "0x8994|PUSH|ESI", "0x8995|PUSH|EDI", "0x8996|MOV|AX, word ptr [EDX + 0x6]", "0x899A|MOV|EDI, 0x7ff", "0x899F|MOV|ECX, EAX", "0x89A1|AND|EAX, 0x8000", "0x89A6|SHR|ECX, 0x4", "0x89A9|AND|ECX, EDI", "0x89AB|MOV|dword ptr [EBP + 0xc], EAX", "0x89AE|MOV|EAX, dword ptr [EDX + 0x4]"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F888A50",
@@ -7392,7 +7392,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 5,
-      "callers": ["FUN_6f885af3|0x6F885AF3", "FUN_6f886841|0x6F886841", "FUN_6f888930|0x6F888930", "FUN_6f886156|0x6F886156", "FUN_6f88a418|0x6F88A418"],
+      "callers": ["FUN_6f886841|0x6F886841", "FUN_6f88a418|0x6F88A418", "FUN_6f885af3|0x6F885AF3", "FUN_6f886156|0x6F886156", "FUN_6f888930|0x6F888930"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -7403,7 +7403,7 @@
       "api_calls": [],
       "instructions": ["0x8A50|PUSH|EDI", "0x8A51|MOV|EDI, dword ptr [ESP + 0x8]", "0x8A55|JMP|0x6f888ac1"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_2", "PROP_TINY", "CALLEE_0", "CALLER_5", "PROP_LEAF"]
     },
     {
       "address": "0x6F888A60",
@@ -7452,7 +7452,7 @@
       "api_calls": [],
       "instructions": ["0x8A60|MOV|ECX, dword ptr [ESP + 0x4]", "0x8A64|PUSH|EDI", "0x8A65|TEST|ECX, 0x3", "0x8A6B|JZ|0x6f888a7c", "0x8A6D|MOV|AL, byte ptr [ECX]", "0x8A6F|INC|ECX", "0x8A70|TEST|AL, AL", "0x8A72|JZ|0x6f888aaf", "0x8A74|TEST|ECX, 0x3", "0x8A7A|JNZ|0x6f888a6d", "0x8A7C|MOV|EAX, dword ptr [ECX]", "0x8A7E|MOV|EDX, 0x7efefeff", "0x8A83|ADD|EDX, EAX", "0x8A85|XOR|EAX, 0xffffffff", "0x8A88|XOR|EAX, EDX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_0", "PROP_LOOPHEAVY", "PROP_LEAF"]
     },
     {
       "address": "0x6F888B40",
@@ -7490,7 +7490,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 5,
-      "callers": ["FUN_6f889a0e|0x6F889A0E", "FUN_6f8878bc|0x6F8878BC", "FUN_6f885c0a|0x6F885C0A", "FUN_6f8875c4|0x6F8875C4", "FUN_6f888f64|0x6F888F64"],
+      "callers": ["FUN_6f885c0a|0x6F885C0A", "FUN_6f888f64|0x6F888F64", "FUN_6f8878bc|0x6F8878BC", "FUN_6f889a0e|0x6F889A0E", "FUN_6f8875c4|0x6F8875C4"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -7501,7 +7501,7 @@
       "api_calls": [],
       "instructions": ["0x8B40|MOV|EDX, dword ptr [ESP + 0xc]", "0x8B44|MOV|ECX, dword ptr [ESP + 0x4]", "0x8B48|TEST|EDX, EDX", "0x8B4A|JZ|0x6f888b93", "0x8B4C|XOR|EAX, EAX", "0x8B4E|MOV|AL, byte ptr [ESP + 0x8]", "0x8B52|PUSH|EDI", "0x8B53|MOV|EDI, ECX", "0x8B55|CMP|EDX, 0x4", "0x8B58|JC|0x6f888b87", "0x8B5A|NEG|ECX", "0x8B5C|AND|ECX, 0x3", "0x8B5F|JZ|0x6f888b69", "0x8B61|SUB|EDX, ECX", "0x8B63|MOV|byte ptr [EDI], AL"],
       "comment": "Library Function - Single Match\n _memset\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLEE_0", "CALLER_5", "PROP_LEAF"]
     },
     {
       "address": "0x6F888BA0",
@@ -7539,7 +7539,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["FUN_6f885d95|0x6F885D95", "FUN_6f8888b9|0x6F8888B9", "FUN_6f886af0|0x6F886AF0"],
+      "callers": ["FUN_6f886af0|0x6F886AF0", "FUN_6f8888b9|0x6F8888B9", "FUN_6f885d95|0x6F885D95"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -7550,7 +7550,7 @@
       "api_calls": [],
       "instructions": ["0x8BA0|PUSH|EBP", "0x8BA1|MOV|EBP, ESP", "0x8BA3|PUSH|EDI", "0x8BA4|PUSH|ESI", "0x8BA5|MOV|ESI, dword ptr [EBP + 0xc]", "0x8BA8|MOV|ECX, dword ptr [EBP + 0x10]", "0x8BAB|MOV|EDI, dword ptr [EBP + 0x8]", "0x8BAE|MOV|EAX, ECX", "0x8BB0|MOV|EDX, ECX", "0x8BB2|ADD|EAX, ESI", "0x8BB4|CMP|EDI, ESI", "0x8BB6|JBE|0x6f888bc0", "0x8BB8|CMP|EDI, EAX", "0x8BBA|JC|0x6f888d38", "0x8BC0|TEST|EDI, 0x3"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLEE_0", "CALLER_3", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F888EE0",
@@ -7588,7 +7588,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 4,
-      "callers": ["FUN_6f886841|0x6F886841", "FUN_6f885d95|0x6F885D95", "FUN_6f8888b9|0x6F8888B9", "FUN_6f886156|0x6F886156"],
+      "callers": ["FUN_6f886841|0x6F886841", "FUN_6f886156|0x6F886156", "FUN_6f8888b9|0x6F8888B9", "FUN_6f885d95|0x6F885D95"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -7599,7 +7599,7 @@
       "api_calls": [],
       "instructions": ["0x8EE0|MOV|ECX, dword ptr [ESP + 0x4]", "0x8EE4|TEST|ECX, 0x3", "0x8EEA|JZ|0x6f888f00", "0x8EEC|MOV|AL, byte ptr [ECX]", "0x8EEE|INC|ECX", "0x8EEF|TEST|AL, AL", "0x8EF1|JZ|0x6f888f33", "0x8EF3|TEST|ECX, 0x3", "0x8EF9|JNZ|0x6f888eec", "0x8EFB|ADD|EAX, 0x0", "0x8F00|MOV|EAX, dword ptr [ECX]", "0x8F02|MOV|EDX, 0x7efefeff", "0x8F07|ADD|EDX, EAX", "0x8F09|XOR|EAX, 0xffffffff", "0x8F0C|XOR|EAX, EDX"],
       "comment": "Library Function - Single Match\n _strlen\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
-      "tags": []
+      "tags": ["CALLEE_0", "CALLER_4", "PARAM_1", "PROP_LOOPHEAVY", "PROP_LEAF"]
     },
     {
       "address": "0x6F888F64",
@@ -7635,7 +7635,7 @@
       "param_count": 2,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
       "callee_count": 8,
-      "callees": ["HeapAlloc|0x32", "FUN_6f887c91|0x6F887C91", "FUN_6f8878bc|0x6F8878BC", "FUN_6f886e19|0x6F886E19", "_memset|0x6F888B40", "FUN_6f888ffd|0x6F888FFD", "FUN_6f88534e|0x6F88534E", "FUN_6f889086|0x6F889086"],
+      "callees": ["FUN_6f88534e|0x6F88534E", "_memset|0x6F888B40", "FUN_6f888ffd|0x6F888FFD", "FUN_6f887c91|0x6F887C91", "FUN_6f889086|0x6F889086", "FUN_6f8878bc|0x6F8878BC", "HeapAlloc|0x32", "FUN_6f886e19|0x6F886E19"],
       "caller_count": 2,
       "callers": ["FUN_6f885dba|0x6F885DBA", "FUN_6f885e3f|0x6F885E3F"],
       "string_count": 0,
@@ -7648,7 +7648,7 @@
       "api_calls": [],
       "instructions": ["0x8F64|PUSH|EBP", "0x8F65|MOV|EBP, ESP", "0x8F67|PUSH|-0x1", "0x8F69|PUSH|0x6f88b5e0", "0x8F6E|PUSH|0x6f8880e0", "0x8F73|MOV|EAX, FS:[0x0]", "0x8F79|PUSH|EAX", "0x8F7A|MOV|dword ptr FS:[0x0], ESP", "0x8F81|SUB|ESP, 0x18", "0x8F84|PUSH|EBX", "0x8F85|PUSH|ESI", "0x8F86|PUSH|EDI", "0x8F87|MOV|ESI, dword ptr [EBP + 0x8]", "0x8F8A|IMUL|ESI, dword ptr [EBP + 0xc]", "0x8F8E|MOV|dword ptr [EBP + 0xc], ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_2", "STRUCT_Control", "CALLEE_8"]
     },
     {
       "address": "0x6F888FFD",
@@ -7697,7 +7697,7 @@
       "api_calls": [],
       "instructions": ["0x8FFD|PUSH|0x9", "0x8FFF|CALL|0x6f8853af", "0x9004|POP|ECX", "0x9005|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F889086",
@@ -7746,7 +7746,7 @@
       "api_calls": [],
       "instructions": ["0x9086|PUSH|0x9", "0x9088|CALL|0x6f8853af", "0x908D|POP|ECX", "0x908E|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F8890A1",
@@ -7782,7 +7782,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 7,
-      "callees": ["GetCPInfo|0x49", "FUN_6f88924e|0x6F88924E", "FUN_6f8892cb|0x6F8892CB", "FUN_6f88534e|0x6F88534E", "FUN_6f8853af|0x6F8853AF", "FUN_6f889298|0x6F889298", "FUN_6f8892f4|0x6F8892F4"],
+      "callees": ["FUN_6f88534e|0x6F88534E", "GetCPInfo|0x49", "FUN_6f889298|0x6F889298", "FUN_6f88924e|0x6F88924E", "FUN_6f8892cb|0x6F8892CB", "FUN_6f8892f4|0x6F8892F4", "FUN_6f8853af|0x6F8853AF"],
       "caller_count": 1,
       "callers": ["FUN_6f889479|0x6F889479"],
       "string_count": 0,
@@ -7795,7 +7795,7 @@
       "api_calls": [],
       "instructions": ["0x90A1|PUSH|EBP", "0x90A2|MOV|EBP, ESP", "0x90A4|SUB|ESP, 0x18", "0x90A7|PUSH|EBX", "0x90A8|PUSH|ESI", "0x90A9|PUSH|EDI", "0x90AA|PUSH|0x19", "0x90AC|CALL|0x6f88534e", "0x90B1|PUSH|dword ptr [EBP + 0x8]", "0x90B4|CALL|0x6f88924e", "0x90B9|MOV|EBX, EAX", "0x90BB|POP|ECX", "0x90BC|CMP|EBX, dword ptr [0x6f892398]", "0x90C2|POP|ECX", "0x90C3|MOV|dword ptr [EBP + 0x8], EBX"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "STRUCT_Skill", "PARAM_1", "PROP_LOOPHEAVY", "CALLEE_7"]
     },
     {
       "address": "0x6F88924E",
@@ -7844,7 +7844,7 @@
       "api_calls": [],
       "instructions": ["0x924E|MOV|EAX, dword ptr [ESP + 0x4]", "0x9252|AND|dword ptr [0x6f8921f8], 0x0", "0x9259|CMP|EAX, -0x2", "0x925C|JNZ|0x6f88926e", "0x925E|MOV|dword ptr [0x6f8921f8], 0x1", "0x9268|JMP|dword ptr [0x6f88b0ec]", "0x926E|CMP|EAX, -0x3", "0x9271|JNZ|0x6f889283", "0x9273|MOV|dword ptr [0x6f8921f8], 0x1", "0x927D|JMP|dword ptr [0x6f88b0f0]", "0x9283|CMP|EAX, -0x4", "0x9286|JNZ|0x6f889297", "0x9288|MOV|EAX, [0x6f892244]", "0x928D|MOV|dword ptr [0x6f8921f8], 0x1", "0x9297|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF"]
     },
     {
       "address": "0x6F889298",
@@ -7893,7 +7893,7 @@
       "api_calls": [],
       "instructions": ["0x9298|MOV|EAX, dword ptr [ESP + 0x4]", "0x929C|SUB|EAX, 0x3a4", "0x92A1|JZ|0x6f8892c5", "0x92A3|SUB|EAX, 0x4", "0x92A6|JZ|0x6f8892bf", "0x92A8|SUB|EAX, 0xd", "0x92AB|JZ|0x6f8892b9", "0x92AD|DEC|EAX", "0x92AE|JZ|0x6f8892b3", "0x92B0|XOR|EAX, EAX", "0x92B2|RET|", "0x92B3|MOV|EAX, 0x404", "0x92B8|RET|", "0x92B9|MOV|EAX, 0x412", "0x92BE|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF"]
     },
     {
       "address": "0x6F8892CB",
@@ -7942,7 +7942,7 @@
       "api_calls": [],
       "instructions": ["0x92CB|PUSH|EDI", "0x92CC|PUSH|0x40", "0x92CE|POP|ECX", "0x92CF|XOR|EAX, EAX", "0x92D1|MOV|EDI, 0x6f8924c0", "0x92D6|STOSD.REP|ES:EDI", "0x92D8|STOSB|ES:EDI", "0x92D9|XOR|EAX, EAX", "0x92DB|MOV|EDI, 0x6f8923a0", "0x92E0|MOV|[0x6f892398], EAX", "0x92E5|MOV|[0x6f8923ac], EAX", "0x92EA|MOV|[0x6f8925c4], EAX", "0x92EF|STOSD|ES:EDI", "0x92F0|STOSD|ES:EDI", "0x92F1|STOSD|ES:EDI"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F8892F4",
@@ -7978,7 +7978,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 3,
-      "callees": ["FUN_6f889a0e|0x6F889A0E", "FUN_6f889b57|0x6F889B57", "GetCPInfo|0x49"],
+      "callees": ["GetCPInfo|0x49", "FUN_6f889b57|0x6F889B57", "FUN_6f889a0e|0x6F889A0E"],
       "caller_count": 1,
       "callers": ["FUN_6f8890a1|0x6F8890A1"],
       "string_count": 0,
@@ -7991,7 +7991,7 @@
       "api_calls": [],
       "instructions": ["0x92F4|PUSH|EBP", "0x92F5|MOV|EBP, ESP", "0x92F7|SUB|ESP, 0x514", "0x92FD|LEA|EAX, [EBP + -0x14]", "0x9300|PUSH|ESI", "0x9301|PUSH|EAX", "0x9302|PUSH|dword ptr [0x6f892398]", "0x9308|CALL|dword ptr [0x6f88b0f4]", "0x930E|CMP|EAX, 0x1", "0x9311|JNZ|0x6f88942d", "0x9317|XOR|EAX, EAX", "0x9319|MOV|ESI, 0x100", "0x931E|MOV|byte ptr [EBP + EAX*0x1 + 0xfffffeec], AL", "0x9325|INC|EAX", "0x9326|CMP|EAX, ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_0", "CALLEE_3", "PROP_LOOPHEAVY"]
     },
     {
       "address": "0x6F889479",
@@ -8029,7 +8029,7 @@
       "callee_count": 1,
       "callees": ["FUN_6f8890a1|0x6F8890A1"],
       "caller_count": 2,
-      "callers": ["FUN_6f88620f|0x6F88620F", "FUN_6f886156|0x6F886156"],
+      "callers": ["FUN_6f886156|0x6F886156", "FUN_6f88620f|0x6F88620F"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -8040,7 +8040,7 @@
       "api_calls": [],
       "instructions": ["0x9479|CMP|dword ptr [0x6f892710], 0x0", "0x9480|JNZ|0x6f889494", "0x9482|PUSH|-0x3", "0x9484|CALL|0x6f8890a1", "0x9489|POP|ECX", "0x948A|MOV|dword ptr [0x6f892710], 0x1", "0x9494|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_2", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x6F889495",
@@ -8089,7 +8089,7 @@
       "api_calls": [],
       "instructions": ["0x9495|PUSH|0x0", "0x9497|PUSH|dword ptr [ESP + 0x10]", "0x949B|PUSH|dword ptr [ESP + 0x10]", "0x949F|PUSH|dword ptr [ESP + 0x10]", "0x94A3|CALL|0x6f8894ac", "0x94A8|ADD|ESP, 0x10", "0x94AB|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_4", "CALLEE_1", "PROP_SMALL"]
     },
     {
       "address": "0x6F8894AC",
@@ -8125,7 +8125,7 @@
       "param_count": 5,
       "parameters": [{"name": "this", "type": "void *", "storage": "ECX:4 (auto)"}, {"name": "param_1", "type": "byte *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "void *", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x10]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_6f88a6b4|0x6F88A6B4", "FUN_6f88a6ab|0x6F88A6AB", "FUN_6f88831e|0x6F88831E"],
+      "callees": ["FUN_6f88a6ab|0x6F88A6AB", "FUN_6f88831e|0x6F88831E", "FUN_6f88a6b4|0x6F88A6B4"],
       "caller_count": 1,
       "callers": ["FUN_6f889495|0x6F889495"],
       "string_count": 0,
@@ -8138,7 +8138,7 @@
       "api_calls": [],
       "instructions": ["0x94AC|PUSH|EBP", "0x94AD|MOV|EBP, ESP", "0x94AF|SUB|ESP, 0xc", "0x94B2|PUSH|EBX", "0x94B3|AND|dword ptr [EBP + -0x8], 0x0", "0x94B7|PUSH|ESI", "0x94B8|PUSH|EDI", "0x94B9|MOV|EDI, dword ptr [EBP + 0x8]", "0x94BC|MOV|BL, byte ptr [EDI]", "0x94BE|LEA|ESI, [EDI + 0x1]", "0x94C1|MOV|dword ptr [EBP + -0x4], ESI", "0x94C4|CMP|dword ptr [0x6f890620], 0x1", "0x94CB|JLE|0x6f8894dc", "0x94CD|MOVZX|EAX, BL", "0x94D0|PUSH|0x8"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "STRUCT_Skill", "PARAM_5", "STRUCT_Room2", "CALLEE_3", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F8896D0",
@@ -8187,7 +8187,7 @@
       "api_calls": [],
       "instructions": ["0x96C0|LEA|EAX, [EDX + -0x1]", "0x96C3|POP|EBX", "0x96C4|RET|", "0x96D0|XOR|EAX, EAX", "0x96D2|MOV|AL, byte ptr [ESP + 0x8]", "0x96D6|PUSH|EBX", "0x96D7|MOV|EBX, EAX", "0x96D9|SHL|EAX, 0x8", "0x96DC|MOV|EDX, dword ptr [ESP + 0x8]", "0x96E0|TEST|EDX, 0x3", "0x96E6|JZ|0x6f8896fb", "0x96E8|MOV|CL, byte ptr [EDX]", "0x96EA|INC|EDX", "0x96EB|CMP|CL, BL", "0x96ED|JZ|0x6f8896c0"],
       "comment": "Library Function - Single Match\n _strchr\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_0", "PROP_LOOPHEAVY", "PROP_LEAF"]
     },
     {
       "address": "0x6F889790",
@@ -8236,7 +8236,7 @@
       "api_calls": [],
       "instructions": ["0x9790|MOV|ECX, dword ptr [ESP + 0x8]", "0x9794|PUSH|EDI", "0x9795|PUSH|EBX", "0x9796|PUSH|ESI", "0x9797|MOV|DL, byte ptr [ECX]", "0x9799|MOV|EDI, dword ptr [ESP + 0x10]", "0x979D|TEST|DL, DL", "0x979F|JZ|0x6f88980a", "0x97A1|MOV|DH, byte ptr [ECX + 0x1]", "0x97A4|TEST|DH, DH", "0x97A6|JZ|0x6f8897f7", "0x97A8|MOV|ESI, EDI", "0x97AA|MOV|ECX, dword ptr [ESP + 0x14]", "0x97AE|MOV|AL, byte ptr [EDI]", "0x97B0|INC|ESI"],
       "comment": "Library Function - Single Match\n _strstr\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_0", "PROP_LOOPHEAVY", "PROP_LEAF"]
     },
     {
       "address": "0x6F889810",
@@ -8285,7 +8285,7 @@
       "api_calls": [],
       "instructions": ["0x9810|PUSH|EBP", "0x9811|MOV|EBP, ESP", "0x9813|PUSH|EDI", "0x9814|PUSH|ESI", "0x9815|PUSH|EBX", "0x9816|MOV|ECX, dword ptr [EBP + 0x10]", "0x9819|JECXZ|0x6f889841", "0x981B|MOV|EBX, ECX", "0x981D|MOV|EDI, dword ptr [EBP + 0x8]", "0x9820|MOV|ESI, EDI", "0x9822|XOR|EAX, EAX", "0x9824|SCASB.REPNE|ES:EDI", "0x9826|NEG|ECX", "0x9828|ADD|ECX, EBX", "0x982A|MOV|EDI, ESI"],
       "comment": "Library Function - Single Match\n _strncmp\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F889850",
@@ -8323,7 +8323,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["FUN_6f889a0e|0x6F889A0E", "FUN_6f889b57|0x6F889B57", "FUN_6f8865bb|0x6F8865BB"],
+      "callers": ["FUN_6f889b57|0x6F889B57", "FUN_6f8865bb|0x6F8865BB", "FUN_6f889a0e|0x6F889A0E"],
       "string_count": 0,
       "strings": [],
       "constant_count": 4,
@@ -8334,7 +8334,7 @@
       "api_calls": [],
       "instructions": ["0x9850|PUSH|ECX", "0x9851|CMP|EAX, 0x1000", "0x9856|LEA|ECX, [ESP + 0x8]", "0x985A|JC|0x6f889870", "0x985C|SUB|ECX, 0x1000", "0x9862|SUB|EAX, 0x1000", "0x9867|TEST|dword ptr [ECX], EAX", "0x9869|CMP|EAX, 0x1000", "0x986E|JNC|0x6f88985c", "0x9870|SUB|ECX, EAX", "0x9872|MOV|EAX, ESP", "0x9874|TEST|dword ptr [ECX], EAX", "0x9876|MOV|ESP, ECX", "0x9878|MOV|ECX, dword ptr [EAX]", "0x987A|MOV|EAX, dword ptr [EAX + 0x4]"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLEE_0", "CALLER_3", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F88987F",
@@ -8370,7 +8370,7 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "undefined4", "storage": "Stack[0xc]:4"}],
       "callee_count": 2,
-      "callees": ["LoadLibraryA|0x46", "GetProcAddress|0x54"],
+      "callees": ["GetProcAddress|0x54", "LoadLibraryA|0x46"],
       "caller_count": 1,
       "callers": ["FUN_6f886841|0x6F886841"],
       "string_count": 3,
@@ -8383,7 +8383,7 @@
       "api_calls": [],
       "instructions": ["0x987F|PUSH|EBX", "0x9880|XOR|EBX, EBX", "0x9882|CMP|dword ptr [0x6f8921fc], EBX", "0x9888|PUSH|ESI", "0x9889|PUSH|EDI", "0x988A|JNZ|0x6f8898ce", "0x988C|PUSH|0x6f88b628", "0x9891|CALL|dword ptr [0x6f88b0e8]", "0x9897|MOV|EDI, EAX", "0x9899|CMP|EDI, EBX", "0x989B|JZ|0x6f889904", "0x989D|MOV|ESI, dword ptr [0x6f88b120]", "0x98A3|PUSH|0x6f88b61c", "0x98A8|PUSH|EDI", "0x98A9|CALL|ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_3", "CALLER_1", "CALLEE_2"]
     },
     {
       "address": "0x6F889910",
@@ -8432,7 +8432,7 @@
       "api_calls": [],
       "instructions": ["0x9910|MOV|ECX, dword ptr [ESP + 0xc]", "0x9914|PUSH|EDI", "0x9915|TEST|ECX, ECX", "0x9917|JZ|0x6f889993", "0x9919|PUSH|ESI", "0x991A|PUSH|EBX", "0x991B|MOV|EBX, ECX", "0x991D|MOV|ESI, dword ptr [ESP + 0x14]", "0x9921|TEST|ESI, 0x3", "0x9927|MOV|EDI, dword ptr [ESP + 0x10]", "0x992B|JNZ|0x6f889934", "0x992D|SHR|ECX, 0x2", "0x9930|JNZ|0x6f8899a1", "0x9932|JMP|0x6f889955", "0x9934|MOV|AL, byte ptr [ESI]"],
       "comment": "Library Function - Single Match\n _strncpy\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control"]
     },
     {
       "address": "0x6F889A0E",
@@ -8468,9 +8468,9 @@
       "param_count": 7,
       "parameters": [{"name": "param_1", "type": "DWORD", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "LPCSTR", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "LPWORD", "storage": "Stack[0x10]:4"}, {"name": "param_5", "type": "UINT", "storage": "Stack[0x14]:4"}, {"name": "param_6", "type": "LCID", "storage": "Stack[0x18]:4"}, {"name": "param_7", "type": "int", "storage": "Stack[0x1c]:4"}],
       "callee_count": 5,
-      "callees": ["FUN_6f889850|0x6F889850", "GetStringTypeA|0x37", "MultiByteToWideChar|0x38", "_memset|0x6F888B40", "GetStringTypeW|0x36"],
+      "callees": ["_memset|0x6F888B40", "FUN_6f889850|0x6F889850", "GetStringTypeW|0x36", "GetStringTypeA|0x37", "MultiByteToWideChar|0x38"],
       "caller_count": 2,
-      "callers": ["FUN_6f8892f4|0x6F8892F4", "FUN_6f88831e|0x6F88831E"],
+      "callers": ["FUN_6f88831e|0x6F88831E", "FUN_6f8892f4|0x6F8892F4"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -8481,7 +8481,7 @@
       "api_calls": [],
       "instructions": ["0x9A0E|PUSH|EBP", "0x9A0F|MOV|EBP, ESP", "0x9A11|PUSH|-0x1", "0x9A13|PUSH|0x6f88b640", "0x9A18|PUSH|0x6f8880e0", "0x9A1D|MOV|EAX, FS:[0x0]", "0x9A23|PUSH|EAX", "0x9A24|MOV|dword ptr FS:[0x0], ESP", "0x9A2B|SUB|ESP, 0x18", "0x9A2E|PUSH|EBX", "0x9A2F|PUSH|ESI", "0x9A30|PUSH|EDI", "0x9A31|MOV|dword ptr [EBP + -0x18], ESP", "0x9A34|MOV|EAX, [0x6f89221c]", "0x9A39|XOR|EBX, EBX"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_7", "STRUCT_Act", "STRUCT_Inventory", "CALLER_2", "STRUCT_UnitAny", "CALLEE_5", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F889B57",
@@ -8517,9 +8517,9 @@
       "param_count": 8,
       "parameters": [{"name": "param_1", "type": "LCID", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "char *", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "param_5", "type": "LPWSTR", "storage": "Stack[0x14]:4"}, {"name": "param_6", "type": "int", "storage": "Stack[0x18]:4"}, {"name": "param_7", "type": "UINT", "storage": "Stack[0x1c]:4"}, {"name": "param_8", "type": "int", "storage": "Stack[0x20]:4"}],
       "callee_count": 6,
-      "callees": ["LCMapStringW|0x34", "LCMapStringA|0x35", "FUN_6f889850|0x6F889850", "MultiByteToWideChar|0x38", "FUN_6f889d7b|0x6F889D7B", "WideCharToMultiByte|0x5F"],
+      "callees": ["FUN_6f889d7b|0x6F889D7B", "FUN_6f889850|0x6F889850", "LCMapStringA|0x35", "WideCharToMultiByte|0x5F", "MultiByteToWideChar|0x38", "LCMapStringW|0x34"],
       "caller_count": 3,
-      "callers": ["FUN_6f88a723|0x6F88A723", "FUN_6f888402|0x6F888402", "FUN_6f8892f4|0x6F8892F4"],
+      "callers": ["FUN_6f88a723|0x6F88A723", "FUN_6f8892f4|0x6F8892F4", "FUN_6f888402|0x6F888402"],
       "string_count": 0,
       "strings": [],
       "constant_count": 2,
@@ -8530,7 +8530,7 @@
       "api_calls": [],
       "instructions": ["0x9B57|PUSH|EBP", "0x9B58|MOV|EBP, ESP", "0x9B5A|PUSH|-0x1", "0x9B5C|PUSH|0x6f88b650", "0x9B61|PUSH|0x6f8880e0", "0x9B66|MOV|EAX, FS:[0x0]", "0x9B6C|PUSH|EAX", "0x9B6D|MOV|dword ptr FS:[0x0], ESP", "0x9B74|SUB|ESP, 0x1c", "0x9B77|PUSH|EBX", "0x9B78|PUSH|ESI", "0x9B79|PUSH|EDI", "0x9B7A|MOV|dword ptr [EBP + -0x18], ESP", "0x9B7D|XOR|EDI, EDI", "0x9B7F|CMP|dword ptr [0x6f89224c], EDI"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "PARAM_8", "STRUCT_Act", "STRUCT_Inventory", "CALLER_3", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "CALLEE_6", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F889D7B",
@@ -8579,7 +8579,7 @@
       "api_calls": [],
       "instructions": ["0x9D7B|MOV|EDX, dword ptr [ESP + 0x8]", "0x9D7F|MOV|EAX, dword ptr [ESP + 0x4]", "0x9D83|TEST|EDX, EDX", "0x9D85|PUSH|ESI", "0x9D86|LEA|ECX, [EDX + -0x1]", "0x9D89|JZ|0x6f889d98", "0x9D8B|CMP|byte ptr [EAX], 0x0", "0x9D8E|JZ|0x6f889d98", "0x9D90|INC|EAX", "0x9D91|MOV|ESI, ECX", "0x9D93|DEC|ECX", "0x9D94|TEST|ESI, ESI", "0x9D96|JNZ|0x6f889d8b", "0x9D98|CMP|byte ptr [EAX], 0x0", "0x9D9B|POP|ESI"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F889DA6",
@@ -8617,7 +8617,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["FUN_6f888516|0x6F888516", "___add_12|0x6F889DC7", "FUN_6f88a8fa|0x6F88A8FA"],
+      "callers": ["FUN_6f88a8fa|0x6F88A8FA", "___add_12|0x6F889DC7", "FUN_6f888516|0x6F888516"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -8628,7 +8628,7 @@
       "api_calls": [],
       "instructions": ["0x9DA6|MOV|EDX, dword ptr [ESP + 0x4]", "0x9DAA|PUSH|ESI", "0x9DAB|MOV|ESI, dword ptr [ESP + 0xc]", "0x9DAF|XOR|EAX, EAX", "0x9DB1|LEA|ECX, [EDX + ESI*0x1]", "0x9DB4|CMP|ECX, EDX", "0x9DB6|JC|0x6f889dbc", "0x9DB8|CMP|ECX, ESI", "0x9DBA|JNC|0x6f889dbf", "0x9DBC|PUSH|0x1", "0x9DBE|POP|EAX", "0x9DBF|MOV|EDX, dword ptr [ESP + 0x10]", "0x9DC3|POP|ESI", "0x9DC4|MOV|dword ptr [EDX], ECX", "0x9DC6|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_3", "CALLEE_0", "CALLER_3", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F889DC7",
@@ -8677,7 +8677,7 @@
       "api_calls": [],
       "instructions": ["0x9DC7|PUSH|ESI", "0x9DC8|MOV|ESI, dword ptr [ESP + 0x8]", "0x9DCC|PUSH|EDI", "0x9DCD|MOV|EDI, dword ptr [ESP + 0x10]", "0x9DD1|PUSH|ESI", "0x9DD2|PUSH|dword ptr [EDI]", "0x9DD4|PUSH|dword ptr [ESI]", "0x9DD6|CALL|0x6f889da6", "0x9DDB|ADD|ESP, 0xc", "0x9DDE|TEST|EAX, EAX", "0x9DE0|JZ|0x6f889df9", "0x9DE2|LEA|EAX, [ESI + 0x4]", "0x9DE5|PUSH|EAX", "0x9DE6|PUSH|0x1", "0x9DE8|PUSH|dword ptr [EAX]"],
       "comment": "Library Function - Single Match\n ___add_12\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_2", "CALLEE_1"]
     },
     {
       "address": "0x6F889E25",
@@ -8715,7 +8715,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["FUN_6f889e80|0x6F889E80", "FUN_6f88a8fa|0x6F88A8FA", "FUN_6f88a418|0x6F88A418"],
+      "callers": ["FUN_6f88a8fa|0x6F88A8FA", "FUN_6f889e80|0x6F889E80", "FUN_6f88a418|0x6F88A418"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -8726,7 +8726,7 @@
       "api_calls": [],
       "instructions": ["0x9E25|MOV|EAX, dword ptr [ESP + 0x4]", "0x9E29|PUSH|ESI", "0x9E2A|PUSH|EDI", "0x9E2B|MOV|ESI, dword ptr [EAX]", "0x9E2D|MOV|EDI, dword ptr [EAX + 0x4]", "0x9E30|MOV|ECX, ESI", "0x9E32|ADD|ESI, ESI", "0x9E34|MOV|dword ptr [EAX], ESI", "0x9E36|LEA|ESI, [EDI + EDI*0x1]", "0x9E39|SHR|ECX, 0x1f", "0x9E3C|OR|ESI, ECX", "0x9E3E|MOV|ECX, dword ptr [EAX + 0x8]", "0x9E41|MOV|EDX, EDI", "0x9E43|MOV|dword ptr [EAX + 0x4], ESI", "0x9E46|SHR|EDX, 0x1f"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F889E53",
@@ -8775,7 +8775,7 @@
       "api_calls": [],
       "instructions": ["0x9E53|MOV|EAX, dword ptr [ESP + 0x4]", "0x9E57|PUSH|ESI", "0x9E58|PUSH|EDI", "0x9E59|MOV|EDX, dword ptr [EAX + 0x8]", "0x9E5C|MOV|ECX, dword ptr [EAX + 0x4]", "0x9E5F|MOV|ESI, EDX", "0x9E61|MOV|EDI, ECX", "0x9E63|SHL|ESI, 0x1f", "0x9E66|SHR|ECX, 0x1", "0x9E68|OR|ECX, ESI", "0x9E6A|MOV|dword ptr [EAX + 0x4], ECX", "0x9E6D|MOV|ECX, dword ptr [EAX]", "0x9E6F|SHL|EDI, 0x1f", "0x9E72|SHR|ECX, 0x1", "0x9E74|SHR|EDX, 0x1"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_2", "CALLEE_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6F889E80",
@@ -8811,7 +8811,7 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint *", "storage": "Stack[0xc]:4"}],
       "callee_count": 2,
-      "callees": ["FUN_6f889e25|0x6F889E25", "___add_12|0x6F889DC7"],
+      "callees": ["___add_12|0x6F889DC7", "FUN_6f889e25|0x6F889E25"],
       "caller_count": 1,
       "callers": ["FUN_6f889f47|0x6F889F47"],
       "string_count": 0,
@@ -8824,7 +8824,7 @@
       "api_calls": [],
       "instructions": ["0x9E80|PUSH|EBP", "0x9E81|MOV|EBP, ESP", "0x9E83|SUB|ESP, 0x10", "0x9E86|MOV|EAX, dword ptr [EBP + 0xc]", "0x9E89|PUSH|EBX", "0x9E8A|MOV|EBX, dword ptr [EBP + 0x10]", "0x9E8D|XOR|EDX, EDX", "0x9E8F|CMP|EAX, EDX", "0x9E91|PUSH|ESI", "0x9E92|MOV|dword ptr [EBP + -0x4], 0x404e", "0x9E99|MOV|dword ptr [EBX], EDX", "0x9E9B|MOV|dword ptr [EBX + 0x4], EDX", "0x9E9E|MOV|dword ptr [EBX + 0x8], EDX", "0x9EA1|JBE|0x6f889ef4", "0x9EA3|PUSH|EDI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_2", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F889F47",
@@ -8860,7 +8860,7 @@
       "param_count": 8,
       "parameters": [{"name": "this", "type": "void *", "storage": "ECX:4 (auto)"}, {"name": "param_1", "type": "ushort *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "byte *", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "param_5", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "param_6", "type": "int", "storage": "Stack[0x18]:4"}, {"name": "param_7", "type": "int", "storage": "Stack[0x1c]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_6f889e80|0x6F889E80", "FUN_6f88831e|0x6F88831E", "FUN_6f88ab1a|0x6F88AB1A"],
+      "callees": ["FUN_6f88ab1a|0x6F88AB1A", "FUN_6f889e80|0x6F889E80", "FUN_6f88831e|0x6F88831E"],
       "caller_count": 2,
       "callers": ["FUN_6f88888c|0x6F88888C", "FUN_6f88885f|0x6F88885F"],
       "string_count": 0,
@@ -8873,7 +8873,7 @@
       "api_calls": [],
       "instructions": ["0x9F47|PUSH|EBP", "0x9F48|MOV|EBP, ESP", "0x9F4A|SUB|ESP, 0x5c", "0x9F4D|PUSH|EBX", "0x9F4E|PUSH|ESI", "0x9F4F|PUSH|EDI", "0x9F50|MOV|EDI, dword ptr [EBP + 0x10]", "0x9F53|LEA|EAX, [EBP + -0x5c]", "0x9F56|PUSH|0x1", "0x9F58|MOV|dword ptr [EBP + -0xc], EAX", "0x9F5B|XOR|EAX, EAX", "0x9F5D|POP|EDX", "0x9F5E|MOV|dword ptr [EBP + -0x28], EAX", "0x9F61|MOV|dword ptr [EBP + -0x18], EDX", "0x9F64|MOV|dword ptr [EBP + -0x4], EAX"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "PARAM_8", "STRUCT_Act", "STRUCT_Inventory", "STRUCT_Skill", "CALLER_2", "CALLEE_3", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F88A418",
@@ -8909,7 +8909,7 @@
       "param_count": 6,
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "param_5", "type": "byte", "storage": "Stack[0x14]:1"}, {"name": "param_6", "type": "short *", "storage": "Stack[0x18]:4"}],
       "callee_count": 6,
-      "callees": ["FUN_6f889e53|0x6F889E53", "FUN_6f888a50|0x6F888A50", "FUN_6f889e25|0x6F889E25", "FUN_6f88ab1a|0x6F88AB1A", "FUN_6f88a8fa|0x6F88A8FA", "___add_12|0x6F889DC7"],
+      "callees": ["FUN_6f889e53|0x6F889E53", "FUN_6f88ab1a|0x6F88AB1A", "FUN_6f88a8fa|0x6F88A8FA", "FUN_6f888a50|0x6F888A50", "___add_12|0x6F889DC7", "FUN_6f889e25|0x6F889E25"],
       "caller_count": 1,
       "callers": ["FUN_6f888930|0x6F888930"],
       "string_count": 4,
@@ -8922,7 +8922,7 @@
       "api_calls": [],
       "instructions": ["0xA418|PUSH|EBP", "0xA419|MOV|EBP, ESP", "0xA41B|SUB|ESP, 0x1c", "0xA41E|MOV|EAX, dword ptr [EBP + 0x10]", "0xA421|PUSH|EBX", "0xA422|MOV|EBX, dword ptr [EBP + 0x1c]", "0xA425|PUSH|ESI", "0xA426|MOV|ECX, EAX", "0xA428|MOV|ESI, 0x7fff", "0xA42D|AND|ECX, 0x8000", "0xA433|AND|EAX, ESI", "0xA435|TEST|CX, CX", "0xA438|PUSH|EDI", "0xA439|MOV|byte ptr [EBP + -0x1c], 0xcc", "0xA43D|MOV|byte ptr [EBP + -0x1b], 0xcc"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_6", "PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "STRUCT_Skill", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "CALLEE_6", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6F88A6AB",
@@ -8971,7 +8971,7 @@
       "api_calls": [],
       "instructions": ["0xA6AB|CALL|0x6f885e3f", "0xA6B0|ADD|EAX, 0x8", "0xA6B3|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x6F88A6B4",
@@ -9007,7 +9007,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 5,
-      "callees": ["FUN_6f88a723|0x6F88A723", "InterlockedIncrement|0x4A", "FUN_6f88534e|0x6F88534E", "FUN_6f8853af|0x6F8853AF", "InterlockedDecrement|0x4B"],
+      "callees": ["FUN_6f88534e|0x6F88534E", "InterlockedDecrement|0x4B", "FUN_6f88a723|0x6F88A723", "InterlockedIncrement|0x4A", "FUN_6f8853af|0x6F8853AF"],
       "caller_count": 1,
       "callers": ["FUN_6f8894ac|0x6F8894AC"],
       "string_count": 0,
@@ -9020,7 +9020,7 @@
       "api_calls": [],
       "instructions": ["0xA6B4|PUSH|EBX", "0xA6B5|XOR|EBX, EBX", "0xA6B7|CMP|dword ptr [0x6f892234], EBX", "0xA6BD|JNZ|0x6f88a6d2", "0xA6BF|MOV|EAX, dword ptr [ESP + 0x8]", "0xA6C3|CMP|EAX, 0x61", "0xA6C6|JL|0x6f88a721", "0xA6C8|CMP|EAX, 0x7a", "0xA6CB|JG|0x6f88a721", "0xA6CD|SUB|EAX, 0x20", "0xA6D0|POP|EBX", "0xA6D1|RET|", "0xA6D2|PUSH|ESI", "0xA6D3|MOV|ESI, 0x6f892394", "0xA6D8|PUSH|EDI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_1", "CALLEE_5"]
     },
     {
       "address": "0x6F88A723",
@@ -9069,7 +9069,7 @@
       "api_calls": [],
       "instructions": ["0xA723|PUSH|EBP", "0xA724|MOV|EBP, ESP", "0xA726|PUSH|ECX", "0xA727|CMP|dword ptr [0x6f892234], 0x0", "0xA72E|PUSH|EBX", "0xA72F|JNZ|0x6f88a74e", "0xA731|MOV|EAX, dword ptr [EBP + 0x8]", "0xA734|CMP|EAX, 0x61", "0xA737|JL|0x6f88a7ec", "0xA73D|CMP|EAX, 0x7a", "0xA740|JG|0x6f88a7ec", "0xA746|SUB|EAX, 0x20", "0xA749|JMP|0x6f88a7ec", "0xA74E|MOV|EBX, dword ptr [EBP + 0x8]", "0xA751|CMP|EBX, 0x100"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_2"]
     },
     {
       "address": "0x6F88A880",
@@ -9118,7 +9118,7 @@
       "api_calls": [],
       "instructions": ["0xA880|PUSH|EBP", "0xA881|MOV|EBP, ESP", "0xA883|PUSH|ESI", "0xA884|XOR|EAX, EAX", "0xA886|PUSH|EAX", "0xA887|PUSH|EAX", "0xA888|PUSH|EAX", "0xA889|PUSH|EAX", "0xA88A|PUSH|EAX", "0xA88B|PUSH|EAX", "0xA88C|PUSH|EAX", "0xA88D|PUSH|EAX", "0xA88E|MOV|EDX, dword ptr [EBP + 0xc]", "0xA891|LEA|ECX, [ECX]", "0xA894|MOV|AL, byte ptr [EDX]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_0", "PROP_NOCALLER", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F88A8C0",
@@ -9167,7 +9167,7 @@
       "api_calls": [],
       "instructions": ["0xA8C0|PUSH|EBP", "0xA8C1|MOV|EBP, ESP", "0xA8C3|PUSH|ESI", "0xA8C4|XOR|EAX, EAX", "0xA8C6|PUSH|EAX", "0xA8C7|PUSH|EAX", "0xA8C8|PUSH|EAX", "0xA8C9|PUSH|EAX", "0xA8CA|PUSH|EAX", "0xA8CB|PUSH|EAX", "0xA8CC|PUSH|EAX", "0xA8CD|PUSH|EAX", "0xA8CE|MOV|EDX, dword ptr [EBP + 0xc]", "0xA8D1|LEA|ECX, [ECX]", "0xA8D4|MOV|AL, byte ptr [EDX]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_0", "PROP_NOCALLER", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x6F88A8FA",
@@ -9216,7 +9216,7 @@
       "api_calls": [],
       "instructions": ["0xA8FA|PUSH|EBP", "0xA8FB|MOV|EBP, ESP", "0xA8FD|SUB|ESP, 0x24", "0xA900|PUSH|EBX", "0xA901|MOV|EBX, dword ptr [EBP + 0xc]", "0xA904|PUSH|ESI", "0xA905|MOV|ESI, dword ptr [EBP + 0x8]", "0xA908|MOV|CX, word ptr [EBX + 0xa]", "0xA90C|XOR|EAX, EAX", "0xA90E|PUSH|EDI", "0xA90F|MOV|dword ptr [EBP + -0x14], EAX", "0xA912|MOV|dword ptr [EBP + -0x24], EAX", "0xA915|MOV|dword ptr [EBP + -0x20], EAX", "0xA918|MOV|dword ptr [EBP + -0x1c], EAX", "0xA91B|MOV|AX, word ptr [ESI + 0xa]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Inventory", "PARAM_2", "CALLER_2", "CALLEE_3", "PROP_LOOPHEAVY"]
     },
     {
       "address": "0x6F88AB1A",
@@ -9254,7 +9254,7 @@
       "callee_count": 1,
       "callees": ["FUN_6f88a8fa|0x6F88A8FA"],
       "caller_count": 2,
-      "callers": ["FUN_6f889f47|0x6F889F47", "FUN_6f88a418|0x6F88A418"],
+      "callers": ["FUN_6f88a418|0x6F88A418", "FUN_6f889f47|0x6F889F47"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -9265,7 +9265,7 @@
       "api_calls": [],
       "instructions": ["0xAB1A|PUSH|EBP", "0xAB1B|MOV|EBP, ESP", "0xAB1D|SUB|ESP, 0xc", "0xAB20|PUSH|EBX", "0xAB21|MOV|EBX, 0x6f890d70", "0xAB26|XOR|ECX, ECX", "0xAB28|SUB|EBX, 0x60", "0xAB2B|CMP|dword ptr [EBP + 0xc], ECX", "0xAB2E|JZ|0x6f88ab93", "0xAB30|JGE|0x6f88ab42", "0xAB32|MOV|EAX, dword ptr [EBP + 0xc]", "0xAB35|MOV|EBX, 0x6f890ed0", "0xAB3A|NEG|EAX", "0xAB3C|MOV|dword ptr [EBP + 0xc], EAX", "0xAB3F|SUB|EBX, 0x60"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_2", "CALLEE_1", "STRUCT_UnitAny"]
     },
     {
       "address": "0x6F88ABA0",
@@ -9301,7 +9301,7 @@
       "param_count": 3,
       "parameters": [{"name": "this", "type": "void *", "storage": "ECX:4 (auto)"}, {"name": "param_1", "type": "byte *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "byte *", "storage": "Stack[0x8]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_6f888402|0x6F888402", "FUN_6f88534e|0x6F88534E", "FUN_6f8853af|0x6F8853AF"],
+      "callees": ["FUN_6f88534e|0x6F88534E", "FUN_6f8853af|0x6F8853AF", "FUN_6f888402|0x6F888402"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -9314,7 +9314,7 @@
       "api_calls": [],
       "instructions": ["0xABA0|PUSH|EBP", "0xABA1|MOV|EBP, ESP", "0xABA3|PUSH|EDI", "0xABA4|PUSH|ESI", "0xABA5|PUSH|EBX", "0xABA6|MOV|ESI, dword ptr [EBP + 0xc]", "0xABA9|MOV|EDI, dword ptr [EBP + 0x8]", "0xABAC|LEA|EAX, [0x6f89222c]", "0xABB2|CMP|dword ptr [EAX + 0x8], 0x0", "0xABB6|JNZ|0x6f88abf3", "0xABB8|MOV|AL, 0xff", "0xABBA|MOV|EDI, EDI", "0xABBC|OR|AL, AL", "0xABBE|JZ|0x6f88abee", "0xABC0|MOV|AL, byte ptr [ESI]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_3", "CALLEE_3", "PROP_LOOPHEAVY"]
     },
     {
       "address": "0x6F88AC70",
@@ -9350,7 +9350,7 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "byte *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "void *", "storage": "Stack[0xc]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_6f888402|0x6F888402", "FUN_6f88534e|0x6F88534E", "FUN_6f8853af|0x6F8853AF"],
+      "callees": ["FUN_6f88534e|0x6F88534E", "FUN_6f8853af|0x6F8853AF", "FUN_6f888402|0x6F888402"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -9363,7 +9363,7 @@
       "api_calls": [],
       "instructions": ["0xAC70|PUSH|EBP", "0xAC71|MOV|EBP, ESP", "0xAC73|PUSH|EDI", "0xAC74|PUSH|ESI", "0xAC75|PUSH|EBX", "0xAC76|MOV|ECX, dword ptr [EBP + 0x10]", "0xAC79|OR|ECX, ECX", "0xAC7B|JZ|0x6f88ad6a", "0xAC81|MOV|ESI, dword ptr [EBP + 0x8]", "0xAC84|MOV|EDI, dword ptr [EBP + 0xc]", "0xAC87|LEA|EAX, [0x6f89222c]", "0xAC8D|CMP|dword ptr [EAX + 0x8], 0x0", "0xAC91|JNZ|0x6f88ace1", "0xAC93|MOV|BH, 0x41", "0xAC95|MOV|BL, 0x5a"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_3", "CALLEE_3", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x6F88AEA4",
@@ -9412,7 +9412,7 @@
       "api_calls": [],
       "instructions": ["0xAEA4|JMP|dword ptr [0x6f88b124]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "PARAM_4", "CALLEE_0", "PROP_LEAF"]
     }
   ]
 }

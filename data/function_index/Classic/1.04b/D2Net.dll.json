@@ -4,7 +4,7 @@
   "version": "1.04b",
   "image_base": "0x6FC80000",
   "total_functions": 178,
-  "export_timestamp": "Sun Jan 11 22:07:44 CST 2026",
+  "export_timestamp": "Wed Jan 14 14:34:25 CST 2026",
   "functions": [
     {
       "address": "0x6FC81000",
@@ -40,7 +40,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 3,
-      "callees": ["NET_IsShuttingDown|0x6FC81980", "EnterCriticalSection|0x25", "LeaveCriticalSection|0x24"],
+      "callees": ["EnterCriticalSection|0x25", "LeaveCriticalSection|0x24", "NET_IsShuttingDown|0x6FC81980"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -89,7 +89,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 9,
-      "callees": ["WSAStartup|0x5E", "socket|0x5F", "ResolveHostnameToIP|0x6FC82310", "Ordinal_10022|0x6FC82316", "connect|0x63", "htons|0x61", "WSAGetLastError|0x60", "inet_addr|0x62", "ReportError|0x6FC823F1"],
+      "callees": ["WSAGetLastError|0x60", "inet_addr|0x62", "connect|0x63", "htons|0x61", "ResolveHostnameToIP|0x6FC82310", "ReportError|0x6FC823F1", "Ordinal_10022|0x6FC82316", "WSAStartup|0x5E", "socket|0x5F"],
       "caller_count": 0,
       "callers": [],
       "string_count": 3,
@@ -102,7 +102,7 @@
       "api_calls": ["Ordinal_10022", "Ordinal_10022", "ResolveHostnameToIP"],
       "instructions": ["0x1040|PUSH|0x6fc8b040", "0x1045|PUSH|0x101", "0x104A|MOV|dword ptr [0x6fc8b1d4], 0x0", "0x1054|CALL|dword ptr [0x6fc87180]", "0x105A|TEST|EAX, EAX", "0x105C|JZ|0x6fc81079", "0x105E|PUSH|0x66", "0x1060|PUSH|0x6fc88044", "0x1065|PUSH|0x6fc88038", "0x106A|CALL|0x6fc82316", "0x106F|ADD|ESP, 0xc", "0x1072|PUSH|-0x1", "0x1074|CALL|0x6fc823f1", "0x1079|PUSH|0x0", "0x107B|PUSH|0x1"],
       "comment": "InitializeClientSocket - Initializes Winsock and establishes a TCP socket connection to a server.\n\nAlgorithm:\n1. Initialize Winsock with WSAStartup (version 1.1)\n2. Create a TCP stream socket (AF_INET, SOCK_STREAM)\n3. Configure sockaddr structure with port 4000\n4. Resolve hostname to IP address\n5. Connect socket to the server\n\nParameters:\n  szHostname - Server hostname or IP address to connect to\n\nReturns: TRUE (always returns 1, sets g_hClientSocket to 0 on connect failure)\nlpStartAddress parameter of CreateThread\n",
-      "tags": ["CALLEE_9", "SRC_Client.cpp", "STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_0", "PARAM_1", "STRUCT_UnitAny", "STRUCT_Control"]
+      "tags": ["CALLEE_9", "SRC_Client.cpp", "STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_0", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x6FC81120",
@@ -138,7 +138,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["NET_IsShuttingDown|0x6FC81980", "EnterCriticalSection|0x25", "WaitForSingleObject|0x28", "LeaveCriticalSection|0x24", "SetThreadPriority|0x26", "CreateThread|0x27"],
+      "callees": ["EnterCriticalSection|0x25", "WaitForSingleObject|0x28", "CreateThread|0x27", "SetThreadPriority|0x26", "LeaveCriticalSection|0x24", "NET_IsShuttingDown|0x6FC81980"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -187,7 +187,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["FogMemAlloc|0x6FC8231C", "InitializeCriticalSection|0x29", "D2Net_NotifyServerMode|0x6FC81F60", "NET_IsShuttingDown|0x6FC81980", "SetGlobalValue11103|0x6FC819A0", "CreateThread|0x27"],
+      "callees": ["CreateThread|0x27", "D2Net_NotifyServerMode|0x6FC81F60", "InitializeCriticalSection|0x29", "NET_IsShuttingDown|0x6FC81980", "FogMemAlloc|0x6FC8231C", "SetGlobalValue11103|0x6FC819A0"],
       "caller_count": 0,
       "callers": [],
       "string_count": 1,
@@ -200,7 +200,7 @@
       "api_calls": ["FogMemAlloc"],
       "instructions": ["0x11B0|PUSH|EDI", "0x11B1|PUSH|0x6fc8aff8", "0x11B6|MOV|dword ptr [0x6fc8b028], 0x0", "0x11C0|MOV|dword ptr [0x6fc8b010], 0x0", "0x11CA|CALL|dword ptr [0x6fc8709c]", "0x11D0|PUSH|0x0", "0x11D2|PUSH|0xc2", "0x11D7|MOV|EDX, 0x6fc88044", "0x11DC|MOV|ECX, 0x7bc", "0x11E1|CALL|0x6fc8231c", "0x11E6|MOV|EDI, EAX", "0x11E8|MOV|ECX, 0x1ef", "0x11ED|XOR|EAX, EAX", "0x11EF|MOV|dword ptr [0x6fc8b02c], EDI", "0x11F5|STOSD.REP|ES:EDI"],
       "comment": "D2Net Client Initialization (Ordinal 10000)\n\nInitializes the D2Net client subsystem by allocating the client buffer,\ninitializing synchronization primitives, and creating the client thread.\nThis is the primary entry point for client-side network initialization.\n\nClassification: Public API / Initialization\n\nAlgorithm:\n1. Reset packet counters (sent/received) to zero\n2. Initialize critical section for client synchronization (g_csClientLock)\n3. Allocate client buffer (0x7BC = 1980 bytes) via FogMemAlloc\n4. Zero-initialize the buffer (495 DWORDs = 1980 bytes) using REP STOSD\n5. Store network type parameter in global (g_dwNetworkType)\n6. Check if running in server mode (types 1 or 2)\n7. If server mode: call D2Net_NotifyServerMode and return success (0x1)\n8. If client mode: create client thread at LAB_6fc31040 with pThreadParam\n\nParameters:\n  dwNetworkType (dword) - Network operation type:\n    0 = Client mode (creates thread)\n    1 = Server mode type 1 (skip thread creation)\n    2 = Server mode type 2 (skip thread creation)\n  pThreadParam (void *) - Opaque parameter passed to client thread function.\n    Note: void* is intentional as this is a LPVOID passed to CreateThread.\n    The thread function interprets this context-specifically.\n\nReturns:\n  HANDLE - Thread handle on success (client mode), stored in g_hClientThread\n  0x1 - Success indicator (server mode)\n\nDecompiler Temporaries (SSA artifacts):\n  fIsServerMode - Boolean return from D2Net_IsServerMode()\n  nLoopCounter - Loop counter (0x1EF iterations) for buffer zeroing\n  pdwBufferPtr - Buffer pointer incremented during REP STOSD\n  wExtraOutCX, bExtraOutVar - Register extraout artifacts from calling convention\n\nGlobals Modified:\n  g_dwClientPacketsSent (0x6fc3b078) - Reset to 0\n  g_dwClientPacketsRecv (0x6fc3b060) - Reset to 0\n  g_csClientLock (0x6fc3b048) - Initialized critical section\n  g_pClientBuffer (0x6fc3b07c) - Allocated buffer pointer (1980 bytes)\n  g_dwNetworkType (0x6fc3b22c) - Stored network type\n  g_hClientThread (0x6fc3b088) - Created thread handle (client mode only)\n  g_dwClientThreadId (0x6fc3b220) - Thread ID from CreateThread\n\nCallees:\n  InitializeCriticalSection - Win32 API to init g_csClientLock\n  FogMemAlloc - Fog memory allocation with source tracking\n  D2Net_SetNetworkType - Store network type in global\n  D2Net_IsServerMode - Check if type is 1 or 2 (server mode)\n  D2Net_NotifyServerMode - Send server mode notification (Ordinal_10006)\n  CreateThread - Create client thread at LAB_6fc31040\n\nMemory:\n  Allocates 1980 bytes (0x7BC) for client buffer via FogMemAlloc\n  Caller responsible for cleanup via D2Net shutdown functions\n\nMagic Numbers:\n  0x7BC (1980) - Client buffer size in bytes\n  0x1EF (495) - Number of DWORDs to zero (495 x 4 = 1980)\n  0xC2 (194) - Source file line number for FogMemAlloc tracking\n  0x6fc38044 - String ptr: \"C:\\Projects\\Diablo2\\Source\\D2Net\\SRC\\Client.cpp\"",
-      "tags": ["SRC_Client.cpp", "CALLER_0", "PARAM_2", "PROP_NOCALLER", "PARAM_0", "CALLEE_6"]
+      "tags": ["SRC_Client.cpp", "CALLER_0", "PROP_NOCALLER", "PARAM_0", "CALLEE_6"]
     },
     {
       "address": "0x6FC81240",
@@ -236,7 +236,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 8,
-      "callees": ["closesocket|0x57", "FUN_6fc81a60|0x6FC81A60", "NET_IsShuttingDown|0x6FC81980", "EnterCriticalSection|0x25", "ReleasePoolAllocation|0x6FC82322", "WaitForSingleObject|0x28", "LeaveCriticalSection|0x24", "DeleteCriticalSection|0x2A"],
+      "callees": ["EnterCriticalSection|0x25", "WaitForSingleObject|0x28", "closesocket|0x57", "LeaveCriticalSection|0x24", "FUN_6fc81a60|0x6FC81A60", "ReleasePoolAllocation|0x6FC82322", "NET_IsShuttingDown|0x6FC81980", "DeleteCriticalSection|0x2A"],
       "caller_count": 0,
       "callers": [],
       "string_count": 1,
@@ -383,7 +383,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 15,
-      "callees": ["FogMemAlloc|0x6FC8231C", "ExitThread|0x2B", "OutputDebugStringA|0x2C", "GetTickCount|0x2D", "select|0x5B", "ReportError|0x6FC823F1", "NET_IsShuttingDown|0x6FC81980", "Ordinal_10022|0x6FC82316", "__WSAFDIsSet|0x6FC86324", "EnterCriticalSection|0x25", "FogAssert|0x6FC82328", "Ordinal_10030|0x6FC81AD0", "LeaveCriticalSection|0x24", "WSAGetLastError|0x60", "recv|0x5D"],
+      "callees": ["EnterCriticalSection|0x25", "LeaveCriticalSection|0x24", "FogAssert|0x6FC82328", "__WSAFDIsSet|0x6FC86324", "OutputDebugStringA|0x2C", "GetTickCount|0x2D", "ExitThread|0x2B", "NET_IsShuttingDown|0x6FC81980", "Ordinal_10022|0x6FC82316", "WSAGetLastError|0x60", "recv|0x5D", "ReportError|0x6FC823F1", "Ordinal_10030|0x6FC81AD0", "select|0x5B", "FogMemAlloc|0x6FC8231C"],
       "caller_count": 0,
       "callers": [],
       "string_count": 9,
@@ -432,7 +432,7 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}],
       "callee_count": 8,
-      "callees": ["NET_IsShuttingDown|0x6FC81980", "EnterCriticalSection|0x25", "FogAssert|0x6FC82328", "WSAGetLastError|0x60", "LeaveCriticalSection|0x24", "send|0x5A", "FUN_6fc82270|0x6FC82270", "ReportError|0x6FC823F1"],
+      "callees": ["EnterCriticalSection|0x25", "WSAGetLastError|0x60", "LeaveCriticalSection|0x24", "FogAssert|0x6FC82328", "send|0x5A", "ReportError|0x6FC823F1", "NET_IsShuttingDown|0x6FC81980", "FUN_6fc82270|0x6FC82270"],
       "caller_count": 0,
       "callers": [],
       "string_count": 2,
@@ -481,7 +481,7 @@
       "param_count": 2,
       "parameters": [{"name": "param_1", "type": "byte *", "storage": "ECX:4"}, {"name": "param_2", "type": "uint", "storage": "EDX:4"}],
       "callee_count": 6,
-      "callees": ["FogMemAlloc|0x6FC8231C", "Ordinal_10022|0x6FC82316", "GetTickCount|0x2D", "FogAssert|0x6FC82328", "Ordinal_10030|0x6FC81AD0", "ReportError|0x6FC823F1"],
+      "callees": ["FogAssert|0x6FC82328", "ReportError|0x6FC823F1", "Ordinal_10030|0x6FC81AD0", "GetTickCount|0x2D", "Ordinal_10022|0x6FC82316", "FogMemAlloc|0x6FC8231C"],
       "caller_count": 1,
       "callers": ["NET_QueueShutdownCallback|0x6FC81E10"],
       "string_count": 4,
@@ -530,7 +530,7 @@
       "param_count": 1,
       "parameters": [{"name": "nDestBuffer", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["SStrCopy|0x6FC823B8", "inet_ntoa|0x59", "getsockname|0x58"],
+      "callees": ["inet_ntoa|0x59", "SStrCopy|0x6FC823B8", "getsockname|0x58"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -581,7 +581,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 6,
-      "callers": ["Ordinal_10017|0x6FC81000", "D2Net_InitializeClient|0x6FC811B0", "Ordinal_10025|0x6FC81120", "FUN_6fc81340|0x6FC81340", "Ordinal_10005|0x6FC816F0", "Ordinal_10001|0x6FC81240"],
+      "callers": ["Ordinal_10001|0x6FC81240", "Ordinal_10025|0x6FC81120", "D2Net_InitializeClient|0x6FC811B0", "FUN_6fc81340|0x6FC81340", "Ordinal_10005|0x6FC816F0", "Ordinal_10017|0x6FC81000"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -677,7 +677,7 @@
       "param_count": 4,
       "parameters": [{"name": "param_1", "type": "LPCRITICAL_SECTION", "storage": "ECX:4"}, {"name": "param_2", "type": "undefined4 *", "storage": "EDX:4"}, {"name": "param_3", "type": "undefined4 *", "storage": "Stack[0x4]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x8]:4"}],
       "callee_count": 4,
-      "callees": ["EnterCriticalSection|0x25", "GetTickCount|0x2D", "ReleasePoolAllocation|0x6FC82322", "LeaveCriticalSection|0x24"],
+      "callees": ["EnterCriticalSection|0x25", "LeaveCriticalSection|0x24", "ReleasePoolAllocation|0x6FC82322", "GetTickCount|0x2D"],
       "caller_count": 2,
       "callers": ["NET_ReceivePacket|0x6FC81320", "NET_ReceivePacket|0x6FC81300"],
       "string_count": 1,
@@ -726,7 +726,7 @@
       "param_count": 2,
       "parameters": [{"name": "param_1", "type": "LPCRITICAL_SECTION", "storage": "ECX:4"}, {"name": "param_2", "type": "int *", "storage": "EDX:4"}],
       "callee_count": 3,
-      "callees": ["EnterCriticalSection|0x25", "ReleasePoolAllocation|0x6FC82322", "LeaveCriticalSection|0x24"],
+      "callees": ["EnterCriticalSection|0x25", "LeaveCriticalSection|0x24", "ReleasePoolAllocation|0x6FC82322"],
       "caller_count": 1,
       "callers": ["Ordinal_10001|0x6FC81240"],
       "string_count": 1,
@@ -875,7 +875,7 @@
       "callee_count": 1,
       "callees": ["SStrLen|0x6FC823BE"],
       "caller_count": 2,
-      "callers": ["FUN_6fc81340|0x6FC81340", "NET_QueuePacketForShutdown|0x6FC81790"],
+      "callers": ["NET_QueuePacketForShutdown|0x6FC81790", "FUN_6fc81340|0x6FC81340"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2245,7 +2245,7 @@
       "param_count": 2,
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "ECX:4"}, {"name": "param_2", "type": "uint", "storage": "EDX:4"}],
       "callee_count": 3,
-      "callees": ["FogAssert|0x6FC82328", "ReportError|0x6FC823F1", "Ordinal_10131|0x6FC82334"],
+      "callees": ["FogAssert|0x6FC82328", "Ordinal_10131|0x6FC82334", "ReportError|0x6FC823F1"],
       "caller_count": 1,
       "callers": ["Ordinal_10005|0x6FC816F0"],
       "string_count": 2,
@@ -2454,7 +2454,7 @@
       "api_calls": [],
       "instructions": ["0x2310|JMP|dword ptr [0x6fc87038]"],
       "comment": "",
-      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF"]
     },
     {
       "address": "0x6FC82316",
@@ -2492,7 +2492,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["InitializeClientSocket|0x6FC81040", "FUN_6fc81340|0x6FC81340", "NET_QueuePacketForShutdown|0x6FC81790"],
+      "callers": ["NET_QueuePacketForShutdown|0x6FC81790", "FUN_6fc81340|0x6FC81340", "InitializeClientSocket|0x6FC81040"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2541,7 +2541,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["D2Net_InitializeClient|0x6FC811B0", "FUN_6fc81340|0x6FC81340", "NET_QueuePacketForShutdown|0x6FC81790"],
+      "callers": ["NET_QueuePacketForShutdown|0x6FC81790", "D2Net_InitializeClient|0x6FC811B0", "FUN_6fc81340|0x6FC81340"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2552,7 +2552,7 @@
       "api_calls": [],
       "instructions": ["0x231C|JMP|dword ptr [0x6fc87008]"],
       "comment": "",
-      "tags": ["PROP_THUNK", "PROP_TINY", "CALLEE_0", "CALLER_3", "PARAM_0", "PROP_LEAF"]
+      "tags": ["PROP_THUNK", "PROP_TINY", "PARAM_3", "CALLEE_0", "CALLER_3", "PROP_LEAF"]
     },
     {
       "address": "0x6FC82322",
@@ -2590,7 +2590,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["FUN_6fc81a60|0x6FC81A60", "DequeueNetworkPacket|0x6FC819B0", "Ordinal_10001|0x6FC81240"],
+      "callers": ["Ordinal_10001|0x6FC81240", "DequeueNetworkPacket|0x6FC819B0", "FUN_6fc81a60|0x6FC81A60"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2639,7 +2639,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 5,
-      "callers": ["Ordinal_10006|0x6FC820D0", "FUN_6fc81340|0x6FC81340", "Ordinal_10005|0x6FC816F0", "NET_QueuePacketForShutdown|0x6FC81790", "FUN_6fc82270|0x6FC82270"],
+      "callers": ["NET_QueuePacketForShutdown|0x6FC81790", "Ordinal_10006|0x6FC820D0", "FUN_6fc81340|0x6FC81340", "Ordinal_10005|0x6FC816F0", "FUN_6fc82270|0x6FC82270"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2650,7 +2650,7 @@
       "api_calls": [],
       "instructions": ["0x2328|JMP|dword ptr [0x6fc87010]"],
       "comment": "",
-      "tags": ["PROP_THUNK", "PROP_TINY", "CALLEE_0", "CALLER_5", "PARAM_0", "PROP_LEAF"]
+      "tags": ["PROP_THUNK", "PROP_TINY", "PARAM_3", "CALLEE_0", "CALLER_5", "PROP_LEAF"]
     },
     {
       "address": "0x6FC8232E",
@@ -2688,7 +2688,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["D2Net_NotifyServerMode|0x6FC81F60", "Ordinal_10006|0x6FC820D0", "FUN_6fc81f00|0x6FC81F00"],
+      "callers": ["Ordinal_10006|0x6FC820D0", "FUN_6fc81f00|0x6FC81F00", "D2Net_NotifyServerMode|0x6FC81F60"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -3434,7 +3434,7 @@
       "api_calls": [],
       "instructions": ["0x2388|JMP|dword ptr [0x6fc87050]"],
       "comment": "",
-      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "PARAM_4", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x6FC8238E",
@@ -3826,7 +3826,7 @@
       "api_calls": [],
       "instructions": ["0x23B8|JMP|dword ptr [0x6fc87158]"],
       "comment": "",
-      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
+      "tags": ["PROP_THUNK", "PROP_TINY", "PARAM_3", "CALLER_1", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x6FC823BE",
@@ -3875,7 +3875,7 @@
       "api_calls": [],
       "instructions": ["0x23BE|JMP|dword ptr [0x6fc8715c]"],
       "comment": "",
-      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_2", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_2", "CALLEE_0", "PARAM_1", "PROP_LEAF"]
     },
     {
       "address": "0x6FC823C4",
@@ -3924,7 +3924,7 @@
       "api_calls": [],
       "instructions": ["0x23C4|MOV|EAX, [0x6fc8b8bc]", "0x23C9|TEST|EAX, EAX", "0x23CB|JZ|0x6fc823cf", "0x23CD|CALL|EAX", "0x23CF|PUSH|0x6fc88010", "0x23D4|PUSH|0x6fc88008", "0x23D9|CALL|0x6fc824d9", "0x23DE|PUSH|0x6fc88004", "0x23E3|PUSH|0x6fc88000", "0x23E8|CALL|0x6fc824d9", "0x23ED|ADD|ESP, 0x10", "0x23F0|RET|"],
       "comment": "Initialize global constructors and destructors during DLL loading.\n\nAlgorithm:\n1. Check if optional InitializeSubsystem function pointer exists (0x1002e468)\n2. If present, call the InitializeSubsystem function\n3. Call constructor array iterator with constructor table range (0x1002a008 to 0x1002a010)\n4. Call destructor array iterator with destructor table range (0x1002a000 to 0x1002a004)\n5. Return to caller (DllMain)\n\nParameters:\nNone\n\nReturns:\nvoid - No return value, initialization always completes\n\nSpecial Cases:\n- If g_pfnInitializeSubsystem is NULL, step 2 is skipped safely\n- Constructor/destructor arrays may be empty (start == end), iterator handles gracefully\n- Function called during DLL_PROCESS_ATTACH in DllMain\n\nMagic Numbers Reference:\n0x1002e468 - g_pfnInitializeSubsystem function pointer storage\n0x1002a008 - g_ppfnStaticCtorsStart (constructor array beginning)\n0x1002a010 - g_ppfnStaticCtorsEnd (constructor array end)\n0x1002a000 - g_ppfnStaticDtorsStart (destructor array beginning) \n0x1002a004 - g_ppfnStaticDtorsEnd (destructor array end)",
-      "tags": ["CALLER_1", "CALLEE_1", "CALLEE_2", "PARAM_0", "PROP_SMALL"]
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x6FC823F1",
@@ -3962,7 +3962,7 @@
       "callee_count": 1,
       "callees": ["ProcessCleanupAndExit|0x6FC82422"],
       "caller_count": 6,
-      "callers": ["Ordinal_10006|0x6FC820D0", "InitializeClientSocket|0x6FC81040", "FUN_6fc81340|0x6FC81340", "Ordinal_10005|0x6FC816F0", "NET_QueuePacketForShutdown|0x6FC81790", "FUN_6fc82270|0x6FC82270"],
+      "callers": ["NET_QueuePacketForShutdown|0x6FC81790", "Ordinal_10006|0x6FC820D0", "FUN_6fc81340|0x6FC81340", "Ordinal_10005|0x6FC816F0", "InitializeClientSocket|0x6FC81040", "FUN_6fc82270|0x6FC82270"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -4107,9 +4107,9 @@
       "param_count": 3,
       "parameters": [{"name": "dwExitCode", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "nQuickExit", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nTerminateFlag", "type": "int", "storage": "Stack[0xc]:4"}],
       "callee_count": 6,
-      "callees": ["GetCurrentProcess|0x33", "ExitProcess|0x31", "AcquireDynamicBufferLock|0x6FC824C7", "AcquireDynamicBufferLock|0x6FC824D0", "TerminateProcess|0x1F", "RunConstructorArray|0x6FC824D9"],
+      "callees": ["GetCurrentProcess|0x33", "AcquireDynamicBufferLock|0x6FC824C7", "ExitProcess|0x31", "RunConstructorArray|0x6FC824D9", "TerminateProcess|0x1F", "AcquireDynamicBufferLock|0x6FC824D0"],
       "caller_count": 3,
-      "callers": ["__exit|0x6FC82402", "InitializeCleanupSequence|0x6FC82413", "ReportError|0x6FC823F1"],
+      "callers": ["InitializeCleanupSequence|0x6FC82413", "ReportError|0x6FC823F1", "__exit|0x6FC82402"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -4256,7 +4256,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 2,
-      "callers": ["InitializeGlobalConstructors|0x6FC823C4", "ProcessCleanupAndExit|0x6FC82422"],
+      "callers": ["ProcessCleanupAndExit|0x6FC82422", "InitializeGlobalConstructors|0x6FC823C4"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -4303,7 +4303,7 @@
       "param_count": 2,
       "parameters": [{"name": "phinstDLL", "type": "void *", "storage": "Stack[0x4]:4"}, {"name": "dwReason", "type": "uint", "storage": "Stack[0x8]:4"}],
       "callee_count": 14,
-      "callees": ["TlsCleanupSlot|0x6FC827FB", "CleanupStreamDescriptors|0x6FC82AEF", "InitializeGlobalConstructors|0x6FC823C4", "GetCommandLineA|0x34", "GetVersion|0x35", "InitializeThreadLocalStorage|0x6FC827A7", "CleanupThreadContext|0x6FC82893", "CleanupMemoryAllocations|0x6FC8314D", "InitializeModuleData|0x6FC82BFC", "GetEnvironmentStringsConverted|0x6FC82E49", "InitializeEnvironmentVariables|0x6FC82B43", "InitializeCleanupSequence|0x6FC82413", "InitializeStdIoStreams|0x6FC82933", "InitializeHeapAndAllocator|0x6FC830F0"],
+      "callees": ["CleanupStreamDescriptors|0x6FC82AEF", "InitializeCleanupSequence|0x6FC82413", "InitializeModuleData|0x6FC82BFC", "GetEnvironmentStringsConverted|0x6FC82E49", "GetVersion|0x35", "GetCommandLineA|0x34", "InitializeStdIoStreams|0x6FC82933", "InitializeEnvironmentVariables|0x6FC82B43", "InitializeHeapAndAllocator|0x6FC830F0", "InitializeThreadLocalStorage|0x6FC827A7", "CleanupMemoryAllocations|0x6FC8314D", "TlsCleanupSlot|0x6FC827FB", "CleanupThreadContext|0x6FC82893", "InitializeGlobalConstructors|0x6FC823C4"],
       "caller_count": 1,
       "callers": ["entry|0x6FC825CC"],
       "string_count": 0,
@@ -4403,7 +4403,7 @@
       "callee_count": 3,
       "callees": ["CleanupConsoleOutput|0x6FC831F5", "__exit|0x6FC82402", "WriteErrorMessage|0x6FC8322E"],
       "caller_count": 5,
-      "callers": ["AcquireCriticalSectionByIndex|0x6FC82731", "InitializeEnvironmentVariables|0x6FC82B43", "GetOrCreateTlsContext|0x6FC8282C", "InitializeStdIoStreams|0x6FC82933", "InitializeModuleData|0x6FC82BFC"],
+      "callers": ["GetOrCreateTlsContext|0x6FC8282C", "InitializeModuleData|0x6FC82BFC", "AcquireCriticalSectionByIndex|0x6FC82731", "InitializeStdIoStreams|0x6FC82933", "InitializeEnvironmentVariables|0x6FC82B43"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -4548,9 +4548,9 @@
       "param_count": 1,
       "parameters": [{"name": "nCriticalSectionIndex", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 7,
-      "callees": ["InitializeCriticalSection|0x29", "AcquireCriticalSectionByIndex|0x6FC82731", "EnterCriticalSection|0x25", "_malloc|0x6FC8346A", "ReleaseCriticalSectionByIndex|0x6FC82792", "AmsgExit|0x6FC82669", "DeallocateMemory|0x6FC83381"],
+      "callees": ["_malloc|0x6FC8346A", "AmsgExit|0x6FC82669", "EnterCriticalSection|0x25", "ReleaseCriticalSectionByIndex|0x6FC82792", "AcquireCriticalSectionByIndex|0x6FC82731", "InitializeCriticalSection|0x29", "DeallocateMemory|0x6FC83381"],
       "caller_count": 9,
-      "callers": ["CompareStringsWithLocale|0x6FC86030", "ConvertCharacterToUpperCase|0x6FC85959", "AcquireDynamicBufferLock|0x6FC824C7", "AcquireCriticalSectionByIndex|0x6FC82731", "AllocateMemoryWithRetry|0x6FC835A4", "InitializeCodePageLocale|0x6FC8385B", "AllocateMemoryByStrategy|0x6FC834A8", "CompareStringsIgnoreCase|0x6FC85F60", "DeallocateMemory|0x6FC83381"],
+      "callers": ["ConvertCharacterToUpperCase|0x6FC85959", "AcquireDynamicBufferLock|0x6FC824C7", "CompareStringsWithLocale|0x6FC86030", "AcquireCriticalSectionByIndex|0x6FC82731", "CompareStringsIgnoreCase|0x6FC85F60", "InitializeCodePageLocale|0x6FC8385B", "AllocateMemoryWithRetry|0x6FC835A4", "AllocateMemoryByStrategy|0x6FC834A8", "DeallocateMemory|0x6FC83381"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -4561,7 +4561,7 @@
       "api_calls": [],
       "instructions": ["0x2731|PUSH|EBP", "0x2732|MOV|EBP, ESP", "0x2734|MOV|EAX, dword ptr [EBP + 0x8]", "0x2737|PUSH|ESI", "0x2738|CMP|dword ptr [EAX*0x4 + 0x6fc885f0], 0x0", "0x2740|LEA|ESI, [EAX*0x4 + 0x6fc885f0]", "0x2747|JNZ|0x6fc82787", "0x2749|PUSH|EDI", "0x274A|PUSH|0x18", "0x274C|CALL|0x6fc8346a", "0x2751|MOV|EDI, EAX", "0x2753|POP|ECX", "0x2754|TEST|EDI, EDI", "0x2756|JNZ|0x6fc82760", "0x2758|PUSH|0x11"],
       "comment": "Thread-safe lazy initialization and acquisition of critical section by array index\n\nAlgorithm:\n1. Calculate pointer to critical section slot in global array g_ppCriticalSections\n2. Check if critical section at index is already initialized (non-null)\n3. If uninitialized, allocate 0x18 bytes for CRITICAL_SECTION structure\n4. If allocation fails, call AmsgExit(0x11) to terminate process\n5. Acquire global initialization lock via recursive call AcquireCriticalSectionByIndex(0x11)\n6. Double-check critical section is still null (race condition protection)\n7. If still null, initialize critical section with InitializeCriticalSection\n8. Store initialized critical section pointer in global array\n9. If another thread initialized it first, free duplicate allocation with DeallocateMemory\n10. Release global initialization lock via FUN_6ff2c45f(0x11)\n11. Enter the requested critical section with EnterCriticalSection\n\nParameters:\nnCriticalSectionIndex - Index into global critical section array g_ppCriticalSections\nIMPLICIT: Uses global initialization lock at index 0x11 for thread-safe lazy initialization\n\nReturns:\nvoid - Function does not return a value, critical section is held upon return\n\nSpecial Cases:\nLock index 0x11 (17) is reserved for the global initialization synchronization lock\nProcess terminates with AmsgExit(0x11) if critical section allocation fails\nDouble-checked locking pattern prevents race conditions during initialization\n\nMagic Numbers Reference:\n0x18 (24 decimal) - Size of Windows CRITICAL_SECTION structure in bytes\n0x11 (17 decimal) - Reserved index for global initialization lock",
-      "tags": ["CALLER_22", "PARAM_1", "CALLER_9", "CALLEE_7"]
+      "tags": ["PARAM_1", "CALLER_9", "CALLEE_7"]
     },
     {
       "address": "0x6FC82792",
@@ -4599,7 +4599,7 @@
       "callee_count": 1,
       "callees": ["LeaveCriticalSection|0x24"],
       "caller_count": 12,
-      "callers": ["ReleaseMemoryAllocationLock|0x6FC83443", "CompareStringsWithLocale|0x6FC86030", "ConvertCharacterToUpperCase|0x6FC85959", "AcquireDynamicBufferLock|0x6FC824D0", "AcquireCriticalSectionByIndex|0x6FC82731", "ReleaseMemoryAllocationLock|0x6FC8356E", "InitializeCodePageLocale|0x6FC8385B", "ReleaseMemoryAllocationLock|0x6FC8363D", "CompareStringsIgnoreCase|0x6FC85F60", "ReleaseMemoryAllocationLock|0x6FC833EB", "ReleaseMemoryAllocationLock|0x6FC8350F", "ReleaseMemoryAllocationLock|0x6FC836C6"],
+      "callers": ["ReleaseMemoryAllocationLock|0x6FC8363D", "ReleaseMemoryAllocationLock|0x6FC836C6", "ConvertCharacterToUpperCase|0x6FC85959", "ReleaseMemoryAllocationLock|0x6FC83443", "ReleaseMemoryAllocationLock|0x6FC833EB", "ReleaseMemoryAllocationLock|0x6FC8356E", "CompareStringsWithLocale|0x6FC86030", "AcquireCriticalSectionByIndex|0x6FC82731", "CompareStringsIgnoreCase|0x6FC85F60", "InitializeCodePageLocale|0x6FC8385B", "ReleaseMemoryAllocationLock|0x6FC8350F", "AcquireDynamicBufferLock|0x6FC824D0"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -4646,7 +4646,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["InitializeThreadContext|0x6FC82819", "TlsSetValue|0x37", "GetCurrentThreadId|0x36", "AllocateMemoryWithRetry|0x6FC835A4", "InitializeCriticalSections|0x6FC8269C", "TlsAlloc|0x38"],
+      "callees": ["InitializeThreadContext|0x6FC82819", "InitializeCriticalSections|0x6FC8269C", "AllocateMemoryWithRetry|0x6FC835A4", "TlsSetValue|0x37", "TlsAlloc|0x38", "GetCurrentThreadId|0x36"],
       "caller_count": 1,
       "callers": ["DllMain|0x6FC824F3"],
       "string_count": 0,
@@ -4695,7 +4695,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 2,
-      "callees": ["TlsFree|0x21", "CleanupCriticalSections|0x6FC826C5"],
+      "callees": ["CleanupCriticalSections|0x6FC826C5", "TlsFree|0x21"],
       "caller_count": 1,
       "callers": ["DllMain|0x6FC824F3"],
       "string_count": 0,
@@ -4793,7 +4793,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 8,
-      "callees": ["InitializeThreadContext|0x6FC82819", "TlsSetValue|0x37", "GetCurrentThreadId|0x36", "AllocateMemoryWithRetry|0x6FC835A4", "TlsGetValue|0x3B", "GetLastError|0x3C", "AmsgExit|0x6FC82669", "SetLastError|0x23"],
+      "callees": ["AmsgExit|0x6FC82669", "GetLastError|0x3C", "TlsGetValue|0x3B", "SetLastError|0x23", "InitializeThreadContext|0x6FC82819", "AllocateMemoryWithRetry|0x6FC835A4", "TlsSetValue|0x37", "GetCurrentThreadId|0x36"],
       "caller_count": 1,
       "callers": ["GetThreadContextFieldAt8|0x6FC85950"],
       "string_count": 0,
@@ -4806,7 +4806,7 @@
       "api_calls": [],
       "instructions": ["0x282C|PUSH|ESI", "0x282D|PUSH|EDI", "0x282E|CALL|dword ptr [0x6fc870e8]", "0x2834|PUSH|dword ptr [0x6fc886b0]", "0x283A|MOV|EDI, EAX", "0x283C|CALL|dword ptr [0x6fc870e4]", "0x2842|MOV|ESI, EAX", "0x2844|TEST|ESI, ESI", "0x2846|JNZ|0x6fc82887", "0x2848|PUSH|0x74", "0x284A|PUSH|0x1", "0x284C|CALL|0x6fc835a4", "0x2851|MOV|ESI, EAX", "0x2853|POP|ECX", "0x2854|TEST|ESI, ESI"],
       "comment": "Gets or creates the thread-specific context for the current thread.\n\nAlgorithm:\n1. Preserve current thread error state using GetLastError()\n2. Attempt to retrieve existing ThreadContext from TLS using g_dwTlsSlotIndex\n3. If no context exists (NULL pointer):\n   a. Allocate new ThreadContext structure (116 bytes) via FUN_6ff2cbae\n   b. If allocation successful, store context in TLS using TlsSetValue\n   c. If TLS storage successful:\n      - Initialize the context structure using InitializeThreadContext\n      - Get current thread ID and store in context->reserved0 (offset 0x0)\n      - Set context flags to 0xFFFFFFFF (offset 0x4)\n   d. If allocation or TLS storage fails, call AmsgExit(0x10) to terminate\n4. Restore original error state using SetLastError()\n5. Return pointer to ThreadContext structure\n\nParameters:\nNone\n\nReturns:\nThreadContext* - Pointer to thread-specific context structure\n                 Never returns NULL (terminates process on failure)\n\nSpecial Cases:\n- Process termination via AmsgExit(0x10) if memory allocation fails\n- Process termination if TLS storage assignment fails\n- Error code preservation ensures GetLastError() state is unchanged\n\nMagic Numbers Reference:\n0x74 (116 decimal) - Size of ThreadContext structure allocation\n0x10 (16 decimal) - Exit code for thread context allocation failure\n0xFFFFFFFF - Default flag value set in ThreadContext.dwFlags\n\nStructure Layout:\nOffset | Size | Field Name | Type  | Description\n-------|------|------------|-------|------------------------------------------\n0x0    | 4    | reserved0  | DWORD | Thread ID storage (misleading field name)\n0x4    | 4    | dwFlags    | DWORD | Thread context flags (set to 0xFFFFFFFF)\n...    | ...  | ...        | ...   | (Additional fields initialized by InitializeThreadContext)",
-      "tags": ["CALLER_1", "PARAM_0", "CALLER_9", "CALLEE_8"]
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_8"]
     },
     {
       "address": "0x6FC82893",
@@ -4842,7 +4842,7 @@
       "param_count": 1,
       "parameters": [{"name": "pThreadContext", "type": "ThreadContext *", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["TlsSetValue|0x37", "TlsGetValue|0x3B", "DeallocateMemory|0x6FC83381"],
+      "callees": ["TlsGetValue|0x3B", "TlsSetValue|0x37", "DeallocateMemory|0x6FC83381"],
       "caller_count": 1,
       "callers": ["DllMain|0x6FC824F3"],
       "string_count": 0,
@@ -4891,7 +4891,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["SetHandleCount|0x3D", "GetStartupInfoA|0x40", "GetStdHandle|0x3E", "_malloc|0x6FC8346A", "GetFileType|0x20", "AmsgExit|0x6FC82669"],
+      "callees": ["_malloc|0x6FC8346A", "AmsgExit|0x6FC82669", "SetHandleCount|0x3D", "GetStartupInfoA|0x40", "GetStdHandle|0x3E", "GetFileType|0x20"],
       "caller_count": 1,
       "callers": ["DllMain|0x6FC824F3"],
       "string_count": 0,
@@ -4989,7 +4989,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["InitializeCodePageOnce|0x6FC83C33", "_strlen|0x6FC837E0", "_malloc|0x6FC8346A", "CopyStringOptimized|0x6FC836F0", "AmsgExit|0x6FC82669", "DeallocateMemory|0x6FC83381"],
+      "callees": ["_malloc|0x6FC8346A", "AmsgExit|0x6FC82669", "_strlen|0x6FC837E0", "InitializeCodePageOnce|0x6FC83C33", "CopyStringOptimized|0x6FC836F0", "DeallocateMemory|0x6FC83381"],
       "caller_count": 1,
       "callers": ["DllMain|0x6FC824F3"],
       "string_count": 0,
@@ -5038,7 +5038,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["InitializeCodePageOnce|0x6FC83C33", "_malloc|0x6FC8346A", "GetModuleFileNameA|0x41", "ParseCommandLineArguments|0x6FC82C95", "AmsgExit|0x6FC82669"],
+      "callees": ["_malloc|0x6FC8346A", "AmsgExit|0x6FC82669", "GetModuleFileNameA|0x41", "InitializeCodePageOnce|0x6FC83C33", "ParseCommandLineArguments|0x6FC82C95"],
       "caller_count": 1,
       "callers": ["DllMain|0x6FC824F3"],
       "string_count": 0,
@@ -5136,7 +5136,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 8,
-      "callees": ["WideCharToMultiByte|0x44", "GetEnvironmentStrings|0x45", "FreeEnvironmentStringsW|0x43", "_malloc|0x6FC8346A", "OptimizedMemoryMove|0x6FC83C50", "GetEnvironmentStringsW|0x32", "FreeEnvironmentStringsA|0x42", "DeallocateMemory|0x6FC83381"],
+      "callees": ["_malloc|0x6FC8346A", "OptimizedMemoryMove|0x6FC83C50", "GetEnvironmentStrings|0x45", "WideCharToMultiByte|0x44", "FreeEnvironmentStringsW|0x43", "GetEnvironmentStringsW|0x32", "DeallocateMemory|0x6FC83381", "FreeEnvironmentStringsA|0x42"],
       "caller_count": 1,
       "callers": ["DllMain|0x6FC824F3"],
       "string_count": 0,
@@ -5234,7 +5234,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 9,
-      "callees": ["AllocateStackSpace|0x6FC84340", "GetEnvironmentVariableA|0x48", "GetPEMachineType|0x6FC82F7B", "_strncmp|0x6FC84300", "GetVersionExA|0x49", "ParseNumberWithDefaultFlags|0x6FC83F85", "GetModuleFileNameA|0x41", "FindSubstringInString|0x6FC84280", "FindCharacterInString|0x6FC841C0"],
+      "callees": ["AllocateStackSpace|0x6FC84340", "GetModuleFileNameA|0x41", "FindCharacterInString|0x6FC841C0", "GetEnvironmentVariableA|0x48", "ParseNumberWithDefaultFlags|0x6FC83F85", "FindSubstringInString|0x6FC84280", "GetVersionExA|0x49", "_strncmp|0x6FC84300", "GetPEMachineType|0x6FC82F7B"],
       "caller_count": 1,
       "callers": ["InitializeHeapAndAllocator|0x6FC830F0"],
       "string_count": 1,
@@ -5283,7 +5283,7 @@
       "param_count": 1,
       "parameters": [{"name": "nReason", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 5,
-      "callees": ["InitializeMemoryAllocator|0x6FC84BC0", "HeapCreate|0x3A", "InitializeMemoryPool|0x6FC8436F", "HeapDestroy|0x39", "DetermineHeapCompatibilityMode|0x6FC82FA8"],
+      "callees": ["InitializeMemoryPool|0x6FC8436F", "HeapDestroy|0x39", "HeapCreate|0x3A", "DetermineHeapCompatibilityMode|0x6FC82FA8", "InitializeMemoryAllocator|0x6FC84BC0"],
       "caller_count": 1,
       "callers": ["DllMain|0x6FC824F3"],
       "string_count": 0,
@@ -5332,7 +5332,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 3,
-      "callees": ["VirtualFree|0x4C", "HeapFree|0x4D", "HeapDestroy|0x39"],
+      "callees": ["HeapDestroy|0x39", "VirtualFree|0x4C", "HeapFree|0x4D"],
       "caller_count": 1,
       "callers": ["DllMain|0x6FC824F3"],
       "string_count": 0,
@@ -5430,7 +5430,7 @@
       "param_count": 1,
       "parameters": [{"name": "dwErrorCode", "type": "dword", "storage": "Stack[0x4]:4"}],
       "callee_count": 8,
-      "callees": ["ShowMessageBoxWithActiveWindow|0x6FC851E4", "GetStdHandle|0x3E", "_strlen|0x6FC837E0", "OptimizedStringCopy|0x6FC83700", "GetModuleFileNameA|0x41", "CopyStringOptimized|0x6FC836F0", "_strncpy|0x6FC85270", "WriteFile|0x3F"],
+      "callees": ["_strlen|0x6FC837E0", "_strncpy|0x6FC85270", "WriteFile|0x3F", "GetModuleFileNameA|0x41", "OptimizedStringCopy|0x6FC83700", "ShowMessageBoxWithActiveWindow|0x6FC851E4", "GetStdHandle|0x3E", "CopyStringOptimized|0x6FC836F0"],
       "caller_count": 2,
       "callers": ["CleanupConsoleOutput|0x6FC831F5", "AmsgExit|0x6FC82669"],
       "string_count": 4,
@@ -5443,7 +5443,7 @@
       "api_calls": [],
       "instructions": ["0x322E|PUSH|EBP", "0x322F|MOV|EBP, ESP", "0x3231|SUB|ESP, 0x1a4", "0x3237|MOV|EDX, dword ptr [EBP + 0x8]", "0x323A|XOR|ECX, ECX", "0x323C|MOV|EAX, 0x6fc886e0", "0x3241|CMP|EDX, dword ptr [EAX]", "0x3243|JZ|0x6fc83250", "0x3245|ADD|EAX, 0x8", "0x3248|INC|ECX", "0x3249|CMP|EAX, 0x6fc88770", "0x324E|JC|0x6fc83241", "0x3250|PUSH|ESI", "0x3251|MOV|ESI, ECX", "0x3253|SHL|ESI, 0x3"],
       "comment": "Displays a runtime error dialog based on error code from C++ runtime.\n\nAlgorithm:\n  1. Search error code table (0x6fd492b8 to 0x6fd49348) for matching code\n  2. If found and DAT_6fd55d44==1 or (DAT_6fd55d44==0 and DAT_6fd55d48==1):\n     - Write error message to stdout via GetStdHandle/WriteFile\n  3. Else if error code is not 0xfc (stack overflow):\n     - Get module filename via GetModuleFileNameA\n     - Truncate path if longer than 0x3c (60) bytes\n     - Build formatted error message: \"Runtime Error!\n\nProgram: [path]\n[description]\n\"\n     - Display via MessageBoxA with \"Microsoft Visual C++ Runtime Library\" title\n\nParameters:\n  dwErrorCode - Error code to handle (2=access violation, 8=insufficient memory, etc)\n\nReturns:\n  void - No return value, either outputs to stdout or shows messagebox\n\nSpecial Cases:\n  - 0xfc error code (stack overflow) shown via different code path\n  - Empty module filename defaults to \"<program name unknown>\"\n  - Path truncated to 60 bytes with \"...\" suffix if too long\n  - Table-based lookup enables per-error customized messages",
-      "tags": ["STRUCT_Inventory", "CALLER_2", "CALLER_3", "PARAM_1", "STRUCT_Control", "CALLEE_8"]
+      "tags": ["STRUCT_Inventory", "CALLER_2", "PARAM_1", "STRUCT_Control", "CALLEE_8"]
     },
     {
       "address": "0x6FC83381",
@@ -5479,9 +5479,9 @@
       "param_count": 1,
       "parameters": [{"name": "pMemory", "type": "void *", "storage": "Stack[0x4]:4"}],
       "callee_count": 8,
-      "callees": ["UpdateMemoryPoolTracking|0x6FC84E73", "ReleaseMemoryAllocationLock|0x6FC83443", "AcquireCriticalSectionByIndex|0x6FC82731", "HeapFree|0x4D", "DeallocateMemoryBlock|0x6FC843E2", "ReleaseMemoryAllocationLock|0x6FC833EB", "ValidateAllocationBlockAddress|0x6FC84E1C", "FindMemoryDescriptorByAddress|0x6FC843B7"],
+      "callees": ["ValidateAllocationBlockAddress|0x6FC84E1C", "ReleaseMemoryAllocationLock|0x6FC83443", "ReleaseMemoryAllocationLock|0x6FC833EB", "FindMemoryDescriptorByAddress|0x6FC843B7", "AcquireCriticalSectionByIndex|0x6FC82731", "UpdateMemoryPoolTracking|0x6FC84E73", "HeapFree|0x4D", "DeallocateMemoryBlock|0x6FC843E2"],
       "caller_count": 6,
-      "callers": ["GetEnvironmentStringsConverted|0x6FC82E49", "CleanupCriticalSections|0x6FC826C5", "CleanupStreamDescriptors|0x6FC82AEF", "AcquireCriticalSectionByIndex|0x6FC82731", "InitializeEnvironmentVariables|0x6FC82B43", "CleanupThreadContext|0x6FC82893"],
+      "callers": ["CleanupCriticalSections|0x6FC826C5", "CleanupStreamDescriptors|0x6FC82AEF", "AcquireCriticalSectionByIndex|0x6FC82731", "GetEnvironmentStringsConverted|0x6FC82E49", "CleanupThreadContext|0x6FC82893", "InitializeEnvironmentVariables|0x6FC82B43"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -5628,7 +5628,7 @@
       "callee_count": 1,
       "callees": ["__nh_malloc|0x6FC8347C"],
       "caller_count": 5,
-      "callers": ["GetEnvironmentStringsConverted|0x6FC82E49", "AcquireCriticalSectionByIndex|0x6FC82731", "InitializeEnvironmentVariables|0x6FC82B43", "InitializeStdIoStreams|0x6FC82933", "InitializeModuleData|0x6FC82BFC"],
+      "callers": ["InitializeModuleData|0x6FC82BFC", "AcquireCriticalSectionByIndex|0x6FC82731", "GetEnvironmentStringsConverted|0x6FC82E49", "InitializeStdIoStreams|0x6FC82933", "InitializeEnvironmentVariables|0x6FC82B43"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -5724,7 +5724,7 @@
       "param_count": 1,
       "parameters": [{"name": "dwSize", "type": "ulong", "storage": "Stack[0x4]:4"}],
       "callee_count": 6,
-      "callees": ["AllocateMemoryDescriptorBlock|0x6FC8470B", "AllocateMemoryFromPool|0x6FC84EB8", "AcquireCriticalSectionByIndex|0x6FC82731", "ReleaseMemoryAllocationLock|0x6FC8356E", "HeapAlloc|0x4F", "ReleaseMemoryAllocationLock|0x6FC8350F"],
+      "callees": ["AllocateMemoryDescriptorBlock|0x6FC8470B", "AllocateMemoryFromPool|0x6FC84EB8", "ReleaseMemoryAllocationLock|0x6FC8356E", "AcquireCriticalSectionByIndex|0x6FC82731", "ReleaseMemoryAllocationLock|0x6FC8350F", "HeapAlloc|0x4F"],
       "caller_count": 1,
       "callers": ["__nh_malloc|0x6FC8347C"],
       "string_count": 0,
@@ -5871,7 +5871,7 @@
       "param_count": 2,
       "parameters": [{"name": "dwWidth", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "dwHeight", "type": "uint", "storage": "Stack[0x8]:4"}],
       "callee_count": 8,
-      "callees": ["AllocateMemoryDescriptorBlock|0x6FC8470B", "AllocateMemoryFromPool|0x6FC84EB8", "AcquireCriticalSectionByIndex|0x6FC82731", "HeapAlloc|0x4F", "InvokeCallbackHandler|0x6FC85540", "ReleaseMemoryAllocationLock|0x6FC8363D", "_memset|0x6FC85560", "ReleaseMemoryAllocationLock|0x6FC836C6"],
+      "callees": ["AllocateMemoryDescriptorBlock|0x6FC8470B", "InvokeCallbackHandler|0x6FC85540", "ReleaseMemoryAllocationLock|0x6FC8363D", "AllocateMemoryFromPool|0x6FC84EB8", "ReleaseMemoryAllocationLock|0x6FC836C6", "_memset|0x6FC85560", "AcquireCriticalSectionByIndex|0x6FC82731", "HeapAlloc|0x4F"],
       "caller_count": 2,
       "callers": ["InitializeThreadLocalStorage|0x6FC827A7", "GetOrCreateTlsContext|0x6FC8282C"],
       "string_count": 0,
@@ -6020,7 +6020,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 2,
-      "callers": ["InitializeEnvironmentVariables|0x6FC82B43", "WriteErrorMessage|0x6FC8322E"],
+      "callers": ["WriteErrorMessage|0x6FC8322E", "InitializeEnvironmentVariables|0x6FC82B43"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -6118,7 +6118,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 2,
-      "callers": ["InitializeEnvironmentVariables|0x6FC82B43", "WriteErrorMessage|0x6FC8322E"],
+      "callers": ["WriteErrorMessage|0x6FC8322E", "InitializeEnvironmentVariables|0x6FC82B43"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -6165,7 +6165,7 @@
       "param_count": 1,
       "parameters": [{"name": "dwCodePageIdentifier", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 7,
-      "callees": ["InitializeLocaleDataBuffers|0x6FC83A85", "AcquireCriticalSectionByIndex|0x6FC82731", "ResolveCodePageIdentifier|0x6FC83A08", "MapCodePageIdentifier|0x6FC83A52", "GetCPInfo|0x46", "ReleaseCriticalSectionByIndex|0x6FC82792", "InitializeCharacterTables|0x6FC83AAE"],
+      "callees": ["MapCodePageIdentifier|0x6FC83A52", "InitializeCharacterTables|0x6FC83AAE", "GetCPInfo|0x46", "ReleaseCriticalSectionByIndex|0x6FC82792", "AcquireCriticalSectionByIndex|0x6FC82731", "ResolveCodePageIdentifier|0x6FC83A08", "InitializeLocaleDataBuffers|0x6FC83A85"],
       "caller_count": 1,
       "callers": ["InitializeCodePageOnce|0x6FC83C33"],
       "string_count": 0,
@@ -6178,7 +6178,7 @@
       "api_calls": [],
       "instructions": ["0x385B|PUSH|EBP", "0x385C|MOV|EBP, ESP", "0x385E|SUB|ESP, 0x18", "0x3861|PUSH|EBX", "0x3862|PUSH|ESI", "0x3863|PUSH|EDI", "0x3864|PUSH|0x19", "0x3866|CALL|0x6fc82731", "0x386B|PUSH|dword ptr [EBP + 0x8]", "0x386E|CALL|0x6fc83a08", "0x3873|MOV|EBX, EAX", "0x3875|POP|ECX", "0x3876|CMP|EBX, dword ptr [0x6fc8b55c]", "0x387C|POP|ECX", "0x387D|MOV|dword ptr [EBP + 0x8], EBX"],
       "comment": "Initializes code page locale settings for character type classification.\n\nAlgorithm:\n1. Acquire critical section 0x19 for thread-safe code page modification\n2. Resolve input code page identifier to canonical code page value\n3. If code page already current, return success immediately (early exit)\n4. If code page is 0 (invalid), initialize locale data buffers and character tables\n5. Search prebuilt code page table (at g_adwData_6fa5842c) for matching entry\n6. If found in table: populate character type mask array from table data\n7. If not found: call GetCPInfo to get Windows code page information\n8. For multi-byte code pages (MaxCharSize >= 2): mark lead byte ranges with flag 0x4\n9. Mark all bytes 1-254 with flag 0x8 (valid trail byte indicator)\n10. Update global code page state variables\n11. Call InitializeCharacterTables to finalize setup\n12. Release critical section and return result\n\nParameters:\n  dwCodePageIdentifier - Windows code page ID (e.g., 932=Japanese, 936=Chinese)\n\nReturns:\n  0 on success\n  -1 (0xFFFFFFFF) if GetCPInfo fails and code page not previously initialized\n\nSpecial Cases:\n  - Code page 0: Treated as invalid, triggers locale buffer initialization\n  - Same code page: Early exit with success to avoid redundant work\n  - Unknown code page: Falls back to Windows GetCPInfo API\n\nMagic Numbers:\n  0x19 - Critical section index for code page operations\n  0x40 - Loop count for clearing 256-byte character type array (0x40*4=0x100)\n  0x4  - Lead byte flag in character type mask\n  0x8  - Valid byte flag in character type mask\n  4    - Number of character type categories processed from table\n\nGlobals Modified:\n  g_dwCurrentCodePage    - Currently active code page\n  g_dwCodePageProperties - Properties from MapCodePageIdentifier\n  g_dwPad_6fa632dc       - Multi-byte code page indicator (1=multi-byte, 0=single)\n  DWORD_6fa633e0         - Character type classification array (257 bytes)\n  DWORD_6fa632d0-D8      - Code page table metadata (3 DWORDs)",
-      "tags": ["CALLER_1", "STRUCT_Skill", "PARAM_1", "PROP_LOOPHEAVY", "CALLEE_6", "CALLEE_7"]
+      "tags": ["CALLER_1", "STRUCT_Skill", "PARAM_1", "PROP_LOOPHEAVY", "CALLEE_7"]
     },
     {
       "address": "0x6FC83A08",
@@ -6412,7 +6412,7 @@
       "callee_count": 1,
       "callees": ["InitializeCodePageLocale|0x6FC8385B"],
       "caller_count": 2,
-      "callers": ["InitializeEnvironmentVariables|0x6FC82B43", "InitializeModuleData|0x6FC82BFC"],
+      "callers": ["InitializeModuleData|0x6FC82BFC", "InitializeEnvironmentVariables|0x6FC82B43"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -6557,7 +6557,7 @@
       "param_count": 5,
       "parameters": [{"name": "this", "type": "void *", "storage": "ECX:4 (auto)"}, {"name": "param_1", "type": "byte *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "void *", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x10]:4"}],
       "callee_count": 3,
-      "callees": ["ConvertCharacterToUpperCase|0x6FC85959", "GetThreadContextFieldAt8|0x6FC85950", "GetCharacterProperties|0x6FC85A94"],
+      "callees": ["ConvertCharacterToUpperCase|0x6FC85959", "GetCharacterProperties|0x6FC85A94", "GetThreadContextFieldAt8|0x6FC85950"],
       "caller_count": 1,
       "callers": ["ParseNumberWithDefaultFlags|0x6FC83F85"],
       "string_count": 0,
@@ -6668,7 +6668,7 @@
       "api_calls": [],
       "instructions": ["0x41C0|XOR|EAX, EAX", "0x41C2|MOV|AL, byte ptr [ESP + 0x8]", "0x41C6|PUSH|EBX", "0x41C7|MOV|EBX, EAX", "0x41C9|SHL|EAX, 0x8", "0x41CC|MOV|EDX, dword ptr [ESP + 0x8]", "0x41D0|TEST|EDX, 0x3", "0x41D6|JZ|0x6fc841eb", "0x41D8|MOV|CL, byte ptr [EDX]", "0x41DA|INC|EDX", "0x41DB|CMP|CL, BL", "0x41DD|JZ|0x6fc841b0", "0x41DF|TEST|CL, CL", "0x41E1|JZ|0x6fc84234", "0x41E3|TEST|EDX, 0x3"],
       "comment": "Locate first occurrence of character in string using optimized DWORD scanning\n\nAlgorithm:\n1. Handle unaligned bytes one-by-one until pointer is DWORD-aligned\n2. Check each unaligned byte for target character or null terminator\n3. Build 32-bit search pattern by replicating target character 4 times\n4. Scan aligned memory in 4-byte chunks using bit manipulation tricks\n5. Use XOR and arithmetic to detect target character or null terminator\n6. When match detected, examine individual bytes to find exact position\n7. Return pointer to matching character or NULL if not found\n\nParameters:\nszString (char *): Input string to search, must be null-terminated\nnSearchChar (int): Character to find (only low byte used)\n\nReturns:\nchar *: Pointer to first occurrence of character in string\n        NULL if character not found or string is null\n\nSpecial Cases:\nSearch character 0x00 finds null terminator location\nOptimized for x86 architecture with DWORD-aligned memory access\nUses magic constant 0x7EFEFEFF for simultaneous null detection\n\nMagic Numbers Reference:\n0x7EFEFEFF: Magic constant for null byte detection in DWORD\n0x81010100: Bit mask to isolate null detection results\n0x1010100: Secondary mask for null detection edge cases\n0x80000000: Sign bit mask for overflow detection\n\nPerformance Notes:\nHandles 1-3 unaligned bytes individually for alignment\nProcesses 4 bytes per iteration in main loop\nReturns immediately upon finding target or null terminator",
-      "tags": ["PARAM_2", "CALLER_1", "CALLEE_0", "CALLER_6", "PROP_LOOPHEAVY", "PROP_LEAF"]
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_0", "PROP_LOOPHEAVY", "PROP_LEAF"]
     },
     {
       "address": "0x6FC84280",
@@ -6815,7 +6815,7 @@
       "api_calls": [],
       "instructions": ["0x4340|PUSH|ECX", "0x4341|CMP|EAX, 0x1000", "0x4346|LEA|ECX, [ESP + 0x8]", "0x434A|JC|0x6fc84360", "0x434C|SUB|ECX, 0x1000", "0x4352|SUB|EAX, 0x1000", "0x4357|TEST|dword ptr [ECX], EAX", "0x4359|CMP|EAX, 0x1000", "0x435E|JNC|0x6fc8434c", "0x4360|SUB|ECX, EAX", "0x4362|MOV|EAX, ESP", "0x4364|TEST|dword ptr [ECX], EAX", "0x4366|MOV|ESP, ECX", "0x4368|MOV|ECX, dword ptr [EAX]", "0x436A|MOV|EAX, dword ptr [EAX + 0x4]"],
       "comment": "Dynamically allocates stack space with page probing to ensure proper memory commitment.\n\nAlgorithm:\n1. Initialize stack pointer to current position plus 8 bytes (beyond return address and saved ECX)\n2. Check if requested allocation size exceeds one page (0x1000 bytes)\n3. If multi-page allocation needed, enter probing loop:\n   - Subtract one page (0x1000 bytes) from stack pointer\n   - Subtract one page from remaining allocation size\n   - Touch memory at stack pointer to trigger page commitment\n   - Repeat until remaining size is less than one page\n4. Subtract final remaining bytes from stack pointer\n5. Touch memory at final stack position to commit last page\n6. Update ESP register to new stack pointer position\n7. Restore original ECX and return address from saved stack frame\n8. Return to caller with stack space allocated and committed\n\nParameters:\ndwStackSize (uint) - Number of bytes to allocate on stack\n\nReturns:\nvoid - No return value, modifies stack pointer directly\n\nSpecial Cases:\n- Single page allocations (≤ 0xFFF bytes) skip the probing loop\n- Memory touches use TEST instruction to trigger page faults for uncommitted pages\n- Stack grows downward, so allocation decreases stack pointer\n- Function preserves ECX register across call\n\nMagic Numbers Reference:\n0x1000 (4096) - Windows page size for stack probing\n0xFFF (4095) - Maximum single-page allocation without probing\n\nError Handling:\n- No explicit error handling - relies on Windows page fault mechanism\n- Invalid memory access triggers system page fault handler\n- Stack overflow protection handled by system guard pages",
-      "tags": ["CALLEE_0", "CALLER_3", "PARAM_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
+      "tags": ["CALLEE_0", "CALLER_3", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6FC8436F",
@@ -6913,7 +6913,7 @@
       "api_calls": [],
       "instructions": ["0x43B7|MOV|EAX, [0x6fc8b550]", "0x43BC|LEA|ECX, [EAX + EAX*0x4]", "0x43BF|MOV|EAX, [0x6fc8b554]", "0x43C4|LEA|ECX, [EAX + ECX*0x4]", "0x43C7|CMP|EAX, ECX", "0x43C9|JNC|0x6fc843df", "0x43CB|MOV|EDX, dword ptr [ESP + 0x4]", "0x43CF|SUB|EDX, dword ptr [EAX + 0xc]", "0x43D2|CMP|EDX, 0x100000", "0x43D8|JC|0x6fc843e1", "0x43DA|ADD|EAX, 0x14", "0x43DD|JMP|0x6fc843c7", "0x43DF|XOR|EAX, EAX", "0x43E1|RET|"],
       "comment": "Searches for a MemoryDescriptor entry containing a target address within a 1MB range.\n\nAlgorithm:\n1. Initialize iterator to start of MemoryDescriptor array (PTR_1003ce08)\n2. Calculate array end boundary using count (INT_1003ce04) * 20-byte element size\n3. Loop through array until end boundary reached:\n   a. Calculate address difference from target to descriptor base address (offset 0xc)\n   b. Check if difference is within 0x100000 (1MB) range using unsigned comparison\n   c. If match found, return pointer to current MemoryDescriptor\n   d. Otherwise advance iterator by 20 bytes (0x14) to next descriptor\n4. Return 0 if no matching descriptor found\n\nParameters:\n- nTargetAddress (int): Target address to locate within memory descriptors\n\nReturns:\n- MemoryDescriptor *: Pointer to descriptor containing target address\n- 0: No descriptor found containing target address within 1MB range\n\nSpecial Cases:\n- Empty array (count = 0): Returns 0 immediately\n- Target address beyond all descriptors: Returns 0 after full iteration\n\nMagic Numbers Reference:\n- 0x14 (20): MemoryDescriptor structure size in bytes\n- 0xc (12): Offset to base address field within MemoryDescriptor\n- 0x100000 (1048576): Maximum address range tolerance (1MB)\n\nStructure Layout:\nOffset | Size | Field Name       | Type | Description\n-------|------|------------------|------|------------------\n+0x00  | ?    | [Unknown fields] | ?    | Structure prefix\n+0x0c  | 4    | dwBaseAddress    | uint | Base memory address\n+0x10  | ?    | [Unknown fields] | ?    | Additional data\nTotal: 20 bytes (0x14)",
-      "tags": ["CALLER_1", "CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LEAF", "RET_STRUCT_PTR", "PROP_SMALL"]
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF", "RET_STRUCT_PTR", "PROP_SMALL"]
     },
     {
       "address": "0x6FC843E2",
@@ -6949,7 +6949,7 @@
       "param_count": 2,
       "parameters": [{"name": "pMemoryPool", "type": "MemoryPool *", "storage": "Stack[0x4]:4"}, {"name": "nBlockAddress", "type": "int", "storage": "Stack[0x8]:4"}],
       "callee_count": 3,
-      "callees": ["VirtualFree|0x4C", "OptimizedMemoryMove|0x6FC85B10", "HeapFree|0x4D"],
+      "callees": ["OptimizedMemoryMove|0x6FC85B10", "VirtualFree|0x4C", "HeapFree|0x4D"],
       "caller_count": 1,
       "callers": ["DeallocateMemory|0x6FC83381"],
       "string_count": 0,
@@ -7047,7 +7047,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 4,
-      "callees": ["HeapAlloc|0x4F", "HeapFree|0x4D", "HeapReAlloc|0x4E", "VirtualAlloc|0x4B"],
+      "callees": ["HeapReAlloc|0x4E", "VirtualAlloc|0x4B", "HeapAlloc|0x4F", "HeapFree|0x4D"],
       "caller_count": 1,
       "callers": ["AllocateMemoryDescriptorBlock|0x6FC8470B"],
       "string_count": 0,
@@ -7145,7 +7145,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["VirtualFree|0x4C", "HeapAlloc|0x4F", "HeapFree|0x4D", "VirtualAlloc|0x4B", "_memset|0x6FC85560"],
+      "callees": ["_memset|0x6FC85560", "VirtualAlloc|0x4B", "VirtualFree|0x4C", "HeapAlloc|0x4F", "HeapFree|0x4D"],
       "caller_count": 2,
       "callers": ["AllocateMemoryFromPool|0x6FC84EB8", "InitializeHeapAndAllocator|0x6FC830F0"],
       "string_count": 0,
@@ -7305,7 +7305,7 @@
       "api_calls": [],
       "instructions": ["0x4E1C|MOV|EAX, dword ptr [ESP + 0x4]", "0x4E20|MOV|EDX, 0x6fc88900", "0x4E25|PUSH|ESI", "0x4E26|MOV|ECX, EDX", "0x4E28|CMP|EAX, dword ptr [ECX + 0x10]", "0x4E2B|JBE|0x6fc84e32", "0x4E2D|CMP|EAX, dword ptr [ECX + 0x14]", "0x4E30|JC|0x6fc84e3a", "0x4E32|MOV|ECX, dword ptr [ECX]", "0x4E34|CMP|ECX, EDX", "0x4E36|JZ|0x6fc84e6f", "0x4E38|JMP|0x6fc84e28", "0x4E3A|TEST|AL, 0xf", "0x4E3C|JNZ|0x6fc84e6f", "0x4E3E|MOV|ESI, EAX"],
       "comment": "Validate memory address within allocation block and calculate adjusted address\n\nAlgorithm:\n1. Initialize table pointer to g_aErrorTable[18] (offset 0x12 * 8 bytes)\n2. Loop through linked error table entries checking address bounds\n3. Compare address against entry's lower bound (offset 0x10) and upper bound (offset 0x14)\n4. If address outside bounds, follow next pointer (offset 0x0) to continue search\n5. Exit loop if reach sentinel value 0x6ff36b70 indicating end of table\n6. Validate 16-byte alignment by checking (address & 0xf) == 0\n7. Validate minimum offset by checking (address & 0xfff) >= 0x100\n8. Store found table entry pointer in output parameter\n9. Calculate 4KB-aligned base address using (address & 0xfffff000)\n10. Store base address in output parameter  \n11. Calculate final address: ((address - base - 0x100) >> 4) + 8 + base\n\nParameters:\npAddress (void*): Memory address to validate and process\nppTableEntry (ErrorTableEntry**): Output pointer for found error table entry\npuBaseAddress (uint*): Output pointer for calculated 4KB base address\n\nReturns:\n0: Validation failed - address not found in table, misaligned, or offset too small\nNon-zero: Calculated adjusted address based on base address and offset\n\nSpecial Cases:\n- Returns 0 if address not found in any table entry bounds\n- Returns 0 if address not 16-byte aligned (address & 0xf != 0)  \n- Returns 0 if offset within 4KB page less than 0x100 bytes\n- Handles linked list traversal with sentinel check at 0x6ff36b70\n\nMagic Numbers Reference:\n0x12 (18): Starting offset in error table array\n0xf (15): Alignment mask for 16-byte boundary check\n0xfff (4095): Page offset mask for 4KB boundary\n0x100 (256): Minimum required offset within page\n0xfffff000: 4KB page base address mask\n0x4 (4): Right shift amount for 16-byte block calculation\n0x8 (8): Base offset added to final calculation\n0x6ff36b70: Sentinel value marking end of error table list\n\nStructure Layout:\nErrorTableEntry (8 bytes):\nOffset | Size | Field Name    | Type                  | Description\n0x00   | 4    | dwErrorCode   | ErrorTableEntry*      | Next entry pointer or error code\n0x04   | 4    | lpszMessage   | char*                 | Error message string pointer\n\nAddress Bounds Check:\nOffset 0x10: Lower bound address for allocation block\nOffset 0x14: Upper bound address for allocation block",
-      "tags": ["STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "CALLER_3", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control"]
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control"]
     },
     {
       "address": "0x6FC84E73",
@@ -7354,7 +7354,7 @@
       "api_calls": [],
       "instructions": ["0x4E73|MOV|EAX, dword ptr [ESP + 0x4]", "0x4E77|MOV|ECX, dword ptr [ESP + 0x8]", "0x4E7B|SUB|ECX, dword ptr [EAX + 0x10]", "0x4E7E|SAR|ECX, 0xc", "0x4E81|LEA|EAX, [EAX + ECX*0x8 + 0x18]", "0x4E85|MOV|ECX, dword ptr [ESP + 0xc]", "0x4E89|MOVZX|EDX, byte ptr [ECX]", "0x4E8C|ADD|dword ptr [EAX], EDX", "0x4E8E|AND|byte ptr [ECX], 0x0", "0x4E91|CMP|dword ptr [EAX], 0xf0", "0x4E97|MOV|dword ptr [EAX + 0x4], 0xf1", "0x4E9E|JNZ|0x6fc84eb7", "0x4EA0|INC|dword ptr [0x6fc8b3b0]", "0x4EA6|CMP|dword ptr [0x6fc8b3b0], 0x20", "0x4EAD|JNZ|0x6fc84eb7"],
       "comment": "Updates memory pool tracking information and triggers cleanup when threshold reached.\n\nAlgorithm:\n1. Calculate pointer to tracking entry in memory pool descriptor array\n2. Add flag byte value to tracking entry allocation count  \n3. Clear the input flag byte to zero\n4. Set tracking entry status field to 0xf1 (active tracking)\n5. Check if allocation count reached threshold (0xf0 = 240 allocations)\n6. If threshold reached, increment global allocated pages counter\n7. If global counter reaches 0x20 (32 pages), trigger memory cleanup\n\nParameters:\npMemoryPool - Pointer to MemoryPool structure containing tracking arrays\ndwAddress - Virtual address used to calculate tracking entry index\npbFlag - Pointer to byte flag containing allocation count to add\n\nReturns:\nNone (void function)\n\nSpecial Cases:\nThreshold of 0xf0 (240) allocations triggers page counting mechanism\nGlobal threshold of 0x20 (32) pages triggers FreeMemoryPoolPages cleanup\nStatus value 0xf1 indicates active tracking state\n\nMagic Numbers Reference:\n0x10 - Base offset in memory pool structure for address calculations\n0x18 - Array offset in memory pool structure for tracking entries  \n0xc - Right shift count for address-to-index conversion (4096-byte pages)\n0x8 - Size of each tracking entry (8 bytes: count + status)\n0xf0 - Allocation count threshold (240 decimal)\n0xf1 - Active tracking status marker\n0x20 - Global page limit (32 decimal) before cleanup\n0x10 - Parameter passed to FreeMemoryPoolPages for cleanup\n\nStructure Layout:\nMemoryPool tracking entry (8 bytes):\nOffset | Size | Field Name | Type | Description\n+0x0   | 4    | nCount     | uint | Allocation count for this pool segment\n+0x4   | 4    | dwStatus   | uint | Status flags (0xf1 = active tracking)",
-      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLER_2", "CALLEE_1", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_1", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6FC84EB8",
@@ -7390,7 +7390,7 @@
       "param_count": 1,
       "parameters": [{"name": "dwBytesToAllocate", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 4,
-      "callees": ["InitializeMemoryAllocator|0x6FC84BC0", "VirtualAlloc|0x4B", "_memset|0x6FC85560", "AllocateBufferSpace|0x6FC850C0"],
+      "callees": ["_memset|0x6FC85560", "AllocateBufferSpace|0x6FC850C0", "VirtualAlloc|0x4B", "InitializeMemoryAllocator|0x6FC84BC0"],
       "caller_count": 2,
       "callers": ["AllocateMemoryWithRetry|0x6FC835A4", "AllocateMemoryByStrategy|0x6FC834A8"],
       "string_count": 0,
@@ -7501,7 +7501,7 @@
       "api_calls": [],
       "instructions": ["0x51E4|PUSH|EBX", "0x51E5|XOR|EBX, EBX", "0x51E7|CMP|dword ptr [0x6fc8b3b4], EBX", "0x51ED|PUSH|ESI", "0x51EE|PUSH|EDI", "0x51EF|JNZ|0x6fc85233", "0x51F1|PUSH|0x6fc87558", "0x51F6|CALL|dword ptr [0x6fc87140]", "0x51FC|MOV|EDI, EAX", "0x51FE|CMP|EDI, EBX", "0x5200|JZ|0x6fc85269", "0x5202|MOV|ESI, dword ptr [0x6fc87138]", "0x5208|PUSH|0x6fc8754c", "0x520D|PUSH|EDI", "0x520E|CALL|ESI"],
       "comment": "Displays a message box using dynamic loading of user32.dll functions with active window detection.\n\nAlgorithm:\n\n1. Check if MessageBoxA function pointer is already loaded (DAT_1003ca8c)\n2. If not loaded, dynamically load user32.dll using LoadLibraryA\n3. Get function pointers for MessageBoxA, GetActiveWindow, and GetLastActivePopup\n4. Store function pointers in global variables (DAT_1003ca8c, DAT_1003ca90, DAT_1003ca94)\n5. If GetActiveWindow is available, call it to get active window handle\n6. If active window exists and GetLastActivePopup is available, get last active popup\n7. Call MessageBoxA with detected window handle and provided text, caption, and type\n8. Return the result from MessageBoxA\n\nParameters:\n\nlpszText - Pointer to null-terminated string containing message text to display\nlpszCaption - Pointer to null-terminated string containing dialog caption/title\nnType - Message box type flags controlling buttons and icon (MB_OK, MB_ICONERROR, etc.)\n\nReturns:\n\nInteger result from MessageBoxA indicating which button was pressed:\n- IDOK (1) if OK button clicked\n- IDCANCEL (2) if Cancel button clicked  \n- IDABORT (3) if Abort button clicked\n- IDRETRY (4) if Retry button clicked\n- IDIGNORE (5) if Ignore button clicked\n- IDYES (6) if Yes button clicked\n- IDNO (7) if No button clicked\n- 0 if function initialization failed\n\nSpecial Cases:\n\nIf user32.dll cannot be loaded or required functions cannot be found, returns 0.\nUses lazy loading pattern - initializes function pointers only on first call.\nWindow handle detection provides proper message box parenting for modal behavior.\n\nGlobal Variables:\n\nDAT_1003ca8c - Function pointer to MessageBoxA (FARPROC)\nDAT_1003ca90 - Function pointer to GetActiveWindow (FARPROC) \nDAT_1003ca94 - Function pointer to GetLastActivePopup (FARPROC)",
-      "tags": ["PARAM_3", "CALLER_1", "PARAM_4", "CALLEE_2"]
+      "tags": ["PARAM_3", "CALLER_1", "CALLEE_2"]
     },
     {
       "address": "0x6FC85270",
@@ -7697,7 +7697,7 @@
       "api_calls": [],
       "instructions": ["0x5446|PUSH|EBX", "0x5447|PUSH|ECX", "0x5448|MOV|EBX, 0x6fc8a930", "0x544D|MOV|ECX, dword ptr [EBP + 0x8]", "0x5450|MOV|dword ptr [EBX + 0x8], ECX", "0x5453|MOV|dword ptr [EBX + 0x4], EAX", "0x5456|MOV|dword ptr [EBX + 0xc], EBP", "0x5459|POP|ECX", "0x545A|POP|EBX", "0x545B|RET|0x4"],
       "comment": "Stores exception handling context for SEH frame setup.\n\nAlgorithm:\n1. Load static exception frame structure pointer into EBX\n2. Write return address from stack [EBP+8] to frame offset +8\n3. Write exception context (EAX) to frame offset +4\n4. Write current frame pointer (EBP) to frame offset +C (12)\n5. Return with stack cleanup (RET 0x4)\n\nParameters:\n- dwExceptionContext (EAX): Exception context value to store\n\nReturns:\n- void\n\nRelated Functions:\n- Called by __local_unwind2 exception unwinding handler",
-      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6FC85525",
@@ -7795,7 +7795,7 @@
       "api_calls": [],
       "instructions": ["0x5540|MOV|EAX, [0x6fc8b3c4]", "0x5545|TEST|EAX, EAX", "0x5547|JZ|0x6fc85558", "0x5549|PUSH|dword ptr [ESP + 0x4]", "0x554D|CALL|EAX", "0x554F|TEST|EAX, EAX", "0x5551|POP|ECX", "0x5552|JZ|0x6fc85558", "0x5554|PUSH|0x1", "0x5556|POP|EAX", "0x5557|RET|", "0x5558|XOR|EAX, EAX", "0x555A|RET|"],
       "comment": "Setting prototype: int InvokeCallbackHandler(int nParameter)",
-      "tags": ["CALLER_2", "CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
+      "tags": ["CALLER_2", "CALLEE_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x6FC85560",
@@ -7833,7 +7833,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 4,
-      "callers": ["InitializeMemoryAllocator|0x6FC84BC0", "AllocateMemoryFromPool|0x6FC84EB8", "AllocateMemoryWithRetry|0x6FC835A4", "GetCharacterTypeInfo|0x6FC85807"],
+      "callers": ["AllocateMemoryFromPool|0x6FC84EB8", "AllocateMemoryWithRetry|0x6FC835A4", "GetCharacterTypeInfo|0x6FC85807", "InitializeMemoryAllocator|0x6FC84BC0"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -7880,9 +7880,9 @@
       "param_count": 8,
       "parameters": [{"name": "dwLcid", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "dwMapFlags", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "lpszSrcStr", "type": "char *", "storage": "Stack[0xc]:4"}, {"name": "nSrcLen", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "lpszDestStr", "type": "char *", "storage": "Stack[0x14]:4"}, {"name": "nDestLen", "type": "int", "storage": "Stack[0x18]:4"}, {"name": "dwCodePage", "type": "uint", "storage": "Stack[0x1c]:4"}, {"name": "nFlags", "type": "int", "storage": "Stack[0x20]:4"}],
       "callee_count": 6,
-      "callees": ["AllocateStackSpace|0x6FC84340", "LCMapStringW|0x56", "MultiByteToWideChar|0x54", "LCMapStringA|0x53", "CalculateStringLengthWithLimit|0x6FC857DC", "WideCharToMultiByte|0x44"],
+      "callees": ["AllocateStackSpace|0x6FC84340", "LCMapStringW|0x56", "MultiByteToWideChar|0x54", "CalculateStringLengthWithLimit|0x6FC857DC", "WideCharToMultiByte|0x44", "LCMapStringA|0x53"],
       "caller_count": 3,
-      "callers": ["ConvertCharacterToLowerCase|0x6FC86225", "ConvertCharacterToUpperCaseWithLocale|0x6FC859C8", "InitializeCharacterTables|0x6FC83AAE"],
+      "callers": ["InitializeCharacterTables|0x6FC83AAE", "ConvertCharacterToLowerCase|0x6FC86225", "ConvertCharacterToUpperCaseWithLocale|0x6FC859C8"],
       "string_count": 0,
       "strings": [],
       "constant_count": 2,
@@ -7978,9 +7978,9 @@
       "param_count": 7,
       "parameters": [{"name": "dwInfoType", "type": "DWORD", "storage": "Stack[0x4]:4"}, {"name": "lpszString", "type": "LPCSTR", "storage": "Stack[0x8]:4"}, {"name": "nStringLength", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "lpwCharType", "type": "LPWORD", "storage": "Stack[0x10]:4"}, {"name": "uiCodePage", "type": "UINT", "storage": "Stack[0x14]:4"}, {"name": "dwLocaleId", "type": "LCID", "storage": "Stack[0x18]:4"}, {"name": "nConversionFlags", "type": "int", "storage": "Stack[0x1c]:4"}],
       "callee_count": 5,
-      "callees": ["GetStringTypeA|0x22", "AllocateStackSpace|0x6FC84340", "MultiByteToWideChar|0x54", "GetStringTypeW|0x30", "_memset|0x6FC85560"],
+      "callees": ["AllocateStackSpace|0x6FC84340", "MultiByteToWideChar|0x54", "GetStringTypeW|0x30", "_memset|0x6FC85560", "GetStringTypeA|0x22"],
       "caller_count": 2,
-      "callers": ["GetCharacterProperties|0x6FC85A94", "InitializeCharacterTables|0x6FC83AAE"],
+      "callers": ["InitializeCharacterTables|0x6FC83AAE", "GetCharacterProperties|0x6FC85A94"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -8076,7 +8076,7 @@
       "param_count": 1,
       "parameters": [{"name": "dwCharacterCode", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 5,
-      "callees": ["AcquireCriticalSectionByIndex|0x6FC82731", "InterlockedDecrement|0x2F", "ReleaseCriticalSectionByIndex|0x6FC82792", "ConvertCharacterToUpperCaseWithLocale|0x6FC859C8", "InterlockedIncrement|0x2E"],
+      "callees": ["InterlockedIncrement|0x2E", "ReleaseCriticalSectionByIndex|0x6FC82792", "AcquireCriticalSectionByIndex|0x6FC82731", "InterlockedDecrement|0x2F", "ConvertCharacterToUpperCaseWithLocale|0x6FC859C8"],
       "caller_count": 1,
       "callers": ["StringToUnsignedLongWithBase|0x6FC83F9C"],
       "string_count": 0,
@@ -8138,7 +8138,7 @@
       "api_calls": [],
       "instructions": ["0x59C8|PUSH|EBP", "0x59C9|MOV|EBP, ESP", "0x59CB|PUSH|ECX", "0x59CC|CMP|dword ptr [0x6fc8b3d0], 0x0", "0x59D3|PUSH|EBX", "0x59D4|JNZ|0x6fc859f3", "0x59D6|MOV|EAX, dword ptr [EBP + 0x8]", "0x59D9|CMP|EAX, 0x61", "0x59DC|JL|0x6fc85a91", "0x59E2|CMP|EAX, 0x7a", "0x59E5|JG|0x6fc85a91", "0x59EB|SUB|EAX, 0x20", "0x59EE|JMP|0x6fc85a91", "0x59F3|MOV|EBX, dword ptr [EBP + 0x8]", "0x59F6|CMP|EBX, 0x100"],
       "comment": "Converts a character to uppercase with locale-aware processing support\n\nAlgorithm:\n1. Initialize result with input character code\n2. Check if locale processing is available via g_dwLocaleAvailableFlag\n3. If locale unavailable, perform simple ASCII conversion (a-z to A-Z range 0x61-0x7A to 0x41-0x5A)\n4. If locale available, validate character is within single-byte range (< 0x100)\n5. Check character attribute flags using g_pCharacterAttributeTable or FUN_6ff2c474\n6. Return original character if no case conversion attribute (flag 0x02) found\n7. Determine byte length based on character attribute table high-byte entry (0x80 flag)\n8. Set up character buffer for conversion: single-byte (1) or double-byte (2) mode\n9. Call FUN_6ff2da18 (Windows LCMapStringA/W equivalent) for locale-specific conversion\n10. Extract converted result from buffer: single-byte (0xFF mask) or double-byte (0xFFFF mask)\n\nParameters:\npLocaleContext: Locale context pointer for character processing operations\ndwCharacterCode: Input character code to convert to uppercase\n\nReturns:\nConverted uppercase character code, or original character if no conversion applicable\n\nSpecial Cases:\nSimple ASCII conversion when locale unavailable: subtracts 0x20 from lowercase letters\nMulti-byte character handling via byte reordering and CONCAT operations\nFlag 0x02 in attribute table indicates case-convertible character\nFlag 0x80 in high-byte table indicates double-byte character sequence\n\nMagic Numbers Reference:\n0x60: ASCII '`' character, lower bound check for lowercase range\n0x7B: ASCII '{' character, upper bound check for lowercase range  \n0x20: ASCII offset between lowercase and uppercase letters\n0x100: Single-byte character range limit\n0x02: Character attribute flag for case conversion capability\n0x80: High-byte attribute flag indicating double-byte character\n0x200: LCMapString conversion flag (LCMAP_UPPERCASE)\n0xFF: Single-byte character mask\n0xFFFF: Double-byte character mask",
-      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "PARAM_3", "CALLEE_2"]
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_2"]
     },
     {
       "address": "0x6FC85A94",
@@ -8176,7 +8176,7 @@
       "callee_count": 1,
       "callees": ["GetCharacterTypeInfo|0x6FC85807"],
       "caller_count": 3,
-      "callers": ["ConvertCharacterToLowerCase|0x6FC86225", "ConvertCharacterToUpperCaseWithLocale|0x6FC859C8", "StringToUnsignedLongWithBase|0x6FC83F9C"],
+      "callers": ["StringToUnsignedLongWithBase|0x6FC83F9C", "ConvertCharacterToLowerCase|0x6FC86225", "ConvertCharacterToUpperCaseWithLocale|0x6FC859C8"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -8187,7 +8187,7 @@
       "api_calls": [],
       "instructions": ["0x5A94|PUSH|EBP", "0x5A95|MOV|EBP, ESP", "0x5A97|PUSH|ECX", "0x5A98|MOV|EAX, dword ptr [EBP + 0x8]", "0x5A9B|LEA|ECX, [EAX + 0x1]", "0x5A9E|CMP|ECX, 0x100", "0x5AA4|JA|0x6fc85ab2", "0x5AA6|MOV|ECX, dword ptr [0x6fc8aaa8]", "0x5AAC|MOVZX|EAX, word ptr [ECX + EAX*0x2]", "0x5AB0|JMP|0x6fc85b04", "0x5AB2|MOV|ECX, EAX", "0x5AB4|PUSH|ESI", "0x5AB5|MOV|ESI, dword ptr [0x6fc8aaa8]", "0x5ABB|SAR|ECX, 0x8", "0x5ABE|MOVZX|EDX, CL"],
       "comment": "Setting prototype: uint GetCharacterProperties(void * pLocaleData, int nCharCode, uint dwPropertyMask)",
-      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_3", "CALLEE_1", "CALLER_5"]
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_3", "CALLEE_1"]
     },
     {
       "address": "0x6FC85B10",
@@ -8419,7 +8419,7 @@
       "param_count": 3,
       "parameters": [{"name": "this", "type": "void *", "storage": "ECX:4 (auto)"}, {"name": "param_1", "type": "byte *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "byte *", "storage": "Stack[0x8]:4"}],
       "callee_count": 3,
-      "callees": ["ConvertCharacterToLowerCase|0x6FC86225", "AcquireCriticalSectionByIndex|0x6FC82731", "ReleaseCriticalSectionByIndex|0x6FC82792"],
+      "callees": ["ReleaseCriticalSectionByIndex|0x6FC82792", "AcquireCriticalSectionByIndex|0x6FC82731", "ConvertCharacterToLowerCase|0x6FC86225"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -8468,7 +8468,7 @@
       "param_count": 3,
       "parameters": [{"name": "pbString1", "type": "byte *", "storage": "Stack[0x4]:4"}, {"name": "szString2", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "dwMaxLength", "type": "uint", "storage": "Stack[0xc]:4"}],
       "callee_count": 3,
-      "callees": ["ConvertCharacterToLowerCase|0x6FC86225", "AcquireCriticalSectionByIndex|0x6FC82731", "ReleaseCriticalSectionByIndex|0x6FC82792"],
+      "callees": ["ReleaseCriticalSectionByIndex|0x6FC82792", "AcquireCriticalSectionByIndex|0x6FC82731", "ConvertCharacterToLowerCase|0x6FC86225"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -8530,7 +8530,7 @@
       "api_calls": [],
       "instructions": ["0x6140|PUSH|EBX", "0x6141|PUSH|ESI", "0x6142|MOV|EAX, dword ptr [ESP + 0x18]", "0x6146|OR|EAX, EAX", "0x6148|JNZ|0x6fc86162", "0x614A|MOV|ECX, dword ptr [ESP + 0x14]", "0x614E|MOV|EAX, dword ptr [ESP + 0x10]", "0x6152|XOR|EDX, EDX", "0x6154|DIV|ECX", "0x6156|MOV|EBX, EAX", "0x6158|MOV|EAX, dword ptr [ESP + 0xc]", "0x615C|DIV|ECX", "0x615E|MOV|EDX, EBX", "0x6160|JMP|0x6fc861a3", "0x6162|MOV|ECX, EAX"],
       "comment": "Performs 64-bit unsigned integer division (__aulldiv runtime library function).\n\nAlgorithm:\n1. Combine 32-bit parameter pairs into 64-bit dividend and divisor values\n2. Check if divisor high word is zero (simple 64/32 division case)\n3. Simple case: Use 32-bit division operations to compute quotient directly\n4. Complex case: Normalize both operands by shifting right until divisor fits in 32 bits\n5. Perform approximate division using normalized 32-bit values\n6. Multiply trial quotient by original divisor to get product\n7. Compare product with original dividend to verify quotient accuracy\n8. Decrement quotient if product exceeds dividend (correction step)\n9. Return 64-bit quotient as combined high/low 32-bit words\n\nParameters:\n  dwDividendLow   - Low 32 bits of 64-bit dividend\n  dwDividendHigh  - High 32 bits of 64-bit dividend  \n  dwDivisorLow    - Low 32 bits of 64-bit divisor\n  dwDivisorHigh   - High 32 bits of 64-bit divisor\n\nReturns:\n  Success: 64-bit quotient (dividend / divisor)\n  \nSpecial Cases:\n  Division by zero: Undefined behavior (not validated)\n  Overflow: Cannot occur with unsigned division\n  \nAlgorithm Details:\n  - Uses binary long division when divisor > 32 bits\n  - Normalizes operands to avoid overflow during intermediate calculations\n  - Trial-and-error approach with correction ensures accuracy\n  - Optimized for common case where divisor fits in 32 bits",
-      "tags": ["STRUCT_Act", "CALLER_0", "PARAM_2", "PROP_NOCALLER", "PARAM_4", "CALLEE_0", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
+      "tags": ["STRUCT_Act", "CALLER_0", "PROP_NOCALLER", "PARAM_4", "CALLEE_0", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6FC861B0",
@@ -8579,7 +8579,7 @@
       "api_calls": [],
       "instructions": ["0x61B0|PUSH|EBX", "0x61B1|MOV|EAX, dword ptr [ESP + 0x14]", "0x61B5|OR|EAX, EAX", "0x61B7|JNZ|0x6fc861d1", "0x61B9|MOV|ECX, dword ptr [ESP + 0x10]", "0x61BD|MOV|EAX, dword ptr [ESP + 0xc]", "0x61C1|XOR|EDX, EDX", "0x61C3|DIV|ECX", "0x61C5|MOV|EAX, dword ptr [ESP + 0x8]", "0x61C9|DIV|ECX", "0x61CB|MOV|EAX, EDX", "0x61CD|XOR|EDX, EDX", "0x61CF|JMP|0x6fc86221", "0x61D1|MOV|ECX, EAX", "0x61D3|MOV|EBX, dword ptr [ESP + 0x10]"],
       "comment": "Calculates 64-bit unsigned remainder (dividend % divisor) using optimized division algorithm.\n\nAlgorithm:\n1. Check if high 32 bits of divisor are zero for fast path optimization\n2. If divisor fits in 32 bits, perform standard division on combined 64-bit dividend\n3. Otherwise, normalize operands by right-shifting until divisor fits in 32 bits\n4. Perform division on normalized values to get approximate quotient\n5. Calculate full product of quotient and original divisor\n6. Compare product with original dividend and adjust quotient if needed\n7. Subtract final quotient×divisor from dividend to get remainder\n8. Return 64-bit remainder as combined high/low 32-bit values\n\nParameters:\ndwDividendLow (uint): Low 32 bits of 64-bit unsigned dividend\ndwDividendHigh (uint): High 32 bits of 64-bit unsigned dividend  \ndwDivisorLow (uint): Low 32 bits of 64-bit unsigned divisor\ndwDivisorHigh (uint): High 32 bits of 64-bit unsigned divisor\n\nReturns:\n64-bit unsigned remainder as ulonglong (high 32 bits in EDX, low 32 bits in EAX)\nReturns 0 for division by zero (undefined behavior)\n\nSpecial Cases:\nFast path when dwDivisorHigh == 0: Uses hardware DIV instruction directly\nNormalization loop when divisor > 32 bits: Shifts both operands right until divisor fits in 32 bits\nQuotient adjustment: If initial quotient estimate is too large, decrements and recalculates\n\nMagic Numbers Reference:\n0x20 (32 decimal): Left shift amount for combining high/low 32-bit parts into 64-bit value\n0x1f (31 decimal): Right shift amount for propagating carry bit during normalization\n0xffffffff: Mask to extract low 32 bits from 64-bit intermediate results",
-      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_0", "PARAM_2", "PROP_NOCALLER", "PARAM_4", "CALLEE_0", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_4", "CALLEE_0", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x6FC86225",

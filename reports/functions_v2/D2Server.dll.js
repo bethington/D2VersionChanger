@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-27T22:44:31.463304
+// Generated: 2026-01-14T14:43:48.362374
 // Functions for D2Server.dll
 // Versions: Classic/1.00
 
@@ -41,8 +41,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "InitializeGameServerHooks|0x68021590",
-          "ValidatePluginInterface|0x68001820",
-          "SetLastError|0x7"
+          "SetLastError|0x7",
+          "ValidatePluginInterface|0x68001820"
         ]
       },
       "instructions": {
@@ -93,7 +93,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_3",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -131,8 +133,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_7d258176f6fdc1b8",
       "callees": {
         "Classic/1.00": [
-          "NoOpStubFunction|0x68001A90",
-          "InitializeServerState|0x680218C6"
+          "InitializeServerState|0x680218C6",
+          "NoOpStubFunction|0x68001A90"
         ]
       },
       "strings": {
@@ -191,7 +193,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_2",
           "PARAM_0"
         ]
       },
@@ -231,16 +235,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeDiabloLibraries|0x68002390",
-          "InitializeApiHooks|0x68002510",
           "InitializeSystemInfo|0x68004030",
-          "ProcessGameObjectEntries|0x68002150",
+          "SetLastError|0x7",
+          "SetMaxGameNumberLimit|0x680021A0",
           "InitializeServerComponents|0x68001AA0",
+          "InitializeDiabloLibraries|0x68002390",
           "InitializeGameServerSlots|0x68006488",
           "LoadLibraryA|0x8",
           "NoOpStubFunction|0x68001A90",
-          "SetLastError|0x7",
-          "SetMaxGameNumberLimit|0x680021A0"
+          "ProcessGameObjectEntries|0x68002150",
+          "InitializeApiHooks|0x68002510"
         ]
       },
       "callers": {
@@ -374,9 +378,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLEE_10",
           "PROP_LARGE",
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
           "STRUCT_Skill",
           "PARAM_0",
           "STRUCT_UnitAny",
@@ -422,8 +428,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "InitializeSystemInfo|0x68004030",
           "InitializeCallbackDispatchTable|0x68007540",
-          "NoOpStubFunction|0x68001A90",
-          "SetLastError|0x7"
+          "SetLastError|0x7",
+          "NoOpStubFunction|0x68001A90"
         ]
       },
       "callers": {
@@ -548,7 +554,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "PROP_LARGE",
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_0",
+          "CALLEE_4",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -589,8 +597,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "Sleep|0x9",
           "ProcessTimedServerUpdates|0x680058C0",
+          "Sleep|0x9",
           "GetTickCount|0xA"
         ]
       },
@@ -645,8 +653,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
-          "PARAM_0"
+          "PARAM_0",
+          "CALLEE_3"
         ]
       },
       "function_types": {
@@ -685,12 +695,12 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "FreeLibrary|0xB",
+          "InitializeServerCleanup|0x68001EC0",
+          "GetModuleHandleA|0xC",
           "FUN_68002880|0x68002880",
           "GetShutdownSuccess|0x680024F0",
-          "FreeLibrary|0xB",
-          "NoOpStubFunction|0x68001A90",
-          "InitializeServerCleanup|0x68001EC0",
-          "GetModuleHandleA|0xC"
+          "NoOpStubFunction|0x68001A90"
         ]
       },
       "callers": {
@@ -771,7 +781,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
           "PARAM_1",
+          "CALLEE_6",
           "UI_QUEST"
         ]
       },
@@ -811,8 +823,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "IsBadCodePtr|0xD",
-          "IsBadReadPtr|0xE"
+          "IsBadReadPtr|0xE",
+          "IsBadCodePtr|0xD"
         ]
       },
       "callers": {
@@ -872,6 +884,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_2",
           "PARAM_1"
         ]
       },
@@ -964,7 +978,9 @@ var FUNCTIONS_D2Server_dll = {
           "PARAM_8",
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -1051,7 +1067,9 @@ var FUNCTIONS_D2Server_dll = {
           "PARAM_8",
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PROP_LEAF",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -1128,7 +1146,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -1205,7 +1225,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -1279,7 +1301,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -1352,7 +1376,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -1427,7 +1453,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_2",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -1496,8 +1524,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_1",
           "PARAM_0"
         ]
       },
@@ -1603,7 +1633,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_2",
           "PARAM_0",
           "RET_STRUCT_PTR"
         ]
@@ -1677,7 +1709,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -1777,7 +1811,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -1844,8 +1880,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -1886,17 +1924,17 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_6800102e|0x6800102E",
-          "InitializeGameServerHooks|0x68021590",
-          "LoadWorldEventConfiguration|0x68007A10",
-          "InitializeSystemInfo|0x68004030",
-          "InitializePatchFogPool|0x680022C0",
-          "LoadItemDataFromConfigFile|0x68007980",
-          "D2GSServerShutdown|0x68001760",
-          "D2GameServerPreInit|0x680010C0",
-          "LoadScriptFilePatches|0x68003100",
           "FUN_68001b30|0x68001B30",
-          "InitializeGameServer|0x680013F0"
+          "InitializeSystemInfo|0x68004030",
+          "InitializeGameServerHooks|0x68021590",
+          "D2GSServerShutdown|0x68001760",
+          "LoadWorldEventConfiguration|0x68007A10",
+          "InitializeGameServer|0x680013F0",
+          "D2GameServerPreInit|0x680010C0",
+          "InitializePatchFogPool|0x680022C0",
+          "FUN_6800102e|0x6800102E",
+          "LoadScriptFilePatches|0x68003100",
+          "LoadItemDataFromConfigFile|0x68007980"
         ]
       },
       "stack_frame_sizes": {
@@ -1910,7 +1948,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_11",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -1951,11 +1991,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ProcessGameObjectEntries|0x68002150",
-          "InitializeServerSubsystems|0x68002210",
-          "AlwaysReturnSuccess|0x68002270",
           "FUN_68001b30|0x68001B30",
-          "LoadScriptFilePatches|0x68003100"
+          "InitializeServerSubsystems|0x68002210",
+          "LoadScriptFilePatches|0x68003100",
+          "AlwaysReturnSuccess|0x68002270",
+          "ProcessGameObjectEntries|0x68002150"
         ]
       },
       "callers": {
@@ -2014,7 +2054,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_0",
+          "CALLEE_5",
           "STRUCT_Control"
         ]
       },
@@ -2051,22 +2093,22 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_21b3de961bc77d4b",
       "callees": {
         "Classic/1.00": [
-          "GetPeFileEntryPoint|0x68004E90",
-          "SecureMemoryCopy|0x68004FA0",
-          "FUN_68005240|0x68005240",
-          "ProcessParameterString|0x68001F20",
-          "AddToAccumulator|0x68001F00",
           "free|0x49",
           "malloc|0x4A",
-          "NoOpStubFunction|0x68001A90",
+          "FUN_68005100|0x68005100",
+          "FUN_68005240|0x68005240",
+          "AddToAccumulator|0x68001F00",
           "GetModuleHandleA|0xC",
-          "FUN_68005100|0x68005100"
+          "ProcessParameterString|0x68001F20",
+          "NoOpStubFunction|0x68001A90",
+          "GetPeFileEntryPoint|0x68004E90",
+          "SecureMemoryCopy|0x68004FA0"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "InitializeServerComponents|0x68001AA0",
-          "InitializeServerCleanup|0x68001EC0"
+          "InitializeServerCleanup|0x68001EC0",
+          "InitializeServerComponents|0x68001AA0"
         ]
       },
       "instructions": {
@@ -2122,11 +2164,13 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLEE_10",
           "PROP_LARGE",
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
           "STRUCT_Skill",
+          "CALLER_2",
           "STRUCT_ItemData",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -2169,8 +2213,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FreeCleanupResources|0x68003260",
           "FUN_68001b30|0x68001B30",
+          "FreeCleanupResources|0x68003260",
           "FreePatchFogPool|0x68002280"
         ]
       },
@@ -2228,7 +2272,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
-          "PARAM_0"
+          "CALLER_1",
+          "PARAM_0",
+          "CALLEE_3"
         ]
       },
       "function_types": {
@@ -2302,6 +2348,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -2342,13 +2390,13 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "free|0x49",
+          "strtoul|0x48",
+          "malloc|0x4A",
           "ParseHexStringToBytes|0x68002090",
-          "SplitStringWithDelimiters|0x68004870",
           "GetPEOptionalHeaderSize|0x68004EC0",
           "FindPatternInBuffer|0x68001FE0",
-          "free|0x49",
-          "malloc|0x4A",
-          "strtoul|0x48"
+          "SplitStringWithDelimiters|0x68004870"
         ]
       },
       "callers": {
@@ -2410,9 +2458,11 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
           "STRUCT_Skill",
           "STRUCT_UnitAny",
           "STRUCT_Control",
+          "CALLEE_7",
           "STRUCT_PlayerData"
         ]
       },
@@ -2503,7 +2553,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_4",
+          "CALLEE_1",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -2587,6 +2639,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_3",
+          "CALLER_1",
+          "CALLEE_0",
           "PROP_LEAF"
         ]
       },
@@ -2626,8 +2680,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "strncpy|0x4B",
-          "strtoul|0x48"
+          "strtoul|0x48",
+          "strncpy|0x4B"
         ]
       },
       "callers": {
@@ -2689,6 +2743,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_2",
           "STRUCT_ItemData",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -2731,8 +2787,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "InitializeServerComponents|0x68001AA0",
-          "D2GameServerPreInit|0x680010C0"
+          "D2GameServerPreInit|0x680010C0",
+          "InitializeServerComponents|0x68001AA0"
         ]
       },
       "instructions": {
@@ -2775,6 +2831,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_3",
+          "CALLER_2",
+          "CALLEE_0",
           "PROP_LEAF"
         ]
       },
@@ -2853,6 +2911,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PROP_TINY",
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF"
         ]
@@ -2960,6 +3020,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1"
         ]
       },
@@ -2999,9 +3061,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "ProcessServerHandleCounters|0x68002230",
           "CopyLogHandlerPointer|0x680022B0",
-          "InitializePatchFogPool|0x680022C0",
-          "ProcessServerHandleCounters|0x68002230"
+          "InitializePatchFogPool|0x680022C0"
         ]
       },
       "callers": {
@@ -3040,7 +3102,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
           "PARAM_0",
+          "CALLEE_3",
           "PROP_SMALL"
         ]
       },
@@ -3138,6 +3202,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0"
         ]
       },
@@ -3204,6 +3270,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PROP_TINY",
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -3303,6 +3371,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0",
           "PROP_SMALL"
         ]
@@ -3380,6 +3450,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -3497,6 +3569,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_2",
           "PARAM_0"
         ]
       },
@@ -3587,7 +3661,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF"
         ]
@@ -3708,6 +3784,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_2",
           "PARAM_0"
         ]
       },
@@ -3811,6 +3889,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0"
         ]
       },
@@ -3885,8 +3965,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_1",
           "PARAM_0"
         ]
       },
@@ -3994,6 +4076,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_2",
           "PARAM_0"
         ]
       },
@@ -4033,15 +4117,15 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "lstrcmpiA|0x14",
-          "IsWindowsNTPlatform|0x68002830",
-          "FindExportDirectoryByName|0x680027A0",
           "SetLastErrorEx|0x2",
-          "IsBadWritePtr|0x15",
+          "IsWindowsNTPlatform|0x68002830",
+          "lstrcmpiA|0x14",
+          "FindExportDirectoryByName|0x680027A0",
           "VirtualProtect|0x12",
-          "IsBadCodePtr|0xD",
+          "SetLastError|0x7",
           "VirtualQuery|0x13",
-          "SetLastError|0x7"
+          "IsBadCodePtr|0xD",
+          "IsBadWritePtr|0x15"
         ]
       },
       "callers": {
@@ -4105,17 +4189,19 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
-          "PROP_LARGE",
-          "STRUCT_Path",
+          "CALLEE_9",
           "STRUCT_Act",
           "STRUCT_Inventory",
-          "STRUCT_Skill",
-          "PARAM_5",
+          "CALLER_1",
           "STRUCT_ItemData",
-          "PROP_LOOPHEAVY",
           "STRUCT_UnitAny",
           "STRUCT_Control",
-          "STRUCT_PlayerData"
+          "STRUCT_PlayerData",
+          "PROP_LARGE",
+          "STRUCT_Path",
+          "STRUCT_Skill",
+          "PARAM_5",
+          "PROP_LOOPHEAVY"
         ]
       },
       "function_types": {
@@ -4154,9 +4240,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "lstrcmpiA|0x14",
           "SetLastErrorEx|0x2",
-          "IsBadReadPtr|0xE"
+          "IsBadReadPtr|0xE",
+          "lstrcmpiA|0x14"
         ]
       },
       "callers": {
@@ -4228,6 +4314,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_3",
           "RET_STRUCT_PTR",
           "STRUCT_Control"
         ]
@@ -4323,6 +4411,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0"
         ]
       },
@@ -4362,10 +4452,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ValidateClientSession|0x680068F8",
-          "FUN_680029b0|0x680029B0",
+          "WriteFormattedLogEntry|0x68007140",
           "FormatPacketDataDump|0x68007060",
-          "WriteFormattedLogEntry|0x68007140"
+          "ValidateClientSession|0x680068F8",
+          "FUN_680029b0|0x680029B0"
         ]
       },
       "strings": {
@@ -4426,8 +4516,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_4",
+          "CALLEE_4",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -4466,8 +4558,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_f8062181850a04fb",
       "callers": {
         "Classic/1.00": [
-          "ValidateAndProcessPacket|0x68002B00",
-          "ProcessPacketHandler|0x68002890"
+          "ProcessPacketHandler|0x68002890",
+          "ValidateAndProcessPacket|0x68002B00"
         ]
       },
       "instructions": {
@@ -4522,6 +4614,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_2",
+          "CALLEE_0",
           "PROP_LEAF"
         ]
       },
@@ -4591,7 +4685,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -4685,8 +4781,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_4",
+          "CALLEE_1",
           "STRUCT_ItemData",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -4773,8 +4871,10 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
-          "PARAM_4"
+          "PARAM_4",
+          "CALLEE_2"
         ]
       },
       "function_types": {
@@ -4838,7 +4938,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -4920,8 +5022,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
+          "CALLEE_0",
           "PROP_LEAF"
         ]
       },
@@ -4976,8 +5080,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -5068,7 +5174,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF"
         ]
@@ -5156,7 +5264,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_1"
         ]
       },
@@ -5211,8 +5321,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -5250,8 +5362,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_a57f4bc9a2d87ab3",
       "callees": {
         "Classic/1.00": [
-          "InitializeDebugLogAndWrite|0x68006258",
-          "GetTickCount|0xA"
+          "GetTickCount|0xA",
+          "InitializeDebugLogAndWrite|0x68006258"
         ]
       },
       "strings": {
@@ -5326,8 +5438,10 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_StatList",
           "STRUCT_Path",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "STRUCT_Skill",
+          "CALLEE_2",
           "PARAM_0",
           "STRUCT_UnitAny",
           "STRUCT_Control"
@@ -5384,8 +5498,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -5477,6 +5593,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_3",
+          "CALLER_1",
+          "CALLEE_1",
           "PROP_SMALL"
         ]
       },
@@ -5516,13 +5634,13 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "fclose|0x46",
-          "realloc|0x45",
+          "fgets|0x44",
           "ParseConfigFromCommandLine|0x680032E0",
-          "FreeCleanupResources|0x68003260",
+          "fclose|0x46",
           "fopen|0x43",
+          "FreeCleanupResources|0x68003260",
           "NoOpStubFunction|0x68001A90",
-          "fgets|0x44"
+          "realloc|0x45"
         ]
       },
       "callers": {
@@ -5615,10 +5733,12 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
           "STRUCT_ItemData",
           "PARAM_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
+          "CALLEE_7",
           "STRUCT_PlayerData"
         ]
       },
@@ -5715,6 +5835,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_2",
+          "CALLEE_1",
           "STRUCT_ItemData",
           "PARAM_0",
           "STRUCT_UnitAny",
@@ -5757,11 +5879,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ParseCommandLineArguments|0x68004AA0",
-          "ParseHexStringToBuffer|0x68004EF0",
-          "_strdup|0x4D",
           "free|0x49",
-          "strtoul|0x48"
+          "strtoul|0x48",
+          "ParseHexStringToBuffer|0x68004EF0",
+          "ParseCommandLineArguments|0x68004AA0",
+          "_strdup|0x4D"
         ]
       },
       "callers": {
@@ -5824,9 +5946,11 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
           "STRUCT_Skill",
           "STRUCT_ItemData",
           "STRUCT_UnitAny",
+          "CALLEE_5",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -5872,8 +5996,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateClientSession|0x680068F8",
-          "FUN_680036f0|0x680036F0"
+          "FUN_680036f0|0x680036F0",
+          "ValidateClientSession|0x680068F8"
         ]
       },
       "instructions": {
@@ -5944,7 +6068,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_2",
           "PARAM_5",
+          "CALLEE_1",
           "STRUCT_UnitAny",
           "STRUCT_Control"
         ]
@@ -6047,7 +6173,9 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Path",
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
           "STRUCT_Skill",
+          "CALLEE_1",
           "STRUCT_ItemData",
           "PARAM_1",
           "STRUCT_UnitAny",
@@ -6091,9 +6219,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "free|0x49",
           "ParseCommandLineArguments|0x68004AA0",
-          "FindCommandEntry|0x680035F0",
-          "free|0x49"
+          "FindCommandEntry|0x680035F0"
         ]
       },
       "callers": {
@@ -6154,6 +6282,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_3",
+          "CALLER_1",
+          "CALLEE_3",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -6265,6 +6395,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1",
           "RET_STRUCT_PTR"
         ]
@@ -6361,7 +6493,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_0"
         ]
       },
@@ -6460,7 +6594,9 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -6544,7 +6680,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -6585,8 +6723,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FormatPacketDataDump|0x68007060",
-          "WriteFormattedLogEntry|0x68007140"
+          "WriteFormattedLogEntry|0x68007140",
+          "FormatPacketDataDump|0x68007060"
         ]
       },
       "strings": {
@@ -6647,7 +6785,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_2",
           "STRUCT_PlayerData"
         ]
       },
@@ -6687,9 +6827,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeDebugLogAndWrite|0x68006258",
           "IsActiveConnection|0x68003A80",
-          "GetTickCount|0xA"
+          "GetTickCount|0xA",
+          "InitializeDebugLogAndWrite|0x68006258"
         ]
       },
       "strings": {
@@ -6768,7 +6908,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_3",
           "STRUCT_Control"
         ]
       },
@@ -6808,8 +6950,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ProcessClientPacketValidation|0x68003930",
-          "ValidateClientAntiCheatInfo|0x68003E30"
+          "ValidateClientAntiCheatInfo|0x68003E30",
+          "ProcessClientPacketValidation|0x68003930"
         ]
       },
       "instructions": {
@@ -6859,6 +7001,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_2",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF"
         ]
@@ -6936,7 +7080,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -6977,10 +7123,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FormatStringToCallback|0x68003500",
           "InitializeDebugLogAndWrite|0x68006258",
           "ValidateGameIdAndGetEntry|0x680064E8",
-          "ValidateClientInfoAndUpdateCrypto|0x68003C50"
+          "ValidateClientInfoAndUpdateCrypto|0x68003C50",
+          "FormatStringToCallback|0x68003500"
         ]
       },
       "strings": {
@@ -7055,9 +7201,11 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "STRUCT_Skill",
           "PARAM_1",
+          "CALLEE_4",
           "STRUCT_UnitAny",
           "STRUCT_Control"
         ]
@@ -7098,8 +7246,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeDebugLogAndWrite|0x68006258",
-          "GetAntiCheatAddressPairs|0x68003DB0"
+          "GetAntiCheatAddressPairs|0x68003DB0",
+          "InitializeDebugLogAndWrite|0x68006258"
         ]
       },
       "callers": {
@@ -7189,6 +7337,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "STRUCT_Skill",
+          "CALLER_2",
+          "CALLEE_2",
           "PARAM_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -7293,7 +7443,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_5",
+          "CALLEE_1",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -7334,8 +7486,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeDebugLogAndWrite|0x68006258",
           "IsActiveConnection|0x68003A80",
+          "InitializeDebugLogAndWrite|0x68006258",
           "ValidateClientInfoAndUpdateCrypto|0x68003C50"
         ]
       },
@@ -7415,8 +7567,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
           "STRUCT_Skill",
+          "CALLEE_3",
           "STRUCT_UnitAny",
           "STRUCT_Control"
         ]
@@ -7475,8 +7629,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -7569,7 +7725,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_1"
         ]
       },
@@ -7609,23 +7767,23 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetVersionExA|0x16",
-          "GetUserNameA|0x27",
-          "GetCurrentProcess|0x18",
-          "MeasureCpuFrequency|0x68004340",
-          "GetSystemInfo|0x1B",
-          "GetProcessAffinityMask|0x17",
           "GlobalMemoryStatus|0x1A",
-          "GetComputerNameA|0x19",
+          "GetCurrentProcess|0x18",
+          "FormatCpuInfo|0x680042C0",
+          "GetVersionExA|0x16",
           "FUN_68004420|0x68004420",
+          "GetProcessAffinityMask|0x17",
+          "MeasureCpuFrequency|0x68004340",
+          "GetComputerNameA|0x19",
           "NoOpStubFunction|0x68001A90",
-          "FormatCpuInfo|0x680042C0"
+          "GetUserNameA|0x27",
+          "GetSystemInfo|0x1B"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "D2GameServerPreInit|0x680010C0",
-          "InitializeGameServer|0x680013F0"
+          "InitializeGameServer|0x680013F0",
+          "D2GameServerPreInit|0x680010C0"
         ]
       },
       "strings": {
@@ -7726,7 +7884,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLEE_11",
           "PROP_LARGE",
+          "CALLER_2",
           "PARAM_0",
           "RET_STRUCT_PTR"
         ]
@@ -7834,6 +7994,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1"
         ]
       },
@@ -7873,12 +8035,12 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "__allmul|0x68009B30",
-          "__alldiv|0x68009A80",
           "QueryPerformanceFrequency|0x20",
-          "SetThreadPriority|0x1D",
-          "GetCurrentThread|0x1F",
           "GetThreadPriority|0x1E",
+          "__alldiv|0x68009A80",
+          "GetCurrentThread|0x1F",
+          "SetThreadPriority|0x1D",
+          "__allmul|0x68009B30",
           "GetTickCount|0xA",
           "QueryPerformanceCounter|0x1C"
         ]
@@ -7940,7 +8102,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
-          "PARAM_0"
+          "CALLER_1",
+          "PARAM_0",
+          "CALLEE_8"
         ]
       },
       "function_types": {
@@ -7976,8 +8140,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_78013422f1a366f0",
       "callees": {
         "Classic/1.00": [
-          "GetVersionExA|0x16",
-          "sprintf|0x68009A6E"
+          "sprintf|0x68009A6E",
+          "GetVersionExA|0x16"
         ]
       },
       "callers": {
@@ -8070,6 +8234,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_2",
           "PARAM_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -8167,7 +8333,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_1"
         ]
       },
@@ -8261,6 +8429,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -8350,7 +8520,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PROP_LOOPHEAVY",
           "STRUCT_Control"
         ]
@@ -8443,7 +8615,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_2",
           "PARAM_1"
         ]
       },
@@ -8483,8 +8657,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "_isctype|0x40",
-          "ConvertCharToHexDigit|0x680045A0"
+          "ConvertCharToHexDigit|0x680045A0",
+          "_isctype|0x40"
         ]
       },
       "callers": {
@@ -8548,6 +8722,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_3",
+          "CALLER_1",
+          "CALLEE_2",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -8589,16 +8765,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "realloc|0x45",
           "free|0x49",
-          "malloc|0x4A"
+          "malloc|0x4A",
+          "realloc|0x45"
         ]
       },
       "callers": {
         "Classic/1.00": [
           "LoadWorldEventConfiguration|0x68007A10",
-          "ProcessParameterString|0x68001F20",
-          "ParseAntiCheatConfiguration|0x68006368"
+          "ParseAntiCheatConfiguration|0x68006368",
+          "ProcessParameterString|0x68001F20"
         ]
       },
       "instructions": {
@@ -8657,6 +8833,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Inventory",
           "PARAM_3",
           "STRUCT_Skill",
+          "CALLER_3",
+          "CALLEE_3",
           "PROP_LOOPHEAVY",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -8699,15 +8877,15 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "realloc|0x45",
           "free|0x49",
-          "malloc|0x4A"
+          "malloc|0x4A",
+          "realloc|0x45"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ExecuteCommandString|0x68003580",
           "ParseConfigFromCommandLine|0x680032E0",
+          "ExecuteCommandString|0x68003580",
           "ParseAntiCheatConfiguration|0x68006368"
         ]
       },
@@ -8767,6 +8945,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Inventory",
           "PARAM_2",
           "STRUCT_Skill",
+          "CALLER_3",
+          "CALLEE_3",
           "PROP_LOOPHEAVY",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -8809,9 +8989,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "realloc|0x45",
           "free|0x49",
-          "malloc|0x4A"
+          "malloc|0x4A",
+          "realloc|0x45"
         ]
       },
       "instructions": {
@@ -8873,8 +9053,10 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
+          "CALLEE_3",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -8916,9 +9098,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FormatMessageA|0x21",
           "GetLastError|0x22",
-          "LocalFree|0x23"
+          "LocalFree|0x23",
+          "FormatMessageA|0x21"
         ]
       },
       "instructions": {
@@ -8977,8 +9159,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
-          "PARAM_0"
+          "PARAM_0",
+          "CALLEE_3"
         ]
       },
       "function_types": {
@@ -9066,6 +9250,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -9156,6 +9342,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -9197,9 +9385,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "strncpy|0x4B",
           "malloc|0x4A",
-          "strtoul|0x48"
+          "strtoul|0x48",
+          "strncpy|0x4B"
         ]
       },
       "callers": {
@@ -9261,6 +9449,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_3",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -9302,17 +9492,17 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FlushInstructionCache|0x24",
-          "GetCurrentProcess|0x18",
           "GetLastError|0x22",
+          "FlushInstructionCache|0x24",
           "g_pfnDebugLogger|0x6800D7D0",
+          "GetCurrentProcess|0x18",
           "VirtualProtect|0x12"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_68005240|0x68005240",
-          "FUN_68001b30|0x68001B30"
+          "FUN_68001b30|0x68001B30",
+          "FUN_68005240|0x68005240"
         ]
       },
       "strings": {
@@ -9388,7 +9578,9 @@ var FUNCTIONS_D2Server_dll = {
           "PARAM_7",
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_2",
           "STRUCT_UnitAny",
+          "CALLEE_5",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -9507,6 +9699,8 @@ var FUNCTIONS_D2Server_dll = {
           "PARAM_7",
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_3",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -9545,8 +9739,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_c8fb3b0e799ab3de",
       "callees": {
         "Classic/1.00": [
-          "SecureMemoryCopy|0x68004FA0",
-          "malloc|0x4A"
+          "malloc|0x4A",
+          "SecureMemoryCopy|0x68004FA0"
         ]
       },
       "callers": {
@@ -9605,6 +9799,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_2",
           "PROP_SMALL"
         ]
       },
@@ -9684,6 +9880,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -9768,6 +9966,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_3",
+          "CALLER_1",
+          "CALLEE_0",
           "PROP_LEAF"
         ]
       },
@@ -9812,10 +10012,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
+          "ProcessTimedServerUpdates|0x680058C0",
           "InitializeBaseStats|0x680059E0",
-          "TriggerRandomEvent|0x680234C5",
           "GetAntiCheatAddressPairs|0x68003DB0",
-          "ProcessTimedServerUpdates|0x680058C0"
+          "TriggerRandomEvent|0x680234C5"
         ]
       },
       "instructions": {
@@ -9869,6 +10069,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLEE_1",
+          "CALLER_4",
           "PROP_SMALL"
         ]
       },
@@ -9951,6 +10153,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_3",
+          "CALLER_1",
+          "CALLEE_0",
           "PROP_LEAF"
         ]
       },
@@ -9987,8 +10191,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_cdf4a51a4b61da79",
       "callees": {
         "Classic/1.00": [
-          "DumpCurrentThreadInformation|0x68006DC8",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "InitializeDebugLogAndWrite|0x68006258",
+          "DumpCurrentThreadInformation|0x68006DC8"
         ]
       },
       "strings": {
@@ -10047,7 +10251,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_2",
           "PARAM_0"
         ]
       },
@@ -10139,8 +10345,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_4",
+          "CALLEE_2",
           "STRUCT_UnitAny",
           "STRUCT_Control"
         ]
@@ -10237,6 +10445,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -10339,7 +10549,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "PARAM_9",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -10424,7 +10636,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PROP_LEAF",
           "STRUCT_Control"
         ]
@@ -10510,6 +10724,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0",
           "PROP_SMALL"
         ]
@@ -10550,8 +10766,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "CreateStatSnapshot|0x680019B0",
-          "ProcessTimedServerUpdates|0x680058C0"
+          "ProcessTimedServerUpdates|0x680058C0",
+          "CreateStatSnapshot|0x680019B0"
         ]
       },
       "instructions": {
@@ -10605,6 +10821,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_2",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -10645,14 +10863,14 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GenerateRandomInRange|0x680055A0",
-          "InitializeBaseStats|0x680059E0",
-          "ValidateTimedSecurityCheck|0x68007F60",
-          "ProcessEntityWithCallback|0x68005A10",
           "CalculateModifiedStatTotal|0x68005860",
-          "srand|0x3C",
+          "time|0x3B",
+          "InitializeBaseStats|0x680059E0",
           "GetTickCount|0xA",
-          "time|0x3B"
+          "srand|0x3C",
+          "GenerateRandomInRange|0x680055A0",
+          "ValidateTimedSecurityCheck|0x68007F60",
+          "ProcessEntityWithCallback|0x68005A10"
         ]
       },
       "callers": {
@@ -10733,9 +10951,11 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_0",
           "STRUCT_UnitAny",
-          "STRUCT_Control"
+          "STRUCT_Control",
+          "CALLEE_8"
         ]
       },
       "function_types": {
@@ -10828,6 +11048,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0",
           "PROP_SMALL"
         ]
@@ -10868,16 +11090,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "cleanup_and_exit|0x68005AFE",
-          "ValidateGameIdAndGetEntry|0x680064E8",
+          "ProcessEntityCallback|0x680220DD",
           "FUN_68005b20|0x68005B20",
-          "ProcessEntityCallback|0x680220DD"
+          "cleanup_and_exit|0x68005AFE",
+          "ValidateGameIdAndGetEntry|0x680064E8"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "TriggerRandomEvent|0x680234C5",
-          "ProcessTimedServerUpdates|0x680058C0"
+          "ProcessTimedServerUpdates|0x680058C0",
+          "TriggerRandomEvent|0x680234C5"
         ]
       },
       "instructions": {
@@ -10938,6 +11160,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Inventory",
           "PARAM_3",
           "STRUCT_Skill",
+          "CALLER_2",
+          "CALLEE_4",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -10996,8 +11220,10 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PROP_THUNK",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -11078,6 +11304,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -11116,8 +11344,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_6d23c59b94f45588",
       "callers": {
         "Classic/1.00": [
-          "ProcessEntityWithCallback|0x68005A10",
-          "ProcessEntityCallback|0x680220DD"
+          "ProcessEntityCallback|0x680220DD",
+          "ProcessEntityWithCallback|0x68005A10"
         ]
       },
       "instructions": {
@@ -11171,6 +11399,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Inventory",
           "STRUCT_Skill",
           "PARAM_4",
+          "CALLER_2",
+          "CALLEE_0",
           "PROP_LEAF",
           "STRUCT_Control"
         ]
@@ -11251,7 +11481,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -11346,8 +11578,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "STRUCT_Skill",
+          "CALLEE_1",
           "PARAM_1"
         ]
       },
@@ -11385,8 +11619,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "ProbeStackAllocation|0x68009B90",
-          "WriteFormattedLogEntry|0x68007140",
-          "FUN_68005e00|0x68005E00"
+          "FUN_68005e00|0x68005E00",
+          "WriteFormattedLogEntry|0x68007140"
         ]
       },
       "strings": {
@@ -11459,8 +11693,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
+          "CALLEE_3",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -11524,7 +11760,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -11566,9 +11804,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "DumpCurrentThreadInformation|0x68006DC8",
+          "FUN_68005e00|0x68005E00",
           "WriteFormattedLogEntry|0x68007140",
-          "FUN_68005e00|0x68005E00"
+          "DumpCurrentThreadInformation|0x68006DC8"
         ]
       },
       "strings": {
@@ -11632,8 +11870,10 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_0",
+          "CALLEE_3",
           "STRUCT_UnitAny",
           "STRUCT_Control"
         ]
@@ -11708,6 +11948,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_2",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -11774,6 +12016,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PROP_TINY",
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -11864,7 +12108,9 @@ var FUNCTIONS_D2Server_dll = {
           "PARAM_7",
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -11938,9 +12184,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
-          "PARAM_4"
+          "PARAM_4",
+          "CALLEE_1"
         ]
       },
       "function_types": {
@@ -12007,8 +12255,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_1",
           "PARAM_0"
         ]
       },
@@ -12110,7 +12360,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_4",
+          "CALLEE_1",
           "STRUCT_Control"
         ]
       },
@@ -12147,8 +12399,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_d25b051436323380",
       "callees": {
         "Classic/1.00": [
-          "InitializeDebugLogAndWrite|0x68006258",
-          "FUN_68005fe8|0x68005FE8"
+          "FUN_68005fe8|0x68005FE8",
+          "InitializeDebugLogAndWrite|0x68006258"
         ]
       },
       "strings": {
@@ -12208,7 +12460,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
-          "PROP_NOCALLER"
+          "CALLER_0",
+          "PROP_NOCALLER",
+          "CALLEE_2"
         ]
       },
       "function_types": {
@@ -12298,8 +12552,10 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
+          "CALLEE_1",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -12365,6 +12621,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PROP_TINY",
+          "CALLER_2",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -12402,8 +12660,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_03455a8feb008d65",
       "callees": {
         "Classic/1.00": [
-          "InitializeDebugLogAndWrite|0x68006258",
-          "DebugDumpUnitInfo|0x680060A8"
+          "DebugDumpUnitInfo|0x680060A8",
+          "InitializeDebugLogAndWrite|0x68006258"
         ]
       },
       "callers": {
@@ -12485,6 +12743,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_2",
           "STRUCT_UnitAny",
           "STRUCT_Control"
         ]
@@ -12589,7 +12849,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
           "STRUCT_Skill",
+          "CALLEE_2",
           "PARAM_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -12672,8 +12934,10 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
+          "CALLEE_0",
           "STRUCT_UnitAny",
           "PROP_LEAF"
         ]
@@ -12714,8 +12978,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "DebugDumpUnitInfo|0x680060A8",
-          "FUN_68003740|0x68003740"
+          "FUN_68003740|0x68003740",
+          "DebugDumpUnitInfo|0x680060A8"
         ]
       },
       "instructions": {
@@ -12767,6 +13031,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_3",
+          "CALLER_2",
+          "CALLEE_0",
           "STRUCT_ItemData",
           "STRUCT_UnitAny",
           "PROP_LEAF",
@@ -12809,28 +13075,28 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "WriteTimestampedLogEntry|0x68006298",
-          "fopen|0x43"
+          "fopen|0x43",
+          "WriteTimestampedLogEntry|0x68006298"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateAndReleaseClientInfo|0x68006798",
-          "DumpCurrentThreadInformation|0x68006DC8",
-          "FUN_68005f58|0x68005F58",
-          "FUN_68002f90|0x68002F90",
-          "FUN_68006fd8|0x68006FD8",
-          "LogGameObjectDebugInfo|0x68005EF8",
-          "DebugDumpUnitInfo|0x680060A8",
           "ValidateClientAndProcess|0x68003B40",
-          "FUN_68005620|0x68005620",
-          "ProcessClientPacketValidation|0x68003930",
-          "ValidateClientSession|0x680068F8",
-          "ValidateGameIdAndGetEntry|0x680064E8",
-          "ValidateClientAntiCheatInfo|0x68003E30",
           "FUN_68006008|0x68006008",
+          "ParseAntiCheatConfiguration|0x68006368",
+          "DumpCurrentThreadInformation|0x68006DC8",
           "ValidateClientInfoAndUpdateCrypto|0x68003C50",
-          "ParseAntiCheatConfiguration|0x68006368"
+          "ValidateClientAntiCheatInfo|0x68003E30",
+          "FUN_68002f90|0x68002F90",
+          "FUN_68005620|0x68005620",
+          "LogGameObjectDebugInfo|0x68005EF8",
+          "ProcessClientPacketValidation|0x68003930",
+          "FUN_68005f58|0x68005F58",
+          "DebugDumpUnitInfo|0x680060A8",
+          "FUN_68006fd8|0x68006FD8",
+          "ValidateAndReleaseClientInfo|0x68006798",
+          "ValidateGameIdAndGetEntry|0x680064E8",
+          "ValidateClientSession|0x680068F8"
         ]
       },
       "strings": {
@@ -12894,7 +13160,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
-          "PARAM_2"
+          "PARAM_2",
+          "CALLEE_2",
+          "CALLER_16"
         ]
       },
       "function_types": {
@@ -12934,16 +13202,16 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "fflush|0x3A",
-          "fputc|0x39",
           "fprintf|0x37",
           "GetLocalTime|0x25",
+          "fputc|0x39",
           "vfprintf|0x38"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "InitializeDebugLogAndWrite|0x68006258",
-          "WriteFormattedLogEntry|0x68007140"
+          "WriteFormattedLogEntry|0x68007140",
+          "InitializeDebugLogAndWrite|0x68006258"
         ]
       },
       "strings": {
@@ -13025,6 +13293,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_MonsterData",
           "PARAM_4",
+          "CALLER_2",
+          "CALLEE_5",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -13065,11 +13335,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ParseCommandLineArguments|0x68004AA0",
-          "InitializeDebugLogAndWrite|0x68006258",
-          "SplitStringWithDelimiters|0x68004870",
           "free|0x49",
-          "strtoul|0x48"
+          "strtoul|0x48",
+          "ParseCommandLineArguments|0x68004AA0",
+          "SplitStringWithDelimiters|0x68004870",
+          "InitializeDebugLogAndWrite|0x68006258"
         ]
       },
       "callers": {
@@ -13154,8 +13424,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_1",
           "STRUCT_UnitAny",
+          "CALLEE_5",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -13196,9 +13468,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FUN_680064b8|0x680064B8",
           "InitializeGameServerState|0x68007950",
-          "ProcessGameEntryIfValid|0x68006528"
+          "ProcessGameEntryIfValid|0x68006528",
+          "FUN_680064b8|0x680064B8"
         ]
       },
       "callers": {
@@ -13261,7 +13533,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
           "PARAM_0",
+          "CALLEE_3",
           "PROP_SMALL"
         ]
       },
@@ -13339,6 +13613,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -13430,6 +13706,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -13475,16 +13753,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ProcessEntityWithCallback|0x68005A10",
-          "CleanupAndShutdownGameServer|0x6802104E",
-          "GameMessageHandler|0x6802387B",
-          "GetGameEntryFlags|0x68022EBF",
-          "ConditionalMessageHandler|0x680056F0",
           "SetGameEntryFlag|0x68006568",
-          "ValidateGameIdOnly|0x68006548",
           "ValidateClientAndProcess|0x68003B40",
+          "GameMessageHandler|0x6802387B",
+          "ConditionalMessageHandler|0x680056F0",
           "ProcessGameEntryIfValid|0x68006528",
-          "ProcessEntityWithValidation|0x680065C8"
+          "GetGameEntryFlags|0x68022EBF",
+          "ProcessEntityWithValidation|0x680065C8",
+          "ValidateGameIdOnly|0x68006548",
+          "CleanupAndShutdownGameServer|0x6802104E",
+          "ProcessEntityWithCallback|0x68005A10"
         ]
       },
       "strings": {
@@ -13555,6 +13833,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_10",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -13595,8 +13875,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ValidateGameIdAndGetEntry|0x680064E8",
-          "InitializeBufferManager|0x68023121"
+          "InitializeBufferManager|0x68023121",
+          "ValidateGameIdAndGetEntry|0x680064E8"
         ]
       },
       "callers": {
@@ -13649,6 +13929,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_2",
+          "CALLEE_2",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -13731,6 +14013,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -13818,6 +14102,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_1",
           "PROP_SMALL"
         ]
       },
@@ -13913,6 +14199,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -13986,6 +14274,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -14092,7 +14382,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
           "STRUCT_Skill",
+          "CALLEE_2",
           "PARAM_1"
         ]
       },
@@ -14154,7 +14446,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -14218,7 +14512,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -14320,7 +14616,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
-          "PROP_NOCALLER"
+          "CALLER_0",
+          "PROP_NOCALLER",
+          "CALLEE_1"
         ]
       },
       "function_types": {
@@ -14359,8 +14657,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "VirtualAlloc|0x10",
-          "GetTickCount|0xA"
+          "GetTickCount|0xA",
+          "VirtualAlloc|0x10"
         ]
       },
       "callers": {
@@ -14428,6 +14726,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_2",
           "STRUCT_ItemData",
           "PARAM_1",
           "STRUCT_UnitAny",
@@ -14478,8 +14778,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_68003ae0|0x68003AE0",
-          "CleanupClientResource|0x68003FE0"
+          "CleanupClientResource|0x68003FE0",
+          "FUN_68003ae0|0x68003AE0"
         ]
       },
       "strings": {
@@ -14552,7 +14852,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
-          "PARAM_2"
+          "PARAM_2",
+          "CALLER_2",
+          "CALLEE_2"
         ]
       },
       "function_types": {
@@ -14645,6 +14947,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -14685,11 +14989,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "sprintf|0x42",
+          "GetTickCount|0xA",
+          "WriteFormattedLogEntry|0x68007140",
           "InitializeDebugLogAndWrite|0x68006258",
           "FormatBufferAndCallback|0x68003430",
-          "WriteFormattedLogEntry|0x68007140",
-          "GetTickCount|0xA"
+          "sprintf|0x42"
         ]
       },
       "callers": {
@@ -14809,8 +15113,10 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
           "STRUCT_ItemData",
           "STRUCT_UnitAny",
+          "CALLEE_5",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -14853,9 +15159,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "fflush|0x3A",
           "fprintf|0x37",
-          "sprintf|0x42",
+          "IsBadReadPtr|0xE",
           "_isctype|0x40",
-          "IsBadReadPtr|0xE"
+          "sprintf|0x42"
         ]
       },
       "callers": {
@@ -14944,10 +15250,12 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
           "STRUCT_Skill",
           "STRUCT_ItemData",
           "PROP_LOOPHEAVY",
           "STRUCT_UnitAny",
+          "CALLEE_5",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -15092,6 +15400,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Path",
           "STRUCT_Inventory",
           "STRUCT_Skill",
+          "CALLER_2",
+          "CALLEE_2",
           "PARAM_0",
           "STRUCT_Control"
         ]
@@ -15190,8 +15500,10 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_4",
+          "CALLEE_1",
           "STRUCT_Control"
         ]
       },
@@ -15281,6 +15593,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -15322,15 +15636,15 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "sprintf|0x42",
           "ProbeStackAllocation|0x68009B90",
-          "WriteFormattedLogEntry|0x68007140"
+          "WriteFormattedLogEntry|0x68007140",
+          "sprintf|0x42"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateSystemPacket|0x68003880",
-          "ProcessPacketHandler|0x68002890"
+          "ProcessPacketHandler|0x68002890",
+          "ValidateSystemPacket|0x68003880"
         ]
       },
       "strings": {
@@ -15415,7 +15729,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Act",
+          "CALLER_2",
           "PARAM_5",
+          "CALLEE_3",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]
@@ -15457,20 +15773,20 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "FormatFunctionSignature|0x68007200",
-          "sprintf|0x42",
-          "WriteTimestampedLogEntry|0x68006298",
           "GetEntityNameString|0x68007250",
-          "fopen|0x43"
+          "fopen|0x43",
+          "sprintf|0x42",
+          "WriteTimestampedLogEntry|0x68006298"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateClientSession|0x680068F8",
           "HandleCharacterSaveError|0x68006708",
-          "FUN_68005c90|0x68005C90",
-          "FormatPacketDataDump|0x68007060",
-          "ValidateSystemPacket|0x68003880",
           "ProcessPacketHandler|0x68002890",
+          "FUN_68005c90|0x68005C90",
+          "ValidateSystemPacket|0x68003880",
+          "FormatPacketDataDump|0x68007060",
+          "ValidateClientSession|0x680068F8",
           "ExceptionHandlerCopyAndLog|0x68005D77"
         ]
       },
@@ -15552,7 +15868,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
-          "PARAM_4"
+          "PARAM_4",
+          "CALLER_7",
+          "CALLEE_5"
         ]
       },
       "function_types": {
@@ -15662,6 +15980,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1"
         ]
       },
@@ -15744,6 +16064,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -15844,7 +16166,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_0"
         ]
       },
@@ -15934,6 +16258,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -16024,8 +16350,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_4",
+          "CALLEE_1",
           "PROP_SMALL"
         ]
       },
@@ -16110,8 +16438,10 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Path",
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "STRUCT_Skill",
+          "CALLEE_0",
           "PARAM_13",
           "STRUCT_UnitAny",
           "PROP_LEAF",
@@ -16205,8 +16535,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
+          "CALLEE_1",
           "PROP_SMALL"
         ]
       },
@@ -16290,8 +16622,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_4",
+          "CALLEE_0",
           "PROP_LEAF",
           "STRUCT_Control",
           "PROP_SMALL"
@@ -16375,8 +16709,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
+          "CALLEE_0",
           "PROP_LEAF",
           "STRUCT_Control",
           "PROP_SMALL"
@@ -16462,8 +16798,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_5",
+          "CALLEE_0",
           "PROP_LEAF",
           "STRUCT_Control",
           "PROP_SMALL",
@@ -16542,7 +16880,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -16620,7 +16960,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -16706,8 +17048,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_5",
+          "CALLEE_0",
           "PROP_LEAF",
           "STRUCT_Control",
           "PROP_SMALL",
@@ -16789,7 +17133,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -16867,7 +17213,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -16945,7 +17293,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -17023,7 +17373,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -17101,7 +17453,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -17179,7 +17533,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -17298,6 +17654,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1",
           "RET_STRUCT_PTR"
         ]
@@ -17382,6 +17740,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -17489,8 +17849,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
+          "CALLEE_2",
           "PROP_LOOPHEAVY",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -17530,9 +17892,9 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_e9c54aa5c7db68cd",
       "callees": {
         "Classic/1.00": [
-          "GetProcAddress|0x11",
+          "GetModuleHandleA|0xC",
           "LoadLibraryA|0x8",
-          "GetModuleHandleA|0xC"
+          "GetProcAddress|0x11"
         ]
       },
       "strings": {
@@ -17593,8 +17955,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
-          "PARAM_0"
+          "PARAM_0",
+          "CALLEE_3"
         ]
       },
       "function_types": {
@@ -17681,6 +18045,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -17724,8 +18090,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "DestroyLinkedListAndReleaseBuffers|0x680087D0",
           "strncpy|0x4B",
-          "NoOpStubFunction|0x68001A90",
-          "ParseItemConfigFile|0x680081A0"
+          "ParseItemConfigFile|0x680081A0",
+          "NoOpStubFunction|0x68001A90"
         ]
       },
       "callers": {
@@ -17806,7 +18172,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_1",
+          "CALLEE_4",
           "STRUCT_UnitAny",
           "STRUCT_Control"
         ]
@@ -17847,19 +18215,19 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ParseStringPairToUnsigned|0x68007DF0",
-          "DestroyLinkedListAndReleaseBuffers|0x680087D0",
-          "ValidateConfigurationStringPair|0x68007E20",
-          "_access|0x68009BD8",
-          "ReadConfigValue|0x68007DA0",
-          "_stricmp|0x4C",
-          "SplitStringWithDelimiters|0x68004870",
-          "SafeDestroyObject|0x68008C70",
-          "LoadItemDataFromConfigFile|0x68007980",
-          "strncpy|0x4B",
-          "ParseConfigurationString|0x68008C20",
           "free|0x49",
-          "NoOpStubFunction|0x68001A90"
+          "SafeDestroyObject|0x68008C70",
+          "DestroyLinkedListAndReleaseBuffers|0x680087D0",
+          "ParseStringPairToUnsigned|0x68007DF0",
+          "ValidateConfigurationStringPair|0x68007E20",
+          "LoadItemDataFromConfigFile|0x68007980",
+          "NoOpStubFunction|0x68001A90",
+          "ReadConfigValue|0x68007DA0",
+          "_access|0x68009BD8",
+          "ParseConfigurationString|0x68008C20",
+          "strncpy|0x4B",
+          "SplitStringWithDelimiters|0x68004870",
+          "_stricmp|0x4C"
         ]
       },
       "callers": {
@@ -17999,8 +18367,10 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PROP_LARGE",
+          "CALLEE_13",
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
           "STRUCT_Skill",
           "PARAM_1",
           "STRUCT_UnitAny",
@@ -18068,8 +18438,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -18174,6 +18546,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_4",
+          "CALLER_2",
+          "CALLEE_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -18277,6 +18651,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_2",
+          "CALLEE_2",
           "STRUCT_Control",
           "PROP_SMALL"
         ]
@@ -18363,6 +18739,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_1",
           "PROP_SMALL"
         ]
       },
@@ -18464,6 +18842,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -18506,9 +18886,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "fclose|0x46",
           "ValidateAndCalculateChecksum|0x68007F40",
           "fread|0x35",
+          "fclose|0x46",
           "fopen|0x43"
         ]
       },
@@ -18587,7 +18967,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
-          "PARAM_1"
+          "CALLER_1",
+          "PARAM_1",
+          "CALLEE_4"
         ]
       },
       "function_types": {
@@ -18631,8 +19013,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateTimedSecurityCheck|0x68007F60",
-          "ValidateGameStatisticsHeader|0x68007EB0"
+          "ValidateGameStatisticsHeader|0x68007EB0",
+          "ValidateTimedSecurityCheck|0x68007F60"
         ]
       },
       "instructions": {
@@ -18673,6 +19055,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_2",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -18714,14 +19098,14 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "ValidateAndCalculateChecksum|0x68007F40",
-          "WriteStatisticsDataToFile|0x68008000",
-          "GetTickCount|0xA"
+          "GetTickCount|0xA",
+          "WriteStatisticsDataToFile|0x68008000"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "InitializeSecurityValidation|0x680019A0",
-          "ProcessTimedServerUpdates|0x680058C0"
+          "ProcessTimedServerUpdates|0x680058C0",
+          "InitializeSecurityValidation|0x680019A0"
         ]
       },
       "instructions": {
@@ -18791,6 +19175,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_2",
+          "CALLEE_3",
           "PARAM_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -18834,8 +19220,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "fclose|0x46",
-          "fwrite|0x28",
-          "fopen|0x43"
+          "fopen|0x43",
+          "fwrite|0x28"
         ]
       },
       "callers": {
@@ -18906,6 +19292,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_3",
           "PARAM_1"
         ]
       },
@@ -18972,6 +19360,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "PROP_THUNK",
           "PROP_TINY",
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -19012,8 +19402,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "RegisterExitHandler|0x680080B0",
-          "InitializeListWithConfig|0x68008080"
+          "InitializeListWithConfig|0x68008080",
+          "RegisterExitHandler|0x680080B0"
         ]
       },
       "instructions": {
@@ -19042,8 +19432,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_2",
           "PARAM_1"
         ]
       },
@@ -19147,6 +19539,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -19231,6 +19625,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0",
           "PROP_SMALL"
         ]
@@ -19276,9 +19672,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "DestroyBufferManagerList|0x68008D80",
           "DestroyLinkedListAndReleaseBuffers|0x680087D0",
-          "Unwind@68009ff9|0x68009FF9"
+          "Unwind@68009ff9|0x68009FF9",
+          "DestroyBufferManagerList|0x68008D80"
         ]
       },
       "instructions": {
@@ -19332,6 +19728,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_3",
+          "CALLEE_1",
           "PARAM_1",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -19373,26 +19771,26 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "TransferListNode|0x68008E50",
-          "GetItemDataValue|0x68008DE0",
           "open|0x62",
-          "setstate|0x63",
-          "basic_filebuf<char,struct_std::char_traits<char>_>|0x60",
-          "InitializeConfigContainer|0x68008D50",
-          "ExecuteProtectedCallback|0x68009D7C",
+          "TransferListNode|0x68008E50",
           "~basic_filebuf<char,struct_std::char_traits<char>_>|0x64",
-          "ParseAndAddNameListToQueue|0x680084A0",
-          "SwapBufferDescriptors|0x68008E20",
-          "DestroyBufferManagerList|0x68008D80",
-          "fclose|0x46",
-          "_Tidy|0x67",
-          "InvokeCallbackArrayWithSeh|0x68009E70",
-          "basic_istream<char,struct_std::char_traits<char>_>|0x5F",
-          "GetLine|0x68009F56",
-          "MergeSortedConfigLists|0x68008EB0",
-          "ios_base|0x5C",
           "_Init|0x6A",
-          "~basic_ios<char,struct_std::char_traits<char>_>|0x66"
+          "ios_base|0x5C",
+          "SwapBufferDescriptors|0x68008E20",
+          "~basic_ios<char,struct_std::char_traits<char>_>|0x66",
+          "_Tidy|0x67",
+          "InitializeConfigContainer|0x68008D50",
+          "InvokeCallbackArrayWithSeh|0x68009E70",
+          "fclose|0x46",
+          "MergeSortedConfigLists|0x68008EB0",
+          "basic_filebuf<char,struct_std::char_traits<char>_>|0x60",
+          "setstate|0x63",
+          "GetItemDataValue|0x68008DE0",
+          "basic_istream<char,struct_std::char_traits<char>_>|0x5F",
+          "DestroyBufferManagerList|0x68008D80",
+          "GetLine|0x68009F56",
+          "ParseAndAddNameListToQueue|0x680084A0",
+          "ExecuteProtectedCallback|0x68009D7C"
         ]
       },
       "callers": {
@@ -19492,11 +19890,13 @@ var FUNCTIONS_D2Server_dll = {
           "PROP_LARGE",
           "STRUCT_Path",
           "STRUCT_Inventory",
+          "CALLER_1",
           "STRUCT_Skill",
           "PARAM_1",
           "PROP_LOOPHEAVY",
           "STRUCT_UnitAny",
           "STRUCT_Control",
+          "CALLEE_20",
           "STRUCT_PlayerData"
         ]
       },
@@ -19536,18 +19936,18 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "isspace|0x2C",
-          "_Xlen|0x58",
-          "_Tidy|0x67",
-          "OperatorNew|0x68009D32",
-          "AllocateListNode|0x68008FA0",
-          "strrchr|0x2B",
-          "CopyStringPairWithExceptionHandling|0x68008FD0",
-          "strchr|0x2D",
-          "_Eos|0x59",
-          "tolower|0x3F",
+          "_Grow|0x56",
           "OperatorDelete|0x68009D76",
-          "_Grow|0x56"
+          "strrchr|0x2B",
+          "AllocateListNode|0x68008FA0",
+          "_Xlen|0x58",
+          "strchr|0x2D",
+          "OperatorNew|0x68009D32",
+          "_Eos|0x59",
+          "isspace|0x2C",
+          "CopyStringPairWithExceptionHandling|0x68008FD0",
+          "tolower|0x3F",
+          "_Tidy|0x67"
         ]
       },
       "callers": {
@@ -19633,17 +20033,19 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
-          "PROP_LARGE",
-          "STRUCT_Path",
+          "CALLEE_12",
           "STRUCT_Act",
           "STRUCT_Inventory",
-          "STRUCT_Skill",
+          "CALLER_1",
           "STRUCT_ItemData",
           "PARAM_1",
-          "PROP_LOOPHEAVY",
           "STRUCT_UnitAny",
           "STRUCT_Control",
-          "STRUCT_PlayerData"
+          "STRUCT_PlayerData",
+          "PROP_LARGE",
+          "STRUCT_Path",
+          "STRUCT_Skill",
+          "PROP_LOOPHEAVY"
         ]
       },
       "function_types": {
@@ -19682,8 +20084,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ReleaseDualBufferReferences|0x68008130",
-          "OperatorDelete|0x68009D76"
+          "OperatorDelete|0x68009D76",
+          "ReleaseDualBufferReferences|0x68008130"
         ]
       },
       "callers": {
@@ -19748,6 +20150,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_2",
+          "CALLEE_2",
           "PARAM_0"
         ]
       },
@@ -19787,16 +20191,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "isspace|0x2C",
-          "_Xlen|0x58",
-          "_Tidy|0x67",
-          "OperatorNew|0x68009D32",
-          "append|0x55",
-          "_Eos|0x59",
-          "tolower|0x3F",
           "_Grow|0x56",
           "SearchStringInList|0x68008A90",
-          "OperatorDelete|0x68009D76"
+          "OperatorDelete|0x68009D76",
+          "_Xlen|0x58",
+          "_Eos|0x59",
+          "OperatorNew|0x68009D32",
+          "append|0x55",
+          "isspace|0x2C",
+          "tolower|0x3F",
+          "_Tidy|0x67"
         ]
       },
       "callers": {
@@ -19880,17 +20284,19 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
-          "STRUCT_StatList",
-          "PROP_LARGE",
-          "STRUCT_Path",
+          "CALLEE_10",
           "STRUCT_Act",
           "STRUCT_Inventory",
-          "STRUCT_Skill",
+          "CALLER_1",
           "STRUCT_ItemData",
           "PARAM_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
-          "STRUCT_PlayerData"
+          "STRUCT_PlayerData",
+          "STRUCT_StatList",
+          "PROP_LARGE",
+          "STRUCT_Path",
+          "STRUCT_Skill"
         ]
       },
       "function_types": {
@@ -19929,10 +20335,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "_Tidy|0x67",
-          "erase|0x54",
+          "_Grow|0x56",
           "_strnicmp|0x3E",
-          "_Grow|0x56"
+          "erase|0x54",
+          "_Tidy|0x67"
         ]
       },
       "callers": {
@@ -20004,7 +20410,9 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_3",
+          "CALLER_1",
           "STRUCT_Skill",
+          "CALLEE_4",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -20085,6 +20493,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_2",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -20123,8 +20533,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "SafeDestroyObject|0x68008C70",
-          "InvokePluginVirtualMethod|0x68008C50",
-          "ParseConfigurationString|0x68008C20"
+          "ParseConfigurationString|0x68008C20",
+          "InvokePluginVirtualMethod|0x68008C50"
         ]
       },
       "instructions": {
@@ -20167,7 +20577,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
-          "PROP_NOCALLER"
+          "CALLER_0",
+          "PROP_NOCALLER",
+          "CALLEE_3"
         ]
       },
       "function_types": {
@@ -20240,6 +20652,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -20314,6 +20728,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -20394,6 +20810,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -20477,7 +20895,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_5",
+          "CALLEE_0",
           "PROP_LEAF"
         ]
       },
@@ -20580,6 +21000,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -20621,10 +21043,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "_Grow|0x56",
           "erase|0x54",
-          "assign|0x52",
           "_Eos|0x59",
-          "_Grow|0x56"
+          "assign|0x52"
         ]
       },
       "callers": {
@@ -20697,7 +21119,9 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
           "STRUCT_ItemData",
+          "CALLEE_4",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -20773,7 +21197,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_0",
           "PROP_SMALL"
         ]
@@ -20819,8 +21245,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_680091d0|0x680091D0",
-          "FUN_68009140|0x68009140"
+          "FUN_68009140|0x68009140",
+          "FUN_680091d0|0x680091D0"
         ]
       },
       "instructions": {
@@ -20868,6 +21294,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_2",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -20908,8 +21336,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "LoadLibraryA|0x8",
-          "GetModuleHandleA|0xC"
+          "GetModuleHandleA|0xC",
+          "LoadLibraryA|0x8"
         ]
       },
       "callers": {
@@ -20969,7 +21397,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
-          "PARAM_2"
+          "PARAM_2",
+          "CALLER_1",
+          "CALLEE_2"
         ]
       },
       "function_types": {
@@ -21041,7 +21471,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -21148,7 +21580,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -21209,8 +21643,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF"
         ]
@@ -21271,7 +21707,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -21345,7 +21783,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -21412,7 +21852,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -21476,7 +21918,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -21562,8 +22006,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_4",
+          "CALLEE_0",
           "STRUCT_UnitAny",
           "PROP_LEAF",
           "STRUCT_Control"
@@ -21656,7 +22102,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -21697,19 +22145,19 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "OperatorNew|0x68009D32",
           "InitializeSingleItemParser|0x68009920",
-          "InitializeFunctionPointerWithAddress|0x68009940",
-          "DelimiterParserDestructor|0x680097B0",
-          "InitializeDelimiterParser|0x68009790",
+          "OperatorDelete|0x68009D76",
           "strchr|0x2D",
-          "OperatorDelete|0x68009D76"
+          "DelimiterParserDestructor|0x680097B0",
+          "OperatorNew|0x68009D32",
+          "InitializeDelimiterParser|0x68009790",
+          "InitializeFunctionPointerWithAddress|0x68009940"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "SplitStringWithDelimiter|0x68009830",
-          "ParseConfigurationString|0x68008C20"
+          "ParseConfigurationString|0x68008C20",
+          "SplitStringWithDelimiter|0x68009830"
         ]
       },
       "instructions": {
@@ -21777,11 +22225,13 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_MonsterData",
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_2",
           "STRUCT_Room1",
           "STRUCT_ItemData",
           "PARAM_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
+          "CALLEE_7",
           "STRUCT_PlayerData"
         ]
       },
@@ -21861,6 +22311,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PROP_TINY",
+          "CALLER_2",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF"
         ]
@@ -21901,10 +22353,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "InitializeFunctionPointerWithAddress|0x68009940",
+          "Unwind@6800a060|0x6800A060",
           "SplitStringWithDelimiter|0x68009830",
           "DelimiterParserDestructor|0x680097B0",
-          "Unwind@6800a060|0x6800A060"
+          "InitializeFunctionPointerWithAddress|0x68009940"
         ]
       },
       "instructions": {
@@ -21942,6 +22394,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PROP_TINY",
+          "CALLEE_0",
+          "CALLER_4",
           "PARAM_1",
           "PROP_LEAF"
         ]
@@ -22038,6 +22492,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_1",
           "RET_STRUCT_PTR",
           "PROP_SMALL"
@@ -22115,7 +22571,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PROP_LEAF"
         ]
       },
@@ -22160,8 +22618,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "SafeDestroyObject|0x68008C70",
-          "CreateParserByDelimiter|0x68009610"
+          "CreateParserByDelimiter|0x68009610",
+          "SafeDestroyObject|0x68008C70"
         ]
       },
       "instructions": {
@@ -22201,6 +22659,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_2",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -22283,7 +22743,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
           "PARAM_4",
+          "CALLEE_0",
           "PROP_LEAF",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -22369,7 +22831,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_4",
+          "CALLEE_0",
           "STRUCT_UnitAny",
           "PROP_LEAF",
           "STRUCT_Control"
@@ -22462,6 +22926,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_2",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -22581,7 +23047,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
-          "PARAM_2"
+          "PARAM_2",
+          "CALLER_1",
+          "CALLEE_3"
         ]
       },
       "function_types": {
@@ -22620,8 +23088,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "DllProcessAttachHandler|0x68009F16",
-          "DllProcessAttachDetach|0x68009BEA"
+          "DllProcessAttachDetach|0x68009BEA",
+          "DllProcessAttachHandler|0x68009F16"
         ]
       },
       "instructions": {
@@ -22673,8 +23141,10 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
+          "CALLEE_2",
           "STRUCT_Control"
         ]
       },
@@ -22714,8 +23184,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "_onexit|0x33",
-          "DllOnExit|0x68009F36"
+          "DllOnExit|0x68009F36",
+          "_onexit|0x33"
         ]
       },
       "callers": {
@@ -22780,6 +23250,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_2",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -22825,8 +23297,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "RegisterExitHandler|0x680080B0",
           "RegisterExitHandler|0x68008CF0",
+          "RegisterExitHandler|0x680080B0",
           "RegisterExitHandler|0x68008D30"
         ]
       },
@@ -22865,6 +23337,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_3",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -22967,7 +23441,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_4",
+          "CALLEE_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -23051,6 +23527,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -23150,6 +23628,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_4",
+          "CALLER_2",
+          "CALLEE_0",
           "STRUCT_UnitAny",
           "PROP_LEAF",
           "STRUCT_Control",
@@ -23234,7 +23714,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -23337,7 +23819,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_4",
+          "CALLEE_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -23423,7 +23907,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
           "PARAM_4",
+          "CALLEE_1",
           "STRUCT_Control",
           "PROP_SMALL"
         ]
@@ -23519,6 +24005,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_1",
           "PROP_SMALL"
         ]
       },
@@ -23576,8 +24064,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -23644,8 +24134,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_1",
           "PARAM_0"
         ]
       },
@@ -23716,7 +24208,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "PARAM_0",
           "PROP_SMALL"
         ]
@@ -23775,8 +24269,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF"
         ]
@@ -23846,8 +24342,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
           "PROP_TINY",
+          "CALLEE_1",
           "PARAM_1"
         ]
       },
@@ -23886,8 +24384,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "SecureMemoryCopy|0x68004FA0",
-          "FUN_68005100|0x68005100"
+          "FUN_68005100|0x68005100",
+          "SecureMemoryCopy|0x68004FA0"
         ]
       },
       "instructions": {
@@ -23966,6 +24464,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "PROP_LARGE",
           "STRUCT_Inventory",
+          "CALLER_2",
+          "CALLEE_0",
           "PROP_LEAF",
           "PARAM_11"
         ]
@@ -24006,9 +24506,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ValidateGameIdAndGetEntry|0x680064E8",
           "free|0x49",
-          "D2GSServerShutdown|0x68001760"
+          "D2GSServerShutdown|0x68001760",
+          "ValidateGameIdAndGetEntry|0x680064E8"
         ]
       },
       "instructions": {
@@ -24066,8 +24566,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
-          "PARAM_0"
+          "PARAM_0",
+          "CALLEE_3"
         ]
       },
       "function_types": {
@@ -24106,10 +24608,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetProcAddress|0x11",
           "InitializeFunctionPointers|0x68022D2F",
           "D2GameServerPreInit|0x680010C0",
-          "NoOpStubFunction|0x68001A90"
+          "NoOpStubFunction|0x68001A90",
+          "GetProcAddress|0x11"
         ]
       },
       "callers": {
@@ -24207,7 +24709,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PROP_LARGE",
-          "PARAM_0"
+          "CALLER_1",
+          "PARAM_0",
+          "CALLEE_4"
         ]
       },
       "function_types": {
@@ -24315,6 +24819,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_2",
           "PARAM_0"
         ]
       },
@@ -24354,11 +24860,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ChangeModuleSectionProtection|0x680233B5",
-          "PrepareCodeSectionForPatching|0x68023471",
-          "SetCodeSectionExecutable|0x680233E9",
           "SetModuleSectionProtections|0x6802341D",
-          "ComputeExponentialProgressionTable|0x68023512"
+          "PrepareCodeSectionForPatching|0x68023471",
+          "ChangeModuleSectionProtection|0x680233B5",
+          "ComputeExponentialProgressionTable|0x68023512",
+          "SetCodeSectionExecutable|0x680233E9"
         ]
       },
       "instructions": {
@@ -24466,7 +24972,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "PROP_LARGE",
           "PARAM_2",
-          "PROP_NOCALLER"
+          "CALLER_0",
+          "PROP_NOCALLER",
+          "CALLEE_5"
         ]
       },
       "function_types": {
@@ -24558,6 +25066,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0",
           "PROP_SMALL"
         ]
@@ -24627,7 +25137,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -24722,7 +25234,9 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -24811,8 +25325,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
           "STRUCT_Skill",
+          "CALLEE_0",
           "PROP_LEAF"
         ]
       },
@@ -24922,8 +25438,10 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Act",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
+          "CALLEE_1",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -25026,9 +25544,11 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
           "STRUCT_Skill",
+          "CALLEE_3",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -25131,9 +25651,11 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_3",
           "STRUCT_Skill",
+          "CALLEE_3",
           "STRUCT_UnitAny",
           "STRUCT_Control",
           "STRUCT_PlayerData"
@@ -25221,8 +25743,10 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
           "PARAM_4",
+          "CALLEE_0",
           "STRUCT_UnitAny",
           "PROP_LEAF",
           "STRUCT_Control"
@@ -25327,6 +25851,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "PARAM_2",
           "STRUCT_Skill",
+          "CALLER_2",
+          "CALLEE_0",
           "PROP_LEAF"
         ]
       },
@@ -25412,6 +25938,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_0",
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -25500,6 +26028,8 @@ var FUNCTIONS_D2Server_dll = {
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_5",
+          "CALLEE_0",
+          "CALLER_3",
           "STRUCT_UnitAny",
           "PROP_LEAF",
           "STRUCT_Control",
@@ -25650,6 +26180,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_1",
+          "CALLEE_1",
           "PARAM_0"
         ]
       },
@@ -25734,6 +26266,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_3",
+          "CALLER_1",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -25825,6 +26359,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
+          "CALLER_2",
+          "CALLEE_1",
           "PARAM_1",
           "PROP_SMALL"
         ]
@@ -25909,7 +26445,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PROP_LOOPHEAVY",
           "PROP_LEAF"
         ]
@@ -26018,7 +26556,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "tags": {
         "Classic/1.00": [
-          "PARAM_5"
+          "CALLER_1",
+          "PARAM_5",
+          "CALLEE_1"
         ]
       },
       "function_types": {
@@ -26057,9 +26597,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetProcAddress|0x11",
           "FreeLibrary|0xB",
-          "LoadLibraryA|0x8"
+          "LoadLibraryA|0x8",
+          "GetProcAddress|0x11"
         ]
       },
       "strings": {
@@ -26134,7 +26674,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
-          "PROP_NOCALLER"
+          "CALLER_0",
+          "PROP_NOCALLER",
+          "CALLEE_3"
         ]
       },
       "function_types": {
@@ -26214,7 +26756,9 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "PARAM_2",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_0",
           "PROP_LEAF",
           "PROP_SMALL"
         ]
@@ -26316,6 +26860,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_1",
           "STRUCT_ItemData",
           "STRUCT_Control"
         ]
@@ -26417,6 +26963,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_1",
           "STRUCT_ItemData",
           "STRUCT_Control"
         ]
@@ -26527,6 +27075,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_1",
           "STRUCT_ItemData",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -26639,6 +27189,8 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "STRUCT_Inventory",
           "PARAM_2",
+          "CALLER_1",
+          "CALLEE_1",
           "STRUCT_ItemData",
           "STRUCT_UnitAny",
           "STRUCT_Control",
@@ -26750,6 +27302,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_2",
           "PARAM_0"
         ]
       },
@@ -26858,6 +27412,8 @@ var FUNCTIONS_D2Server_dll = {
       "tags": {
         "Classic/1.00": [
           "STRUCT_Inventory",
+          "CALLER_1",
+          "CALLEE_1",
           "STRUCT_ItemData",
           "PARAM_0",
           "PROP_LOOPHEAVY",
@@ -26966,7 +27522,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "PARAM_8",
           "STRUCT_Inventory",
+          "CALLER_0",
           "PROP_NOCALLER",
+          "CALLEE_1",
           "STRUCT_Control",
           "STRUCT_PlayerData"
         ]

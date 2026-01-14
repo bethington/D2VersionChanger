@@ -4,7 +4,7 @@
   "version": "1.11",
   "image_base": "0x00400000",
   "total_functions": 200,
-  "export_timestamp": "Sun Jan 11 22:12:42 CST 2026",
+  "export_timestamp": "Wed Jan 14 14:39:42 CST 2026",
   "functions": [
     {
       "address": "0x00401000",
@@ -42,7 +42,7 @@
       "callee_count": 2,
       "callees": ["__flsbuf|0x4013F9", "__output|0x4015A0"],
       "caller_count": 2,
-      "callers": ["FUN_00408220|0x408220", "FUN_00407c70|0x407C70"],
+      "callers": ["FUN_00407c70|0x407C70", "FUN_00408220|0x408220"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -53,7 +53,7 @@
       "api_calls": [],
       "instructions": ["0x1000|PUSH|EBP", "0x1001|MOV|EBP, ESP", "0x1003|SUB|ESP, 0x20", "0x1006|PUSH|ESI", "0x1007|MOV|ESI, dword ptr [EBP + 0x8]", "0x100A|PUSH|EDI", "0x100B|LEA|EAX, [EBP + 0x10]", "0x100E|PUSH|EAX", "0x100F|PUSH|dword ptr [EBP + 0xc]", "0x1012|LEA|EAX, [EBP + -0x20]", "0x1015|PUSH|EAX", "0x1016|MOV|dword ptr [EBP + -0x1c], 0x7fffffff", "0x101D|MOV|dword ptr [EBP + -0x14], 0x42", "0x1024|MOV|dword ptr [EBP + -0x18], ESI", "0x1027|MOV|dword ptr [EBP + -0x20], ESI"],
       "comment": "Library Function - Single Match\n _sprintf\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_2", "CALLEE_2", "STRUCT_Control"]
     },
     {
       "address": "0x00401060",
@@ -102,7 +102,7 @@
       "api_calls": [],
       "instructions": ["0x1060|PUSH|EBP", "0x1061|MOV|EBP, ESP", "0x1063|PUSH|EDI", "0x1064|PUSH|ESI", "0x1065|PUSH|EBX", "0x1066|MOV|ECX, dword ptr [EBP + 0x10]", "0x1069|JECXZ|0x00401092", "0x106B|MOV|EBX, ECX", "0x106D|MOV|EDI, dword ptr [EBP + 0x8]", "0x1070|MOV|ESI, EDI", "0x1072|XOR|EAX, EAX", "0x1074|SCASB.REPNE|ES:EDI", "0x1076|NEG|ECX", "0x1078|ADD|ECX, EBX", "0x107A|MOV|EDI, ESI"],
       "comment": "Library Function - Single Match\n _strncmp\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x00401099",
@@ -138,7 +138,7 @@
       "param_count": 2,
       "parameters": [{"name": "_Str", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Delim", "type": "char *", "storage": "Stack[0x8]:4"}],
       "callee_count": 2,
-      "callees": ["FUN_00402098|0x402098", "__getptd|0x401DC0"],
+      "callees": ["__getptd|0x401DC0", "FUN_00402098|0x402098"],
       "caller_count": 1,
       "callers": ["FUN_00407a70|0x407A70"],
       "string_count": 0,
@@ -151,7 +151,7 @@
       "api_calls": [],
       "instructions": ["0x1099|PUSH|EBP", "0x109A|MOV|EBP, ESP", "0x109C|SUB|ESP, 0x28", "0x109F|MOV|EAX, [0x0040b054]", "0x10A4|PUSH|EBX", "0x10A5|PUSH|ESI", "0x10A6|MOV|ESI, dword ptr [EBP + 0xc]", "0x10A9|PUSH|EDI", "0x10AA|MOV|dword ptr [EBP + -0x4], EAX", "0x10AD|CALL|0x00401dc0", "0x10B2|PUSH|0x8", "0x10B4|POP|ECX", "0x10B5|MOV|dword ptr [EBP + -0x28], EAX", "0x10B8|XOR|EAX, EAX", "0x10BA|LEA|EDI, [EBP + -0x24]"],
       "comment": "Library Function - Single Match\n _strtok\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_2", "PROP_LOOPHEAVY", "STRUCT_Control"]
     },
     {
       "address": "0x0040114E",
@@ -187,7 +187,7 @@
       "param_count": 1,
       "parameters": [{"name": "_Str", "type": "char *", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["___updatetlocinfo|0x4022AE", "___isctype_mt|0x4020A6", "__getptd|0x401DC0"],
+      "callees": ["___isctype_mt|0x4020A6", "__getptd|0x401DC0", "___updatetlocinfo|0x4022AE"],
       "caller_count": 1,
       "callers": ["___ansicp|0x4067A2"],
       "string_count": 0,
@@ -200,7 +200,7 @@
       "api_calls": [],
       "instructions": ["0x114E|PUSH|ESI", "0x114F|PUSH|EDI", "0x1150|CALL|0x00401dc0", "0x1155|MOV|EDI, dword ptr [EAX + 0x64]", "0x1158|CMP|EDI, dword ptr [0x0040b0b4]", "0x115E|JZ|0x00401167", "0x1160|CALL|0x004022ae", "0x1165|MOV|EDI, EAX", "0x1167|MOV|ESI, dword ptr [ESP + 0xc]", "0x116B|CMP|dword ptr [EDI + 0x28], 0x1", "0x116F|MOVZX|EAX, byte ptr [ESI]", "0x1172|JLE|0x00401182", "0x1174|PUSH|0x8", "0x1176|PUSH|EAX", "0x1177|PUSH|EDI"],
       "comment": "Library Function - Single Match\n _atol\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "STRUCT_Skill", "CALLEE_3", "PARAM_1"]
     },
     {
       "address": "0x004011D6",
@@ -249,7 +249,7 @@
       "api_calls": [],
       "instructions": ["0x11D6|JMP|0x0040114e"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF"]
     },
     {
       "address": "0x004011DB",
@@ -285,9 +285,9 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["__FF_MSGBANNER|0x402662", "__NMSG_WRITE|0x4024EB", "__exit|0x4024BC"],
+      "callees": ["__NMSG_WRITE|0x4024EB", "__FF_MSGBANNER|0x402662", "__exit|0x4024BC"],
       "caller_count": 4,
-      "callers": ["FUN_004063c2|0x4063C2", "__lock|0x403A78", "entry|0x401224", "__getptd|0x401DC0"],
+      "callers": ["__lock|0x403A78", "entry|0x401224", "FUN_004063c2|0x4063C2", "__getptd|0x401DC0"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -298,7 +298,7 @@
       "api_calls": [],
       "instructions": ["0x11DB|CMP|dword ptr [0x0040c868], 0x1", "0x11E2|JNZ|0x004011e9", "0x11E4|CALL|0x00402662", "0x11E9|PUSH|dword ptr [ESP + 0x4]", "0x11ED|CALL|0x004024eb", "0x11F2|PUSH|0xff", "0x11F7|CALL|dword ptr [0x0040b040]", "0x11FD|POP|ECX", "0x11FE|POP|ECX", "0x11FF|RET|"],
       "comment": "Library Function - Single Match\n __amsg_exit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_4", "CALLEE_3", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x00401200",
@@ -334,7 +334,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["___crtExitProcess|0x402324", "__FF_MSGBANNER|0x402662", "__NMSG_WRITE|0x4024EB"],
+      "callees": ["__NMSG_WRITE|0x4024EB", "___crtExitProcess|0x402324", "__FF_MSGBANNER|0x402662"],
       "caller_count": 1,
       "callers": ["entry|0x401224"],
       "string_count": 0,
@@ -347,7 +347,7 @@
       "api_calls": [],
       "instructions": ["0x1200|CMP|dword ptr [0x0040c868], 0x1", "0x1207|JNZ|0x0040120e", "0x1209|CALL|0x00402662", "0x120E|PUSH|dword ptr [ESP + 0x4]", "0x1212|CALL|0x004024eb", "0x1217|PUSH|0xff", "0x121C|CALL|0x00402324", "0x1221|POP|ECX", "0x1222|POP|ECX", "0x1223|RET|"],
       "comment": "Library Function - Single Match\n _fast_error_exit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_3", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x00401224",
@@ -383,7 +383,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 21,
-      "callees": ["___crtGetEnvironmentStringsA|0x402B31", "__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "GetCommandLineA|0x26", "GetStartupInfoA|0x27", "__cexit|0x4024CD", "__setenvp|0x40285C", "__wincmdln|0x4027FF", "__heap_init|0x402EF3", "__mtinit|0x401F78", "__chkstk|0x4030A0", "__setargv|0x402A8F", "_exit|0x4024AB", "__ioinit|0x402C53", "__amsg_exit|0x4011DB", "FUN_004081b0|0x4081B0", "GetModuleHandleA|0x28", "__cinit|0x40237E", "GetVersionExA|0x25", "fast_error_exit|0x401200", "...+1 more"],
+      "callees": ["__amsg_exit|0x4011DB", "__setargv|0x402A8F", "FUN_004081b0|0x4081B0", "__chkstk|0x4030A0", "__wincmdln|0x4027FF", "GetVersionExA|0x25", "__heap_init|0x402EF3", "__SEH_epilog|0x402F7F", "__ioinit|0x402C53", "__cinit|0x40237E", "__setenvp|0x40285C", "GetCommandLineA|0x26", "__mtinit|0x401F78", "__cexit|0x4024CD", "GetModuleHandleA|0x28", "__SEH_prolog|0x402F44", "fast_error_exit|0x401200", "__RTC_Initialize|0x402E51", "___crtGetEnvironmentStringsA|0x402B31", "_exit|0x4024AB", "...+1 more"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -396,7 +396,7 @@
       "api_calls": [],
       "instructions": ["0x1224|PUSH|0x60", "0x1226|PUSH|0x409230", "0x122B|CALL|0x00402f44", "0x1230|MOV|EDI, 0x94", "0x1235|MOV|EAX, EDI", "0x1237|CALL|0x004030a0", "0x123C|MOV|dword ptr [EBP + -0x18], ESP", "0x123F|MOV|ESI, ESP", "0x1241|MOV|dword ptr [ESI], EDI", "0x1243|PUSH|ESI", "0x1244|CALL|dword ptr [0x00409158]", "0x124A|MOV|ECX, dword ptr [ESI + 0x10]", "0x124D|MOV|dword ptr [0x0040c88c], ECX", "0x1253|MOV|EAX, dword ptr [ESI + 0x4]", "0x1256|MOV|[0x0040c898], EAX"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLEE_21", "STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_0", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x004013F9",
@@ -432,7 +432,7 @@
       "param_count": 2,
       "parameters": [{"name": "_Ch", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "_File", "type": "FILE *", "storage": "Stack[0x8]:4"}],
       "callee_count": 4,
-      "callees": ["__lseek|0x403151", "__isatty|0x4034B9", "__getbuf|0x403475", "__write|0x4033CA"],
+      "callees": ["__write|0x4033CA", "__lseek|0x403151", "__isatty|0x4034B9", "__getbuf|0x403475"],
       "caller_count": 2,
       "callers": ["write_char|0x401512", "_sprintf|0x401000"],
       "string_count": 0,
@@ -445,7 +445,7 @@
       "api_calls": [],
       "instructions": ["0x13F9|PUSH|EBP", "0x13FA|MOV|EBP, ESP", "0x13FC|PUSH|EBX", "0x13FD|PUSH|ESI", "0x13FE|MOV|ESI, dword ptr [EBP + 0xc]", "0x1401|MOV|EAX, dword ptr [ESI + 0xc]", "0x1404|TEST|AL, 0x82", "0x1406|MOV|EBX, dword ptr [ESI + 0x10]", "0x1409|JZ|0x00401505", "0x140F|TEST|AL, 0x40", "0x1411|JNZ|0x00401505", "0x1417|TEST|AL, 0x1", "0x1419|JZ|0x00401432", "0x141B|AND|dword ptr [ESI + 0x4], 0x0", "0x141F|TEST|AL, 0x10"],
       "comment": "Library Function - Single Match\n __flsbuf\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_2", "CALLEE_4", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00401512",
@@ -483,7 +483,7 @@
       "callee_count": 1,
       "callees": ["__flsbuf|0x4013F9"],
       "caller_count": 3,
-      "callers": ["__output|0x4015A0", "write_multi_char|0x401545", "write_string|0x401569"],
+      "callers": ["write_multi_char|0x401545", "__output|0x4015A0", "write_string|0x401569"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -494,7 +494,7 @@
       "api_calls": [],
       "instructions": ["0x1512|TEST|byte ptr [ECX + 0xc], 0x40", "0x1516|JZ|0x0040151e", "0x1518|CMP|dword ptr [ECX + 0x8], 0x0", "0x151C|JZ|0x00401542", "0x151E|DEC|dword ptr [ECX + 0x4]", "0x1521|JS|0x0040152e", "0x1523|MOV|EDX, dword ptr [ECX]", "0x1525|MOV|byte ptr [EDX], AL", "0x1527|INC|dword ptr [ECX]", "0x1529|MOVZX|EAX, AL", "0x152C|JMP|0x0040153a", "0x152E|MOVSX|EAX, AL", "0x1531|PUSH|ECX", "0x1532|PUSH|EAX", "0x1533|CALL|0x004013f9"],
       "comment": "Library Function - Single Match\n _write_char\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_3", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00401545",
@@ -543,7 +543,7 @@
       "api_calls": [],
       "instructions": ["0x1545|PUSH|EBP", "0x1546|MOV|EBP, ESP", "0x1548|PUSH|ESI", "0x1549|MOV|ESI, EAX", "0x154B|JMP|0x00401560", "0x154D|MOV|ECX, dword ptr [EBP + 0x10]", "0x1550|MOV|AL, byte ptr [EBP + 0x8]", "0x1553|DEC|dword ptr [EBP + 0xc]", "0x1556|CALL|0x00401512", "0x155B|CMP|dword ptr [ESI], -0x1", "0x155E|JZ|0x00401566", "0x1560|CMP|dword ptr [EBP + 0xc], 0x0", "0x1564|JG|0x0040154d", "0x1566|POP|ESI", "0x1567|POP|EBP"],
       "comment": "Library Function - Single Match\n _write_multi_char\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_1", "STRUCT_Control", "PROP_SMALL"]
     },
     {
       "address": "0x00401569",
@@ -592,7 +592,7 @@
       "api_calls": [],
       "instructions": ["0x1569|TEST|byte ptr [EDI + 0xc], 0x40", "0x156D|PUSH|EBX", "0x156E|PUSH|ESI", "0x156F|MOV|ESI, EAX", "0x1571|MOV|EBX, ECX", "0x1573|JZ|0x00401596", "0x1575|CMP|dword ptr [EDI + 0x8], 0x0", "0x1579|JNZ|0x00401596", "0x157B|MOV|EAX, dword ptr [ESP + 0xc]", "0x157F|ADD|dword ptr [ESI], EAX", "0x1581|JMP|0x0040159d", "0x1583|MOV|AL, byte ptr [EBX]", "0x1585|DEC|dword ptr [ESP + 0xc]", "0x1589|MOV|ECX, EDI", "0x158B|CALL|0x00401512"],
       "comment": "Library Function - Single Match\n _write_string\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_1", "PARAM_1"]
     },
     {
       "address": "0x004015A0",
@@ -628,7 +628,7 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "byte *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "wchar_t *", "storage": "Stack[0xc]:4"}],
       "callee_count": 10,
-      "callees": ["write_char|0x401512", "FUN_004063c2|0x4063C2", "_strlen|0x4036C0", "_free|0x403644", "write_multi_char|0x401545", "FUN_00402098|0x402098", "_wctomb|0x403864", "_malloc|0x4037F2", "__aulldvrm|0x403890", "write_string|0x401569"],
+      "callees": ["_free|0x403644", "_malloc|0x4037F2", "__aulldvrm|0x403890", "write_char|0x401512", "_wctomb|0x403864", "FUN_004063c2|0x4063C2", "_strlen|0x4036C0", "write_multi_char|0x401545", "write_string|0x401569", "FUN_00402098|0x402098"],
       "caller_count": 1,
       "callers": ["_sprintf|0x401000"],
       "string_count": 2,
@@ -641,7 +641,7 @@
       "api_calls": [],
       "instructions": ["0x15A0|PUSH|EBP", "0x15A1|LEA|EBP, [ESP + 0xfffffe2c]", "0x15A8|SUB|ESP, 0x254", "0x15AE|MOV|EAX, [0x0040b054]", "0x15B3|MOV|dword ptr [EBP + 0x1d0], EAX", "0x15B9|XOR|EAX, EAX", "0x15BB|MOV|dword ptr [EBP + -0x48], EAX", "0x15BE|MOV|dword ptr [EBP + -0x4c], EAX", "0x15C1|MOV|dword ptr [EBP + -0x60], EAX", "0x15C4|MOV|EAX, dword ptr [EBP + 0x1e0]", "0x15CA|PUSH|EBX", "0x15CB|MOV|BL, byte ptr [EAX]", "0x15CD|XOR|ECX, ECX", "0x15CF|TEST|BL, BL", "0x15D1|JZ|0x00401d63"],
       "comment": "Library Function - Single Match\n __output\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_10", "PROP_LARGE", "STRUCT_Path", "STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLER_1", "STRUCT_Skill", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00401D9A",
@@ -690,7 +690,7 @@
       "api_calls": [],
       "instructions": ["0x1D9A|CALL|dword ptr [0x00409154]", "0x1DA0|RET|0x4"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00401DA3",
@@ -739,7 +739,7 @@
       "api_calls": [],
       "instructions": ["0x1DA3|MOV|EAX, [0x0040b050]", "0x1DA8|CMP|EAX, -0x1", "0x1DAB|JZ|0x00401dbb", "0x1DAD|PUSH|EAX", "0x1DAE|CALL|dword ptr [0x0040c878]", "0x1DB4|OR|dword ptr [0x0040b050], 0xffffffff", "0x1DBB|JMP|0x0040396e"],
       "comment": "Library Function - Single Match\n __mtterm\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x00401DC0",
@@ -775,9 +775,9 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["GetCurrentThreadId|0x22", "__amsg_exit|0x4011DB", "GetLastError|0x43", "_calloc|0x403AA9", "SetLastError|0x23"],
+      "callees": ["__amsg_exit|0x4011DB", "SetLastError|0x23", "GetLastError|0x43", "GetCurrentThreadId|0x22", "_calloc|0x403AA9"],
       "caller_count": 8,
-      "callers": ["__dosmaperr|0x405F46", "FUN_00405f3d|0x405F3D", "FUN_00405f34|0x405F34", "_atol|0x40114E", "__XcptFilter|0x40269B", "___updatetlocinfo_lk|0x4021ED", "_strtok|0x401099", "_wctomb|0x403864"],
+      "callers": ["FUN_00405f3d|0x405F3D", "FUN_00405f34|0x405F34", "_atol|0x40114E", "__dosmaperr|0x405F46", "_wctomb|0x403864", "___updatetlocinfo_lk|0x4021ED", "_strtok|0x401099", "__XcptFilter|0x40269B"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -788,7 +788,7 @@
       "api_calls": [],
       "instructions": ["0x1DC0|PUSH|EBX", "0x1DC1|PUSH|ESI", "0x1DC2|CALL|dword ptr [0x004091d0]", "0x1DC8|PUSH|dword ptr [0x0040b050]", "0x1DCE|MOV|EBX, EAX", "0x1DD0|CALL|dword ptr [0x0040c870]", "0x1DD6|MOV|ESI, EAX", "0x1DD8|TEST|ESI, ESI", "0x1DDA|JNZ|0x00401e25", "0x1DDC|PUSH|0x8c", "0x1DE1|PUSH|0x1", "0x1DE3|CALL|0x00403aa9", "0x1DE8|MOV|ESI, EAX", "0x1DEA|TEST|ESI, ESI", "0x1DEC|POP|ECX"],
       "comment": "Library Function - Single Match\n __getptd\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PARAM_0", "CALLEE_5", "CALLER_8"]
     },
     {
       "address": "0x00401F63",
@@ -837,7 +837,7 @@
       "api_calls": [],
       "instructions": ["0x1F63|PUSH|0xd", "0x1F65|CALL|0x004039c3", "0x1F6A|POP|ECX", "0x1F6B|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00401F6F",
@@ -886,7 +886,7 @@
       "api_calls": [],
       "instructions": ["0x1F6F|PUSH|0xc", "0x1F71|CALL|0x004039c3", "0x1F76|POP|ECX", "0x1F77|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "PROP_TINY", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00401F78",
@@ -922,7 +922,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 8,
-      "callees": ["GetCurrentThreadId|0x22", "__mtinitlocks|0x403925", "_calloc|0x403AA9", "GetModuleHandleA|0x28", "FUN_00401d9a|0x401D9A", "GetProcAddress|0x42", "TlsSetValue|0x20", "__mtterm|0x401DA3"],
+      "callees": ["__mtterm|0x401DA3", "__mtinitlocks|0x403925", "GetModuleHandleA|0x28", "FUN_00401d9a|0x401D9A", "GetCurrentThreadId|0x22", "GetProcAddress|0x42", "_calloc|0x403AA9", "TlsSetValue|0x20"],
       "caller_count": 1,
       "callers": ["entry|0x401224"],
       "string_count": 5,
@@ -935,7 +935,7 @@
       "api_calls": ["TlsAlloc"],
       "instructions": ["0x1F78|CALL|0x00403925", "0x1F7D|TEST|EAX, EAX", "0x1F7F|JNZ|0x00401f89", "0x1F81|CALL|0x00401da3", "0x1F86|XOR|EAX, EAX", "0x1F88|RET|", "0x1F89|PUSH|ESI", "0x1F8A|PUSH|EDI", "0x1F8B|PUSH|0x4092fc", "0x1F90|CALL|dword ptr [0x00409164]", "0x1F96|MOV|EDI, EAX", "0x1F98|TEST|EDI, EDI", "0x1F9A|JZ|0x00402007", "0x1F9C|MOV|ESI, dword ptr [0x004091cc]", "0x1FA2|PUSH|0x4092f0"],
       "comment": "Library Function - Single Match\n __mtinit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_8"]
     },
     {
       "address": "0x00402067",
@@ -971,7 +971,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 3,
-      "callees": ["__SEH_prolog|0x402F44", "ExitProcess|0x1E", "___security_error_handler|0x4040AC"],
+      "callees": ["__SEH_prolog|0x402F44", "___security_error_handler|0x4040AC", "ExitProcess|0x1E"],
       "caller_count": 1,
       "callers": ["FUN_00402098|0x402098"],
       "string_count": 0,
@@ -984,7 +984,7 @@
       "api_calls": [],
       "instructions": ["0x2067|PUSH|0x8", "0x2069|PUSH|0x409310", "0x206E|CALL|0x00402f44", "0x2073|AND|dword ptr [EBP + -0x4], 0x0", "0x2077|PUSH|0x0", "0x2079|PUSH|0x1", "0x207B|CALL|0x004040ac", "0x2080|POP|ECX", "0x2081|POP|ECX", "0x2082|JMP|0x0040208b", "0x208B|OR|dword ptr [EBP + -0x4], 0xffffffff", "0x208F|PUSH|0x3", "0x2091|CALL|dword ptr [0x0040913c]"],
       "comment": "Library Function - Single Match\n _report_failure\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_3", "PROP_SMALL"]
     },
     {
       "address": "0x00402098",
@@ -1022,7 +1022,7 @@
       "callee_count": 1,
       "callees": ["report_failure|0x402067"],
       "caller_count": 8,
-      "callers": ["__NMSG_WRITE|0x4024EB", "setSBUpLow|0x403BBC", "__output|0x4015A0", "__write_lk|0x4031FC", "__setmbcp_lk|0x403D48", "___convertcp|0x4067E5", "_strtok|0x401099", "___ansicp|0x4067A2"],
+      "callers": ["__NMSG_WRITE|0x4024EB", "setSBUpLow|0x403BBC", "__write_lk|0x4031FC", "__setmbcp_lk|0x403D48", "___ansicp|0x4067A2", "_strtok|0x401099", "__output|0x4015A0", "___convertcp|0x4067E5"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -1033,7 +1033,7 @@
       "api_calls": [],
       "instructions": ["0x2098|CMP|ECX, dword ptr [0x0040b054]", "0x209E|JNZ|0x004020a1", "0x20A0|RET|", "0x20A1|JMP|0x00402067"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLEE_1", "PARAM_1", "CALLER_8", "PROP_SMALL"]
     },
     {
       "address": "0x004020A6",
@@ -1082,7 +1082,7 @@
       "api_calls": [],
       "instructions": ["0x20A6|PUSH|EBP", "0x20A7|MOV|EBP, ESP", "0x20A9|PUSH|ECX", "0x20AA|MOV|EAX, dword ptr [EBP + 0xc]", "0x20AD|LEA|ECX, [EAX + 0x1]", "0x20B0|CMP|ECX, 0x100", "0x20B6|MOV|ECX, dword ptr [EBP + 0x8]", "0x20B9|JA|0x004020c4", "0x20BB|MOV|ECX, dword ptr [ECX + 0x48]", "0x20BE|MOVZX|EAX, word ptr [ECX + EAX*0x2]", "0x20C2|JMP|0x00402118", "0x20C4|PUSH|ESI", "0x20C5|MOV|EDX, EAX", "0x20C7|SAR|EDX, 0x8", "0x20CA|PUSH|EDI"],
       "comment": "Library Function - Single Match\n ___isctype_mt\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_4", "CALLEE_1", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x0040211D",
@@ -1118,7 +1118,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "void *", "storage": "Stack[0x4]:4"}],
       "callee_count": 4,
-      "callees": ["___free_lconv_num|0x40453E", "_free|0x403644", "___free_lconv_mon|0x40459D", "___free_lc_time|0x4043AE"],
+      "callees": ["_free|0x403644", "___free_lconv_mon|0x40459D", "___free_lconv_num|0x40453E", "___free_lc_time|0x4043AE"],
       "caller_count": 1,
       "callers": ["___updatetlocinfo_lk|0x4021ED"],
       "string_count": 0,
@@ -1131,7 +1131,7 @@
       "api_calls": [],
       "instructions": ["0x211D|PUSH|ESI", "0x211E|MOV|ESI, dword ptr [ESP + 0x8]", "0x2122|MOV|EAX, dword ptr [ESI + 0x3c]", "0x2125|PUSH|EDI", "0x2126|XOR|EDI, EDI", "0x2128|CMP|EAX, dword ptr [0x0040cb4c]", "0x212E|JZ|0x00402193", "0x2130|CMP|EAX, EDI", "0x2132|JZ|0x00402193", "0x2134|MOV|EAX, dword ptr [ESI + 0x2c]", "0x2137|CMP|dword ptr [EAX], EDI", "0x2139|JNZ|0x00402193", "0x213B|MOV|EAX, dword ptr [ESI + 0x34]", "0x213E|CMP|EAX, EDI", "0x2140|JZ|0x0040215e"],
       "comment": "Library Function - Single Match\n ___freetlocinfo\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Path", "CALLER_1", "PARAM_1", "CALLEE_4"]
     },
     {
       "address": "0x004021ED",
@@ -1180,7 +1180,7 @@
       "api_calls": [],
       "instructions": ["0x21ED|PUSH|ESI", "0x21EE|CALL|0x00401dc0", "0x21F3|MOV|ESI, EAX", "0x21F5|MOV|ECX, dword ptr [ESI + 0x64]", "0x21F8|CMP|ECX, dword ptr [0x0040b0b4]", "0x21FE|JZ|0x004022a9", "0x2204|XOR|EDX, EDX", "0x2206|CMP|ECX, EDX", "0x2208|JZ|0x00402239", "0x220A|MOV|EAX, dword ptr [ECX + 0x2c]", "0x220D|DEC|dword ptr [ECX]", "0x220F|CMP|EAX, EDX", "0x2211|JZ|0x00402215", "0x2213|DEC|dword ptr [EAX]", "0x2215|MOV|EAX, dword ptr [ECX + 0x34]"],
       "comment": "Library Function - Single Match\n ___updatetlocinfo_lk\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_2", "PARAM_0"]
     },
     {
       "address": "0x004022AE",
@@ -1216,7 +1216,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "__lock|0x403A78", "___updatetlocinfo_lk|0x4021ED", "FUN_004022e0|0x4022E0"],
+      "callees": ["FUN_004022e0|0x4022E0", "__lock|0x403A78", "__SEH_prolog|0x402F44", "__SEH_epilog|0x402F7F", "___updatetlocinfo_lk|0x4021ED"],
       "caller_count": 2,
       "callers": ["_atol|0x40114E", "_wctomb|0x403864"],
       "string_count": 0,
@@ -1229,7 +1229,7 @@
       "api_calls": [],
       "instructions": ["0x22AE|PUSH|0xc", "0x22B0|PUSH|0x4094a0", "0x22B5|CALL|0x00402f44", "0x22BA|PUSH|0xc", "0x22BC|CALL|0x00403a78", "0x22C1|POP|ECX", "0x22C2|AND|dword ptr [EBP + -0x4], 0x0", "0x22C6|CALL|0x004021ed", "0x22CB|MOV|dword ptr [EBP + -0x1c], EAX", "0x22CE|OR|dword ptr [EBP + -0x4], 0xffffffff", "0x22D2|CALL|0x004022e0", "0x22D7|MOV|EAX, dword ptr [EBP + -0x1c]", "0x22DA|CALL|0x00402f7f", "0x22DF|RET|"],
       "comment": "Library Function - Single Match\n ___updatetlocinfo\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_2", "PARAM_0", "CALLEE_5", "PROP_SMALL"]
     },
     {
       "address": "0x004022E0",
@@ -1278,7 +1278,7 @@
       "api_calls": [],
       "instructions": ["0x22E0|PUSH|0xc", "0x22E2|CALL|0x004039c3", "0x22E7|POP|ECX", "0x22E8|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00402324",
@@ -1314,9 +1314,9 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["ExitProcess|0x1E", "GetModuleHandleA|0x28", "GetProcAddress|0x42"],
+      "callees": ["GetModuleHandleA|0x28", "GetProcAddress|0x42", "ExitProcess|0x1E"],
       "caller_count": 2,
-      "callers": ["doexit|0x4023E8", "fast_error_exit|0x401200"],
+      "callers": ["fast_error_exit|0x401200", "doexit|0x4023E8"],
       "string_count": 2,
       "strings": ["0x94BC|s_mscoree.dll_004094bc|mscoree.dll", "0x94AC|s_CorExitProcess_004094ac|CorExitProcess"],
       "constant_count": 2,
@@ -1327,7 +1327,7 @@
       "api_calls": [],
       "instructions": ["0x2324|PUSH|0x4094bc", "0x2329|CALL|dword ptr [0x00409164]", "0x232F|TEST|EAX, EAX", "0x2331|JZ|0x00402349", "0x2333|PUSH|0x4094ac", "0x2338|PUSH|EAX", "0x2339|CALL|dword ptr [0x004091cc]", "0x233F|TEST|EAX, EAX", "0x2341|JZ|0x00402349", "0x2343|PUSH|dword ptr [ESP + 0x4]", "0x2347|CALL|EAX", "0x2349|PUSH|dword ptr [ESP + 0x4]", "0x234D|CALL|dword ptr [0x0040913c]"],
       "comment": "Library Function - Single Match\n ___crtExitProcess\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_2", "CALLEE_3", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x00402354",
@@ -1376,7 +1376,7 @@
       "api_calls": [],
       "instructions": ["0x2354|PUSH|0x8", "0x2356|CALL|0x00403a78", "0x235B|POP|ECX", "0x235C|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x0040235D",
@@ -1425,7 +1425,7 @@
       "api_calls": [],
       "instructions": ["0x235D|PUSH|0x8", "0x235F|CALL|0x004039c3", "0x2364|POP|ECX", "0x2365|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00402366",
@@ -1474,7 +1474,7 @@
       "api_calls": [],
       "instructions": ["0x2366|PUSH|ESI", "0x2367|MOV|ESI, EAX", "0x2369|JMP|0x00402376", "0x236B|MOV|EAX, dword ptr [ESI]", "0x236D|TEST|EAX, EAX", "0x236F|JZ|0x00402373", "0x2371|CALL|EAX", "0x2373|ADD|ESI, 0x4", "0x2376|CMP|ESI, dword ptr [ESP + 0x8]", "0x237A|JC|0x0040236b", "0x237C|POP|ESI", "0x237D|RET|"],
       "comment": "Library Function - Single Match\n __initterm\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x0040237E",
@@ -1523,7 +1523,7 @@
       "api_calls": [],
       "instructions": ["0x237E|MOV|EAX, [0x0040e1d0]", "0x2383|TEST|EAX, EAX", "0x2385|JZ|0x0040238e", "0x2387|PUSH|dword ptr [ESP + 0x4]", "0x238B|CALL|EAX", "0x238D|POP|ECX", "0x238E|PUSH|ESI", "0x238F|PUSH|EDI", "0x2390|MOV|ECX, 0x40b00c", "0x2395|MOV|EDI, 0x40b01c", "0x239A|XOR|EAX, EAX", "0x239C|CMP|ECX, EDI", "0x239E|MOV|ESI, ECX", "0x23A0|JNC|0x004023b9", "0x23A2|TEST|EAX, EAX"],
       "comment": "Library Function - Single Match\n __cinit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_3", "PARAM_1"]
     },
     {
       "address": "0x004023E8",
@@ -1559,9 +1559,9 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "UINT", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}],
       "callee_count": 8,
-      "callees": ["___crtExitProcess|0x402324", "__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "__initterm|0x402366", "__lock|0x403A78", "GetCurrentProcess|0x40", "TerminateProcess|0x1D", "FUN_00402497|0x402497"],
+      "callees": ["___crtExitProcess|0x402324", "GetCurrentProcess|0x40", "__lock|0x403A78", "TerminateProcess|0x1D", "__SEH_prolog|0x402F44", "FUN_00402497|0x402497", "__SEH_epilog|0x402F7F", "__initterm|0x402366"],
       "caller_count": 4,
-      "callers": ["_exit|0x4024AB", "FUN_004024dc|0x4024DC", "__cexit|0x4024CD", "__exit|0x4024BC"],
+      "callers": ["__cexit|0x4024CD", "__exit|0x4024BC", "_exit|0x4024AB", "FUN_004024dc|0x4024DC"],
       "string_count": 0,
       "strings": [],
       "constant_count": 5,
@@ -1572,7 +1572,7 @@
       "api_calls": [],
       "instructions": ["0x23E8|PUSH|0x8", "0x23EA|PUSH|0x4094c8", "0x23EF|CALL|0x00402f44", "0x23F4|PUSH|0x8", "0x23F6|CALL|0x00403a78", "0x23FB|POP|ECX", "0x23FC|XOR|EDI, EDI", "0x23FE|MOV|dword ptr [EBP + -0x4], EDI", "0x2401|XOR|ESI, ESI", "0x2403|INC|ESI", "0x2404|CMP|dword ptr [0x0040c8cc], ESI", "0x240A|JNZ|0x0040241c", "0x240C|PUSH|dword ptr [EBP + 0x8]", "0x240F|CALL|dword ptr [0x004091c4]", "0x2415|PUSH|EAX"],
       "comment": "Library Function - Single Match\n _doexit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_4", "CALLEE_8"]
     },
     {
       "address": "0x00402497",
@@ -1621,7 +1621,7 @@
       "api_calls": [],
       "instructions": ["0x2497|CMP|dword ptr [EBP + 0x10], EDI", "0x249A|JZ|0x004024a4", "0x249C|PUSH|0x8", "0x249E|CALL|0x004039c3", "0x24A3|POP|ECX", "0x24A4|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x004024AB",
@@ -1670,7 +1670,7 @@
       "api_calls": [],
       "instructions": ["0x24AB|PUSH|0x0", "0x24AD|PUSH|0x0", "0x24AF|PUSH|dword ptr [ESP + 0xc]", "0x24B3|CALL|0x004023e8", "0x24B8|ADD|ESP, 0xc", "0x24BB|RET|"],
       "comment": "Library Function - Single Match\n _exit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x004024BC",
@@ -1719,7 +1719,7 @@
       "api_calls": [],
       "instructions": ["0x24BC|PUSH|0x0", "0x24BE|PUSH|0x1", "0x24C0|PUSH|dword ptr [ESP + 0xc]", "0x24C4|CALL|0x004023e8", "0x24C9|ADD|ESP, 0xc", "0x24CC|RET|"],
       "comment": "Library Function - Single Match\n __exit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_2", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x004024CD",
@@ -1768,7 +1768,7 @@
       "api_calls": [],
       "instructions": ["0x24CD|PUSH|0x1", "0x24CF|PUSH|0x0", "0x24D1|PUSH|0x0", "0x24D3|CALL|0x004023e8", "0x24D8|ADD|ESP, 0xc", "0x24DB|RET|"],
       "comment": "Library Function - Single Match\n __cexit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x004024DC",
@@ -1817,7 +1817,7 @@
       "api_calls": [],
       "instructions": ["0x24DC|PUSH|0x1", "0x24DE|PUSH|0x1", "0x24E0|PUSH|0x0", "0x24E2|CALL|0x004023e8", "0x24E7|ADD|ESP, 0xc", "0x24EA|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x004024EB",
@@ -1853,9 +1853,9 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 10,
-      "callees": ["__chkstk|0x4030A0", "_strlen|0x4036C0", "FUN_00404690|0x404690", "GetModuleFileNameA|0x1A", "___crtMessageBoxA|0x405010", "FUN_00402098|0x402098", "_strncpy|0x4047D0", "FUN_00404680|0x404680", "GetStdHandle|0x1B", "WriteFile|0x1C"],
+      "callees": ["FUN_00404680|0x404680", "WriteFile|0x1C", "__chkstk|0x4030A0", "GetStdHandle|0x1B", "_strncpy|0x4047D0", "_strlen|0x4036C0", "FUN_00404690|0x404690", "___crtMessageBoxA|0x405010", "GetModuleFileNameA|0x1A", "FUN_00402098|0x402098"],
       "caller_count": 3,
-      "callers": ["__FF_MSGBANNER|0x402662", "__amsg_exit|0x4011DB", "fast_error_exit|0x401200"],
+      "callers": ["__amsg_exit|0x4011DB", "__FF_MSGBANNER|0x402662", "fast_error_exit|0x401200"],
       "string_count": 4,
       "strings": ["0x97F8|s_R6009_-_not_enough_space_for_env_004097f8|R6009\r\n- not enough space for environment\r\n", "0x98C4|s_<program_name_unknown>_004098c4|<program name unknown>", "0x9878|s_Microsoft_Visual_C++_Runtime_Lib_00409878|Microsoft Visual C++ Runtime Library", "0x98A4|s_Runtime_Error!_Program:_004098a4|Runtime Error!\n\nProgram: "],
       "constant_count": 13,
@@ -1866,7 +1866,7 @@
       "api_calls": [],
       "instructions": ["0x24EB|PUSH|EBP", "0x24EC|LEA|EBP, [ESP + 0xffffff74]", "0x24F3|SUB|ESP, 0x10c", "0x24F9|MOV|EAX, [0x0040b054]", "0x24FE|MOV|ECX, dword ptr [EBP + 0x94]", "0x2504|PUSH|EBX", "0x2505|PUSH|ESI", "0x2506|MOV|dword ptr [EBP + 0x88], EAX", "0x250C|XOR|EDX, EDX", "0x250E|PUSH|EDI", "0x250F|XOR|EAX, EAX", "0x2511|CMP|ECX, dword ptr [EAX*0x8 + 0x40b1f0]", "0x2518|JZ|0x00402520", "0x251A|INC|EAX", "0x251B|CMP|EAX, 0x13"],
       "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_10", "CALLER_3", "PARAM_1"]
     },
     {
       "address": "0x00402662",
@@ -1915,7 +1915,7 @@
       "api_calls": [],
       "instructions": ["0x2662|MOV|EAX, [0x0040c868]", "0x2667|CMP|EAX, 0x1", "0x266A|JZ|0x00402679", "0x266C|TEST|EAX, EAX", "0x266E|JNZ|0x0040269a", "0x2670|CMP|dword ptr [0x0040b044], 0x1", "0x2677|JNZ|0x0040269a", "0x2679|PUSH|0xfc", "0x267E|CALL|0x004024eb", "0x2683|MOV|EAX, [0x0040c8d0]", "0x2688|TEST|EAX, EAX", "0x268A|POP|ECX", "0x268B|JZ|0x0040268f", "0x268D|CALL|EAX", "0x268F|PUSH|0xff"],
       "comment": "Library Function - Single Match\n __FF_MSGBANNER\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_2", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x0040269B",
@@ -1964,7 +1964,7 @@
       "api_calls": [],
       "instructions": ["0x269B|PUSH|EBP", "0x269C|MOV|EBP, ESP", "0x269E|PUSH|ECX", "0x269F|PUSH|EBX", "0x26A0|PUSH|ESI", "0x26A1|PUSH|EDI", "0x26A2|CALL|0x00401dc0", "0x26A7|MOV|EDI, dword ptr [EBP + 0x8]", "0x26AA|MOV|ESI, EAX", "0x26AC|MOV|EDX, dword ptr [ESI + 0x54]", "0x26AF|MOV|EAX, [0x0040b30c]", "0x26B4|MOV|ECX, EDX", "0x26B6|CMP|dword ptr [ECX], EDI", "0x26B8|JZ|0x004026c7", "0x26BA|LEA|EBX, [EAX + EAX*0x2]"],
       "comment": "Library Function - Single Match\n __XcptFilter\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_0", "PROP_NOCALLER", "CALLEE_2", "STRUCT_UnitAny"]
     },
     {
       "address": "0x004027FF",
@@ -2000,7 +2000,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 2,
-      "callees": ["__ismbblead|0x40513C", "___initmbctable|0x404028"],
+      "callees": ["___initmbctable|0x404028", "__ismbblead|0x40513C"],
       "caller_count": 1,
       "callers": ["entry|0x401224"],
       "string_count": 0,
@@ -2013,7 +2013,7 @@
       "api_calls": [],
       "instructions": ["0x27FF|PUSH|ESI", "0x2800|PUSH|EDI", "0x2801|XOR|EDI, EDI", "0x2803|CMP|dword ptr [0x0040e1cc], EDI", "0x2809|JNZ|0x00402810", "0x280B|CALL|0x00404028", "0x2810|MOV|ESI, dword ptr [0x0040e1d4]", "0x2816|TEST|ESI, ESI", "0x2818|JNZ|0x0040281f", "0x281A|MOV|ESI, 0x40a4d9", "0x281F|MOV|AL, byte ptr [ESI]", "0x2821|CMP|AL, 0x20", "0x2823|JA|0x0040282d", "0x2825|TEST|AL, AL", "0x2827|JZ|0x00402857"],
       "comment": "Library Function - Single Match\n __wincmdln\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_2", "PARAM_0"]
     },
     {
       "address": "0x0040285C",
@@ -2049,7 +2049,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["_strlen|0x4036C0", "_free|0x403644", "_malloc|0x4037F2", "FUN_00404680|0x404680", "___initmbctable|0x404028"],
+      "callees": ["FUN_00404680|0x404680", "_free|0x403644", "_malloc|0x4037F2", "___initmbctable|0x404028", "_strlen|0x4036C0"],
       "caller_count": 1,
       "callers": ["entry|0x401224"],
       "string_count": 0,
@@ -2062,7 +2062,7 @@
       "api_calls": [],
       "instructions": ["0x285C|PUSH|EBX", "0x285D|XOR|EBX, EBX", "0x285F|CMP|dword ptr [0x0040e1cc], EBX", "0x2865|PUSH|ESI", "0x2866|PUSH|EDI", "0x2867|JNZ|0x0040286e", "0x2869|CALL|0x00404028", "0x286E|MOV|ESI, dword ptr [0x0040c860]", "0x2874|XOR|EDI, EDI", "0x2876|CMP|ESI, EBX", "0x2878|JNZ|0x0040288c", "0x287A|JMP|0x004028ac", "0x287C|CMP|AL, 0x3d", "0x287E|JZ|0x00402881", "0x2880|INC|EDI"],
       "comment": "Library Function - Single Match\n __setenvp\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "PROP_LOOPHEAVY", "CALLEE_5"]
     },
     {
       "address": "0x00402923",
@@ -2111,7 +2111,7 @@
       "api_calls": [],
       "instructions": ["0x2923|PUSH|EBP", "0x2924|MOV|EBP, ESP", "0x2926|PUSH|ECX", "0x2927|PUSH|EBX", "0x2928|MOV|EBX, dword ptr [EBP + 0xc]", "0x292B|XOR|EDX, EDX", "0x292D|CMP|dword ptr [EBP + 0x8], EDX", "0x2930|PUSH|EDI", "0x2931|MOV|dword ptr [ESI], EDX", "0x2933|MOV|EDI, ECX", "0x2935|MOV|dword ptr [EBX], 0x1", "0x293B|JZ|0x00402946", "0x293D|MOV|ECX, dword ptr [EBP + 0x8]", "0x2940|ADD|dword ptr [EBP + 0x8], 0x4", "0x2944|MOV|dword ptr [ECX], EDI"],
       "comment": "Library Function - Single Match\n _parse_cmdline\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_0", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "PROP_LEAF"]
     },
     {
       "address": "0x00402A8F",
@@ -2147,7 +2147,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 4,
-      "callees": ["GetModuleFileNameA|0x1A", "parse_cmdline|0x402923", "_malloc|0x4037F2", "___initmbctable|0x404028"],
+      "callees": ["_malloc|0x4037F2", "___initmbctable|0x404028", "GetModuleFileNameA|0x1A", "parse_cmdline|0x402923"],
       "caller_count": 1,
       "callers": ["entry|0x401224"],
       "string_count": 0,
@@ -2160,7 +2160,7 @@
       "api_calls": [],
       "instructions": ["0x2A8F|PUSH|EBP", "0x2A90|MOV|EBP, ESP", "0x2A92|PUSH|ECX", "0x2A93|PUSH|ECX", "0x2A94|PUSH|EBX", "0x2A95|PUSH|ESI", "0x2A96|PUSH|EDI", "0x2A97|XOR|EDI, EDI", "0x2A99|CMP|dword ptr [0x0040e1cc], EDI", "0x2A9F|JNZ|0x00402aa6", "0x2AA1|CALL|0x00404028", "0x2AA6|PUSH|0x104", "0x2AAB|MOV|ESI, 0x40c8d8", "0x2AB0|PUSH|ESI", "0x2AB1|PUSH|EDI"],
       "comment": "Library Function - Single Match\n __setargv\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_4"]
     },
     {
       "address": "0x00402B31",
@@ -2196,7 +2196,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 9,
-      "callees": ["GetEnvironmentStringsW|0x3B", "_memcpy|0x4049F0", "_free|0x403644", "FreeEnvironmentStringsW|0x16", "GetLastError|0x43", "FreeEnvironmentStringsA|0x18", "WideCharToMultiByte|0xB", "GetEnvironmentStrings|0x17", "_malloc|0x4037F2"],
+      "callees": ["_free|0x403644", "_malloc|0x4037F2", "_memcpy|0x4049F0", "WideCharToMultiByte|0xB", "GetEnvironmentStrings|0x17", "GetLastError|0x43", "FreeEnvironmentStringsA|0x18", "GetEnvironmentStringsW|0x3B", "FreeEnvironmentStringsW|0x16"],
       "caller_count": 1,
       "callers": ["entry|0x401224"],
       "string_count": 0,
@@ -2209,7 +2209,7 @@
       "api_calls": [],
       "instructions": ["0x2B31|PUSH|ECX", "0x2B32|PUSH|ECX", "0x2B33|MOV|EAX, [0x0040c9e0]", "0x2B38|PUSH|EBX", "0x2B39|PUSH|EBP", "0x2B3A|PUSH|ESI", "0x2B3B|PUSH|EDI", "0x2B3C|MOV|EDI, dword ptr [0x004091b0]", "0x2B42|XOR|EBX, EBX", "0x2B44|XOR|ESI, ESI", "0x2B46|CMP|EAX, EBX", "0x2B48|PUSH|0x2", "0x2B4A|POP|EBP", "0x2B4B|JNZ|0x00402b7a", "0x2B4D|CALL|EDI"],
       "comment": "Library Function - Single Match\n ___crtGetEnvironmentStringsA\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_9", "CALLER_1", "PARAM_0", "PROP_LOOPHEAVY"]
     },
     {
       "address": "0x00402C53",
@@ -2245,7 +2245,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 6,
-      "callees": ["___crtInitCritSecAndSpinCount|0x40515D", "GetStartupInfoA|0x27", "_malloc|0x4037F2", "SetHandleCount|0x39", "GetStdHandle|0x1B", "GetFileType|0x38"],
+      "callees": ["SetHandleCount|0x39", "_malloc|0x4037F2", "GetStdHandle|0x1B", "GetFileType|0x38", "___crtInitCritSecAndSpinCount|0x40515D", "GetStartupInfoA|0x27"],
       "caller_count": 1,
       "callers": ["entry|0x401224"],
       "string_count": 0,
@@ -2258,7 +2258,7 @@
       "api_calls": [],
       "instructions": ["0x2C53|SUB|ESP, 0x48", "0x2C56|PUSH|EBX", "0x2C57|MOV|EBX, 0x480", "0x2C5C|PUSH|EBX", "0x2C5D|CALL|0x004037f2", "0x2C62|TEST|EAX, EAX", "0x2C64|POP|ECX", "0x2C65|JNZ|0x00402c6f", "0x2C67|OR|EAX, 0xffffffff", "0x2C6A|JMP|0x00402e4c", "0x2C6F|MOV|[0x0040e0c0], EAX", "0x2C74|MOV|dword ptr [0x0040e0ac], 0x20", "0x2C7E|LEA|ECX, [EAX + 0x480]", "0x2C84|JMP|0x00402ca4", "0x2C86|OR|dword ptr [EAX], 0xffffffff"],
       "comment": "Library Function - Single Match\n __ioinit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_0", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "CALLEE_6", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00402E51",
@@ -2294,7 +2294,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 2,
-      "callees": ["__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44"],
+      "callees": ["__SEH_prolog|0x402F44", "__SEH_epilog|0x402F7F"],
       "caller_count": 1,
       "callers": ["entry|0x401224"],
       "string_count": 0,
@@ -2307,7 +2307,7 @@
       "api_calls": [],
       "instructions": ["0x2E51|PUSH|0xc", "0x2E53|PUSH|0x4098e0", "0x2E58|CALL|0x00402f44", "0x2E5D|MOV|dword ptr [EBP + -0x1c], 0x40a65c", "0x2E64|CMP|dword ptr [EBP + -0x1c], 0x40a65c", "0x2E6B|JNC|0x00402e8f", "0x2E6D|AND|dword ptr [EBP + -0x4], 0x0", "0x2E71|MOV|EAX, dword ptr [EBP + -0x1c]", "0x2E74|MOV|EAX, dword ptr [EAX]", "0x2E76|TEST|EAX, EAX", "0x2E78|JZ|0x00402e85", "0x2E7A|CALL|EAX", "0x2E7C|JMP|0x00402e85", "0x2E85|OR|dword ptr [EBP + -0x4], 0xffffffff", "0x2E89|ADD|dword ptr [EBP + -0x1c], 0x4"],
       "comment": "Library Function - Single Match\n __RTC_Initialize\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_2", "PARAM_0"]
     },
     {
       "address": "0x00402ED9",
@@ -2356,7 +2356,7 @@
       "api_calls": [],
       "instructions": ["0x2ED9|CMP|dword ptr [0x0040c88c], 0x2", "0x2EE0|JNZ|0x00402eef", "0x2EE2|CMP|dword ptr [0x0040c898], 0x5", "0x2EE9|JC|0x00402eef", "0x2EEB|XOR|EAX, EAX", "0x2EED|INC|EAX", "0x2EEE|RET|", "0x2EEF|PUSH|0x3", "0x2EF1|POP|EAX", "0x2EF2|RET|"],
       "comment": "Library Function - Single Match\n ___heap_select\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x00402EF3",
@@ -2392,7 +2392,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 4,
-      "callees": ["HeapCreate|0x35", "HeapDestroy|0x36", "___sbh_heap_init|0x4051E8", "___heap_select|0x402ED9"],
+      "callees": ["HeapCreate|0x35", "HeapDestroy|0x36", "___heap_select|0x402ED9", "___sbh_heap_init|0x4051E8"],
       "caller_count": 1,
       "callers": ["entry|0x401224"],
       "string_count": 0,
@@ -2405,7 +2405,7 @@
       "api_calls": [],
       "instructions": ["0x2EF3|XOR|EAX, EAX", "0x2EF5|CMP|dword ptr [ESP + 0x4], EAX", "0x2EF9|PUSH|0x0", "0x2EFB|SETZ|AL", "0x2EFE|PUSH|0x1000", "0x2F03|PUSH|EAX", "0x2F04|CALL|dword ptr [0x00409198]", "0x2F0A|TEST|EAX, EAX", "0x2F0C|MOV|[0x0040e0a4], EAX", "0x2F11|JZ|0x00402f3d", "0x2F13|CALL|0x00402ed9", "0x2F18|CMP|EAX, 0x3", "0x2F1B|MOV|[0x0040e0a8], EAX", "0x2F20|JNZ|0x00402f40", "0x2F22|PUSH|0x3f8"],
       "comment": "Library Function - Single Match\n __heap_init\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_4"]
     },
     {
       "address": "0x00402F44",
@@ -2443,7 +2443,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 23,
-      "callers": ["__lseek|0x403151", "___crtLCMapStringA|0x4063E6", "__heap_alloc|0x40374B", "__setmbcp|0x403ED8", "doexit|0x4023E8", "report_failure|0x402067", "___security_error_handler|0x4040AC", "___updatetlocinfo|0x4022AE", "__onexit|0x404FC6", "__msize|0x406C9B", "__close|0x4072A4", "___convertcp|0x4067E5", "__write|0x4033CA", "__lock_fhandle|0x406079", "_free|0x403644", "___crtInitCritSecAndSpinCount|0x40515D", "FUN_004070fa|0x4070FA", "_calloc|0x403AA9", "__mtinitlocknum|0x4039D8", "_realloc|0x406AEE", "...+3 more"],
+      "callers": ["__mtinitlocknum|0x4039D8", "___crtGetStringTypeA|0x4041F4", "__write|0x4033CA", "doexit|0x4023E8", "report_failure|0x402067", "__close|0x4072A4", "entry|0x401224", "__lseek|0x403151", "__setmbcp|0x403ED8", "_calloc|0x403AA9", "__onexit|0x404FC6", "___crtLCMapStringA|0x4063E6", "__heap_alloc|0x40374B", "___convertcp|0x4067E5", "_free|0x403644", "FUN_004070fa|0x4070FA", "__lock_fhandle|0x406079", "_realloc|0x406AEE", "__RTC_Initialize|0x402E51", "___security_error_handler|0x4040AC", "...+3 more"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -2454,7 +2454,7 @@
       "api_calls": [],
       "instructions": ["0x2F44|PUSH|0x402f98", "0x2F49|MOV|EAX, FS:[0x0]", "0x2F4F|PUSH|EAX", "0x2F50|MOV|EAX, dword ptr [ESP + 0x10]", "0x2F54|MOV|dword ptr [ESP + 0x10], EBP", "0x2F58|LEA|EBP, [ESP + 0x10]", "0x2F5C|SUB|ESP, EAX", "0x2F5E|PUSH|EBX", "0x2F5F|PUSH|ESI", "0x2F60|PUSH|EDI", "0x2F61|MOV|EAX, dword ptr [EBP + -0x8]", "0x2F64|MOV|dword ptr [EBP + -0x18], ESP", "0x2F67|PUSH|EAX", "0x2F68|MOV|EAX, dword ptr [EBP + -0x4]", "0x2F6B|MOV|dword ptr [EBP + -0x4], 0xffffffff"],
       "comment": "Library Function - Single Match\n __SEH_prolog\n\nLibrary: Visual Studio",
-      "tags": []
+      "tags": ["CALLER_23", "PARAM_2", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x00402F7F",
@@ -2492,7 +2492,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 21,
-      "callers": ["__lseek|0x403151", "___crtLCMapStringA|0x4063E6", "__heap_alloc|0x40374B", "__setmbcp|0x403ED8", "doexit|0x4023E8", "___updatetlocinfo|0x4022AE", "__onexit|0x404FC6", "__msize|0x406C9B", "__close|0x4072A4", "___convertcp|0x4067E5", "__write|0x4033CA", "__lock_fhandle|0x406079", "_free|0x403644", "___crtInitCritSecAndSpinCount|0x40515D", "FUN_004070fa|0x4070FA", "_calloc|0x403AA9", "__mtinitlocknum|0x4039D8", "_realloc|0x406AEE", "entry|0x401224", "__RTC_Initialize|0x402E51", "...+1 more"],
+      "callers": ["__mtinitlocknum|0x4039D8", "___crtGetStringTypeA|0x4041F4", "__write|0x4033CA", "doexit|0x4023E8", "__close|0x4072A4", "entry|0x401224", "__lseek|0x403151", "__setmbcp|0x403ED8", "_calloc|0x403AA9", "__onexit|0x404FC6", "___crtLCMapStringA|0x4063E6", "__heap_alloc|0x40374B", "___convertcp|0x4067E5", "_free|0x403644", "FUN_004070fa|0x4070FA", "__lock_fhandle|0x406079", "_realloc|0x406AEE", "__RTC_Initialize|0x402E51", "___updatetlocinfo|0x4022AE", "___crtInitCritSecAndSpinCount|0x40515D", "...+1 more"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -2503,7 +2503,7 @@
       "api_calls": [],
       "instructions": ["0x2F7F|MOV|ECX, dword ptr [EBP + -0x10]", "0x2F82|MOV|dword ptr FS:[0x0], ECX", "0x2F89|POP|ECX", "0x2F8A|POP|EDI", "0x2F8B|POP|ESI", "0x2F8C|POP|EBX", "0x2F8D|LEAVE|", "0x2F8E|PUSH|ECX", "0x2F8F|RET|"],
       "comment": "Library Function - Single Match\n __SEH_epilog\n\nLibrary: Visual Studio",
-      "tags": []
+      "tags": ["CALLER_21", "CALLEE_0", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x0040307E",
@@ -2552,7 +2552,7 @@
       "api_calls": [],
       "instructions": ["0x307E|PUSH|EBP", "0x307F|MOV|ECX, dword ptr [ESP + 0x8]", "0x3083|MOV|EBP, dword ptr [ECX]", "0x3085|MOV|EAX, dword ptr [ECX + 0x1c]", "0x3088|PUSH|EAX", "0x3089|MOV|EAX, dword ptr [ECX + 0x18]", "0x308C|PUSH|EAX", "0x308D|CALL|0x00404e72", "0x3092|ADD|ESP, 0x8", "0x3095|POP|EBP", "0x3096|RET|0x4"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x004030A0",
@@ -2590,7 +2590,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 7,
-      "callers": ["__NMSG_WRITE|0x4024EB", "___crtLCMapStringA|0x4063E6", "__resetstkoflw|0x4069AE", "___security_error_handler|0x4040AC", "___convertcp|0x4067E5", "entry|0x401224", "___crtGetStringTypeA|0x4041F4"],
+      "callers": ["__NMSG_WRITE|0x4024EB", "___crtGetStringTypeA|0x4041F4", "entry|0x401224", "___security_error_handler|0x4040AC", "__resetstkoflw|0x4069AE", "___crtLCMapStringA|0x4063E6", "___convertcp|0x4067E5"],
       "string_count": 0,
       "strings": [],
       "constant_count": 4,
@@ -2601,7 +2601,7 @@
       "api_calls": [],
       "instructions": ["0x30A0|CMP|EAX, 0x1000", "0x30A5|JNC|0x004030b5", "0x30A7|NEG|EAX", "0x30A9|ADD|EAX, ESP", "0x30AB|ADD|EAX, 0x4", "0x30AE|TEST|dword ptr [EAX], EAX", "0x30B0|XCHG|EAX, ESP", "0x30B1|MOV|EAX, dword ptr [EAX]", "0x30B3|PUSH|EAX", "0x30B4|RET|", "0x30B5|PUSH|ECX", "0x30B6|LEA|ECX, [ESP + 0x8]", "0x30BA|SUB|ECX, 0x1000", "0x30C0|SUB|EAX, 0x1000", "0x30C5|TEST|dword ptr [ECX], EAX"],
       "comment": "Library Function - Single Match\n __chkstk\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_0", "PARAM_0", "CALLER_7", "PROP_LEAF"]
     },
     {
       "address": "0x004030DD",
@@ -2637,7 +2637,7 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "LONG", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "DWORD", "storage": "Stack[0xc]:4"}],
       "callee_count": 5,
-      "callees": ["__dosmaperr|0x405F46", "FUN_00405f34|0x405F34", "SetFilePointer|0x32", "GetLastError|0x43", "__get_osfhandle|0x406038"],
+      "callees": ["FUN_00405f34|0x405F34", "GetLastError|0x43", "__dosmaperr|0x405F46", "SetFilePointer|0x32", "__get_osfhandle|0x406038"],
       "caller_count": 1,
       "callers": ["__lseek|0x403151"],
       "string_count": 0,
@@ -2650,7 +2650,7 @@
       "api_calls": [],
       "instructions": ["0x30DD|PUSH|ESI", "0x30DE|MOV|ESI, dword ptr [ESP + 0x8]", "0x30E2|PUSH|ESI", "0x30E3|CALL|0x00406038", "0x30E8|CMP|EAX, -0x1", "0x30EB|POP|ECX", "0x30EC|JNZ|0x004030fe", "0x30EE|CALL|0x00405f34", "0x30F3|MOV|dword ptr [EAX], 0x9", "0x30F9|OR|EAX, 0xffffffff", "0x30FC|POP|ESI", "0x30FD|RET|", "0x30FE|PUSH|EDI", "0x30FF|PUSH|dword ptr [ESP + 0x14]", "0x3103|PUSH|0x0"],
       "comment": "Library Function - Single Match\n __lseek_lk\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PARAM_3", "CALLER_1", "CALLEE_5", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00403151",
@@ -2686,7 +2686,7 @@
       "param_count": 3,
       "parameters": [{"name": "_FileHandle", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "_Offset", "type": "long", "storage": "Stack[0x8]:4"}, {"name": "_Origin", "type": "int", "storage": "Stack[0xc]:4"}],
       "callee_count": 7,
-      "callees": ["__SEH_epilog|0x402F7F", "__lock_fhandle|0x406079", "__SEH_prolog|0x402F44", "FUN_004031d8|0x4031D8", "FUN_00405f3d|0x405F3D", "FUN_00405f34|0x405F34", "__lseek_lk|0x4030DD"],
+      "callees": ["FUN_004031d8|0x4031D8", "FUN_00405f3d|0x405F3D", "__lock_fhandle|0x406079", "__lseek_lk|0x4030DD", "FUN_00405f34|0x405F34", "__SEH_prolog|0x402F44", "__SEH_epilog|0x402F7F"],
       "caller_count": 1,
       "callers": ["__flsbuf|0x4013F9"],
       "string_count": 0,
@@ -2699,7 +2699,7 @@
       "api_calls": [],
       "instructions": ["0x3151|PUSH|0xc", "0x3153|PUSH|0x409900", "0x3158|CALL|0x00402f44", "0x315D|MOV|EBX, dword ptr [EBP + 0x8]", "0x3160|CMP|EBX, dword ptr [0x0040e0ac]", "0x3166|JNC|0x004031e0", "0x3168|MOV|EAX, EBX", "0x316A|SAR|EAX, 0x5", "0x316D|LEA|EDI, [EAX*0x4 + 0x40e0c0]", "0x3174|MOV|EAX, EBX", "0x3176|AND|EAX, 0x1f", "0x3179|LEA|ESI, [EAX + EAX*0x8]", "0x317C|SHL|ESI, 0x2", "0x317F|MOV|EAX, dword ptr [EDI]", "0x3181|TEST|byte ptr [EAX + ESI*0x1 + 0x4], 0x1"],
       "comment": "Library Function - Single Match\n __lseek\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "STRUCT_UnitAny", "STRUCT_Control", "CALLEE_7"]
     },
     {
       "address": "0x004031D8",
@@ -2748,7 +2748,7 @@
       "api_calls": [],
       "instructions": ["0x31D8|PUSH|EBX", "0x31D9|CALL|0x00406119", "0x31DE|POP|ECX", "0x31DF|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x004031FC",
@@ -2784,7 +2784,7 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}],
       "callee_count": 7,
-      "callees": ["__dosmaperr|0x405F46", "__lseeki64_lk|0x40613B", "FUN_00405f3d|0x405F3D", "FUN_00405f34|0x405F34", "GetLastError|0x43", "FUN_00402098|0x402098", "WriteFile|0x1C"],
+      "callees": ["FUN_00405f3d|0x405F3D", "WriteFile|0x1C", "GetLastError|0x43", "FUN_00405f34|0x405F34", "__dosmaperr|0x405F46", "__lseeki64_lk|0x40613B", "FUN_00402098|0x402098"],
       "caller_count": 1,
       "callers": ["__write|0x4033CA"],
       "string_count": 0,
@@ -2797,7 +2797,7 @@
       "api_calls": [],
       "instructions": ["0x31FC|PUSH|EBP", "0x31FD|LEA|EBP, [ESP + 0xfffffc60]", "0x3204|SUB|ESP, 0x420", "0x320A|MOV|EAX, [0x0040b054]", "0x320F|PUSH|EDI", "0x3210|XOR|EDI, EDI", "0x3212|CMP|dword ptr [EBP + 0x3b0], EDI", "0x3218|MOV|dword ptr [EBP + 0x39c], EAX", "0x321E|MOV|dword ptr [EBP + -0x78], EDI", "0x3221|MOV|dword ptr [EBP + -0x7c], EDI", "0x3224|JNZ|0x0040322d", "0x3226|XOR|EAX, EAX", "0x3228|JMP|0x004033b6", "0x322D|MOV|EAX, dword ptr [EBP + 0x3a8]", "0x3233|PUSH|EBX"],
       "comment": "Library Function - Single Match\n __write_lk\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "PROP_LOOPHEAVY", "CALLEE_7", "STRUCT_PlayerData"]
     },
     {
       "address": "0x004033CA",
@@ -2833,7 +2833,7 @@
       "param_count": 3,
       "parameters": [{"name": "_FileHandle", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "_Buf", "type": "void *", "storage": "Stack[0x8]:4"}, {"name": "_MaxCharCount", "type": "uint", "storage": "Stack[0xc]:4"}],
       "callee_count": 7,
-      "callees": ["__SEH_epilog|0x402F7F", "__lock_fhandle|0x406079", "FUN_00403451|0x403451", "__SEH_prolog|0x402F44", "FUN_00405f3d|0x405F3D", "FUN_00405f34|0x405F34", "__write_lk|0x4031FC"],
+      "callees": ["FUN_00405f3d|0x405F3D", "__lock_fhandle|0x406079", "FUN_00403451|0x403451", "__write_lk|0x4031FC", "FUN_00405f34|0x405F34", "__SEH_prolog|0x402F44", "__SEH_epilog|0x402F7F"],
       "caller_count": 2,
       "callers": ["__flush|0x406259", "__flsbuf|0x4013F9"],
       "string_count": 0,
@@ -2846,7 +2846,7 @@
       "api_calls": [],
       "instructions": ["0x33CA|PUSH|0xc", "0x33CC|PUSH|0x409910", "0x33D1|CALL|0x00402f44", "0x33D6|MOV|EBX, dword ptr [EBP + 0x8]", "0x33D9|CMP|EBX, dword ptr [0x0040e0ac]", "0x33DF|JNC|0x00403459", "0x33E1|MOV|EAX, EBX", "0x33E3|SAR|EAX, 0x5", "0x33E6|LEA|EDI, [EAX*0x4 + 0x40e0c0]", "0x33ED|MOV|EAX, EBX", "0x33EF|AND|EAX, 0x1f", "0x33F2|LEA|ESI, [EAX + EAX*0x8]", "0x33F5|SHL|ESI, 0x2", "0x33F8|MOV|EAX, dword ptr [EDI]", "0x33FA|TEST|byte ptr [EAX + ESI*0x1 + 0x4], 0x1"],
       "comment": "Library Function - Single Match\n __write\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_2", "STRUCT_UnitAny", "STRUCT_Control", "CALLEE_7"]
     },
     {
       "address": "0x00403451",
@@ -2895,7 +2895,7 @@
       "api_calls": [],
       "instructions": ["0x3451|PUSH|EBX", "0x3452|CALL|0x00406119", "0x3457|POP|ECX", "0x3458|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00403475",
@@ -2944,7 +2944,7 @@
       "api_calls": [],
       "instructions": ["0x3475|INC|dword ptr [0x0040c9e4]", "0x347B|PUSH|0x1000", "0x3480|CALL|0x004037f2", "0x3485|TEST|EAX, EAX", "0x3487|POP|ECX", "0x3488|MOV|ECX, dword ptr [ESP + 0x4]", "0x348C|MOV|dword ptr [ECX + 0x8], EAX", "0x348F|JZ|0x0040349e", "0x3491|OR|dword ptr [ECX + 0xc], 0x8", "0x3495|MOV|dword ptr [ECX + 0x18], 0x1000", "0x349C|JMP|0x004034af", "0x349E|OR|dword ptr [ECX + 0xc], 0x4", "0x34A2|LEA|EAX, [ECX + 0x14]", "0x34A5|MOV|dword ptr [ECX + 0x8], EAX", "0x34A8|MOV|dword ptr [ECX + 0x18], 0x2"],
       "comment": "Library Function - Single Match\n __getbuf\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_1", "PARAM_1", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x004034B9",
@@ -2993,7 +2993,7 @@
       "api_calls": [],
       "instructions": ["0x34B9|MOV|EAX, dword ptr [ESP + 0x4]", "0x34BD|CMP|EAX, dword ptr [0x0040e0ac]", "0x34C3|JC|0x004034c8", "0x34C5|XOR|EAX, EAX", "0x34C7|RET|", "0x34C8|MOV|ECX, EAX", "0x34CA|AND|EAX, 0x1f", "0x34CD|SAR|ECX, 0x5", "0x34D0|MOV|ECX, dword ptr [ECX*0x4 + 0x40e0c0]", "0x34D7|LEA|EAX, [EAX + EAX*0x8]", "0x34DA|MOVSX|EAX, byte ptr [ECX + EAX*0x4 + 0x4]", "0x34DF|AND|EAX, 0x40", "0x34E2|RET|"],
       "comment": "Library Function - Single Match\n __isatty\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x004034E3",
@@ -3042,7 +3042,7 @@
       "api_calls": [],
       "instructions": ["0x34E3|MOV|EAX, [0x0040e0a0]", "0x34E8|TEST|EAX, EAX", "0x34EA|PUSH|ESI", "0x34EB|PUSH|0x14", "0x34ED|POP|ESI", "0x34EE|JNZ|0x004034f7", "0x34F0|MOV|EAX, 0x200", "0x34F5|JMP|0x004034fd", "0x34F7|CMP|EAX, ESI", "0x34F9|JGE|0x00403502", "0x34FB|MOV|EAX, ESI", "0x34FD|MOV|[0x0040e0a0], EAX", "0x3502|PUSH|0x4", "0x3504|PUSH|EAX", "0x3505|CALL|0x00403aa9"],
       "comment": "Library Function - Single Match\n ___initstdio\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00403644",
@@ -3078,9 +3078,9 @@
       "param_count": 1,
       "parameters": [{"name": "_Memory", "type": "void *", "storage": "Stack[0x4]:4"}],
       "callee_count": 7,
-      "callees": ["__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "___sbh_free_block|0x40525B", "__lock|0x403A78", "___sbh_find_block|0x405230", "HeapFree|0x33", "FUN_00403697|0x403697"],
+      "callees": ["HeapFree|0x33", "FUN_00403697|0x403697", "___sbh_find_block|0x405230", "__lock|0x403A78", "___sbh_free_block|0x40525B", "__SEH_prolog|0x402F44", "__SEH_epilog|0x402F7F"],
       "caller_count": 16,
-      "callers": ["___crtGetEnvironmentStringsA|0x402B31", "___free_lconv_num|0x40453E", "___freetlocinfo|0x40211D", "___crtLCMapStringA|0x4063E6", "__output|0x4015A0", "__setmbcp|0x403ED8", "___convertcp|0x4067E5", "__setenvp|0x40285C", "__mtdeletelocks|0x40396E", "___free_lconv_mon|0x40459D", "__freebuf|0x40733F", "___free_lc_time|0x4043AE", "__mtinitlocknum|0x4039D8", "__fclose_lk|0x40705D", "_realloc|0x406AEE", "___crtGetStringTypeA|0x4041F4"],
+      "callers": ["__mtinitlocknum|0x4039D8", "___crtGetStringTypeA|0x4041F4", "__fclose_lk|0x40705D", "__setmbcp|0x403ED8", "__setenvp|0x40285C", "___crtLCMapStringA|0x4063E6", "___free_lc_time|0x4043AE", "___convertcp|0x4067E5", "__freebuf|0x40733F", "___free_lconv_num|0x40453E", "___free_lconv_mon|0x40459D", "_realloc|0x406AEE", "___freetlocinfo|0x40211D", "___crtGetEnvironmentStringsA|0x402B31", "__output|0x4015A0", "__mtdeletelocks|0x40396E"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -3091,7 +3091,7 @@
       "api_calls": [],
       "instructions": ["0x3644|PUSH|0xc", "0x3646|PUSH|0x409920", "0x364B|CALL|0x00402f44", "0x3650|MOV|ESI, dword ptr [EBP + 0x8]", "0x3653|TEST|ESI, ESI", "0x3655|JZ|0x004036af", "0x3657|CMP|dword ptr [0x0040e0a8], 0x3", "0x365E|JNZ|0x004036a0", "0x3660|PUSH|0x4", "0x3662|CALL|0x00403a78", "0x3667|POP|ECX", "0x3668|AND|dword ptr [EBP + -0x4], 0x0", "0x366C|PUSH|ESI", "0x366D|CALL|0x00405230", "0x3672|POP|ECX"],
       "comment": "Library Function - Single Match\n _free\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_1", "CALLEE_7", "CALLER_16"]
     },
     {
       "address": "0x00403697",
@@ -3140,7 +3140,7 @@
       "api_calls": [],
       "instructions": ["0x3697|PUSH|0x4", "0x3699|CALL|0x004039c3", "0x369E|POP|ECX", "0x369F|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x004036C0",
@@ -3178,7 +3178,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 5,
-      "callers": ["__NMSG_WRITE|0x4024EB", "__output|0x4015A0", "___security_error_handler|0x4040AC", "___convertcp|0x4067E5", "__setenvp|0x40285C"],
+      "callers": ["__NMSG_WRITE|0x4024EB", "___security_error_handler|0x4040AC", "__output|0x4015A0", "__setenvp|0x40285C", "___convertcp|0x4067E5"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -3189,7 +3189,7 @@
       "api_calls": [],
       "instructions": ["0x36C0|MOV|ECX, dword ptr [ESP + 0x4]", "0x36C4|TEST|ECX, 0x3", "0x36CA|JZ|0x004036f0", "0x36CC|MOV|AL, byte ptr [ECX]", "0x36CE|ADD|ECX, 0x1", "0x36D1|TEST|AL, AL", "0x36D3|JZ|0x00403723", "0x36D5|TEST|ECX, 0x3", "0x36DB|JNZ|0x004036cc", "0x36DD|ADD|EAX, 0x0", "0x36E2|LEA|ESP, [ESP]", "0x36E9|LEA|ESP, [ESP]", "0x36F0|MOV|EAX, dword ptr [ECX]", "0x36F2|MOV|EDX, 0x7efefeff", "0x36F7|ADD|EDX, EAX"],
       "comment": "Library Function - Single Match\n _strlen\n\nLibrary: Visual Studio",
-      "tags": []
+      "tags": ["CALLEE_0", "CALLER_5", "PARAM_1", "PROP_LOOPHEAVY", "PROP_LEAF"]
     },
     {
       "address": "0x0040374B",
@@ -3225,7 +3225,7 @@
       "param_count": 1,
       "parameters": [{"name": "_Size", "type": "size_t", "storage": "Stack[0x4]:4"}],
       "callee_count": 6,
-      "callees": ["__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "___sbh_alloc_block|0x405A0F", "__lock|0x403A78", "FUN_004037bd|0x4037BD", "HeapAlloc|0x2F"],
+      "callees": ["__lock|0x403A78", "___sbh_alloc_block|0x405A0F", "__SEH_prolog|0x402F44", "FUN_004037bd|0x4037BD", "__SEH_epilog|0x402F7F", "HeapAlloc|0x2F"],
       "caller_count": 1,
       "callers": ["__nh_malloc|0x4037C6"],
       "string_count": 0,
@@ -3238,7 +3238,7 @@
       "api_calls": [],
       "instructions": ["0x374B|PUSH|0xc", "0x374D|PUSH|0x409930", "0x3752|CALL|0x00402f44", "0x3757|MOV|ESI, dword ptr [EBP + 0x8]", "0x375A|CMP|dword ptr [0x0040e0a8], 0x3", "0x3761|JNZ|0x00403791", "0x3763|CMP|ESI, dword ptr [0x0040ce28]", "0x3769|JA|0x00403791", "0x376B|PUSH|0x4", "0x376D|CALL|0x00403a78", "0x3772|POP|ECX", "0x3773|AND|dword ptr [EBP + -0x4], 0x0", "0x3777|PUSH|ESI", "0x3778|CALL|0x00405a0f", "0x377D|POP|ECX"],
       "comment": "Library Function - Single Match\n __heap_alloc\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_1", "CALLEE_6"]
     },
     {
       "address": "0x004037BD",
@@ -3287,7 +3287,7 @@
       "api_calls": [],
       "instructions": ["0x37BD|PUSH|0x4", "0x37BF|CALL|0x004039c3", "0x37C4|POP|ECX", "0x37C5|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x004037C6",
@@ -3323,7 +3323,7 @@
       "param_count": 2,
       "parameters": [{"name": "_Size", "type": "size_t", "storage": "Stack[0x4]:4"}, {"name": "_NhFlag", "type": "int", "storage": "Stack[0x8]:4"}],
       "callee_count": 2,
-      "callees": ["__heap_alloc|0x40374B", "__callnewh|0x4063CB"],
+      "callees": ["__callnewh|0x4063CB", "__heap_alloc|0x40374B"],
       "caller_count": 1,
       "callers": ["_malloc|0x4037F2"],
       "string_count": 0,
@@ -3336,7 +3336,7 @@
       "api_calls": [],
       "instructions": ["0x37C6|CMP|dword ptr [ESP + 0x4], -0x20", "0x37CB|JA|0x004037ef", "0x37CD|PUSH|dword ptr [ESP + 0x4]", "0x37D1|CALL|0x0040374b", "0x37D6|TEST|EAX, EAX", "0x37D8|POP|ECX", "0x37D9|JNZ|0x004037f1", "0x37DB|CMP|dword ptr [ESP + 0x8], EAX", "0x37DF|JZ|0x004037f1", "0x37E1|PUSH|dword ptr [ESP + 0x4]", "0x37E5|CALL|0x004063cb", "0x37EA|TEST|EAX, EAX", "0x37EC|POP|ECX", "0x37ED|JNZ|0x004037cd", "0x37EF|XOR|EAX, EAX"],
       "comment": "Library Function - Single Match\n __nh_malloc\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_2", "PROP_SMALL"]
     },
     {
       "address": "0x004037F2",
@@ -3374,7 +3374,7 @@
       "callee_count": 1,
       "callees": ["__nh_malloc|0x4037C6"],
       "caller_count": 10,
-      "callers": ["___crtGetEnvironmentStringsA|0x402B31", "___crtLCMapStringA|0x4063E6", "__setargv|0x402A8F", "__output|0x4015A0", "__ioinit|0x402C53", "__setmbcp|0x403ED8", "__mtinitlocknum|0x4039D8", "__getbuf|0x403475", "__setenvp|0x40285C", "_realloc|0x406AEE"],
+      "callers": ["__mtinitlocknum|0x4039D8", "__setargv|0x402A8F", "_realloc|0x406AEE", "__setmbcp|0x403ED8", "___crtGetEnvironmentStringsA|0x402B31", "__ioinit|0x402C53", "__output|0x4015A0", "__setenvp|0x40285C", "___crtLCMapStringA|0x4063E6", "__getbuf|0x403475"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -3385,7 +3385,7 @@
       "api_calls": [],
       "instructions": ["0x37F2|PUSH|dword ptr [0x0040cc20]", "0x37F8|PUSH|dword ptr [ESP + 0x8]", "0x37FC|CALL|0x004037c6", "0x3801|POP|ECX", "0x3802|POP|ECX", "0x3803|RET|"],
       "comment": "Library Function - Single Match\n _malloc\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_10", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x00403804",
@@ -3421,7 +3421,7 @@
       "param_count": 3,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "LPSTR", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "WCHAR", "storage": "Stack[0xc]:2"}],
       "callee_count": 2,
-      "callees": ["FUN_00405f34|0x405F34", "WideCharToMultiByte|0xB"],
+      "callees": ["WideCharToMultiByte|0xB", "FUN_00405f34|0x405F34"],
       "caller_count": 1,
       "callers": ["_wctomb|0x403864"],
       "string_count": 0,
@@ -3434,7 +3434,7 @@
       "api_calls": [],
       "instructions": ["0x3804|PUSH|EBP", "0x3805|MOV|EBP, ESP", "0x3807|MOV|ECX, dword ptr [EBP + 0xc]", "0x380A|PUSH|ESI", "0x380B|XOR|ESI, ESI", "0x380D|CMP|ECX, ESI", "0x380F|JNZ|0x00403815", "0x3811|XOR|EAX, EAX", "0x3813|JMP|0x00403861", "0x3815|MOV|EAX, dword ptr [EBP + 0x8]", "0x3818|CMP|dword ptr [EAX + 0x14], ESI", "0x381B|JNZ|0x0040382e", "0x381D|MOV|AX, word ptr [EBP + 0x10]", "0x3821|CMP|AX, 0xff", "0x3825|JA|0x00403853"],
       "comment": "Library Function - Single Match\n ___wctomb_mt\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_2", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x00403864",
@@ -3470,7 +3470,7 @@
       "param_count": 2,
       "parameters": [{"name": "_MbCh", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_WCh", "type": "wchar_t", "storage": "Stack[0x8]:2"}],
       "callee_count": 3,
-      "callees": ["___wctomb_mt|0x403804", "___updatetlocinfo|0x4022AE", "__getptd|0x401DC0"],
+      "callees": ["__getptd|0x401DC0", "___updatetlocinfo|0x4022AE", "___wctomb_mt|0x403804"],
       "caller_count": 1,
       "callers": ["__output|0x4015A0"],
       "string_count": 0,
@@ -3483,7 +3483,7 @@
       "api_calls": [],
       "instructions": ["0x3864|CALL|0x00401dc0", "0x3869|MOV|EAX, dword ptr [EAX + 0x64]", "0x386C|CMP|EAX, dword ptr [0x0040b0b4]", "0x3872|JZ|0x00403879", "0x3874|CALL|0x004022ae", "0x3879|PUSH|dword ptr [ESP + 0x8]", "0x387D|PUSH|dword ptr [ESP + 0x8]", "0x3881|PUSH|EAX", "0x3882|CALL|0x00403804", "0x3887|ADD|ESP, 0xc", "0x388A|RET|"],
       "comment": "Library Function - Single Match\n _wctomb\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PARAM_2", "CALLER_1", "CALLEE_3", "PROP_SMALL"]
     },
     {
       "address": "0x00403890",
@@ -3532,7 +3532,7 @@
       "api_calls": [],
       "instructions": ["0x3890|PUSH|ESI", "0x3891|MOV|EAX, dword ptr [ESP + 0x14]", "0x3895|OR|EAX, EAX", "0x3897|JNZ|0x004038c1", "0x3899|MOV|ECX, dword ptr [ESP + 0x10]", "0x389D|MOV|EAX, dword ptr [ESP + 0xc]", "0x38A1|XOR|EDX, EDX", "0x38A3|DIV|ECX", "0x38A5|MOV|EBX, EAX", "0x38A7|MOV|EAX, dword ptr [ESP + 0x8]", "0x38AB|DIV|ECX", "0x38AD|MOV|ESI, EAX", "0x38AF|MOV|EAX, EBX", "0x38B1|MUL|dword ptr [ESP + 0x10]", "0x38B5|MOV|ECX, EAX"],
       "comment": "Library Function - Single Match\n __aulldvrm\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_4", "CALLEE_0", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00403925",
@@ -3581,7 +3581,7 @@
       "api_calls": [],
       "instructions": ["0x3925|PUSH|ESI", "0x3926|PUSH|EDI", "0x3927|XOR|ESI, ESI", "0x3929|MOV|EDI, 0x40c9e8", "0x392E|CMP|dword ptr [ESI*0x8 + 0x40b5e4], 0x1", "0x3936|JNZ|0x00403956", "0x3938|LEA|EAX, [ESI*0x8 + 0x40b5e0]", "0x393F|MOV|dword ptr [EAX], EDI", "0x3941|PUSH|0xfa0", "0x3946|PUSH|dword ptr [EAX]", "0x3948|ADD|EDI, 0x18", "0x394B|CALL|0x0040515d", "0x3950|TEST|EAX, EAX", "0x3952|POP|ECX", "0x3953|POP|ECX"],
       "comment": "Library Function - Single Match\n __mtinitlocks\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x0040396E",
@@ -3617,7 +3617,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 2,
-      "callees": ["DeleteCriticalSection|0x37", "_free|0x403644"],
+      "callees": ["_free|0x403644", "DeleteCriticalSection|0x37"],
       "caller_count": 1,
       "callers": ["__mtterm|0x401DA3"],
       "string_count": 0,
@@ -3630,7 +3630,7 @@
       "api_calls": [],
       "instructions": ["0x396E|PUSH|EBX", "0x396F|MOV|EBX, dword ptr [0x004091a0]", "0x3975|PUSH|ESI", "0x3976|MOV|ESI, 0x40b5e0", "0x397B|PUSH|EDI", "0x397C|MOV|EDI, dword ptr [ESI]", "0x397E|TEST|EDI, EDI", "0x3980|JZ|0x00403995", "0x3982|CMP|dword ptr [ESI + 0x4], 0x1", "0x3986|JZ|0x00403995", "0x3988|PUSH|EDI", "0x3989|CALL|EBX", "0x398B|PUSH|EDI", "0x398C|CALL|0x00403644", "0x3991|AND|dword ptr [ESI], 0x0"],
       "comment": "Library Function - Single Match\n __mtdeletelocks\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_2", "PARAM_0"]
     },
     {
       "address": "0x004039C3",
@@ -3668,7 +3668,7 @@
       "callee_count": 1,
       "callees": ["LeaveCriticalSection|0x30"],
       "caller_count": 13,
-      "callers": ["FUN_00403a6f|0x403A6F", "FUN_00406c56|0x406C56", "FUN_00401f63|0x401F63", "FUN_00402497|0x402497", "FUN_0040401f|0x40401F", "FUN_0040235d|0x40235D", "FUN_00406110|0x406110", "FUN_004037bd|0x4037BD", "FUN_00403b53|0x403B53", "FUN_004022e0|0x4022E0", "FUN_00406d08|0x406D08", "FUN_00403697|0x403697", "FUN_00401f6f|0x401F6F"],
+      "callers": ["FUN_00403697|0x403697", "FUN_00406d08|0x406D08", "FUN_00401f63|0x401F63", "FUN_00406110|0x406110", "FUN_00401f6f|0x401F6F", "FUN_00403a6f|0x403A6F", "FUN_0040401f|0x40401F", "FUN_004022e0|0x4022E0", "FUN_00402497|0x402497", "FUN_00403b53|0x403B53", "FUN_0040235d|0x40235D", "FUN_004037bd|0x4037BD", "FUN_00406c56|0x406C56"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -3679,7 +3679,7 @@
       "api_calls": [],
       "instructions": ["0x39C3|PUSH|EBP", "0x39C4|MOV|EBP, ESP", "0x39C6|MOV|EAX, dword ptr [EBP + 0x8]", "0x39C9|PUSH|dword ptr [EAX*0x8 + 0x40b5e0]", "0x39D0|CALL|dword ptr [0x00409184]", "0x39D6|POP|EBP", "0x39D7|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_13", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x004039D8",
@@ -3715,7 +3715,7 @@
       "param_count": 1,
       "parameters": [{"name": "_LockNum", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 9,
-      "callees": ["__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "FUN_00405f34|0x405F34", "___crtInitCritSecAndSpinCount|0x40515D", "_free|0x403644", "__lock|0x403A78", "__local_unwind2|0x404E72", "FUN_00403a6f|0x403A6F", "_malloc|0x4037F2"],
+      "callees": ["_free|0x403644", "FUN_00403a6f|0x403A6F", "_malloc|0x4037F2", "__lock|0x403A78", "FUN_00405f34|0x405F34", "__SEH_prolog|0x402F44", "__SEH_epilog|0x402F7F", "___crtInitCritSecAndSpinCount|0x40515D", "__local_unwind2|0x404E72"],
       "caller_count": 1,
       "callers": ["__lock|0x403A78"],
       "string_count": 0,
@@ -3728,7 +3728,7 @@
       "api_calls": [],
       "instructions": ["0x39D8|PUSH|0x8", "0x39DA|PUSH|0x409e48", "0x39DF|CALL|0x00402f44", "0x39E4|MOV|ESI, dword ptr [EBP + 0x8]", "0x39E7|LEA|ESI, [ESI*0x8 + 0x40b5e0]", "0x39EE|XOR|EBX, EBX", "0x39F0|CMP|dword ptr [ESI], EBX", "0x39F2|JNZ|0x00403a66", "0x39F4|PUSH|0x18", "0x39F6|CALL|0x004037f2", "0x39FB|POP|ECX", "0x39FC|MOV|EDI, EAX", "0x39FE|CMP|EDI, EBX", "0x3A00|JNZ|0x00403a0f", "0x3A02|CALL|0x00405f34"],
       "comment": "Library Function - Single Match\n __mtinitlocknum\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_9", "CALLER_1", "PARAM_1"]
     },
     {
       "address": "0x00403A6F",
@@ -3777,7 +3777,7 @@
       "api_calls": [],
       "instructions": ["0x3A6F|PUSH|0xa", "0x3A71|CALL|0x004039c3", "0x3A76|POP|ECX", "0x3A77|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00403A78",
@@ -3813,9 +3813,9 @@
       "param_count": 1,
       "parameters": [{"name": "_File", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["EnterCriticalSection|0x31", "__amsg_exit|0x4011DB", "__mtinitlocknum|0x4039D8"],
+      "callees": ["__amsg_exit|0x4011DB", "__mtinitlocknum|0x4039D8", "EnterCriticalSection|0x31"],
       "caller_count": 11,
-      "callers": ["__lock_fhandle|0x406079", "_free|0x403644", "__heap_alloc|0x40374B", "__setmbcp|0x403ED8", "doexit|0x4023E8", "_calloc|0x403AA9", "___updatetlocinfo|0x4022AE", "__msize|0x406C9B", "__mtinitlocknum|0x4039D8", "_realloc|0x406AEE", "FUN_00402354|0x402354"],
+      "callers": ["_free|0x403644", "__mtinitlocknum|0x4039D8", "FUN_00402354|0x402354", "__lock_fhandle|0x406079", "_realloc|0x406AEE", "doexit|0x4023E8", "__setmbcp|0x403ED8", "___updatetlocinfo|0x4022AE", "_calloc|0x403AA9", "__msize|0x406C9B", "__heap_alloc|0x40374B"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -3826,7 +3826,7 @@
       "api_calls": [],
       "instructions": ["0x3A78|PUSH|EBP", "0x3A79|MOV|EBP, ESP", "0x3A7B|MOV|EAX, dword ptr [EBP + 0x8]", "0x3A7E|PUSH|ESI", "0x3A7F|LEA|ESI, [EAX*0x8 + 0x40b5e0]", "0x3A86|CMP|dword ptr [ESI], 0x0", "0x3A89|JNZ|0x00403a9e", "0x3A8B|PUSH|EAX", "0x3A8C|CALL|0x004039d8", "0x3A91|TEST|EAX, EAX", "0x3A93|POP|ECX", "0x3A94|JNZ|0x00403a9e", "0x3A96|PUSH|0x11", "0x3A98|CALL|0x004011db", "0x3A9D|POP|ECX"],
       "comment": "Library Function - Single Match\n __lock\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_11", "CALLEE_3", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x00403AA9",
@@ -3862,9 +3862,9 @@
       "param_count": 2,
       "parameters": [{"name": "_Count", "type": "size_t", "storage": "Stack[0x4]:4"}, {"name": "_Size", "type": "size_t", "storage": "Stack[0x8]:4"}],
       "callee_count": 8,
-      "callees": ["__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "_memset|0x404900", "___sbh_alloc_block|0x405A0F", "__callnewh|0x4063CB", "__lock|0x403A78", "FUN_00403b53|0x403B53", "HeapAlloc|0x2F"],
+      "callees": ["__lock|0x403A78", "___sbh_alloc_block|0x405A0F", "__SEH_prolog|0x402F44", "FUN_00403b53|0x403B53", "__callnewh|0x4063CB", "__SEH_epilog|0x402F7F", "_memset|0x404900", "HeapAlloc|0x2F"],
       "caller_count": 5,
-      "callers": ["___convertcp|0x4067E5", "___initstdio|0x4034E3", "__getptd|0x401DC0", "__mtinit|0x401F78", "___crtGetStringTypeA|0x4041F4"],
+      "callers": ["___crtGetStringTypeA|0x4041F4", "__getptd|0x401DC0", "___initstdio|0x4034E3", "__mtinit|0x401F78", "___convertcp|0x4067E5"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -3875,7 +3875,7 @@
       "api_calls": [],
       "instructions": ["0x3AA9|PUSH|0x10", "0x3AAB|PUSH|0x409e58", "0x3AB0|CALL|0x00402f44", "0x3AB5|MOV|ESI, dword ptr [EBP + 0x8]", "0x3AB8|IMUL|ESI, dword ptr [EBP + 0xc]", "0x3ABC|MOV|dword ptr [EBP + -0x20], ESI", "0x3ABF|TEST|ESI, ESI", "0x3AC1|JNZ|0x00403ac4", "0x3AC3|INC|ESI", "0x3AC4|XOR|EDI, EDI", "0x3AC6|MOV|dword ptr [EBP + -0x1c], EDI", "0x3AC9|CMP|ESI, -0x20", "0x3ACC|JA|0x00403b33", "0x3ACE|CMP|dword ptr [0x0040e0a8], 0x3", "0x3AD5|JNZ|0x00403b1e"],
       "comment": "Library Function - Single Match\n _calloc\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_5", "STRUCT_UnitAny", "STRUCT_Control", "CALLEE_8"]
     },
     {
       "address": "0x00403B53",
@@ -3924,7 +3924,7 @@
       "api_calls": [],
       "instructions": ["0x3B53|PUSH|0x4", "0x3B55|CALL|0x004039c3", "0x3B5A|POP|ECX", "0x3B5B|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00403B64",
@@ -3973,7 +3973,7 @@
       "api_calls": [],
       "instructions": ["0x3B64|SUB|EAX, 0x3a4", "0x3B69|JZ|0x00403b8d", "0x3B6B|SUB|EAX, 0x4", "0x3B6E|JZ|0x00403b87", "0x3B70|SUB|EAX, 0xd", "0x3B73|JZ|0x00403b81", "0x3B75|DEC|EAX", "0x3B76|JZ|0x00403b7b", "0x3B78|XOR|EAX, EAX", "0x3B7A|RET|", "0x3B7B|MOV|EAX, 0x404", "0x3B80|RET|", "0x3B81|MOV|EAX, 0x412", "0x3B86|RET|", "0x3B87|MOV|EAX, 0x804"],
       "comment": "Library Function - Single Match\n _CPtoLCID\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x00403B93",
@@ -4022,7 +4022,7 @@
       "api_calls": [],
       "instructions": ["0x3B93|PUSH|EDI", "0x3B94|PUSH|0x40", "0x3B96|XOR|EAX, EAX", "0x3B98|POP|ECX", "0x3B99|MOV|EDI, 0x40ce60", "0x3B9E|STOSD.REP|ES:EDI", "0x3BA0|STOSB|ES:EDI", "0x3BA1|XOR|EAX, EAX", "0x3BA3|MOV|[0x0040cf64], EAX", "0x3BA8|MOV|[0x0040ce4c], EAX", "0x3BAD|MOV|[0x0040ce44], EAX", "0x3BB2|MOV|EDI, 0x40cf70", "0x3BB7|STOSD|ES:EDI", "0x3BB8|STOSD|ES:EDI", "0x3BB9|STOSD|ES:EDI"],
       "comment": "Library Function - Single Match\n _setSBCS\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x00403BBC",
@@ -4058,7 +4058,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 4,
-      "callees": ["___crtLCMapStringA|0x4063E6", "FUN_00402098|0x402098", "GetCPInfo|0x15", "___crtGetStringTypeA|0x4041F4"],
+      "callees": ["___crtGetStringTypeA|0x4041F4", "GetCPInfo|0x15", "___crtLCMapStringA|0x4063E6", "FUN_00402098|0x402098"],
       "caller_count": 1,
       "callers": ["__setmbcp_lk|0x403D48"],
       "string_count": 0,
@@ -4071,7 +4071,7 @@
       "api_calls": [],
       "instructions": ["0x3BBC|PUSH|EBP", "0x3BBD|MOV|EBP, ESP", "0x3BBF|SUB|ESP, 0x518", "0x3BC5|MOV|EAX, [0x0040b054]", "0x3BCA|MOV|dword ptr [EBP + -0x4], EAX", "0x3BCD|PUSH|ESI", "0x3BCE|LEA|EAX, [EBP + -0x18]", "0x3BD1|PUSH|EAX", "0x3BD2|PUSH|dword ptr [0x0040cf64]", "0x3BD8|CALL|dword ptr [0x00409118]", "0x3BDE|CMP|EAX, 0x1", "0x3BE1|MOV|ESI, 0x100", "0x3BE6|JNZ|0x00403cf9", "0x3BEC|XOR|EAX, EAX", "0x3BEE|MOV|byte ptr [EBP + EAX*0x1 + 0xfffffee8], AL"],
       "comment": "Library Function - Single Match\n _setSBUpLow\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_0", "CALLEE_4", "PROP_LOOPHEAVY"]
     },
     {
       "address": "0x00403D48",
@@ -4107,7 +4107,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "UINT", "storage": "Stack[0x4]:4"}],
       "callee_count": 5,
-      "callees": ["_CPtoLCID|0x403B64", "setSBUpLow|0x403BBC", "FUN_00402098|0x402098", "GetCPInfo|0x15", "setSBCS|0x403B93"],
+      "callees": ["_CPtoLCID|0x403B64", "setSBUpLow|0x403BBC", "setSBCS|0x403B93", "GetCPInfo|0x15", "FUN_00402098|0x402098"],
       "caller_count": 1,
       "callers": ["__setmbcp|0x403ED8"],
       "string_count": 0,
@@ -4120,7 +4120,7 @@
       "api_calls": [],
       "instructions": ["0x3D48|PUSH|EBP", "0x3D49|MOV|EBP, ESP", "0x3D4B|SUB|ESP, 0x1c", "0x3D4E|MOV|EAX, [0x0040b054]", "0x3D53|PUSH|EBX", "0x3D54|PUSH|ESI", "0x3D55|MOV|ESI, dword ptr [EBP + 0x8]", "0x3D58|XOR|EBX, EBX", "0x3D5A|CMP|ESI, EBX", "0x3D5C|MOV|dword ptr [EBP + -0x4], EAX", "0x3D5F|PUSH|EDI", "0x3D60|JZ|0x00403eba", "0x3D66|XOR|EDX, EDX", "0x3D68|XOR|EAX, EAX", "0x3D6A|CMP|dword ptr [EAX + 0x40b708], ESI"],
       "comment": "Library Function - Single Match\n __setmbcp_lk\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "STRUCT_Skill", "PARAM_1", "PROP_LOOPHEAVY", "CALLEE_5"]
     },
     {
       "address": "0x00403ED8",
@@ -4156,7 +4156,7 @@
       "param_count": 1,
       "parameters": [{"name": "_CodePage", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 9,
-      "callees": ["GetOEMCP|0x2D", "__SEH_epilog|0x402F7F", "FUN_0040401f|0x40401F", "__SEH_prolog|0x402F44", "_free|0x403644", "__lock|0x403A78", "GetACP|0x2E", "__setmbcp_lk|0x403D48", "_malloc|0x4037F2"],
+      "callees": ["_free|0x403644", "_malloc|0x4037F2", "FUN_0040401f|0x40401F", "__lock|0x403A78", "__SEH_prolog|0x402F44", "GetACP|0x2E", "GetOEMCP|0x2D", "__setmbcp_lk|0x403D48", "__SEH_epilog|0x402F7F"],
       "caller_count": 1,
       "callers": ["___initmbctable|0x404028"],
       "string_count": 0,
@@ -4169,7 +4169,7 @@
       "api_calls": [],
       "instructions": ["0x3ED8|PUSH|0x14", "0x3EDA|PUSH|0x409e68", "0x3EDF|CALL|0x00402f44", "0x3EE4|OR|dword ptr [EBP + -0x20], 0xffffffff", "0x3EE8|PUSH|0xd", "0x3EEA|CALL|0x00403a78", "0x3EEF|POP|ECX", "0x3EF0|XOR|EDI, EDI", "0x3EF2|MOV|dword ptr [EBP + -0x4], EDI", "0x3EF5|MOV|dword ptr [0x0040cb38], EDI", "0x3EFB|MOV|EAX, dword ptr [EBP + 0x8]", "0x3EFE|CMP|EAX, -0x2", "0x3F01|JNZ|0x00403f15", "0x3F03|MOV|dword ptr [0x0040cb38], 0x1", "0x3F0D|CALL|dword ptr [0x00409178]"],
       "comment": "Library Function - Single Match\n __setmbcp\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_9", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x0040401F",
@@ -4218,7 +4218,7 @@
       "api_calls": [],
       "instructions": ["0x401F|PUSH|0xd", "0x4021|CALL|0x004039c3", "0x4026|POP|ECX", "0x4027|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00404028",
@@ -4256,7 +4256,7 @@
       "callee_count": 1,
       "callees": ["__setmbcp|0x403ED8"],
       "caller_count": 3,
-      "callers": ["__setargv|0x402A8F", "__setenvp|0x40285C", "__wincmdln|0x4027FF"],
+      "callers": ["__setargv|0x402A8F", "__wincmdln|0x4027FF", "__setenvp|0x40285C"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -4267,7 +4267,7 @@
       "api_calls": [],
       "instructions": ["0x4028|CMP|dword ptr [0x0040e1cc], 0x0", "0x402F|JNZ|0x00404043", "0x4031|PUSH|-0x3", "0x4033|CALL|0x00403ed8", "0x4038|POP|ECX", "0x4039|MOV|dword ptr [0x0040e1cc], 0x1", "0x4043|XOR|EAX, EAX", "0x4045|RET|"],
       "comment": "Library Function - Single Match\n ___initmbctable\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_3", "CALLEE_1", "PARAM_0", "PROP_SMALL"]
     },
     {
       "address": "0x00404046",
@@ -4303,7 +4303,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["GetCurrentThreadId|0x22", "GetSystemTimeAsFileTime|0x4", "QueryPerformanceCounter|0x1", "GetCurrentProcessId|0x3", "GetTickCount|0x2"],
+      "callees": ["GetSystemTimeAsFileTime|0x4", "GetTickCount|0x2", "QueryPerformanceCounter|0x1", "GetCurrentThreadId|0x22", "GetCurrentProcessId|0x3"],
       "caller_count": 1,
       "callers": ["__cinit|0x40237E"],
       "string_count": 0,
@@ -4316,7 +4316,7 @@
       "api_calls": [],
       "instructions": ["0x4046|PUSH|EBP", "0x4047|MOV|EBP, ESP", "0x4049|SUB|ESP, 0x10", "0x404C|MOV|EAX, [0x0040b054]", "0x4051|TEST|EAX, EAX", "0x4053|JZ|0x0040405c", "0x4055|CMP|EAX, 0xbb40e64e", "0x405A|JNZ|0x004040aa", "0x405C|PUSH|ESI", "0x405D|LEA|EAX, [EBP + -0x8]", "0x4060|PUSH|EAX", "0x4061|CALL|dword ptr [0x004090d4]", "0x4067|MOV|ESI, dword ptr [EBP + -0x4]", "0x406A|XOR|ESI, dword ptr [EBP + -0x8]", "0x406D|CALL|dword ptr [0x004090d0]"],
       "comment": "Library Function - Single Match\n ___security_init_cookie\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_0", "CALLEE_5"]
     },
     {
       "address": "0x004040AC",
@@ -4352,7 +4352,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 9,
-      "callees": ["__chkstk|0x4030A0", "__SEH_prolog|0x402F44", "_strlen|0x4036C0", "FUN_00404690|0x404690", "GetModuleFileNameA|0x1A", "___crtMessageBoxA|0x405010", "_strncpy|0x4047D0", "FUN_00404680|0x404680", "__exit|0x4024BC"],
+      "callees": ["FUN_00404680|0x404680", "__chkstk|0x4030A0", "__SEH_prolog|0x402F44", "_strncpy|0x4047D0", "__exit|0x4024BC", "_strlen|0x4036C0", "FUN_00404690|0x404690", "___crtMessageBoxA|0x405010", "GetModuleFileNameA|0x1A"],
       "caller_count": 1,
       "callers": ["report_failure|0x402067"],
       "string_count": 7,
@@ -4365,7 +4365,7 @@
       "api_calls": [],
       "instructions": ["0x40AC|PUSH|0x118", "0x40B1|PUSH|0x40a018", "0x40B6|CALL|0x00402f44", "0x40BB|MOV|EAX, [0x0040b054]", "0x40C0|MOV|dword ptr [EBP + -0x1c], EAX", "0x40C3|MOV|EAX, [0x0040cb3c]", "0x40C8|XOR|ECX, ECX", "0x40CA|CMP|EAX, ECX", "0x40CC|JZ|0x004040ed", "0x40CE|MOV|dword ptr [EBP + -0x4], ECX", "0x40D1|PUSH|dword ptr [EBP + 0xc]", "0x40D4|PUSH|dword ptr [EBP + 0x8]", "0x40D7|CALL|EAX", "0x40D9|POP|ECX", "0x40DA|POP|ECX"],
       "comment": "Library Function - Single Match\n ___security_error_handler\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_9", "STRUCT_Inventory", "CALLER_1", "PARAM_1", "STRUCT_Control"]
     },
     {
       "address": "0x004041F4",
@@ -4401,9 +4401,9 @@
       "param_count": 7,
       "parameters": [{"name": "_Plocinfo", "type": "_locale_t", "storage": "Stack[0x4]:4"}, {"name": "_DWInfoType", "type": "DWORD", "storage": "Stack[0x8]:4"}, {"name": "_LpSrcStr", "type": "LPCSTR", "storage": "Stack[0xc]:4"}, {"name": "_CchSrc", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "_LpCharType", "type": "LPWORD", "storage": "Stack[0x14]:4"}, {"name": "_Code_page", "type": "int", "storage": "Stack[0x18]:4"}, {"name": "_BError", "type": "BOOL", "storage": "Stack[0x1c]:4"}],
       "callee_count": 12,
-      "callees": ["__chkstk|0x4030A0", "__SEH_epilog|0x402F7F", "GetStringTypeW|0x7", "__SEH_prolog|0x402F44", "_memset|0x404900", "MultiByteToWideChar|0x6", "_free|0x403644", "GetLastError|0x43", "_calloc|0x403AA9", "GetStringTypeA|0x5", "___convertcp|0x4067E5", "___ansicp|0x4067A2"],
+      "callees": ["_free|0x403644", "GetStringTypeW|0x7", "__chkstk|0x4030A0", "GetLastError|0x43", "MultiByteToWideChar|0x6", "__SEH_prolog|0x402F44", "__SEH_epilog|0x402F7F", "___ansicp|0x4067A2", "_memset|0x404900", "_calloc|0x403AA9", "GetStringTypeA|0x5", "___convertcp|0x4067E5"],
       "caller_count": 2,
-      "callers": ["setSBUpLow|0x403BBC", "___isctype_mt|0x4020A6"],
+      "callers": ["___isctype_mt|0x4020A6", "setSBUpLow|0x403BBC"],
       "string_count": 0,
       "strings": [],
       "constant_count": 2,
@@ -4414,7 +4414,7 @@
       "api_calls": [],
       "instructions": ["0x41F4|PUSH|0x1c", "0x41F6|PUSH|0x40a028", "0x41FB|CALL|0x00402f44", "0x4200|XOR|ESI, ESI", "0x4202|CMP|dword ptr [0x0040cb40], ESI", "0x4208|JNZ|0x0040423f", "0x420A|LEA|EAX, [EBP + -0x1c]", "0x420D|PUSH|EAX", "0x420E|XOR|EDI, EDI", "0x4210|INC|EDI", "0x4211|PUSH|EDI", "0x4212|PUSH|0x40a024", "0x4217|PUSH|EDI", "0x4218|CALL|dword ptr [0x004090e0]", "0x421E|TEST|EAX, EAX"],
       "comment": "Library Function - Single Match\n ___crtGetStringTypeA\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PARAM_7", "STRUCT_Act", "CALLEE_12", "STRUCT_Inventory", "CALLER_2", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x004043AE",
@@ -4463,7 +4463,7 @@
       "api_calls": [],
       "instructions": ["0x43AE|PUSH|ESI", "0x43AF|MOV|ESI, dword ptr [ESP + 0x8]", "0x43B3|TEST|ESI, ESI", "0x43B5|JZ|0x0040453c", "0x43BB|PUSH|dword ptr [ESI + 0x4]", "0x43BE|CALL|0x00403644", "0x43C3|PUSH|dword ptr [ESI + 0x8]", "0x43C6|CALL|0x00403644", "0x43CB|PUSH|dword ptr [ESI + 0xc]", "0x43CE|CALL|0x00403644", "0x43D3|PUSH|dword ptr [ESI + 0x10]", "0x43D6|CALL|0x00403644", "0x43DB|PUSH|dword ptr [ESI + 0x14]", "0x43DE|CALL|0x00403644", "0x43E3|PUSH|dword ptr [ESI + 0x18]"],
       "comment": "Library Function - Single Match\n ___free_lc_time\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "CALLEE_1", "STRUCT_Room2", "STRUCT_Room1", "STRUCT_ItemData", "PARAM_1", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData", "STRUCT_StatList", "STRUCT_Path", "STRUCT_Skill"]
     },
     {
       "address": "0x0040453E",
@@ -4512,7 +4512,7 @@
       "api_calls": [],
       "instructions": ["0x453E|PUSH|ESI", "0x453F|MOV|ESI, dword ptr [ESP + 0x8]", "0x4543|TEST|ESI, ESI", "0x4545|JZ|0x0040459b", "0x4547|MOV|EAX, dword ptr [ESI]", "0x4549|MOV|ECX, dword ptr [0x0040b8ec]", "0x454F|CMP|EAX, dword ptr [ECX]", "0x4551|JZ|0x00404562", "0x4553|CMP|EAX, dword ptr [0x0040b8bc]", "0x4559|JZ|0x00404562", "0x455B|PUSH|EAX", "0x455C|CALL|0x00403644", "0x4561|POP|ECX", "0x4562|MOV|EAX, dword ptr [ESI + 0x4]", "0x4565|MOV|ECX, dword ptr [0x0040b8ec]"],
       "comment": "Library Function - Single Match\n ___free_lconv_num\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1"]
     },
     {
       "address": "0x0040459D",
@@ -4561,7 +4561,7 @@
       "api_calls": [],
       "instructions": ["0x459D|PUSH|ESI", "0x459E|MOV|ESI, dword ptr [ESP + 0x8]", "0x45A2|TEST|ESI, ESI", "0x45A4|JZ|0x00404674", "0x45AA|MOV|EAX, dword ptr [ESI + 0xc]", "0x45AD|MOV|ECX, dword ptr [0x0040b8ec]", "0x45B3|CMP|EAX, dword ptr [ECX + 0xc]", "0x45B6|JZ|0x004045c7", "0x45B8|CMP|EAX, dword ptr [0x0040b8c8]", "0x45BE|JZ|0x004045c7", "0x45C0|PUSH|EAX", "0x45C1|CALL|0x00403644", "0x45C6|POP|ECX", "0x45C7|MOV|EAX, dword ptr [ESI + 0x10]", "0x45CA|MOV|ECX, dword ptr [0x0040b8ec]"],
       "comment": "Library Function - Single Match\n ___free_lconv_mon\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "CALLEE_1", "PARAM_1", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00404680",
@@ -4610,7 +4610,7 @@
       "api_calls": [],
       "instructions": ["0x4680|PUSH|EDI", "0x4681|MOV|EDI, dword ptr [ESP + 0x8]", "0x4685|JMP|0x004046f5"],
       "comment": "",
-      "tags": []
+      "tags": ["PARAM_2", "PROP_TINY", "CALLEE_0", "CALLER_3", "PROP_LEAF"]
     },
     {
       "address": "0x00404690",
@@ -4659,7 +4659,7 @@
       "api_calls": [],
       "instructions": ["0x4690|MOV|ECX, dword ptr [ESP + 0x4]", "0x4694|PUSH|EDI", "0x4695|TEST|ECX, 0x3", "0x469B|JZ|0x004046b0", "0x469D|MOV|AL, byte ptr [ECX]", "0x469F|ADD|ECX, 0x1", "0x46A2|TEST|AL, AL", "0x46A4|JZ|0x004046e3", "0x46A6|TEST|ECX, 0x3", "0x46AC|JNZ|0x0040469d", "0x46AE|MOV|EDI, EDI", "0x46B0|MOV|EAX, dword ptr [ECX]", "0x46B2|MOV|EDX, 0x7efefeff", "0x46B7|ADD|EDX, EAX", "0x46B9|XOR|EAX, 0xffffffff"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_2", "CALLEE_0", "PROP_LOOPHEAVY", "PROP_LEAF"]
     },
     {
       "address": "0x00404780",
@@ -4708,7 +4708,7 @@
       "api_calls": [],
       "instructions": ["0x4780|PUSH|EBP", "0x4781|MOV|EBP, ESP", "0x4783|PUSH|ESI", "0x4784|XOR|EAX, EAX", "0x4786|PUSH|EAX", "0x4787|PUSH|EAX", "0x4788|PUSH|EAX", "0x4789|PUSH|EAX", "0x478A|PUSH|EAX", "0x478B|PUSH|EAX", "0x478C|PUSH|EAX", "0x478D|PUSH|EAX", "0x478E|MOV|EDX, dword ptr [EBP + 0xc]", "0x4791|LEA|ECX, [ECX]", "0x4794|MOV|AL, byte ptr [EDX]"],
       "comment": "Library Function - Single Match\n _strcspn\n\nLibrary: Visual Studio",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_0", "PROP_NOCALLER", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x004047D0",
@@ -4757,7 +4757,7 @@
       "api_calls": [],
       "instructions": ["0x47D0|MOV|ECX, dword ptr [ESP + 0xc]", "0x47D4|PUSH|EDI", "0x47D5|TEST|ECX, ECX", "0x47D7|JZ|0x0040486f", "0x47DD|PUSH|ESI", "0x47DE|PUSH|EBX", "0x47DF|MOV|EBX, ECX", "0x47E1|MOV|ESI, dword ptr [ESP + 0x14]", "0x47E5|TEST|ESI, 0x3", "0x47EB|MOV|EDI, dword ptr [ESP + 0x10]", "0x47EF|JNZ|0x004047fc", "0x47F1|SHR|ECX, 0x2", "0x47F4|JNZ|0x0040487f", "0x47FA|JMP|0x00404823", "0x47FC|MOV|AL, byte ptr [ESI]"],
       "comment": "Library Function - Single Match\n _strncpy\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLER_2", "CALLEE_0", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control"]
     },
     {
       "address": "0x00404900",
@@ -4795,7 +4795,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 4,
-      "callers": ["___crtLCMapStringA|0x4063E6", "_calloc|0x403AA9", "___convertcp|0x4067E5", "___crtGetStringTypeA|0x4041F4"],
+      "callers": ["___crtGetStringTypeA|0x4041F4", "_calloc|0x403AA9", "___crtLCMapStringA|0x4063E6", "___convertcp|0x4067E5"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -4806,7 +4806,7 @@
       "api_calls": [],
       "instructions": ["0x4900|MOV|EDX, dword ptr [ESP + 0xc]", "0x4904|MOV|ECX, dword ptr [ESP + 0x4]", "0x4908|TEST|EDX, EDX", "0x490A|JZ|0x0040495b", "0x490C|XOR|EAX, EAX", "0x490E|MOV|AL, byte ptr [ESP + 0x8]", "0x4912|PUSH|EDI", "0x4913|MOV|EDI, ECX", "0x4915|CMP|EDX, 0x4", "0x4918|JC|0x0040494b", "0x491A|NEG|ECX", "0x491C|AND|ECX, 0x3", "0x491F|JZ|0x0040492d", "0x4921|SUB|EDX, ECX", "0x4923|MOV|byte ptr [EDI], AL"],
       "comment": "Library Function - Single Match\n _memset\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release, Visual Studio 2019 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLEE_0", "CALLER_4", "PROP_LEAF"]
     },
     {
       "address": "0x004049F0",
@@ -4844,7 +4844,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 2,
-      "callers": ["___crtGetEnvironmentStringsA|0x402B31", "_realloc|0x406AEE"],
+      "callers": ["_realloc|0x406AEE", "___crtGetEnvironmentStringsA|0x402B31"],
       "string_count": 0,
       "strings": [],
       "constant_count": 16,
@@ -4855,7 +4855,7 @@
       "api_calls": [],
       "instructions": ["0x49F0|PUSH|EBP", "0x49F1|MOV|EBP, ESP", "0x49F3|PUSH|EDI", "0x49F4|PUSH|ESI", "0x49F5|MOV|ESI, dword ptr [EBP + 0xc]", "0x49F8|MOV|ECX, dword ptr [EBP + 0x10]", "0x49FB|MOV|EDI, dword ptr [EBP + 0x8]", "0x49FE|MOV|EAX, ECX", "0x4A00|MOV|EDX, ECX", "0x4A02|ADD|EAX, ESI", "0x4A04|CMP|EDI, ESI", "0x4A06|JBE|0x00404a10", "0x4A08|CMP|EDI, EAX", "0x4A0A|JC|0x00404b8c", "0x4A10|TEST|EDI, 0x3"],
       "comment": "Library Function - Single Match\n _memcpy\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLER_2", "CALLEE_0", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00404DF0",
@@ -4904,7 +4904,7 @@
       "api_calls": [],
       "instructions": ["0x4DF0|PUSH|EBP", "0x4DF1|MOV|EBP, ESP", "0x4DF3|PUSH|ESI", "0x4DF4|XOR|EAX, EAX", "0x4DF6|PUSH|EAX", "0x4DF7|PUSH|EAX", "0x4DF8|PUSH|EAX", "0x4DF9|PUSH|EAX", "0x4DFA|PUSH|EAX", "0x4DFB|PUSH|EAX", "0x4DFC|PUSH|EAX", "0x4DFD|PUSH|EAX", "0x4DFE|MOV|EDX, dword ptr [EBP + 0xc]", "0x4E01|LEA|ECX, [ECX]", "0x4E04|MOV|AL, byte ptr [EDX]"],
       "comment": "Library Function - Single Match\n _strpbrk\n\nLibrary: Visual Studio",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_0", "PROP_NOCALLER", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x00404E30",
@@ -4953,7 +4953,7 @@
       "api_calls": ["RtlUnwind"],
       "instructions": ["0x4E30|PUSH|EBP", "0x4E31|MOV|EBP, ESP", "0x4E33|PUSH|EBX", "0x4E34|PUSH|ESI", "0x4E35|PUSH|EDI", "0x4E36|PUSH|EBP", "0x4E37|PUSH|0x0", "0x4E39|PUSH|0x0", "0x4E3B|PUSH|0x404e48", "0x4E40|PUSH|dword ptr [EBP + 0x8]", "0x4E43|CALL|0x0040743e", "0x4E48|POP|EBP", "0x4E49|POP|EDI", "0x4E4A|POP|ESI", "0x4E4B|POP|EBX"],
       "comment": "Library Function - Single Match\n __global_unwind2\n\nLibrary: Visual Studio",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x00404E72",
@@ -4991,7 +4991,7 @@
       "callee_count": 1,
       "callees": ["FUN_00404f06|0x404F06"],
       "caller_count": 3,
-      "callers": ["__lock_fhandle|0x406079", "__mtinitlocknum|0x4039D8", "FUN_0040307e|0x40307E"],
+      "callers": ["__mtinitlocknum|0x4039D8", "__lock_fhandle|0x406079", "FUN_0040307e|0x40307E"],
       "string_count": 0,
       "strings": [],
       "constant_count": 2,
@@ -5002,7 +5002,7 @@
       "api_calls": [],
       "instructions": ["0x4E72|PUSH|EBX", "0x4E73|PUSH|ESI", "0x4E74|PUSH|EDI", "0x4E75|MOV|EAX, dword ptr [ESP + 0x10]", "0x4E79|PUSH|EAX", "0x4E7A|PUSH|-0x2", "0x4E7C|PUSH|0x404e50", "0x4E81|PUSH|dword ptr FS:[0x0]", "0x4E88|MOV|dword ptr FS:[0x0], ESP", "0x4E8F|MOV|EAX, dword ptr [ESP + 0x20]", "0x4E93|MOV|EBX, dword ptr [EAX + 0x8]", "0x4E96|MOV|ESI, dword ptr [EAX + 0xc]", "0x4E99|CMP|ESI, -0x1", "0x4E9C|JZ|0x00404ecc", "0x4E9E|CMP|ESI, dword ptr [ESP + 0x24]"],
       "comment": "Library Function - Single Match\n __local_unwind2\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_3", "CALLEE_1", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x00404F06",
@@ -5051,7 +5051,7 @@
       "api_calls": [],
       "instructions": ["0x4F06|PUSH|EBX", "0x4F07|PUSH|ECX", "0x4F08|MOV|EBX, 0x40b90c", "0x4F0D|MOV|ECX, dword ptr [EBP + 0x8]", "0x4F10|MOV|dword ptr [EBX + 0x8], ECX", "0x4F13|MOV|dword ptr [EBX + 0x4], EAX", "0x4F16|MOV|dword ptr [EBX + 0xc], EBP", "0x4F19|POP|ECX", "0x4F1A|POP|EBX", "0x4F1B|RET|0x4"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x00404F1E",
@@ -5087,7 +5087,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 2,
-      "callees": ["__msize|0x406C9B", "_realloc|0x406AEE"],
+      "callees": ["_realloc|0x406AEE", "__msize|0x406C9B"],
       "caller_count": 1,
       "callers": ["__onexit|0x404FC6"],
       "string_count": 0,
@@ -5100,7 +5100,7 @@
       "api_calls": [],
       "instructions": ["0x4F1E|PUSH|ESI", "0x4F1F|PUSH|dword ptr [0x0040e1c8]", "0x4F25|CALL|0x00406c9b", "0x4F2A|POP|ECX", "0x4F2B|MOV|ECX, dword ptr [0x0040e1c4]", "0x4F31|MOV|ESI, EAX", "0x4F33|MOV|EAX, [0x0040e1c8]", "0x4F38|MOV|EDX, ECX", "0x4F3A|SUB|EDX, EAX", "0x4F3C|ADD|EDX, 0x4", "0x4F3F|CMP|ESI, EDX", "0x4F41|JNC|0x00404f91", "0x4F43|MOV|ECX, 0x800", "0x4F48|CMP|ESI, ECX", "0x4F4A|JNC|0x00404f4e"],
       "comment": "Library Function - Single Match\n __onexit_lk\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_2", "PARAM_0"]
     },
     {
       "address": "0x00404FC6",
@@ -5136,7 +5136,7 @@
       "param_count": 1,
       "parameters": [{"name": "_Func", "type": "_onexit_t", "storage": "Stack[0x4]:4"}],
       "callee_count": 5,
-      "callees": ["__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "FUN_00404ff8|0x404FF8", "__onexit_lk|0x404F1E", "FUN_00402354|0x402354"],
+      "callees": ["FUN_00402354|0x402354", "__SEH_prolog|0x402F44", "__SEH_epilog|0x402F7F", "__onexit_lk|0x404F1E", "FUN_00404ff8|0x404FF8"],
       "caller_count": 1,
       "callers": ["_atexit|0x404FFE"],
       "string_count": 0,
@@ -5149,7 +5149,7 @@
       "api_calls": [],
       "instructions": ["0x4FC6|PUSH|0xc", "0x4FC8|PUSH|0x40a160", "0x4FCD|CALL|0x00402f44", "0x4FD2|CALL|0x00402354", "0x4FD7|AND|dword ptr [EBP + -0x4], 0x0", "0x4FDB|MOV|EDI, dword ptr [EBP + 0x8]", "0x4FDE|CALL|0x00404f1e", "0x4FE3|MOV|dword ptr [EBP + -0x1c], EAX", "0x4FE6|OR|dword ptr [EBP + -0x4], 0xffffffff", "0x4FEA|CALL|0x00404ff8", "0x4FEF|MOV|EAX, dword ptr [EBP + -0x1c]", "0x4FF2|CALL|0x00402f7f", "0x4FF7|RET|"],
       "comment": "Library Function - Single Match\n __onexit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_1", "CALLEE_5", "PROP_SMALL"]
     },
     {
       "address": "0x00404FF8",
@@ -5198,7 +5198,7 @@
       "api_calls": [],
       "instructions": ["0x4FF8|CALL|0x0040235d", "0x4FFD|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00404FFE",
@@ -5247,7 +5247,7 @@
       "api_calls": [],
       "instructions": ["0x4FFE|PUSH|dword ptr [ESP + 0x4]", "0x5002|CALL|0x00404fc6", "0x5007|NEG|EAX", "0x5009|SBB|EAX, EAX", "0x500B|NEG|EAX", "0x500D|POP|ECX", "0x500E|DEC|EAX", "0x500F|RET|"],
       "comment": "Library Function - Single Match\n _atexit\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x00405010",
@@ -5296,7 +5296,7 @@
       "api_calls": [],
       "instructions": ["0x5010|PUSH|EBP", "0x5011|MOV|EBP, ESP", "0x5013|SUB|ESP, 0x10", "0x5016|PUSH|EBX", "0x5017|XOR|EBX, EBX", "0x5019|CMP|dword ptr [0x0040cbb8], EBX", "0x501F|PUSH|ESI", "0x5020|PUSH|EDI", "0x5021|JNZ|0x00405090", "0x5023|PUSH|0x40a1d0", "0x5028|CALL|dword ptr [0x004091c8]", "0x502E|MOV|EDI, EAX", "0x5030|CMP|EDI, EBX", "0x5032|JZ|0x004050cb", "0x5038|MOV|ESI, dword ptr [0x004091cc]"],
       "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_2", "CALLEE_2"]
     },
     {
       "address": "0x00405109",
@@ -5345,7 +5345,7 @@
       "api_calls": [],
       "instructions": ["0x5109|MOVZX|EAX, byte ptr [ESP + 0x4]", "0x510E|MOV|CL, byte ptr [ESP + 0xc]", "0x5112|TEST|byte ptr [EAX + 0x40ce61], CL", "0x5118|JNZ|0x00405138", "0x511A|CMP|dword ptr [ESP + 0x8], 0x0", "0x511F|JZ|0x00405131", "0x5121|MOV|ECX, dword ptr [0x0040b5d8]", "0x5127|MOVZX|EAX, word ptr [ECX + EAX*0x2]", "0x512B|AND|EAX, dword ptr [ESP + 0x8]", "0x512F|JMP|0x00405133", "0x5131|XOR|EAX, EAX", "0x5133|TEST|EAX, EAX", "0x5135|JNZ|0x00405138", "0x5137|RET|", "0x5138|XOR|EAX, EAX"],
       "comment": "Library Function - Single Match\n _x_ismbbtype\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x0040513C",
@@ -5394,7 +5394,7 @@
       "api_calls": [],
       "instructions": ["0x513C|PUSH|0x4", "0x513E|PUSH|0x0", "0x5140|PUSH|dword ptr [ESP + 0xc]", "0x5144|CALL|0x00405109", "0x5149|ADD|ESP, 0xc", "0x514C|RET|"],
       "comment": "Library Function - Single Match\n __ismbblead\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x0040514D",
@@ -5443,7 +5443,7 @@
       "api_calls": [],
       "instructions": ["0x514D|PUSH|dword ptr [ESP + 0x4]", "0x5151|CALL|dword ptr [0x004090ec]", "0x5157|XOR|EAX, EAX", "0x5159|INC|EAX", "0x515A|RET|0x8"],
       "comment": "Library Function - Single Match\n ___crtInitCritSecNoSpinCount@8\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x0040515D",
@@ -5479,9 +5479,9 @@
       "param_count": 2,
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4", "storage": "Stack[0x8]:4"}],
       "callee_count": 5,
-      "callees": ["__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "___crtInitCritSecNoSpinCount@8|0x40514D", "GetModuleHandleA|0x28", "GetProcAddress|0x42"],
+      "callees": ["___crtInitCritSecNoSpinCount@8|0x40514D", "GetModuleHandleA|0x28", "__SEH_prolog|0x402F44", "GetProcAddress|0x42", "__SEH_epilog|0x402F7F"],
       "caller_count": 4,
-      "callers": ["__lock_fhandle|0x406079", "__mtinitlocks|0x403925", "__ioinit|0x402C53", "__mtinitlocknum|0x4039D8"],
+      "callers": ["__mtinitlocks|0x403925", "__mtinitlocknum|0x4039D8", "__lock_fhandle|0x406079", "__ioinit|0x402C53"],
       "string_count": 2,
       "strings": ["0x92FC|s_kernel32.dll_004092fc|kernel32.dll", "0xA1DC|s_InitializeCriticalSectionAndSpin_0040a1dc|InitializeCriticalSectionAndSpinCount"],
       "constant_count": 4,
@@ -5492,7 +5492,7 @@
       "api_calls": [],
       "instructions": ["0x515D|PUSH|0x10", "0x515F|PUSH|0x40a208", "0x5164|CALL|0x00402f44", "0x5169|MOV|EAX, [0x0040cbcc]", "0x516E|TEST|EAX, EAX", "0x5170|JNZ|0x004051a9", "0x5172|CMP|dword ptr [0x0040c88c], 0x1", "0x5179|JZ|0x0040519f", "0x517B|PUSH|0x4092fc", "0x5180|CALL|dword ptr [0x00409164]", "0x5186|TEST|EAX, EAX", "0x5188|JZ|0x0040519f", "0x518A|PUSH|0x40a1dc", "0x518F|PUSH|EAX", "0x5190|CALL|dword ptr [0x004091cc]"],
       "comment": "Library Function - Single Match\n ___crtInitCritSecAndSpinCount\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_4", "CALLEE_5", "STRUCT_Control"]
     },
     {
       "address": "0x004051E8",
@@ -5541,7 +5541,7 @@
       "api_calls": [],
       "instructions": ["0x51E8|PUSH|0x140", "0x51ED|PUSH|0x0", "0x51EF|PUSH|dword ptr [0x0040e0a4]", "0x51F5|CALL|dword ptr [0x00409180]", "0x51FB|TEST|EAX, EAX", "0x51FD|MOV|[0x0040ce24], EAX", "0x5202|JNZ|0x00405205", "0x5204|RET|", "0x5205|MOV|ECX, dword ptr [ESP + 0x4]", "0x5209|AND|dword ptr [0x0040ce1c], 0x0", "0x5210|AND|dword ptr [0x0040ce20], 0x0", "0x5217|MOV|[0x0040ce2c], EAX", "0x521C|XOR|EAX, EAX", "0x521E|MOV|dword ptr [0x0040ce28], ECX", "0x5224|MOV|dword ptr [0x0040ce30], 0x10"],
       "comment": "Library Function - Single Match\n ___sbh_heap_init\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1"]
     },
     {
       "address": "0x00405230",
@@ -5579,7 +5579,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["_free|0x403644", "__msize|0x406C9B", "_realloc|0x406AEE"],
+      "callers": ["_free|0x403644", "_realloc|0x406AEE", "__msize|0x406C9B"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -5590,7 +5590,7 @@
       "api_calls": [],
       "instructions": ["0x5230|MOV|EAX, [0x0040ce20]", "0x5235|LEA|ECX, [EAX + EAX*0x4]", "0x5238|MOV|EAX, [0x0040ce24]", "0x523D|LEA|ECX, [EAX + ECX*0x4]", "0x5240|JMP|0x00405254", "0x5242|MOV|EDX, dword ptr [ESP + 0x4]", "0x5246|SUB|EDX, dword ptr [EAX + 0xc]", "0x5249|CMP|EDX, 0x100000", "0x524F|JC|0x0040525a", "0x5251|ADD|EAX, 0x14", "0x5254|CMP|EAX, ECX", "0x5256|JC|0x00405242", "0x5258|XOR|EAX, EAX", "0x525A|RET|"],
       "comment": "Library Function - Single Match\n ___sbh_find_block\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x0040525B",
@@ -5626,7 +5626,7 @@
       "param_count": 2,
       "parameters": [{"name": "param_1", "type": "uint *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
       "callee_count": 3,
-      "callees": ["VirtualFree|0x34", "_memmove|0x406D20", "HeapFree|0x33"],
+      "callees": ["HeapFree|0x33", "_memmove|0x406D20", "VirtualFree|0x34"],
       "caller_count": 2,
       "callers": ["_free|0x403644", "_realloc|0x406AEE"],
       "string_count": 0,
@@ -5639,7 +5639,7 @@
       "api_calls": [],
       "instructions": ["0x525B|PUSH|EBP", "0x525C|MOV|EBP, ESP", "0x525E|SUB|ESP, 0x10", "0x5261|MOV|ECX, dword ptr [EBP + 0x8]", "0x5264|MOV|EAX, dword ptr [ECX + 0x10]", "0x5267|PUSH|ESI", "0x5268|MOV|ESI, dword ptr [EBP + 0xc]", "0x526B|PUSH|EDI", "0x526C|MOV|EDI, ESI", "0x526E|SUB|EDI, dword ptr [ECX + 0xc]", "0x5271|ADD|ESI, -0x4", "0x5274|SHR|EDI, 0xf", "0x5277|MOV|ECX, EDI", "0x5279|IMUL|ECX, ECX, 0x204", "0x527F|LEA|ECX, [ECX + EAX*0x1 + 0x144]"],
       "comment": "Library Function - Single Match\n ___sbh_free_block\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "PARAM_2", "CALLER_2", "STRUCT_ItemData", "CALLEE_3", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00405573",
@@ -5675,7 +5675,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 4,
-      "callees": ["HeapReAlloc|0xC", "VirtualAlloc|0x44", "HeapAlloc|0x2F", "HeapFree|0x33"],
+      "callees": ["HeapFree|0x33", "HeapReAlloc|0xC", "VirtualAlloc|0x44", "HeapAlloc|0x2F"],
       "caller_count": 1,
       "callers": ["___sbh_alloc_block|0x405A0F"],
       "string_count": 0,
@@ -5688,7 +5688,7 @@
       "api_calls": [],
       "instructions": ["0x5573|MOV|EAX, [0x0040ce20]", "0x5578|MOV|ECX, dword ptr [0x0040ce30]", "0x557E|PUSH|EDI", "0x557F|XOR|EDI, EDI", "0x5581|CMP|EAX, ECX", "0x5583|JNZ|0x004055b9", "0x5585|LEA|EAX, [ECX + ECX*0x4 + 0x50]", "0x5589|SHL|EAX, 0x2", "0x558C|PUSH|EAX", "0x558D|PUSH|dword ptr [0x0040ce24]", "0x5593|PUSH|EDI", "0x5594|PUSH|dword ptr [0x0040e0a4]", "0x559A|CALL|dword ptr [0x004090f4]", "0x55A0|CMP|EAX, EDI", "0x55A2|JNZ|0x004055a8"],
       "comment": "Library Function - Single Match\n ___sbh_alloc_new_region\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_0", "CALLEE_4"]
     },
     {
       "address": "0x0040562A",
@@ -5737,7 +5737,7 @@
       "api_calls": [],
       "instructions": ["0x562A|PUSH|EBP", "0x562B|MOV|EBP, ESP", "0x562D|PUSH|ECX", "0x562E|PUSH|ECX", "0x562F|MOV|ECX, dword ptr [EBP + 0x8]", "0x5632|MOV|EAX, dword ptr [ECX + 0x8]", "0x5635|PUSH|EBX", "0x5636|PUSH|ESI", "0x5637|MOV|ESI, dword ptr [ECX + 0x10]", "0x563A|PUSH|EDI", "0x563B|XOR|EBX, EBX", "0x563D|JMP|0x00405642", "0x563F|SHL|EAX, 0x1", "0x5641|INC|EBX", "0x5642|TEST|EAX, EAX"],
       "comment": "Library Function - Single Match\n ___sbh_alloc_new_group\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_1", "STRUCT_ItemData", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x00405730",
@@ -5786,7 +5786,7 @@
       "api_calls": [],
       "instructions": ["0x5730|PUSH|EBP", "0x5731|MOV|EBP, ESP", "0x5733|SUB|ESP, 0xc", "0x5736|MOV|ECX, dword ptr [EBP + 0x8]", "0x5739|MOV|EAX, dword ptr [ECX + 0x10]", "0x573C|PUSH|EBX", "0x573D|PUSH|ESI", "0x573E|MOV|ESI, dword ptr [EBP + 0x10]", "0x5741|PUSH|EDI", "0x5742|MOV|EDI, dword ptr [EBP + 0xc]", "0x5745|MOV|EDX, EDI", "0x5747|SUB|EDX, dword ptr [ECX + 0xc]", "0x574A|ADD|ESI, 0x17", "0x574D|SHR|EDX, 0xf", "0x5750|MOV|ECX, EDX"],
       "comment": "Library Function - Single Match\n ___sbh_resize_block\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "STRUCT_ItemData", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control"]
     },
     {
       "address": "0x00405A0F",
@@ -5822,9 +5822,9 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "uint *", "storage": "Stack[0x4]:4"}],
       "callee_count": 2,
-      "callees": ["___sbh_alloc_new_region|0x405573", "___sbh_alloc_new_group|0x40562A"],
+      "callees": ["___sbh_alloc_new_group|0x40562A", "___sbh_alloc_new_region|0x405573"],
       "caller_count": 3,
-      "callers": ["__heap_alloc|0x40374B", "_calloc|0x403AA9", "_realloc|0x406AEE"],
+      "callers": ["_realloc|0x406AEE", "_calloc|0x403AA9", "__heap_alloc|0x40374B"],
       "string_count": 0,
       "strings": [],
       "constant_count": 2,
@@ -5835,7 +5835,7 @@
       "api_calls": [],
       "instructions": ["0x5A0F|PUSH|EBP", "0x5A10|MOV|EBP, ESP", "0x5A12|SUB|ESP, 0x14", "0x5A15|MOV|ECX, dword ptr [EBP + 0x8]", "0x5A18|MOV|EAX, [0x0040ce20]", "0x5A1D|MOV|EDX, dword ptr [0x0040ce24]", "0x5A23|ADD|ECX, 0x17", "0x5A26|AND|ECX, 0xfffffff0", "0x5A29|PUSH|EBX", "0x5A2A|MOV|dword ptr [EBP + -0x10], ECX", "0x5A2D|SAR|ECX, 0x4", "0x5A30|PUSH|ESI", "0x5A31|LEA|EAX, [EAX + EAX*0x4]", "0x5A34|PUSH|EDI", "0x5A35|DEC|ECX"],
       "comment": "Library Function - Single Match\n ___sbh_alloc_block\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Inventory", "CALLER_3", "CALLEE_2", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00405D0B",
@@ -5871,7 +5871,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "void *", "storage": "Stack[0x4]:4"}],
       "callee_count": 2,
-      "callees": ["InterlockedExchange|0xD", "VirtualQuery|0xE"],
+      "callees": ["VirtualQuery|0xE", "InterlockedExchange|0xD"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -5884,7 +5884,7 @@
       "api_calls": [],
       "instructions": ["0x5D0B|PUSH|EBP", "0x5D0C|MOV|EBP, ESP", "0x5D0E|SUB|ESP, 0x20", "0x5D11|PUSH|EBX", "0x5D12|PUSH|ESI", "0x5D13|MOV|ESI, dword ptr [EBP + 0x8]", "0x5D16|MOV|EBX, dword ptr [ESI + 0x8]", "0x5D19|TEST|BL, 0x3", "0x5D1C|JNZ|0x00405d39", "0x5D1E|MOV|EAX, FS:[0x18]", "0x5D24|MOV|dword ptr [EBP + 0x8], EAX", "0x5D27|MOV|EAX, dword ptr [EBP + 0x8]", "0x5D2A|MOV|ECX, dword ptr [EAX + 0x8]", "0x5D2D|CMP|EBX, ECX", "0x5D2F|MOV|dword ptr [EBP + -0x4], ECX"],
       "comment": "Library Function - Single Match\n __ValidateEH3RN\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "CALLEE_2", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00405F34",
@@ -5922,7 +5922,7 @@
       "callee_count": 1,
       "callees": ["__getptd|0x401DC0"],
       "caller_count": 11,
-      "callers": ["__lseek|0x403151", "__free_osfhnd|0x405FB9", "__lseeki64_lk|0x40613B", "___wctomb_mt|0x403804", "FUN_004070fa|0x4070FA", "__write_lk|0x4031FC", "__mtinitlocknum|0x4039D8", "__close|0x4072A4", "__lseek_lk|0x4030DD", "__write|0x4033CA", "__get_osfhandle|0x406038"],
+      "callers": ["__mtinitlocknum|0x4039D8", "__free_osfhnd|0x405FB9", "FUN_004070fa|0x4070FA", "__write|0x4033CA", "__lseek_lk|0x4030DD", "__write_lk|0x4031FC", "__close|0x4072A4", "__lseek|0x403151", "__lseeki64_lk|0x40613B", "__get_osfhandle|0x406038", "___wctomb_mt|0x403804"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -5933,7 +5933,7 @@
       "api_calls": [],
       "instructions": ["0x5F34|CALL|0x00401dc0", "0x5F39|ADD|EAX, 0x8", "0x5F3C|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_11", "PROP_TINY", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00405F3D",
@@ -5971,7 +5971,7 @@
       "callee_count": 1,
       "callees": ["__getptd|0x401DC0"],
       "caller_count": 7,
-      "callers": ["__lseek|0x403151", "__free_osfhnd|0x405FB9", "FUN_004070fa|0x4070FA", "__write_lk|0x4031FC", "__close|0x4072A4", "__write|0x4033CA", "__get_osfhandle|0x406038"],
+      "callers": ["__free_osfhnd|0x405FB9", "FUN_004070fa|0x4070FA", "__write|0x4033CA", "__write_lk|0x4031FC", "__close|0x4072A4", "__lseek|0x403151", "__get_osfhandle|0x406038"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -5982,7 +5982,7 @@
       "api_calls": [],
       "instructions": ["0x5F3D|CALL|0x00401dc0", "0x5F42|ADD|EAX, 0xc", "0x5F45|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLEE_1", "PARAM_0", "CALLER_7"]
     },
     {
       "address": "0x00405F46",
@@ -6020,7 +6020,7 @@
       "callee_count": 1,
       "callees": ["__getptd|0x401DC0"],
       "caller_count": 4,
-      "callers": ["__lseeki64_lk|0x40613B", "__write_lk|0x4031FC", "__close_lk|0x407221", "__lseek_lk|0x4030DD"],
+      "callers": ["__write_lk|0x4031FC", "__lseeki64_lk|0x40613B", "__lseek_lk|0x4030DD", "__close_lk|0x407221"],
       "string_count": 0,
       "strings": [],
       "constant_count": 2,
@@ -6031,7 +6031,7 @@
       "api_calls": [],
       "instructions": ["0x5F46|PUSH|ESI", "0x5F47|CALL|0x00401dc0", "0x5F4C|MOV|ECX, dword ptr [ESP + 0x8]", "0x5F50|MOV|dword ptr [EAX + 0xc], ECX", "0x5F53|XOR|ESI, ESI", "0x5F55|CMP|ECX, dword ptr [ESI*0x8 + 0x40b920]", "0x5F5C|JZ|0x00405f7c", "0x5F5E|INC|ESI", "0x5F5F|CMP|ESI, 0x2d", "0x5F62|JC|0x00405f55", "0x5F64|CMP|ECX, 0x13", "0x5F67|JC|0x00405f8d", "0x5F69|CMP|ECX, 0x24", "0x5F6C|JA|0x00405f8d", "0x5F6E|CALL|0x00401dc0"],
       "comment": "Library Function - Single Match\n __dosmaperr\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_1", "CALLER_4", "PARAM_1"]
     },
     {
       "address": "0x00405FB9",
@@ -6067,7 +6067,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_00405f3d|0x405F3D", "FUN_00405f34|0x405F34", "SetStdHandle|0xF"],
+      "callees": ["FUN_00405f34|0x405F34", "FUN_00405f3d|0x405F3D", "SetStdHandle|0xF"],
       "caller_count": 1,
       "callers": ["__close_lk|0x407221"],
       "string_count": 0,
@@ -6080,7 +6080,7 @@
       "api_calls": [],
       "instructions": ["0x5FB9|MOV|ECX, dword ptr [ESP + 0x4]", "0x5FBD|CMP|ECX, dword ptr [0x0040e0ac]", "0x5FC3|PUSH|ESI", "0x5FC4|PUSH|EDI", "0x5FC5|JNC|0x0040601f", "0x5FC7|MOV|EAX, ECX", "0x5FC9|SAR|EAX, 0x5", "0x5FCC|LEA|EDI, [EAX*0x4 + 0x40e0c0]", "0x5FD3|MOV|EAX, ECX", "0x5FD5|AND|EAX, 0x1f", "0x5FD8|LEA|ESI, [EAX + EAX*0x8]", "0x5FDB|MOV|EAX, dword ptr [EDI]", "0x5FDD|SHL|ESI, 0x2", "0x5FE0|ADD|EAX, ESI", "0x5FE2|TEST|byte ptr [EAX + 0x4], 0x1"],
       "comment": "Library Function - Single Match\n __free_osfhnd\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_3", "PARAM_1"]
     },
     {
       "address": "0x00406038",
@@ -6116,9 +6116,9 @@
       "param_count": 1,
       "parameters": [{"name": "_FileHandle", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 2,
-      "callees": ["FUN_00405f3d|0x405F3D", "FUN_00405f34|0x405F34"],
+      "callees": ["FUN_00405f34|0x405F34", "FUN_00405f3d|0x405F3D"],
       "caller_count": 4,
-      "callers": ["__lseeki64_lk|0x40613B", "FUN_004070fa|0x4070FA", "__close_lk|0x407221", "__lseek_lk|0x4030DD"],
+      "callers": ["FUN_004070fa|0x4070FA", "__lseeki64_lk|0x40613B", "__lseek_lk|0x4030DD", "__close_lk|0x407221"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -6129,7 +6129,7 @@
       "api_calls": [],
       "instructions": ["0x6038|MOV|EAX, dword ptr [ESP + 0x4]", "0x603C|CMP|EAX, dword ptr [0x0040e0ac]", "0x6042|JNC|0x00406062", "0x6044|MOV|ECX, EAX", "0x6046|AND|EAX, 0x1f", "0x6049|SAR|ECX, 0x5", "0x604C|MOV|ECX, dword ptr [ECX*0x4 + 0x40e0c0]", "0x6053|LEA|EAX, [EAX + EAX*0x8]", "0x6056|LEA|EAX, [ECX + EAX*0x4]", "0x6059|TEST|byte ptr [EAX + 0x4], 0x1", "0x605D|JZ|0x00406062", "0x605F|MOV|EAX, dword ptr [EAX]", "0x6061|RET|", "0x6062|CALL|0x00405f34", "0x6067|MOV|dword ptr [EAX], 0x9"],
       "comment": "Library Function - Single Match\n __get_osfhandle\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_4", "CALLEE_2", "PARAM_1"]
     },
     {
       "address": "0x00406079",
@@ -6165,9 +6165,9 @@
       "param_count": 1,
       "parameters": [{"name": "_Filehandle", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 7,
-      "callees": ["__SEH_epilog|0x402F7F", "EnterCriticalSection|0x31", "__SEH_prolog|0x402F44", "___crtInitCritSecAndSpinCount|0x40515D", "FUN_00406110|0x406110", "__lock|0x403A78", "__local_unwind2|0x404E72"],
+      "callees": ["EnterCriticalSection|0x31", "__local_unwind2|0x404E72", "__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "FUN_00406110|0x406110", "___crtInitCritSecAndSpinCount|0x40515D", "__lock|0x403A78"],
       "caller_count": 4,
-      "callers": ["__lseek|0x403151", "FUN_004070fa|0x4070FA", "__close|0x4072A4", "__write|0x4033CA"],
+      "callers": ["FUN_004070fa|0x4070FA", "__write|0x4033CA", "__lseek|0x403151", "__close|0x4072A4"],
       "string_count": 0,
       "strings": [],
       "constant_count": 4,
@@ -6178,7 +6178,7 @@
       "api_calls": [],
       "instructions": ["0x6079|PUSH|0x8", "0x607B|PUSH|0x40a218", "0x6080|CALL|0x00402f44", "0x6085|MOV|EDI, dword ptr [EBP + 0x8]", "0x6088|MOV|ECX, EDI", "0x608A|SAR|ECX, 0x5", "0x608D|MOV|EAX, EDI", "0x608F|AND|EAX, 0x1f", "0x6092|LEA|EAX, [EAX + EAX*0x8]", "0x6095|MOV|ECX, dword ptr [ECX*0x4 + 0x40e0c0]", "0x609C|LEA|ESI, [ECX + EAX*0x4]", "0x609F|XOR|EBX, EBX", "0x60A1|CMP|dword ptr [ESI + 0x8], EBX", "0x60A4|JNZ|0x004060e7", "0x60A6|PUSH|0xa"],
       "comment": "Library Function - Single Match\n __lock_fhandle\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_4", "PARAM_1", "CALLEE_7"]
     },
     {
       "address": "0x00406110",
@@ -6227,7 +6227,7 @@
       "api_calls": [],
       "instructions": ["0x6110|PUSH|0xa", "0x6112|CALL|0x004039c3", "0x6117|POP|ECX", "0x6118|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00406119",
@@ -6265,7 +6265,7 @@
       "callee_count": 1,
       "callees": ["LeaveCriticalSection|0x30"],
       "caller_count": 4,
-      "callers": ["FUN_00403451|0x403451", "FUN_004031d8|0x4031D8", "FUN_0040731b|0x40731B", "FUN_0040719a|0x40719A"],
+      "callers": ["FUN_0040731b|0x40731B", "FUN_0040719a|0x40719A", "FUN_00403451|0x403451", "FUN_004031d8|0x4031D8"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -6276,7 +6276,7 @@
       "api_calls": [],
       "instructions": ["0x6119|MOV|EAX, dword ptr [ESP + 0x4]", "0x611D|MOV|ECX, EAX", "0x611F|AND|EAX, 0x1f", "0x6122|SAR|ECX, 0x5", "0x6125|MOV|ECX, dword ptr [ECX*0x4 + 0x40e0c0]", "0x612C|LEA|EAX, [EAX + EAX*0x8]", "0x612F|LEA|EAX, [ECX + EAX*0x4 + 0xc]", "0x6133|PUSH|EAX", "0x6134|CALL|dword ptr [0x00409184]", "0x613A|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLEE_1", "CALLER_4", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x0040613B",
@@ -6312,7 +6312,7 @@
       "param_count": 4,
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "LONG", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "LONG", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "DWORD", "storage": "Stack[0x10]:4"}],
       "callee_count": 5,
-      "callees": ["__dosmaperr|0x405F46", "FUN_00405f34|0x405F34", "SetFilePointer|0x32", "GetLastError|0x43", "__get_osfhandle|0x406038"],
+      "callees": ["GetLastError|0x43", "__dosmaperr|0x405F46", "__get_osfhandle|0x406038", "FUN_00405f34|0x405F34", "SetFilePointer|0x32"],
       "caller_count": 1,
       "callers": ["__write_lk|0x4031FC"],
       "string_count": 0,
@@ -6325,7 +6325,7 @@
       "api_calls": [],
       "instructions": ["0x613B|PUSH|EBP", "0x613C|MOV|EBP, ESP", "0x613E|PUSH|ECX", "0x613F|PUSH|ECX", "0x6140|MOV|EAX, dword ptr [EBP + 0xc]", "0x6143|PUSH|ESI", "0x6144|MOV|ESI, dword ptr [EBP + 0x8]", "0x6147|MOV|dword ptr [EBP + -0x8], EAX", "0x614A|MOV|EAX, dword ptr [EBP + 0x10]", "0x614D|PUSH|EDI", "0x614E|PUSH|ESI", "0x614F|MOV|dword ptr [EBP + -0x4], EAX", "0x6152|CALL|0x00406038", "0x6157|OR|EDI, 0xffffffff", "0x615A|CMP|EAX, EDI"],
       "comment": "Library Function - Single Match\n __lseeki64_lk\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_4", "STRUCT_UnitAny", "CALLEE_5", "STRUCT_Control"]
     },
     {
       "address": "0x00406259",
@@ -6363,7 +6363,7 @@
       "callee_count": 1,
       "callees": ["__write|0x4033CA"],
       "caller_count": 2,
-      "callers": ["FUN_004062b6|0x4062B6", "__fclose_lk|0x40705D"],
+      "callers": ["__fclose_lk|0x40705D", "FUN_004062b6|0x4062B6"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -6374,7 +6374,7 @@
       "api_calls": [],
       "instructions": ["0x6259|PUSH|EBX", "0x625A|PUSH|ESI", "0x625B|MOV|ESI, dword ptr [ESP + 0xc]", "0x625F|MOV|EAX, dword ptr [ESI + 0xc]", "0x6262|MOV|ECX, EAX", "0x6264|AND|CL, 0x3", "0x6267|XOR|EBX, EBX", "0x6269|CMP|CL, 0x2", "0x626C|JNZ|0x004062a8", "0x626E|TEST|AX, 0x108", "0x6272|JZ|0x004062a8", "0x6274|MOV|EAX, dword ptr [ESI + 0x8]", "0x6277|PUSH|EDI", "0x6278|MOV|EDI, dword ptr [ESI]", "0x627A|SUB|EDI, EAX"],
       "comment": "Library Function - Single Match\n __flush\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_2", "CALLEE_1", "PARAM_1", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x004062B6",
@@ -6410,7 +6410,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "FILE *", "storage": "Stack[0x4]:4"}],
       "callee_count": 2,
-      "callees": ["__flush|0x406259", "FUN_004070fa|0x4070FA"],
+      "callees": ["FUN_004070fa|0x4070FA", "__flush|0x406259"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -6423,7 +6423,7 @@
       "api_calls": [],
       "instructions": ["0x62B6|PUSH|ESI", "0x62B7|MOV|ESI, dword ptr [ESP + 0x8]", "0x62BB|PUSH|ESI", "0x62BC|CALL|0x00406259", "0x62C1|TEST|EAX, EAX", "0x62C3|POP|ECX", "0x62C4|JZ|0x004062cb", "0x62C6|OR|EAX, 0xffffffff", "0x62C9|POP|ESI", "0x62CA|RET|", "0x62CB|TEST|byte ptr [ESI + 0xd], 0x40", "0x62CF|JZ|0x004062e0", "0x62D1|PUSH|dword ptr [ESI + 0x10]", "0x62D4|CALL|0x004070fa", "0x62D9|POP|ECX"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "CALLEE_2", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x004063C2",
@@ -6472,7 +6472,7 @@
       "api_calls": [],
       "instructions": ["0x63C2|PUSH|0x2", "0x63C4|CALL|0x004011db", "0x63C9|POP|ECX", "0x63CA|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x004063CB",
@@ -6510,7 +6510,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 3,
-      "callers": ["_calloc|0x403AA9", "_realloc|0x406AEE", "__nh_malloc|0x4037C6"],
+      "callers": ["__nh_malloc|0x4037C6", "_calloc|0x403AA9", "_realloc|0x406AEE"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -6521,7 +6521,7 @@
       "api_calls": [],
       "instructions": ["0x63CB|MOV|EAX, [0x0040cc1c]", "0x63D0|TEST|EAX, EAX", "0x63D2|JZ|0x004063e3", "0x63D4|PUSH|dword ptr [ESP + 0x4]", "0x63D8|CALL|EAX", "0x63DA|TEST|EAX, EAX", "0x63DC|POP|ECX", "0x63DD|JZ|0x004063e3", "0x63DF|XOR|EAX, EAX", "0x63E1|INC|EAX", "0x63E2|RET|", "0x63E3|XOR|EAX, EAX", "0x63E5|RET|"],
       "comment": "Library Function - Single Match\n __callnewh\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLEE_0", "CALLER_3", "PARAM_1", "PROP_LEAF", "PROP_SMALL"]
     },
     {
       "address": "0x004063E6",
@@ -6557,7 +6557,7 @@
       "param_count": 9,
       "parameters": [{"name": "_Plocinfo", "type": "_locale_t", "storage": "Stack[0x4]:4"}, {"name": "_LocaleName", "type": "LPCWSTR", "storage": "Stack[0x8]:4"}, {"name": "_DwMapFlag", "type": "DWORD", "storage": "Stack[0xc]:4"}, {"name": "_LpSrcStr", "type": "LPCSTR", "storage": "Stack[0x10]:4"}, {"name": "_CchSrc", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "_LpDestStr", "type": "LPSTR", "storage": "Stack[0x18]:4"}, {"name": "_CchDest", "type": "int", "storage": "Stack[0x1c]:4"}, {"name": "_Code_page", "type": "int", "storage": "Stack[0x20]:4"}, {"name": "_BError", "type": "BOOL", "storage": "Stack[0x24]:4"}],
       "callee_count": 13,
-      "callees": ["__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "_memset|0x404900", "MultiByteToWideChar|0x6", "___convertcp|0x4067E5", "_malloc|0x4037F2", "LCMapStringA|0x10", "__chkstk|0x4030A0", "_free|0x403644", "GetLastError|0x43", "WideCharToMultiByte|0xB", "LCMapStringW|0x11", "___ansicp|0x4067A2"],
+      "callees": ["WideCharToMultiByte|0xB", "_malloc|0x4037F2", "_free|0x403644", "___convertcp|0x4067E5", "__chkstk|0x4030A0", "MultiByteToWideChar|0x6", "LCMapStringW|0x11", "_memset|0x404900", "__SEH_epilog|0x402F7F", "LCMapStringA|0x10", "GetLastError|0x43", "__SEH_prolog|0x402F44", "___ansicp|0x4067A2"],
       "caller_count": 1,
       "callers": ["setSBUpLow|0x403BBC"],
       "string_count": 0,
@@ -6570,7 +6570,7 @@
       "api_calls": [],
       "instructions": ["0x63E6|PUSH|0x38", "0x63E8|PUSH|0x40a250", "0x63ED|CALL|0x00402f44", "0x63F2|XOR|EBX, EBX", "0x63F4|CMP|dword ptr [0x0040cc24], EBX", "0x63FA|JNZ|0x00406434", "0x63FC|PUSH|EBX", "0x63FD|PUSH|EBX", "0x63FE|XOR|ESI, ESI", "0x6400|INC|ESI", "0x6401|PUSH|ESI", "0x6402|PUSH|0x40a024", "0x6407|PUSH|0x100", "0x640C|PUSH|EBX", "0x640D|CALL|dword ptr [0x00409108]"],
       "comment": "Library Function - Single Match\n ___crtLCMapStringA\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PROP_LARGE", "CALLEE_13", "PARAM_9", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x004067A2",
@@ -6606,9 +6606,9 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "LCID", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["_atol|0x40114E", "FUN_00402098|0x402098", "GetLocaleInfoA|0x8"],
+      "callees": ["FUN_00402098|0x402098", "GetLocaleInfoA|0x8", "_atol|0x40114E"],
       "caller_count": 2,
-      "callers": ["___crtLCMapStringA|0x4063E6", "___crtGetStringTypeA|0x4041F4"],
+      "callers": ["___crtGetStringTypeA|0x4041F4", "___crtLCMapStringA|0x4063E6"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -6619,7 +6619,7 @@
       "api_calls": [],
       "instructions": ["0x67A2|PUSH|EBP", "0x67A3|MOV|EBP, ESP", "0x67A5|SUB|ESP, 0xc", "0x67A8|MOV|EAX, [0x0040b054]", "0x67AD|PUSH|0x6", "0x67AF|MOV|dword ptr [EBP + -0x4], EAX", "0x67B2|LEA|EAX, [EBP + -0xc]", "0x67B5|PUSH|EAX", "0x67B6|PUSH|0x1004", "0x67BB|PUSH|dword ptr [EBP + 0x8]", "0x67BE|MOV|byte ptr [EBP + -0x6], 0x0", "0x67C2|CALL|dword ptr [0x004090e4]", "0x67C8|TEST|EAX, EAX", "0x67CA|JNZ|0x004067d1", "0x67CC|OR|EAX, 0xffffffff"],
       "comment": "Library Function - Single Match\n ___ansicp\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_2", "CALLEE_3", "PARAM_1"]
     },
     {
       "address": "0x004067E5",
@@ -6655,9 +6655,9 @@
       "param_count": 6,
       "parameters": [{"name": "param_1", "type": "UINT", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "UINT", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "char *", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "size_t *", "storage": "Stack[0x10]:4"}, {"name": "param_5", "type": "LPSTR", "storage": "Stack[0x14]:4"}, {"name": "param_6", "type": "int", "storage": "Stack[0x18]:4"}],
       "callee_count": 11,
-      "callees": ["__chkstk|0x4030A0", "__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "_strlen|0x4036C0", "_memset|0x404900", "MultiByteToWideChar|0x6", "_free|0x403644", "_calloc|0x403AA9", "WideCharToMultiByte|0xB", "FUN_00402098|0x402098", "GetCPInfo|0x15"],
+      "callees": ["_strlen|0x4036C0", "_memset|0x404900", "WideCharToMultiByte|0xB", "FUN_00402098|0x402098", "__SEH_epilog|0x402F7F", "_calloc|0x403AA9", "_free|0x403644", "__SEH_prolog|0x402F44", "GetCPInfo|0x15", "__chkstk|0x4030A0", "MultiByteToWideChar|0x6"],
       "caller_count": 2,
-      "callers": ["___crtLCMapStringA|0x4063E6", "___crtGetStringTypeA|0x4041F4"],
+      "callers": ["___crtGetStringTypeA|0x4041F4", "___crtLCMapStringA|0x4063E6"],
       "string_count": 0,
       "strings": [],
       "constant_count": 1,
@@ -6668,7 +6668,7 @@
       "api_calls": [],
       "instructions": ["0x67E5|PUSH|0x38", "0x67E7|PUSH|0x40a278", "0x67EC|CALL|0x00402f44", "0x67F1|MOV|EAX, [0x0040b054]", "0x67F6|MOV|dword ptr [EBP + -0x1c], EAX", "0x67F9|XOR|EDI, EDI", "0x67FB|MOV|dword ptr [EBP + -0x34], EDI", "0x67FE|MOV|dword ptr [EBP + -0x44], EDI", "0x6801|MOV|EAX, dword ptr [EBP + 0x14]", "0x6804|MOV|EBX, dword ptr [EAX]", "0x6806|MOV|dword ptr [EBP + -0x40], EBX", "0x6809|MOV|dword ptr [EBP + -0x3c], EDI", "0x680C|MOV|EAX, dword ptr [EBP + 0x8]", "0x680F|CMP|EAX, dword ptr [EBP + 0xc]", "0x6812|JZ|0x0040698b"],
       "comment": "Library Function - Single Match\n ___convertcp\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PARAM_6", "CALLEE_11", "STRUCT_Act", "STRUCT_Inventory", "CALLER_2", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x004069AE",
@@ -6704,7 +6704,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["__chkstk|0x4030A0", "VirtualAlloc|0x44", "VirtualProtect|0x12", "VirtualQuery|0xE", "GetSystemInfo|0x13"],
+      "callees": ["VirtualAlloc|0x44", "VirtualQuery|0xE", "GetSystemInfo|0x13", "__chkstk|0x4030A0", "VirtualProtect|0x12"],
       "caller_count": 0,
       "callers": [],
       "string_count": 0,
@@ -6717,7 +6717,7 @@
       "api_calls": [],
       "instructions": ["0x69AE|PUSH|EBP", "0x69AF|MOV|EBP, ESP", "0x69B1|SUB|ESP, 0x4c", "0x69B4|PUSH|EBX", "0x69B5|PUSH|ESI", "0x69B6|PUSH|EDI", "0x69B7|PUSH|0x4", "0x69B9|POP|EAX", "0x69BA|CALL|0x004030a0", "0x69BF|MOV|ESI, ESP", "0x69C1|PUSH|0x1c", "0x69C3|LEA|EAX, [EBP + -0x28]", "0x69C6|PUSH|EAX", "0x69C7|PUSH|ESI", "0x69C8|CALL|dword ptr [0x004090fc]"],
       "comment": "Library Function - Single Match\n __resetstkoflw\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_0", "PROP_NOCALLER", "PARAM_0", "CALLEE_5"]
     },
     {
       "address": "0x00406AA0",
@@ -6766,7 +6766,7 @@
       "api_calls": [],
       "instructions": ["0x6AA0|PUSH|EBP", "0x6AA1|MOV|EBP, ESP", "0x6AA3|PUSH|EDI", "0x6AA4|PUSH|ESI", "0x6AA5|PUSH|EBX", "0x6AA6|MOV|ESI, dword ptr [EBP + 0xc]", "0x6AA9|MOV|EDI, dword ptr [EBP + 0x8]", "0x6AAC|MOV|AL, 0xff", "0x6AAE|MOV|EDI, EDI", "0x6AB0|OR|AL, AL", "0x6AB2|JZ|0x00406ae6", "0x6AB4|MOV|AL, byte ptr [ESI]", "0x6AB6|ADD|ESI, 0x1", "0x6AB9|MOV|AH, byte ptr [EDI]", "0x6ABB|ADD|EDI, 0x1"],
       "comment": "Library Function - Single Match\n ___ascii_stricmp\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_0", "PROP_NOCALLER", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x00406AEE",
@@ -6802,7 +6802,7 @@
       "param_count": 2,
       "parameters": [{"name": "_Memory", "type": "void *", "storage": "Stack[0x4]:4"}, {"name": "_NewSize", "type": "size_t", "storage": "Stack[0x8]:4"}],
       "callee_count": 14,
-      "callees": ["HeapReAlloc|0xC", "__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "__callnewh|0x4063CB", "__lock|0x403A78", "FUN_00406c56|0x406C56", "___sbh_resize_block|0x405730", "_malloc|0x4037F2", "_memcpy|0x4049F0", "___sbh_free_block|0x40525B", "_free|0x403644", "___sbh_alloc_block|0x405A0F", "___sbh_find_block|0x405230", "HeapAlloc|0x2F"],
+      "callees": ["___sbh_find_block|0x405230", "_malloc|0x4037F2", "_free|0x403644", "FUN_00406c56|0x406C56", "___sbh_resize_block|0x405730", "__lock|0x403A78", "___sbh_free_block|0x40525B", "__SEH_epilog|0x402F7F", "_memcpy|0x4049F0", "HeapReAlloc|0xC", "__SEH_prolog|0x402F44", "__callnewh|0x4063CB", "___sbh_alloc_block|0x405A0F", "HeapAlloc|0x2F"],
       "caller_count": 1,
       "callers": ["__onexit_lk|0x404F1E"],
       "string_count": 0,
@@ -6815,7 +6815,7 @@
       "api_calls": [],
       "instructions": ["0x6AEE|PUSH|0x14", "0x6AF0|PUSH|0x40a2c8", "0x6AF5|CALL|0x00402f44", "0x6AFA|MOV|EDI, dword ptr [EBP + 0x8]", "0x6AFD|XOR|EBX, EBX", "0x6AFF|CMP|EDI, EBX", "0x6B01|JNZ|0x00406b11", "0x6B03|PUSH|dword ptr [EBP + 0xc]", "0x6B06|CALL|0x004037f2", "0x6B0B|POP|ECX", "0x6B0C|JMP|0x00406c95", "0x6B11|MOV|ESI, dword ptr [EBP + 0xc]", "0x6B14|CMP|ESI, EBX", "0x6B16|JNZ|0x00406b24", "0x6B18|PUSH|EDI"],
       "comment": "Library Function - Single Match\n _realloc\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PARAM_2", "CALLEE_14", "CALLER_1", "STRUCT_Control"]
     },
     {
       "address": "0x00406C56",
@@ -6864,7 +6864,7 @@
       "api_calls": [],
       "instructions": ["0x6C56|PUSH|0x4", "0x6C58|CALL|0x004039c3", "0x6C5D|POP|ECX", "0x6C5E|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00406C9B",
@@ -6900,7 +6900,7 @@
       "param_count": 1,
       "parameters": [{"name": "_Memory", "type": "void *", "storage": "Stack[0x4]:4"}],
       "callee_count": 6,
-      "callees": ["__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "__lock|0x403A78", "HeapSize|0x14", "___sbh_find_block|0x405230", "FUN_00406d08|0x406D08"],
+      "callees": ["___sbh_find_block|0x405230", "__SEH_epilog|0x402F7F", "FUN_00406d08|0x406D08", "HeapSize|0x14", "__SEH_prolog|0x402F44", "__lock|0x403A78"],
       "caller_count": 1,
       "callers": ["__onexit_lk|0x404F1E"],
       "string_count": 0,
@@ -6913,7 +6913,7 @@
       "api_calls": [],
       "instructions": ["0x6C9B|PUSH|0x10", "0x6C9D|PUSH|0x40a2d8", "0x6CA2|CALL|0x00402f44", "0x6CA7|CMP|dword ptr [0x0040e0a8], 0x3", "0x6CAE|JNZ|0x00406cea", "0x6CB0|PUSH|0x4", "0x6CB2|CALL|0x00403a78", "0x6CB7|POP|ECX", "0x6CB8|AND|dword ptr [EBP + -0x4], 0x0", "0x6CBC|MOV|ESI, dword ptr [EBP + 0x8]", "0x6CBF|PUSH|ESI", "0x6CC0|CALL|0x00405230", "0x6CC5|POP|ECX", "0x6CC6|MOV|dword ptr [EBP + -0x20], EAX", "0x6CC9|TEST|EAX, EAX"],
       "comment": "Library Function - Single Match\n __msize\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_1", "CALLEE_6"]
     },
     {
       "address": "0x00406D08",
@@ -6962,7 +6962,7 @@
       "api_calls": [],
       "instructions": ["0x6D08|PUSH|0x4", "0x6D0A|CALL|0x004039c3", "0x6D0F|POP|ECX", "0x6D10|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x00406D20",
@@ -7011,7 +7011,7 @@
       "api_calls": [],
       "instructions": ["0x6D20|PUSH|EBP", "0x6D21|MOV|EBP, ESP", "0x6D23|PUSH|EDI", "0x6D24|PUSH|ESI", "0x6D25|MOV|ESI, dword ptr [EBP + 0xc]", "0x6D28|MOV|ECX, dword ptr [EBP + 0x10]", "0x6D2B|MOV|EDI, dword ptr [EBP + 0x8]", "0x6D2E|MOV|EAX, ECX", "0x6D30|MOV|EDX, ECX", "0x6D32|ADD|EAX, ESI", "0x6D34|CMP|EDI, ESI", "0x6D36|JBE|0x00406d40", "0x6D38|CMP|EDI, EAX", "0x6D3A|JC|0x00406ebc", "0x6D40|TEST|EDI, 0x3"],
       "comment": "Library Function - Single Match\n _memmove\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Act", "STRUCT_Inventory", "PARAM_3", "CALLER_1", "CALLEE_0", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x0040705D",
@@ -7060,7 +7060,7 @@
       "api_calls": [],
       "instructions": ["0x705D|PUSH|ESI", "0x705E|MOV|ESI, dword ptr [ESP + 0x8]", "0x7062|PUSH|EDI", "0x7063|OR|EDI, 0xffffffff", "0x7066|TEST|byte ptr [ESI + 0xc], 0x83", "0x706A|JZ|0x004070a0", "0x706C|PUSH|ESI", "0x706D|CALL|0x00406259", "0x7072|PUSH|ESI", "0x7073|MOV|EDI, EAX", "0x7075|CALL|0x0040733f", "0x707A|PUSH|dword ptr [ESI + 0x10]", "0x707D|CALL|0x004072a4", "0x7082|ADD|ESP, 0xc", "0x7085|TEST|EAX, EAX"],
       "comment": "Library Function - Single Match\n __fclose_lk\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_1", "CALLEE_4", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x004070FA",
@@ -7096,7 +7096,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 9,
-      "callees": ["__SEH_epilog|0x402F7F", "__lock_fhandle|0x406079", "__SEH_prolog|0x402F44", "FUN_00405f3d|0x405F3D", "FUN_00405f34|0x405F34", "FlushFileBuffers|0x3A", "GetLastError|0x43", "FUN_0040719a|0x40719A", "__get_osfhandle|0x406038"],
+      "callees": ["__lock_fhandle|0x406079", "__SEH_epilog|0x402F7F", "FUN_0040719a|0x40719A", "GetLastError|0x43", "FlushFileBuffers|0x3A", "__SEH_prolog|0x402F44", "__get_osfhandle|0x406038", "FUN_00405f3d|0x405F3D", "FUN_00405f34|0x405F34"],
       "caller_count": 1,
       "callers": ["FUN_004062b6|0x4062B6"],
       "string_count": 0,
@@ -7109,7 +7109,7 @@
       "api_calls": [],
       "instructions": ["0x70FA|PUSH|0xc", "0x70FC|PUSH|0x40a2f8", "0x7101|CALL|0x00402f44", "0x7106|MOV|EBX, dword ptr [EBP + 0x8]", "0x7109|CMP|EBX, dword ptr [0x0040e0ac]", "0x710F|JNC|0x004071a2", "0x7115|MOV|EAX, EBX", "0x7117|SAR|EAX, 0x5", "0x711A|LEA|EDI, [EAX*0x4 + 0x40e0c0]", "0x7121|MOV|EAX, EBX", "0x7123|AND|EAX, 0x1f", "0x7126|LEA|ESI, [EAX + EAX*0x8]", "0x7129|SHL|ESI, 0x2", "0x712C|MOV|EAX, dword ptr [EDI]", "0x712E|TEST|byte ptr [EAX + ESI*0x1 + 0x4], 0x1"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLEE_9", "STRUCT_Inventory", "CALLER_1", "PARAM_1"]
     },
     {
       "address": "0x0040719A",
@@ -7158,7 +7158,7 @@
       "api_calls": [],
       "instructions": ["0x719A|PUSH|EBX", "0x719B|CALL|0x00406119", "0x71A0|POP|ECX", "0x71A1|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x004071C0",
@@ -7207,7 +7207,7 @@
       "api_calls": [],
       "instructions": ["0x71C0|PUSH|EBP", "0x71C1|MOV|EBP, ESP", "0x71C3|PUSH|EDI", "0x71C4|PUSH|ESI", "0x71C5|PUSH|EBX", "0x71C6|MOV|ECX, dword ptr [EBP + 0x10]", "0x71C9|OR|ECX, ECX", "0x71CB|JZ|0x0040721a", "0x71CD|MOV|ESI, dword ptr [EBP + 0x8]", "0x71D0|MOV|EDI, dword ptr [EBP + 0xc]", "0x71D3|MOV|BH, 0x41", "0x71D5|MOV|BL, 0x5a", "0x71D7|MOV|DH, 0x20", "0x71D9|LEA|ECX, [ECX]", "0x71DC|MOV|AH, byte ptr [ESI]"],
       "comment": "Library Function - Single Match\n ___ascii_strnicmp\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_0", "PROP_NOCALLER", "PARAM_3", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407221",
@@ -7243,7 +7243,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}],
       "callee_count": 5,
-      "callees": ["__dosmaperr|0x405F46", "__free_osfhnd|0x405FB9", "GetLastError|0x43", "__get_osfhandle|0x406038", "CloseHandle|0x3C"],
+      "callees": ["__free_osfhnd|0x405FB9", "CloseHandle|0x3C", "GetLastError|0x43", "__dosmaperr|0x405F46", "__get_osfhandle|0x406038"],
       "caller_count": 1,
       "callers": ["__close|0x4072A4"],
       "string_count": 0,
@@ -7256,7 +7256,7 @@
       "api_calls": [],
       "instructions": ["0x7221|PUSH|ESI", "0x7222|MOV|ESI, dword ptr [ESP + 0x8]", "0x7226|PUSH|EDI", "0x7227|PUSH|ESI", "0x7228|CALL|0x00406038", "0x722D|CMP|EAX, -0x1", "0x7230|POP|ECX", "0x7231|JZ|0x0040726f", "0x7233|CMP|ESI, 0x1", "0x7236|JZ|0x0040723d", "0x7238|CMP|ESI, 0x2", "0x723B|JNZ|0x00407253", "0x723D|PUSH|0x2", "0x723F|CALL|0x00406038", "0x7244|PUSH|0x1"],
       "comment": "Library Function - Single Match\n __close_lk\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_1", "CALLEE_5"]
     },
     {
       "address": "0x004072A4",
@@ -7292,7 +7292,7 @@
       "param_count": 1,
       "parameters": [{"name": "_FileHandle", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 7,
-      "callees": ["__SEH_epilog|0x402F7F", "__lock_fhandle|0x406079", "__SEH_prolog|0x402F44", "FUN_0040731b|0x40731B", "FUN_00405f3d|0x405F3D", "FUN_00405f34|0x405F34", "__close_lk|0x407221"],
+      "callees": ["FUN_0040731b|0x40731B", "__lock_fhandle|0x406079", "__SEH_epilog|0x402F7F", "__SEH_prolog|0x402F44", "__close_lk|0x407221", "FUN_00405f34|0x405F34", "FUN_00405f3d|0x405F3D"],
       "caller_count": 1,
       "callers": ["__fclose_lk|0x40705D"],
       "string_count": 0,
@@ -7305,7 +7305,7 @@
       "api_calls": [],
       "instructions": ["0x72A4|PUSH|0xc", "0x72A6|PUSH|0x40a308", "0x72AB|CALL|0x00402f44", "0x72B0|MOV|EBX, dword ptr [EBP + 0x8]", "0x72B3|CMP|EBX, dword ptr [0x0040e0ac]", "0x72B9|JNC|0x00407323", "0x72BB|MOV|EAX, EBX", "0x72BD|SAR|EAX, 0x5", "0x72C0|LEA|EDI, [EAX*0x4 + 0x40e0c0]", "0x72C7|MOV|EAX, EBX", "0x72C9|AND|EAX, 0x1f", "0x72CC|LEA|ESI, [EAX + EAX*0x8]", "0x72CF|SHL|ESI, 0x2", "0x72D2|MOV|EAX, dword ptr [EDI]", "0x72D4|TEST|byte ptr [EAX + ESI*0x1 + 0x4], 0x1"],
       "comment": "Library Function - Single Match\n __close\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_1", "CALLEE_7"]
     },
     {
       "address": "0x0040731B",
@@ -7354,7 +7354,7 @@
       "api_calls": [],
       "instructions": ["0x731B|PUSH|EBX", "0x731C|CALL|0x00406119", "0x7321|POP|ECX", "0x7322|RET|"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_TINY", "CALLER_1", "CALLEE_1", "PARAM_0"]
     },
     {
       "address": "0x0040733F",
@@ -7403,7 +7403,7 @@
       "api_calls": [],
       "instructions": ["0x733F|PUSH|ESI", "0x7340|MOV|ESI, dword ptr [ESP + 0x8]", "0x7344|MOV|EAX, dword ptr [ESI + 0xc]", "0x7347|TEST|AL, 0x83", "0x7349|JZ|0x00407368", "0x734B|TEST|AL, 0x8", "0x734D|JZ|0x00407368", "0x734F|PUSH|dword ptr [ESI + 0x8]", "0x7352|CALL|0x00403644", "0x7357|AND|word ptr [ESI + 0xc], 0xfbf7", "0x735D|XOR|EAX, EAX", "0x735F|POP|ECX", "0x7360|MOV|dword ptr [ESI], EAX", "0x7362|MOV|dword ptr [ESI + 0x8], EAX", "0x7365|MOV|dword ptr [ESI + 0x4], EAX"],
       "comment": "Library Function - Single Match\n __freebuf\n\nLibrary: Visual Studio 2003 Release",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_1", "PROP_SMALL"]
     },
     {
       "address": "0x0040743E",
@@ -7452,7 +7452,7 @@
       "api_calls": [],
       "instructions": ["0x743E|JMP|dword ptr [0x004090e8]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "PARAM_4", "CALLEE_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407444",
@@ -7490,7 +7490,7 @@
       "callee_count": 0,
       "callees": [],
       "caller_count": 2,
-      "callers": ["FUN_004082d0|0x4082D0", "FUN_00407c70|0x407C70"],
+      "callers": ["FUN_00407c70|0x407C70", "FUN_004082d0|0x4082D0"],
       "string_count": 0,
       "strings": [],
       "constant_count": 0,
@@ -7501,7 +7501,7 @@
       "api_calls": [],
       "instructions": ["0x7444|JMP|dword ptr [0x004091f4]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_2", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x0040744A",
@@ -7550,7 +7550,7 @@
       "api_calls": [],
       "instructions": ["0x744A|JMP|dword ptr [0x004091f0]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407450",
@@ -7599,7 +7599,7 @@
       "api_calls": [],
       "instructions": ["0x7450|JMP|dword ptr [0x004091ec]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407456",
@@ -7648,7 +7648,7 @@
       "api_calls": [],
       "instructions": ["0x7456|JMP|dword ptr [0x004091e8]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x0040745C",
@@ -7697,7 +7697,7 @@
       "api_calls": [],
       "instructions": ["0x745C|JMP|dword ptr [0x004091e4]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407462",
@@ -7746,7 +7746,7 @@
       "api_calls": [],
       "instructions": ["0x7462|JMP|dword ptr [0x004091e0]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407468",
@@ -7795,7 +7795,7 @@
       "api_calls": [],
       "instructions": ["0x7468|JMP|dword ptr [0x004090b4]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x0040746E",
@@ -7844,7 +7844,7 @@
       "api_calls": [],
       "instructions": ["0x746E|JMP|dword ptr [0x004090b0]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407474",
@@ -7893,7 +7893,7 @@
       "api_calls": [],
       "instructions": ["0x7474|JMP|dword ptr [0x004090ac]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x0040747A",
@@ -7942,7 +7942,7 @@
       "api_calls": [],
       "instructions": ["0x747A|JMP|dword ptr [0x004090a8]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407480",
@@ -7991,7 +7991,7 @@
       "api_calls": [],
       "instructions": ["0x7480|JMP|dword ptr [0x004090bc]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407486",
@@ -8040,7 +8040,7 @@
       "api_calls": [],
       "instructions": ["0x7486|JMP|dword ptr [0x004090a0]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x0040748C",
@@ -8089,7 +8089,7 @@
       "api_calls": [],
       "instructions": ["0x748C|JMP|dword ptr [0x0040909c]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407492",
@@ -8138,7 +8138,7 @@
       "api_calls": [],
       "instructions": ["0x7492|JMP|dword ptr [0x00409098]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407498",
@@ -8187,7 +8187,7 @@
       "api_calls": [],
       "instructions": ["0x7498|JMP|dword ptr [0x00409094]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x0040749E",
@@ -8236,7 +8236,7 @@
       "api_calls": [],
       "instructions": ["0x749E|JMP|dword ptr [0x004090a4]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074A4",
@@ -8285,7 +8285,7 @@
       "api_calls": [],
       "instructions": ["0x74A4|JMP|dword ptr [0x004090b8]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074AA",
@@ -8334,7 +8334,7 @@
       "api_calls": [],
       "instructions": ["0x74AA|JMP|dword ptr [0x004090c0]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074B0",
@@ -8383,7 +8383,7 @@
       "api_calls": [],
       "instructions": ["0x74B0|JMP|dword ptr [0x00409058]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074B6",
@@ -8432,7 +8432,7 @@
       "api_calls": [],
       "instructions": ["0x74B6|JMP|dword ptr [0x00409054]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074C2",
@@ -8481,7 +8481,7 @@
       "api_calls": [],
       "instructions": ["0x74C2|JMP|dword ptr [0x00409060]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074C8",
@@ -8530,7 +8530,7 @@
       "api_calls": [],
       "instructions": ["0x74C8|JMP|dword ptr [0x00409064]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074D4",
@@ -8579,7 +8579,7 @@
       "api_calls": [],
       "instructions": ["0x74D4|JMP|dword ptr [0x0040904c]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074DA",
@@ -8628,7 +8628,7 @@
       "api_calls": [],
       "instructions": ["0x74DA|JMP|dword ptr [0x00409050]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074E0",
@@ -8677,7 +8677,7 @@
       "api_calls": [],
       "instructions": ["0x74E0|JMP|dword ptr [0x00409088]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074E6",
@@ -8726,7 +8726,7 @@
       "api_calls": [],
       "instructions": ["0x74E6|JMP|dword ptr [0x0040908c]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074EC",
@@ -8775,7 +8775,7 @@
       "api_calls": [],
       "instructions": ["0x74EC|JMP|dword ptr [0x00409040]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074F2",
@@ -8824,7 +8824,7 @@
       "api_calls": [],
       "instructions": ["0x74F2|JMP|dword ptr [0x00409078]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074F8",
@@ -8873,7 +8873,7 @@
       "api_calls": [],
       "instructions": ["0x74F8|JMP|dword ptr [0x0040906c]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x004074FE",
@@ -8922,7 +8922,7 @@
       "api_calls": [],
       "instructions": ["0x74FE|JMP|dword ptr [0x00409070]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407504",
@@ -8971,7 +8971,7 @@
       "api_calls": [],
       "instructions": ["0x7504|JMP|dword ptr [0x00409074]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x0040750A",
@@ -9020,7 +9020,7 @@
       "api_calls": [],
       "instructions": ["0x750A|JMP|dword ptr [0x0040907c]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407510",
@@ -9069,7 +9069,7 @@
       "api_calls": [],
       "instructions": ["0x7510|JMP|dword ptr [0x00409080]"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_THUNK", "PROP_TINY", "CALLER_1", "CALLEE_0", "PARAM_0", "PROP_LEAF"]
     },
     {
       "address": "0x00407550",
@@ -9118,7 +9118,7 @@
       "api_calls": [],
       "instructions": ["0x7550|PUSH|EBX", "0x7551|PUSH|EBP", "0x7552|PUSH|ESI", "0x7553|PUSH|EDI", "0x7554|XOR|EAX, EAX", "0x7556|MOV|EDI, 0x40bc40", "0x755B|XOR|EBP, EBP", "0x755D|LEA|ECX, [ECX]", "0x7560|MOV|ESI, dword ptr [ESP + 0x14]", "0x7564|MOV|ECX, EDI", "0x7566|MOV|BL, byte ptr [ECX]", "0x7568|MOV|DL, BL", "0x756A|CMP|BL, byte ptr [ESI]", "0x756C|JNZ|0x0040758a", "0x756E|TEST|DL, DL"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_0", "PARAM_1", "PROP_LEAF"]
     },
     {
       "address": "0x004075D0",
@@ -9167,7 +9167,7 @@
       "api_calls": [],
       "instructions": ["0x75D0|PUSH|EDI", "0x75D1|PUSH|ESI", "0x75D2|PUSH|0x100", "0x75D7|XOR|EDI, EDI", "0x75D9|CALL|dword ptr [0x00409168]", "0x75DF|TEST|EAX, EAX", "0x75E1|JNZ|0x004075e5", "0x75E3|POP|EDI", "0x75E4|RET|", "0x75E5|MOV|EAX, ESI", "0x75E7|LEA|EDX, [EAX + 0x1]", "0x75EA|LEA|EBX, [EBX]", "0x75F0|MOV|CL, byte ptr [EAX]", "0x75F2|INC|EAX", "0x75F3|TEST|CL, CL"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_1", "PARAM_0", "PROP_LOOPHEAVY"]
     },
     {
       "address": "0x00407640",
@@ -9216,7 +9216,7 @@
       "api_calls": [],
       "instructions": ["0x7640|SUB|ESP, 0x18", "0x7643|PUSH|EBX", "0x7644|PUSH|EBP", "0x7645|MOV|EBP, dword ptr [ESP + 0x24]", "0x7649|PUSH|ESI", "0x764A|LEA|EDX, [ESP + 0xc]", "0x764E|PUSH|EDI", "0x764F|MOV|EAX, EBP", "0x7651|SUB|EDX, EBP", "0x7653|MOV|CL, byte ptr [EAX]", "0x7655|MOV|byte ptr [EDX + EAX*0x1], CL", "0x7658|INC|EAX", "0x7659|TEST|CL, CL", "0x765B|JNZ|0x00407653", "0x765D|MOV|EAX, EBP"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "CALLEE_0", "STRUCT_ItemData", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "PROP_LEAF", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x004076F0",
@@ -9252,7 +9252,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "callee_count": 3,
-      "callees": ["GetPrivateProfileStringA|0x2A", "FUN_004075d0|0x4075D0", "GetPrivateProfileIntA|0x2B"],
+      "callees": ["GetPrivateProfileIntA|0x2B", "FUN_004075d0|0x4075D0", "GetPrivateProfileStringA|0x2A"],
       "caller_count": 1,
       "callers": ["FUN_00407ec0|0x407EC0"],
       "string_count": 3,
@@ -9265,7 +9265,7 @@
       "api_calls": [],
       "instructions": ["0x76F0|SUB|ESP, 0x100", "0x76F6|PUSH|ESI", "0x76F7|LEA|ESI, [ESP + 0x4]", "0x76FB|CALL|0x004075d0", "0x7700|TEST|EAX, EAX", "0x7702|JZ|0x004077d4", "0x7708|PUSH|EBX", "0x7709|PUSH|EBP", "0x770A|PUSH|EDI", "0x770B|MOV|EDI, ESI", "0x770D|DEC|EDI", "0x770E|MOV|EDI, EDI", "0x7710|MOV|AL, byte ptr [EDI + 0x1]", "0x7713|INC|EDI", "0x7714|TEST|AL, AL"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "CALLEE_3", "PARAM_1", "STRUCT_Control"]
     },
     {
       "address": "0x004077E0",
@@ -9314,7 +9314,7 @@
       "api_calls": [],
       "instructions": ["0x77E0|SUB|ESP, 0x30", "0x77E3|PUSH|EBP", "0x77E4|MOV|EBP, dword ptr [ESP + 0x38]", "0x77E8|PUSH|ESI", "0x77E9|MOV|EAX, EDX", "0x77EB|PUSH|EDI", "0x77EC|LEA|ESI, [EAX + 0x1]", "0x77EF|NOP|", "0x77F0|MOV|CL, byte ptr [EAX]", "0x77F2|INC|EAX", "0x77F3|TEST|CL, CL", "0x77F5|JNZ|0x004077f0", "0x77F7|SUB|EAX, ESI", "0x77F9|MOV|ESI, EAX", "0x77FB|XOR|ECX, ECX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_4", "CALLEE_2", "STRUCT_ItemData", "PROP_LOOPHEAVY"]
     },
     {
       "address": "0x00407900",
@@ -9363,7 +9363,7 @@
       "api_calls": [],
       "instructions": ["0x7900|SUB|ESP, 0x30", "0x7903|PUSH|EBX", "0x7904|PUSH|EBP", "0x7905|MOV|EBP, dword ptr [ESP + 0x40]", "0x7909|MOV|EAX, EBP", "0x790B|PUSH|EDI", "0x790C|LEA|EDX, [EAX + 0x1]", "0x790F|NOP|", "0x7910|MOV|CL, byte ptr [EAX]", "0x7912|INC|EAX", "0x7913|TEST|CL, CL", "0x7915|JNZ|0x00407910", "0x7917|SUB|EAX, EDX", "0x7919|MOV|EBX, EAX", "0x791B|XOR|EDI, EDI"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "PARAM_2", "CALLER_1", "STRUCT_Skill", "CALLEE_2", "STRUCT_ItemData", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "STRUCT_Control"]
     },
     {
       "address": "0x00407A70",
@@ -9399,7 +9399,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int *", "storage": "Stack[0x4]:4"}],
       "callee_count": 5,
-      "callees": ["_strncmp|0x401060", "Ordinal_501|0x40745C", "Ordinal_10042|0x407492", "Ordinal_10043|0x40749E", "_strtok|0x401099"],
+      "callees": ["Ordinal_10042|0x407492", "Ordinal_10043|0x40749E", "Ordinal_501|0x40745C", "_strncmp|0x401060", "_strtok|0x401099"],
       "caller_count": 1,
       "callers": ["FUN_00407ec0|0x407EC0"],
       "string_count": 3,
@@ -9412,7 +9412,7 @@
       "api_calls": ["Ordinal_10042", "Ordinal_501", "Ordinal_10043"],
       "instructions": ["0x7A70|PUSH|EBX", "0x7A71|PUSH|EBP", "0x7A72|PUSH|ESI", "0x7A73|PUSH|EDI", "0x7A74|MOV|EDI, EAX", "0x7A76|LEA|EDX, [EAX + 0x1]", "0x7A79|LEA|ESP, [ESP]", "0x7A80|MOV|CL, byte ptr [EAX]", "0x7A82|INC|EAX", "0x7A83|TEST|CL, CL", "0x7A85|JNZ|0x00407a80", "0x7A87|SUB|EAX, EDX", "0x7A89|LEA|ESI, [EAX + 0x1]", "0x7A8C|PUSH|0x0", "0x7A8E|PUSH|0x1d8"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_1", "PROP_LOOPHEAVY", "STRUCT_UnitAny", "CALLEE_5", "SRC_Main.cpp", "STRUCT_Control"]
     },
     {
       "address": "0x00407B50",
@@ -9448,7 +9448,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 8,
-      "callees": ["RegCreateKeyA|0x4D", "RegOpenKeyA|0x53", "RegCloseKey|0x54", "RegEnumValueA|0x51", "RegDeleteKeyA|0x4C", "SetCurrentDirectoryA|0x3E", "RegSetValueExA|0x49", "Ordinal_10116|0x407498"],
+      "callees": ["RegEnumValueA|0x51", "Ordinal_10116|0x407498", "SetCurrentDirectoryA|0x3E", "RegCloseKey|0x54", "RegDeleteKeyA|0x4C", "RegCreateKeyA|0x4D", "RegOpenKeyA|0x53", "RegSetValueExA|0x49"],
       "caller_count": 1,
       "callers": ["FUN_00407ec0|0x407EC0"],
       "string_count": 2,
@@ -9461,7 +9461,7 @@
       "api_calls": ["Ordinal_10116"],
       "instructions": ["0x7B50|PUSH|EBP", "0x7B51|MOV|EBP, ESP", "0x7B53|AND|ESP, 0xfffffff8", "0x7B56|SUB|ESP, 0x624", "0x7B5C|PUSH|EBP", "0x7B5D|PUSH|ESI", "0x7B5E|PUSH|EDI", "0x7B5F|LEA|EAX, [ESP + 0x14]", "0x7B63|PUSH|EAX", "0x7B64|PUSH|0x40a508", "0x7B69|PUSH|0x80000002", "0x7B6E|CALL|dword ptr [0x00409030]", "0x7B74|TEST|EAX, EAX", "0x7B76|JNZ|0x00407c29", "0x7B7C|LEA|ECX, [ESP + 0xc]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "STRUCT_Skill", "PARAM_0", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData", "CALLEE_8"]
     },
     {
       "address": "0x00407C70",
@@ -9497,7 +9497,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["Ordinal_426|0x407444", "Ordinal_425|0x407462", "_sprintf|0x401000", "Ordinal_423|0x407450", "Ordinal_422|0x40744A"],
+      "callees": ["_sprintf|0x401000", "Ordinal_426|0x407444", "Ordinal_422|0x40744A", "Ordinal_425|0x407462", "Ordinal_423|0x407450"],
       "caller_count": 1,
       "callers": ["FUN_00407ec0|0x407EC0"],
       "string_count": 6,
@@ -9510,7 +9510,7 @@
       "api_calls": ["Ordinal_423", "Ordinal_422", "Ordinal_425", "Ordinal_426", "Ordinal_422"],
       "instructions": ["0x7C70|SUB|ESP, 0x808", "0x7C76|MOV|ECX, dword ptr [ESI]", "0x7C78|TEST|ECX, ECX", "0x7C7A|MOV|dword ptr [ESP], 0x0", "0x7C81|JZ|0x00407cba", "0x7C83|MOV|EAX, ECX", "0x7C85|PUSH|EDI", "0x7C86|LEA|EDI, [EAX + 0x1]", "0x7C89|LEA|ESP, [ESP]", "0x7C90|MOV|DL, byte ptr [EAX]", "0x7C92|INC|EAX", "0x7C93|TEST|DL, DL", "0x7C95|JNZ|0x00407c90", "0x7C97|SUB|EAX, EDI", "0x7C99|MOV|dword ptr [ESP + 0x8], EAX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_0", "CALLEE_5", "STRUCT_Control"]
     },
     {
       "address": "0x00407D90",
@@ -9546,7 +9546,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["LoadLibraryA|0x41", "FreeLibrary|0x45", "GetProcAddress|0x42", "GetCurrentProcess|0x40", "FreeSid|0x52"],
+      "callees": ["FreeLibrary|0x45", "GetCurrentProcess|0x40", "FreeSid|0x52", "LoadLibraryA|0x41", "GetProcAddress|0x42"],
       "caller_count": 1,
       "callers": ["FUN_004081b0|0x4081B0"],
       "string_count": 5,
@@ -9559,7 +9559,7 @@
       "api_calls": [],
       "instructions": ["0x7D90|SUB|ESP, 0x21c", "0x7D96|PUSH|EBX", "0x7D97|XOR|EBX, EBX", "0x7D99|PUSH|ESI", "0x7D9A|PUSH|EDI", "0x7D9B|MOV|byte ptr [ESP + 0xc], BL", "0x7D9F|MOV|byte ptr [ESP + 0xd], BL", "0x7DA3|MOV|byte ptr [ESP + 0xe], BL", "0x7DA7|MOV|byte ptr [ESP + 0xf], BL", "0x7DAB|MOV|byte ptr [ESP + 0x10], BL", "0x7DAF|MOV|byte ptr [ESP + 0x11], 0x1", "0x7DB4|CALL|dword ptr [0x004091c4]", "0x7DBA|XOR|EDI, EDI", "0x7DBC|PUSH|0x40a4cc", "0x7DC1|MOV|dword ptr [ESP + 0x28], EAX"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Path", "STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_0", "STRUCT_UnitAny", "CALLEE_5", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00407EC0",
@@ -9595,7 +9595,7 @@
       "param_count": 1,
       "parameters": [{"name": "param_1", "type": "int", "storage": "ECX:4"}],
       "callee_count": 15,
-      "callees": ["Ordinal_578|0x407456", "FUN_00407b50|0x407B50", "FUN_004082d0|0x4082D0", "RegQueryValueExA|0x4B", "FUN_00407c70|0x407C70", "Ordinal_10019|0x4074A4", "CloseHandle|0x3C", "FUN_00407900|0x407900", "SetEvent|0x3F", "OpenEventA|0x3D", "FUN_00407a70|0x407A70", "FUN_004076f0|0x4076F0", "RegOpenKeyExA|0x4E", "RegCloseKey|0x54", "Ordinal_10021|0x4074AA"],
+      "callees": ["FUN_00407a70|0x407A70", "RegOpenKeyExA|0x4E", "RegQueryValueExA|0x4B", "OpenEventA|0x3D", "FUN_00407c70|0x407C70", "FUN_00407900|0x407900", "RegCloseKey|0x54", "FUN_004082d0|0x4082D0", "FUN_004076f0|0x4076F0", "Ordinal_10019|0x4074A4", "Ordinal_578|0x407456", "CloseHandle|0x3C", "FUN_00407b50|0x407B50", "Ordinal_10021|0x4074AA", "SetEvent|0x3F"],
       "caller_count": 1,
       "callers": ["FUN_004081b0|0x4081B0"],
       "string_count": 5,
@@ -9608,7 +9608,7 @@
       "api_calls": ["Ordinal_578", "Ordinal_10021", "Ordinal_10019"],
       "instructions": ["0x7EC0|PUSH|EBP", "0x7EC1|MOV|EBP, ESP", "0x7EC3|AND|ESP, 0xfffffff8", "0x7EC6|SUB|ESP, 0x520", "0x7ECC|CMP|EAX, 0x1", "0x7ECF|PUSH|ESI", "0x7ED0|PUSH|EDI", "0x7ED1|MOV|dword ptr [ESP + 0xc], 0x40a4d9", "0x7ED9|JLE|0x00407ee3", "0x7EDB|MOV|EDX, dword ptr [ECX + EAX*0x4 + -0x4]", "0x7EDF|MOV|dword ptr [ESP + 0xc], EDX", "0x7EE3|PUSH|0xb", "0x7EE5|PUSH|0x1", "0x7EE7|PUSH|0x40a470", "0x7EEC|LEA|EAX, [ESP + 0x42c]"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLEE_15", "CALLER_1", "STRUCT_Skill", "STRUCT_Room2", "STRUCT_ItemData", "PARAM_1", "STRUCT_UnitAny", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x00408120",
@@ -9644,7 +9644,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["OpenSCManagerA|0x50", "OpenServiceA|0x55", "CloseServiceHandle|0x47", "GetVersion|0x2C", "StartServiceCtrlDispatcherA|0x48"],
+      "callees": ["OpenServiceA|0x55", "StartServiceCtrlDispatcherA|0x48", "CloseServiceHandle|0x47", "OpenSCManagerA|0x50", "GetVersion|0x2C"],
       "caller_count": 1,
       "callers": ["FUN_004081b0|0x4081B0"],
       "string_count": 2,
@@ -9657,7 +9657,7 @@
       "api_calls": [],
       "instructions": ["0x8120|SUB|ESP, 0x10", "0x8123|PUSH|EDI", "0x8124|CALL|dword ptr [0x00409174]", "0x812A|TEST|EAX, EAX", "0x812C|JS|0x004081a4", "0x812E|PUSH|0xf003f", "0x8133|PUSH|0x0", "0x8135|PUSH|0x0", "0x8137|CALL|dword ptr [0x00409024]", "0x813D|MOV|EDI, EAX", "0x813F|TEST|EDI, EDI", "0x8141|JZ|0x004081a4", "0x8143|PUSH|EBX", "0x8144|PUSH|ESI", "0x8145|PUSH|0xf01ff"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Act", "STRUCT_Inventory", "CALLER_1", "PARAM_0", "STRUCT_UnitAny", "CALLEE_5", "STRUCT_Control", "STRUCT_PlayerData"]
     },
     {
       "address": "0x004081B0",
@@ -9693,7 +9693,7 @@
       "param_count": 4,
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "undefined4", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "undefined4", "storage": "Stack[0x10]:4"}],
       "callee_count": 3,
-      "callees": ["FUN_00408120|0x408120", "FUN_00407ec0|0x407EC0", "FUN_00407d90|0x407D90"],
+      "callees": ["FUN_00407ec0|0x407EC0", "FUN_00408120|0x408120", "FUN_00407d90|0x407D90"],
       "caller_count": 1,
       "callers": ["entry|0x401224"],
       "string_count": 1,
@@ -9706,7 +9706,7 @@
       "api_calls": [],
       "instructions": ["0x81B0|MOV|EAX, dword ptr [ESP + 0x4]", "0x81B4|MOV|ECX, dword ptr [ESP + 0x10]", "0x81B8|SUB|ESP, 0x8", "0x81BB|MOV|[0x0040cd04], EAX", "0x81C0|MOV|dword ptr [0x0040cd08], ECX", "0x81C6|CALL|0x00408120", "0x81CB|TEST|EAX, EAX", "0x81CD|JNZ|0x004081f0", "0x81CF|MOV|EDX, dword ptr [ESP + 0x14]", "0x81D3|MOV|dword ptr [ESP], 0x40a3f4", "0x81DA|MOV|dword ptr [ESP + 0x4], EDX", "0x81DE|CALL|0x00407d90", "0x81E3|LEA|ECX, [ESP]", "0x81E6|MOV|EAX, 0x2", "0x81EB|CALL|0x00407ec0"],
       "comment": "",
-      "tags": []
+      "tags": ["CALLER_1", "PARAM_4", "CALLEE_3"]
     },
     {
       "address": "0x00408220",
@@ -9742,7 +9742,7 @@
       "param_count": 0,
       "parameters": [],
       "callee_count": 5,
-      "callees": ["LoadLibraryA|0x41", "MessageBoxA|0x46", "GetLastError|0x43", "_sprintf|0x401000", "GetProcAddress|0x42"],
+      "callees": ["_sprintf|0x401000", "GetLastError|0x43", "MessageBoxA|0x46", "LoadLibraryA|0x41", "GetProcAddress|0x42"],
       "caller_count": 1,
       "callers": ["FUN_004082d0|0x4082D0"],
       "string_count": 3,
@@ -9755,7 +9755,7 @@
       "api_calls": [],
       "instructions": ["0x8220|SUB|ESP, 0x64", "0x8223|PUSH|ESI", "0x8224|CALL|dword ptr [0x004091c8]", "0x822A|TEST|EAX, EAX", "0x822C|JNZ|0x00408264", "0x822E|CALL|dword ptr [0x004091d0]", "0x8234|PUSH|EAX", "0x8235|PUSH|ESI", "0x8236|LEA|EAX, [ESP + 0x8]", "0x823A|PUSH|0x40a380", "0x823F|PUSH|EAX", "0x8240|CALL|0x00401000", "0x8245|ADD|ESP, 0x10", "0x8248|PUSH|0x10", "0x824A|PUSH|0x40a374"],
       "comment": "",
-      "tags": []
+      "tags": ["STRUCT_Inventory", "CALLER_1", "PARAM_0", "CALLEE_5"]
     },
     {
       "address": "0x004082D0",
@@ -9791,7 +9791,7 @@
       "param_count": 2,
       "parameters": [{"name": "this", "type": "void *", "storage": "ECX:4 (auto)"}, {"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}],
       "callee_count": 27,
-      "callees": ["Ordinal_426|0x407444", "Ordinal_10052|0x4074C8", "Ordinal_10015|0x407504", "Ordinal_10115|0x4074B0", "Ordinal_10057|0x4074EC", "Ordinal_10050|0x4074FE", "Ordinal_10063|0x4074D4", "Ordinal_10075|0x407510", "Ordinal_10025|0x40750A", "Ordinal_10043|0x4074E6", "Ordinal_10089|0x40748C", "Ordinal_10126|0x4074DA", "FreeLibrary|0x45", "LoadLibraryA|0x41", "Ordinal_10218|0x40747A", "GetProcAddress|0x42", "Ordinal_10082|0x407468", "FUN_00408220|0x408220", "Ordinal_10090|0x40746E", "Ordinal_10176|0x4074B6", "...+7 more"],
+      "callees": ["Ordinal_10101|0x407480", "Ordinal_10041|0x4074E0", "FUN_00408220|0x408220", "Ordinal_10090|0x40746E", "Ordinal_10176|0x4074B6", "LoadLibraryA|0x41", "Ordinal_10115|0x4074B0", "Ordinal_10043|0x4074E6", "Ordinal_10082|0x407468", "Ordinal_10227|0x407486", "Ordinal_426|0x407444", "Ordinal_10089|0x40748C", "Ordinal_10126|0x4074DA", "Ordinal_10203|0x4074C2", "GetProcAddress|0x42", "Ordinal_10062|0x4074F8", "Ordinal_10053|0x4074F2", "Ordinal_10050|0x4074FE", "Ordinal_10025|0x40750A", "Ordinal_10052|0x4074C8", "...+7 more"],
       "caller_count": 1,
       "callers": ["FUN_00407ec0|0x407EC0"],
       "string_count": 5,
@@ -9804,7 +9804,7 @@
       "api_calls": ["Ordinal_10101", "Ordinal_10089", "Ordinal_10082", "Ordinal_10218", "Ordinal_10176", "Ordinal_10063", "Ordinal_10227", "Ordinal_10203", "Ordinal_10052", "Ordinal_10062", "...+18 more"],
       "instructions": ["0x82D0|PUSH|ECX", "0x82D1|PUSH|EBP", "0x82D2|PUSH|EDI", "0x82D3|MOV|EDI, ECX", "0x82D5|MOVZX|ECX, byte ptr [EDI + 0x1ff]", "0x82DC|XOR|EBP, EBP", "0x82DE|XOR|EDX, EDX", "0x82E0|MOV|dword ptr [ESP + 0x8], EBP", "0x82E4|MOV|[0x0040ccf8], EAX", "0x82E9|CALL|0x00407480", "0x82EE|XOR|EDX, EDX", "0x82F0|MOV|ECX, 0x1", "0x82F5|CALL|0x0040748c", "0x82FA|CALL|0x00407468", "0x82FF|CALL|0x0040747a"],
       "comment": "",
-      "tags": []
+      "tags": ["PROP_LARGE", "STRUCT_Inventory", "PARAM_2", "CALLER_1", "CALLEE_27", "STRUCT_Control", "STRUCT_PlayerData"]
     }
   ]
 }
