@@ -1,0 +1,13 @@
+{
+  "enabled_game_types": {
+    "LoD": true,
+    "Classic": true
+  },
+  "enabled_versions": {},
+  "index_priority": ["STR", "NOP", "CAL", "API", "APS", "CON", "MNE", "CFG", "PRO", "EXP"],
+  "output": {
+    "registry_file": "reports/function_registry_v2.json",
+    "include_unmatched": true,
+    "min_versions_for_match": 1
+  }
+}
