@@ -25,8 +25,14 @@ Desktop.ini
 cache/
 .playwright-mcp/
 
-# Large generated files (use functions_v2/ split files instead)
+# Large generated files (regenerate with: python tools/refresh_viewer.py)
 reports/function_registry_v2.json
+reports/functions_v2/D2Client.dll.js
+reports/functions_v2/D2Common.dll.js
+reports/functions_v2/D2Game.dll.js
+reports/functions_v2/Game.exe.js
+reports/functions_v2/Storm.dll.js
+reports/archive/unified_function_index.json
 
 # Temporary/debug files
 *.log
