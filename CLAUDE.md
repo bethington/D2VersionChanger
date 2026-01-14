@@ -11,7 +11,6 @@ D2VersionChanger is a tool for switching between all patch versions of Diablo 2,
 1. First think through the problem, read the code base for relevant files, and write a plan to tasks/todo.Md.
 2. The plan should have a list of to do items that you can check off as you complete them.
 3. Before you begin working, check in with me and I will verify the plan.
-, check in with me and I wi, check in with me and I will verify the plan.
 4. Then, begin working on the to do items, marking them as complete as you go.
 5. Please every step of the way just give me the high level explanation of what changes you made.
 6. Make every task and code change you do as simple as possible. We want to avoid making any massive or complex changes. Every change should impact as little code as possible. Everything is about simplicity.
