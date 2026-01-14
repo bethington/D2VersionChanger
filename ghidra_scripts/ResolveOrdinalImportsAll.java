@@ -1,4 +1,4 @@
-//Resolve ordinal imports for ALL binaries in the current project folder.
+//Resolve ordinal imports for ALL binaries in the current project folder or entire project.
 //@author D2VersionChanger
 //@category D2VersionChanger
 //@keybinding
@@ -18,64 +18,159 @@ import java.util.*;
 
 /**
  * Batch version of ResolveOrdinalImports that processes ALL binaries
- * in the current project folder.
+ * in the current project folder or the entire project.
  * 
  * This script:
- * 1. Gets the folder containing the current program
- * 2. Iterates through all programs in that folder
+ * 1. Prompts the user to select scope: Current Folder or Entire Project
+ * 2. Iterates through all programs in the selected scope
  * 3. For each program, resolves ordinal imports using sibling DLLs
  * 4. Copies function signatures and updates addresses
  * 5. Cleans up comments and renames thunks
+ * 
+ * When processing the entire project, each folder is treated as a separate
+ * version/build, so imports are resolved using DLLs from the same folder.
  */
 public class ResolveOrdinalImportsAll extends GhidraScript {
 
+    // Processing scope options
+    private static final String SCOPE_CURRENT_FOLDER = "Current Folder Only";
+    private static final String SCOPE_ENTIRE_PROJECT = "Entire Project (All Folders)";
+    
     // Track statistics
     private int totalProgramsProcessed = 0;
     private int totalImportsResolved = 0;
     private int totalThunksRenamed = 0;
     private int totalSkipped = 0;
+    private int totalFoldersProcessed = 0;
 
     @Override
     public void run() throws Exception {
         // Get the current program's location in the project
         DomainFile currentFile = currentProgram.getDomainFile();
-        DomainFolder projectFolder = currentFile.getParent();
+        DomainFolder currentFolder = currentFile.getParent();
+        
+        // Prompt user for processing scope
+        String[] scopeOptions = { SCOPE_CURRENT_FOLDER, SCOPE_ENTIRE_PROJECT };
+        String selectedScope = askChoice("Processing Scope", 
+            "Select which binaries to process:", 
+            Arrays.asList(scopeOptions), 
+            SCOPE_CURRENT_FOLDER);
+        
+        if (selectedScope == null) {
+            println("Operation cancelled by user.");
+            return;
+        }
+        
+        boolean processEntireProject = selectedScope.equals(SCOPE_ENTIRE_PROJECT);
         
         println("=".repeat(60));
         println("BATCH ORDINAL IMPORT RESOLUTION");
         println("=".repeat(60));
-        println("Project folder: " + projectFolder.getPathname());
+        println("Mode: " + selectedScope);
         
-        // Get all files in the project folder
-        DomainFile[] allFiles = projectFolder.getFiles();
-        
-        println("Found " + allFiles.length + " files in folder");
-        println("");
-        
-        // Process each program file
-        for (DomainFile file : allFiles) {
-            if (monitor.isCancelled()) {
-                println("\n*** CANCELLED BY USER ***");
-                break;
-            }
+        if (processEntireProject) {
+            // Get the project root folder
+            DomainFolder rootFolder = getProjectRoot(currentFolder);
+            println("Project root: " + rootFolder.getPathname());
+            println("");
             
-            // Skip non-program files
-            if (!file.getContentType().equals("Program")) {
-                continue;
-            }
+            // Process all folders recursively
+            processAllFolders(rootFolder);
+        } else {
+            println("Current folder: " + currentFolder.getPathname());
             
-            processProgram(file, projectFolder);
+            // Get all files in the project folder
+            DomainFile[] allFiles = currentFolder.getFiles();
+            println("Found " + allFiles.length + " files in folder");
+            println("");
+            
+            // Process each program file in current folder
+            for (DomainFile file : allFiles) {
+                if (monitor.isCancelled()) {
+                    println("\n*** CANCELLED BY USER ***");
+                    break;
+                }
+                
+                // Skip non-program files
+                if (!file.getContentType().equals("Program")) {
+                    continue;
+                }
+                
+                processProgram(file, currentFolder);
+            }
+            totalFoldersProcessed = 1;
         }
         
         // Print final summary
         println("\n" + "=".repeat(60));
         println("BATCH PROCESSING COMPLETE");
         println("=".repeat(60));
+        println("Folders processed:  " + totalFoldersProcessed);
         println("Programs processed: " + totalProgramsProcessed);
         println("Imports resolved:   " + totalImportsResolved);
         println("Thunks renamed:     " + totalThunksRenamed);
         println("Skipped:            " + totalSkipped);
         println("=".repeat(60));
+    }
+    
+    /**
+     * Get the project root folder.
+     */
+    private DomainFolder getProjectRoot(DomainFolder folder) {
+        DomainFolder parent = folder.getParent();
+        if (parent == null) {
+            return folder;
+        }
+        return getProjectRoot(parent);
+    }
+    
+    /**
+     * Recursively process all folders in the project.
+     */
+    private void processAllFolders(DomainFolder folder) throws Exception {
+        if (monitor.isCancelled()) return;
+        
+        // Get files in this folder
+        DomainFile[] files = folder.getFiles();
+        
+        // Count program files in this folder
+        int programCount = 0;
+        for (DomainFile file : files) {
+            if (file.getContentType().equals("Program")) {
+                programCount++;
+            }
+        }
+        
+        // Only process folders that contain programs
+        if (programCount > 0) {
+            println("\n" + "=".repeat(50));
+            println("FOLDER: " + folder.getPathname());
+            println("=".repeat(50));
+            println("Found " + programCount + " program(s)");
+            
+            for (DomainFile file : files) {
+                if (monitor.isCancelled()) {
+                    println("\n*** CANCELLED BY USER ***");
+                    return;
+                }
+                
+                if (!file.getContentType().equals("Program")) {
+                    continue;
+                }
+                
+                // Process using the current folder as the library source
+                processProgram(file, folder);
+            }
+            
+            totalFoldersProcessed++;
+        }
+        
+        // Recurse into subfolders
+        DomainFolder[] subfolders = folder.getFolders();
+        for (DomainFolder subfolder : subfolders) {
+            if (monitor.isCancelled()) return;
+            processAllFolders(subfolder);
+        }
     }
     
     /**

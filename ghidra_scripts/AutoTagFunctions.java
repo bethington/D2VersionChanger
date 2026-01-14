@@ -41,6 +41,8 @@ import java.util.regex.*;
  * STRUCT_   - D2 structure usage (e.g., STRUCT_Unit, STRUCT_Inventory)
  * RET_      - Return type structure (e.g., RET_Unit, RET_Inventory)
  * PARAM_    - Parameter count (e.g., PARAM_0, PARAM_1, PARAM_5)
+ * CALLEE_   - Callee count (e.g., CALLEE_0, CALLEE_5, CALLEE_10)
+ * CALLER_   - Caller count (e.g., CALLER_0, CALLER_3, CALLER_15)
  * PROP_     - Structural properties (e.g., PROP_LEAF, PROP_LARGE)
  * LIB_      - Library component (e.g., LIB_STORM_COMP, LIB_FOG_MEM)
  *
@@ -571,7 +573,8 @@ public class AutoTagFunctions extends GhidraScript {
         println("  GFX_    - Graphics       SND_    - Sound");
         println("  CLASS_  - Character      API_    - Win32 API");
         println("  STRUCT_ - D2 structs     RET_    - Return types");
-        println("  PARAM_  - Param count    PROP_   - Properties");
+        println("  PARAM_  - Param count    CALLEE_ - Callee count");
+        println("  CALLER_ - Caller count   PROP_   - Properties");
         println("  LIB_    - Libraries");
 
         if (batchMode) {
@@ -808,7 +811,11 @@ public class AutoTagFunctions extends GhidraScript {
         println("  Tagging by parameter count...");
         tagByParamCount(functionTags);
 
-        // Phase 17: Return type structures
+        // Phase 17: Callee/Caller counts
+        println("  Tagging by callee/caller count...");
+        tagByCallCounts(functionTags);
+
+        // Phase 18: Return type structures
         println("  Detecting return type structures...");
         tagByReturnType(functionTags);
 
@@ -1547,6 +1554,48 @@ public class AutoTagFunctions extends GhidraScript {
         int maxParams = paramDistribution.isEmpty() ? 0 :
             paramDistribution.keySet().stream().max(Integer::compare).orElse(0);
         println("    Parameter count range: 0 to " + maxParams);
+    }
+
+    //==========================================================================
+    // TAG BY CALLEE/CALLER COUNT (CALLEE_, CALLER_)
+    //==========================================================================
+
+    private void tagByCallCounts(Map<Address, Set<String>> functionTags) throws Exception {
+        FunctionManager funcMgr = activeProgram.getFunctionManager();
+        Map<Integer, Integer> calleeDistribution = new TreeMap<>();
+        Map<Integer, Integer> callerDistribution = new TreeMap<>();
+
+        FunctionIterator funcIter = funcMgr.getFunctions(true);
+        while (funcIter.hasNext()) {
+            if (monitor.isCancelled()) break;
+
+            Function func = funcIter.next();
+
+            // Get callee count (functions this function calls)
+            Set<Function> callees = func.getCalledFunctions(monitor);
+            int calleeCount = callees.size();
+
+            // Get caller count (functions that call this function)
+            Set<Function> callers = func.getCallingFunctions(monitor);
+            int callerCount = callers.size();
+
+            // Track distribution
+            calleeDistribution.merge(calleeCount, 1, Integer::sum);
+            callerDistribution.merge(callerCount, 1, Integer::sum);
+
+            // Add tags
+            Set<String> tags = functionTags.computeIfAbsent(func.getEntryPoint(), k -> new HashSet<>());
+            tags.add("CALLEE_" + calleeCount);
+            tags.add("CALLER_" + callerCount);
+        }
+
+        // Log distribution summary
+        int maxCallees = calleeDistribution.isEmpty() ? 0 :
+            calleeDistribution.keySet().stream().max(Integer::compare).orElse(0);
+        int maxCallers = callerDistribution.isEmpty() ? 0 :
+            callerDistribution.keySet().stream().max(Integer::compare).orElse(0);
+        println("    Callee count range: 0 to " + maxCallees);
+        println("    Caller count range: 0 to " + maxCallers);
     }
 
     //==========================================================================

@@ -1,5 +1,101 @@
 # D2 Function Morphology - Current Status & Next Steps
 
+---
+
+## Production Release Preparation (2026-01-14)
+
+### Overview
+Prepare the D2VersionChanger project for production release. The project consists of two main components:
+1. **VersionChanger.bat** (v4.6) - User-facing tool for switching D2 patch versions
+2. **Function Analysis Framework** - Research tools and HTML viewer for function morphology
+
+### Pre-Release Checklist
+
+#### Phase 1: Git Cleanup
+- [ ] 1.1 Stage all modified function_index JSON files (656 files)
+- [ ] 1.2 Stage modified tool scripts (merge_function_index.py, sequential_matcher.py)
+- [ ] 1.3 Stage modified viewer files (d2_report_viewer.html, functions_v2/*.js)
+- [ ] 1.4 Add new Classic version folders (1.09d through 1.14d)
+- [ ] 1.5 Handle PD2 file renames (case-sensitive: lowercase to proper case)
+- [ ] 1.6 Stage documentation updates (matching_architecture.md)
+- [ ] 1.7 Stage Ghidra script updates
+- [ ] 1.8 Create single comprehensive commit for all changes
+
+#### Phase 2: Release Artifacts
+- [ ] 2.1 Add LICENSE file (MIT recommended for open source)
+- [ ] 2.2 Create VERSION file with current version number
+- [ ] 2.3 Verify README.md is current with all features
+
+#### Phase 3: Configuration
+- [ ] 3.1 Create config/function_index.json with default settings
+
+#### Phase 4: Data Refresh & Validation
+- [ ] 4.1 Run `python tools/refresh_viewer.py` to ensure all data is synced
+- [ ] 4.2 Verify d2_report_viewer.html loads correctly in browser
+- [ ] 4.3 Test function search and filtering features
+- [ ] 4.4 Test compare panel functionality
+
+#### Phase 5: Final Verification
+- [ ] 5.1 Run git status to confirm clean working directory
+- [ ] 5.2 Review all staged changes before final commit
+
+### Notes
+- Total pending changes: ~680 modified files, 11 new directories
+- Most changes are function_index JSON updates from Ghidra analysis
+- PD2 directory has 4 deleted + 4 new files (case sensitivity fix)
+
+---
+
+## Completed Task: Add Parameter Count Filtering (2024-12-27) ✓
+
+### Problem
+Functions with different parameter counts were being incorrectly matched:
+- Source: LoD/1.07 0x6FFBA590 (Storm.dll) - **6 parameters**
+- Matched to: LoD/1.08 0x6FFB1070 (Storm.dll) - **4 parameters**
+
+Additional issue: `refresh_viewer.py` appeared to hang with no output.
+
+### Root Cause
+1. The viewer pipeline uses `merge_function_index.py`, which had no param_count filtering
+2. `sequential_matcher.py` also lacked param_count pre-filtering
+3. No `flush=True` on print statements caused output buffering → appeared frozen
+
+### Solution Implemented
+
+#### 1. `sequential_matcher.py` Changes
+- Added `param_count_lookup` index structure for fast lookup by param count
+- Modified `build_lookups()` to populate param_count index
+- Modified `find_best_matches()` to filter candidates by param_count before scoring
+- Added `flush=True` to all print statements for real-time progress output
+
+#### 2. `merge_function_index.py` Changes
+- Added `_check_param_count_compatible()` helper method
+- Added param_count checks in primary index lookup
+- Added param_count checks in alternate index matching
+- Added param_count checks in verified methods (EXP) matching
+- Added `param_count_rejections` stat counter
+
+### Todo (Completed)
+- [x] Add param_count index to `SequentialMatcher` class
+- [x] Modify `find_best_matches()` to filter by param_count before scoring
+- [x] Add param_count filtering to `merge_function_index.py`
+- [x] Add progress output with flush=True
+- [x] Test with Storm.dll to verify fix
+
+### Results
+- **1,487 param_count rejections** in Storm.dll alone
+- Progress output now visible in real-time
+- Functions with unknown param_count (0) still match flexibly
+
+### Review
+Changes were minimal and focused:
+- `sequential_matcher.py`: ~50 lines modified
+- `merge_function_index.py`: ~30 lines modified
+- No restructuring of existing code
+- Backward compatible with existing data
+
+---
+
 ## Current State Summary
 
 ### What's Been Completed ✓

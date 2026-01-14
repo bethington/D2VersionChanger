@@ -79,14 +79,14 @@ Falls back to size filter → Candidates include ANY function with size 120-187 
 │  │ TIER 1: Hash Matches (Binary 0/1)                    Weight  Max Score ││
 │  ├────────────────────────────────────────────────────────────────────────┤│
 │  │ mnemonic_hash   = 1.0 if MNE matches, else 0.0       2.0     2.0       ││
-│  │ export_ordinal  = 1.0 if EXP matches, else 0.0       0.4     0.4       ││
+│  │ nop_hash        = 1.0/0.5/0.2 based on collisions    1.0     1.0       ││
 │  │ export_name     = 1.0 if name matches, else 0.0      0.4     0.4       ││
-│  │ str_index       = 1.0/0.5/0.2 based on collisions    1.0     1.0       ││
-│  │ cal_index       = 1.0/0.5/0.2 based on collisions    1.0     1.0       ││
-│  │ cfg_index       = 1.0/0.5/0.2 based on collisions    0.6     0.6       ││
-│  │ api_index       = 1.0 if API matches, else 0.0       1.0     1.0       ││
-│  │ con_index       = 1.0 if CON matches, else 0.0       0.5     0.5       ││
-│  │ pro_index       = 1.0 if PRO matches (unique)        0.3     0.3       ││
+│  │ str_hash        = 1.0/0.5/0.2 based on collisions    1.0     1.0       ││
+│  │ cal_hash        = 1.0/0.5/0.2 based on collisions    1.0     1.0       ││
+│  │ cfg_hash        = 1.0/0.5/0.2 based on collisions    0.6     0.6       ││
+│  │ api_hash        = 1.0 if API matches, else 0.0       1.0     1.0       ││
+│  │ con_hash        = 1.0 if CON matches, else 0.0       0.5     0.5       ││
+│  │ pro_hash        = 1.0 if PRO matches (unique)        0.3     0.3       ││
 │  └────────────────────────────────────────────────────────────────────────┘│
 │                                                                             │
 │  ┌────────────────────────────────────────────────────────────────────────┐│
@@ -100,7 +100,6 @@ Falls back to size filter → Candidates include ANY function with size 120-187 
 │  ┌────────────────────────────────────────────────────────────────────────┐│
 │  │ TIER 3: Numeric Similarities (Ratio: 0.0-1.0)        Weight  Max Score ││
 │  ├────────────────────────────────────────────────────────────────────────┤│
-│  │ size_sim         = min(a,b)/max(a,b)                 0.6     0.6       ││
 │  │ callee_count_sim = min(a,b)/max(a,b)                 0.6     0.6       ││
 │  │ string_count_sim = min(a,b)/max(a,b)                 0.8     0.8       ││
 │  │ basic_block_sim  = min(a,b)/max(a,b)                 0.6     0.6       ││
@@ -137,8 +136,8 @@ When mnemonic_hash doesn't match (function was recompiled with changes):
 │                                                                             │
 │ Tier 1 Scores (all 0):                                                      │
 │   mnemonic_hash:  0.0 × 2.0 = 0.0                                          │
-│   str_index:      0.0 × 1.0 = 0.0                                          │
-│   cal_index:      0.0 × 1.0 = 0.0                                          │
+│   str_hash:       0.0 × 1.0 = 0.0                                          │
+│   cal_hash:       0.0 × 1.0 = 0.0                                          │
 │   ...                                                                       │
 │                                                                             │
 │ Tier 2 Scores:                                                              │
@@ -146,7 +145,6 @@ When mnemonic_hash doesn't match (function was recompiled with changes):
 │   callee_overlap: 0.20 × 0.7 = 0.14  (some shared callees)                 │
 │                                                                             │
 │ Tier 3 Scores:                                                              │
-│   size_sim:         0.97 × 0.6 = 0.58  (145/150 = 0.97)                    │
 │   caller_count_sim: 0.00 × 0.6 = 0.00  (0/15 = 0!) ← BIG DIFFERENCE        │
 │   callee_count_sim: 0.60 × 0.6 = 0.36  (3/5 = 0.6)                         │
 │   param_count_sim:  1.00 × 1.0 = 1.00  (2/2 = 1.0)                         │
@@ -155,7 +153,7 @@ When mnemonic_hash doesn't match (function was recompiled with changes):
 │   stack_frame_sim:  0.90 × 0.6 = 0.54  (similar)                           │
 │   loop_count_sim:   1.00 × 0.4 = 0.40  (same)                              │
 │                                                                             │
-│ TOTAL SCORE: 4.56                                                           │
+│ TOTAL SCORE: 3.98                                                           │
 │ MIN_MATCH_SCORE: 0.45                                                       │
 │                                                                             │
 │ RESULT: MATCHED! (even though callers differ 0 vs 15)                       │
@@ -208,12 +206,11 @@ When mnemonic_hash doesn't match (function was recompiled with changes):
 │  When no strong signal (Tier 1) exists, many weak signals can               │
 │  accumulate to exceed MIN_MATCH_SCORE:                                      │
 │                                                                             │
-│    size_sim:         0.9 × 0.6 = 0.54                                      │
 │    param_count_sim:  1.0 × 1.0 = 1.00                                      │
 │    string_count_sim: 0.8 × 0.8 = 0.64                                      │
 │    basic_block_sim:  0.7 × 0.6 = 0.42                                      │
 │    ─────────────────────────────────                                       │
-│    TOTAL: 2.60 > 0.45 ← MATCHES!                                           │
+│    TOTAL: 2.06 > 0.45 ← MATCHES!                                           │
 │                                                                             │
 │  These functions could be completely unrelated but happen to have           │
 │  similar structural metrics.                                                │
@@ -278,9 +275,10 @@ def compute_match_score(...):
     # Check if ANY Tier 1 signal matched
     tier1_matched = any([
         features.get("mnemonic_hash", 0) > 0,
-        features.get("str_index", 0) > 0,
-        features.get("cal_index", 0) > 0,
-        features.get("api_index", 0) > 0,
+        features.get("nop_hash", 0) > 0,
+        features.get("str_hash", 0) > 0,
+        features.get("cal_hash", 0) > 0,
+        features.get("api_hash", 0) > 0,
     ])
 
     if not tier1_matched:

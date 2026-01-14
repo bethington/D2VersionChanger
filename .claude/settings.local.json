@@ -69,7 +69,13 @@
       "mcp__ghidra__get_xrefs_from",
       "mcp__ghidra__disassemble_function",
       "mcp__ghidra__get_function_callees",
-      "mcp__ghidra__get_bulk_function_hashes"
+      "mcp__ghidra__get_bulk_function_hashes",
+      "Bash(timeout 10 python:*)",
+      "Bash(timeout 15 python:*)",
+      "Bash(timeout 30 python:*)",
+      "Bash(timeout 60 python:*)",
+      "Bash(timeout 20 python:*)",
+      "Bash(timeout 120 python:*)"
     ],
     "deny": [],
     "ask": []
