@@ -1,0 +1,10 @@
+{
+  "program_name": "D2VidTst.exe",
+  "game_type": "Classic",
+  "version": "1.12a",
+  "image_base": "0x00400000",
+  "total_functions": 0,
+  "export_timestamp": "Sun Jan 11 22:13:43 CST 2026",
+  "functions": [
+  ]
+}
