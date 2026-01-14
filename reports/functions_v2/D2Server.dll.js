@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-16T20:37:06.337995
+// Generated: 2025-12-27T22:44:31.463304
 // Functions for D2Server.dll
 // Versions: Classic/1.00
 
@@ -40,9 +40,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "InitializeGameServerHooks|0x68021590",
           "ValidatePluginInterface|0x68001820",
-          "SetLastError|0x7",
-          "InitializeGameServerHooks|0x68021590"
+          "SetLastError|0x7"
         ]
       },
       "instructions": {
@@ -131,8 +131,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_7d258176f6fdc1b8",
       "callees": {
         "Classic/1.00": [
-          "InitializeServerState|0x680218C6",
-          "NoOpStubFunction|0x68001A90"
+          "NoOpStubFunction|0x68001A90",
+          "InitializeServerState|0x680218C6"
         ]
       },
       "strings": {
@@ -232,15 +232,15 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "InitializeDiabloLibraries|0x68002390",
-          "ProcessGameObjectEntries|0x68002150",
-          "SetMaxGameNumberLimit|0x680021A0",
           "InitializeApiHooks|0x68002510",
-          "NoOpStubFunction|0x68001A90",
           "InitializeSystemInfo|0x68004030",
-          "SetLastError|0x7",
-          "LoadLibraryA|0x8",
+          "ProcessGameObjectEntries|0x68002150",
           "InitializeServerComponents|0x68001AA0",
-          "InitializeGameServerSlots|0x68006488"
+          "InitializeGameServerSlots|0x68006488",
+          "LoadLibraryA|0x8",
+          "NoOpStubFunction|0x68001A90",
+          "SetLastError|0x7",
+          "SetMaxGameNumberLimit|0x680021A0"
         ]
       },
       "callers": {
@@ -420,9 +420,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "InitializeSystemInfo|0x68004030",
           "InitializeCallbackDispatchTable|0x68007540",
           "NoOpStubFunction|0x68001A90",
-          "InitializeSystemInfo|0x68004030",
           "SetLastError|0x7"
         ]
       },
@@ -589,9 +589,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "Sleep|0x9",
           "ProcessTimedServerUpdates|0x680058C0",
-          "GetTickCount|0xA",
-          "Sleep|0x9"
+          "GetTickCount|0xA"
         ]
       },
       "instructions": {
@@ -685,11 +685,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetShutdownSuccess|0x680024F0",
           "FUN_68002880|0x68002880",
-          "InitializeServerCleanup|0x68001EC0",
-          "NoOpStubFunction|0x68001A90",
+          "GetShutdownSuccess|0x680024F0",
           "FreeLibrary|0xB",
+          "NoOpStubFunction|0x68001A90",
+          "InitializeServerCleanup|0x68001EC0",
           "GetModuleHandleA|0xC"
         ]
       },
@@ -811,8 +811,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "IsBadReadPtr|0xE",
-          "IsBadCodePtr|0xD"
+          "IsBadCodePtr|0xD",
+          "IsBadReadPtr|0xE"
         ]
       },
       "callers": {
@@ -1886,16 +1886,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "InitializePatchFogPool|0x680022C0",
           "FUN_6800102e|0x6800102E",
-          "LoadItemDataFromConfigFile|0x68007980",
+          "InitializeGameServerHooks|0x68021590",
+          "LoadWorldEventConfiguration|0x68007A10",
           "InitializeSystemInfo|0x68004030",
+          "InitializePatchFogPool|0x680022C0",
+          "LoadItemDataFromConfigFile|0x68007980",
           "D2GSServerShutdown|0x68001760",
           "D2GameServerPreInit|0x680010C0",
-          "FUN_68001b30|0x68001B30",
-          "InitializeGameServerHooks|0x68021590",
           "LoadScriptFilePatches|0x68003100",
-          "LoadWorldEventConfiguration|0x68007A10",
+          "FUN_68001b30|0x68001B30",
           "InitializeGameServer|0x680013F0"
         ]
       },
@@ -1952,10 +1952,10 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "ProcessGameObjectEntries|0x68002150",
-          "FUN_68001b30|0x68001B30",
           "InitializeServerSubsystems|0x68002210",
-          "LoadScriptFilePatches|0x68003100",
-          "AlwaysReturnSuccess|0x68002270"
+          "AlwaysReturnSuccess|0x68002270",
+          "FUN_68001b30|0x68001B30",
+          "LoadScriptFilePatches|0x68003100"
         ]
       },
       "callers": {
@@ -2051,22 +2051,22 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_21b3de961bc77d4b",
       "callees": {
         "Classic/1.00": [
-          "AddToAccumulator|0x68001F00",
-          "malloc|0x4A",
-          "FUN_68005240|0x68005240",
-          "SecureMemoryCopy|0x68004FA0",
-          "free|0x49",
-          "ProcessParameterString|0x68001F20",
-          "NoOpStubFunction|0x68001A90",
           "GetPeFileEntryPoint|0x68004E90",
+          "SecureMemoryCopy|0x68004FA0",
+          "FUN_68005240|0x68005240",
+          "ProcessParameterString|0x68001F20",
+          "AddToAccumulator|0x68001F00",
+          "free|0x49",
+          "malloc|0x4A",
+          "NoOpStubFunction|0x68001A90",
           "GetModuleHandleA|0xC",
           "FUN_68005100|0x68005100"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "InitializeServerCleanup|0x68001EC0",
-          "InitializeServerComponents|0x68001AA0"
+          "InitializeServerComponents|0x68001AA0",
+          "InitializeServerCleanup|0x68001EC0"
         ]
       },
       "instructions": {
@@ -2170,8 +2170,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "FreeCleanupResources|0x68003260",
-          "FreePatchFogPool|0x68002280",
-          "FUN_68001b30|0x68001B30"
+          "FUN_68001b30|0x68001B30",
+          "FreePatchFogPool|0x68002280"
         ]
       },
       "callers": {
@@ -2342,13 +2342,13 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "malloc|0x4A",
-          "free|0x49",
-          "FindPatternInBuffer|0x68001FE0",
-          "GetPEOptionalHeaderSize|0x68004EC0",
           "ParseHexStringToBytes|0x68002090",
-          "strtoul|0x48",
-          "SplitStringWithDelimiters|0x68004870"
+          "SplitStringWithDelimiters|0x68004870",
+          "GetPEOptionalHeaderSize|0x68004EC0",
+          "FindPatternInBuffer|0x68001FE0",
+          "free|0x49",
+          "malloc|0x4A",
+          "strtoul|0x48"
         ]
       },
       "callers": {
@@ -2731,8 +2731,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "D2GameServerPreInit|0x680010C0",
-          "InitializeServerComponents|0x68001AA0"
+          "InitializeServerComponents|0x68001AA0",
+          "D2GameServerPreInit|0x680010C0"
         ]
       },
       "instructions": {
@@ -2999,9 +2999,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "CopyLogHandlerPointer|0x680022B0",
           "InitializePatchFogPool|0x680022C0",
-          "ProcessServerHandleCounters|0x68002230",
-          "CopyLogHandlerPointer|0x680022B0"
+          "ProcessServerHandleCounters|0x68002230"
         ]
       },
       "callers": {
@@ -3926,8 +3926,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetModuleHandleA|0xC",
-          "InstallApiHooks|0x68002560"
+          "InstallApiHooks|0x68002560",
+          "GetModuleHandleA|0xC"
         ]
       },
       "callers": {
@@ -4033,15 +4033,15 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "VirtualQuery|0x13",
           "lstrcmpiA|0x14",
+          "IsWindowsNTPlatform|0x68002830",
+          "FindExportDirectoryByName|0x680027A0",
+          "SetLastErrorEx|0x2",
           "IsBadWritePtr|0x15",
           "VirtualProtect|0x12",
           "IsBadCodePtr|0xD",
-          "SetLastErrorEx|0x2",
-          "SetLastError|0x7",
-          "IsWindowsNTPlatform|0x68002830",
-          "FindExportDirectoryByName|0x680027A0"
+          "VirtualQuery|0x13",
+          "SetLastError|0x7"
         ]
       },
       "callers": {
@@ -4154,9 +4154,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "IsBadReadPtr|0xE",
           "lstrcmpiA|0x14",
-          "SetLastErrorEx|0x2"
+          "SetLastErrorEx|0x2",
+          "IsBadReadPtr|0xE"
         ]
       },
       "callers": {
@@ -4362,10 +4362,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "FormatPacketDataDump|0x68007060",
+          "ValidateClientSession|0x680068F8",
           "FUN_680029b0|0x680029B0",
-          "WriteFormattedLogEntry|0x68007140",
-          "ValidateClientSession|0x680068F8"
+          "FormatPacketDataDump|0x68007060",
+          "WriteFormattedLogEntry|0x68007140"
         ]
       },
       "strings": {
@@ -4466,8 +4466,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_f8062181850a04fb",
       "callers": {
         "Classic/1.00": [
-          "ProcessPacketHandler|0x68002890",
-          "ValidateAndProcessPacket|0x68002B00"
+          "ValidateAndProcessPacket|0x68002B00",
+          "ProcessPacketHandler|0x68002890"
         ]
       },
       "instructions": {
@@ -5516,13 +5516,13 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "fopen|0x43",
-          "fgets|0x44",
+          "fclose|0x46",
           "realloc|0x45",
-          "FreeCleanupResources|0x68003260",
           "ParseConfigFromCommandLine|0x680032E0",
+          "FreeCleanupResources|0x68003260",
+          "fopen|0x43",
           "NoOpStubFunction|0x68001A90",
-          "fclose|0x46"
+          "fgets|0x44"
         ]
       },
       "callers": {
@@ -5757,10 +5757,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "ParseCommandLineArguments|0x68004AA0",
           "ParseHexStringToBuffer|0x68004EF0",
           "_strdup|0x4D",
           "free|0x49",
-          "ParseCommandLineArguments|0x68004AA0",
           "strtoul|0x48"
         ]
       },
@@ -6091,9 +6091,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "ParseCommandLineArguments|0x68004AA0",
           "FindCommandEntry|0x680035F0",
-          "free|0x49",
-          "ParseCommandLineArguments|0x68004AA0"
+          "free|0x49"
         ]
       },
       "callers": {
@@ -6808,8 +6808,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateClientAntiCheatInfo|0x68003E30",
-          "ProcessClientPacketValidation|0x68003930"
+          "ProcessClientPacketValidation|0x68003930",
+          "ValidateClientAntiCheatInfo|0x68003E30"
         ]
       },
       "instructions": {
@@ -7609,17 +7609,17 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "GetVersionExA|0x16",
+          "GetUserNameA|0x27",
+          "GetCurrentProcess|0x18",
           "MeasureCpuFrequency|0x68004340",
           "GetSystemInfo|0x1B",
-          "FUN_68004420|0x68004420",
-          "GetVersionExA|0x16",
-          "GetCurrentProcess|0x18",
-          "GetComputerNameA|0x19",
-          "FormatCpuInfo|0x680042C0",
-          "NoOpStubFunction|0x68001A90",
-          "GetUserNameA|0x27",
           "GetProcessAffinityMask|0x17",
-          "GlobalMemoryStatus|0x1A"
+          "GlobalMemoryStatus|0x1A",
+          "GetComputerNameA|0x19",
+          "FUN_68004420|0x68004420",
+          "NoOpStubFunction|0x68001A90",
+          "FormatCpuInfo|0x680042C0"
         ]
       },
       "callers": {
@@ -7873,14 +7873,14 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "QueryPerformanceCounter|0x1C",
           "__allmul|0x68009B30",
-          "GetThreadPriority|0x1E",
           "__alldiv|0x68009A80",
           "QueryPerformanceFrequency|0x20",
           "SetThreadPriority|0x1D",
           "GetCurrentThread|0x1F",
-          "GetTickCount|0xA"
+          "GetThreadPriority|0x1E",
+          "GetTickCount|0xA",
+          "QueryPerformanceCounter|0x1C"
         ]
       },
       "callers": {
@@ -7976,8 +7976,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_78013422f1a366f0",
       "callees": {
         "Classic/1.00": [
-          "sprintf|0x68009A6E",
-          "GetVersionExA|0x16"
+          "GetVersionExA|0x16",
+          "sprintf|0x68009A6E"
         ]
       },
       "callers": {
@@ -8483,8 +8483,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ConvertCharToHexDigit|0x680045A0",
-          "_isctype|0x40"
+          "_isctype|0x40",
+          "ConvertCharToHexDigit|0x680045A0"
         ]
       },
       "callers": {
@@ -8590,15 +8590,15 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "realloc|0x45",
-          "malloc|0x4A",
-          "free|0x49"
+          "free|0x49",
+          "malloc|0x4A"
         ]
       },
       "callers": {
         "Classic/1.00": [
+          "LoadWorldEventConfiguration|0x68007A10",
           "ProcessParameterString|0x68001F20",
-          "ParseAntiCheatConfiguration|0x68006368",
-          "LoadWorldEventConfiguration|0x68007A10"
+          "ParseAntiCheatConfiguration|0x68006368"
         ]
       },
       "instructions": {
@@ -8700,8 +8700,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "realloc|0x45",
-          "malloc|0x4A",
-          "free|0x49"
+          "free|0x49",
+          "malloc|0x4A"
         ]
       },
       "callers": {
@@ -8810,8 +8810,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "realloc|0x45",
-          "malloc|0x4A",
-          "free|0x49"
+          "free|0x49",
+          "malloc|0x4A"
         ]
       },
       "instructions": {
@@ -8916,9 +8916,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
+          "FormatMessageA|0x21",
           "GetLastError|0x22",
-          "LocalFree|0x23",
-          "FormatMessageA|0x21"
+          "LocalFree|0x23"
         ]
       },
       "instructions": {
@@ -9197,8 +9197,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "malloc|0x4A",
           "strncpy|0x4B",
+          "malloc|0x4A",
           "strtoul|0x48"
         ]
       },
@@ -9302,10 +9302,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "g_pfnDebugLogger|0x6800D7D0",
-          "GetLastError|0x22",
           "FlushInstructionCache|0x24",
           "GetCurrentProcess|0x18",
+          "GetLastError|0x22",
+          "g_pfnDebugLogger|0x6800D7D0",
           "VirtualProtect|0x12"
         ]
       },
@@ -9426,8 +9426,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_b191d661883a01c8",
       "callees": {
         "Classic/1.00": [
-          "g_pfnDebugLogger|0x6800D7D0",
           "GetLastError|0x22",
+          "g_pfnDebugLogger|0x6800D7D0",
           "VirtualProtect|0x12"
         ]
       },
@@ -9545,8 +9545,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_c8fb3b0e799ab3de",
       "callees": {
         "Classic/1.00": [
-          "malloc|0x4A",
-          "SecureMemoryCopy|0x68004FA0"
+          "SecureMemoryCopy|0x68004FA0",
+          "malloc|0x4A"
         ]
       },
       "callers": {
@@ -9812,10 +9812,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "TriggerRandomEvent|0x680234C5",
-          "ProcessTimedServerUpdates|0x680058C0",
           "InitializeBaseStats|0x680059E0",
-          "GetAntiCheatAddressPairs|0x68003DB0"
+          "TriggerRandomEvent|0x680234C5",
+          "GetAntiCheatAddressPairs|0x68003DB0",
+          "ProcessTimedServerUpdates|0x680058C0"
         ]
       },
       "instructions": {
@@ -9987,8 +9987,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_cdf4a51a4b61da79",
       "callees": {
         "Classic/1.00": [
-          "InitializeDebugLogAndWrite|0x68006258",
-          "DumpCurrentThreadInformation|0x68006DC8"
+          "DumpCurrentThreadInformation|0x68006DC8",
+          "InitializeDebugLogAndWrite|0x68006258"
         ]
       },
       "strings": {
@@ -10084,8 +10084,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_214bd86727ebaf9f",
       "callees": {
         "Classic/1.00": [
-          "TriggerRandomEvent|0x680234C5",
-          "FUN_680056b0|0x680056B0"
+          "FUN_680056b0|0x680056B0",
+          "TriggerRandomEvent|0x680234C5"
         ]
       },
       "instructions": {
@@ -10550,8 +10550,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ProcessTimedServerUpdates|0x680058C0",
-          "CreateStatSnapshot|0x680019B0"
+          "CreateStatSnapshot|0x680019B0",
+          "ProcessTimedServerUpdates|0x680058C0"
         ]
       },
       "instructions": {
@@ -10645,14 +10645,14 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "srand|0x3C",
-          "ValidateTimedSecurityCheck|0x68007F60",
-          "CalculateModifiedStatTotal|0x68005860",
-          "ProcessEntityWithCallback|0x68005A10",
-          "time|0x3B",
+          "GenerateRandomInRange|0x680055A0",
           "InitializeBaseStats|0x680059E0",
+          "ValidateTimedSecurityCheck|0x68007F60",
+          "ProcessEntityWithCallback|0x68005A10",
+          "CalculateModifiedStatTotal|0x68005860",
+          "srand|0x3C",
           "GetTickCount|0xA",
-          "GenerateRandomInRange|0x680055A0"
+          "time|0x3B"
         ]
       },
       "callers": {
@@ -10868,10 +10868,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ProcessEntityCallback|0x680220DD",
-          "ValidateGameIdAndGetEntry|0x680064E8",
           "cleanup_and_exit|0x68005AFE",
-          "FUN_68005b20|0x68005B20"
+          "ValidateGameIdAndGetEntry|0x680064E8",
+          "FUN_68005b20|0x68005B20",
+          "ProcessEntityCallback|0x680220DD"
         ]
       },
       "callers": {
@@ -11116,8 +11116,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_6d23c59b94f45588",
       "callers": {
         "Classic/1.00": [
-          "ProcessEntityCallback|0x680220DD",
-          "ProcessEntityWithCallback|0x68005A10"
+          "ProcessEntityWithCallback|0x68005A10",
+          "ProcessEntityCallback|0x680220DD"
         ]
       },
       "instructions": {
@@ -11566,8 +11566,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "WriteFormattedLogEntry|0x68007140",
           "DumpCurrentThreadInformation|0x68006DC8",
+          "WriteFormattedLogEntry|0x68007140",
           "FUN_68005e00|0x68005E00"
         ]
       },
@@ -11671,8 +11671,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_1a105018d382356d",
       "callers": {
         "Classic/1.00": [
-          "ExceptionHandlerCopyAndLog|0x68005D77",
-          "FUN_68005c90|0x68005C90"
+          "FUN_68005c90|0x68005C90",
+          "ExceptionHandlerCopyAndLog|0x68005D77"
         ]
       },
       "instructions": {
@@ -12147,8 +12147,8 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "STR_d25b051436323380",
       "callees": {
         "Classic/1.00": [
-          "FUN_68005fe8|0x68005FE8",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "InitializeDebugLogAndWrite|0x68006258",
+          "FUN_68005fe8|0x68005FE8"
         ]
       },
       "strings": {
@@ -12525,8 +12525,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeDebugLogAndWrite|0x68006258",
-          "GetUnitDimensions|0x680061A8"
+          "GetUnitDimensions|0x680061A8",
+          "InitializeDebugLogAndWrite|0x68006258"
         ]
       },
       "callers": {
@@ -12714,8 +12714,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_68003740|0x68003740",
-          "DebugDumpUnitInfo|0x680060A8"
+          "DebugDumpUnitInfo|0x680060A8",
+          "FUN_68003740|0x68003740"
         ]
       },
       "instructions": {
@@ -12809,28 +12809,28 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "fopen|0x43",
-          "WriteTimestampedLogEntry|0x68006298"
+          "WriteTimestampedLogEntry|0x68006298",
+          "fopen|0x43"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_68005f58|0x68005F58",
-          "ValidateClientAntiCheatInfo|0x68003E30",
-          "ProcessClientPacketValidation|0x68003930",
-          "ValidateGameIdAndGetEntry|0x680064E8",
-          "FUN_68002f90|0x68002F90",
-          "DebugDumpUnitInfo|0x680060A8",
-          "FUN_68005620|0x68005620",
-          "ParseAntiCheatConfiguration|0x68006368",
-          "ValidateClientSession|0x680068F8",
-          "LogGameObjectDebugInfo|0x68005EF8",
           "ValidateAndReleaseClientInfo|0x68006798",
-          "ValidateClientAndProcess|0x68003B40",
-          "FUN_68006008|0x68006008",
-          "FUN_68006fd8|0x68006FD8",
           "DumpCurrentThreadInformation|0x68006DC8",
-          "ValidateClientInfoAndUpdateCrypto|0x68003C50"
+          "FUN_68005f58|0x68005F58",
+          "FUN_68002f90|0x68002F90",
+          "FUN_68006fd8|0x68006FD8",
+          "LogGameObjectDebugInfo|0x68005EF8",
+          "DebugDumpUnitInfo|0x680060A8",
+          "ValidateClientAndProcess|0x68003B40",
+          "FUN_68005620|0x68005620",
+          "ProcessClientPacketValidation|0x68003930",
+          "ValidateClientSession|0x680068F8",
+          "ValidateGameIdAndGetEntry|0x680064E8",
+          "ValidateClientAntiCheatInfo|0x68003E30",
+          "FUN_68006008|0x68006008",
+          "ValidateClientInfoAndUpdateCrypto|0x68003C50",
+          "ParseAntiCheatConfiguration|0x68006368"
         ]
       },
       "strings": {
@@ -12933,11 +12933,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetLocalTime|0x25",
-          "vfprintf|0x38",
           "fflush|0x3A",
+          "fputc|0x39",
           "fprintf|0x37",
-          "fputc|0x39"
+          "GetLocalTime|0x25",
+          "vfprintf|0x38"
         ]
       },
       "callers": {
@@ -13065,11 +13065,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "free|0x49",
-          "InitializeDebugLogAndWrite|0x68006258",
           "ParseCommandLineArguments|0x68004AA0",
-          "strtoul|0x48",
-          "SplitStringWithDelimiters|0x68004870"
+          "InitializeDebugLogAndWrite|0x68006258",
+          "SplitStringWithDelimiters|0x68004870",
+          "free|0x49",
+          "strtoul|0x48"
         ]
       },
       "callers": {
@@ -13196,8 +13196,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeGameServerState|0x68007950",
           "FUN_680064b8|0x680064B8",
+          "InitializeGameServerState|0x68007950",
           "ProcessGameEntryIfValid|0x68006528"
         ]
       },
@@ -13475,16 +13475,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "GetGameEntryFlags|0x68022EBF",
-          "ValidateClientAndProcess|0x68003B40",
-          "GameMessageHandler|0x6802387B",
-          "ConditionalMessageHandler|0x680056F0",
-          "ProcessEntityWithValidation|0x680065C8",
           "ProcessEntityWithCallback|0x68005A10",
-          "ValidateGameIdOnly|0x68006548",
+          "CleanupAndShutdownGameServer|0x6802104E",
+          "GameMessageHandler|0x6802387B",
+          "GetGameEntryFlags|0x68022EBF",
+          "ConditionalMessageHandler|0x680056F0",
           "SetGameEntryFlag|0x68006568",
+          "ValidateGameIdOnly|0x68006548",
+          "ValidateClientAndProcess|0x68003B40",
           "ProcessGameEntryIfValid|0x68006528",
-          "CleanupAndShutdownGameServer|0x6802104E"
+          "ProcessEntityWithValidation|0x680065C8"
         ]
       },
       "strings": {
@@ -13601,8 +13601,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "InitializeGameServerSlots|0x68006488",
-          "CallFunctionWithErrorHandling|0x68001870"
+          "CallFunctionWithErrorHandling|0x68001870",
+          "InitializeGameServerSlots|0x68006488"
         ]
       },
       "instructions": {
@@ -14027,8 +14027,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ValidateGameIdAndGetEntry|0x680064E8",
-          "InitializeCallbackWithContext|0x68006588"
+          "InitializeCallbackWithContext|0x68006588",
+          "ValidateGameIdAndGetEntry|0x680064E8"
         ]
       },
       "callers": {
@@ -14472,8 +14472,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "VirtualFree|0xF",
-          "InitializeDebugLogAndWrite|0x68006258"
+          "InitializeDebugLogAndWrite|0x68006258",
+          "VirtualFree|0xF"
         ]
       },
       "callers": {
@@ -14687,9 +14687,9 @@ var FUNCTIONS_D2Server_dll = {
         "Classic/1.00": [
           "sprintf|0x42",
           "InitializeDebugLogAndWrite|0x68006258",
+          "FormatBufferAndCallback|0x68003430",
           "WriteFormattedLogEntry|0x68007140",
-          "GetTickCount|0xA",
-          "FormatBufferAndCallback|0x68003430"
+          "GetTickCount|0xA"
         ]
       },
       "callers": {
@@ -14851,11 +14851,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "sprintf|0x42",
-          "IsBadReadPtr|0xE",
-          "_isctype|0x40",
           "fflush|0x3A",
-          "fprintf|0x37"
+          "fprintf|0x37",
+          "sprintf|0x42",
+          "_isctype|0x40",
+          "IsBadReadPtr|0xE"
         ]
       },
       "callers": {
@@ -14994,8 +14994,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ExceptionHandlerCopyAndLog|0x68005D77",
-          "FUN_68005620|0x68005620"
+          "FUN_68005620|0x68005620",
+          "ExceptionHandlerCopyAndLog|0x68005D77"
         ]
       },
       "strings": {
@@ -15329,8 +15329,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ProcessPacketHandler|0x68002890",
-          "ValidateSystemPacket|0x68003880"
+          "ValidateSystemPacket|0x68003880",
+          "ProcessPacketHandler|0x68002890"
         ]
       },
       "strings": {
@@ -15456,22 +15456,22 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "sprintf|0x42",
-          "fopen|0x43",
-          "GetEntityNameString|0x68007250",
           "FormatFunctionSignature|0x68007200",
-          "WriteTimestampedLogEntry|0x68006298"
+          "sprintf|0x42",
+          "WriteTimestampedLogEntry|0x68006298",
+          "GetEntityNameString|0x68007250",
+          "fopen|0x43"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "FormatPacketDataDump|0x68007060",
-          "ProcessPacketHandler|0x68002890",
-          "ExceptionHandlerCopyAndLog|0x68005D77",
-          "HandleCharacterSaveError|0x68006708",
           "ValidateClientSession|0x680068F8",
+          "HandleCharacterSaveError|0x68006708",
           "FUN_68005c90|0x68005C90",
-          "ValidateSystemPacket|0x68003880"
+          "FormatPacketDataDump|0x68007060",
+          "ValidateSystemPacket|0x68003880",
+          "ProcessPacketHandler|0x68002890",
+          "ExceptionHandlerCopyAndLog|0x68005D77"
         ]
       },
       "strings": {
@@ -17531,8 +17531,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "GetProcAddress|0x11",
-          "GetModuleHandleA|0xC",
-          "LoadLibraryA|0x8"
+          "LoadLibraryA|0x8",
+          "GetModuleHandleA|0xC"
         ]
       },
       "strings": {
@@ -17723,9 +17723,9 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "DestroyLinkedListAndReleaseBuffers|0x680087D0",
-          "ParseItemConfigFile|0x680081A0",
           "strncpy|0x4B",
-          "NoOpStubFunction|0x68001A90"
+          "NoOpStubFunction|0x68001A90",
+          "ParseItemConfigFile|0x680081A0"
         ]
       },
       "callers": {
@@ -17847,19 +17847,19 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "free|0x49",
+          "ParseStringPairToUnsigned|0x68007DF0",
+          "DestroyLinkedListAndReleaseBuffers|0x680087D0",
+          "ValidateConfigurationStringPair|0x68007E20",
+          "_access|0x68009BD8",
+          "ReadConfigValue|0x68007DA0",
+          "_stricmp|0x4C",
+          "SplitStringWithDelimiters|0x68004870",
           "SafeDestroyObject|0x68008C70",
           "LoadItemDataFromConfigFile|0x68007980",
-          "_stricmp|0x4C",
-          "NoOpStubFunction|0x68001A90",
-          "_access|0x68009BD8",
-          "DestroyLinkedListAndReleaseBuffers|0x680087D0",
-          "ReadConfigValue|0x68007DA0",
           "strncpy|0x4B",
           "ParseConfigurationString|0x68008C20",
-          "ParseStringPairToUnsigned|0x68007DF0",
-          "SplitStringWithDelimiters|0x68004870",
-          "ValidateConfigurationStringPair|0x68007E20"
+          "free|0x49",
+          "NoOpStubFunction|0x68001A90"
         ]
       },
       "callers": {
@@ -18506,10 +18506,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "fopen|0x43",
+          "fclose|0x46",
           "ValidateAndCalculateChecksum|0x68007F40",
           "fread|0x35",
-          "fclose|0x46"
+          "fopen|0x43"
         ]
       },
       "callers": {
@@ -18631,8 +18631,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "ValidateGameStatisticsHeader|0x68007EB0",
-          "ValidateTimedSecurityCheck|0x68007F60"
+          "ValidateTimedSecurityCheck|0x68007F60",
+          "ValidateGameStatisticsHeader|0x68007EB0"
         ]
       },
       "instructions": {
@@ -18833,9 +18833,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "fopen|0x43",
+          "fclose|0x46",
           "fwrite|0x28",
-          "fclose|0x46"
+          "fopen|0x43"
         ]
       },
       "callers": {
@@ -19276,8 +19276,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "DestroyLinkedListAndReleaseBuffers|0x680087D0",
           "DestroyBufferManagerList|0x68008D80",
+          "DestroyLinkedListAndReleaseBuffers|0x680087D0",
           "Unwind@68009ff9|0x68009FF9"
         ]
       },
@@ -19373,26 +19373,26 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ios_base|0x5C",
-          "SwapBufferDescriptors|0x68008E20",
-          "GetLine|0x68009F56",
-          "setstate|0x63",
-          "ParseAndAddNameListToQueue|0x680084A0",
-          "DestroyBufferManagerList|0x68008D80",
-          "open|0x62",
-          "_Init|0x6A",
-          "fclose|0x46",
-          "GetItemDataValue|0x68008DE0",
-          "basic_filebuf<char,struct_std::char_traits<char>_>|0x60",
-          "basic_istream<char,struct_std::char_traits<char>_>|0x5F",
-          "ExecuteProtectedCallback|0x68009D7C",
-          "InitializeConfigContainer|0x68008D50",
-          "~basic_ios<char,struct_std::char_traits<char>_>|0x66",
-          "InvokeCallbackArrayWithSeh|0x68009E70",
           "TransferListNode|0x68008E50",
-          "MergeSortedConfigLists|0x68008EB0",
+          "GetItemDataValue|0x68008DE0",
+          "open|0x62",
+          "setstate|0x63",
+          "basic_filebuf<char,struct_std::char_traits<char>_>|0x60",
+          "InitializeConfigContainer|0x68008D50",
+          "ExecuteProtectedCallback|0x68009D7C",
           "~basic_filebuf<char,struct_std::char_traits<char>_>|0x64",
-          "_Tidy|0x67"
+          "ParseAndAddNameListToQueue|0x680084A0",
+          "SwapBufferDescriptors|0x68008E20",
+          "DestroyBufferManagerList|0x68008D80",
+          "fclose|0x46",
+          "_Tidy|0x67",
+          "InvokeCallbackArrayWithSeh|0x68009E70",
+          "basic_istream<char,struct_std::char_traits<char>_>|0x5F",
+          "GetLine|0x68009F56",
+          "MergeSortedConfigLists|0x68008EB0",
+          "ios_base|0x5C",
+          "_Init|0x6A",
+          "~basic_ios<char,struct_std::char_traits<char>_>|0x66"
         ]
       },
       "callers": {
@@ -19536,18 +19536,18 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "strchr|0x2D",
-          "strrchr|0x2B",
-          "CopyStringPairWithExceptionHandling|0x68008FD0",
-          "_Eos|0x59",
-          "_Grow|0x56",
-          "tolower|0x3F",
-          "OperatorDelete|0x68009D76",
+          "isspace|0x2C",
           "_Xlen|0x58",
-          "AllocateListNode|0x68008FA0",
           "_Tidy|0x67",
           "OperatorNew|0x68009D32",
-          "isspace|0x2C"
+          "AllocateListNode|0x68008FA0",
+          "strrchr|0x2B",
+          "CopyStringPairWithExceptionHandling|0x68008FD0",
+          "strchr|0x2D",
+          "_Eos|0x59",
+          "tolower|0x3F",
+          "OperatorDelete|0x68009D76",
+          "_Grow|0x56"
         ]
       },
       "callers": {
@@ -19688,8 +19688,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "LoadItemDataFromConfigFile|0x68007980",
-          "LoadWorldEventConfiguration|0x68007A10"
+          "LoadWorldEventConfiguration|0x68007A10",
+          "LoadItemDataFromConfigFile|0x68007980"
         ]
       },
       "instructions": {
@@ -19787,16 +19787,16 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "SearchStringInList|0x68008A90",
-          "append|0x55",
-          "_Eos|0x59",
-          "_Grow|0x56",
-          "tolower|0x3F",
-          "OperatorDelete|0x68009D76",
+          "isspace|0x2C",
           "_Xlen|0x58",
           "_Tidy|0x67",
-          "isspace|0x2C",
-          "OperatorNew|0x68009D32"
+          "OperatorNew|0x68009D32",
+          "append|0x55",
+          "_Eos|0x59",
+          "tolower|0x3F",
+          "_Grow|0x56",
+          "SearchStringInList|0x68008A90",
+          "OperatorDelete|0x68009D76"
         ]
       },
       "callers": {
@@ -19929,10 +19929,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "_strnicmp|0x3E",
+          "_Tidy|0x67",
           "erase|0x54",
-          "_Grow|0x56",
-          "_Tidy|0x67"
+          "_strnicmp|0x3E",
+          "_Grow|0x56"
         ]
       },
       "callers": {
@@ -20122,9 +20122,9 @@ var FUNCTIONS_D2Server_dll = {
       "display_name": "NOP_9dcf4fd807602ed1",
       "callees": {
         "Classic/1.00": [
+          "SafeDestroyObject|0x68008C70",
           "InvokePluginVirtualMethod|0x68008C50",
-          "ParseConfigurationString|0x68008C20",
-          "SafeDestroyObject|0x68008C70"
+          "ParseConfigurationString|0x68008C20"
         ]
       },
       "instructions": {
@@ -20621,8 +20621,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "assign|0x52",
           "erase|0x54",
+          "assign|0x52",
           "_Eos|0x59",
           "_Grow|0x56"
         ]
@@ -20819,8 +20819,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_68009140|0x68009140",
-          "FUN_680091d0|0x680091D0"
+          "FUN_680091d0|0x680091D0",
+          "FUN_68009140|0x68009140"
         ]
       },
       "instructions": {
@@ -21697,13 +21697,13 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeDelimiterParser|0x68009790",
-          "strchr|0x2D",
+          "OperatorNew|0x68009D32",
           "InitializeSingleItemParser|0x68009920",
           "InitializeFunctionPointerWithAddress|0x68009940",
           "DelimiterParserDestructor|0x680097B0",
-          "OperatorDelete|0x68009D76",
-          "OperatorNew|0x68009D32"
+          "InitializeDelimiterParser|0x68009790",
+          "strchr|0x2D",
+          "OperatorDelete|0x68009D76"
         ]
       },
       "callers": {
@@ -21821,8 +21821,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "InitializeDelimiterParser|0x68009790",
-          "InitializeSingleItemParser|0x68009920"
+          "InitializeSingleItemParser|0x68009920",
+          "InitializeDelimiterParser|0x68009790"
         ]
       },
       "instructions": {
@@ -21901,10 +21901,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "Unwind@6800a060|0x6800A060",
           "InitializeFunctionPointerWithAddress|0x68009940",
           "SplitStringWithDelimiter|0x68009830",
-          "DelimiterParserDestructor|0x680097B0"
+          "DelimiterParserDestructor|0x680097B0",
+          "Unwind@6800a060|0x6800A060"
         ]
       },
       "instructions": {
@@ -22160,8 +22160,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "CreateParserByDelimiter|0x68009610",
-          "SafeDestroyObject|0x68008C70"
+          "SafeDestroyObject|0x68008C70",
+          "CreateParserByDelimiter|0x68009610"
         ]
       },
       "instructions": {
@@ -22503,9 +22503,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitTerm|0x68009F10",
+          "free|0x49",
           "malloc|0x4A",
-          "free|0x49"
+          "InitTerm|0x68009F10"
         ]
       },
       "callers": {
@@ -23094,8 +23094,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callers": {
         "Classic/1.00": [
-          "SehFinalizerCallback|0x68009DE4",
-          "ExecuteDestructorCleanup|0x68009EDA"
+          "ExecuteDestructorCleanup|0x68009EDA",
+          "SehFinalizerCallback|0x68009DE4"
         ]
       },
       "instructions": {
@@ -24106,10 +24106,10 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "NoOpStubFunction|0x68001A90",
-          "D2GameServerPreInit|0x680010C0",
           "GetProcAddress|0x11",
-          "InitializeFunctionPointers|0x68022D2F"
+          "InitializeFunctionPointers|0x68022D2F",
+          "D2GameServerPreInit|0x680010C0",
+          "NoOpStubFunction|0x68001A90"
         ]
       },
       "callers": {
@@ -24246,8 +24246,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeGameServer|0x680013F0",
-          "EnableServerResourceFlags|0x68022CCD"
+          "EnableServerResourceFlags|0x68022CCD",
+          "InitializeGameServer|0x680013F0"
         ]
       },
       "callers": {
@@ -24354,11 +24354,11 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ComputeExponentialProgressionTable|0x68023512",
-          "PrepareCodeSectionForPatching|0x68023471",
           "ChangeModuleSectionProtection|0x680233B5",
+          "PrepareCodeSectionForPatching|0x68023471",
           "SetCodeSectionExecutable|0x680233E9",
-          "SetModuleSectionProtections|0x6802341D"
+          "SetModuleSectionProtections|0x6802341D",
+          "ComputeExponentialProgressionTable|0x68023512"
         ]
       },
       "instructions": {
@@ -24966,8 +24966,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "GenerateRandomWithModulo|0x68022CEC",
-          "SetEntityValidationFlags|0x68022C7B",
-          "GetGameEntryFlags|0x68022EBF"
+          "GetGameEntryFlags|0x68022EBF",
+          "SetEntityValidationFlags|0x68022C7B"
         ]
       },
       "instructions": {
@@ -25071,8 +25071,8 @@ var FUNCTIONS_D2Server_dll = {
       "callees": {
         "Classic/1.00": [
           "GenerateRandomWithModulo|0x68022CEC",
-          "SetEntityValidationFlags|0x68022C7B",
-          "GetGameEntryFlags|0x68022EBF"
+          "GetGameEntryFlags|0x68022EBF",
+          "SetEntityValidationFlags|0x68022C7B"
         ]
       },
       "instructions": {
@@ -25454,8 +25454,8 @@ var FUNCTIONS_D2Server_dll = {
       "callers": {
         "Classic/1.00": [
           "ValidateAndProcessThresholds|0x68022A4D",
-          "ValidateAndProcessEntities|0x68022B09",
-          "InitializeConfigData|0x68022451"
+          "InitializeConfigData|0x68022451",
+          "ValidateAndProcessEntities|0x68022B09"
         ]
       },
       "instructions": {
@@ -26057,9 +26057,9 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "LoadLibraryA|0x8",
+          "GetProcAddress|0x11",
           "FreeLibrary|0xB",
-          "GetProcAddress|0x11"
+          "LoadLibraryA|0x8"
         ]
       },
       "strings": {
@@ -26681,8 +26681,8 @@ var FUNCTIONS_D2Server_dll = {
       },
       "callees": {
         "Classic/1.00": [
-          "ProcessEntityWithCallback|0x68005A10",
-          "GenerateRandomInRange|0x680055A0"
+          "GenerateRandomInRange|0x680055A0",
+          "ProcessEntityWithCallback|0x68005A10"
         ]
       },
       "callers": {

@@ -1,7 +1,7 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-16T20:37:06.337995
+// Generated: 2025-12-27T22:44:31.463304
 // Functions for Diablo II.exe
-// Versions: Classic/1.00, Classic/1.01, Classic/1.02, Classic/1.03, Classic/1.04c, LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d
+// Versions: Classic/1.00, Classic/1.01, Classic/1.02, Classic/1.03, Classic/1.04c, Classic/1.09d, LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d
 
 var FUNCTIONS_Diablo_II_exe = {
   "versions": [
@@ -10,6 +10,7 @@ var FUNCTIONS_Diablo_II_exe = {
     "Classic/1.02",
     "Classic/1.03",
     "Classic/1.04c",
+    "Classic/1.09d",
     "LoD/1.07",
     "LoD/1.08",
     "LoD/1.09",
@@ -34,6 +35,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401000",
         "Classic/1.03": "0x00401000",
         "Classic/1.04c": "0x00401000",
+        "Classic/1.09d": "0x00401000",
         "LoD/1.07": "0x00401000",
         "LoD/1.08": "0x00401000",
         "LoD/1.09": "0x00401000",
@@ -56,6 +58,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1000",
         "Classic/1.03": "0x1000",
         "Classic/1.04c": "0x1000",
+        "Classic/1.09d": "0x1000",
         "LoD/1.07": "0x1000",
         "LoD/1.08": "0x1000",
         "LoD/1.09": "0x1000",
@@ -78,6 +81,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 902,
         "Classic/1.03": 902,
         "Classic/1.04c": 902,
+        "Classic/1.09d": 902,
         "LoD/1.07": 902,
         "LoD/1.08": 902,
         "LoD/1.09": 902,
@@ -94,15 +98,19 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 902,
         "LoD/1.14d": 902
       },
+      "name": "LaunchGameProcess",
+      "signature": "DWORD LaunchGameProcess(HINSTANCE param_1, undefined4 param_2, char * param_3)",
       "calling_convention": "__stdcall",
       "return_type": "DWORD",
+      "comment": "Launches the Diablo II game process and manages its execution lifecycle.\n\nThis is the main launcher entry point that handles single-instance enforcement,\ncommand line construction, process creation, and exit code handling with retry logic.\n\nAlgorithm:\n1. Create named event \"DIABLO II OK\" for single-instance check\n2. If event already exists (ERROR_ALREADY_EXISTS = 0xB7), exit immediately\n3. Initialize STARTUPINFO and PROCESS_INFORMATION structures\n4. Load game executable name from string resource ID 1 (e.g., \"Game.exe\")\n5. Load search pattern from string resource ID 7 for path parsing\n6. Get current command line via GetCommandLineA\n7. Parse command line using FUN_0040146d to locate pattern match\n8. Build full executable path by concatenating:\n   - Base directory path (from g_bData_004064b0)\n   - Game executable name\n   - Space separator (g_bData_00406030)\n   - Original command line arguments\n9. Call CreateProcessA to launch the game\n10. If process creation fails, show error message (string ID 9) with retry option\n11. Wait for either: process termination (index 0) or instance event signal (index 1)\n12. On process exit, map exit code to error string resource:\n    - 0,3,4,6-12: String ID 3 (generic error)\n    - 1: String ID 4 (specific error type 1)\n    - 2: String ID 5 (specific error type 2)\n    - 5: String ID 6 (specific error type 5)\n    - default: String ID 8 (unknown error)\n13. Display MessageBox with retry/cancel option (MB_RETRYCANCEL = 5)\n14. If user clicks Retry, loop back to step 3\n15. If user clicks Cancel or event signals, clean up and exit\n\nParameters:\n  hInstance     - HINSTANCE: Application instance handle for LoadStringA calls\n  hPrevInstance - HINSTANCE: Previous instance handle (unused, legacy parameter)\n  lpszCmdLine   - char*: Command line arguments to pass to game process\n\nReturns:\n  DWORD - Wait result from WaitForMultipleObjects:\n    0 = Process terminated (check exit code for reason)\n    1 = Instance event signaled (another launcher took control)\n    Error code from GetLastError if CreateProcessA failed\n\nMagic Numbers:\n  0xB7 (183) - ERROR_ALREADY_EXISTS: Event already exists\n  0x104 (260) - MAX_PATH: String buffer size\n  0x11 (17)  - STARTUPINFO DWORD count for zero-initialization\n  5          - MB_RETRYCANCEL: MessageBox style\n  2          - IDCANCEL: Cancel button result\n  0xFFFFFFFF - INFINITE: Wait timeout\n\nError Handling:\n  - Single instance violation: Exits silently without message\n  - CreateProcess failure: Shows error message with retry option\n  - Process exit codes: Mapped to user-friendly error strings\n  - User can retry or cancel at any error prompt",
+      "name_source": "Classic/1.00",
       "method": "STR",
       "index": "STR:ae689863bdfe95ba0be29f44cffac59b",
       "indexes": {
         "EXP": null,
         "STR": "ae689863bdfe95ba0be29f44cffac59b",
         "NOP": "9e5cd605180f58dbc4e3e8f0edf87d45a18105e981d0296a0f4c3c78b43b09db",
-        "CAL": "8663fba99a43c444406e362e74136098",
+        "CAL": "d5d8384ec85545ef4069f5f843f30b72",
         "API": null,
         "APS": null,
         "CON": "0e9f5d1ccf0e67759996e55b07191271",
@@ -110,267 +118,277 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "9a79e3481750058eb22d5511b99ea9bf",
         "PRO": "c8f9dd487289ffa0ad7ffcd1b7feb746"
       },
-      "display_name": "STR_ae689863bdfe95ba",
       "callees": {
         "Classic/1.00": [
-          "CreateEventA|0x7",
-          "CreateProcessA|0x4",
-          "GetExitCodeProcess|0x2",
-          "GetCommandLineA|0x5",
-          "FUN_0040146d|0x40146D",
-          "FUN_004013b0|0x4013B0",
-          "MessageBoxA|0x2B",
-          "LoadStringA|0x2C",
           "WaitForMultipleObjects|0x3",
-          "GetLastError|0x6",
-          "CloseHandle|0x17"
-        ],
-        "Classic/1.01": [
-          "GetCommandLineA|0x5",
-          "MessageBoxA|0x2B",
-          "WaitForMultipleObjects|0x3",
-          "FUN_0040146d|0x40146D",
-          "FUN_004013b0|0x4013B0",
-          "GetExitCodeProcess|0x2",
           "CreateEventA|0x7",
           "CloseHandle|0x17",
           "LoadStringA|0x2C",
+          "ConcatStringMBCS|0x4013B0",
           "CreateProcessA|0x4",
+          "MessageBoxA|0x2B",
+          "FindSubstringMultibyte|0x40146D",
+          "GetExitCodeProcess|0x2",
+          "GetCommandLineA|0x5",
           "GetLastError|0x6"
         ],
-        "Classic/1.02": [
-          "LoadStringA|0x2C",
+        "Classic/1.01": [
           "CreateProcessA|0x4",
-          "GetCommandLineA|0x5",
           "MessageBoxA|0x2B",
-          "GetExitCodeProcess|0x2",
-          "GetLastError|0x6",
           "CreateEventA|0x7",
-          "FUN_004013b0|0x4013B0",
-          "FUN_0040146d|0x40146D",
+          "GetCommandLineA|0x5",
           "WaitForMultipleObjects|0x3",
-          "CloseHandle|0x17"
+          "GetLastError|0x6",
+          "LoadStringA|0x2C",
+          "ConcatStringMBCS|0x4013B0",
+          "CloseHandle|0x17",
+          "GetExitCodeProcess|0x2",
+          "FindSubstringMultibyte|0x40146D"
+        ],
+        "Classic/1.02": [
+          "ConcatStringMBCS|0x4013B0",
+          "LoadStringA|0x2C",
+          "CloseHandle|0x17",
+          "GetCommandLineA|0x5",
+          "GetLastError|0x6",
+          "MessageBoxA|0x2B",
+          "CreateEventA|0x7",
+          "WaitForMultipleObjects|0x3",
+          "FindSubstringMultibyte|0x40146D",
+          "CreateProcessA|0x4",
+          "GetExitCodeProcess|0x2"
         ],
         "Classic/1.03": [
           "LoadStringA|0x2C",
-          "CreateProcessA|0x4",
-          "WaitForMultipleObjects|0x3",
-          "FUN_0040146d|0x40146D",
-          "CloseHandle|0x17",
+          "ConcatStringMBCS|0x4013B0",
           "GetCommandLineA|0x5",
-          "GetExitCodeProcess|0x2",
-          "CreateEventA|0x7",
           "MessageBoxA|0x2B",
+          "CreateEventA|0x7",
+          "WaitForMultipleObjects|0x3",
+          "CloseHandle|0x17",
           "GetLastError|0x6",
-          "FUN_004013b0|0x4013B0"
+          "GetExitCodeProcess|0x2",
+          "CreateProcessA|0x4",
+          "FindSubstringMultibyte|0x40146D"
         ],
         "Classic/1.04c": [
-          "GetLastError|0x6",
-          "CloseHandle|0x17",
-          "FUN_004013b0|0x4013B0",
+          "ConcatStringMBCS|0x4013B0",
           "CreateEventA|0x7",
-          "GetCommandLineA|0x5",
-          "GetExitCodeProcess|0x2",
+          "GetLastError|0x6",
           "LoadStringA|0x2C",
+          "FindSubstringMultibyte|0x40146D",
           "MessageBoxA|0x2B",
-          "FUN_0040146d|0x40146D",
+          "CloseHandle|0x17",
           "CreateProcessA|0x4",
+          "GetExitCodeProcess|0x2",
+          "GetCommandLineA|0x5",
           "WaitForMultipleObjects|0x3"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "GetLastError|0x6",
-          "FUN_0040146d|0x40146D",
           "CreateProcessA|0x4",
-          "CloseHandle|0x17",
-          "MessageBoxA|0x2B",
-          "WaitForMultipleObjects|0x3",
-          "GetCommandLineA|0x5",
-          "CreateEventA|0x7",
+          "FindSubstringMultibyte|0x40146D",
           "LoadStringA|0x2C",
-          "FUN_004013b0|0x4013B0",
+          "GetExitCodeProcess|0x2",
+          "CreateEventA|0x7",
+          "MessageBoxA|0x2B",
+          "ConcatStringMBCS|0x4013B0",
+          "GetCommandLineA|0x5",
+          "WaitForMultipleObjects|0x3",
+          "CloseHandle|0x17"
+        ],
+        "LoD/1.07": [
+          "MessageBoxA|0x2B",
+          "CloseHandle|0x17",
+          "LoadStringA|0x2C",
+          "FindSubstringMultibyte|0x40146D",
+          "ConcatStringMBCS|0x4013B0",
+          "CreateEventA|0x7",
+          "WaitForMultipleObjects|0x3",
+          "GetLastError|0x6",
           "GetExitCodeProcess|0x2"
         ],
         "LoD/1.08": [
           "CreateEventA|0x7",
-          "MessageBoxA|0x2B",
-          "GetExitCodeProcess|0x2",
-          "LoadStringA|0x2C",
-          "FUN_0040146d|0x40146D",
           "CloseHandle|0x17",
-          "FUN_004013b0|0x4013B0",
-          "GetCommandLineA|0x5",
           "CreateProcessA|0x4",
           "WaitForMultipleObjects|0x3",
-          "GetLastError|0x6"
+          "GetExitCodeProcess|0x2",
+          "GetLastError|0x6",
+          "LoadStringA|0x2C",
+          "MessageBoxA|0x2B",
+          "GetCommandLineA|0x5",
+          "ConcatStringMBCS|0x4013B0",
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.09": [
+          "ConcatStringMBCS|0x4013B0",
+          "CreateEventA|0x7",
+          "WaitForMultipleObjects|0x3",
           "CreateProcessA|0x4",
-          "LoadStringA|0x2C",
+          "FindSubstringMultibyte|0x40146D",
+          "CloseHandle|0x17",
           "MessageBoxA|0x2B",
           "GetExitCodeProcess|0x2",
-          "CreateEventA|0x7",
           "GetCommandLineA|0x5",
-          "FUN_004013b0|0x4013B0",
-          "CloseHandle|0x17",
-          "GetLastError|0x6",
-          "FUN_0040146d|0x40146D",
-          "WaitForMultipleObjects|0x3"
+          "LoadStringA|0x2C",
+          "GetLastError|0x6"
         ],
         "LoD/1.09b": [
-          "FUN_0040146d|0x40146D",
-          "WaitForMultipleObjects|0x3",
-          "FUN_004013b0|0x4013B0",
-          "MessageBoxA|0x2B",
-          "CreateProcessA|0x4",
-          "CloseHandle|0x17",
-          "LoadStringA|0x2C",
           "GetExitCodeProcess|0x2",
-          "GetCommandLineA|0x5",
-          "CreateEventA|0x7",
-          "GetLastError|0x6"
-        ],
-        "LoD/1.09d": [
-          "LoadStringA|0x2C",
+          "ConcatStringMBCS|0x4013B0",
           "GetCommandLineA|0x5",
           "WaitForMultipleObjects|0x3",
-          "CreateProcessA|0x4",
-          "GetExitCodeProcess|0x2",
-          "MessageBoxA|0x2B",
-          "FUN_004013b0|0x4013B0",
-          "CloseHandle|0x17",
-          "CreateEventA|0x7",
-          "FUN_0040146d|0x40146D",
-          "GetLastError|0x6"
-        ],
-        "LoD/1.10": [
           "GetLastError|0x6",
           "LoadStringA|0x2C",
           "CreateEventA|0x7",
-          "GetCommandLineA|0x5",
-          "GetExitCodeProcess|0x2",
-          "FUN_0040146d|0x40146D",
           "MessageBoxA|0x2B",
+          "FindSubstringMultibyte|0x40146D",
           "CloseHandle|0x17",
-          "FUN_004013b0|0x4013B0",
-          "WaitForMultipleObjects|0x3",
           "CreateProcessA|0x4"
         ],
-        "LoD/1.11": [
+        "LoD/1.09d": [
+          "FindSubstringMultibyte|0x40146D",
+          "LoadStringA|0x2C",
+          "MessageBoxA|0x2B",
+          "WaitForMultipleObjects|0x3",
+          "CreateEventA|0x7",
           "GetCommandLineA|0x5",
-          "FUN_004013b0|0x4013B0",
-          "CloseHandle|0x17",
+          "CreateProcessA|0x4",
           "GetExitCodeProcess|0x2",
+          "CloseHandle|0x17",
+          "GetLastError|0x6",
+          "ConcatStringMBCS|0x4013B0"
+        ],
+        "LoD/1.10": [
+          "FindSubstringMultibyte|0x40146D",
+          "MessageBoxA|0x2B",
+          "GetCommandLineA|0x5",
+          "CloseHandle|0x17",
+          "WaitForMultipleObjects|0x3",
+          "GetExitCodeProcess|0x2",
+          "LoadStringA|0x2C",
+          "CreateProcessA|0x4",
+          "ConcatStringMBCS|0x4013B0",
+          "CreateEventA|0x7",
+          "GetLastError|0x6"
+        ],
+        "LoD/1.11": [
+          "LoadStringA|0x2C",
+          "WaitForMultipleObjects|0x3",
           "MessageBoxA|0x2B",
           "CreateProcessA|0x4",
-          "CreateEventA|0x7",
-          "WaitForMultipleObjects|0x3",
           "GetLastError|0x6",
-          "LoadStringA|0x2C",
-          "FUN_0040146d|0x40146D"
+          "GetCommandLineA|0x5",
+          "FindSubstringMultibyte|0x40146D",
+          "ConcatStringMBCS|0x4013B0",
+          "CloseHandle|0x17",
+          "GetExitCodeProcess|0x2",
+          "CreateEventA|0x7"
         ],
         "LoD/1.11b": [
-          "WaitForMultipleObjects|0x3",
-          "CloseHandle|0x17",
-          "FUN_0040146d|0x40146D",
-          "CreateEventA|0x7",
-          "GetCommandLineA|0x5",
-          "FUN_004013b0|0x4013B0",
-          "LoadStringA|0x2C",
           "GetLastError|0x6",
+          "CloseHandle|0x17",
+          "MessageBoxA|0x2B",
+          "ConcatStringMBCS|0x4013B0",
+          "GetCommandLineA|0x5",
+          "LoadStringA|0x2C",
+          "WaitForMultipleObjects|0x3",
+          "CreateEventA|0x7",
+          "FindSubstringMultibyte|0x40146D",
           "GetExitCodeProcess|0x2",
+          "CreateProcessA|0x4"
+        ],
+        "LoD/1.12a": [
+          "GetCommandLineA|0x5",
+          "ConcatStringMBCS|0x4013B0",
+          "CloseHandle|0x17",
+          "WaitForMultipleObjects|0x3",
+          "FindSubstringMultibyte|0x40146D",
+          "CreateProcessA|0x4",
+          "LoadStringA|0x2C",
+          "CreateEventA|0x7",
+          "MessageBoxA|0x2B",
+          "GetLastError|0x6",
+          "GetExitCodeProcess|0x2"
+        ],
+        "LoD/1.13c": [
+          "CreateEventA|0x7",
+          "GetExitCodeProcess|0x2",
+          "ConcatStringMBCS|0x4013B0",
+          "CreateProcessA|0x4",
+          "WaitForMultipleObjects|0x3",
+          "GetLastError|0x6",
+          "CloseHandle|0x17",
+          "LoadStringA|0x2C",
+          "FindSubstringMultibyte|0x40146D",
+          "MessageBoxA|0x2B",
+          "GetCommandLineA|0x5"
+        ],
+        "LoD/1.13d": [
+          "GetCommandLineA|0x5",
+          "GetLastError|0x6",
+          "LoadStringA|0x2C",
+          "WaitForMultipleObjects|0x3",
+          "ConcatStringMBCS|0x4013B0",
+          "GetExitCodeProcess|0x2",
+          "CloseHandle|0x17",
+          "FindSubstringMultibyte|0x40146D",
+          "CreateProcessA|0x4",
+          "MessageBoxA|0x2B",
+          "CreateEventA|0x7"
+        ],
+        "LoD/1.14a": [
+          "GetLastError|0x6",
+          "ConcatStringMBCS|0x4013B0",
+          "CreateProcessA|0x4",
+          "FindSubstringMultibyte|0x40146D",
+          "CloseHandle|0x17",
+          "GetExitCodeProcess|0x2",
+          "CreateEventA|0x7",
+          "MessageBoxA|0x2B",
+          "LoadStringA|0x2C",
+          "GetCommandLineA|0x5",
+          "WaitForMultipleObjects|0x3"
+        ],
+        "LoD/1.14b": [
+          "WaitForMultipleObjects|0x3",
+          "GetCommandLineA|0x5",
+          "CloseHandle|0x17",
+          "GetLastError|0x6",
+          "ConcatStringMBCS|0x4013B0",
+          "LoadStringA|0x2C",
+          "GetExitCodeProcess|0x2",
+          "CreateEventA|0x7",
+          "FindSubstringMultibyte|0x40146D",
           "CreateProcessA|0x4",
           "MessageBoxA|0x2B"
         ],
-        "LoD/1.12a": [
-          "CreateProcessA|0x4",
-          "GetExitCodeProcess|0x2",
-          "GetLastError|0x6",
-          "MessageBoxA|0x2B",
-          "CloseHandle|0x17",
-          "WaitForMultipleObjects|0x3",
-          "LoadStringA|0x2C",
-          "GetCommandLineA|0x5",
-          "CreateEventA|0x7",
-          "FUN_0040146d|0x40146D",
-          "FUN_004013b0|0x4013B0"
-        ],
-        "LoD/1.13c": [
-          "FUN_004013b0|0x4013B0",
-          "MessageBoxA|0x2B",
-          "FUN_0040146d|0x40146D",
-          "GetExitCodeProcess|0x2",
-          "LoadStringA|0x2C",
-          "WaitForMultipleObjects|0x3",
-          "GetLastError|0x6",
-          "CloseHandle|0x17",
-          "CreateProcessA|0x4",
-          "GetCommandLineA|0x5",
-          "CreateEventA|0x7"
-        ],
-        "LoD/1.13d": [
-          "WaitForMultipleObjects|0x3",
-          "FUN_004013b0|0x4013B0",
-          "CreateProcessA|0x4",
-          "GetExitCodeProcess|0x2",
-          "MessageBoxA|0x2B",
-          "FUN_0040146d|0x40146D",
-          "CreateEventA|0x7",
-          "GetCommandLineA|0x5",
-          "CloseHandle|0x17",
-          "GetLastError|0x6",
-          "LoadStringA|0x2C"
-        ],
-        "LoD/1.14a": [
-          "FUN_004013b0|0x4013B0",
-          "WaitForMultipleObjects|0x3",
-          "MessageBoxA|0x2B",
-          "GetExitCodeProcess|0x2",
-          "GetCommandLineA|0x5",
-          "CreateProcessA|0x4",
-          "CloseHandle|0x17",
-          "LoadStringA|0x2C",
-          "GetLastError|0x6",
-          "FUN_0040146d|0x40146D",
-          "CreateEventA|0x7"
-        ],
-        "LoD/1.14b": [
-          "GetCommandLineA|0x5",
-          "MessageBoxA|0x2B",
-          "CreateEventA|0x7",
-          "LoadStringA|0x2C",
-          "FUN_0040146d|0x40146D",
-          "CloseHandle|0x17",
-          "GetExitCodeProcess|0x2",
-          "CreateProcessA|0x4",
-          "FUN_004013b0|0x4013B0",
-          "WaitForMultipleObjects|0x3",
-          "GetLastError|0x6"
-        ],
         "LoD/1.14c": [
+          "WaitForMultipleObjects|0x3",
+          "MessageBoxA|0x2B",
+          "FindSubstringMultibyte|0x40146D",
+          "GetExitCodeProcess|0x2",
+          "GetLastError|0x6",
+          "LoadStringA|0x2C",
+          "ConcatStringMBCS|0x4013B0",
+          "GetCommandLineA|0x5",
           "CreateProcessA|0x4",
           "CloseHandle|0x17",
-          "GetLastError|0x6",
-          "MessageBoxA|0x2B",
-          "LoadStringA|0x2C",
-          "GetCommandLineA|0x5",
-          "FUN_0040146d|0x40146D",
-          "CreateEventA|0x7",
-          "FUN_004013b0|0x4013B0",
-          "GetExitCodeProcess|0x2",
-          "WaitForMultipleObjects|0x3"
+          "CreateEventA|0x7"
         ],
         "LoD/1.14d": [
-          "MessageBoxA|0x2B",
-          "GetExitCodeProcess|0x2",
-          "GetLastError|0x6",
-          "LoadStringA|0x2C",
-          "WaitForMultipleObjects|0x3",
-          "CloseHandle|0x17",
           "GetCommandLineA|0x5",
-          "FUN_0040146d|0x40146D",
           "CreateEventA|0x7",
-          "FUN_004013b0|0x4013B0",
-          "CreateProcessA|0x4"
+          "CloseHandle|0x17",
+          "MessageBoxA|0x2B",
+          "LoadStringA|0x2C",
+          "GetExitCodeProcess|0x2",
+          "FindSubstringMultibyte|0x40146D",
+          "GetLastError|0x6",
+          "CreateProcessA|0x4",
+          "WaitForMultipleObjects|0x3",
+          "ConcatStringMBCS|0x4013B0"
         ]
       },
       "callers": {
@@ -387,6 +405,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -496,17 +517,29 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x78FA|pu_Game.exe_004078fa|Game.exe",
           "0x7DE6|pu_Diablo_II_was_unable_to_find_Gam_00407de6|Diablo II was unable to find Game.exe.\nPlease make sure your application is correctly installed, and that your Play Disc is in your CD_ROM drive, and try again.\n"
         ],
+        "Classic/1.09d": [
+          "0x7CE4|pu_Diablo_II.exe_00407ce4|Diablo II.exe",
+          "0x790C|pu_CD-ROM_drive_error._0040790c|CD-ROM drive error.",
+          "0x7934|pu_Please_verify_that_your_Diablo_I_00407934|Please verify that your Diablo II Play Disc is in your CD-ROM drive, then click on 'Retry'.",
+          "0x79EC|pu_Diablo_II_was_unable_to_locate_y_004079ec|Diablo II was unable to locate your CD-ROM drive.\nPlease make sure your Diablo II Play Disc is in your CD-ROM drive, then click on 'Retry'.",
+          "0x7D00|pu_Diablo_II_failed_to_run._Please_m_00407d00|Diablo II failed to run.\nPlease make sure your Diablo II Play Disc is in your CD-ROM drive, then click on 'Retry'.",
+          "0x7B04|pu_Diablo_II_was_unable_to_detect_a_00407b04|Diablo II was unable to detect a Disc in your CD-ROM drive.\nPlease make sure your Diablo II Play Disc is in your CD-ROM drive, then click on 'Retry'.",
+          "0x6038|s_DIABLO_II_OK_00406038|DIABLO_II_OK",
+          "0x7C30|pu_Please_make_sure_your_Diablo_II_P_00407c30|Please make sure your Diablo II Play Disc is in your CD-ROM drive, then click on 'Retry'.",
+          "0x78FA|pu_Game.exe_004078fa|Game.exe",
+          "0x7DE6|pu_Diablo_II_was_unable_to_find_Gam_00407de6|Diablo II was unable to find Game.exe.\nPlease make sure your application is correctly installed, and that your Play Disc is in your CD_ROM drive, and try again.\n"
+        ],
         "LoD/1.07": [
           "0x82CC|pu_Diablo_II.exe_004082cc|Diablo II.exe",
           "0x7FB6|pu_Diablo_II_was_unable_to_locate_y_00407fb6|Diablo II was unable to locate your CD-ROM drive.\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.",
           "0x83D8|pu_Diablo_II_was_unable_to_find_Gam_004083d8|Diablo II was unable to find Game.exe.\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\n",
           "0x7EBA|pu_Game.exe_00407eba|Game.exe",
           "0x820E|pu_Please_make_sure_your_Diablo_II_E_0040820e|Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.",
+          "0x6038|szDIABLO_II_OK_00406038|DIABLO_II_OK",
           "0x80D8|pu_Diablo_II_was_unable_to_detect_a_004080d8|Diablo II was unable to detect a Disc in your CD-ROM drive.\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.",
           "0x82E8|pu_Diablo_II_failed_to_run._Please_m_004082e8|Diablo II failed to run.\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.",
           "0x7ECC|pu_CD-ROM_drive_error._00407ecc|CD-ROM drive error.",
-          "0x7EF4|pu_Please_verify_that_your_Diablo_I_00407ef4|Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.",
-          "0x6038|s_DIABLO_II_OK_00406038|DIABLO_II_OK"
+          "0x7EF4|pu_Please_verify_that_your_Diablo_I_00407ef4|Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'."
         ],
         "LoD/1.08": [
           "0x82CC|pu_Diablo_II.exe_004082cc|Diablo II.exe",
@@ -747,6 +780,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x102D|JNZ|0x00401034"
         ],
         "Classic/1.04c": [
+          "0x1000|SUB|ESP, 0x680",
+          "0x1006|PUSH|ESI",
+          "0x1007|PUSH|EDI",
+          "0x1008|XOR|ESI, ESI",
+          "0x100A|PUSH|0x406038",
+          "0x100F|PUSH|ESI",
+          "0x1010|PUSH|ESI",
+          "0x1011|PUSH|ESI",
+          "0x1012|MOV|dword ptr [ESP + 0x18], ESI",
+          "0x1016|XOR|EDI, EDI",
+          "0x1018|CALL|dword ptr [0x00405018]",
+          "0x101E|MOV|dword ptr [ESP + 0xc], EAX",
+          "0x1022|CALL|dword ptr [0x00405014]",
+          "0x1028|CMP|EAX, 0xb7",
+          "0x102D|JNZ|0x00401034"
+        ],
+        "Classic/1.09d": [
           "0x1000|SUB|ESP, 0x680",
           "0x1006|PUSH|ESI",
           "0x1007|PUSH|EDI",
@@ -1025,6 +1075,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 299,
         "Classic/1.03": 299,
         "Classic/1.04c": 299,
+        "Classic/1.09d": 299,
         "LoD/1.07": 299,
         "LoD/1.08": 299,
         "LoD/1.09": 299,
@@ -1047,6 +1098,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1680,
         "Classic/1.03": 1680,
         "Classic/1.04c": 1680,
+        "Classic/1.09d": 1680,
         "LoD/1.07": 1680,
         "LoD/1.08": 1680,
         "LoD/1.09": 1680,
@@ -1069,6 +1121,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -1091,6 +1144,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "bf8c322b1dd06995c54b40d971c644e5",
         "Classic/1.03": "bf8c322b1dd06995c54b40d971c644e5",
         "Classic/1.04c": "bf8c322b1dd06995c54b40d971c644e5",
+        "Classic/1.09d": "bf8c322b1dd06995c54b40d971c644e5",
         "LoD/1.07": "bf8c322b1dd06995c54b40d971c644e5",
         "LoD/1.08": "bf8c322b1dd06995c54b40d971c644e5",
         "LoD/1.09": "bf8c322b1dd06995c54b40d971c644e5",
@@ -1237,6 +1291,38 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x124F||0x384"
         ],
         "Classic/1.04c": [
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C",
+          "0x10B4||0x406034",
+          "0x10CA||0x17C",
+          "0x10F2||0x17C",
+          "0x1105||0x406034",
+          "0x111B||0x280",
+          "0x1130||0x4064B0",
+          "0x1144||0x17C",
+          "0x1157||0x488",
+          "0x1165||0x184",
+          "0x116C||0x184",
+          "0x1176||0x28C",
+          "0x1184||0x5A0",
+          "0x1199||0x280",
+          "0x11B5||0x280",
+          "0x11C1||0x406030",
+          "0x11E4||0x280",
+          "0x11F0||0x69C",
+          "0x121F||0x13C",
+          "0x1226||0x284",
+          "0x124F||0x384"
+        ],
+        "Classic/1.09d": [
           "0x1000||0x680",
           "0x100A||0x406038",
           "0x103D||0x690",
@@ -1845,7 +1931,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1388|switchdataD_00401388|0040132f",
           "0x5058|PTR_CloseHandle_00405058|00005514"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x5018|PTR_CreateEventA_00405018|00005586",
           "0x5014|PTR_GetLastError_00405014|00005576",
           "0x50B0|PTR_LoadStringA_004050b0|000055b2",
@@ -1863,6 +1949,25 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1398|switchdataD_00401398|0x0",
           "0x1388|switchdataD_00401388|0040132f",
           "0x5058|PTR_CloseHandle_00405058|00005514"
+        ],
+        "LoD/1.07": [
+          "0x5018|g_pfnCreateEventA|00005586",
+          "0x5014|g_pfnGetLastError|00005576",
+          "0x50B0|g_pfnLoadStringA|000055b2",
+          "0x5010|g_pfnGetCommandLineA|00005564",
+          "0x6034|g_bData_00406034|0x22",
+          "0x6035|g_bData_00406035|0x0",
+          "0x64B0|g_bData_004064b0|0x0",
+          "0x64B1|g_bData_004064b1|0x0",
+          "0x6030|g_bData_00406030|0x22",
+          "0x6031|g_bData_00406031|0x20",
+          "0x500C|g_pfnCreateProcessA|00005552",
+          "0x50AC|g_pfnMessageBoxA|000055a4",
+          "0x5008|g_pfnWaitForMultipleObjects|00005538",
+          "0x5004|g_pfnGetExitCodeProcess|00005522",
+          "0x1398|switchdataD_00401398|0x0",
+          "0x1388|switchdataD_00401388|0040132f",
+          "0x5058|g_pfnCloseHandle|00005514"
         ],
         "LoD/1.08": [
           "0x5018|PTR_CreateEventA_00405018|00005586",
@@ -2137,7 +2242,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 11,
         "Classic/1.03": 11,
         "Classic/1.04c": 11,
-        "LoD/1.07": 11,
+        "Classic/1.09d": 11,
+        "LoD/1.07": 9,
         "LoD/1.08": 11,
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
@@ -2159,6 +2265,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -2181,6 +2288,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 10,
         "Classic/1.03": 10,
         "Classic/1.04c": 10,
+        "Classic/1.09d": 10,
         "LoD/1.07": 10,
         "LoD/1.08": 10,
         "LoD/1.09": 10,
@@ -2203,6 +2311,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 30,
         "Classic/1.03": 30,
         "Classic/1.04c": 30,
+        "Classic/1.09d": 30,
         "LoD/1.07": 30,
         "LoD/1.08": 30,
         "LoD/1.09": 30,
@@ -2225,6 +2334,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 17,
         "Classic/1.03": 17,
         "Classic/1.04c": 17,
+        "Classic/1.09d": 17,
         "LoD/1.07": 17,
         "LoD/1.08": 17,
         "LoD/1.09": 17,
@@ -2247,6 +2357,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -2317,6 +2428,19 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_PlayerData"
         ],
         "Classic/1.04c": [
+          "PROP_LARGE",
+          "STRUCT_Path",
+          "STRUCT_Act",
+          "STRUCT_Inventory",
+          "PARAM_3",
+          "STRUCT_Skill",
+          "STRUCT_ItemData",
+          "PROP_LOOPHEAVY",
+          "STRUCT_UnitAny",
+          "STRUCT_Control",
+          "STRUCT_PlayerData"
+        ],
+        "Classic/1.09d": [
           "PROP_LARGE",
           "STRUCT_Path",
           "STRUCT_Act",
@@ -2531,6 +2655,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -2555,6 +2680,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004013B0",
         "Classic/1.03": "0x004013B0",
         "Classic/1.04c": "0x004013B0",
+        "Classic/1.09d": "0x004013B0",
         "LoD/1.07": "0x004013B0",
         "LoD/1.08": "0x004013B0",
         "LoD/1.09": "0x004013B0",
@@ -2577,6 +2703,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x13B0",
         "Classic/1.03": "0x13B0",
         "Classic/1.04c": "0x13B0",
+        "Classic/1.09d": "0x13B0",
         "LoD/1.07": "0x13B0",
         "LoD/1.08": "0x13B0",
         "LoD/1.09": "0x13B0",
@@ -2599,6 +2726,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 189,
         "Classic/1.03": 189,
         "Classic/1.04c": 189,
+        "Classic/1.09d": 189,
         "LoD/1.07": 189,
         "LoD/1.08": 189,
         "LoD/1.09": 189,
@@ -2615,15 +2743,19 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 189,
         "LoD/1.14d": 189
       },
+      "name": "ConcatStringMBCS",
+      "signature": "byte * ConcatStringMBCS(byte * param_1, byte * param_2, size_t param_3)",
       "calling_convention": "__cdecl",
       "return_type": "byte *",
+      "comment": "Concatenates a source string to a destination with multi-byte character set (MBCS) awareness.\n\nAlgorithm:\n1. Return immediately if nMaxChars is 0\n2. If single-byte code page, delegate to standard _strncat\n3. For MBCS: Find end of destination string\n4. Check if last byte is an incomplete lead byte and back up if so\n5. Copy source characters to destination:\n   - For single-byte chars: copy 1 byte, advance pointers\n   - For lead bytes (bit 0x4 set in type table): copy 2 bytes atomically\n   - Null-terminate if source ends or count exhausted\n6. After copy, check for trailing incomplete lead byte and truncate if found\n7. Null-terminate the result string\n\nParameters:\n  lpszDest - Destination buffer receiving concatenated string\n  lpszSrc - Source string to append\n  nMaxChars - Maximum characters to copy (not including null terminator)\n\nReturns:\n  Pointer to lpszDest\n\nSpecial Cases:\n  - Truncates incomplete multi-byte sequences at boundaries\n  - Uses g_fIsMultiByteCodePage global to detect MBCS mode\n  - Character type lookup via DWORD_004068c0 table (bit 0x4 = lead byte)",
+      "name_source": "Classic/1.00",
       "method": "NOP",
       "index": "NOP:d4b8ccc0ea33fec7f7113b060b17a5ee2a489a86325e8c3e6964a5a80553d952",
       "indexes": {
         "EXP": null,
         "STR": null,
         "NOP": "d4b8ccc0ea33fec7f7113b060b17a5ee2a489a86325e8c3e6964a5a80553d952",
-        "CAL": null,
+        "CAL": "b16680ebf09b570742a98738fa3e83f9",
         "API": null,
         "APS": null,
         "CON": null,
@@ -2631,149 +2763,155 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "8677e4ae8cbf70d01424b1301aab8351",
         "PRO": "b7f126c199604b0f1fe6e9b462063d20"
       },
-      "display_name": "NOP_d4b8ccc0ea33fec7",
       "callees": {
         "Classic/1.00": [
-          "FUN_00401a02|0x401A02",
+          "GetTrailingLeadByteState|0x401A02",
           "_strncat|0x401A40"
         ],
         "Classic/1.01": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02",
+          "_strncat|0x401A40"
         ],
         "Classic/1.02": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
+          "_strncat|0x401A40",
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "Classic/1.03": [
           "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "Classic/1.04c": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02",
+          "_strncat|0x401A40"
+        ],
+        "Classic/1.09d": [
+          "GetTrailingLeadByteState|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.07": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
+          "_strncat|0x401A40",
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.08": [
           "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.09": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.09b": [
-          "FUN_00401a02|0x401A02",
+          "GetTrailingLeadByteState|0x401A02",
           "_strncat|0x401A40"
         ],
         "LoD/1.09d": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.10": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.11": [
           "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.11b": [
-          "FUN_00401a02|0x401A02",
+          "GetTrailingLeadByteState|0x401A02",
           "_strncat|0x401A40"
         ],
         "LoD/1.12a": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.13c": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.13d": [
           "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.14a": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
+          "_strncat|0x401A40",
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.14b": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.14c": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.14d": [
           "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "Classic/1.01": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "Classic/1.02": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "Classic/1.03": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "Classic/1.04c": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
+        ],
+        "Classic/1.09d": [
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.07": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.08": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.09": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.09b": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.09d": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.10": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.11": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.11b": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.12a": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.13c": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.13d": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.14a": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.14b": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.14c": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.14d": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ]
       },
       "instructions": {
@@ -2846,6 +2984,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x13D2|PUSH|dword ptr [EBP + 0x8]"
         ],
         "Classic/1.04c": [
+          "0x13B0|PUSH|EBP",
+          "0x13B1|MOV|EBP, ESP",
+          "0x13B3|PUSH|EBX",
+          "0x13B4|PUSH|EDI",
+          "0x13B5|MOV|EDI, dword ptr [EBP + 0x10]",
+          "0x13B8|XOR|EBX, EBX",
+          "0x13BA|CMP|EDI, EBX",
+          "0x13BC|JNZ|0x004013c6",
+          "0x13BE|MOV|EAX, dword ptr [EBP + 0x8]",
+          "0x13C1|JMP|0x00401469",
+          "0x13C6|CMP|dword ptr [0x004067ac], EBX",
+          "0x13CC|JNZ|0x004013e2",
+          "0x13CE|PUSH|EDI",
+          "0x13CF|PUSH|dword ptr [EBP + 0xc]",
+          "0x13D2|PUSH|dword ptr [EBP + 0x8]"
+        ],
+        "Classic/1.09d": [
           "0x13B0|PUSH|EBP",
           "0x13B1|MOV|EBP, ESP",
           "0x13B3|PUSH|EBX",
@@ -3124,6 +3279,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 88,
         "Classic/1.03": 88,
         "Classic/1.04c": 88,
+        "Classic/1.09d": 88,
         "LoD/1.07": 88,
         "LoD/1.08": 88,
         "LoD/1.09": 88,
@@ -3146,6 +3302,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -3168,6 +3325,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -3190,6 +3348,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0ae7612051bc2c351ff4baa78f16b259",
         "Classic/1.03": "0ae7612051bc2c351ff4baa78f16b259",
         "Classic/1.04c": "0ae7612051bc2c351ff4baa78f16b259",
+        "Classic/1.09d": "0ae7612051bc2c351ff4baa78f16b259",
         "LoD/1.07": "0ae7612051bc2c351ff4baa78f16b259",
         "LoD/1.08": "0ae7612051bc2c351ff4baa78f16b259",
         "LoD/1.09": "0ae7612051bc2c351ff4baa78f16b259",
@@ -3220,6 +3379,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1411||0x4068C1"
         ],
         "Classic/1.04c": [
+          "0x1411||0x4068C1"
+        ],
+        "Classic/1.09d": [
           "0x1411||0x4068C1"
         ],
         "LoD/1.07": [
@@ -3289,9 +3451,13 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x68C1|DAT_004068c0+1|"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x68C1|DAT_004068c0+1|"
+        ],
+        "LoD/1.07": [
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x68C1|g_abCharacterTypeFlags[1]|"
         ],
         "LoD/1.08": [
           "0x67AC|g_fIsMultiByteCodePage|0x0",
@@ -3356,6 +3522,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -3378,6 +3545,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -3400,6 +3568,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -3422,6 +3591,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -3444,6 +3614,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -3478,6 +3649,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_3"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_3"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_3"
         ],
@@ -3548,6 +3723,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -3572,6 +3748,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x0040146D",
         "Classic/1.03": "0x0040146D",
         "Classic/1.04c": "0x0040146D",
+        "Classic/1.09d": "0x0040146D",
         "LoD/1.07": "0x0040146D",
         "LoD/1.08": "0x0040146D",
         "LoD/1.09": "0x0040146D",
@@ -3594,6 +3771,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x146D",
         "Classic/1.03": "0x146D",
         "Classic/1.04c": "0x146D",
+        "Classic/1.09d": "0x146D",
         "LoD/1.07": "0x146D",
         "LoD/1.08": "0x146D",
         "LoD/1.09": "0x146D",
@@ -3616,6 +3794,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 118,
         "Classic/1.03": 118,
         "Classic/1.04c": 118,
+        "Classic/1.09d": 118,
         "LoD/1.07": 118,
         "LoD/1.08": 118,
         "LoD/1.09": 118,
@@ -3632,8 +3811,12 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 118,
         "LoD/1.14d": 118
       },
+      "name": "FindSubstringMultibyte",
+      "signature": "byte * FindSubstringMultibyte(byte * param_1, char * param_2)",
       "calling_convention": "__cdecl",
       "return_type": "byte *",
+      "comment": "Searches for a substring within a string with multibyte character support.\n\nAlgorithm:\n1. Check if multibyte code page is active via g_fIsMultiByteCodePage global\n2. If single-byte mode: delegate to standard _strstr()\n3. If multibyte mode:\n   a. Calculate needle length and haystack length\n   b. Compute search boundary (haystack + haystackLen - needleLen)\n   c. Iterate through haystack using FUN_00401b63 (multibyte char advance)\n   d. At each position, compare needle bytes against haystack\n   e. Return position on full match, NULL if not found\n\nParameters:\n  pbHaystack - Pointer to null-terminated string to search within\n  szNeedle   - Pointer to null-terminated substring to find\n\nReturns:\n  Pointer to first occurrence of needle in haystack, or NULL if not found\n\nSpecial Cases:\n  - Returns NULL if haystack is empty\n  - Returns NULL if needle is longer than haystack\n  - Uses standard _strstr when not in multibyte mode for performance\n\nCalled By: LaunchGameProcess (2 references)",
+      "name_source": "Classic/1.00",
       "method": "NOP",
       "index": "NOP:019a732ba011ad1435a2d7ecfcda2e12964b706d63a2bfda113bff728bd7f1ff",
       "indexes": {
@@ -3648,46 +3831,50 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "5f05e3e4b6b85141bd532cebeaa4c0e1",
         "PRO": "c28c57488c736ef8416365a079852ca1"
       },
-      "display_name": "NOP_019a732ba011ad14",
       "callees": {
         "Classic/1.00": [
-          "_strlen|0x401B80",
+          "FUN_00401b63|0x401B63",
           "_strstr|0x401C00",
-          "FUN_00401b63|0x401B63"
+          "_strlen|0x401B80"
         ],
         "Classic/1.01": [
-          "_strlen|0x401B80",
           "_strstr|0x401C00",
-          "FUN_00401b63|0x401B63"
+          "FUN_00401b63|0x401B63",
+          "_strlen|0x401B80"
         ],
         "Classic/1.02": [
           "_strlen|0x401B80",
-          "_strstr|0x401C00",
-          "FUN_00401b63|0x401B63"
+          "FUN_00401b63|0x401B63",
+          "_strstr|0x401C00"
         ],
         "Classic/1.03": [
-          "_strlen|0x401B80",
           "_strstr|0x401C00",
-          "FUN_00401b63|0x401B63"
+          "FUN_00401b63|0x401B63",
+          "_strlen|0x401B80"
         ],
         "Classic/1.04c": [
           "FUN_00401b63|0x401B63",
           "_strstr|0x401C00",
           "_strlen|0x401B80"
         ],
-        "LoD/1.07": [
-          "FUN_00401b63|0x401B63",
+        "Classic/1.09d": [
+          "_strlen|0x401B80",
           "FUN_00401c00|0x401C00",
+          "FUN_00401b63|0x401B63"
+        ],
+        "LoD/1.07": [
+          "AdvancePastMultibyteChar|0x401B63",
+          "_strstr|0x401C00",
           "_strlen|0x401B80"
         ],
         "LoD/1.08": [
           "FUN_00401b63|0x401B63",
-          "_strlen|0x401B80",
-          "_strstr|0x401C00"
+          "_strstr|0x401C00",
+          "_strlen|0x401B80"
         ],
         "LoD/1.09": [
-          "_strlen|0x401B80",
           "FUN_00401b63|0x401B63",
+          "_strlen|0x401B80",
           "_strstr|0x401C00"
         ],
         "LoD/1.09b": [
@@ -3701,9 +3888,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_00401b63|0x401B63"
         ],
         "LoD/1.10": [
-          "FUN_00401b63|0x401B63",
           "_strstr|0x401C00",
-          "_strlen|0x401B80"
+          "_strlen|0x401B80",
+          "FUN_00401b63|0x401B63"
         ],
         "LoD/1.11": [
           "FUN_00401b63|0x401B63",
@@ -3711,39 +3898,39 @@ var FUNCTIONS_Diablo_II_exe = {
           "_strlen|0x401B80"
         ],
         "LoD/1.11b": [
-          "_strstr|0x401C00",
           "_strlen|0x401B80",
+          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63"
         ],
         "LoD/1.12a": [
+          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63",
-          "_strlen|0x401B80",
-          "_strstr|0x401C00"
+          "_strlen|0x401B80"
         ],
         "LoD/1.13c": [
-          "_strlen|0x401B80",
           "_strstr|0x401C00",
+          "_strlen|0x401B80",
           "FUN_00401b63|0x401B63"
         ],
         "LoD/1.13d": [
-          "_strlen|0x401B80",
           "_strstr|0x401C00",
-          "FUN_00401b63|0x401B63"
+          "FUN_00401b63|0x401B63",
+          "_strlen|0x401B80"
         ],
         "LoD/1.14a": [
+          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63",
-          "_strlen|0x401B80",
-          "_strstr|0x401C00"
+          "_strlen|0x401B80"
         ],
         "LoD/1.14b": [
-          "_strlen|0x401B80",
+          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63",
-          "_strstr|0x401C00"
+          "_strlen|0x401B80"
         ],
         "LoD/1.14c": [
           "FUN_00401b63|0x401B63",
-          "_strlen|0x401B80",
-          "_strstr|0x401C00"
+          "_strstr|0x401C00",
+          "_strlen|0x401B80"
         ],
         "LoD/1.14d": [
           "_strstr|0x401C00",
@@ -3753,64 +3940,67 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "Classic/1.01": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "Classic/1.02": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "Classic/1.03": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "Classic/1.04c": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
+        ],
+        "Classic/1.09d": [
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.07": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.08": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.09": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.09b": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.09d": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.10": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.11": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.11b": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.12a": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.13c": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.13d": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.14a": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.14b": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.14c": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.14d": [
-          "FUN_00401000|0x401000"
+          "LaunchGameProcess|0x401000"
         ]
       },
       "instructions": {
@@ -3883,6 +4073,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x148C|PUSH|dword ptr [EBP + 0xc]"
         ],
         "Classic/1.04c": [
+          "0x146D|PUSH|EBP",
+          "0x146E|MOV|EBP, ESP",
+          "0x1470|PUSH|EBX",
+          "0x1471|XOR|EBX, EBX",
+          "0x1473|CMP|dword ptr [0x004067ac], EBX",
+          "0x1479|PUSH|ESI",
+          "0x147A|PUSH|EDI",
+          "0x147B|JNZ|0x0040148c",
+          "0x147D|PUSH|dword ptr [EBP + 0xc]",
+          "0x1480|PUSH|dword ptr [EBP + 0x8]",
+          "0x1483|CALL|0x00401c00",
+          "0x1488|POP|ECX",
+          "0x1489|POP|ECX",
+          "0x148A|JMP|0x004014de",
+          "0x148C|PUSH|dword ptr [EBP + 0xc]"
+        ],
+        "Classic/1.09d": [
           "0x146D|PUSH|EBP",
           "0x146E|MOV|EBP, ESP",
           "0x1470|PUSH|EBX",
@@ -4161,6 +4368,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 56,
         "Classic/1.03": 56,
         "Classic/1.04c": 56,
+        "Classic/1.09d": 56,
         "LoD/1.07": 56,
         "LoD/1.08": 56,
         "LoD/1.09": 56,
@@ -4183,6 +4391,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -4205,6 +4414,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -4227,6 +4437,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "e63ed098730a213950e38bf7d491270b",
         "Classic/1.03": "e63ed098730a213950e38bf7d491270b",
         "Classic/1.04c": "e63ed098730a213950e38bf7d491270b",
+        "Classic/1.09d": "e63ed098730a213950e38bf7d491270b",
         "LoD/1.07": "e63ed098730a213950e38bf7d491270b",
         "LoD/1.08": "e63ed098730a213950e38bf7d491270b",
         "LoD/1.09": "e63ed098730a213950e38bf7d491270b",
@@ -4257,6 +4468,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "Classic/1.04c": [
+          "0x67AC|g_fIsMultiByteCodePage|0x0"
+        ],
+        "Classic/1.09d": [
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "LoD/1.07": [
@@ -4311,6 +4525,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -4333,6 +4548,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -4355,6 +4571,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -4377,6 +4594,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -4407,6 +4625,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_2"
         ],
         "Classic/1.04c": [
+          "PARAM_2"
+        ],
+        "Classic/1.09d": [
           "PARAM_2"
         ],
         "LoD/1.07": [
@@ -4461,6 +4682,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -4485,6 +4707,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004014E3",
         "Classic/1.03": "0x004014E3",
         "Classic/1.04c": "0x004014E3",
+        "Classic/1.09d": "0x004014E3",
         "LoD/1.07": "0x004014E3",
         "LoD/1.08": "0x004014E3",
         "LoD/1.09": "0x004014E3",
@@ -4507,6 +4730,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x14E3",
         "Classic/1.03": "0x14E3",
         "Classic/1.04c": "0x14E3",
+        "Classic/1.09d": "0x14E3",
         "LoD/1.07": "0x14E3",
         "LoD/1.08": "0x14E3",
         "LoD/1.09": "0x14E3",
@@ -4529,7 +4753,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 235,
         "Classic/1.03": 235,
         "Classic/1.04c": 235,
-        "LoD/1.07": 235,
+        "Classic/1.09d": 235,
+        "LoD/1.07": 234,
         "LoD/1.08": 235,
         "LoD/1.09": 235,
         "LoD/1.09b": 235,
@@ -4553,7 +4778,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "EXP": null,
         "STR": null,
         "NOP": "801b028bb58cac0e14f3fde74dae7b1fceffca7badb8095111aa302ad19f6647",
-        "CAL": "69d6a3f35ed0660493dbdad2d18d4a70",
+        "CAL": "e2de12a4281925f71b0f3ae29ad48ab2",
         "API": null,
         "APS": null,
         "CON": "d2b975d8da09fa950f7398460f34b227",
@@ -4564,344 +4789,361 @@ var FUNCTIONS_Diablo_II_exe = {
       "display_name": "NOP_801b028bb58cac0e",
       "callees": {
         "Classic/1.00": [
-          "GetCommandLineA|0x5",
-          "FUN_004015fe|0x4015FE",
-          "InitializeDllHeapAndResources|0x402541",
-          "GetModuleHandleA|0xB",
-          "FUN_00401000|0x401000",
-          "FUN_00401f06|0x401F06",
-          "FUN_00401d82|0x401D82",
-          "InitializeModuleData|0x402017",
-          "InitializeGlobalConstructors|0x401C80",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396",
-          "ReportError|0x401CAD",
           "GetStartupInfoA|0xC",
           "GetVersion|0xD",
+          "ReportError|0x401CAD",
+          "GetModuleHandleA|0xB",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeDllHeapAndResources|0x402541",
+          "FUN_004015fe|0x4015FE",
+          "FilterFloatingPointException|0x401D82",
+          "InitializeFileDescriptors|0x402396",
+          "GetCommandLineArgs|0x401F06",
+          "LaunchGameProcess|0x401000",
+          "GetCommandLineA|0x5",
+          "InitializeModuleData|0x402017",
+          "GetEnvironmentStringsConverted|0x402264",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.01": [
-          "GetCommandLineA|0x5",
-          "ReportError|0x401CAD",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
-          "GetModuleHandleA|0xB",
-          "GetVersion|0xD",
-          "FUN_00401000|0x401000",
-          "InitializeModuleData|0x402017",
-          "GetStartupInfoA|0xC",
-          "FUN_00401d82|0x401D82",
-          "InitializeDllHeapAndResources|0x402541",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeGlobalConstructors|0x401C80",
           "FUN_004015fe|0x4015FE",
-          "FUN_00401f06|0x401F06"
+          "InitializeGlobalConstructors|0x401C80",
+          "GetModuleHandleA|0xB",
+          "InitializeModuleData|0x402017",
+          "InitializeDllHeapAndResources|0x402541",
+          "LaunchGameProcess|0x401000",
+          "GetStartupInfoA|0xC",
+          "ReportError|0x401CAD",
+          "GetCommandLineA|0x5",
+          "FilterFloatingPointException|0x401D82",
+          "GetVersion|0xD",
+          "GetCommandLineArgs|0x401F06",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.02": [
-          "FUN_00401d82|0x401D82",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_004015fe|0x4015FE",
-          "GetEnvironmentStringsConverted|0x402264",
-          "GetVersion|0xD",
-          "GetModuleHandleA|0xB",
-          "InitializeModuleData|0x402017",
-          "GetStartupInfoA|0xC",
           "GetCommandLineA|0x5",
-          "ReportError|0x401CAD",
-          "InitializeGlobalConstructors|0x401C80",
+          "GetCommandLineArgs|0x401F06",
           "InitializeDllHeapAndResources|0x402541",
+          "GetStartupInfoA|0xC",
           "InitializeFileDescriptors|0x402396",
-          "FUN_00401f06|0x401F06",
-          "FUN_00401000|0x401000"
+          "FilterFloatingPointException|0x401D82",
+          "FUN_004015fe|0x4015FE",
+          "ReportError|0x401CAD",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetModuleHandleA|0xB",
+          "InitializeGlobalConstructors|0x401C80",
+          "LaunchGameProcess|0x401000",
+          "GetVersion|0xD"
         ],
         "Classic/1.03": [
-          "InitializeGlobalConstructors|0x401C80",
           "GetStartupInfoA|0xC",
-          "GetCommandLineA|0x5",
-          "FUN_00401f06|0x401F06",
-          "ReportError|0x401CAD",
-          "InitializeDllHeapAndResources|0x402541",
+          "GetVersion|0xD",
+          "GetCommandLineArgs|0x401F06",
+          "FilterFloatingPointException|0x401D82",
+          "GetEnvironmentStringsConverted|0x402264",
           "InitializeModuleData|0x402017",
-          "FUN_00401000|0x401000",
+          "ReportError|0x401CAD",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetCommandLineA|0x5",
+          "GetModuleHandleA|0xB",
           "InitializeEnvironmentVariables|0x401F5E",
           "FUN_004015fe|0x4015FE",
-          "FUN_00401d82|0x401D82",
-          "GetVersion|0xD",
-          "GetModuleHandleA|0xB",
           "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264"
+          "LaunchGameProcess|0x401000",
+          "InitializeDllHeapAndResources|0x402541"
         ],
         "Classic/1.04c": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401000|0x401000",
-          "FUN_00401f06|0x401F06",
+          "InitializeModuleData|0x402017",
           "GetStartupInfoA|0xC",
+          "GetModuleHandleA|0xB",
+          "LaunchGameProcess|0x401000",
+          "GetVersion|0xD",
+          "ReportError|0x401CAD",
+          "InitializeDllHeapAndResources|0x402541",
+          "GetCommandLineA|0x5",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeFileDescriptors|0x402396",
+          "FilterFloatingPointException|0x401D82",
+          "GetCommandLineArgs|0x401F06",
+          "FUN_004015fe|0x4015FE"
+        ],
+        "Classic/1.09d": [
+          "GetStartupInfoA|0xC",
+          "GetVersion|0xD",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "GetModuleHandleA|0xB",
+          "GetCommandLineArgs|0x401F06",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetCommandLineA|0x5",
+          "InitializeGlobalConstructors|0x401C80",
+          "LaunchGameProcess|0x401000",
+          "FUN_004015fe|0x4015FE",
+          "FilterFloatingPointException|0x401D82",
           "ReportError|0x401CAD",
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetModuleHandleA|0xB",
-          "FUN_00401d82|0x401D82",
-          "GetCommandLineA|0x5",
-          "GetVersion|0xD",
-          "InitializeFileDescriptors|0x402396",
-          "FUN_004015fe|0x4015FE",
           "InitializeDllHeapAndResources|0x402541"
         ],
         "LoD/1.07": [
-          "FUN_004015fe|0x4015FE",
+          "LaunchGameProcess|0x401000",
+          "ReportError|0x401CAD",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "HandleFatalError|0x4015FE",
+          "InitializeGlobalConstructors|0x401C80",
+          "FilterFloatingPointException|0x401D82",
+          "GetCommandLineA|0x5",
+          "GetStartupInfoA|0xC",
+          "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396",
           "GetModuleHandleA|0xB",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeDllHeapAndResources|0x402541",
-          "GetStartupInfoA|0xC",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401000|0x401000",
-          "InitializeModuleData|0x402017",
-          "GetCommandLineA|0x5",
           "GetVersion|0xD",
-          "FUN_00401d82|0x401D82",
-          "FUN_00401f06|0x401F06",
-          "ReportError|0x401CAD",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeModuleData|0x402017",
+          "GetCommandLineArgs|0x401F06",
+          "InitializeDllHeapAndResources|0x402541"
         ],
         "LoD/1.08": [
-          "InitializeDllHeapAndResources|0x402541",
-          "FUN_00401f06|0x401F06",
-          "GetModuleHandleA|0xB",
-          "GetCommandLineA|0x5",
-          "GetEnvironmentStringsConverted|0x402264",
-          "GetVersion|0xD",
-          "GetStartupInfoA|0xC",
           "FUN_004015fe|0x4015FE",
+          "InitializeModuleData|0x402017",
+          "GetVersion|0xD",
+          "InitializeGlobalConstructors|0x401C80",
+          "FilterFloatingPointException|0x401D82",
           "ReportError|0x401CAD",
+          "LaunchGameProcess|0x401000",
+          "GetModuleHandleA|0xB",
           "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401000|0x401000",
-          "FUN_00401d82|0x401D82",
-          "InitializeModuleData|0x402017",
-          "InitializeGlobalConstructors|0x401C80"
+          "GetStartupInfoA|0xC",
+          "InitializeDllHeapAndResources|0x402541",
+          "GetCommandLineA|0x5",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.09": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
-          "GetCommandLineA|0x5",
-          "ReportError|0x401CAD",
-          "FUN_004015fe|0x4015FE",
+          "GetStartupInfoA|0xC",
           "GetVersion|0xD",
-          "FUN_00401f06|0x401F06",
+          "GetModuleHandleA|0xB",
+          "GetCommandLineA|0x5",
+          "InitializeGlobalConstructors|0x401C80",
           "InitializeDllHeapAndResources|0x402541",
           "GetEnvironmentStringsConverted|0x402264",
-          "GetModuleHandleA|0xB",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401000|0x401000",
+          "FilterFloatingPointException|0x401D82",
+          "ReportError|0x401CAD",
+          "FUN_004015fe|0x4015FE",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "LaunchGameProcess|0x401000",
           "InitializeEnvironmentVariables|0x401F5E",
-          "GetStartupInfoA|0xC",
-          "FUN_00401d82|0x401D82"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.09b": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "GetModuleHandleA|0xB",
-          "GetVersion|0xD",
+          "FilterFloatingPointException|0x401D82",
           "InitializeDllHeapAndResources|0x402541",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_004015fe|0x4015FE",
           "GetCommandLineA|0x5",
+          "LaunchGameProcess|0x401000",
+          "InitializeEnvironmentVariables|0x401F5E",
           "ReportError|0x401CAD",
-          "FUN_00401d82|0x401D82",
-          "FUN_00401000|0x401000",
           "InitializeModuleData|0x402017",
-          "GetStartupInfoA|0xC",
+          "InitializeFileDescriptors|0x402396",
           "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401f06|0x401F06",
-          "InitializeFileDescriptors|0x402396"
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetStartupInfoA|0xC",
+          "GetModuleHandleA|0xB",
+          "GetCommandLineArgs|0x401F06",
+          "GetVersion|0xD",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.09d": [
-          "InitializeFileDescriptors|0x402396",
+          "LaunchGameProcess|0x401000",
           "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401d82|0x401D82",
-          "InitializeDllHeapAndResources|0x402541",
-          "FUN_00401f06|0x401F06",
-          "ReportError|0x401CAD",
-          "GetStartupInfoA|0xC",
-          "FUN_004015fe|0x4015FE",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetVersion|0xD",
           "GetCommandLineA|0x5",
-          "GetModuleHandleA|0xB",
+          "GetStartupInfoA|0xC",
+          "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017",
-          "FUN_00401000|0x401000",
-          "InitializeGlobalConstructors|0x401C80"
+          "ReportError|0x401CAD",
+          "FilterFloatingPointException|0x401D82",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetCommandLineArgs|0x401F06",
+          "GetModuleHandleA|0xB",
+          "FUN_004015fe|0x4015FE",
+          "InitializeDllHeapAndResources|0x402541",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetVersion|0xD"
         ],
         "LoD/1.10": [
-          "GetCommandLineA|0x5",
-          "GetStartupInfoA|0xC",
-          "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
-          "ReportError|0x401CAD",
-          "FUN_00401f06|0x401F06",
-          "GetVersion|0xD",
-          "InitializeDllHeapAndResources|0x402541",
-          "FUN_004015fe|0x4015FE",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401000|0x401000",
-          "FUN_00401d82|0x401D82",
-          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
-          "GetModuleHandleA|0xB"
+          "FilterFloatingPointException|0x401D82",
+          "GetModuleHandleA|0xB",
+          "InitializeFileDescriptors|0x402396",
+          "GetCommandLineA|0x5",
+          "FUN_004015fe|0x4015FE",
+          "InitializeModuleData|0x402017",
+          "LaunchGameProcess|0x401000",
+          "InitializeDllHeapAndResources|0x402541",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetVersion|0xD",
+          "GetStartupInfoA|0xC",
+          "ReportError|0x401CAD",
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.11": [
-          "GetVersion|0xD",
-          "GetCommandLineA|0x5",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401d82|0x401D82",
+          "InitializeFileDescriptors|0x402396",
           "GetModuleHandleA|0xB",
+          "InitializeModuleData|0x402017",
+          "FilterFloatingPointException|0x401D82",
+          "InitializeDllHeapAndResources|0x402541",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetCommandLineA|0x5",
+          "ReportError|0x401CAD",
           "FUN_004015fe|0x4015FE",
           "GetStartupInfoA|0xC",
-          "ReportError|0x401CAD",
-          "FUN_00401000|0x401000",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeDllHeapAndResources|0x402541",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
+          "GetVersion|0xD",
           "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401f06|0x401F06"
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetCommandLineArgs|0x401F06",
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.11b": [
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401d82|0x401D82",
+          "GetModuleHandleA|0xB",
           "GetCommandLineA|0x5",
-          "GetVersion|0xD",
-          "FUN_00401f06|0x401F06",
+          "FUN_004015fe|0x4015FE",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetStartupInfoA|0xC",
+          "InitializeDllHeapAndResources|0x402541",
+          "LaunchGameProcess|0x401000",
+          "FilterFloatingPointException|0x401D82",
+          "InitializeFileDescriptors|0x402396",
           "ReportError|0x401CAD",
           "GetEnvironmentStringsConverted|0x402264",
-          "GetStartupInfoA|0xC",
-          "FUN_004015fe|0x4015FE",
-          "InitializeDllHeapAndResources|0x402541",
-          "InitializeFileDescriptors|0x402396",
-          "GetModuleHandleA|0xB",
-          "FUN_00401000|0x401000"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetCommandLineArgs|0x401F06",
+          "GetVersion|0xD",
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.12a": [
-          "InitializeModuleData|0x402017",
-          "GetStartupInfoA|0xC",
-          "InitializeFileDescriptors|0x402396",
-          "FUN_00401000|0x401000",
-          "FUN_004015fe|0x4015FE",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401f06|0x401F06",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401d82|0x401D82",
-          "GetVersion|0xD",
-          "GetModuleHandleA|0xB",
-          "InitializeDllHeapAndResources|0x402541",
           "GetCommandLineA|0x5",
-          "ReportError|0x401CAD"
+          "InitializeFileDescriptors|0x402396",
+          "FUN_004015fe|0x4015FE",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeDllHeapAndResources|0x402541",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetVersion|0xD",
+          "FilterFloatingPointException|0x401D82",
+          "GetStartupInfoA|0xC",
+          "ReportError|0x401CAD",
+          "InitializeModuleData|0x402017",
+          "GetCommandLineArgs|0x401F06",
+          "GetModuleHandleA|0xB",
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.13c": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
-          "GetVersion|0xD",
-          "GetStartupInfoA|0xC",
-          "FUN_00401f06|0x401F06",
-          "InitializeGlobalConstructors|0x401C80",
-          "GetModuleHandleA|0xB",
-          "InitializeDllHeapAndResources|0x402541",
           "GetEnvironmentStringsConverted|0x402264",
-          "FUN_004015fe|0x4015FE",
+          "GetCommandLineArgs|0x401F06",
+          "GetModuleHandleA|0xB",
+          "GetVersion|0xD",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "FUN_00401000|0x401000",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeDllHeapAndResources|0x402541",
+          "FilterFloatingPointException|0x401D82",
           "GetCommandLineA|0x5",
-          "FUN_00401d82|0x401D82",
-          "ReportError|0x401CAD"
+          "FUN_004015fe|0x4015FE",
+          "LaunchGameProcess|0x401000",
+          "ReportError|0x401CAD",
+          "GetStartupInfoA|0xC"
         ],
         "LoD/1.13d": [
-          "FUN_004015fe|0x4015FE",
-          "InitializeFileDescriptors|0x402396",
-          "GetModuleHandleA|0xB",
-          "InitializeModuleData|0x402017",
-          "FUN_00401000|0x401000",
-          "GetVersion|0xD",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetStartupInfoA|0xC",
           "InitializeDllHeapAndResources|0x402541",
           "ReportError|0x401CAD",
-          "FUN_00401d82|0x401D82",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetStartupInfoA|0xC",
-          "GetEnvironmentStringsConverted|0x402264",
+          "GetVersion|0xD",
           "GetCommandLineA|0x5",
           "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401f06|0x401F06"
+          "LaunchGameProcess|0x401000",
+          "InitializeModuleData|0x402017",
+          "FilterFloatingPointException|0x401D82",
+          "GetModuleHandleA|0xB",
+          "FUN_004015fe|0x4015FE",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.14a": [
           "GetVersion|0xD",
           "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401f06|0x401F06",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "ReportError|0x401CAD",
-          "FUN_00401000|0x401000",
-          "InitializeDllHeapAndResources|0x402541",
-          "GetCommandLineA|0x5",
-          "InitializeModuleData|0x402017",
-          "GetStartupInfoA|0xC",
-          "FUN_004015fe|0x4015FE",
-          "GetModuleHandleA|0xB",
           "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401d82|0x401D82"
+          "FUN_004015fe|0x4015FE",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetCommandLineArgs|0x401F06",
+          "GetEnvironmentStringsConverted|0x402264",
+          "FilterFloatingPointException|0x401D82",
+          "GetStartupInfoA|0xC",
+          "InitializeModuleData|0x402017",
+          "ReportError|0x401CAD",
+          "InitializeDllHeapAndResources|0x402541",
+          "GetModuleHandleA|0xB",
+          "GetCommandLineA|0x5",
+          "LaunchGameProcess|0x401000"
         ],
         "LoD/1.14b": [
-          "InitializeDllHeapAndResources|0x402541",
-          "FUN_00401d82|0x401D82",
-          "GetVersion|0xD",
-          "FUN_004015fe|0x4015FE",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetStartupInfoA|0xC",
-          "GetModuleHandleA|0xB",
-          "InitializeFileDescriptors|0x402396",
-          "GetCommandLineA|0x5",
-          "FUN_00401000|0x401000",
-          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeGlobalConstructors|0x401C80",
           "ReportError|0x401CAD",
-          "FUN_00401f06|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_004015fe|0x4015FE",
+          "InitializeDllHeapAndResources|0x402541",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetCommandLineA|0x5",
+          "FilterFloatingPointException|0x401D82",
+          "InitializeFileDescriptors|0x402396",
+          "GetCommandLineArgs|0x401F06",
+          "GetModuleHandleA|0xB",
+          "LaunchGameProcess|0x401000",
+          "GetVersion|0xD",
           "InitializeModuleData|0x402017",
-          "InitializeGlobalConstructors|0x401C80"
+          "GetStartupInfoA|0xC"
         ],
         "LoD/1.14c": [
+          "GetModuleHandleA|0xB",
+          "InitializeDllHeapAndResources|0x402541",
+          "ReportError|0x401CAD",
+          "InitializeFileDescriptors|0x402396",
+          "GetCommandLineArgs|0x401F06",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetStartupInfoA|0xC",
+          "LaunchGameProcess|0x401000",
+          "GetVersion|0xD",
+          "FUN_004015fe|0x4015FE",
           "InitializeModuleData|0x402017",
-          "FUN_00401000|0x401000",
-          "FUN_00401d82|0x401D82",
+          "InitializeEnvironmentVariables|0x401F5E",
           "GetCommandLineA|0x5",
           "GetEnvironmentStringsConverted|0x402264",
-          "GetVersion|0xD",
-          "InitializeGlobalConstructors|0x401C80",
-          "InitializeDllHeapAndResources|0x402541",
-          "FUN_004015fe|0x4015FE",
-          "GetModuleHandleA|0xB",
-          "InitializeFileDescriptors|0x402396",
-          "GetStartupInfoA|0xC",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06",
-          "ReportError|0x401CAD"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.14d": [
-          "FUN_00401000|0x401000",
-          "FUN_004015fe|0x4015FE",
-          "FUN_00401d82|0x401D82",
-          "GetCommandLineA|0x5",
-          "InitializeDllHeapAndResources|0x402541",
-          "GetStartupInfoA|0xC",
+          "LaunchGameProcess|0x401000",
           "GetEnvironmentStringsConverted|0x402264",
+          "ReportError|0x401CAD",
+          "GetCommandLineA|0x5",
           "InitializeModuleData|0x402017",
-          "GetModuleHandleA|0xB",
+          "GetCommandLineArgs|0x401F06",
+          "FilterFloatingPointException|0x401D82",
           "GetVersion|0xD",
-          "InitializeFileDescriptors|0x402396",
-          "FUN_00401f06|0x401F06",
+          "GetStartupInfoA|0xC",
+          "GetModuleHandleA|0xB",
           "InitializeGlobalConstructors|0x401C80",
+          "FUN_004015fe|0x4015FE",
           "InitializeEnvironmentVariables|0x401F5E",
-          "ReportError|0x401CAD"
+          "InitializeFileDescriptors|0x402396",
+          "InitializeDllHeapAndResources|0x402541"
         ]
       },
       "instructions": {
@@ -4974,6 +5216,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x150F|XOR|EDX, EDX"
         ],
         "Classic/1.04c": [
+          "0x14E3|PUSH|EBP",
+          "0x14E4|MOV|EBP, ESP",
+          "0x14E6|PUSH|-0x1",
+          "0x14E8|PUSH|0x4050b8",
+          "0x14ED|PUSH|0x402678",
+          "0x14F2|MOV|EAX, FS:[0x0]",
+          "0x14F8|PUSH|EAX",
+          "0x14F9|MOV|dword ptr FS:[0x0], ESP",
+          "0x1500|SUB|ESP, 0x58",
+          "0x1503|PUSH|EBX",
+          "0x1504|PUSH|ESI",
+          "0x1505|PUSH|EDI",
+          "0x1506|MOV|dword ptr [EBP + -0x18], ESP",
+          "0x1509|CALL|dword ptr [0x00405030]",
+          "0x150F|XOR|EDX, EDX"
+        ],
+        "Classic/1.09d": [
           "0x14E3|PUSH|EBP",
           "0x14E4|MOV|EBP, ESP",
           "0x14E6|PUSH|-0x1",
@@ -5252,7 +5511,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 75,
         "Classic/1.03": 75,
         "Classic/1.04c": 75,
-        "LoD/1.07": 75,
+        "Classic/1.09d": 75,
+        "LoD/1.07": 74,
         "LoD/1.08": 75,
         "LoD/1.09": 75,
         "LoD/1.09b": 75,
@@ -5274,6 +5534,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 112,
         "Classic/1.03": 112,
         "Classic/1.04c": 112,
+        "Classic/1.09d": 112,
         "LoD/1.07": 112,
         "LoD/1.08": 112,
         "LoD/1.09": 112,
@@ -5296,6 +5557,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -5318,7 +5580,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "c37fa64bd2f36382e92794cbb2949299",
         "Classic/1.03": "c37fa64bd2f36382e92794cbb2949299",
         "Classic/1.04c": "c37fa64bd2f36382e92794cbb2949299",
-        "LoD/1.07": "c37fa64bd2f36382e92794cbb2949299",
+        "Classic/1.09d": "c37fa64bd2f36382e92794cbb2949299",
+        "LoD/1.07": "cda0caf9c2ab71bb9488fab35440b1ff",
         "LoD/1.08": "c37fa64bd2f36382e92794cbb2949299",
         "LoD/1.09": "c37fa64bd2f36382e92794cbb2949299",
         "LoD/1.09b": "c37fa64bd2f36382e92794cbb2949299",
@@ -5352,6 +5615,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x14ED||0x402678"
         ],
         "Classic/1.04c": [
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
+        ],
+        "Classic/1.09d": [
           "0x14E8||0x4050B8",
           "0x14ED||0x402678"
         ],
@@ -5492,7 +5759,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x5028|PTR_GetModuleHandleA_00405028|000055cc"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x50B8|DAT_004050b8|-0x1",
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
@@ -5506,6 +5773,21 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x64B4|g_dwModuleHandle|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x5028|PTR_GetModuleHandleA_00405028|000055cc"
+        ],
+        "LoD/1.07": [
+          "0x50B8|g_adwPad_004050b4[1]|",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0x5030|g_pfnGetVersion|000055f2",
+          "0x64DC|g_adwData_4064c4[6]|",
+          "0x64D8|g_adwData_4064c4[5]|",
+          "0x64D4|g_adwData_4064c4[4]|",
+          "0x64D0|g_adwData_4064c4[3]|",
+          "0x5010|g_pfnGetCommandLineA|00005564",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x502C|g_pfnGetStartupInfoA|000055e0",
+          "0x5028|g_pfnGetModuleHandleA|000055cc"
         ],
         "LoD/1.08": [
           "0x50B8|DAT_004050b8|-0x1",
@@ -5647,10 +5929,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x5030|PTR_GetVersion_00405030|000055f2",
-          "0x64DC|DAT_004064dc|0x0",
-          "0x64D8|DAT_004064d8|0x0",
-          "0x64D4|DAT_004064d4|0x0",
-          "0x64D0|DAT_004064d0|0x0",
+          "0x64DC|g_dwWindowsMinorVersion|0x0",
+          "0x64D8|g_dwWindowsMajorVersion|0x0",
+          "0x64D4|g_dwWindowsVersion|0x0",
+          "0x64D0|g_dwWindowsBuild|0x0",
           "0x5010|PTR_GetCommandLineA_00405010|00005564",
           "0x69C8|g_lpszCommandLine|0x0",
           "0x64B4|g_dwModuleHandle|0x0",
@@ -5724,6 +6006,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 15,
         "Classic/1.03": 15,
         "Classic/1.04c": 15,
+        "Classic/1.09d": 15,
         "LoD/1.07": 15,
         "LoD/1.08": 15,
         "LoD/1.09": 15,
@@ -5746,6 +6029,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -5768,6 +6052,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 13,
         "Classic/1.03": 13,
         "Classic/1.04c": 13,
+        "Classic/1.09d": 13,
         "LoD/1.07": 13,
         "LoD/1.08": 13,
         "LoD/1.09": 13,
@@ -5810,6 +6095,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_PlayerData"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PROP_NOCALLER",
+          "PARAM_0",
+          "STRUCT_PlayerData"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PROP_NOCALLER",
           "PARAM_0",
@@ -5912,7 +6203,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "entry",
         "Classic/1.03": "entry",
         "Classic/1.04c": "entry",
-        "LoD/1.07": "entry",
+        "Classic/1.09d": "entry",
+        "LoD/1.07": "export",
         "LoD/1.08": "entry",
         "LoD/1.09": "entry",
         "LoD/1.09b": "entry",
@@ -5936,6 +6228,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004015D9",
         "Classic/1.03": "0x004015D9",
         "Classic/1.04c": "0x004015D9",
+        "Classic/1.09d": "0x004015D9",
         "LoD/1.07": "0x004015D9",
         "LoD/1.08": "0x004015D9",
         "LoD/1.09": "0x004015D9",
@@ -5958,6 +6251,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x15D9",
         "Classic/1.03": "0x15D9",
         "Classic/1.04c": "0x15D9",
+        "Classic/1.09d": "0x15D9",
         "LoD/1.07": "0x15D9",
         "LoD/1.08": "0x15D9",
         "LoD/1.09": "0x15D9",
@@ -5980,6 +6274,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 34,
         "Classic/1.03": 34,
         "Classic/1.04c": 34,
+        "Classic/1.09d": 34,
         "LoD/1.07": 34,
         "LoD/1.08": 34,
         "LoD/1.09": 34,
@@ -6018,19 +6313,19 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.01": [
           "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
           "__exit|0x401CBE"
-        ],
-        "Classic/1.01": [
-          "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE",
-          "CleanupConsoleOutput|0x402750"
         ],
         "Classic/1.02": [
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.03": [
           "CleanupConsoleOutput|0x402750",
@@ -6039,18 +6334,23 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "Classic/1.04c": [
           "CleanupConsoleOutput|0x402750",
+          "__exit|0x401CBE",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.09d": [
+          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
           "__exit|0x401CBE"
         ],
         "LoD/1.07": [
-          "__exit|0x401CBE",
           "CleanupConsoleOutput|0x402750",
+          "__exit|0x401CBE",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.08": [
-          "__exit|0x401CBE",
+          "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789"
+          "__exit|0x401CBE"
         ],
         "LoD/1.09": [
           "CleanupConsoleOutput|0x402750",
@@ -6063,14 +6363,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09d": [
-          "CleanupConsoleOutput|0x402750",
-          "__exit|0x401CBE",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "LoD/1.10": [
           "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750",
           "__exit|0x401CBE"
+        ],
+        "LoD/1.10": [
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.11": [
           "__exit|0x401CBE",
@@ -6078,13 +6378,13 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.11b": [
-          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
+          "CleanupConsoleOutput|0x402750",
           "__exit|0x401CBE"
         ],
         "LoD/1.12a": [
-          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
+          "CleanupConsoleOutput|0x402750",
           "__exit|0x401CBE"
         ],
         "LoD/1.13c": [
@@ -6093,14 +6393,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.13d": [
-          "DisplayRuntimeError|0x402789",
+          "CleanupConsoleOutput|0x402750",
           "__exit|0x401CBE",
-          "CleanupConsoleOutput|0x402750"
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14a": [
-          "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE",
           "CleanupConsoleOutput|0x402750",
-          "__exit|0x401CBE"
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14b": [
           "CleanupConsoleOutput|0x402750",
@@ -6109,30 +6409,30 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.14c": [
           "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.14d": [
-          "CleanupConsoleOutput|0x402750",
+          "__exit|0x401CBE",
           "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE"
+          "CleanupConsoleOutput|0x402750"
         ]
       },
       "callers": {
         "Classic/1.00": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "Classic/1.01": [
           "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
-        "Classic/1.01": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017"
-        ],
         "Classic/1.02": [
-          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017"
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.03": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -6140,64 +6440,69 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeModuleData|0x402017"
         ],
         "Classic/1.04c": [
-          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017"
+          "InitializeFileDescriptors|0x402396"
+        ],
+        "Classic/1.09d": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.07": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.08": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017"
         ],
-        "LoD/1.09": [
-          "InitializeFileDescriptors|0x402396",
+        "LoD/1.08": [
           "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.09": [
+          "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.09b": [
-          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.09d": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396"
+        ],
+        "LoD/1.10": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017"
+        ],
+        "LoD/1.11": [
           "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
-        "LoD/1.10": [
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.11": [
-          "InitializeEnvironmentVariables|0x401F5E",
+        "LoD/1.11b": [
           "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
-        "LoD/1.11b": [
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396"
-        ],
         "LoD/1.12a": [
+          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396"
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.13c": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.13d": [
+          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017"
+          "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.14a": [
           "InitializeFileDescriptors|0x402396",
@@ -6205,19 +6510,19 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14b": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017"
+        ],
+        "LoD/1.14c": [
           "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
-        "LoD/1.14c": [
-          "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
         "LoD/1.14d": [
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeFileDescriptors|0x402396"
         ]
       },
       "instructions": {
@@ -6258,6 +6563,15 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x15F5|CALL|dword ptr [0x00406048]"
         ],
         "Classic/1.04c": [
+          "0x15D9|CMP|dword ptr [0x004064bc], 0x1",
+          "0x15E0|JNZ|0x004015e7",
+          "0x15E2|CALL|0x00402750",
+          "0x15E7|PUSH|dword ptr [ESP + 0x4]",
+          "0x15EB|CALL|0x00402789",
+          "0x15F0|PUSH|0xff",
+          "0x15F5|CALL|dword ptr [0x00406048]"
+        ],
+        "Classic/1.09d": [
           "0x15D9|CMP|dword ptr [0x004064bc], 0x1",
           "0x15E0|JNZ|0x004015e7",
           "0x15E2|CALL|0x00402750",
@@ -6408,6 +6722,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 7,
         "Classic/1.03": 7,
         "Classic/1.04c": 7,
+        "Classic/1.09d": 7,
         "LoD/1.07": 7,
         "LoD/1.08": 7,
         "LoD/1.09": 7,
@@ -6430,6 +6745,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -6452,6 +6768,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -6474,6 +6791,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "23111e3d86e48fe171246fbcab7ae60b",
         "Classic/1.03": "23111e3d86e48fe171246fbcab7ae60b",
         "Classic/1.04c": "23111e3d86e48fe171246fbcab7ae60b",
+        "Classic/1.09d": "23111e3d86e48fe171246fbcab7ae60b",
         "LoD/1.07": "23111e3d86e48fe171246fbcab7ae60b",
         "LoD/1.08": "23111e3d86e48fe171246fbcab7ae60b",
         "LoD/1.09": "23111e3d86e48fe171246fbcab7ae60b",
@@ -6511,9 +6829,13 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x64BC|g_dwConsoleDisplayFlag|0x0",
           "0x6048|PTR___exit_00406048|00401cbe"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x64BC|g_dwConsoleDisplayFlag|0x0",
           "0x6048|PTR___exit_00406048|00401cbe"
+        ],
+        "LoD/1.07": [
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x6048|g_pfn__exit|00401cbe"
         ],
         "LoD/1.08": [
           "0x64BC|g_dwConsoleDisplayFlag|0x0",
@@ -6578,6 +6900,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -6600,6 +6923,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -6622,6 +6946,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -6644,6 +6969,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -6678,6 +7004,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_SMALL"
         ],
@@ -6748,6 +7078,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -6772,6 +7103,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004015FE",
         "Classic/1.03": "0x004015FE",
         "Classic/1.04c": "0x004015FE",
+        "Classic/1.09d": "0x004015FE",
         "LoD/1.07": "0x004015FE",
         "LoD/1.08": "0x004015FE",
         "LoD/1.09": "0x004015FE",
@@ -6794,6 +7126,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x15FE",
         "Classic/1.03": "0x15FE",
         "Classic/1.04c": "0x15FE",
+        "Classic/1.09d": "0x15FE",
         "LoD/1.07": "0x15FE",
         "LoD/1.08": "0x15FE",
         "LoD/1.09": "0x15FE",
@@ -6816,6 +7149,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 35,
         "Classic/1.03": 35,
         "Classic/1.04c": 35,
+        "Classic/1.09d": 35,
         "LoD/1.07": 35,
         "LoD/1.08": 35,
         "LoD/1.09": 35,
@@ -6832,8 +7166,12 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 35,
         "LoD/1.14d": 35
       },
+      "name": "HandleFatalError",
+      "signature": "void HandleFatalError(uint dwErrorCode)",
       "calling_convention": "__cdecl",
       "return_type": "undefined",
+      "comment": "Handles fatal runtime errors and terminates the process.\n\nCalled from the program entry point when an unrecoverable error occurs.\nEnsures proper cleanup of console output before displaying the error\nmessage and terminating with exit code 0xFF (255).\n\nAlgorithm:\n  1. Check if console display is active (g_dwConsoleDisplayFlag == 1)\n  2. If active, call CleanupConsoleOutput() to flush/restore console state\n  3. Display the runtime error message via DisplayRuntimeError()\n  4. Terminate process with ExitProcess(0xFF) - does not return\n\nParameters:\n  dwErrorCode (uint): Runtime error code passed to DisplayRuntimeError\n\nReturns:\n  Does not return - terminates process with exit code 255 (0xFF)\n\nCallers:\n  entry - Program entry point error handling path\n\nCallees:\n  CleanupConsoleOutput - Cleans up console state before exit\n  DisplayRuntimeError - Displays error message to user\n  ExitProcess - Windows API to terminate process",
+      "name_source": "LoD/1.07",
       "method": "NOP",
       "index": "NOP:439add363376dec04d1719690420901b838be92d80d5c4a09b514af1d3f8ed80",
       "indexes": {
@@ -6848,42 +7186,46 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "e6ff6ad0743b58874820ceb7f4492737",
         "PRO": "2e59db3ab77f3da70f210b2bdbad55ff"
       },
-      "display_name": "NOP_439add363376dec0",
       "callees": {
         "Classic/1.00": [
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
+          "ExitProcess|0xE"
+        ],
+        "Classic/1.01": [
           "ExitProcess|0xE",
           "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789"
         ],
-        "Classic/1.01": [
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "ExitProcess|0xE"
-        ],
         "Classic/1.02": [
+          "ExitProcess|0xE",
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "ExitProcess|0xE"
+          "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.03": [
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "ExitProcess|0xE"
+          "ExitProcess|0xE",
+          "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.04c": [
           "CleanupConsoleOutput|0x402750",
+          "ExitProcess|0xE",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.09d": [
+          "CleanupConsoleOutput|0x402750",
+          "ExitProcess|0xE",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.07": [
+          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE"
         ],
-        "LoD/1.07": [
-          "ExitProcess|0xE",
-          "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789"
-        ],
         "LoD/1.08": [
+          "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750",
-          "ExitProcess|0xE",
-          "DisplayRuntimeError|0x402789"
+          "ExitProcess|0xE"
         ],
         "LoD/1.09": [
           "CleanupConsoleOutput|0x402750",
@@ -6896,29 +7238,29 @@ var FUNCTIONS_Diablo_II_exe = {
           "ExitProcess|0xE"
         ],
         "LoD/1.09d": [
-          "CleanupConsoleOutput|0x402750",
           "ExitProcess|0xE",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.10": [
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "ExitProcess|0xE"
-        ],
-        "LoD/1.11": [
           "ExitProcess|0xE",
           "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789"
         ],
-        "LoD/1.11b": [
+        "LoD/1.11": [
           "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
+          "ExitProcess|0xE"
+        ],
+        "LoD/1.11b": [
+          "DisplayRuntimeError|0x402789",
+          "CleanupConsoleOutput|0x402750",
           "ExitProcess|0xE"
         ],
         "LoD/1.12a": [
+          "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE",
-          "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789"
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.13c": [
           "DisplayRuntimeError|0x402789",
@@ -6926,29 +7268,29 @@ var FUNCTIONS_Diablo_II_exe = {
           "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.13d": [
+          "CleanupConsoleOutput|0x402750",
+          "ExitProcess|0xE",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.14a": [
+          "ExitProcess|0xE",
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.14b": [
+          "ExitProcess|0xE",
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.14c": [
           "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE",
           "CleanupConsoleOutput|0x402750"
         ],
-        "LoD/1.14a": [
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "ExitProcess|0xE"
-        ],
-        "LoD/1.14b": [
-          "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "ExitProcess|0xE"
-        ],
-        "LoD/1.14c": [
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "ExitProcess|0xE"
-        ],
         "LoD/1.14d": [
-          "CleanupConsoleOutput|0x402750",
+          "ExitProcess|0xE",
           "DisplayRuntimeError|0x402789",
-          "ExitProcess|0xE"
+          "CleanupConsoleOutput|0x402750"
         ]
       },
       "callers": {
@@ -6965,6 +7307,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -7055,6 +7400,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x161B|CALL|dword ptr [0x00405034]"
         ],
         "Classic/1.04c": [
+          "0x15FE|CMP|dword ptr [0x004064bc], 0x1",
+          "0x1605|JNZ|0x0040160c",
+          "0x1607|CALL|0x00402750",
+          "0x160C|PUSH|dword ptr [ESP + 0x4]",
+          "0x1610|CALL|0x00402789",
+          "0x1615|POP|ECX",
+          "0x1616|PUSH|0xff",
+          "0x161B|CALL|dword ptr [0x00405034]"
+        ],
+        "Classic/1.09d": [
           "0x15FE|CMP|dword ptr [0x004064bc], 0x1",
           "0x1605|JNZ|0x0040160c",
           "0x1607|CALL|0x00402750",
@@ -7221,6 +7576,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -7243,6 +7599,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -7265,6 +7622,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -7287,6 +7645,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "fa40def9a627b3e96c51f0f9c6833564",
         "Classic/1.03": "fa40def9a627b3e96c51f0f9c6833564",
         "Classic/1.04c": "fa40def9a627b3e96c51f0f9c6833564",
+        "Classic/1.09d": "fa40def9a627b3e96c51f0f9c6833564",
         "LoD/1.07": "fa40def9a627b3e96c51f0f9c6833564",
         "LoD/1.08": "fa40def9a627b3e96c51f0f9c6833564",
         "LoD/1.09": "fa40def9a627b3e96c51f0f9c6833564",
@@ -7324,9 +7683,13 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x64BC|g_dwConsoleDisplayFlag|0x0",
           "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x64BC|g_dwConsoleDisplayFlag|0x0",
           "0x5034|PTR_ExitProcess_00405034|00005600"
+        ],
+        "LoD/1.07": [
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x5034|g_pfnExitProcess|00005600"
         ],
         "LoD/1.08": [
           "0x64BC|g_dwConsoleDisplayFlag|0x0",
@@ -7391,6 +7754,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -7413,6 +7777,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -7435,6 +7800,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -7457,6 +7823,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -7491,6 +7858,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_SMALL"
         ],
@@ -7561,6 +7932,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -7585,6 +7957,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401622",
         "Classic/1.03": "0x00401622",
         "Classic/1.04c": "0x00401622",
+        "Classic/1.09d": "0x00401622",
         "LoD/1.07": "0x00401622",
         "LoD/1.08": "0x00401622",
         "LoD/1.09": "0x00401622",
@@ -7607,6 +7980,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1622",
         "Classic/1.03": "0x1622",
         "Classic/1.04c": "0x1622",
+        "Classic/1.09d": "0x1622",
         "LoD/1.07": "0x1622",
         "LoD/1.08": "0x1622",
         "LoD/1.09": "0x1622",
@@ -7629,6 +8003,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 409,
         "Classic/1.03": 409,
         "Classic/1.04c": 409,
+        "Classic/1.09d": 409,
         "LoD/1.07": 409,
         "LoD/1.08": 409,
         "LoD/1.09": 409,
@@ -7668,143 +8043,149 @@ var FUNCTIONS_Diablo_II_exe = {
       "callees": {
         "Classic/1.00": [
           "MapCodePageIdentifier|0x401805",
+          "GetCPInfo|0xF",
+          "InitializeCharacterTables|0x401861",
+          "InitializeLocaleDataBuffers|0x401838",
+          "ResolveCodePageIdentifier|0x4017BB"
+        ],
+        "Classic/1.01": [
           "InitializeLocaleDataBuffers|0x401838",
           "ResolveCodePageIdentifier|0x4017BB",
+          "MapCodePageIdentifier|0x401805",
           "InitializeCharacterTables|0x401861",
           "GetCPInfo|0xF"
         ],
-        "Classic/1.01": [
-          "InitializeCharacterTables|0x401861",
-          "ResolveCodePageIdentifier|0x4017BB",
-          "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805",
-          "InitializeLocaleDataBuffers|0x401838"
-        ],
         "Classic/1.02": [
-          "MapCodePageIdentifier|0x401805",
-          "InitializeLocaleDataBuffers|0x401838",
+          "ResolveCodePageIdentifier|0x4017BB",
           "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF",
-          "ResolveCodePageIdentifier|0x4017BB"
+          "InitializeLocaleDataBuffers|0x401838",
+          "MapCodePageIdentifier|0x401805",
+          "GetCPInfo|0xF"
         ],
         "Classic/1.03": [
-          "MapCodePageIdentifier|0x401805",
           "ResolveCodePageIdentifier|0x4017BB",
-          "GetCPInfo|0xF",
+          "MapCodePageIdentifier|0x401805",
           "InitializeCharacterTables|0x401861",
+          "GetCPInfo|0xF",
           "InitializeLocaleDataBuffers|0x401838"
         ],
         "Classic/1.04c": [
-          "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF",
-          "InitializeLocaleDataBuffers|0x401838",
           "ResolveCodePageIdentifier|0x4017BB",
-          "MapCodePageIdentifier|0x401805"
-        ],
-        "LoD/1.07": [
           "InitializeLocaleDataBuffers|0x401838",
           "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF",
           "MapCodePageIdentifier|0x401805",
-          "ResolveCodePageIdentifier|0x4017BB"
+          "GetCPInfo|0xF"
         ],
-        "LoD/1.08": [
+        "Classic/1.09d": [
           "MapCodePageIdentifier|0x401805",
           "ResolveCodePageIdentifier|0x4017BB",
           "InitializeLocaleDataBuffers|0x401838",
           "GetCPInfo|0xF",
           "InitializeCharacterTables|0x401861"
         ],
-        "LoD/1.09": [
+        "LoD/1.07": [
+          "InitializeCharacterTables|0x401861",
+          "MapCodePageIdentifier|0x401805",
           "ResolveCodePageIdentifier|0x4017BB",
+          "InitializeLocaleDataBuffers|0x401838"
+        ],
+        "LoD/1.08": [
+          "GetCPInfo|0xF",
+          "InitializeLocaleDataBuffers|0x401838",
+          "InitializeCharacterTables|0x401861",
+          "MapCodePageIdentifier|0x401805",
+          "ResolveCodePageIdentifier|0x4017BB"
+        ],
+        "LoD/1.09": [
+          "InitializeCharacterTables|0x401861",
+          "MapCodePageIdentifier|0x401805",
+          "InitializeLocaleDataBuffers|0x401838",
+          "ResolveCodePageIdentifier|0x4017BB",
+          "GetCPInfo|0xF"
+        ],
+        "LoD/1.09b": [
           "GetCPInfo|0xF",
           "InitializeCharacterTables|0x401861",
+          "ResolveCodePageIdentifier|0x4017BB",
           "InitializeLocaleDataBuffers|0x401838",
           "MapCodePageIdentifier|0x401805"
         ],
-        "LoD/1.09b": [
-          "InitializeLocaleDataBuffers|0x401838",
-          "MapCodePageIdentifier|0x401805",
-          "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF"
-        ],
         "LoD/1.09d": [
+          "GetCPInfo|0xF",
+          "InitializeLocaleDataBuffers|0x401838",
+          "InitializeCharacterTables|0x401861",
+          "ResolveCodePageIdentifier|0x4017BB",
+          "MapCodePageIdentifier|0x401805"
+        ],
+        "LoD/1.10": [
+          "MapCodePageIdentifier|0x401805",
           "InitializeCharacterTables|0x401861",
           "InitializeLocaleDataBuffers|0x401838",
-          "MapCodePageIdentifier|0x401805",
           "GetCPInfo|0xF",
           "ResolveCodePageIdentifier|0x4017BB"
         ],
-        "LoD/1.10": [
-          "InitializeLocaleDataBuffers|0x401838",
-          "ResolveCodePageIdentifier|0x4017BB",
-          "MapCodePageIdentifier|0x401805",
-          "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF"
-        ],
         "LoD/1.11": [
-          "ResolveCodePageIdentifier|0x4017BB",
-          "MapCodePageIdentifier|0x401805",
-          "InitializeLocaleDataBuffers|0x401838",
           "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF"
+          "ResolveCodePageIdentifier|0x4017BB",
+          "GetCPInfo|0xF",
+          "InitializeLocaleDataBuffers|0x401838",
+          "MapCodePageIdentifier|0x401805"
         ],
         "LoD/1.11b": [
           "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF",
           "ResolveCodePageIdentifier|0x4017BB",
+          "GetCPInfo|0xF",
           "MapCodePageIdentifier|0x401805",
           "InitializeLocaleDataBuffers|0x401838"
         ],
         "LoD/1.12a": [
-          "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeCharacterTables|0x401861",
-          "InitializeLocaleDataBuffers|0x401838",
           "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805"
+          "MapCodePageIdentifier|0x401805",
+          "InitializeLocaleDataBuffers|0x401838",
+          "InitializeCharacterTables|0x401861",
+          "ResolveCodePageIdentifier|0x4017BB"
         ],
         "LoD/1.13c": [
           "InitializeLocaleDataBuffers|0x401838",
           "MapCodePageIdentifier|0x401805",
+          "GetCPInfo|0xF",
+          "InitializeCharacterTables|0x401861",
+          "ResolveCodePageIdentifier|0x4017BB"
+        ],
+        "LoD/1.13d": [
+          "MapCodePageIdentifier|0x401805",
+          "InitializeLocaleDataBuffers|0x401838",
           "InitializeCharacterTables|0x401861",
           "ResolveCodePageIdentifier|0x4017BB",
           "GetCPInfo|0xF"
         ],
-        "LoD/1.13d": [
+        "LoD/1.14a": [
+          "InitializeLocaleDataBuffers|0x401838",
+          "InitializeCharacterTables|0x401861",
+          "GetCPInfo|0xF",
+          "MapCodePageIdentifier|0x401805",
+          "ResolveCodePageIdentifier|0x4017BB"
+        ],
+        "LoD/1.14b": [
           "InitializeLocaleDataBuffers|0x401838",
           "GetCPInfo|0xF",
           "InitializeCharacterTables|0x401861",
           "MapCodePageIdentifier|0x401805",
           "ResolveCodePageIdentifier|0x4017BB"
         ],
-        "LoD/1.14a": [
-          "ResolveCodePageIdentifier|0x4017BB",
-          "GetCPInfo|0xF",
-          "InitializeLocaleDataBuffers|0x401838",
-          "MapCodePageIdentifier|0x401805",
-          "InitializeCharacterTables|0x401861"
-        ],
-        "LoD/1.14b": [
-          "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805",
-          "InitializeLocaleDataBuffers|0x401838",
-          "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeCharacterTables|0x401861"
-        ],
         "LoD/1.14c": [
-          "MapCodePageIdentifier|0x401805",
           "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeLocaleDataBuffers|0x401838",
           "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF"
+          "GetCPInfo|0xF",
+          "InitializeLocaleDataBuffers|0x401838",
+          "MapCodePageIdentifier|0x401805"
         ],
         "LoD/1.14d": [
-          "MapCodePageIdentifier|0x401805",
-          "InitializeCharacterTables|0x401861",
-          "ResolveCodePageIdentifier|0x4017BB",
           "InitializeLocaleDataBuffers|0x401838",
-          "GetCPInfo|0xF"
+          "MapCodePageIdentifier|0x401805",
+          "ResolveCodePageIdentifier|0x4017BB",
+          "GetCPInfo|0xF",
+          "InitializeCharacterTables|0x401861"
         ]
       },
       "callers": {
@@ -7821,6 +8202,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeCodePageOnce|0x4019E6"
         ],
         "Classic/1.04c": [
+          "InitializeCodePageOnce|0x4019E6"
+        ],
+        "Classic/1.09d": [
           "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.07": [
@@ -7939,6 +8323,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1647|CMP|ESI, EBX"
         ],
         "Classic/1.04c": [
+          "0x1622|PUSH|EBP",
+          "0x1623|MOV|EBP, ESP",
+          "0x1625|SUB|ESP, 0x18",
+          "0x1628|PUSH|EBX",
+          "0x1629|PUSH|ESI",
+          "0x162A|PUSH|EDI",
+          "0x162B|PUSH|dword ptr [EBP + 0x8]",
+          "0x162E|CALL|0x004017bb",
+          "0x1633|MOV|ESI, EAX",
+          "0x1635|POP|ECX",
+          "0x1636|CMP|ESI, dword ptr [0x00406798]",
+          "0x163C|MOV|dword ptr [EBP + 0x8], ESI",
+          "0x163F|JZ|0x004017af",
+          "0x1645|XOR|EBX, EBX",
+          "0x1647|CMP|ESI, EBX"
+        ],
+        "Classic/1.09d": [
           "0x1622|PUSH|EBP",
           "0x1623|MOV|EBP, ESP",
           "0x1625|SUB|ESP, 0x18",
@@ -8217,6 +8618,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 135,
         "Classic/1.03": 135,
         "Classic/1.04c": 135,
+        "Classic/1.09d": 135,
         "LoD/1.07": 135,
         "LoD/1.08": 135,
         "LoD/1.09": 135,
@@ -8239,6 +8641,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 36,
         "Classic/1.03": 36,
         "Classic/1.04c": 36,
+        "Classic/1.09d": 36,
         "LoD/1.07": 36,
         "LoD/1.08": 36,
         "LoD/1.09": 36,
@@ -8261,6 +8664,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 7,
         "Classic/1.03": 7,
         "Classic/1.04c": 7,
+        "Classic/1.09d": 7,
         "LoD/1.07": 7,
         "LoD/1.08": 7,
         "LoD/1.09": 7,
@@ -8283,6 +8687,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "4a5a68bf41640182f32d03a3c91e5fdc",
         "Classic/1.03": "4a5a68bf41640182f32d03a3c91e5fdc",
         "Classic/1.04c": "4a5a68bf41640182f32d03a3c91e5fdc",
+        "Classic/1.09d": "4a5a68bf41640182f32d03a3c91e5fdc",
         "LoD/1.07": "4a5a68bf41640182f32d03a3c91e5fdc",
         "LoD/1.08": "4a5a68bf41640182f32d03a3c91e5fdc",
         "LoD/1.09": "4a5a68bf41640182f32d03a3c91e5fdc",
@@ -8357,6 +8762,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1793||0x4067A0"
         ],
         "Classic/1.04c": [
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0",
+          "0x1764||0x4068C1",
+          "0x1793||0x4067A0"
+        ],
+        "Classic/1.09d": [
           "0x1651||0x406058",
           "0x165E||0x406148",
           "0x167E||0x4068C0",
@@ -8692,7 +9111,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x609A|DAT_0040609a|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6798|g_dwCurrentCodePage|0x0",
           "0x6058|DAT_00406058|0x3a4",
           "0x6088|DAT_00406088|0x3a8",
@@ -8714,8 +9133,30 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x609A|DAT_0040609a|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
+        "LoD/1.07": [
+          "0x6798|CodePage_00406798|0x0",
+          "0x6058|DWORD_00406058|0x3a4",
+          "0x6088|DWORD_00406088|0x3a8",
+          "0x6148|g_adwData_4060a4[41]|",
+          "0x5038|g_pfnGetCPInfo|0000560e",
+          "0x68C0|g_abCharacterTypeFlags|",
+          "0x68C4|g_bData_004068c4|",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x68C1|g_abCharacterTypeFlags[1]|",
+          "0x68C2|g_abCharacterTypeFlags[2]|",
+          "0x6098|g_bData_00406098|0x0",
+          "0x60A0|g_bData_004060a0|0x0",
+          "0x6099|g_bData_00406099|0x0",
+          "0x60A1|g_bData_004060a1|0x0",
+          "0x60A3|g_bData_004060a3|0x0",
+          "0x60A2|g_bData_004060a2|0x0",
+          "0x6050|DWORD_ARRAY_00406050|",
+          "0x6051|DWORD_ARRAY_00406050[0]+1|",
+          "0x609A|g_bData_0040609a|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0"
+        ],
         "LoD/1.08": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x6058|DAT_00406058|0x3a4",
           "0x6088|DAT_00406088|0x3a8",
           "0x6148|DAT_00406148|0x0",
@@ -8737,7 +9178,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "LoD/1.09": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x6058|DAT_00406058|0x3a4",
           "0x6088|DAT_00406088|0x3a8",
           "0x6148|DAT_00406148|0x0",
@@ -8759,7 +9200,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "LoD/1.09b": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x6058|DAT_00406058|0x3a4",
           "0x6088|DAT_00406088|0x3a8",
           "0x6148|DAT_00406148|0x0",
@@ -8781,7 +9222,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "LoD/1.09d": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x6058|DAT_00406058|0x3a4",
           "0x6088|DAT_00406088|0x3a8",
           "0x6148|DAT_00406148|0x0",
@@ -8803,7 +9244,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "LoD/1.10": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x6058|DAT_00406058|0x3a4",
           "0x6088|DAT_00406088|0x3a8",
           "0x6148|DAT_00406148|0x0",
@@ -8825,7 +9266,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "LoD/1.11": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x6058|DAT_00406058|0x3a4",
           "0x6088|DAT_00406088|0x3a8",
           "0x6148|DAT_00406148|0x0",
@@ -8847,7 +9288,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "LoD/1.11b": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x6058|DAT_00406058|0x3a4",
           "0x6088|DAT_00406088|0x3a8",
           "0x6148|DAT_00406148|0x0",
@@ -8869,7 +9310,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "LoD/1.12a": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x6058|DAT_00406058|0x3a4",
           "0x6088|DAT_00406088|0x3a8",
           "0x6148|DAT_00406148|0x0",
@@ -8891,7 +9332,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "LoD/1.13c": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x6058|DAT_00406058|0x3a4",
           "0x6088|DAT_00406088|0x3a8",
           "0x6148|DAT_00406148|0x0",
@@ -9029,7 +9470,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
-        "LoD/1.07": 5,
+        "Classic/1.09d": 5,
+        "LoD/1.07": 4,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
         "LoD/1.09b": 5,
@@ -9051,6 +9493,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -9073,6 +9516,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -9095,6 +9539,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 20,
         "Classic/1.03": 20,
         "Classic/1.04c": 20,
+        "Classic/1.09d": 20,
         "LoD/1.07": 20,
         "LoD/1.08": 20,
         "LoD/1.09": 20,
@@ -9117,6 +9562,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -9155,6 +9601,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LOOPHEAVY"
         ],
         "Classic/1.04c": [
+          "STRUCT_Skill",
+          "PARAM_1",
+          "PROP_LOOPHEAVY"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Skill",
           "PARAM_1",
           "PROP_LOOPHEAVY"
@@ -9241,6 +9692,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -9265,6 +9717,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004017BB",
         "Classic/1.03": "0x004017BB",
         "Classic/1.04c": "0x004017BB",
+        "Classic/1.09d": "0x004017BB",
         "LoD/1.07": "0x004017BB",
         "LoD/1.08": "0x004017BB",
         "LoD/1.09": "0x004017BB",
@@ -9287,6 +9740,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x17BB",
         "Classic/1.03": "0x17BB",
         "Classic/1.04c": "0x17BB",
+        "Classic/1.09d": "0x17BB",
         "LoD/1.07": "0x17BB",
         "LoD/1.08": "0x17BB",
         "LoD/1.09": "0x17BB",
@@ -9309,6 +9763,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 74,
         "Classic/1.03": 74,
         "Classic/1.04c": 74,
+        "Classic/1.09d": 74,
         "LoD/1.07": 74,
         "LoD/1.08": 74,
         "LoD/1.09": 74,
@@ -9359,6 +9814,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeCodePageLocale|0x401622"
         ],
         "Classic/1.04c": [
+          "InitializeCodePageLocale|0x401622"
+        ],
+        "Classic/1.09d": [
           "InitializeCodePageLocale|0x401622"
         ],
         "LoD/1.07": [
@@ -9477,6 +9935,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1804|RET|"
         ],
         "Classic/1.04c": [
+          "0x17BB|MOV|EAX, dword ptr [ESP + 0x4]",
+          "0x17BF|AND|dword ptr [0x004064c0], 0x0",
+          "0x17C6|CMP|EAX, -0x2",
+          "0x17C9|JNZ|0x004017db",
+          "0x17CB|MOV|dword ptr [0x004064c0], 0x1",
+          "0x17D5|JMP|dword ptr [0x00405040]",
+          "0x17DB|CMP|EAX, -0x3",
+          "0x17DE|JNZ|0x004017f0",
+          "0x17E0|MOV|dword ptr [0x004064c0], 0x1",
+          "0x17EA|JMP|dword ptr [0x0040503c]",
+          "0x17F0|CMP|EAX, -0x4",
+          "0x17F3|JNZ|0x00401804",
+          "0x17F5|MOV|EAX, [0x00406638]",
+          "0x17FA|MOV|dword ptr [0x004064c0], 0x1",
+          "0x1804|RET|"
+        ],
+        "Classic/1.09d": [
           "0x17BB|MOV|EAX, dword ptr [ESP + 0x4]",
           "0x17BF|AND|dword ptr [0x004064c0], 0x0",
           "0x17C6|CMP|EAX, -0x2",
@@ -9755,6 +10230,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 15,
         "Classic/1.03": 15,
         "Classic/1.04c": 15,
+        "Classic/1.09d": 15,
         "LoD/1.07": 15,
         "LoD/1.08": 15,
         "LoD/1.09": 15,
@@ -9777,6 +10253,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -9799,6 +10276,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -9821,6 +10299,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "8f2a733057dd5a290f0e17d077c53986",
         "Classic/1.03": "8f2a733057dd5a290f0e17d077c53986",
         "Classic/1.04c": "8f2a733057dd5a290f0e17d077c53986",
+        "Classic/1.09d": "8f2a733057dd5a290f0e17d077c53986",
         "LoD/1.07": "8f2a733057dd5a290f0e17d077c53986",
         "LoD/1.08": "8f2a733057dd5a290f0e17d077c53986",
         "LoD/1.09": "8f2a733057dd5a290f0e17d077c53986",
@@ -9855,6 +10334,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "Classic/1.04c": [
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
+        ],
+        "Classic/1.09d": [
           "0x64C0|g_dwCodePageInitialized|0x0",
           "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
@@ -9925,6 +10408,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -9947,6 +10431,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -9969,6 +10454,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -10003,6 +10489,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_LEAF"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_LEAF"
         ],
@@ -10073,6 +10563,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -10097,6 +10588,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401805",
         "Classic/1.03": "0x00401805",
         "Classic/1.04c": "0x00401805",
+        "Classic/1.09d": "0x00401805",
         "LoD/1.07": "0x00401805",
         "LoD/1.08": "0x00401805",
         "LoD/1.09": "0x00401805",
@@ -10119,6 +10611,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1805",
         "Classic/1.03": "0x1805",
         "Classic/1.04c": "0x1805",
+        "Classic/1.09d": "0x1805",
         "LoD/1.07": "0x1805",
         "LoD/1.08": "0x1805",
         "LoD/1.09": "0x1805",
@@ -10141,6 +10634,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 51,
         "Classic/1.03": 51,
         "Classic/1.04c": 51,
+        "Classic/1.09d": 51,
         "LoD/1.07": 51,
         "LoD/1.08": 51,
         "LoD/1.09": 51,
@@ -10191,6 +10685,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeCodePageLocale|0x401622"
         ],
         "Classic/1.04c": [
+          "InitializeCodePageLocale|0x401622"
+        ],
+        "Classic/1.09d": [
           "InitializeCodePageLocale|0x401622"
         ],
         "LoD/1.07": [
@@ -10309,6 +10806,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x182B|RET|"
         ],
         "Classic/1.04c": [
+          "0x1805|MOV|EAX, dword ptr [ESP + 0x4]",
+          "0x1809|SUB|EAX, 0x3a4",
+          "0x180E|JZ|0x00401832",
+          "0x1810|SUB|EAX, 0x4",
+          "0x1813|JZ|0x0040182c",
+          "0x1815|SUB|EAX, 0xd",
+          "0x1818|JZ|0x00401826",
+          "0x181A|DEC|EAX",
+          "0x181B|JZ|0x00401820",
+          "0x181D|XOR|EAX, EAX",
+          "0x181F|RET|",
+          "0x1820|MOV|EAX, 0x404",
+          "0x1825|RET|",
+          "0x1826|MOV|EAX, 0x412",
+          "0x182B|RET|"
+        ],
+        "Classic/1.09d": [
           "0x1805|MOV|EAX, dword ptr [ESP + 0x4]",
           "0x1809|SUB|EAX, 0x3a4",
           "0x180E|JZ|0x00401832",
@@ -10587,6 +11101,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 19,
         "Classic/1.03": 19,
         "Classic/1.04c": 19,
+        "Classic/1.09d": 19,
         "LoD/1.07": 19,
         "LoD/1.08": 19,
         "LoD/1.09": 19,
@@ -10609,6 +11124,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -10631,6 +11147,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -10653,6 +11170,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "f31c6439952ca9c3e10694cce3d833df",
         "Classic/1.03": "f31c6439952ca9c3e10694cce3d833df",
         "Classic/1.04c": "f31c6439952ca9c3e10694cce3d833df",
+        "Classic/1.09d": "f31c6439952ca9c3e10694cce3d833df",
         "LoD/1.07": "f31c6439952ca9c3e10694cce3d833df",
         "LoD/1.08": "f31c6439952ca9c3e10694cce3d833df",
         "LoD/1.09": "f31c6439952ca9c3e10694cce3d833df",
@@ -10699,6 +11217,13 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1832||0x411"
         ],
         "Classic/1.04c": [
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
+        ],
+        "Classic/1.09d": [
           "0x1809||0x3A4",
           "0x1820||0x404",
           "0x1826||0x412",
@@ -10817,6 +11342,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -10839,6 +11365,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "Classic/1.09d": 5,
         "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -10861,6 +11388,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -10895,6 +11423,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_LEAF"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_LEAF"
         ],
@@ -10965,6 +11497,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -10989,6 +11522,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401838",
         "Classic/1.03": "0x00401838",
         "Classic/1.04c": "0x00401838",
+        "Classic/1.09d": "0x00401838",
         "LoD/1.07": "0x00401838",
         "LoD/1.08": "0x00401838",
         "LoD/1.09": "0x00401838",
@@ -11011,6 +11545,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1838",
         "Classic/1.03": "0x1838",
         "Classic/1.04c": "0x1838",
+        "Classic/1.09d": "0x1838",
         "LoD/1.07": "0x1838",
         "LoD/1.08": "0x1838",
         "LoD/1.09": "0x1838",
@@ -11033,6 +11568,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 41,
         "Classic/1.03": 41,
         "Classic/1.04c": 41,
+        "Classic/1.09d": 41,
         "LoD/1.07": 41,
         "LoD/1.08": 41,
         "LoD/1.09": 41,
@@ -11083,6 +11619,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeCodePageLocale|0x401622"
         ],
         "Classic/1.04c": [
+          "InitializeCodePageLocale|0x401622"
+        ],
+        "Classic/1.09d": [
           "InitializeCodePageLocale|0x401622"
         ],
         "LoD/1.07": [
@@ -11201,6 +11740,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x185E|STOSD|ES:EDI"
         ],
         "Classic/1.04c": [
+          "0x1838|PUSH|EDI",
+          "0x1839|PUSH|0x40",
+          "0x183B|POP|ECX",
+          "0x183C|XOR|EAX, EAX",
+          "0x183E|MOV|EDI, 0x4068c0",
+          "0x1843|STOSD.REP|ES:EDI",
+          "0x1845|STOSB|ES:EDI",
+          "0x1846|XOR|EAX, EAX",
+          "0x1848|MOV|EDI, 0x4067a0",
+          "0x184D|MOV|[0x00406798], EAX",
+          "0x1852|MOV|[0x004067ac], EAX",
+          "0x1857|MOV|[0x004069c4], EAX",
+          "0x185C|STOSD|ES:EDI",
+          "0x185D|STOSD|ES:EDI",
+          "0x185E|STOSD|ES:EDI"
+        ],
+        "Classic/1.09d": [
           "0x1838|PUSH|EDI",
           "0x1839|PUSH|0x40",
           "0x183B|POP|ECX",
@@ -11479,6 +12035,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 17,
         "Classic/1.03": 17,
         "Classic/1.04c": 17,
+        "Classic/1.09d": 17,
         "LoD/1.07": 17,
         "LoD/1.08": 17,
         "LoD/1.09": 17,
@@ -11501,6 +12058,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -11523,6 +12081,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -11545,6 +12104,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "05d3556ba26e52c51954a1255d97c525",
         "Classic/1.03": "05d3556ba26e52c51954a1255d97c525",
         "Classic/1.04c": "05d3556ba26e52c51954a1255d97c525",
+        "Classic/1.09d": "05d3556ba26e52c51954a1255d97c525",
         "LoD/1.07": "05d3556ba26e52c51954a1255d97c525",
         "LoD/1.08": "05d3556ba26e52c51954a1255d97c525",
         "LoD/1.09": "05d3556ba26e52c51954a1255d97c525",
@@ -11579,6 +12139,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1848||0x4067A0"
         ],
         "Classic/1.04c": [
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
+        ],
+        "Classic/1.09d": [
           "0x183E||0x4068C0",
           "0x1848||0x4067A0"
         ],
@@ -11694,7 +12258,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67A4|DAT_004067a4|0x0",
           "0x67A8|DAT_004067a8|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x68C0|DAT_004068c0|0x0",
           "0x68C4|DAT_004068c4|0x0",
           "0x67A0|DAT_004067a0|0x0",
@@ -11704,11 +12268,21 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67A4|DAT_004067a4|0x0",
           "0x67A8|DAT_004067a8|0x0"
         ],
+        "LoD/1.07": [
+          "0x68C0|g_abCharacterTypeFlags|",
+          "0x68C4|g_bData_004068c4|",
+          "0x67A0|DWORD_004067a0|0x0",
+          "0x6798|CodePage_00406798|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DWORD_004067a4|0x0",
+          "0x67A8|DWORD_004067a8|0x0"
+        ],
         "LoD/1.08": [
           "0x68C0|DAT_004068c0|0x0",
           "0x68C4|DAT_004068c4|0x0",
           "0x67A0|DAT_004067a0|0x0",
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x67A4|DAT_004067a4|0x0",
@@ -11718,7 +12292,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x68C0|DAT_004068c0|0x0",
           "0x68C4|DAT_004068c4|0x0",
           "0x67A0|DAT_004067a0|0x0",
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x67A4|DAT_004067a4|0x0",
@@ -11728,7 +12302,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x68C0|DAT_004068c0|0x0",
           "0x68C4|DAT_004068c4|0x0",
           "0x67A0|DAT_004067a0|0x0",
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x67A4|DAT_004067a4|0x0",
@@ -11738,7 +12312,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x68C0|DAT_004068c0|0x0",
           "0x68C4|DAT_004068c4|0x0",
           "0x67A0|DAT_004067a0|0x0",
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x67A4|DAT_004067a4|0x0",
@@ -11748,7 +12322,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x68C0|DAT_004068c0|0x0",
           "0x68C4|DAT_004068c4|0x0",
           "0x67A0|DAT_004067a0|0x0",
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x67A4|DAT_004067a4|0x0",
@@ -11758,7 +12332,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x68C0|DAT_004068c0|0x0",
           "0x68C4|DAT_004068c4|0x0",
           "0x67A0|DAT_004067a0|0x0",
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x67A4|DAT_004067a4|0x0",
@@ -11768,7 +12342,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x68C0|DAT_004068c0|0x0",
           "0x68C4|DAT_004068c4|0x0",
           "0x67A0|DAT_004067a0|0x0",
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x67A4|DAT_004067a4|0x0",
@@ -11778,7 +12352,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x68C0|DAT_004068c0|0x0",
           "0x68C4|DAT_004068c4|0x0",
           "0x67A0|DAT_004067a0|0x0",
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x67A4|DAT_004067a4|0x0",
@@ -11788,7 +12362,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x68C0|DAT_004068c0|0x0",
           "0x68C4|DAT_004068c4|0x0",
           "0x67A0|DAT_004067a0|0x0",
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x67AC|g_fIsMultiByteCodePage|0x0",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x67A4|DAT_004067a4|0x0",
@@ -11851,6 +12425,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -11873,6 +12448,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -11895,6 +12471,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -11933,6 +12510,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_0",
+          "PROP_LEAF",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -12019,6 +12601,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -12043,6 +12626,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401861",
         "Classic/1.03": "0x00401861",
         "Classic/1.04c": "0x00401861",
+        "Classic/1.09d": "0x00401861",
         "LoD/1.07": "0x00401861",
         "LoD/1.08": "0x00401861",
         "LoD/1.09": "0x00401861",
@@ -12065,6 +12649,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1861",
         "Classic/1.03": "0x1861",
         "Classic/1.04c": "0x1861",
+        "Classic/1.09d": "0x1861",
         "LoD/1.07": "0x1861",
         "LoD/1.08": "0x1861",
         "LoD/1.09": "0x1861",
@@ -12087,6 +12672,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 389,
         "Classic/1.03": 389,
         "Classic/1.04c": 389,
+        "Classic/1.09d": 389,
         "LoD/1.07": 389,
         "LoD/1.08": 389,
         "LoD/1.09": 389,
@@ -12126,37 +12712,41 @@ var FUNCTIONS_Diablo_II_exe = {
       "callees": {
         "Classic/1.00": [
           "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF"
+          "GetCPInfo|0xF",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "Classic/1.01": [
-          "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B",
           "GetCPInfo|0xF"
         ],
         "Classic/1.02": [
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B",
+          "GetCPInfo|0xF"
+        ],
+        "Classic/1.03": [
           "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC",
           "GetCPInfo|0xF"
         ],
-        "Classic/1.03": [
+        "Classic/1.04c": [
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B",
+          "GetCPInfo|0xF"
+        ],
+        "Classic/1.09d": [
+          "GetCharacterTypeInfo|0x402B2B",
           "GetCPInfo|0xF",
+          "LocaleMapStringWithConversion|0x4028DC"
+        ],
+        "LoD/1.07": [
           "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
         ],
-        "Classic/1.04c": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF",
-          "GetCharacterTypeInfo|0x402B2B"
-        ],
-        "LoD/1.07": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF",
-          "GetCharacterTypeInfo|0x402B2B"
-        ],
         "LoD/1.08": [
-          "GetCharacterTypeInfo|0x402B2B",
           "GetCPInfo|0xF",
+          "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.09": [
@@ -12165,39 +12755,39 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCPInfo|0xF"
         ],
         "LoD/1.09b": [
-          "GetCharacterTypeInfo|0x402B2B",
+          "GetCPInfo|0xF",
           "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF"
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.09d": [
+          "GetCPInfo|0xF",
           "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B",
-          "GetCPInfo|0xF"
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.10": [
           "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF"
-        ],
-        "LoD/1.11": [
-          "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF"
-        ],
-        "LoD/1.11b": [
           "GetCPInfo|0xF",
-          "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
         ],
-        "LoD/1.12a": [
+        "LoD/1.11": [
+          "GetCPInfo|0xF",
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B"
+        ],
+        "LoD/1.11b": [
           "LocaleMapStringWithConversion|0x4028DC",
           "GetCharacterTypeInfo|0x402B2B",
           "GetCPInfo|0xF"
         ],
-        "LoD/1.13c": [
+        "LoD/1.12a": [
           "GetCharacterTypeInfo|0x402B2B",
+          "GetCPInfo|0xF",
+          "LocaleMapStringWithConversion|0x4028DC"
+        ],
+        "LoD/1.13c": [
           "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF"
+          "GetCPInfo|0xF",
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.13d": [
           "GetCharacterTypeInfo|0x402B2B",
@@ -12205,9 +12795,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCPInfo|0xF"
         ],
         "LoD/1.14a": [
-          "GetCPInfo|0xF",
+          "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCPInfo|0xF"
         ],
         "LoD/1.14b": [
           "GetCPInfo|0xF",
@@ -12215,14 +12805,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.14c": [
-          "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF"
+          "GetCPInfo|0xF",
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.14d": [
           "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B",
-          "GetCPInfo|0xF"
+          "GetCPInfo|0xF",
+          "GetCharacterTypeInfo|0x402B2B"
         ]
       },
       "callers": {
@@ -12239,6 +12829,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeCodePageLocale|0x401622"
         ],
         "Classic/1.04c": [
+          "InitializeCodePageLocale|0x401622"
+        ],
+        "Classic/1.09d": [
           "InitializeCodePageLocale|0x401622"
         ],
         "LoD/1.07": [
@@ -12357,6 +12950,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1893|CMP|EAX, ESI"
         ],
         "Classic/1.04c": [
+          "0x1861|PUSH|EBP",
+          "0x1862|MOV|EBP, ESP",
+          "0x1864|SUB|ESP, 0x514",
+          "0x186A|LEA|EAX, [EBP + -0x14]",
+          "0x186D|PUSH|ESI",
+          "0x186E|PUSH|EAX",
+          "0x186F|PUSH|dword ptr [0x00406798]",
+          "0x1875|CALL|dword ptr [0x00405038]",
+          "0x187B|CMP|EAX, 0x1",
+          "0x187E|JNZ|0x0040199a",
+          "0x1884|XOR|EAX, EAX",
+          "0x1886|MOV|ESI, 0x100",
+          "0x188B|MOV|byte ptr [EBP + EAX*0x1 + 0xfffffeec], AL",
+          "0x1892|INC|EAX",
+          "0x1893|CMP|EAX, ESI"
+        ],
+        "Classic/1.09d": [
           "0x1861|PUSH|EBP",
           "0x1862|MOV|EBP, ESP",
           "0x1864|SUB|ESP, 0x514",
@@ -12635,6 +13245,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 124,
         "Classic/1.03": 124,
         "Classic/1.04c": 124,
+        "Classic/1.09d": 124,
         "LoD/1.07": 124,
         "LoD/1.08": 124,
         "LoD/1.09": 124,
@@ -12657,6 +13268,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1308,
         "Classic/1.03": 1308,
         "Classic/1.04c": 1308,
+        "Classic/1.09d": 1308,
         "LoD/1.07": 1308,
         "LoD/1.08": 1308,
         "LoD/1.09": 1308,
@@ -12679,6 +13291,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -12701,6 +13314,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "63906d1f35f7842042066a6643d2050c",
         "Classic/1.03": "63906d1f35f7842042066a6643d2050c",
         "Classic/1.04c": "63906d1f35f7842042066a6643d2050c",
+        "Classic/1.09d": "63906d1f35f7842042066a6643d2050c",
         "LoD/1.07": "63906d1f35f7842042066a6643d2050c",
         "LoD/1.08": "63906d1f35f7842042066a6643d2050c",
         "LoD/1.09": "63906d1f35f7842042066a6643d2050c",
@@ -12775,6 +13389,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x19D7||0x4067C0"
         ],
         "Classic/1.04c": [
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0",
+          "0x19C9||0x4068C1",
+          "0x19D7||0x4067C0"
+        ],
+        "Classic/1.09d": [
           "0x1864||0x514",
           "0x1886||0x100",
           "0x193C||0x200",
@@ -13045,7 +13673,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67C0|DAT_004067c0|0x0",
           "0x67C1|DAT_004067c1|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6798|g_dwCurrentCodePage|0x0",
           "0x5038|PTR_GetCPInfo_00405038|0000560e",
           "0x69C4|g_dwCodePageProperties|0x0",
@@ -13054,8 +13682,17 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67C0|DAT_004067c0|0x0",
           "0x67C1|DAT_004067c1|0x0"
         ],
+        "LoD/1.07": [
+          "0x6798|CodePage_00406798|0x0",
+          "0x5038|g_pfnGetCPInfo|0000560e",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x68C1|g_abCharacterTypeFlags[1]|",
+          "0x68C2|g_abCharacterTypeFlags[2]|",
+          "0x67C0|g_abCaseConversionTable|",
+          "0x67C1|g_bData_004067c1|"
+        ],
         "LoD/1.08": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x5038|PTR_GetCPInfo_00405038|0000560e",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x68C1|DAT_004068c0+1|",
@@ -13064,7 +13701,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67C1|DAT_004067c1|0x0"
         ],
         "LoD/1.09": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x5038|PTR_GetCPInfo_00405038|0000560e",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x68C1|DAT_004068c0+1|",
@@ -13073,7 +13710,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67C1|DAT_004067c1|0x0"
         ],
         "LoD/1.09b": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x5038|PTR_GetCPInfo_00405038|0000560e",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x68C1|DAT_004068c0+1|",
@@ -13082,7 +13719,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67C1|DAT_004067c1|0x0"
         ],
         "LoD/1.09d": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x5038|PTR_GetCPInfo_00405038|0000560e",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x68C1|DAT_004068c0+1|",
@@ -13091,7 +13728,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67C1|DAT_004067c1|0x0"
         ],
         "LoD/1.10": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x5038|PTR_GetCPInfo_00405038|0000560e",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x68C1|DAT_004068c0+1|",
@@ -13100,7 +13737,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67C1|DAT_004067c1|0x0"
         ],
         "LoD/1.11": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x5038|PTR_GetCPInfo_00405038|0000560e",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x68C1|DAT_004068c0+1|",
@@ -13109,7 +13746,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67C1|DAT_004067c1|0x0"
         ],
         "LoD/1.11b": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x5038|PTR_GetCPInfo_00405038|0000560e",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x68C1|DAT_004068c0+1|",
@@ -13118,7 +13755,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67C1|DAT_004067c1|0x0"
         ],
         "LoD/1.12a": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x5038|PTR_GetCPInfo_00405038|0000560e",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x68C1|DAT_004068c0+1|",
@@ -13127,7 +13764,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67C1|DAT_004067c1|0x0"
         ],
         "LoD/1.13c": [
-          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6798|CodePage_00406798|0x0",
           "0x5038|PTR_GetCPInfo_00405038|0000560e",
           "0x69C4|g_dwCodePageProperties|0x0",
           "0x68C1|DAT_004068c0+1|",
@@ -13187,7 +13824,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
-        "LoD/1.07": 3,
+        "Classic/1.09d": 3,
+        "LoD/1.07": 2,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
         "LoD/1.09b": 3,
@@ -13209,6 +13847,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -13231,6 +13870,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -13253,6 +13893,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 7,
         "Classic/1.03": 7,
         "Classic/1.04c": 7,
+        "Classic/1.09d": 7,
         "LoD/1.07": 7,
         "LoD/1.08": 7,
         "LoD/1.09": 7,
@@ -13291,6 +13932,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LOOPHEAVY"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_0",
+          "PROP_LOOPHEAVY"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_0",
           "PROP_LOOPHEAVY"
@@ -13377,6 +14023,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -13401,6 +14048,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004019E6",
         "Classic/1.03": "0x004019E6",
         "Classic/1.04c": "0x004019E6",
+        "Classic/1.09d": "0x004019E6",
         "LoD/1.07": "0x004019E6",
         "LoD/1.08": "0x004019E6",
         "LoD/1.09": "0x004019E6",
@@ -13423,6 +14071,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x19E6",
         "Classic/1.03": "0x19E6",
         "Classic/1.04c": "0x19E6",
+        "Classic/1.09d": "0x19E6",
         "LoD/1.07": "0x19E6",
         "LoD/1.08": "0x19E6",
         "LoD/1.09": "0x19E6",
@@ -13445,6 +14094,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 28,
         "Classic/1.03": 28,
         "Classic/1.04c": 28,
+        "Classic/1.09d": 28,
         "LoD/1.07": 28,
         "LoD/1.08": 28,
         "LoD/1.09": 28,
@@ -13497,6 +14147,9 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "InitializeCodePageLocale|0x401622"
         ],
+        "Classic/1.09d": [
+          "InitializeCodePageLocale|0x401622"
+        ],
         "LoD/1.07": [
           "InitializeCodePageLocale|0x401622"
         ],
@@ -13545,104 +14198,109 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_00401f06|0x401F06",
+          "GetCommandLineArgs|0x401F06",
           "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.01": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.02": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06",
-          "InitializeModuleData|0x402017"
+          "InitializeModuleData|0x402017",
+          "GetCommandLineArgs|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.03": [
+          "GetCommandLineArgs|0x401F06",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06",
           "InitializeModuleData|0x402017"
         ],
         "Classic/1.04c": [
-          "FUN_00401f06|0x401F06",
+          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017"
+          "GetCommandLineArgs|0x401F06"
+        ],
+        "Classic/1.09d": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.07": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06",
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.08": [
-          "FUN_00401f06|0x401F06",
+          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.09": [
           "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.09b": [
-          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06"
+          "InitializeModuleData|0x402017",
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.09d": [
-          "FUN_00401f06|0x401F06",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "LoD/1.10": [
-          "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "LoD/1.11": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06"
-        ],
-        "LoD/1.11b": [
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06"
-        ],
-        "LoD/1.12a": [
-          "FUN_00401f06|0x401F06",
+          "GetCommandLineArgs|0x401F06",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
-        "LoD/1.13c": [
+        "LoD/1.10": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06",
+          "InitializeModuleData|0x402017",
+          "GetCommandLineArgs|0x401F06"
+        ],
+        "LoD/1.11": [
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetCommandLineArgs|0x401F06"
+        ],
+        "LoD/1.11b": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetCommandLineArgs|0x401F06",
+          "InitializeModuleData|0x402017"
+        ],
+        "LoD/1.12a": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
+          "GetCommandLineArgs|0x401F06"
+        ],
+        "LoD/1.13c": [
+          "GetCommandLineArgs|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.13d": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.14a": [
           "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.14b": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06",
+          "GetCommandLineArgs|0x401F06",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.14c": [
-          "InitializeModuleData|0x402017",
+          "GetCommandLineArgs|0x401F06",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06"
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.14d": [
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "GetCommandLineArgs|0x401F06"
         ]
       },
       "instructions": {
@@ -13683,6 +14341,15 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1A01|RET|"
         ],
         "Classic/1.04c": [
+          "0x19E6|CMP|dword ptr [0x00406788], 0x0",
+          "0x19ED|JNZ|0x00401a01",
+          "0x19EF|PUSH|-0x3",
+          "0x19F1|CALL|0x00401622",
+          "0x19F6|POP|ECX",
+          "0x19F7|MOV|dword ptr [0x00406788], 0x1",
+          "0x1A01|RET|"
+        ],
+        "Classic/1.09d": [
           "0x19E6|CMP|dword ptr [0x00406788], 0x0",
           "0x19ED|JNZ|0x00401a01",
           "0x19EF|PUSH|-0x3",
@@ -13833,6 +14500,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 7,
         "Classic/1.03": 7,
         "Classic/1.04c": 7,
+        "Classic/1.09d": 7,
         "LoD/1.07": 7,
         "LoD/1.08": 7,
         "LoD/1.09": 7,
@@ -13855,6 +14523,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -13877,6 +14546,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -13899,6 +14569,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "750c71b47c1aaa7e04385ca0c70f7831",
         "Classic/1.03": "750c71b47c1aaa7e04385ca0c70f7831",
         "Classic/1.04c": "750c71b47c1aaa7e04385ca0c70f7831",
+        "Classic/1.09d": "750c71b47c1aaa7e04385ca0c70f7831",
         "LoD/1.07": "750c71b47c1aaa7e04385ca0c70f7831",
         "LoD/1.08": "750c71b47c1aaa7e04385ca0c70f7831",
         "LoD/1.09": "750c71b47c1aaa7e04385ca0c70f7831",
@@ -13929,6 +14600,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6788|g_fCodePageInitialized|0x0"
         ],
         "Classic/1.04c": [
+          "0x6788|g_fCodePageInitialized|0x0"
+        ],
+        "Classic/1.09d": [
           "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.07": [
@@ -13983,6 +14657,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -14005,6 +14680,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -14027,6 +14703,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -14061,6 +14738,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_0",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_0",
           "PROP_SMALL"
         ],
@@ -14131,6 +14812,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -14155,6 +14837,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401A02",
         "Classic/1.03": "0x00401A02",
         "Classic/1.04c": "0x00401A02",
+        "Classic/1.09d": "0x00401A02",
         "LoD/1.07": "0x00401A02",
         "LoD/1.08": "0x00401A02",
         "LoD/1.09": "0x00401A02",
@@ -14177,6 +14860,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1A02",
         "Classic/1.03": "0x1A02",
         "Classic/1.04c": "0x1A02",
+        "Classic/1.09d": "0x1A02",
         "LoD/1.07": "0x1A02",
         "LoD/1.08": "0x1A02",
         "LoD/1.09": "0x1A02",
@@ -14199,6 +14883,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 56,
         "Classic/1.03": 56,
         "Classic/1.04c": 56,
+        "Classic/1.09d": 56,
         "LoD/1.07": 56,
         "LoD/1.08": 56,
         "LoD/1.09": 56,
@@ -14215,8 +14900,12 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 56,
         "LoD/1.14d": 56
       },
+      "name": "GetTrailingLeadByteState",
+      "signature": "int GetTrailingLeadByteState(byte * param_1, int param_2)",
       "calling_convention": "__cdecl",
       "return_type": "int",
+      "comment": "Determines if a multi-byte string ends with an incomplete lead byte.\n\nAlgorithm:\n1. Check if multi-byte code page is active (g_fIsMultiByteCodePage)\n2. If not MBCS mode, return 0 (not applicable)\n3. Initialize lead byte state to -1 (no previous state)\n4. Loop through each byte in the string up to nLength:\n   a. Read current byte from string\n   b. If null terminator found, return -1 (string ended normally)\n   c. Advance string pointer\n   d. Call GetMultiByteCharState to update lead byte tracking\n   e. Decrement remaining length counter\n5. Return final lead byte state\n\nParameters:\n  pbString - Pointer to the multi-byte string to analyze\n  nLength - Number of bytes to examine (string length minus 1)\n\nReturns:\n  0 - Not a multi-byte code page (single-byte mode)\n  1 - String ends with incomplete lead byte (needs truncation)\n -1 - String ends normally (complete character or null found)\n\nSpecial Cases:\n  - Returns 0 immediately if g_fIsMultiByteCodePage is false\n  - Returns -1 if null terminator encountered before nLength exhausted\n  - Used by ConcatStringMBCS to detect/fix incomplete multi-byte sequences",
+      "name_source": "Classic/1.00",
       "method": "NOP",
       "index": "NOP:2de4593bda27a8762786ccff299e7f1f6919884b30013879f7cbf7a74b4d3e04",
       "indexes": {
@@ -14231,129 +14920,134 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "c5adb86ae14c9188b0ae60db194a761c",
         "PRO": "2f281cb40124fe42bb61dcaf12c71960"
       },
-      "display_name": "NOP_2de4593bda27a876",
       "callees": {
         "Classic/1.00": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "Classic/1.01": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "Classic/1.02": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "Classic/1.03": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "Classic/1.04c": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
+        ],
+        "Classic/1.09d": [
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.07": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.08": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.09": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.09b": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.09d": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.10": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.11": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.11b": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.12a": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.13c": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.13d": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.14a": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.14b": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.14c": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ],
         "LoD/1.14d": [
-          "FUN_00402c74|0x402C74"
+          "GetMultiByteCharState|0x402C74"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "Classic/1.01": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "Classic/1.02": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "Classic/1.03": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "Classic/1.04c": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
+        ],
+        "Classic/1.09d": [
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.07": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.08": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.09": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.09b": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.09d": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.10": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.11": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.11b": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.12a": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.13c": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.13d": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.14a": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.14b": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.14c": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.14d": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ]
       },
       "instructions": {
@@ -14426,6 +15120,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1A20|CALL|0x00402c74"
         ],
         "Classic/1.04c": [
+          "0x1A02|CMP|dword ptr [0x004067ac], 0x0",
+          "0x1A09|PUSH|ESI",
+          "0x1A0A|JNZ|0x00401a10",
+          "0x1A0C|XOR|EAX, EAX",
+          "0x1A0E|POP|ESI",
+          "0x1A0F|RET|",
+          "0x1A10|MOV|ESI, dword ptr [ESP + 0x8]",
+          "0x1A14|OR|EAX, 0xffffffff",
+          "0x1A17|MOV|CL, byte ptr [ESI]",
+          "0x1A19|TEST|CL, CL",
+          "0x1A1B|JZ|0x00401a35",
+          "0x1A1D|PUSH|EAX",
+          "0x1A1E|PUSH|ECX",
+          "0x1A1F|INC|ESI",
+          "0x1A20|CALL|0x00402c74"
+        ],
+        "Classic/1.09d": [
           "0x1A02|CMP|dword ptr [0x004067ac], 0x0",
           "0x1A09|PUSH|ESI",
           "0x1A0A|JNZ|0x00401a10",
@@ -14704,6 +15415,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 25,
         "Classic/1.03": 25,
         "Classic/1.04c": 25,
+        "Classic/1.09d": 25,
         "LoD/1.07": 25,
         "LoD/1.08": 25,
         "LoD/1.09": 25,
@@ -14726,6 +15438,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -14748,6 +15461,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -14770,6 +15484,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0fd63ca178190d07551a06ea40081aaa",
         "Classic/1.03": "0fd63ca178190d07551a06ea40081aaa",
         "Classic/1.04c": "0fd63ca178190d07551a06ea40081aaa",
+        "Classic/1.09d": "0fd63ca178190d07551a06ea40081aaa",
         "LoD/1.07": "0fd63ca178190d07551a06ea40081aaa",
         "LoD/1.08": "0fd63ca178190d07551a06ea40081aaa",
         "LoD/1.09": "0fd63ca178190d07551a06ea40081aaa",
@@ -14800,6 +15515,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "Classic/1.04c": [
+          "0x67AC|g_fIsMultiByteCodePage|0x0"
+        ],
+        "Classic/1.09d": [
           "0x67AC|g_fIsMultiByteCodePage|0x0"
         ],
         "LoD/1.07": [
@@ -14854,6 +15572,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -14876,6 +15595,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -14898,6 +15618,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -14920,6 +15641,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -14954,6 +15676,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_2"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_2"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_2"
         ],
@@ -15024,6 +15750,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -15048,6 +15775,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401A40",
         "Classic/1.03": "0x00401A40",
         "Classic/1.04c": "0x00401A40",
+        "Classic/1.09d": "0x00401A40",
         "LoD/1.07": "0x00401A40",
         "LoD/1.08": "0x00401A40",
         "LoD/1.09": "0x00401A40",
@@ -15070,6 +15798,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1A40",
         "Classic/1.03": "0x1A40",
         "Classic/1.04c": "0x1A40",
+        "Classic/1.09d": "0x1A40",
         "LoD/1.07": "0x1A40",
         "LoD/1.08": "0x1A40",
         "LoD/1.09": "0x1A40",
@@ -15092,6 +15821,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 291,
         "Classic/1.03": 291,
         "Classic/1.04c": 291,
+        "Classic/1.09d": 291,
         "LoD/1.07": 291,
         "LoD/1.08": 291,
         "LoD/1.09": 291,
@@ -15130,64 +15860,67 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "Classic/1.01": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "Classic/1.02": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "Classic/1.03": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "Classic/1.04c": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
+        ],
+        "Classic/1.09d": [
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.07": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.08": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.09": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.09b": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.09d": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.10": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.11": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.11b": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.12a": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.13c": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.13d": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.14a": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.14b": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.14c": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ],
         "LoD/1.14d": [
-          "FUN_004013b0|0x4013B0"
+          "ConcatStringMBCS|0x4013B0"
         ]
       },
       "instructions": {
@@ -15260,6 +15993,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1A68|JNZ|0x00401a5b"
         ],
         "Classic/1.04c": [
+          "0x1A40|MOV|ECX, dword ptr [ESP + 0xc]",
+          "0x1A44|PUSH|EDI",
+          "0x1A45|TEST|ECX, ECX",
+          "0x1A47|JZ|0x00401af4",
+          "0x1A4D|MOV|EDI, dword ptr [ESP + 0x8]",
+          "0x1A51|PUSH|ESI",
+          "0x1A52|TEST|EDI, 0x3",
+          "0x1A58|PUSH|EBX",
+          "0x1A59|JZ|0x00401a6a",
+          "0x1A5B|MOV|AL, byte ptr [EDI]",
+          "0x1A5D|INC|EDI",
+          "0x1A5E|TEST|AL, AL",
+          "0x1A60|JZ|0x00401a9b",
+          "0x1A62|TEST|EDI, 0x3",
+          "0x1A68|JNZ|0x00401a5b"
+        ],
+        "Classic/1.09d": [
           "0x1A40|MOV|ECX, dword ptr [ESP + 0xc]",
           "0x1A44|PUSH|EDI",
           "0x1A45|TEST|ECX, ECX",
@@ -15538,6 +16288,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 123,
         "Classic/1.03": 123,
         "Classic/1.04c": 123,
+        "Classic/1.09d": 123,
         "LoD/1.07": 123,
         "LoD/1.08": 123,
         "LoD/1.09": 123,
@@ -15560,6 +16311,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -15582,6 +16334,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 9,
         "Classic/1.03": 9,
         "Classic/1.04c": 9,
+        "Classic/1.09d": 9,
         "LoD/1.07": 9,
         "LoD/1.08": 9,
         "LoD/1.09": 9,
@@ -15604,6 +16357,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "82b4813eddefea8f8cb9d2712dc5bde7",
         "Classic/1.03": "82b4813eddefea8f8cb9d2712dc5bde7",
         "Classic/1.04c": "82b4813eddefea8f8cb9d2712dc5bde7",
+        "Classic/1.09d": "82b4813eddefea8f8cb9d2712dc5bde7",
         "LoD/1.07": "82b4813eddefea8f8cb9d2712dc5bde7",
         "LoD/1.08": "82b4813eddefea8f8cb9d2712dc5bde7",
         "LoD/1.09": "82b4813eddefea8f8cb9d2712dc5bde7",
@@ -15638,6 +16392,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1B2E||0xFF0000"
         ],
         "Classic/1.04c": [
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
+        ],
+        "Classic/1.09d": [
           "0x1A8D||0xFF0000",
           "0x1B2E||0xFF0000"
         ],
@@ -15708,6 +16466,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -15730,6 +16489,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -15752,6 +16512,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -15814,6 +16575,15 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF",
           "STRUCT_Control"
         ],
+        "Classic/1.09d": [
+          "STRUCT_Act",
+          "STRUCT_Inventory",
+          "PARAM_3",
+          "PROP_LOOPHEAVY",
+          "STRUCT_UnitAny",
+          "PROP_LEAF",
+          "STRUCT_Control"
+        ],
         "LoD/1.07": [
           "STRUCT_Act",
           "STRUCT_Inventory",
@@ -15956,6 +16726,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -15980,6 +16751,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401B63",
         "Classic/1.03": "0x00401B63",
         "Classic/1.04c": "0x00401B63",
+        "Classic/1.09d": "0x00401B63",
         "LoD/1.07": "0x00401B63",
         "LoD/1.08": "0x00401B63",
         "LoD/1.09": "0x00401B63",
@@ -16002,6 +16774,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1B63",
         "Classic/1.03": "0x1B63",
         "Classic/1.04c": "0x1B63",
+        "Classic/1.09d": "0x1B63",
         "LoD/1.07": "0x1B63",
         "LoD/1.08": "0x1B63",
         "LoD/1.09": "0x1B63",
@@ -16024,6 +16797,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 23,
         "Classic/1.03": 23,
         "Classic/1.04c": 23,
+        "Classic/1.09d": 23,
         "LoD/1.07": 23,
         "LoD/1.08": 23,
         "LoD/1.09": 23,
@@ -16040,8 +16814,12 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 23,
         "LoD/1.14d": 23
       },
+      "name": "AdvancePastMultibyteChar",
+      "signature": "byte * AdvancePastMultibyteChar(byte * pbString)",
       "calling_convention": "__cdecl",
       "return_type": "byte *",
+      "comment": "Advances a string pointer past the current multibyte character.\n\nAlgorithm:\n1. Assume single-byte character, advance by 1\n2. Look up first byte in character type table at g_abCharTypeTable\n3. Check if lead-byte flag (bit 2, value 0x04) is set\n4. If lead byte, advance by 2 instead (skip trail byte)\n5. Return pointer to next character\n\nParameters:\n  pbString - Pointer to current position in multibyte string\n\nReturns:\n  byte* - Pointer advanced past current character (1 or 2 bytes)\n\nMagic Numbers Reference:\n  0x04 - Lead byte flag in character type table (bit 2)\n  0x4068c1 - Character type lookup table base (DWORD_004068c0 + 1)\n\nNotes:\n  Used for MBCS (Multi-Byte Character Set) string iteration.\n  Lead bytes indicate a 2-byte character sequence in encodings\n  like Shift-JIS, Big5, or Windows code pages 932/936/949/950.",
+      "name_source": "LoD/1.07",
       "method": "NOP",
       "index": "NOP:7b53a67cbc8ad687b889b9d17f6e32c7f4452c7b288a63e87f6fc1518d8eb418",
       "indexes": {
@@ -16056,67 +16834,69 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "98e7620973d02b6613d9b483d7e32e88",
         "PRO": "7dc457e6b44146890a20553a859e64ee"
       },
-      "display_name": "NOP_7b53a67cbc8ad687",
       "callers": {
         "Classic/1.00": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "Classic/1.01": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "Classic/1.02": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "Classic/1.03": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "Classic/1.04c": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
+        ],
+        "Classic/1.09d": [
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.07": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.08": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.09": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.09b": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.09d": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.10": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.11": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.11b": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.12a": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.13c": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.13d": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.14a": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.14b": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.14c": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.14d": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ]
       },
       "instructions": {
@@ -16165,6 +16945,17 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1B79|RET|"
         ],
         "Classic/1.04c": [
+          "0x1B63|MOV|EAX, dword ptr [ESP + 0x4]",
+          "0x1B67|MOVZX|ECX, byte ptr [EAX]",
+          "0x1B6A|MOV|CL, byte ptr [ECX + 0x4068c1]",
+          "0x1B70|AND|CL, 0x4",
+          "0x1B73|INC|EAX",
+          "0x1B74|TEST|CL, CL",
+          "0x1B76|JZ|0x00401b79",
+          "0x1B78|INC|EAX",
+          "0x1B79|RET|"
+        ],
+        "Classic/1.09d": [
           "0x1B63|MOV|EAX, dword ptr [ESP + 0x4]",
           "0x1B67|MOVZX|ECX, byte ptr [EAX]",
           "0x1B6A|MOV|CL, byte ptr [ECX + 0x4068c1]",
@@ -16347,6 +17138,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 9,
         "Classic/1.03": 9,
         "Classic/1.04c": 9,
+        "Classic/1.09d": 9,
         "LoD/1.07": 9,
         "LoD/1.08": 9,
         "LoD/1.09": 9,
@@ -16369,6 +17161,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -16391,6 +17184,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -16413,6 +17207,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "cfea3c92c09904dc7826c9e24e773236",
         "Classic/1.03": "cfea3c92c09904dc7826c9e24e773236",
         "Classic/1.04c": "cfea3c92c09904dc7826c9e24e773236",
+        "Classic/1.09d": "cfea3c92c09904dc7826c9e24e773236",
         "LoD/1.07": "cfea3c92c09904dc7826c9e24e773236",
         "LoD/1.08": "cfea3c92c09904dc7826c9e24e773236",
         "LoD/1.09": "cfea3c92c09904dc7826c9e24e773236",
@@ -16443,6 +17238,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1B6A||0x4068C1"
         ],
         "Classic/1.04c": [
+          "0x1B6A||0x4068C1"
+        ],
+        "Classic/1.09d": [
           "0x1B6A||0x4068C1"
         ],
         "LoD/1.07": [
@@ -16507,8 +17305,11 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "0x68C1|DAT_004068c0+1|"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x68C1|DAT_004068c0+1|"
+        ],
+        "LoD/1.07": [
+          "0x68C1|g_abCharacterTypeFlags[1]|"
         ],
         "LoD/1.08": [
           "0x68C1|DAT_004068c0+1|"
@@ -16559,6 +17360,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -16581,6 +17383,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -16603,6 +17406,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -16625,6 +17429,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -16663,6 +17468,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_LEAF",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -16749,6 +17559,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -16773,6 +17584,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401B80",
         "Classic/1.03": "0x00401B80",
         "Classic/1.04c": "0x00401B80",
+        "Classic/1.09d": "0x00401B80",
         "LoD/1.07": "0x00401B80",
         "LoD/1.08": "0x00401B80",
         "LoD/1.09": "0x00401B80",
@@ -16795,6 +17607,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1B80",
         "Classic/1.03": "0x1B80",
         "Classic/1.04c": "0x1B80",
+        "Classic/1.09d": "0x1B80",
         "LoD/1.07": "0x1B80",
         "LoD/1.08": "0x1B80",
         "LoD/1.09": "0x1B80",
@@ -16817,6 +17630,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 123,
         "Classic/1.03": 123,
         "Classic/1.04c": 123,
+        "Classic/1.09d": 123,
         "LoD/1.07": 123,
         "LoD/1.08": 123,
         "LoD/1.09": 123,
@@ -16855,104 +17669,109 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_0040146d|0x40146D",
           "DisplayRuntimeError|0x402789",
+          "FindSubstringMultibyte|0x40146D",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.01": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "FindSubstringMultibyte|0x40146D",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.02": [
-          "DisplayRuntimeError|0x402789",
+          "FindSubstringMultibyte|0x40146D",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D"
+          "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.03": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "FindSubstringMultibyte|0x40146D"
         ],
         "Classic/1.04c": [
-          "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.09d": [
+          "FindSubstringMultibyte|0x40146D",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.07": [
-          "FUN_0040146d|0x40146D",
           "InitializeEnvironmentVariables|0x401F5E",
+          "FindSubstringMultibyte|0x40146D",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.08": [
-          "FUN_0040146d|0x40146D",
+          "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.09": [
+          "FindSubstringMultibyte|0x40146D",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09b": [
-          "FUN_0040146d|0x40146D",
           "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.09d": [
-          "FUN_0040146d|0x40146D",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "LoD/1.10": [
+          "FindSubstringMultibyte|0x40146D",
           "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
-        "LoD/1.11": [
+        "LoD/1.10": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D"
-        ],
-        "LoD/1.11b": [
-          "FUN_0040146d|0x40146D",
-          "InitializeEnvironmentVariables|0x401F5E",
+          "FindSubstringMultibyte|0x40146D",
           "DisplayRuntimeError|0x402789"
         ],
-        "LoD/1.12a": [
-          "InitializeEnvironmentVariables|0x401F5E",
+        "LoD/1.11": [
           "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FindSubstringMultibyte|0x40146D"
+        ],
+        "LoD/1.11b": [
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FindSubstringMultibyte|0x40146D"
+        ],
+        "LoD/1.12a": [
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.13c": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.13d": [
-          "InitializeEnvironmentVariables|0x401F5E",
+          "FindSubstringMultibyte|0x40146D",
           "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D"
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14a": [
-          "DisplayRuntimeError|0x402789",
+          "FindSubstringMultibyte|0x40146D",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D"
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14b": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D",
+          "FindSubstringMultibyte|0x40146D",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14c": [
+          "FindSubstringMultibyte|0x40146D",
           "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14d": [
-          "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D",
+          "DisplayRuntimeError|0x402789"
         ]
       },
       "instructions": {
@@ -17025,6 +17844,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1BAC|XOR|EAX, EDX"
         ],
         "Classic/1.04c": [
+          "0x1B80|MOV|ECX, dword ptr [ESP + 0x4]",
+          "0x1B84|TEST|ECX, 0x3",
+          "0x1B8A|JZ|0x00401ba0",
+          "0x1B8C|MOV|AL, byte ptr [ECX]",
+          "0x1B8E|INC|ECX",
+          "0x1B8F|TEST|AL, AL",
+          "0x1B91|JZ|0x00401bd3",
+          "0x1B93|TEST|ECX, 0x3",
+          "0x1B99|JNZ|0x00401b8c",
+          "0x1B9B|ADD|EAX, 0x0",
+          "0x1BA0|MOV|EAX, dword ptr [ECX]",
+          "0x1BA2|MOV|EDX, 0x7efefeff",
+          "0x1BA7|ADD|EDX, EAX",
+          "0x1BA9|XOR|EAX, 0xffffffff",
+          "0x1BAC|XOR|EAX, EDX"
+        ],
+        "Classic/1.09d": [
           "0x1B80|MOV|ECX, dword ptr [ESP + 0x4]",
           "0x1B84|TEST|ECX, 0x3",
           "0x1B8A|JZ|0x00401ba0",
@@ -17303,6 +18139,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 44,
         "Classic/1.03": 44,
         "Classic/1.04c": 44,
+        "Classic/1.09d": 44,
         "LoD/1.07": 44,
         "LoD/1.08": 44,
         "LoD/1.09": 44,
@@ -17325,6 +18162,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -17347,6 +18185,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -17369,6 +18208,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "2e762c1c6c457f4a0349d0f895009434",
         "Classic/1.03": "2e762c1c6c457f4a0349d0f895009434",
         "Classic/1.04c": "2e762c1c6c457f4a0349d0f895009434",
+        "Classic/1.09d": "2e762c1c6c457f4a0349d0f895009434",
         "LoD/1.07": "2e762c1c6c457f4a0349d0f895009434",
         "LoD/1.08": "2e762c1c6c457f4a0349d0f895009434",
         "LoD/1.09": "2e762c1c6c457f4a0349d0f895009434",
@@ -17399,6 +18239,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1BC3||0xFF0000"
         ],
         "Classic/1.04c": [
+          "0x1BC3||0xFF0000"
+        ],
+        "Classic/1.09d": [
           "0x1BC3||0xFF0000"
         ],
         "LoD/1.07": [
@@ -17453,6 +18296,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -17475,6 +18319,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -17497,6 +18342,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -17535,6 +18381,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_LOOPHEAVY",
+          "PROP_LEAF"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_LOOPHEAVY",
           "PROP_LEAF"
@@ -17621,6 +18472,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -17645,6 +18497,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401C00",
         "Classic/1.03": "0x00401C00",
         "Classic/1.04c": "0x00401C00",
+        "LoD/1.07": "0x00401C00",
         "LoD/1.08": "0x00401C00",
         "LoD/1.09": "0x00401C00",
         "LoD/1.09b": "0x00401C00",
@@ -17666,6 +18519,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1C00",
         "Classic/1.03": "0x1C00",
         "Classic/1.04c": "0x1C00",
+        "LoD/1.07": "0x1C00",
         "LoD/1.08": "0x1C00",
         "LoD/1.09": "0x1C00",
         "LoD/1.09b": "0x1C00",
@@ -17687,6 +18541,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 128,
         "Classic/1.03": 128,
         "Classic/1.04c": 128,
+        "LoD/1.07": 128,
         "LoD/1.08": 128,
         "LoD/1.09": 128,
         "LoD/1.09b": 128,
@@ -17738,6 +18593,9 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "FUN_00402cd6|0x402CD6"
         ],
+        "LoD/1.07": [
+          "FUN_00402cd6|0x402CD6"
+        ],
         "LoD/1.08": [
           "FUN_00402cd6|0x402CD6"
         ],
@@ -17783,61 +18641,64 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "Classic/1.01": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "Classic/1.02": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "Classic/1.03": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "Classic/1.04c": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
+        ],
+        "LoD/1.07": [
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.08": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.09": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.09b": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.09d": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.10": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.11": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.11b": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.12a": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.13c": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.13d": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.14a": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.14b": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.14c": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ],
         "LoD/1.14d": [
-          "FUN_0040146d|0x40146D"
+          "FindSubstringMultibyte|0x40146D"
         ]
       },
       "instructions": {
@@ -17910,6 +18771,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1C20|INC|ESI"
         ],
         "Classic/1.04c": [
+          "0x1C00|MOV|ECX, dword ptr [ESP + 0x8]",
+          "0x1C04|PUSH|EDI",
+          "0x1C05|PUSH|EBX",
+          "0x1C06|PUSH|ESI",
+          "0x1C07|MOV|DL, byte ptr [ECX]",
+          "0x1C09|MOV|EDI, dword ptr [ESP + 0x10]",
+          "0x1C0D|TEST|DL, DL",
+          "0x1C0F|JZ|0x00401c7a",
+          "0x1C11|MOV|DH, byte ptr [ECX + 0x1]",
+          "0x1C14|TEST|DH, DH",
+          "0x1C16|JZ|0x00401c67",
+          "0x1C18|MOV|ESI, EDI",
+          "0x1C1A|MOV|ECX, dword ptr [ESP + 0x14]",
+          "0x1C1E|MOV|AL, byte ptr [EDI]",
+          "0x1C20|INC|ESI"
+        ],
+        "LoD/1.07": [
           "0x1C00|MOV|ECX, dword ptr [ESP + 0x8]",
           "0x1C04|PUSH|EDI",
           "0x1C05|PUSH|EBX",
@@ -18171,6 +19049,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 66,
         "Classic/1.03": 66,
         "Classic/1.04c": 66,
+        "LoD/1.07": 66,
         "LoD/1.08": 66,
         "LoD/1.09": 66,
         "LoD/1.09b": 66,
@@ -18192,6 +19071,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
         "LoD/1.09b": 12,
@@ -18213,6 +19093,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
         "LoD/1.09b": 5,
@@ -18234,6 +19115,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "3c60546d8cfb6e92d20e0cc9dd281ae9",
         "Classic/1.03": "3c60546d8cfb6e92d20e0cc9dd281ae9",
         "Classic/1.04c": "3c60546d8cfb6e92d20e0cc9dd281ae9",
+        "Classic/1.09d": "3c60546d8cfb6e92d20e0cc9dd281ae9",
         "LoD/1.07": "3c60546d8cfb6e92d20e0cc9dd281ae9",
         "LoD/1.08": "3c60546d8cfb6e92d20e0cc9dd281ae9",
         "LoD/1.09": "3c60546d8cfb6e92d20e0cc9dd281ae9",
@@ -18256,6 +19138,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -18277,6 +19160,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -18298,6 +19182,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
         "LoD/1.09b": 2,
@@ -18331,6 +19216,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LOOPHEAVY"
         ],
         "Classic/1.04c": [
+          "PARAM_2",
+          "PROP_LOOPHEAVY"
+        ],
+        "LoD/1.07": [
           "PARAM_2",
           "PROP_LOOPHEAVY"
         ],
@@ -18397,6 +19286,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
         "LoD/1.09b": "internal",
@@ -18413,7 +19303,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14d": "internal"
       },
       "candidates": {
-        "LoD/1.07": {
+        "Classic/1.09d": {
           "address": "0x00401C00",
           "rva": "0x1C00",
           "confidence": 1.0,
@@ -18430,6 +19320,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401C80",
         "Classic/1.03": "0x00401C80",
         "Classic/1.04c": "0x00401C80",
+        "Classic/1.09d": "0x00401C80",
         "LoD/1.07": "0x00401C80",
         "LoD/1.08": "0x00401C80",
         "LoD/1.09": "0x00401C80",
@@ -18452,6 +19343,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1C80",
         "Classic/1.03": "0x1C80",
         "Classic/1.04c": "0x1C80",
+        "Classic/1.09d": "0x1C80",
         "LoD/1.07": "0x1C80",
         "LoD/1.08": "0x1C80",
         "LoD/1.09": "0x1C80",
@@ -18474,6 +19366,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 45,
         "Classic/1.03": 45,
         "Classic/1.04c": 45,
+        "Classic/1.09d": 45,
         "LoD/1.07": 45,
         "LoD/1.08": 45,
         "LoD/1.09": 45,
@@ -18524,6 +19417,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "RunConstructorArray|0x401D68"
         ],
         "Classic/1.04c": [
+          "RunConstructorArray|0x401D68"
+        ],
+        "Classic/1.09d": [
           "RunConstructorArray|0x401D68"
         ],
         "LoD/1.07": [
@@ -18586,6 +19482,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -18692,6 +19591,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1CAC|RET|"
         ],
         "Classic/1.04c": [
+          "0x1C80|MOV|EAX, [0x00406794]",
+          "0x1C85|TEST|EAX, EAX",
+          "0x1C87|JZ|0x00401c8b",
+          "0x1C89|CALL|EAX",
+          "0x1C8B|PUSH|0x406010",
+          "0x1C90|PUSH|0x406008",
+          "0x1C95|CALL|0x00401d68",
+          "0x1C9A|PUSH|0x406004",
+          "0x1C9F|PUSH|0x406000",
+          "0x1CA4|CALL|0x00401d68",
+          "0x1CA9|ADD|ESP, 0x10",
+          "0x1CAC|RET|"
+        ],
+        "Classic/1.09d": [
           "0x1C80|MOV|EAX, [0x00406794]",
           "0x1C85|TEST|EAX, EAX",
           "0x1C87|JZ|0x00401c8b",
@@ -18922,6 +19835,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -18944,6 +19858,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -18966,6 +19881,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -18988,6 +19904,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "91b5192dddb89e963abc2be4471149da",
         "Classic/1.03": "91b5192dddb89e963abc2be4471149da",
         "Classic/1.04c": "91b5192dddb89e963abc2be4471149da",
+        "Classic/1.09d": "91b5192dddb89e963abc2be4471149da",
         "LoD/1.07": "91b5192dddb89e963abc2be4471149da",
         "LoD/1.08": "91b5192dddb89e963abc2be4471149da",
         "LoD/1.09": "91b5192dddb89e963abc2be4471149da",
@@ -19030,6 +19947,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1C9F||0x406000"
         ],
         "Classic/1.04c": [
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
+        ],
+        "Classic/1.09d": [
           "0x1C8B||0x406010",
           "0x1C90||0x406008",
           "0x1C9A||0x406004",
@@ -19162,12 +20085,19 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6004|DAT_00406004|0x0",
           "0x6000|DAT_00406000|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6794|g_pfnInitializeSubsystem|0x0",
           "0x6010|DAT_00406010|0x0",
           "0x6008|DAT_00406008|0x0",
           "0x6004|DAT_00406004|0x0",
           "0x6000|DAT_00406000|0x0"
+        ],
+        "LoD/1.07": [
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|g_adwData_406000[4]|",
+          "0x6008|g_adwData_406000[2]|",
+          "0x6004|g_adwData_406000[1]|",
+          "0x6000|g_adwData_406000|"
         ],
         "LoD/1.08": [
           "0x6794|g_pfnInitializeSubsystem|0x0",
@@ -19274,6 +20204,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -19296,6 +20227,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -19318,6 +20250,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -19340,6 +20273,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "Classic/1.09d": 5,
         "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -19374,6 +20308,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_0",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_0",
           "PROP_SMALL"
         ],
@@ -19444,6 +20382,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -19468,6 +20407,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401CAD",
         "Classic/1.03": "0x00401CAD",
         "Classic/1.04c": "0x00401CAD",
+        "Classic/1.09d": "0x00401CAD",
         "LoD/1.07": "0x00401CAD",
         "LoD/1.08": "0x00401CAD",
         "LoD/1.09": "0x00401CAD",
@@ -19490,6 +20430,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1CAD",
         "Classic/1.03": "0x1CAD",
         "Classic/1.04c": "0x1CAD",
+        "Classic/1.09d": "0x1CAD",
         "LoD/1.07": "0x1CAD",
         "LoD/1.08": "0x1CAD",
         "LoD/1.09": "0x1CAD",
@@ -19512,6 +20453,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 17,
         "Classic/1.03": 17,
         "Classic/1.04c": 17,
+        "Classic/1.09d": 17,
         "LoD/1.07": 17,
         "LoD/1.08": 17,
         "LoD/1.09": 17,
@@ -19564,6 +20506,9 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "ProcessTerminationHandler|0x401CCF"
         ],
+        "Classic/1.09d": [
+          "ProcessTerminationHandler|0x401CCF"
+        ],
         "LoD/1.07": [
           "ProcessTerminationHandler|0x401CCF"
         ],
@@ -19624,6 +20569,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -19706,6 +20654,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1CBD|RET|"
         ],
         "Classic/1.04c": [
+          "0x1CAD|PUSH|0x0",
+          "0x1CAF|PUSH|0x0",
+          "0x1CB1|PUSH|dword ptr [ESP + 0xc]",
+          "0x1CB5|CALL|0x00401ccf",
+          "0x1CBA|ADD|ESP, 0xc",
+          "0x1CBD|RET|"
+        ],
+        "Classic/1.09d": [
           "0x1CAD|PUSH|0x0",
           "0x1CAF|PUSH|0x0",
           "0x1CB1|PUSH|dword ptr [ESP + 0xc]",
@@ -19840,6 +20796,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -19862,6 +20819,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -19884,6 +20842,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -19906,6 +20865,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "cd85d17a6b193c95680d3fdca645abba",
         "Classic/1.03": "cd85d17a6b193c95680d3fdca645abba",
         "Classic/1.04c": "cd85d17a6b193c95680d3fdca645abba",
+        "Classic/1.09d": "cd85d17a6b193c95680d3fdca645abba",
         "LoD/1.07": "cd85d17a6b193c95680d3fdca645abba",
         "LoD/1.08": "cd85d17a6b193c95680d3fdca645abba",
         "LoD/1.09": "cd85d17a6b193c95680d3fdca645abba",
@@ -19928,6 +20888,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -19950,6 +20911,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -19972,6 +20934,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -20006,6 +20969,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_SMALL"
         ],
@@ -20076,6 +21043,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -20100,6 +21068,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401CBE",
         "Classic/1.03": "0x00401CBE",
         "Classic/1.04c": "0x00401CBE",
+        "Classic/1.09d": "0x00401CBE",
         "LoD/1.07": "0x00401CBE",
         "LoD/1.08": "0x00401CBE",
         "LoD/1.09": "0x00401CBE",
@@ -20122,6 +21091,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1CBE",
         "Classic/1.03": "0x1CBE",
         "Classic/1.04c": "0x1CBE",
+        "Classic/1.09d": "0x1CBE",
         "LoD/1.07": "0x1CBE",
         "LoD/1.08": "0x1CBE",
         "LoD/1.09": "0x1CBE",
@@ -20144,6 +21114,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 17,
         "Classic/1.03": 17,
         "Classic/1.04c": 17,
+        "Classic/1.09d": 17,
         "LoD/1.07": 17,
         "LoD/1.08": 17,
         "LoD/1.09": 17,
@@ -20196,6 +21167,9 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "ProcessTerminationHandler|0x401CCF"
         ],
+        "Classic/1.09d": [
+          "ProcessTerminationHandler|0x401CCF"
+        ],
         "LoD/1.07": [
           "ProcessTerminationHandler|0x401CCF"
         ],
@@ -20256,6 +21230,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "AmsgExit|0x4015D9"
         ],
         "Classic/1.04c": [
+          "AmsgExit|0x4015D9"
+        ],
+        "Classic/1.09d": [
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.07": [
@@ -20338,6 +21315,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1CCE|RET|"
         ],
         "Classic/1.04c": [
+          "0x1CBE|PUSH|0x0",
+          "0x1CC0|PUSH|0x1",
+          "0x1CC2|PUSH|dword ptr [ESP + 0xc]",
+          "0x1CC6|CALL|0x00401ccf",
+          "0x1CCB|ADD|ESP, 0xc",
+          "0x1CCE|RET|"
+        ],
+        "Classic/1.09d": [
           "0x1CBE|PUSH|0x0",
           "0x1CC0|PUSH|0x1",
           "0x1CC2|PUSH|dword ptr [ESP + 0xc]",
@@ -20472,6 +21457,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -20494,6 +21480,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -20516,6 +21503,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -20538,6 +21526,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "cd85d17a6b193c95680d3fdca645abba",
         "Classic/1.03": "cd85d17a6b193c95680d3fdca645abba",
         "Classic/1.04c": "cd85d17a6b193c95680d3fdca645abba",
+        "Classic/1.09d": "cd85d17a6b193c95680d3fdca645abba",
         "LoD/1.07": "cd85d17a6b193c95680d3fdca645abba",
         "LoD/1.08": "cd85d17a6b193c95680d3fdca645abba",
         "LoD/1.09": "cd85d17a6b193c95680d3fdca645abba",
@@ -20560,6 +21549,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -20582,6 +21572,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -20604,6 +21595,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -20638,6 +21630,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_SMALL"
         ],
@@ -20708,6 +21704,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -20732,6 +21729,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401CCF",
         "Classic/1.03": "0x00401CCF",
         "Classic/1.04c": "0x00401CCF",
+        "Classic/1.09d": "0x00401CCF",
         "LoD/1.07": "0x00401CCF",
         "LoD/1.08": "0x00401CCF",
         "LoD/1.09": "0x00401CCF",
@@ -20754,6 +21752,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1CCF",
         "Classic/1.03": "0x1CCF",
         "Classic/1.04c": "0x1CCF",
+        "Classic/1.09d": "0x1CCF",
         "LoD/1.07": "0x1CCF",
         "LoD/1.08": "0x1CCF",
         "LoD/1.09": "0x1CCF",
@@ -20776,6 +21775,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 153,
         "Classic/1.03": 153,
         "Classic/1.04c": 153,
+        "Classic/1.09d": 153,
         "LoD/1.07": 153,
         "LoD/1.08": 153,
         "LoD/1.09": 153,
@@ -20814,124 +21814,130 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
+          "GetCurrentProcess|0x13",
           "ExitProcess|0xE",
           "RunConstructorArray|0x401D68",
-          "GetCurrentProcess|0x13",
           "TerminateProcess|0x12"
         ],
         "Classic/1.01": [
-          "TerminateProcess|0x12",
-          "RunConstructorArray|0x401D68",
           "GetCurrentProcess|0x13",
-          "ExitProcess|0xE"
+          "RunConstructorArray|0x401D68",
+          "ExitProcess|0xE",
+          "TerminateProcess|0x12"
         ],
         "Classic/1.02": [
           "GetCurrentProcess|0x13",
-          "TerminateProcess|0x12",
           "RunConstructorArray|0x401D68",
-          "ExitProcess|0xE"
+          "ExitProcess|0xE",
+          "TerminateProcess|0x12"
         ],
         "Classic/1.03": [
           "TerminateProcess|0x12",
+          "RunConstructorArray|0x401D68",
           "ExitProcess|0xE",
-          "GetCurrentProcess|0x13",
-          "RunConstructorArray|0x401D68"
+          "GetCurrentProcess|0x13"
         ],
         "Classic/1.04c": [
-          "RunConstructorArray|0x401D68",
-          "GetCurrentProcess|0x13",
           "TerminateProcess|0x12",
+          "GetCurrentProcess|0x13",
+          "RunConstructorArray|0x401D68",
           "ExitProcess|0xE"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
+          "GetCurrentProcess|0x13",
           "ExitProcess|0xE",
-          "RunConstructorArray|0x401D68",
           "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13"
+          "RunConstructorArray|0x401D68"
+        ],
+        "LoD/1.07": [
+          "TerminateProcess|0x12",
+          "RunConstructorArray|0x401D68",
+          "GetCurrentProcess|0x13",
+          "ExitProcess|0xE"
         ],
         "LoD/1.08": [
-          "RunConstructorArray|0x401D68",
+          "GetCurrentProcess|0x13",
           "TerminateProcess|0x12",
-          "ExitProcess|0xE",
-          "GetCurrentProcess|0x13"
+          "RunConstructorArray|0x401D68",
+          "ExitProcess|0xE"
         ],
         "LoD/1.09": [
-          "RunConstructorArray|0x401D68",
           "TerminateProcess|0x12",
-          "ExitProcess|0xE",
-          "GetCurrentProcess|0x13"
+          "RunConstructorArray|0x401D68",
+          "GetCurrentProcess|0x13",
+          "ExitProcess|0xE"
         ],
         "LoD/1.09b": [
-          "GetCurrentProcess|0x13",
           "RunConstructorArray|0x401D68",
           "TerminateProcess|0x12",
+          "GetCurrentProcess|0x13",
           "ExitProcess|0xE"
         ],
         "LoD/1.09d": [
           "TerminateProcess|0x12",
+          "ExitProcess|0xE",
+          "GetCurrentProcess|0x13",
+          "RunConstructorArray|0x401D68"
+        ],
+        "LoD/1.10": [
+          "TerminateProcess|0x12",
           "RunConstructorArray|0x401D68",
           "ExitProcess|0xE",
           "GetCurrentProcess|0x13"
         ],
-        "LoD/1.10": [
-          "GetCurrentProcess|0x13",
-          "ExitProcess|0xE",
-          "RunConstructorArray|0x401D68",
-          "TerminateProcess|0x12"
-        ],
         "LoD/1.11": [
           "GetCurrentProcess|0x13",
+          "RunConstructorArray|0x401D68",
           "ExitProcess|0xE",
-          "TerminateProcess|0x12",
-          "RunConstructorArray|0x401D68"
+          "TerminateProcess|0x12"
         ],
         "LoD/1.11b": [
-          "ExitProcess|0xE",
-          "RunConstructorArray|0x401D68",
           "GetCurrentProcess|0x13",
+          "RunConstructorArray|0x401D68",
+          "ExitProcess|0xE",
           "TerminateProcess|0x12"
         ],
         "LoD/1.12a": [
-          "ExitProcess|0xE",
           "TerminateProcess|0x12",
+          "ExitProcess|0xE",
           "RunConstructorArray|0x401D68",
           "GetCurrentProcess|0x13"
         ],
         "LoD/1.13c": [
-          "RunConstructorArray|0x401D68",
-          "TerminateProcess|0x12",
+          "GetCurrentProcess|0x13",
           "ExitProcess|0xE",
-          "GetCurrentProcess|0x13"
+          "RunConstructorArray|0x401D68",
+          "TerminateProcess|0x12"
         ],
         "LoD/1.13d": [
+          "GetCurrentProcess|0x13",
+          "TerminateProcess|0x12",
+          "ExitProcess|0xE",
+          "RunConstructorArray|0x401D68"
+        ],
+        "LoD/1.14a": [
+          "TerminateProcess|0x12",
+          "ExitProcess|0xE",
+          "RunConstructorArray|0x401D68",
+          "GetCurrentProcess|0x13"
+        ],
+        "LoD/1.14b": [
           "RunConstructorArray|0x401D68",
           "ExitProcess|0xE",
           "GetCurrentProcess|0x13",
           "TerminateProcess|0x12"
         ],
-        "LoD/1.14a": [
-          "RunConstructorArray|0x401D68",
-          "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13",
-          "ExitProcess|0xE"
-        ],
-        "LoD/1.14b": [
-          "TerminateProcess|0x12",
-          "RunConstructorArray|0x401D68",
-          "GetCurrentProcess|0x13",
-          "ExitProcess|0xE"
-        ],
         "LoD/1.14c": [
           "GetCurrentProcess|0x13",
-          "TerminateProcess|0x12",
           "RunConstructorArray|0x401D68",
+          "TerminateProcess|0x12",
           "ExitProcess|0xE"
         ],
         "LoD/1.14d": [
+          "ExitProcess|0xE",
           "GetCurrentProcess|0x13",
           "TerminateProcess|0x12",
-          "RunConstructorArray|0x401D68",
-          "ExitProcess|0xE"
+          "RunConstructorArray|0x401D68"
         ]
       },
       "callers": {
@@ -20952,6 +21958,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "ReportError|0x401CAD"
         ],
         "Classic/1.04c": [
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
+        ],
+        "Classic/1.09d": [
           "ReportError|0x401CAD",
           "__exit|0x401CBE"
         ],
@@ -20964,16 +21974,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "ReportError|0x401CAD"
         ],
         "LoD/1.09": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "LoD/1.09b": [
           "__exit|0x401CBE",
           "ReportError|0x401CAD"
         ],
         "LoD/1.09d": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ],
         "LoD/1.10": [
           "__exit|0x401CBE",
@@ -20984,16 +21994,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "ReportError|0x401CAD"
         ],
         "LoD/1.11b": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "LoD/1.12a": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "LoD/1.13c": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "LoD/1.13d": [
           "__exit|0x401CBE",
@@ -21008,12 +22018,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "__exit|0x401CBE"
         ],
         "LoD/1.14c": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "LoD/1.14d": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ]
       },
       "instructions": {
@@ -21086,6 +22096,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1D02|JNZ|0x00401d40"
         ],
         "Classic/1.04c": [
+          "0x1CCF|PUSH|EDI",
+          "0x1CD0|PUSH|0x1",
+          "0x1CD2|POP|EDI",
+          "0x1CD3|CMP|dword ptr [0x0040650c], EDI",
+          "0x1CD9|JNZ|0x00401cec",
+          "0x1CDB|PUSH|dword ptr [ESP + 0x8]",
+          "0x1CDF|CALL|dword ptr [0x00405048]",
+          "0x1CE5|PUSH|EAX",
+          "0x1CE6|CALL|dword ptr [0x00405044]",
+          "0x1CEC|CMP|dword ptr [ESP + 0xc], 0x0",
+          "0x1CF1|PUSH|EBX",
+          "0x1CF2|MOV|EBX, dword ptr [ESP + 0x14]",
+          "0x1CF6|MOV|dword ptr [0x00406508], EDI",
+          "0x1CFC|MOV|byte ptr [0x00406504], BL",
+          "0x1D02|JNZ|0x00401d40"
+        ],
+        "Classic/1.09d": [
           "0x1CCF|PUSH|EDI",
           "0x1CD0|PUSH|0x1",
           "0x1CD2|POP|EDI",
@@ -21364,6 +22391,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 49,
         "Classic/1.03": 49,
         "Classic/1.04c": 49,
+        "Classic/1.09d": 49,
         "LoD/1.07": 49,
         "LoD/1.08": 49,
         "LoD/1.09": 49,
@@ -21386,6 +22414,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -21408,6 +22437,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -21430,6 +22460,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "45d9b348a966df89d3a7165f288b5d47",
         "Classic/1.03": "45d9b348a966df89d3a7165f288b5d47",
         "Classic/1.04c": "45d9b348a966df89d3a7165f288b5d47",
+        "Classic/1.09d": "45d9b348a966df89d3a7165f288b5d47",
         "LoD/1.07": "45d9b348a966df89d3a7165f288b5d47",
         "LoD/1.08": "45d9b348a966df89d3a7165f288b5d47",
         "LoD/1.09": "45d9b348a966df89d3a7165f288b5d47",
@@ -21472,6 +22503,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1D45||0x40601C"
         ],
         "Classic/1.04c": [
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
+        ],
+        "Classic/1.09d": [
           "0x1D2F||0x406018",
           "0x1D34||0x406014",
           "0x1D40||0x406020",
@@ -21639,7 +22676,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x601C|DAT_0040601c|0x0",
           "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x650C|DAT_0040650c|0x0",
           "0x5048|PTR_GetCurrentProcess_00405048|00005644",
           "0x5044|PTR_TerminateProcess_00405044|00005630",
@@ -21652,6 +22689,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6020|DAT_00406020|0x0",
           "0x601C|DAT_0040601c|0x0",
           "0x5034|PTR_ExitProcess_00405034|00005600"
+        ],
+        "LoD/1.07": [
+          "0x650C|g_fImmediateTermination|0x0",
+          "0x5048|g_pfnGetCurrentProcess|00005644",
+          "0x5044|g_pfnTerminateProcess|00005630",
+          "0x6508|g_adwData_4064c4[17]|",
+          "0x6504|g_adwData_4064c4[16]|",
+          "0x6790|g_pCleanupArrayStart|0x0",
+          "0x678C|g_pCleanupArrayEnd|0x0",
+          "0x6018|g_adwData_406000[6]|",
+          "0x6014|g_adwData_406000[5]|",
+          "0x6020|g_adwData_406000[8]|",
+          "0x601C|g_adwData_406000[7]|",
+          "0x5034|g_pfnExitProcess|00005600"
         ],
         "LoD/1.08": [
           "0x650C|DAT_0040650c|0x0",
@@ -21856,6 +22907,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -21878,6 +22930,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -21900,6 +22953,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -21922,6 +22976,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -21944,6 +22999,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -21986,6 +23042,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_Control"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_3",
+          "STRUCT_UnitAny",
+          "STRUCT_Control"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_3",
           "STRUCT_UnitAny",
@@ -22088,6 +23150,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -22112,6 +23175,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401D68",
         "Classic/1.03": "0x00401D68",
         "Classic/1.04c": "0x00401D68",
+        "Classic/1.09d": "0x00401D68",
         "LoD/1.07": "0x00401D68",
         "LoD/1.08": "0x00401D68",
         "LoD/1.09": "0x00401D68",
@@ -22134,6 +23198,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1D68",
         "Classic/1.03": "0x1D68",
         "Classic/1.04c": "0x1D68",
+        "Classic/1.09d": "0x1D68",
         "LoD/1.07": "0x1D68",
         "LoD/1.08": "0x1D68",
         "LoD/1.09": "0x1D68",
@@ -22156,6 +23221,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 26,
         "Classic/1.03": 26,
         "Classic/1.04c": 26,
+        "Classic/1.09d": 26,
         "LoD/1.07": 26,
         "LoD/1.08": 26,
         "LoD/1.09": 26,
@@ -22194,16 +23260,16 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
+        ],
+        "Classic/1.01": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
         ],
-        "Classic/1.01": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
-        ],
         "Classic/1.02": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ],
         "Classic/1.03": [
           "InitializeGlobalConstructors|0x401C80",
@@ -22213,61 +23279,65 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
         ],
+        "Classic/1.09d": [
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
+        ],
         "LoD/1.07": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.08": [
           "ProcessTerminationHandler|0x401CCF",
           "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.09": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
-        ],
-        "LoD/1.09b": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
-        ],
-        "LoD/1.09d": [
           "ProcessTerminationHandler|0x401CCF",
           "InitializeGlobalConstructors|0x401C80"
+        ],
+        "LoD/1.09b": [
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
+        ],
+        "LoD/1.09d": [
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.10": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.11": [
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
+        ],
+        "LoD/1.11b": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
         ],
-        "LoD/1.11b": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
-        ],
         "LoD/1.12a": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.13c": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.13d": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.14a": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.14b": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.14c": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.14d": [
           "ProcessTerminationHandler|0x401CCF",
@@ -22332,6 +23402,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1D81|RET|"
         ],
         "Classic/1.04c": [
+          "0x1D68|PUSH|ESI",
+          "0x1D69|MOV|ESI, dword ptr [ESP + 0x8]",
+          "0x1D6D|CMP|ESI, dword ptr [ESP + 0xc]",
+          "0x1D71|JNC|0x00401d80",
+          "0x1D73|MOV|EAX, dword ptr [ESI]",
+          "0x1D75|TEST|EAX, EAX",
+          "0x1D77|JZ|0x00401d7b",
+          "0x1D79|CALL|EAX",
+          "0x1D7B|ADD|ESI, 0x4",
+          "0x1D7E|JMP|0x00401d6d",
+          "0x1D80|POP|ESI",
+          "0x1D81|RET|"
+        ],
+        "Classic/1.09d": [
           "0x1D68|PUSH|ESI",
           "0x1D69|MOV|ESI, dword ptr [ESP + 0x8]",
           "0x1D6D|CMP|ESI, dword ptr [ESP + 0xc]",
@@ -22562,6 +23646,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -22584,6 +23669,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -22606,6 +23692,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -22628,6 +23715,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "f1060dff4c8b86b7cd32c42f8f136fb6",
         "Classic/1.03": "f1060dff4c8b86b7cd32c42f8f136fb6",
         "Classic/1.04c": "f1060dff4c8b86b7cd32c42f8f136fb6",
+        "Classic/1.09d": "f1060dff4c8b86b7cd32c42f8f136fb6",
         "LoD/1.07": "f1060dff4c8b86b7cd32c42f8f136fb6",
         "LoD/1.08": "f1060dff4c8b86b7cd32c42f8f136fb6",
         "LoD/1.09": "f1060dff4c8b86b7cd32c42f8f136fb6",
@@ -22650,6 +23738,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -22672,6 +23761,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -22710,6 +23800,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_2",
+          "PROP_LEAF",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_2",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -22796,6 +23891,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -22820,6 +23916,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401D82",
         "Classic/1.03": "0x00401D82",
         "Classic/1.04c": "0x00401D82",
+        "Classic/1.09d": "0x00401D82",
         "LoD/1.07": "0x00401D82",
         "LoD/1.08": "0x00401D82",
         "LoD/1.09": "0x00401D82",
@@ -22842,6 +23939,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1D82",
         "Classic/1.03": "0x1D82",
         "Classic/1.04c": "0x1D82",
+        "Classic/1.09d": "0x1D82",
         "LoD/1.07": "0x1D82",
         "LoD/1.08": "0x1D82",
         "LoD/1.09": "0x1D82",
@@ -22864,6 +23962,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 321,
         "Classic/1.03": 321,
         "Classic/1.04c": 321,
+        "Classic/1.09d": 321,
         "LoD/1.07": 321,
         "LoD/1.08": 321,
         "LoD/1.09": 321,
@@ -22880,15 +23979,19 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 321,
         "LoD/1.14d": 321
       },
+      "name": "FilterFloatingPointException",
+      "signature": "LONG FilterFloatingPointException(int param_1, _EXCEPTION_POINTERS * param_2)",
       "calling_convention": "__cdecl",
       "return_type": "LONG",
+      "comment": "Filters and handles floating-point exceptions in the structured exception handler chain.\n\nAlgorithm:\n1. Lookup exception action info via GetExceptionActionRecord using dwExceptionCode\n2. If lookup fails or action record is NULL, fall through to UnhandledExceptionFilter\n3. Extract action type from record offset 0x8 (EBX = pRecord->dwActionType)\n4. If action type is 5 (reset), clear the action field and return EXCEPTION_CONTINUE_EXECUTION (1)\n5. If action type is 1, return EXCEPTION_CONTINUE_SEARCH (-1) immediately\n6. Save and restore FPU exception handler state via global g_pCurrentExceptionHandler\n7. If handler type is 8 (FPU), clear FPE slot array and map FPE codes to CRT signal codes:\n   - 0xC000008E EXCEPTION_INT_DIVIDE_BY_ZERO -> 0x83 _FPE_ZERODIVIDE\n   - 0xC0000090 EXCEPTION_FLT_INVALID_OPERATION -> 0x81 _FPE_INVALID\n   - 0xC0000091 EXCEPTION_FLT_STACK_CHECK -> 0x84 _FPE_STACKOVERFLOW\n   - 0xC0000093 EXCEPTION_FLT_UNDERFLOW -> 0x85 _FPE_UNDERFLOW\n   - 0xC000008D EXCEPTION_FLT_DENORMAL_OPERAND -> 0x82 _FPE_DENORMAL\n   - 0xC000008F EXCEPTION_FLT_OVERFLOW -> 0x86 _FPE_OVERFLOW\n   - 0xC0000092 EXCEPTION_FLT_INEXACT_RESULT -> 0x8A _FPE_INEXACT\n8. Invoke user-registered handler callback (EBX) with signal type and code\n9. Restore previous exception handler and return EXCEPTION_CONTINUE_SEARCH (-1)\n\nParameters:\n  dwExceptionCode - Windows exception code (e.g., 0xC000008E for EXCEPTION_INT_DIVIDE_BY_ZERO)\n  pExceptionInfo - Pointer to _EXCEPTION_POINTERS containing context and record\n\nReturns:\n  1 - EXCEPTION_CONTINUE_EXECUTION (action type 5 - reset and continue)\n  -1 - EXCEPTION_CONTINUE_SEARCH (normal path, handler invoked, or fall-through)\n  Result from UnhandledExceptionFilter if action record lookup fails\n\nSpecial Cases:\n  - Action type 5: Self-reset mechanism, clears action field before returning\n  - Action type 1: Immediate continue search without invoking handler\n  - Action type 8: Full FPU exception translation with slot array clearing\n\nMagic Numbers Reference:\n  0xC000008E - EXCEPTION_INT_DIVIDE_BY_ZERO (Windows)\n  0xC0000090 - EXCEPTION_FLT_INVALID_OPERATION\n  0xC0000091 - EXCEPTION_FLT_STACK_CHECK\n  0xC0000093 - EXCEPTION_FLT_UNDERFLOW\n  0xC000008D - EXCEPTION_FLT_DENORMAL_OPERAND\n  0xC000008F - EXCEPTION_FLT_OVERFLOW\n  0xC0000092 - EXCEPTION_FLT_INEXACT_RESULT\n  0x81-0x8A - CRT FPE signal codes (_FPE_INVALID through _FPE_INEXACT)",
+      "name_source": "Classic/1.00",
       "method": "NOP",
       "index": "NOP:2e230da4a429e3b9867bcedf13034bb96688a80cf3d4aca3fa578646b4d95247",
       "indexes": {
         "EXP": null,
         "STR": null,
         "NOP": "2e230da4a429e3b9867bcedf13034bb96688a80cf3d4aca3fa578646b4d95247",
-        "CAL": null,
+        "CAL": "954eb778221203aa46e01c9d9e586605",
         "API": null,
         "APS": null,
         "CON": null,
@@ -22896,87 +23999,90 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "1083f5d6440b72c4249e3f9668fe9e20",
         "PRO": "8a9092ef4379e1004af4fb44eeae13cc"
       },
-      "display_name": "NOP_2e230da4a429e3b9",
       "callees": {
         "Classic/1.00": [
-          "FUN_00401ec3|0x401EC3",
+          "GetExceptionActionRecord|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
         "Classic/1.01": [
-          "FUN_00401ec3|0x401EC3",
+          "GetExceptionActionRecord|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
         "Classic/1.02": [
-          "FUN_00401ec3|0x401EC3",
+          "GetExceptionActionRecord|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
         "Classic/1.03": [
           "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "GetExceptionActionRecord|0x401EC3"
         ],
         "Classic/1.04c": [
           "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "GetExceptionActionRecord|0x401EC3"
+        ],
+        "Classic/1.09d": [
+          "GetExceptionActionRecord|0x401EC3",
+          "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.07": [
-          "FUN_00401ec3|0x401EC3",
+          "GetExceptionActionRecord|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.08": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
-        ],
-        "LoD/1.09": [
-          "FUN_00401ec3|0x401EC3",
+          "GetExceptionActionRecord|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
+        "LoD/1.09": [
+          "UnhandledExceptionFilter|0x14",
+          "GetExceptionActionRecord|0x401EC3"
+        ],
         "LoD/1.09b": [
-          "FUN_00401ec3|0x401EC3",
+          "GetExceptionActionRecord|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.09d": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "GetExceptionActionRecord|0x401EC3",
+          "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.10": [
           "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "GetExceptionActionRecord|0x401EC3"
         ],
         "LoD/1.11": [
           "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "GetExceptionActionRecord|0x401EC3"
         ],
         "LoD/1.11b": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "GetExceptionActionRecord|0x401EC3"
         ],
         "LoD/1.12a": [
-          "FUN_00401ec3|0x401EC3",
+          "GetExceptionActionRecord|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.13c": [
           "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "GetExceptionActionRecord|0x401EC3"
         ],
         "LoD/1.13d": [
           "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "GetExceptionActionRecord|0x401EC3"
         ],
         "LoD/1.14a": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "GetExceptionActionRecord|0x401EC3",
+          "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.14b": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "GetExceptionActionRecord|0x401EC3"
         ],
         "LoD/1.14c": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "GetExceptionActionRecord|0x401EC3"
         ],
         "LoD/1.14d": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "GetExceptionActionRecord|0x401EC3",
+          "UnhandledExceptionFilter|0x14"
         ]
       },
       "callers": {
@@ -22993,6 +24099,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -23111,6 +24220,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1DAB|PUSH|0x1"
         ],
         "Classic/1.04c": [
+          "0x1D82|PUSH|EBP",
+          "0x1D83|MOV|EBP, ESP",
+          "0x1D85|PUSH|EBX",
+          "0x1D86|PUSH|dword ptr [EBP + 0x8]",
+          "0x1D89|CALL|0x00401ec3",
+          "0x1D8E|TEST|EAX, EAX",
+          "0x1D90|POP|ECX",
+          "0x1D91|JZ|0x00401eb7",
+          "0x1D97|MOV|EBX, dword ptr [EAX + 0x8]",
+          "0x1D9A|TEST|EBX, EBX",
+          "0x1D9C|JZ|0x00401eb7",
+          "0x1DA2|CMP|EBX, 0x5",
+          "0x1DA5|JNZ|0x00401db3",
+          "0x1DA7|AND|dword ptr [EAX + 0x8], 0x0",
+          "0x1DAB|PUSH|0x1"
+        ],
+        "Classic/1.09d": [
           "0x1D82|PUSH|EBP",
           "0x1D83|MOV|EBP, ESP",
           "0x1D85|PUSH|EBX",
@@ -23389,6 +24515,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 89,
         "Classic/1.03": 89,
         "Classic/1.04c": 89,
+        "Classic/1.09d": 89,
         "LoD/1.07": 89,
         "LoD/1.08": 89,
         "LoD/1.09": 89,
@@ -23411,6 +24538,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -23433,6 +24561,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -23455,6 +24584,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "41f8d80d32bced9021e52454a2115142",
         "Classic/1.03": "41f8d80d32bced9021e52454a2115142",
         "Classic/1.04c": "41f8d80d32bced9021e52454a2115142",
+        "Classic/1.09d": "41f8d80d32bced9021e52454a2115142",
         "LoD/1.07": "41f8d80d32bced9021e52454a2115142",
         "LoD/1.08": "41f8d80d32bced9021e52454a2115142",
         "LoD/1.09": "41f8d80d32bced9021e52454a2115142",
@@ -23485,6 +24615,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1DF2||0x406158"
         ],
         "Classic/1.04c": [
+          "0x1DF2||0x406158"
+        ],
+        "Classic/1.09d": [
           "0x1DF2||0x406158"
         ],
         "LoD/1.07": [
@@ -23579,7 +24712,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x61D4|DAT_004061d4|0x8c",
           "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6510|DAT_00406510|0x0",
           "0x61C8|DAT_004061c8|0x3",
           "0x61CC|DAT_004061cc|0x7",
@@ -23587,6 +24720,15 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6188|DAT_00406188|0x0",
           "0x61D4|DAT_004061d4|0x8c",
           "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
+        ],
+        "LoD/1.07": [
+          "0x6510|g_pCurrentExceptionHandler|0x0",
+          "0x61C8|g_nFpeSlotIndex|0x3",
+          "0x61CC|g_nFpeSlotCount|0x7",
+          "0x617C|DWORD_0040617c|0x0",
+          "0x6188|DWORD_00406188|0x0",
+          "0x61D4|g_dwFpeSignalCode|0x8c",
+          "0x504C|g_pfnUnhandledExceptionFilter|00005658"
         ],
         "LoD/1.08": [
           "0x6510|DAT_00406510|0x0",
@@ -23721,6 +24863,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -23743,6 +24886,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -23765,6 +24909,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -23787,6 +24932,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 7,
         "Classic/1.03": 7,
         "Classic/1.04c": 7,
+        "Classic/1.09d": 7,
         "LoD/1.07": 7,
         "LoD/1.08": 7,
         "LoD/1.09": 7,
@@ -23809,6 +24955,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -23843,6 +24990,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_2"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_2"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_2"
         ],
@@ -23913,6 +25064,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -23937,6 +25089,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401EC3",
         "Classic/1.03": "0x00401EC3",
         "Classic/1.04c": "0x00401EC3",
+        "Classic/1.09d": "0x00401EC3",
         "LoD/1.07": "0x00401EC3",
         "LoD/1.08": "0x00401EC3",
         "LoD/1.09": "0x00401EC3",
@@ -23959,6 +25112,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1EC3",
         "Classic/1.03": "0x1EC3",
         "Classic/1.04c": "0x1EC3",
+        "Classic/1.09d": "0x1EC3",
         "LoD/1.07": "0x1EC3",
         "LoD/1.08": "0x1EC3",
         "LoD/1.09": "0x1EC3",
@@ -23981,6 +25135,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 67,
         "Classic/1.03": 67,
         "Classic/1.04c": 67,
+        "Classic/1.09d": 67,
         "LoD/1.07": 67,
         "LoD/1.08": 67,
         "LoD/1.09": 67,
@@ -23997,8 +25152,12 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 67,
         "LoD/1.14d": 67
       },
+      "name": "GetExceptionActionRecord",
+      "signature": "int * GetExceptionActionRecord(int param_1)",
       "calling_convention": "__cdecl",
       "return_type": "int *",
+      "comment": "Searches the exception action table for a record matching the given exception code.\n\nAlgorithm:\n1. Initialize pointer to start of g_aExceptionActionTable\n2. If first entry matches dwExceptionCode, return immediately\n3. Loop through table entries (stride of 12 bytes per record)\n4. Break loop if end of table reached (g_dwExceptionActionCount entries)\n5. Break loop if matching exception code found\n6. Return pointer to matching record, or NULL if not found\n\nParameters:\n  dwExceptionCode - Windows exception code to search for (e.g., 0xC0000005 for access violation)\n\nReturns:\n  Pointer to 12-byte exception action record if found, NULL otherwise\n\nStructure Layout:\n  Offset  Size  Field           Description\n  0x00    4     dwExceptionCode Exception code (STATUS_* constant)\n  0x04    4     dwAction        Handler action code\n  0x08    4     dwReserved      Reserved (always 0)\n\nMagic Numbers:\n  0x0C (12) - Size of each exception action record entry",
+      "name_source": "Classic/1.00",
       "method": "NOP",
       "index": "NOP:07c6bcad252a7623350107ffc5aaa79e1b8d58ea869304e88045e0adf1c8a4c3",
       "indexes": {
@@ -24013,67 +25172,69 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "1cf28c92c8a3817ec2934904c82e8c98",
         "PRO": "26f5cd7217d8e31b5ca266955f9c63f2"
       },
-      "display_name": "NOP_07c6bcad252a7623",
       "callers": {
         "Classic/1.00": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "Classic/1.01": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "Classic/1.02": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "Classic/1.03": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "Classic/1.04c": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
+        ],
+        "Classic/1.09d": [
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.07": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.08": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.09": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.09b": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.09d": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.10": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.11": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.11b": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.12a": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.13c": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.13d": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.14a": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.14b": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.14c": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ],
         "LoD/1.14d": [
-          "FUN_00401d82|0x401D82"
+          "FilterFloatingPointException|0x401D82"
         ]
       },
       "instructions": {
@@ -24146,6 +25307,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1EF3|POP|ESI"
         ],
         "Classic/1.04c": [
+          "0x1EC3|MOV|EDX, dword ptr [ESP + 0x4]",
+          "0x1EC7|MOV|ECX, dword ptr [0x004061d0]",
+          "0x1ECD|CMP|dword ptr [0x00406150], EDX",
+          "0x1ED3|PUSH|ESI",
+          "0x1ED4|MOV|EAX, 0x406150",
+          "0x1ED9|JZ|0x00401ef0",
+          "0x1EDB|LEA|ESI, [ECX + ECX*0x2]",
+          "0x1EDE|LEA|ESI, [ESI*0x4 + 0x406150]",
+          "0x1EE5|ADD|EAX, 0xc",
+          "0x1EE8|CMP|EAX, ESI",
+          "0x1EEA|JNC|0x00401ef0",
+          "0x1EEC|CMP|dword ptr [EAX], EDX",
+          "0x1EEE|JNZ|0x00401ee5",
+          "0x1EF0|LEA|ECX, [ECX + ECX*0x2]",
+          "0x1EF3|POP|ESI"
+        ],
+        "Classic/1.09d": [
           "0x1EC3|MOV|EDX, dword ptr [ESP + 0x4]",
           "0x1EC7|MOV|ECX, dword ptr [0x004061d0]",
           "0x1ECD|CMP|dword ptr [0x00406150], EDX",
@@ -24424,6 +25602,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 22,
         "Classic/1.03": 22,
         "Classic/1.04c": 22,
+        "Classic/1.09d": 22,
         "LoD/1.07": 22,
         "LoD/1.08": 22,
         "LoD/1.09": 22,
@@ -24446,6 +25625,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -24468,6 +25648,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -24490,6 +25671,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "a073910011def1e1e9e25496ccd37ec0",
         "Classic/1.03": "a073910011def1e1e9e25496ccd37ec0",
         "Classic/1.04c": "a073910011def1e1e9e25496ccd37ec0",
+        "Classic/1.09d": "a073910011def1e1e9e25496ccd37ec0",
         "LoD/1.07": "a073910011def1e1e9e25496ccd37ec0",
         "LoD/1.08": "a073910011def1e1e9e25496ccd37ec0",
         "LoD/1.09": "a073910011def1e1e9e25496ccd37ec0",
@@ -24528,6 +25710,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1EF4||0x406150"
         ],
         "Classic/1.04c": [
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
+        ],
+        "Classic/1.09d": [
           "0x1ED4||0x406150",
           "0x1EDE||0x406150",
           "0x1EF4||0x406150"
@@ -24644,12 +25831,19 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x615C|DAT_0040615c|-0x3fffffe3",
           "0x6168|DAT_00406168|-0x3fffff6a"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x61D0|DAT_004061d0|0xa",
           "0x6150|DAT_00406150|-0x3ffffffb",
           "0x61C8|DAT_004061c8|0x3",
           "0x615C|DAT_0040615c|-0x3fffffe3",
           "0x6168|DAT_00406168|-0x3fffff6a"
+        ],
+        "LoD/1.07": [
+          "0x61D0|g_dwExceptionActionCount|0xa",
+          "0x6150|g_aExceptionActionTable|0xc0000005",
+          "0x61C8|g_nFpeSlotIndex|0x3",
+          "0x615C|DWORD_0040615c|0xc000001d",
+          "0x6168|DWORD_00406168|0xc0000096"
         ],
         "LoD/1.08": [
           "0x61D0|DAT_004061d0|0xa",
@@ -24756,6 +25950,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -24778,6 +25973,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -24800,6 +25996,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "Classic/1.09d": 5,
         "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -24822,6 +26019,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -24856,6 +26054,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_LEAF"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_LEAF"
         ],
@@ -24926,6 +26128,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -24950,6 +26153,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401F06",
         "Classic/1.03": "0x00401F06",
         "Classic/1.04c": "0x00401F06",
+        "Classic/1.09d": "0x00401F06",
         "LoD/1.07": "0x00401F06",
         "LoD/1.08": "0x00401F06",
         "LoD/1.09": "0x00401F06",
@@ -24972,6 +26176,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1F06",
         "Classic/1.03": "0x1F06",
         "Classic/1.04c": "0x1F06",
+        "Classic/1.09d": "0x1F06",
         "LoD/1.07": "0x1F06",
         "LoD/1.08": "0x1F06",
         "LoD/1.09": "0x1F06",
@@ -24994,6 +26199,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 88,
         "Classic/1.03": 88,
         "Classic/1.04c": 88,
+        "Classic/1.09d": 88,
         "LoD/1.07": 88,
         "LoD/1.08": 88,
         "LoD/1.09": 88,
@@ -25010,8 +26216,12 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 88,
         "LoD/1.14d": 88
       },
+      "name": "GetCommandLineArgs",
+      "signature": "byte * GetCommandLineArgs(void)",
       "calling_convention": "__stdcall",
       "return_type": "byte *",
+      "comment": "Parses the command line to skip past the program name and return a pointer to arguments.\n\nAlgorithm:\n1. Initialize code page if not already done (for MBCS support)\n2. Get pointer to command line string from global g_lpszCommandLine\n3. If command line starts with quote (0x22):\n   a. Scan forward looking for closing quote or null terminator\n   b. Handle multi-byte characters by checking IsLeadByte\n   c. If lead byte found, skip extra byte for DBCS character\n   d. Skip past closing quote if present\n4. If command line is unquoted:\n   a. Scan forward while characters are above space (0x20)\n5. Skip any trailing whitespace (chars <= 0x20)\n6. Return pointer to first argument (or end of string)\n\nParameters:\n  None - reads from global g_lpszCommandLine\n\nReturns:\n  char* - Pointer to command line arguments after program name\n          Returns pointer to null terminator if no arguments\n\nMagic Numbers:\n  0x22 - ASCII double quote character\n  0x20 - ASCII space character (whitespace threshold)\n  0x21 - First non-whitespace printable ASCII\n\nSpecial Cases:\n  - Quoted paths: \"C:\\Program Files\\app.exe\" args\n  - Unquoted paths: C:\\app.exe args\n  - MBCS/DBCS support for international character sets\n  - Empty command line returns pointer to null terminator",
+      "name_source": "Classic/1.00",
       "method": "NOP",
       "index": "NOP:c61e58bda2e02049e982686613ae1118ad47621a6deb4c9346a2ec471fee27ea",
       "indexes": {
@@ -25026,31 +26236,34 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "46c9984789f3b338226be49d1e54fb70",
         "PRO": "c0da7238cea3536033ac5edd6a427b50"
       },
-      "display_name": "NOP_c61e58bda2e02049",
       "callees": {
         "Classic/1.00": [
           "InitializeCodePageOnce|0x4019E6",
           "FUN_00402d8c|0x402D8C"
         ],
         "Classic/1.01": [
-          "InitializeCodePageOnce|0x4019E6",
-          "FUN_00402d8c|0x402D8C"
+          "FUN_00402d8c|0x402D8C",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "Classic/1.02": [
-          "InitializeCodePageOnce|0x4019E6",
-          "FUN_00402d8c|0x402D8C"
+          "FUN_00402d8c|0x402D8C",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "Classic/1.03": [
-          "InitializeCodePageOnce|0x4019E6",
-          "FUN_00402d8c|0x402D8C"
+          "FUN_00402d8c|0x402D8C",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "Classic/1.04c": [
           "InitializeCodePageOnce|0x4019E6",
           "FUN_00402d8c|0x402D8C"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "InitializeCodePageOnce|0x4019E6",
           "FUN_00402d8c|0x402D8C"
+        ],
+        "LoD/1.07": [
+          "IsLeadByte|0x402D8C",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.08": [
           "InitializeCodePageOnce|0x4019E6",
@@ -25065,48 +26278,48 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.09d": [
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
+        ],
+        "LoD/1.10": [
           "FUN_00402d8c|0x402D8C",
           "InitializeCodePageOnce|0x4019E6"
         ],
-        "LoD/1.10": [
-          "InitializeCodePageOnce|0x4019E6",
-          "FUN_00402d8c|0x402D8C"
-        ],
         "LoD/1.11": [
-          "InitializeCodePageOnce|0x4019E6",
-          "FUN_00402d8c|0x402D8C"
+          "FUN_00402d8c|0x402D8C",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.11b": [
-          "InitializeCodePageOnce|0x4019E6",
-          "FUN_00402d8c|0x402D8C"
+          "FUN_00402d8c|0x402D8C",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.12a": [
           "FUN_00402d8c|0x402D8C",
           "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.13c": [
-          "InitializeCodePageOnce|0x4019E6",
-          "FUN_00402d8c|0x402D8C"
+          "FUN_00402d8c|0x402D8C",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.13d": [
-          "InitializeCodePageOnce|0x4019E6",
-          "FUN_00402d8c|0x402D8C"
+          "FUN_00402d8c|0x402D8C",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.14a": [
           "InitializeCodePageOnce|0x4019E6",
           "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.14b": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
-        ],
-        "LoD/1.14c": [
           "InitializeCodePageOnce|0x4019E6",
           "FUN_00402d8c|0x402D8C"
         ],
-        "LoD/1.14d": [
+        "LoD/1.14c": [
           "FUN_00402d8c|0x402D8C",
           "InitializeCodePageOnce|0x4019E6"
+        ],
+        "LoD/1.14d": [
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ]
       },
       "callers": {
@@ -25123,6 +26336,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -25241,6 +26457,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1F2D|MOVZX|EAX, AL"
         ],
         "Classic/1.04c": [
+          "0x1F06|CMP|dword ptr [0x00406788], 0x0",
+          "0x1F0D|JNZ|0x00401f14",
+          "0x1F0F|CALL|0x004019e6",
+          "0x1F14|PUSH|ESI",
+          "0x1F15|MOV|ESI, dword ptr [0x004069c8]",
+          "0x1F1B|MOV|AL, byte ptr [ESI]",
+          "0x1F1D|CMP|AL, 0x22",
+          "0x1F1F|JNZ|0x00401f46",
+          "0x1F21|MOV|AL, byte ptr [ESI + 0x1]",
+          "0x1F24|INC|ESI",
+          "0x1F25|CMP|AL, 0x22",
+          "0x1F27|JZ|0x00401f3e",
+          "0x1F29|TEST|AL, AL",
+          "0x1F2B|JZ|0x00401f3e",
+          "0x1F2D|MOVZX|EAX, AL"
+        ],
+        "Classic/1.09d": [
           "0x1F06|CMP|dword ptr [0x00406788], 0x0",
           "0x1F0D|JNZ|0x00401f14",
           "0x1F0F|CALL|0x004019e6",
@@ -25519,6 +26752,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 39,
         "Classic/1.03": 39,
         "Classic/1.04c": 39,
+        "Classic/1.09d": 39,
         "LoD/1.07": 39,
         "LoD/1.08": 39,
         "LoD/1.09": 39,
@@ -25541,6 +26775,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -25563,6 +26798,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -25585,6 +26821,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "93c4b717343abad7c0cd6bec07bb1588",
         "Classic/1.03": "93c4b717343abad7c0cd6bec07bb1588",
         "Classic/1.04c": "93c4b717343abad7c0cd6bec07bb1588",
+        "Classic/1.09d": "93c4b717343abad7c0cd6bec07bb1588",
         "LoD/1.07": "93c4b717343abad7c0cd6bec07bb1588",
         "LoD/1.08": "93c4b717343abad7c0cd6bec07bb1588",
         "LoD/1.09": "93c4b717343abad7c0cd6bec07bb1588",
@@ -25619,6 +26856,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x69C8|g_lpszCommandLine|0x0"
         ],
         "Classic/1.04c": [
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
+        ],
+        "Classic/1.09d": [
           "0x6788|g_fCodePageInitialized|0x0",
           "0x69C8|g_lpszCommandLine|0x0"
         ],
@@ -25689,6 +26930,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -25711,6 +26953,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -25733,6 +26976,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -25767,6 +27011,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LOOPHEAVY"
         ],
         "Classic/1.04c": [
+          "PARAM_0",
+          "PROP_LOOPHEAVY"
+        ],
+        "Classic/1.09d": [
           "PARAM_0",
           "PROP_LOOPHEAVY"
         ],
@@ -25837,6 +27085,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -25861,6 +27110,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00401F5E",
         "Classic/1.03": "0x00401F5E",
         "Classic/1.04c": "0x00401F5E",
+        "Classic/1.09d": "0x00401F5E",
         "LoD/1.07": "0x00401F5E",
         "LoD/1.08": "0x00401F5E",
         "LoD/1.09": "0x00401F5E",
@@ -25883,6 +27133,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x1F5E",
         "Classic/1.03": "0x1F5E",
         "Classic/1.04c": "0x1F5E",
+        "Classic/1.09d": "0x1F5E",
         "LoD/1.07": "0x1F5E",
         "LoD/1.08": "0x1F5E",
         "LoD/1.09": "0x1F5E",
@@ -25905,6 +27156,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 185,
         "Classic/1.03": 185,
         "Classic/1.04c": 185,
+        "Classic/1.09d": 185,
         "LoD/1.07": 185,
         "LoD/1.08": 185,
         "LoD/1.09": 185,
@@ -25933,7 +27185,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "EXP": null,
         "STR": null,
         "NOP": "c539329e2d46e056f5855b7f56787108152c3a152caa6d043bd65fbca0c779a9",
-        "CAL": "c16244a47f600858c95b60f915650b56",
+        "CAL": "7a92a47d037f414acf1de66c1ba19a38",
         "API": null,
         "APS": null,
         "CON": null,
@@ -25943,164 +27195,172 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
+          "_malloc|0x402EF0",
+          "_strlen|0x401B80",
           "InitializeCodePageOnce|0x4019E6",
           "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
           "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "Classic/1.01": [
+          "CopyStringOptimized|0x402E00",
           "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0",
-          "_strlen|0x401B80",
+          "DeallocateMemory|0x402DCE",
           "AmsgExit|0x4015D9",
-          "CopyStringOptimized|0x402E00",
-          "SmartFree|0x402DCE"
+          "_strlen|0x401B80"
         ],
         "Classic/1.02": [
           "_strlen|0x401B80",
+          "CopyStringOptimized|0x402E00",
+          "DeallocateMemory|0x402DCE",
+          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9"
+        ],
+        "Classic/1.03": [
+          "DeallocateMemory|0x402DCE",
+          "CopyStringOptimized|0x402E00",
+          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
+          "_strlen|0x401B80",
+          "AmsgExit|0x4015D9"
+        ],
+        "Classic/1.04c": [
           "AmsgExit|0x4015D9",
-          "SmartFree|0x402DCE",
+          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6",
+          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
+          "DeallocateMemory|0x402DCE"
+        ],
+        "Classic/1.09d": [
+          "AmsgExit|0x4015D9",
+          "DeallocateMemory|0x402DCE",
+          "_strlen|0x401B80",
           "_malloc|0x402EF0",
           "CopyStringOptimized|0x402E00",
           "InitializeCodePageOnce|0x4019E6"
         ],
-        "Classic/1.03": [
-          "CopyStringOptimized|0x402E00",
-          "SmartFree|0x402DCE",
-          "_strlen|0x401B80",
-          "InitializeCodePageOnce|0x4019E6",
-          "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9"
-        ],
-        "Classic/1.04c": [
-          "InitializeCodePageOnce|0x4019E6",
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
+        "LoD/1.07": [
           "AmsgExit|0x4015D9",
+          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
           "SmartFree|0x402DCE",
+          "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0"
         ],
-        "LoD/1.07": [
-          "CopyStringOptimized|0x402E00",
-          "InitializeCodePageOnce|0x4019E6",
-          "_strlen|0x401B80",
-          "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9",
-          "SmartFree|0x402DCE"
-        ],
         "LoD/1.08": [
-          "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
           "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
           "AmsgExit|0x4015D9",
-          "_strlen|0x401B80",
-          "CopyStringOptimized|0x402E00"
+          "CopyStringOptimized|0x402E00",
+          "DeallocateMemory|0x402DCE",
+          "_strlen|0x401B80"
         ],
         "LoD/1.09": [
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "CopyStringOptimized|0x402E00",
-          "InitializeCodePageOnce|0x4019E6",
           "_strlen|0x401B80",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "InitializeCodePageOnce|0x4019E6",
+          "DeallocateMemory|0x402DCE",
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.09b": [
-          "InitializeCodePageOnce|0x4019E6",
-          "AmsgExit|0x4015D9",
           "_strlen|0x401B80",
+          "DeallocateMemory|0x402DCE",
           "CopyStringOptimized|0x402E00",
+          "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE"
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.09d": [
           "InitializeCodePageOnce|0x4019E6",
-          "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "CopyStringOptimized|0x402E00",
           "_strlen|0x401B80",
+          "DeallocateMemory|0x402DCE",
+          "_malloc|0x402EF0",
+          "CopyStringOptimized|0x402E00",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.10": [
-          "AmsgExit|0x4015D9",
-          "CopyStringOptimized|0x402E00",
-          "InitializeCodePageOnce|0x4019E6",
+          "DeallocateMemory|0x402DCE",
           "_strlen|0x401B80",
+          "CopyStringOptimized|0x402E00",
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE"
+          "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.11": [
           "AmsgExit|0x4015D9",
           "CopyStringOptimized|0x402E00",
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
           "_strlen|0x401B80",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.11b": [
-          "AmsgExit|0x4015D9",
           "_strlen|0x401B80",
-          "SmartFree|0x402DCE",
-          "CopyStringOptimized|0x402E00",
+          "DeallocateMemory|0x402DCE",
+          "AmsgExit|0x4015D9",
+          "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0",
-          "InitializeCodePageOnce|0x4019E6"
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.12a": [
           "_malloc|0x402EF0",
-          "_strlen|0x401B80",
-          "CopyStringOptimized|0x402E00",
           "AmsgExit|0x4015D9",
-          "SmartFree|0x402DCE",
-          "InitializeCodePageOnce|0x4019E6"
+          "CopyStringOptimized|0x402E00",
+          "InitializeCodePageOnce|0x4019E6",
+          "DeallocateMemory|0x402DCE",
+          "_strlen|0x401B80"
         ],
         "LoD/1.13c": [
-          "_malloc|0x402EF0",
+          "DeallocateMemory|0x402DCE",
           "CopyStringOptimized|0x402E00",
+          "AmsgExit|0x4015D9",
           "InitializeCodePageOnce|0x4019E6",
           "_strlen|0x401B80",
-          "AmsgExit|0x4015D9",
-          "SmartFree|0x402DCE"
+          "_malloc|0x402EF0"
         ],
         "LoD/1.13d": [
-          "_strlen|0x401B80",
+          "DeallocateMemory|0x402DCE",
           "AmsgExit|0x4015D9",
-          "CopyStringOptimized|0x402E00",
-          "InitializeCodePageOnce|0x4019E6",
+          "_strlen|0x401B80",
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE"
+          "CopyStringOptimized|0x402E00",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.14a": [
+          "DeallocateMemory|0x402DCE",
           "InitializeCodePageOnce|0x4019E6",
+          "CopyStringOptimized|0x402E00",
           "AmsgExit|0x4015D9",
           "_strlen|0x401B80",
-          "_malloc|0x402EF0",
-          "CopyStringOptimized|0x402E00",
-          "SmartFree|0x402DCE"
+          "_malloc|0x402EF0"
         ],
         "LoD/1.14b": [
-          "_strlen|0x401B80",
-          "CopyStringOptimized|0x402E00",
           "AmsgExit|0x4015D9",
+          "CopyStringOptimized|0x402E00",
           "InitializeCodePageOnce|0x4019E6",
+          "_strlen|0x401B80",
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.14c": [
-          "SmartFree|0x402DCE",
-          "AmsgExit|0x4015D9",
+          "CopyStringOptimized|0x402E00",
           "_malloc|0x402EF0",
           "InitializeCodePageOnce|0x4019E6",
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80"
+          "DeallocateMemory|0x402DCE",
+          "_strlen|0x401B80",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14d": [
-          "CopyStringOptimized|0x402E00",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
           "InitializeCodePageOnce|0x4019E6",
-          "_strlen|0x401B80"
+          "CopyStringOptimized|0x402E00",
+          "_malloc|0x402EF0",
+          "_strlen|0x401B80",
+          "DeallocateMemory|0x402DCE",
+          "AmsgExit|0x4015D9"
         ]
       },
       "callers": {
@@ -26117,6 +27377,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -26235,6 +27498,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x1F82|INC|EDI"
         ],
         "Classic/1.04c": [
+          "0x1F5E|PUSH|EBX",
+          "0x1F5F|XOR|EBX, EBX",
+          "0x1F61|CMP|dword ptr [0x00406788], EBX",
+          "0x1F67|PUSH|ESI",
+          "0x1F68|PUSH|EDI",
+          "0x1F69|JNZ|0x00401f70",
+          "0x1F6B|CALL|0x004019e6",
+          "0x1F70|MOV|ESI, dword ptr [0x004064b4]",
+          "0x1F76|XOR|EDI, EDI",
+          "0x1F78|MOV|AL, byte ptr [ESI]",
+          "0x1F7A|CMP|AL, BL",
+          "0x1F7C|JZ|0x00401f90",
+          "0x1F7E|CMP|AL, 0x3d",
+          "0x1F80|JZ|0x00401f83",
+          "0x1F82|INC|EDI"
+        ],
+        "Classic/1.09d": [
           "0x1F5E|PUSH|EBX",
           "0x1F5F|XOR|EBX, EBX",
           "0x1F61|CMP|dword ptr [0x00406788], EBX",
@@ -26513,6 +27793,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 71,
         "Classic/1.03": 71,
         "Classic/1.04c": 71,
+        "Classic/1.09d": 71,
         "LoD/1.07": 71,
         "LoD/1.08": 71,
         "LoD/1.09": 71,
@@ -26535,6 +27816,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -26557,6 +27839,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -26579,6 +27862,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "6e538b3bbbeec8f94bef058bdad701fe",
         "Classic/1.03": "6e538b3bbbeec8f94bef058bdad701fe",
         "Classic/1.04c": "6e538b3bbbeec8f94bef058bdad701fe",
+        "Classic/1.09d": "6e538b3bbbeec8f94bef058bdad701fe",
         "LoD/1.07": "6e538b3bbbeec8f94bef058bdad701fe",
         "LoD/1.08": "6e538b3bbbeec8f94bef058bdad701fe",
         "LoD/1.09": "6e538b3bbbeec8f94bef058bdad701fe",
@@ -26626,11 +27910,17 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x64EC|DAT_004064ec|0x0",
           "0x6784|DAT_00406784|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6788|g_fCodePageInitialized|0x0",
           "0x64B4|g_dwModuleHandle|0x0",
           "0x64EC|DAT_004064ec|0x0",
           "0x6784|DAT_00406784|0x0"
+        ],
+        "LoD/1.07": [
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|g_ppszEnvironment|",
+          "0x6784|g_fEnvironmentInitialized|0x0"
         ],
         "LoD/1.08": [
           "0x6788|g_fCodePageInitialized|0x0",
@@ -26723,6 +28013,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -26745,6 +28036,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -26767,6 +28059,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -26797,6 +28090,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_0"
         ],
         "Classic/1.04c": [
+          "PARAM_0"
+        ],
+        "Classic/1.09d": [
           "PARAM_0"
         ],
         "LoD/1.07": [
@@ -26851,6 +28147,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -26875,6 +28172,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402017",
         "Classic/1.03": "0x00402017",
         "Classic/1.04c": "0x00402017",
+        "Classic/1.09d": "0x00402017",
         "LoD/1.07": "0x00402017",
         "LoD/1.08": "0x00402017",
         "LoD/1.09": "0x00402017",
@@ -26897,6 +28195,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2017",
         "Classic/1.03": "0x2017",
         "Classic/1.04c": "0x2017",
+        "Classic/1.09d": "0x2017",
         "LoD/1.07": "0x2017",
         "LoD/1.08": "0x2017",
         "LoD/1.09": "0x2017",
@@ -26919,6 +28218,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 153,
         "Classic/1.03": 153,
         "Classic/1.04c": 153,
+        "Classic/1.09d": 153,
         "LoD/1.07": 153,
         "LoD/1.08": 153,
         "LoD/1.09": 153,
@@ -26957,144 +28257,151 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "InitializeCodePageOnce|0x4019E6",
-          "GetModuleFileNameA|0x15",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
-          "ParseCommandLineArguments|0x4020B0"
-        ],
-        "Classic/1.01": [
-          "InitializeCodePageOnce|0x4019E6",
-          "_malloc|0x402EF0",
           "ParseCommandLineArguments|0x4020B0",
-          "AmsgExit|0x4015D9",
-          "GetModuleFileNameA|0x15"
-        ],
-        "Classic/1.02": [
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
-          "InitializeCodePageOnce|0x4019E6",
-          "ParseCommandLineArguments|0x4020B0",
-          "GetModuleFileNameA|0x15"
-        ],
-        "Classic/1.03": [
-          "InitializeCodePageOnce|0x4019E6",
           "GetModuleFileNameA|0x15",
           "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9",
-          "ParseCommandLineArguments|0x4020B0"
-        ],
-        "Classic/1.04c": [
-          "GetModuleFileNameA|0x15",
-          "ParseCommandLineArguments|0x4020B0",
           "InitializeCodePageOnce|0x4019E6",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0"
-        ],
-        "LoD/1.07": [
-          "GetModuleFileNameA|0x15",
-          "InitializeCodePageOnce|0x4019E6",
-          "_malloc|0x402EF0",
-          "ParseCommandLineArguments|0x4020B0",
           "AmsgExit|0x4015D9"
         ],
-        "LoD/1.08": [
+        "Classic/1.01": [
           "ParseCommandLineArguments|0x4020B0",
+          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
+          "GetModuleFileNameA|0x15",
+          "AmsgExit|0x4015D9"
+        ],
+        "Classic/1.02": [
+          "GetModuleFileNameA|0x15",
           "_malloc|0x402EF0",
           "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9",
+          "ParseCommandLineArguments|0x4020B0"
+        ],
+        "Classic/1.03": [
+          "GetModuleFileNameA|0x15",
+          "ParseCommandLineArguments|0x4020B0",
+          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9"
+        ],
+        "Classic/1.04c": [
+          "ParseCommandLineArguments|0x4020B0",
+          "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15",
+          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6"
+        ],
+        "Classic/1.09d": [
+          "GetModuleFileNameA|0x15",
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
+          "ParseCommandLineArguments|0x4020B0",
+          "InitializeCodePageOnce|0x4019E6"
+        ],
+        "LoD/1.07": [
+          "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15",
+          "ParseCommandLineArguments|0x4020B0",
+          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0"
+        ],
+        "LoD/1.08": [
+          "InitializeCodePageOnce|0x4019E6",
+          "ParseCommandLineArguments|0x4020B0",
+          "_malloc|0x402EF0",
           "AmsgExit|0x4015D9",
           "GetModuleFileNameA|0x15"
         ],
         "LoD/1.09": [
-          "_malloc|0x402EF0",
           "ParseCommandLineArguments|0x4020B0",
-          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
+          "GetModuleFileNameA|0x15",
           "AmsgExit|0x4015D9",
-          "GetModuleFileNameA|0x15"
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.09b": [
-          "InitializeCodePageOnce|0x4019E6",
           "ParseCommandLineArguments|0x4020B0",
-          "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15",
+          "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0",
-          "GetModuleFileNameA|0x15"
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.09d": [
           "InitializeCodePageOnce|0x4019E6",
+          "GetModuleFileNameA|0x15",
           "_malloc|0x402EF0",
           "ParseCommandLineArguments|0x4020B0",
-          "AmsgExit|0x4015D9",
-          "GetModuleFileNameA|0x15"
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.10": [
+          "ParseCommandLineArguments|0x4020B0",
           "GetModuleFileNameA|0x15",
-          "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0",
-          "ParseCommandLineArguments|0x4020B0"
+          "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.11": [
           "ParseCommandLineArguments|0x4020B0",
-          "GetModuleFileNameA|0x15",
           "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15",
           "_malloc|0x402EF0",
           "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.11b": [
           "ParseCommandLineArguments|0x4020B0",
           "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6",
           "GetModuleFileNameA|0x15",
-          "InitializeCodePageOnce|0x4019E6"
+          "_malloc|0x402EF0"
         ],
         "LoD/1.12a": [
           "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6",
-          "ParseCommandLineArguments|0x4020B0",
-          "GetModuleFileNameA|0x15"
-        ],
-        "LoD/1.13c": [
-          "_malloc|0x402EF0",
-          "InitializeCodePageOnce|0x4019E6",
-          "AmsgExit|0x4015D9",
           "GetModuleFileNameA|0x15",
+          "AmsgExit|0x4015D9",
+          "InitializeCodePageOnce|0x4019E6",
           "ParseCommandLineArguments|0x4020B0"
         ],
-        "LoD/1.13d": [
-          "GetModuleFileNameA|0x15",
-          "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6",
+        "LoD/1.13c": [
           "ParseCommandLineArguments|0x4020B0",
+          "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15",
+          "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0"
+        ],
+        "LoD/1.13d": [
+          "ParseCommandLineArguments|0x4020B0",
+          "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15",
+          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.14a": [
           "InitializeCodePageOnce|0x4019E6",
+          "ParseCommandLineArguments|0x4020B0",
           "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
-          "GetModuleFileNameA|0x15",
-          "ParseCommandLineArguments|0x4020B0"
+          "GetModuleFileNameA|0x15"
         ],
         "LoD/1.14b": [
           "GetModuleFileNameA|0x15",
           "AmsgExit|0x4015D9",
           "InitializeCodePageOnce|0x4019E6",
-          "ParseCommandLineArguments|0x4020B0",
-          "_malloc|0x402EF0"
+          "_malloc|0x402EF0",
+          "ParseCommandLineArguments|0x4020B0"
         ],
         "LoD/1.14c": [
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
-          "InitializeCodePageOnce|0x4019E6",
           "GetModuleFileNameA|0x15",
-          "ParseCommandLineArguments|0x4020B0"
+          "_malloc|0x402EF0",
+          "ParseCommandLineArguments|0x4020B0",
+          "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14d": [
-          "GetModuleFileNameA|0x15",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
           "InitializeCodePageOnce|0x4019E6",
-          "ParseCommandLineArguments|0x4020B0"
+          "GetModuleFileNameA|0x15",
+          "_malloc|0x402EF0",
+          "ParseCommandLineArguments|0x4020B0",
+          "AmsgExit|0x4015D9"
         ]
       },
       "callers": {
@@ -27111,6 +28418,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -27229,6 +28539,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2039|PUSH|EBX"
         ],
         "Classic/1.04c": [
+          "0x2017|PUSH|EBP",
+          "0x2018|MOV|EBP, ESP",
+          "0x201A|PUSH|ECX",
+          "0x201B|PUSH|ECX",
+          "0x201C|PUSH|EBX",
+          "0x201D|XOR|EBX, EBX",
+          "0x201F|CMP|dword ptr [0x00406788], EBX",
+          "0x2025|PUSH|ESI",
+          "0x2026|PUSH|EDI",
+          "0x2027|JNZ|0x0040202e",
+          "0x2029|CALL|0x004019e6",
+          "0x202E|MOV|ESI, 0x406514",
+          "0x2033|PUSH|0x104",
+          "0x2038|PUSH|ESI",
+          "0x2039|PUSH|EBX"
+        ],
+        "Classic/1.09d": [
           "0x2017|PUSH|EBP",
           "0x2018|MOV|EBP, ESP",
           "0x201A|PUSH|ECX",
@@ -27507,6 +28834,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 62,
         "Classic/1.03": 62,
         "Classic/1.04c": 62,
+        "Classic/1.09d": 62,
         "LoD/1.07": 62,
         "LoD/1.08": 62,
         "LoD/1.09": 62,
@@ -27529,6 +28857,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -27551,6 +28880,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -27573,6 +28903,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "78c0be793b204c577b78460711bf70fb",
         "Classic/1.03": "78c0be793b204c577b78460711bf70fb",
         "Classic/1.04c": "78c0be793b204c577b78460711bf70fb",
+        "Classic/1.09d": "78c0be793b204c577b78460711bf70fb",
         "LoD/1.07": "78c0be793b204c577b78460711bf70fb",
         "LoD/1.08": "78c0be793b204c577b78460711bf70fb",
         "LoD/1.09": "78c0be793b204c577b78460711bf70fb",
@@ -27607,6 +28938,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2033||0x104"
         ],
         "Classic/1.04c": [
+          "0x202E||0x406514",
+          "0x2033||0x104"
+        ],
+        "Classic/1.09d": [
           "0x202E||0x406514",
           "0x2033||0x104"
         ],
@@ -27717,7 +29052,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x64E4|DAT_004064e4|0x0",
           "0x64E0|DAT_004064e0|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6788|g_fCodePageInitialized|0x0",
           "0x6514|DAT_00406514|0x0",
           "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
@@ -27725,6 +29060,15 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x64FC|DAT_004064fc|0x0",
           "0x64E4|DAT_004064e4|0x0",
           "0x64E0|DAT_004064e0|0x0"
+        ],
+        "LoD/1.07": [
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|g_adwData_406514|",
+          "0x5050|g_pfnGetModuleFileNameA|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|g_adwData_4064c4[14]|",
+          "0x64E4|g_adwData_4064c4[8]|",
+          "0x64E0|g_adwData_4064c4[7]|"
         ],
         "LoD/1.08": [
           "0x6788|g_fCodePageInitialized|0x0",
@@ -27859,6 +29203,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "Classic/1.09d": 5,
         "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -27881,6 +29226,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -27903,6 +29249,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -27925,6 +29272,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 7,
         "Classic/1.03": 7,
         "Classic/1.04c": 7,
+        "Classic/1.09d": 7,
         "LoD/1.07": 7,
         "LoD/1.08": 7,
         "LoD/1.09": 7,
@@ -27955,6 +29303,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_0"
         ],
         "Classic/1.04c": [
+          "PARAM_0"
+        ],
+        "Classic/1.09d": [
           "PARAM_0"
         ],
         "LoD/1.07": [
@@ -28009,6 +29360,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -28033,6 +29385,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004020B0",
         "Classic/1.03": "0x004020B0",
         "Classic/1.04c": "0x004020B0",
+        "Classic/1.09d": "0x004020B0",
         "LoD/1.07": "0x004020B0",
         "LoD/1.08": "0x004020B0",
         "LoD/1.09": "0x004020B0",
@@ -28055,6 +29408,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x20B0",
         "Classic/1.03": "0x20B0",
         "Classic/1.04c": "0x20B0",
+        "Classic/1.09d": "0x20B0",
         "LoD/1.07": "0x20B0",
         "LoD/1.08": "0x20B0",
         "LoD/1.09": "0x20B0",
@@ -28077,6 +29431,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 436,
         "Classic/1.03": 436,
         "Classic/1.04c": 436,
+        "Classic/1.09d": 436,
         "LoD/1.07": 436,
         "LoD/1.08": 436,
         "LoD/1.09": 436,
@@ -28127,6 +29482,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeModuleData|0x402017"
         ],
         "Classic/1.04c": [
+          "InitializeModuleData|0x402017"
+        ],
+        "Classic/1.09d": [
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.07": [
@@ -28245,6 +29603,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x20D2|MOV|dword ptr [EDI], ESI"
         ],
         "Classic/1.04c": [
+          "0x20B0|PUSH|EBP",
+          "0x20B1|MOV|EBP, ESP",
+          "0x20B3|MOV|ECX, dword ptr [EBP + 0x18]",
+          "0x20B6|MOV|EAX, dword ptr [EBP + 0x14]",
+          "0x20B9|PUSH|EBX",
+          "0x20BA|PUSH|ESI",
+          "0x20BB|AND|dword ptr [ECX], 0x0",
+          "0x20BE|MOV|ESI, dword ptr [EBP + 0x10]",
+          "0x20C1|PUSH|EDI",
+          "0x20C2|MOV|EDI, dword ptr [EBP + 0xc]",
+          "0x20C5|MOV|dword ptr [EAX], 0x1",
+          "0x20CB|MOV|EAX, dword ptr [EBP + 0x8]",
+          "0x20CE|TEST|EDI, EDI",
+          "0x20D0|JZ|0x004020da",
+          "0x20D2|MOV|dword ptr [EDI], ESI"
+        ],
+        "Classic/1.09d": [
           "0x20B0|PUSH|EBP",
           "0x20B1|MOV|EBP, ESP",
           "0x20B3|MOV|ECX, dword ptr [EBP + 0x18]",
@@ -28523,6 +29898,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 187,
         "Classic/1.03": 187,
         "Classic/1.04c": 187,
+        "Classic/1.09d": 187,
         "LoD/1.07": 187,
         "LoD/1.08": 187,
         "LoD/1.09": 187,
@@ -28545,6 +29921,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 24,
         "Classic/1.03": 24,
         "Classic/1.04c": 24,
+        "Classic/1.09d": 24,
         "LoD/1.07": 24,
         "LoD/1.08": 24,
         "LoD/1.09": 24,
@@ -28567,6 +29944,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -28589,6 +29967,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "50cd6b6fd69b78c0380659763fce7ea0",
         "Classic/1.03": "50cd6b6fd69b78c0380659763fce7ea0",
         "Classic/1.04c": "50cd6b6fd69b78c0380659763fce7ea0",
+        "Classic/1.09d": "50cd6b6fd69b78c0380659763fce7ea0",
         "LoD/1.07": "50cd6b6fd69b78c0380659763fce7ea0",
         "LoD/1.08": "50cd6b6fd69b78c0380659763fce7ea0",
         "LoD/1.09": "50cd6b6fd69b78c0380659763fce7ea0",
@@ -28631,6 +30010,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2230||0x4068C1"
         ],
         "Classic/1.04c": [
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
+        ],
+        "Classic/1.09d": [
           "0x20EF||0x4068C1",
           "0x2134||0x4068C1",
           "0x2217||0x4068C1",
@@ -28743,8 +30128,11 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "0x68C1|DAT_004068c0+1|"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x68C1|DAT_004068c0+1|"
+        ],
+        "LoD/1.07": [
+          "0x68C1|g_abCharacterTypeFlags[1]|"
         ],
         "LoD/1.08": [
           "0x68C1|DAT_004068c0+1|"
@@ -28795,6 +30183,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -28817,6 +30206,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -28839,6 +30229,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -28861,6 +30252,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "Classic/1.09d": 5,
         "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -28919,6 +30311,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_PlayerData"
         ],
         "Classic/1.04c": [
+          "STRUCT_Act",
+          "STRUCT_Inventory",
+          "PARAM_5",
+          "PROP_LOOPHEAVY",
+          "STRUCT_UnitAny",
+          "PROP_LEAF",
+          "STRUCT_Control",
+          "STRUCT_PlayerData"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_5",
@@ -29085,6 +30487,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -29109,6 +30512,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402264",
         "Classic/1.03": "0x00402264",
         "Classic/1.04c": "0x00402264",
+        "Classic/1.09d": "0x00402264",
         "LoD/1.07": "0x00402264",
         "LoD/1.08": "0x00402264",
         "LoD/1.09": "0x00402264",
@@ -29131,6 +30535,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2264",
         "Classic/1.03": "0x2264",
         "Classic/1.04c": "0x2264",
+        "Classic/1.09d": "0x2264",
         "LoD/1.07": "0x2264",
         "LoD/1.08": "0x2264",
         "LoD/1.09": "0x2264",
@@ -29153,6 +30558,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 306,
         "Classic/1.03": 306,
         "Classic/1.04c": 306,
+        "Classic/1.09d": 306,
         "LoD/1.07": 306,
         "LoD/1.08": 306,
         "LoD/1.09": 306,
@@ -29181,7 +30587,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "EXP": null,
         "STR": null,
         "NOP": "3eb26ca677f2dff8bba6fead81ca28e27922c23dff31317d22a1cf7bdee24068",
-        "CAL": "12a341814f5760bc3b9f51e07d3e1ebb",
+        "CAL": "7f50bd45ab425175e84bcf8e16e908ed",
         "API": null,
         "APS": null,
         "CON": null,
@@ -29191,204 +30597,214 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetEnvironmentStrings|0x19",
-          "OptimizedMemoryMove|0x402F70",
-          "WideCharToMultiByte|0x18",
           "_malloc|0x402EF0",
+          "GetEnvironmentStrings|0x19",
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "OptimizedMemoryMove|0x402F70",
           "FreeEnvironmentStringsA|0x16",
           "FreeEnvironmentStringsW|0x1",
-          "SmartFree|0x402DCE",
-          "GetEnvironmentStringsW|0x1A"
+          "DeallocateMemory|0x402DCE"
         ],
         "Classic/1.01": [
-          "OptimizedMemoryMove|0x402F70",
-          "WideCharToMultiByte|0x18",
-          "_malloc|0x402EF0",
-          "GetEnvironmentStrings|0x19",
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStringsW|0x1A",
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsW|0x1"
-        ],
-        "Classic/1.02": [
-          "GetEnvironmentStringsW|0x1A",
-          "SmartFree|0x402DCE",
-          "_malloc|0x402EF0",
           "FreeEnvironmentStringsW|0x1",
+          "_malloc|0x402EF0",
           "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStrings|0x19",
+          "GetEnvironmentStringsW|0x1A",
           "WideCharToMultiByte|0x18",
+          "DeallocateMemory|0x402DCE",
+          "GetEnvironmentStrings|0x19",
           "OptimizedMemoryMove|0x402F70"
         ],
-        "Classic/1.03": [
-          "WideCharToMultiByte|0x18",
-          "SmartFree|0x402DCE",
-          "GetEnvironmentStringsW|0x1A",
+        "Classic/1.02": [
           "FreeEnvironmentStringsW|0x1",
-          "_malloc|0x402EF0",
-          "OptimizedMemoryMove|0x402F70",
+          "FreeEnvironmentStringsA|0x16",
+          "WideCharToMultiByte|0x18",
           "GetEnvironmentStrings|0x19",
+          "DeallocateMemory|0x402DCE",
+          "OptimizedMemoryMove|0x402F70",
+          "GetEnvironmentStringsW|0x1A",
+          "_malloc|0x402EF0"
+        ],
+        "Classic/1.03": [
+          "GetEnvironmentStrings|0x19",
+          "FreeEnvironmentStringsW|0x1",
+          "OptimizedMemoryMove|0x402F70",
+          "DeallocateMemory|0x402DCE",
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "_malloc|0x402EF0",
           "FreeEnvironmentStringsA|0x16"
         ],
         "Classic/1.04c": [
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStringsW|0x1A",
-          "FreeEnvironmentStringsW|0x1",
           "GetEnvironmentStrings|0x19",
+          "FreeEnvironmentStringsW|0x1",
+          "_malloc|0x402EF0",
+          "GetEnvironmentStringsW|0x1A",
           "OptimizedMemoryMove|0x402F70",
           "WideCharToMultiByte|0x18",
-          "SmartFree|0x402DCE",
-          "_malloc|0x402EF0"
+          "FreeEnvironmentStringsA|0x16",
+          "DeallocateMemory|0x402DCE"
+        ],
+        "Classic/1.09d": [
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "DeallocateMemory|0x402DCE",
+          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsA|0x16",
+          "OptimizedMemoryMove|0x402F70",
+          "FreeEnvironmentStringsW|0x1",
+          "GetEnvironmentStrings|0x19"
         ],
         "LoD/1.07": [
           "GetEnvironmentStrings|0x19",
-          "FreeEnvironmentStringsA|0x16",
-          "WideCharToMultiByte|0x18",
           "OptimizedMemoryMove|0x402F70",
-          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsW|0x1",
+          "FreeEnvironmentStringsA|0x16",
           "SmartFree|0x402DCE",
+          "WideCharToMultiByte|0x18",
           "GetEnvironmentStringsW|0x1A",
-          "FreeEnvironmentStringsW|0x1"
+          "_malloc|0x402EF0"
         ],
         "LoD/1.08": [
-          "FreeEnvironmentStringsW|0x1",
+          "OptimizedMemoryMove|0x402F70",
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStringsW|0x1A",
           "GetEnvironmentStrings|0x19",
+          "FreeEnvironmentStringsW|0x1",
+          "DeallocateMemory|0x402DCE",
+          "GetEnvironmentStringsW|0x1A",
           "WideCharToMultiByte|0x18",
-          "OptimizedMemoryMove|0x402F70"
+          "FreeEnvironmentStringsA|0x16"
         ],
         "LoD/1.09": [
-          "_malloc|0x402EF0",
           "GetEnvironmentStringsW|0x1A",
-          "WideCharToMultiByte|0x18",
-          "FreeEnvironmentStringsW|0x1",
+          "GetEnvironmentStrings|0x19",
+          "_malloc|0x402EF0",
           "OptimizedMemoryMove|0x402F70",
-          "SmartFree|0x402DCE",
+          "FreeEnvironmentStringsW|0x1",
           "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStrings|0x19"
+          "WideCharToMultiByte|0x18",
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.09b": [
           "GetEnvironmentStringsW|0x1A",
-          "WideCharToMultiByte|0x18",
           "FreeEnvironmentStringsW|0x1",
-          "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0",
           "OptimizedMemoryMove|0x402F70",
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsA|0x16"
+          "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsA|0x16",
+          "DeallocateMemory|0x402DCE",
+          "GetEnvironmentStrings|0x19",
+          "_malloc|0x402EF0"
         ],
         "LoD/1.09d": [
-          "WideCharToMultiByte|0x18",
-          "GetEnvironmentStrings|0x19",
           "GetEnvironmentStringsW|0x1A",
-          "_malloc|0x402EF0",
           "OptimizedMemoryMove|0x402F70",
-          "SmartFree|0x402DCE",
+          "WideCharToMultiByte|0x18",
+          "DeallocateMemory|0x402DCE",
           "FreeEnvironmentStringsA|0x16",
-          "FreeEnvironmentStringsW|0x1"
+          "FreeEnvironmentStringsW|0x1",
+          "GetEnvironmentStrings|0x19",
+          "_malloc|0x402EF0"
         ],
         "LoD/1.10": [
           "GetEnvironmentStringsW|0x1A",
+          "DeallocateMemory|0x402DCE",
           "WideCharToMultiByte|0x18",
           "FreeEnvironmentStringsW|0x1",
+          "OptimizedMemoryMove|0x402F70",
           "GetEnvironmentStrings|0x19",
-          "FreeEnvironmentStringsA|0x16",
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "OptimizedMemoryMove|0x402F70"
+          "FreeEnvironmentStringsA|0x16"
         ],
         "LoD/1.11": [
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStringsW|0x1A",
           "GetEnvironmentStrings|0x19",
-          "WideCharToMultiByte|0x18",
           "FreeEnvironmentStringsW|0x1",
+          "FreeEnvironmentStringsA|0x16",
+          "WideCharToMultiByte|0x18",
+          "GetEnvironmentStringsW|0x1A",
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "OptimizedMemoryMove|0x402F70"
+          "OptimizedMemoryMove|0x402F70",
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.11b": [
-          "WideCharToMultiByte|0x18",
-          "GetEnvironmentStringsW|0x1A",
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsA|0x16",
-          "_malloc|0x402EF0",
           "FreeEnvironmentStringsW|0x1",
+          "DeallocateMemory|0x402DCE",
+          "OptimizedMemoryMove|0x402F70",
+          "GetEnvironmentStringsW|0x1A",
           "GetEnvironmentStrings|0x19",
-          "OptimizedMemoryMove|0x402F70"
+          "WideCharToMultiByte|0x18",
+          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsA|0x16"
         ],
         "LoD/1.12a": [
           "_malloc|0x402EF0",
-          "WideCharToMultiByte|0x18",
           "OptimizedMemoryMove|0x402F70",
-          "SmartFree|0x402DCE",
-          "GetEnvironmentStringsW|0x1A",
-          "FreeEnvironmentStringsW|0x1",
           "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStrings|0x19"
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsW|0x1",
+          "GetEnvironmentStrings|0x19",
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.13c": [
-          "FreeEnvironmentStringsA|0x16",
-          "_malloc|0x402EF0",
+          "DeallocateMemory|0x402DCE",
           "GetEnvironmentStringsW|0x1A",
-          "FreeEnvironmentStringsW|0x1",
           "OptimizedMemoryMove|0x402F70",
+          "FreeEnvironmentStringsA|0x16",
           "GetEnvironmentStrings|0x19",
           "WideCharToMultiByte|0x18",
-          "SmartFree|0x402DCE"
+          "FreeEnvironmentStringsW|0x1",
+          "_malloc|0x402EF0"
         ],
         "LoD/1.13d": [
-          "GetEnvironmentStringsW|0x1A",
+          "DeallocateMemory|0x402DCE",
           "OptimizedMemoryMove|0x402F70",
           "WideCharToMultiByte|0x18",
           "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsW|0x1",
-          "FreeEnvironmentStringsA|0x16"
-        ],
-        "LoD/1.14a": [
-          "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0",
-          "OptimizedMemoryMove|0x402F70",
           "GetEnvironmentStringsW|0x1A",
           "FreeEnvironmentStringsA|0x16",
-          "WideCharToMultiByte|0x18",
-          "SmartFree|0x402DCE",
+          "_malloc|0x402EF0",
           "FreeEnvironmentStringsW|0x1"
         ],
-        "LoD/1.14b": [
-          "FreeEnvironmentStringsW|0x1",
+        "LoD/1.14a": [
+          "GetEnvironmentStringsW|0x1A",
+          "DeallocateMemory|0x402DCE",
+          "GetEnvironmentStrings|0x19",
           "OptimizedMemoryMove|0x402F70",
+          "FreeEnvironmentStringsA|0x16",
+          "FreeEnvironmentStringsW|0x1",
+          "WideCharToMultiByte|0x18",
+          "_malloc|0x402EF0"
+        ],
+        "LoD/1.14b": [
+          "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsA|0x16",
           "GetEnvironmentStrings|0x19",
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
+          "DeallocateMemory|0x402DCE",
+          "FreeEnvironmentStringsW|0x1",
           "GetEnvironmentStringsW|0x1A",
-          "WideCharToMultiByte|0x18",
-          "FreeEnvironmentStringsA|0x16"
+          "OptimizedMemoryMove|0x402F70"
         ],
         "LoD/1.14c": [
-          "SmartFree|0x402DCE",
-          "_malloc|0x402EF0",
-          "FreeEnvironmentStringsW|0x1",
           "OptimizedMemoryMove|0x402F70",
-          "GetEnvironmentStrings|0x19",
-          "GetEnvironmentStringsW|0x1A",
           "WideCharToMultiByte|0x18",
-          "FreeEnvironmentStringsA|0x16"
+          "_malloc|0x402EF0",
+          "GetEnvironmentStringsW|0x1A",
+          "FreeEnvironmentStringsW|0x1",
+          "FreeEnvironmentStringsA|0x16",
+          "DeallocateMemory|0x402DCE",
+          "GetEnvironmentStrings|0x19"
         ],
         "LoD/1.14d": [
-          "WideCharToMultiByte|0x18",
           "GetEnvironmentStringsW|0x1A",
+          "FreeEnvironmentStringsA|0x16",
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
+          "DeallocateMemory|0x402DCE",
+          "WideCharToMultiByte|0x18",
           "GetEnvironmentStrings|0x19",
-          "OptimizedMemoryMove|0x402F70",
           "FreeEnvironmentStringsW|0x1",
-          "FreeEnvironmentStringsA|0x16"
+          "OptimizedMemoryMove|0x402F70"
         ]
       },
       "callers": {
@@ -29405,6 +30821,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -29523,6 +30942,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2281|MOV|ESI, EAX"
         ],
         "Classic/1.04c": [
+          "0x2264|PUSH|ECX",
+          "0x2265|PUSH|ECX",
+          "0x2266|MOV|EAX, [0x00406618]",
+          "0x226B|PUSH|EBX",
+          "0x226C|PUSH|EBP",
+          "0x226D|MOV|EBP, dword ptr [0x00405064]",
+          "0x2273|PUSH|ESI",
+          "0x2274|PUSH|EDI",
+          "0x2275|XOR|EBX, EBX",
+          "0x2277|XOR|ESI, ESI",
+          "0x2279|XOR|EDI, EDI",
+          "0x227B|CMP|EAX, EBX",
+          "0x227D|JNZ|0x004022b2",
+          "0x227F|CALL|EBP",
+          "0x2281|MOV|ESI, EAX"
+        ],
+        "Classic/1.09d": [
           "0x2264|PUSH|ECX",
           "0x2265|PUSH|ECX",
           "0x2266|MOV|EAX, [0x00406618]",
@@ -29801,6 +31237,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 132,
         "Classic/1.03": 132,
         "Classic/1.04c": 132,
+        "Classic/1.09d": 132,
         "LoD/1.07": 132,
         "LoD/1.08": 132,
         "LoD/1.09": 132,
@@ -29823,6 +31260,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -29845,6 +31283,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -29867,6 +31306,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "ee22dcb18299b51eb994a57f32a5df1d",
         "Classic/1.03": "ee22dcb18299b51eb994a57f32a5df1d",
         "Classic/1.04c": "ee22dcb18299b51eb994a57f32a5df1d",
+        "Classic/1.09d": "ee22dcb18299b51eb994a57f32a5df1d",
         "LoD/1.07": "ee22dcb18299b51eb994a57f32a5df1d",
         "LoD/1.08": "ee22dcb18299b51eb994a57f32a5df1d",
         "LoD/1.09": "ee22dcb18299b51eb994a57f32a5df1d",
@@ -29924,13 +31364,21 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
           "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6618|DAT_00406618|0x0",
           "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
           "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
           "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
           "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
           "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
+        ],
+        "LoD/1.07": [
+          "0x6618|DWORD_00406618|0x0",
+          "0x5064|g_pfnGetEnvironmentStringsW|000056ec",
+          "0x5060|g_pfnGetEnvironmentStrings|000056d4",
+          "0x505C|g_pfnWideCharToMultiByte|000056be",
+          "0x5000|g_pfnFreeEnvironmentStringsW|000056a4",
+          "0x5054|g_pfnFreeEnvironmentStringsA|0000568a"
         ],
         "LoD/1.08": [
           "0x6618|DAT_00406618|0x0",
@@ -30051,6 +31499,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -30073,6 +31522,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -30095,6 +31545,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -30129,6 +31580,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LOOPHEAVY"
         ],
         "Classic/1.04c": [
+          "PARAM_0",
+          "PROP_LOOPHEAVY"
+        ],
+        "Classic/1.09d": [
           "PARAM_0",
           "PROP_LOOPHEAVY"
         ],
@@ -30199,6 +31654,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -30223,6 +31679,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402396",
         "Classic/1.03": "0x00402396",
         "Classic/1.04c": "0x00402396",
+        "Classic/1.09d": "0x00402396",
         "LoD/1.07": "0x00402396",
         "LoD/1.08": "0x00402396",
         "LoD/1.09": "0x00402396",
@@ -30245,6 +31702,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2396",
         "Classic/1.03": "0x2396",
         "Classic/1.04c": "0x2396",
+        "Classic/1.09d": "0x2396",
         "LoD/1.07": "0x2396",
         "LoD/1.08": "0x2396",
         "LoD/1.09": "0x2396",
@@ -30267,6 +31725,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 427,
         "Classic/1.03": 427,
         "Classic/1.04c": 427,
+        "Classic/1.09d": 427,
         "LoD/1.07": 427,
         "LoD/1.08": 427,
         "LoD/1.09": 427,
@@ -30305,164 +31764,171 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
+          "GetStartupInfoA|0xC",
           "GetFileType|0x1C",
+          "_malloc|0x402EF0",
           "GetStdHandle|0x9",
           "SetHandleCount|0x8",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
-          "GetStartupInfoA|0xC"
+          "AmsgExit|0x4015D9"
         ],
         "Classic/1.01": [
           "GetStdHandle|0x9",
+          "GetFileType|0x1C",
           "_malloc|0x402EF0",
           "AmsgExit|0x4015D9",
-          "GetFileType|0x1C",
-          "SetHandleCount|0x8",
-          "GetStartupInfoA|0xC"
+          "GetStartupInfoA|0xC",
+          "SetHandleCount|0x8"
         ],
         "Classic/1.02": [
-          "GetStartupInfoA|0xC",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
           "GetFileType|0x1C",
+          "GetStartupInfoA|0xC",
+          "SetHandleCount|0x8",
           "GetStdHandle|0x9",
-          "SetHandleCount|0x8"
+          "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9"
         ],
         "Classic/1.03": [
           "GetStartupInfoA|0xC",
-          "GetFileType|0x1C",
           "GetStdHandle|0x9",
+          "SetHandleCount|0x8",
           "_malloc|0x402EF0",
           "AmsgExit|0x4015D9",
-          "SetHandleCount|0x8"
+          "GetFileType|0x1C"
         ],
         "Classic/1.04c": [
-          "GetFileType|0x1C",
           "GetStartupInfoA|0xC",
-          "SetHandleCount|0x8",
           "AmsgExit|0x4015D9",
-          "GetStdHandle|0x9",
-          "_malloc|0x402EF0"
-        ],
-        "LoD/1.07": [
-          "GetStdHandle|0x9",
-          "SetHandleCount|0x8",
-          "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9",
-          "GetFileType|0x1C",
-          "GetStartupInfoA|0xC"
-        ],
-        "LoD/1.08": [
-          "GetStartupInfoA|0xC",
           "_malloc|0x402EF0",
           "GetStdHandle|0x9",
-          "AmsgExit|0x4015D9",
           "GetFileType|0x1C",
           "SetHandleCount|0x8"
+        ],
+        "Classic/1.09d": [
+          "AmsgExit|0x4015D9",
+          "GetStartupInfoA|0xC",
+          "GetStdHandle|0x9",
+          "_malloc|0x402EF0",
+          "GetFileType|0x1C",
+          "SetHandleCount|0x8"
+        ],
+        "LoD/1.07": [
+          "AmsgExit|0x4015D9",
+          "SetHandleCount|0x8",
+          "GetStdHandle|0x9",
+          "GetStartupInfoA|0xC",
+          "_malloc|0x402EF0"
+        ],
+        "LoD/1.08": [
+          "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9",
+          "GetStartupInfoA|0xC",
+          "SetHandleCount|0x8",
+          "GetFileType|0x1C",
+          "GetStdHandle|0x9"
         ],
         "LoD/1.09": [
           "_malloc|0x402EF0",
-          "GetFileType|0x1C",
-          "SetHandleCount|0x8",
           "GetStartupInfoA|0xC",
+          "GetFileType|0x1C",
           "GetStdHandle|0x9",
+          "SetHandleCount|0x8",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.09b": [
-          "GetFileType|0x1C",
-          "AmsgExit|0x4015D9",
           "GetStartupInfoA|0xC",
-          "_malloc|0x402EF0",
           "GetStdHandle|0x9",
-          "SetHandleCount|0x8"
+          "GetFileType|0x1C",
+          "SetHandleCount|0x8",
+          "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.09d": [
-          "GetStdHandle|0x9",
+          "SetHandleCount|0x8",
           "GetFileType|0x1C",
+          "_malloc|0x402EF0",
+          "GetStartupInfoA|0xC",
+          "AmsgExit|0x4015D9",
+          "GetStdHandle|0x9"
+        ],
+        "LoD/1.10": [
+          "GetFileType|0x1C",
+          "GetStdHandle|0x9",
           "SetHandleCount|0x8",
           "_malloc|0x402EF0",
           "GetStartupInfoA|0xC",
           "AmsgExit|0x4015D9"
         ],
-        "LoD/1.10": [
-          "SetHandleCount|0x8",
-          "AmsgExit|0x4015D9",
-          "GetStartupInfoA|0xC",
-          "GetStdHandle|0x9",
-          "GetFileType|0x1C",
-          "_malloc|0x402EF0"
-        ],
         "LoD/1.11": [
-          "GetStdHandle|0x9",
+          "GetStartupInfoA|0xC",
+          "GetFileType|0x1C",
           "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
-          "GetStartupInfoA|0xC",
-          "GetFileType|0x1C",
-          "SetHandleCount|0x8"
+          "SetHandleCount|0x8",
+          "GetStdHandle|0x9"
         ],
         "LoD/1.11b": [
-          "AmsgExit|0x4015D9",
-          "SetHandleCount|0x8",
           "GetFileType|0x1C",
-          "_malloc|0x402EF0",
+          "SetHandleCount|0x8",
+          "AmsgExit|0x4015D9",
           "GetStdHandle|0x9",
+          "_malloc|0x402EF0",
           "GetStartupInfoA|0xC"
         ],
         "LoD/1.12a": [
           "_malloc|0x402EF0",
-          "GetStartupInfoA|0xC",
-          "GetStdHandle|0x9",
-          "AmsgExit|0x4015D9",
-          "GetFileType|0x1C",
-          "SetHandleCount|0x8"
-        ],
-        "LoD/1.13c": [
-          "GetStartupInfoA|0xC",
-          "_malloc|0x402EF0",
           "SetHandleCount|0x8",
-          "GetFileType|0x1C",
           "GetStdHandle|0x9",
-          "AmsgExit|0x4015D9"
-        ],
-        "LoD/1.13d": [
-          "GetStdHandle|0x9",
-          "AmsgExit|0x4015D9",
           "GetStartupInfoA|0xC",
-          "_malloc|0x402EF0",
-          "SetHandleCount|0x8",
+          "AmsgExit|0x4015D9",
           "GetFileType|0x1C"
         ],
-        "LoD/1.14a": [
+        "LoD/1.13c": [
           "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
           "GetFileType|0x1C",
           "GetStdHandle|0x9",
+          "SetHandleCount|0x8",
+          "_malloc|0x402EF0",
+          "GetStartupInfoA|0xC"
+        ],
+        "LoD/1.13d": [
+          "GetFileType|0x1C",
           "GetStartupInfoA|0xC",
-          "SetHandleCount|0x8"
+          "SetHandleCount|0x8",
+          "AmsgExit|0x4015D9",
+          "GetStdHandle|0x9",
+          "_malloc|0x402EF0"
+        ],
+        "LoD/1.14a": [
+          "GetFileType|0x1C",
+          "GetStartupInfoA|0xC",
+          "SetHandleCount|0x8",
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
+          "GetStdHandle|0x9"
         ],
         "LoD/1.14b": [
-          "GetFileType|0x1C",
           "AmsgExit|0x4015D9",
-          "SetHandleCount|0x8",
+          "GetStdHandle|0x9",
           "_malloc|0x402EF0",
+          "SetHandleCount|0x8",
           "GetStartupInfoA|0xC",
-          "GetStdHandle|0x9"
+          "GetFileType|0x1C"
         ],
         "LoD/1.14c": [
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
           "SetHandleCount|0x8",
-          "GetFileType|0x1C",
           "GetStartupInfoA|0xC",
-          "GetStdHandle|0x9"
+          "GetStdHandle|0x9",
+          "_malloc|0x402EF0",
+          "GetFileType|0x1C",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14d": [
-          "GetStartupInfoA|0xC",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
           "GetFileType|0x1C",
           "SetHandleCount|0x8",
-          "GetStdHandle|0x9"
+          "_malloc|0x402EF0",
+          "GetStdHandle|0x9",
+          "GetStartupInfoA|0xC",
+          "AmsgExit|0x4015D9"
         ]
       },
       "callers": {
@@ -30479,6 +31945,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -30597,6 +32066,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x23B6|MOV|dword ptr [0x00406680], ESI"
         ],
         "Classic/1.04c": [
+          "0x2396|SUB|ESP, 0x44",
+          "0x2399|PUSH|EBX",
+          "0x239A|PUSH|EBP",
+          "0x239B|PUSH|ESI",
+          "0x239C|PUSH|EDI",
+          "0x239D|PUSH|0x100",
+          "0x23A2|CALL|0x00402ef0",
+          "0x23A7|MOV|ESI, EAX",
+          "0x23A9|POP|ECX",
+          "0x23AA|TEST|ESI, ESI",
+          "0x23AC|JNZ|0x004023b6",
+          "0x23AE|PUSH|0x1b",
+          "0x23B0|CALL|0x004015d9",
+          "0x23B5|POP|ECX",
+          "0x23B6|MOV|dword ptr [0x00406680], ESI"
+        ],
+        "Classic/1.09d": [
           "0x2396|SUB|ESP, 0x44",
           "0x2399|PUSH|EBX",
           "0x239A|PUSH|EBP",
@@ -30875,6 +32361,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 143,
         "Classic/1.03": 143,
         "Classic/1.04c": 143,
+        "Classic/1.09d": 143,
         "LoD/1.07": 143,
         "LoD/1.08": 143,
         "LoD/1.09": 143,
@@ -30897,6 +32384,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 72,
         "Classic/1.03": 72,
         "Classic/1.04c": 72,
+        "Classic/1.09d": 72,
         "LoD/1.07": 72,
         "LoD/1.08": 72,
         "LoD/1.09": 72,
@@ -30919,6 +32407,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "Classic/1.09d": 5,
         "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -30941,6 +32430,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "b09f16c0e6a5014f6b150653e76f58a2",
         "Classic/1.03": "b09f16c0e6a5014f6b150653e76f58a2",
         "Classic/1.04c": "b09f16c0e6a5014f6b150653e76f58a2",
+        "Classic/1.09d": "b09f16c0e6a5014f6b150653e76f58a2",
         "LoD/1.07": "b09f16c0e6a5014f6b150653e76f58a2",
         "LoD/1.08": "b09f16c0e6a5014f6b150653e76f58a2",
         "LoD/1.09": "b09f16c0e6a5014f6b150653e76f58a2",
@@ -31003,6 +32493,17 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x24A9||0x406680"
         ],
         "Classic/1.04c": [
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
+        ],
+        "Classic/1.09d": [
           "0x239D||0x100",
           "0x23C6||0x100",
           "0x23E3||0x100",
@@ -31225,7 +32726,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6680|g_apFileDescriptorTable|0x0",
           "0x6780|DAT_00406780|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
@@ -31234,9 +32735,18 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
+        "LoD/1.07": [
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|uNumber_00406780|0x0",
+          "0x502C|g_pfnGetStartupInfoA|000055e0",
+          "0x6684|DWORD_00406684|0x0",
+          "0x506C|g_pfnGetFileType|00005728",
+          "0x5020|g_pfnGetStdHandle|00005718",
+          "0x501C|g_pfnSetHandleCount|00005706"
+        ],
         "LoD/1.08": [
           "0x6680|g_apFileDescriptorTable|0x0",
-          "0x6780|DAT_00406780|0x0",
+          "0x6780|uNumber_00406780|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x6684|DAT_00406684|0x0",
           "0x506C|PTR_GetFileType_0040506c|00005728",
@@ -31245,7 +32755,7 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.09": [
           "0x6680|g_apFileDescriptorTable|0x0",
-          "0x6780|DAT_00406780|0x0",
+          "0x6780|uNumber_00406780|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x6684|DAT_00406684|0x0",
           "0x506C|PTR_GetFileType_0040506c|00005728",
@@ -31254,7 +32764,7 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.09b": [
           "0x6680|g_apFileDescriptorTable|0x0",
-          "0x6780|DAT_00406780|0x0",
+          "0x6780|uNumber_00406780|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x6684|DAT_00406684|0x0",
           "0x506C|PTR_GetFileType_0040506c|00005728",
@@ -31263,7 +32773,7 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.09d": [
           "0x6680|g_apFileDescriptorTable|0x0",
-          "0x6780|DAT_00406780|0x0",
+          "0x6780|uNumber_00406780|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x6684|DAT_00406684|0x0",
           "0x506C|PTR_GetFileType_0040506c|00005728",
@@ -31272,7 +32782,7 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.10": [
           "0x6680|g_apFileDescriptorTable|0x0",
-          "0x6780|DAT_00406780|0x0",
+          "0x6780|uNumber_00406780|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x6684|DAT_00406684|0x0",
           "0x506C|PTR_GetFileType_0040506c|00005728",
@@ -31281,7 +32791,7 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.11": [
           "0x6680|g_apFileDescriptorTable|0x0",
-          "0x6780|DAT_00406780|0x0",
+          "0x6780|uNumber_00406780|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x6684|DAT_00406684|0x0",
           "0x506C|PTR_GetFileType_0040506c|00005728",
@@ -31290,7 +32800,7 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.11b": [
           "0x6680|g_apFileDescriptorTable|0x0",
-          "0x6780|DAT_00406780|0x0",
+          "0x6780|uNumber_00406780|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x6684|DAT_00406684|0x0",
           "0x506C|PTR_GetFileType_0040506c|00005728",
@@ -31299,7 +32809,7 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.12a": [
           "0x6680|g_apFileDescriptorTable|0x0",
-          "0x6780|DAT_00406780|0x0",
+          "0x6780|uNumber_00406780|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x6684|DAT_00406684|0x0",
           "0x506C|PTR_GetFileType_0040506c|00005728",
@@ -31308,7 +32818,7 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.13c": [
           "0x6680|g_apFileDescriptorTable|0x0",
-          "0x6780|DAT_00406780|0x0",
+          "0x6780|uNumber_00406780|0x0",
           "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
           "0x6684|DAT_00406684|0x0",
           "0x506C|PTR_GetFileType_0040506c|00005728",
@@ -31367,7 +32877,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
-        "LoD/1.07": 6,
+        "Classic/1.09d": 6,
+        "LoD/1.07": 5,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
         "LoD/1.09b": 6,
@@ -31389,6 +32900,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -31411,6 +32923,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 9,
         "Classic/1.03": 9,
         "Classic/1.04c": 9,
+        "Classic/1.09d": 9,
         "LoD/1.07": 9,
         "LoD/1.08": 9,
         "LoD/1.09": 9,
@@ -31433,6 +32946,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 7,
         "Classic/1.03": 7,
         "Classic/1.04c": 7,
+        "Classic/1.09d": 7,
         "LoD/1.07": 7,
         "LoD/1.08": 7,
         "LoD/1.09": 7,
@@ -31471,6 +32985,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LOOPHEAVY"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_0",
+          "PROP_LOOPHEAVY"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_0",
           "PROP_LOOPHEAVY"
@@ -31557,6 +33076,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -31581,6 +33101,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402541",
         "Classic/1.03": "0x00402541",
         "Classic/1.04c": "0x00402541",
+        "Classic/1.09d": "0x00402541",
         "LoD/1.07": "0x00402541",
         "LoD/1.08": "0x00402541",
         "LoD/1.09": "0x00402541",
@@ -31603,6 +33124,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2541",
         "Classic/1.03": "0x2541",
         "Classic/1.04c": "0x2541",
+        "Classic/1.09d": "0x2541",
         "LoD/1.07": "0x2541",
         "LoD/1.08": "0x2541",
         "LoD/1.09": "0x2541",
@@ -31625,6 +33147,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 60,
         "Classic/1.03": 60,
         "Classic/1.04c": 60,
+        "Classic/1.09d": 60,
         "LoD/1.07": 60,
         "LoD/1.08": 60,
         "LoD/1.09": 60,
@@ -31663,38 +33186,43 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "HeapDestroy|0x1D",
+          "InitializeBufferManager|0x4032A5",
           "HeapCreate|0x1E",
-          "InitializeBufferManager|0x4032A5"
+          "HeapDestroy|0x1D"
         ],
         "Classic/1.01": [
-          "HeapCreate|0x1E",
           "HeapDestroy|0x1D",
+          "HeapCreate|0x1E",
           "InitializeBufferManager|0x4032A5"
         ],
         "Classic/1.02": [
           "InitializeBufferManager|0x4032A5",
-          "HeapDestroy|0x1D",
-          "HeapCreate|0x1E"
+          "HeapCreate|0x1E",
+          "HeapDestroy|0x1D"
         ],
         "Classic/1.03": [
-          "HeapDestroy|0x1D",
+          "HeapCreate|0x1E",
           "InitializeBufferManager|0x4032A5",
-          "HeapCreate|0x1E"
+          "HeapDestroy|0x1D"
         ],
         "Classic/1.04c": [
+          "HeapDestroy|0x1D",
+          "HeapCreate|0x1E",
+          "InitializeBufferManager|0x4032A5"
+        ],
+        "Classic/1.09d": [
           "HeapCreate|0x1E",
           "InitializeBufferManager|0x4032A5",
           "HeapDestroy|0x1D"
         ],
         "LoD/1.07": [
-          "HeapDestroy|0x1D",
           "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D",
           "HeapCreate|0x1E"
         ],
         "LoD/1.08": [
-          "HeapDestroy|0x1D",
           "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D",
           "HeapCreate|0x1E"
         ],
         "LoD/1.09": [
@@ -31703,64 +33231,64 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeBufferManager|0x4032A5"
         ],
         "LoD/1.09b": [
-          "HeapDestroy|0x1D",
+          "HeapCreate|0x1E",
           "InitializeBufferManager|0x4032A5",
-          "HeapCreate|0x1E"
+          "HeapDestroy|0x1D"
         ],
         "LoD/1.09d": [
-          "HeapCreate|0x1E",
-          "HeapDestroy|0x1D",
-          "InitializeBufferManager|0x4032A5"
-        ],
-        "LoD/1.10": [
           "InitializeBufferManager|0x4032A5",
           "HeapDestroy|0x1D",
           "HeapCreate|0x1E"
         ],
-        "LoD/1.11": [
+        "LoD/1.10": [
           "HeapCreate|0x1E",
           "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D"
+        ],
+        "LoD/1.11": [
+          "InitializeBufferManager|0x4032A5",
+          "HeapCreate|0x1E",
           "HeapDestroy|0x1D"
         ],
         "LoD/1.11b": [
+          "HeapDestroy|0x1D",
+          "HeapCreate|0x1E",
+          "InitializeBufferManager|0x4032A5"
+        ],
+        "LoD/1.12a": [
           "HeapCreate|0x1E",
           "InitializeBufferManager|0x4032A5",
           "HeapDestroy|0x1D"
         ],
-        "LoD/1.12a": [
+        "LoD/1.13c": [
           "HeapDestroy|0x1D",
           "InitializeBufferManager|0x4032A5",
           "HeapCreate|0x1E"
         ],
-        "LoD/1.13c": [
-          "HeapCreate|0x1E",
-          "HeapDestroy|0x1D",
-          "InitializeBufferManager|0x4032A5"
-        ],
         "LoD/1.13d": [
-          "HeapCreate|0x1E",
           "HeapDestroy|0x1D",
-          "InitializeBufferManager|0x4032A5"
+          "InitializeBufferManager|0x4032A5",
+          "HeapCreate|0x1E"
         ],
         "LoD/1.14a": [
-          "HeapDestroy|0x1D",
           "HeapCreate|0x1E",
+          "HeapDestroy|0x1D",
           "InitializeBufferManager|0x4032A5"
         ],
         "LoD/1.14b": [
-          "InitializeBufferManager|0x4032A5",
-          "HeapDestroy|0x1D",
-          "HeapCreate|0x1E"
-        ],
-        "LoD/1.14c": [
           "HeapCreate|0x1E",
           "HeapDestroy|0x1D",
           "InitializeBufferManager|0x4032A5"
         ],
-        "LoD/1.14d": [
-          "InitializeBufferManager|0x4032A5",
+        "LoD/1.14c": [
           "HeapCreate|0x1E",
+          "InitializeBufferManager|0x4032A5",
           "HeapDestroy|0x1D"
+        ],
+        "LoD/1.14d": [
+          "HeapCreate|0x1E",
+          "HeapDestroy|0x1D",
+          "InitializeBufferManager|0x4032A5"
         ]
       },
       "callers": {
@@ -31777,6 +33305,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "entry|0x4014E3"
         ],
         "Classic/1.04c": [
+          "entry|0x4014E3"
+        ],
+        "Classic/1.09d": [
           "entry|0x4014E3"
         ],
         "LoD/1.07": [
@@ -31895,6 +33426,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2570|CALL|dword ptr [0x00405070]"
         ],
         "Classic/1.04c": [
+          "0x2541|XOR|EAX, EAX",
+          "0x2543|PUSH|0x0",
+          "0x2545|CMP|dword ptr [ESP + 0x8], EAX",
+          "0x2549|PUSH|0x1000",
+          "0x254E|SETZ|AL",
+          "0x2551|PUSH|EAX",
+          "0x2552|CALL|dword ptr [0x00405074]",
+          "0x2558|TEST|EAX, EAX",
+          "0x255A|MOV|[0x00406674], EAX",
+          "0x255F|JZ|0x00402576",
+          "0x2561|CALL|0x004032a5",
+          "0x2566|TEST|EAX, EAX",
+          "0x2568|JNZ|0x00402579",
+          "0x256A|PUSH|dword ptr [0x00406674]",
+          "0x2570|CALL|dword ptr [0x00405070]"
+        ],
+        "Classic/1.09d": [
           "0x2541|XOR|EAX, EAX",
           "0x2543|PUSH|0x0",
           "0x2545|CMP|dword ptr [ESP + 0x8], EAX",
@@ -32173,6 +33721,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 20,
         "Classic/1.03": 20,
         "Classic/1.04c": 20,
+        "Classic/1.09d": 20,
         "LoD/1.07": 20,
         "LoD/1.08": 20,
         "LoD/1.09": 20,
@@ -32195,6 +33744,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -32217,6 +33767,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -32239,6 +33790,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "e33a4c6c562d51a2fcc8e07bee94f1d6",
         "Classic/1.03": "e33a4c6c562d51a2fcc8e07bee94f1d6",
         "Classic/1.04c": "e33a4c6c562d51a2fcc8e07bee94f1d6",
+        "Classic/1.09d": "e33a4c6c562d51a2fcc8e07bee94f1d6",
         "LoD/1.07": "e33a4c6c562d51a2fcc8e07bee94f1d6",
         "LoD/1.08": "e33a4c6c562d51a2fcc8e07bee94f1d6",
         "LoD/1.09": "e33a4c6c562d51a2fcc8e07bee94f1d6",
@@ -32269,6 +33821,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2549||0x1000"
         ],
         "Classic/1.04c": [
+          "0x2549||0x1000"
+        ],
+        "Classic/1.09d": [
           "0x2549||0x1000"
         ],
         "LoD/1.07": [
@@ -32343,54 +33898,59 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6674|g_hHeapHandle|0x0",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x5074|PTR_HeapCreate_00405074|00005744",
           "0x6674|g_hHeapHandle|0x0",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
+        "LoD/1.07": [
+          "0x5074|g_pfnHeapCreate|00005744",
+          "0x6674|g_hHeap|0x0",
+          "0x5070|g_pfnHeapDestroy|00005736"
+        ],
         "LoD/1.08": [
           "0x5074|PTR_HeapCreate_00405074|00005744",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.09": [
           "0x5074|PTR_HeapCreate_00405074|00005744",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.09b": [
           "0x5074|PTR_HeapCreate_00405074|00005744",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.09d": [
           "0x5074|PTR_HeapCreate_00405074|00005744",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.10": [
           "0x5074|PTR_HeapCreate_00405074|00005744",
-          "0x6674|g_hHeap|0x0",
+          "0x6674|hHeap_00406674|00000000",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.11": [
           "0x5074|PTR_HeapCreate_00405074|00005744",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.11b": [
           "0x5074|PTR_HeapCreate_00405074|00005744",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.12a": [
           "0x5074|PTR_HeapCreate_00405074|00005744",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.13c": [
           "0x5074|PTR_HeapCreate_00405074|00005744",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.13d": [
@@ -32425,6 +33985,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -32447,6 +34008,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -32469,6 +34031,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -32491,6 +34054,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -32513,6 +34077,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -32543,6 +34108,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_1"
         ],
         "Classic/1.04c": [
+          "PARAM_1"
+        ],
+        "Classic/1.09d": [
           "PARAM_1"
         ],
         "LoD/1.07": [
@@ -32597,6 +34165,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -32621,6 +34190,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402580",
         "Classic/1.03": "0x00402580",
         "Classic/1.04c": "0x00402580",
+        "Classic/1.09d": "0x00402580",
         "LoD/1.07": "0x00402580",
         "LoD/1.08": "0x00402580",
         "LoD/1.09": "0x00402580",
@@ -32643,6 +34213,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2580",
         "Classic/1.03": "0x2580",
         "Classic/1.04c": "0x2580",
+        "Classic/1.09d": "0x2580",
         "LoD/1.07": "0x2580",
         "LoD/1.08": "0x2580",
         "LoD/1.09": "0x2580",
@@ -32665,6 +34236,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 32,
         "Classic/1.03": 32,
         "Classic/1.04c": 32,
+        "Classic/1.09d": 32,
         "LoD/1.07": 32,
         "LoD/1.08": 32,
         "LoD/1.09": 32,
@@ -32715,6 +34287,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "RtlUnwind|0x404066"
         ],
         "Classic/1.04c": [
+          "RtlUnwind|0x404066"
+        ],
+        "Classic/1.09d": [
           "RtlUnwind|0x404066"
         ],
         "LoD/1.07": [
@@ -32833,6 +34408,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x259B|POP|EBX"
         ],
         "Classic/1.04c": [
+          "0x2580|PUSH|EBP",
+          "0x2581|MOV|EBP, ESP",
+          "0x2583|PUSH|EBX",
+          "0x2584|PUSH|ESI",
+          "0x2585|PUSH|EDI",
+          "0x2586|PUSH|EBP",
+          "0x2587|PUSH|0x0",
+          "0x2589|PUSH|0x0",
+          "0x258B|PUSH|0x402598",
+          "0x2590|PUSH|dword ptr [EBP + 0x8]",
+          "0x2593|CALL|0x00404066",
+          "0x2598|POP|EBP",
+          "0x2599|POP|EDI",
+          "0x259A|POP|ESI",
+          "0x259B|POP|EBX"
+        ],
+        "Classic/1.09d": [
           "0x2580|PUSH|EBP",
           "0x2581|MOV|EBP, ESP",
           "0x2583|PUSH|EBX",
@@ -33111,6 +34703,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 18,
         "Classic/1.03": 18,
         "Classic/1.04c": 18,
+        "Classic/1.09d": 18,
         "LoD/1.07": 18,
         "LoD/1.08": 18,
         "LoD/1.09": 18,
@@ -33133,6 +34726,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -33155,6 +34749,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -33177,6 +34772,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "059e9bb2efc1de93bfe21089d0ad96d3",
         "Classic/1.03": "059e9bb2efc1de93bfe21089d0ad96d3",
         "Classic/1.04c": "059e9bb2efc1de93bfe21089d0ad96d3",
+        "Classic/1.09d": "059e9bb2efc1de93bfe21089d0ad96d3",
         "LoD/1.07": "059e9bb2efc1de93bfe21089d0ad96d3",
         "LoD/1.08": "059e9bb2efc1de93bfe21089d0ad96d3",
         "LoD/1.09": "059e9bb2efc1de93bfe21089d0ad96d3",
@@ -33207,6 +34803,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x258B||0x402598"
         ],
         "Classic/1.04c": [
+          "0x258B||0x402598"
+        ],
+        "Classic/1.09d": [
           "0x258B||0x402598"
         ],
         "LoD/1.07": [
@@ -33271,6 +34870,9 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "RtlUnwind"
         ],
+        "Classic/1.09d": [
+          "RtlUnwind"
+        ],
         "LoD/1.07": [
           "RtlUnwind"
         ],
@@ -33323,6 +34925,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -33345,6 +34948,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -33367,6 +34971,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -33389,6 +34994,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -33427,6 +35033,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PROP_NOCALLER",
+          "PARAM_1",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PROP_NOCALLER",
           "PARAM_1",
           "PROP_SMALL"
@@ -33513,6 +35124,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -33537,6 +35149,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004025C2",
         "Classic/1.03": "0x004025C2",
         "Classic/1.04c": "0x004025C2",
+        "Classic/1.09d": "0x004025C2",
         "LoD/1.07": "0x004025C2",
         "LoD/1.08": "0x004025C2",
         "LoD/1.09": "0x004025C2",
@@ -33559,6 +35172,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x25C2",
         "Classic/1.03": "0x25C2",
         "Classic/1.04c": "0x25C2",
+        "Classic/1.09d": "0x25C2",
         "LoD/1.07": "0x25C2",
         "LoD/1.08": "0x25C2",
         "LoD/1.09": "0x25C2",
@@ -33581,6 +35195,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 104,
         "Classic/1.03": 104,
         "Classic/1.04c": 104,
+        "Classic/1.09d": 104,
         "LoD/1.07": 104,
         "LoD/1.08": 104,
         "LoD/1.09": 104,
@@ -33631,6 +35246,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "StoreSehContext|0x402656"
         ],
         "Classic/1.04c": [
+          "StoreSehContext|0x402656"
+        ],
+        "Classic/1.09d": [
           "StoreSehContext|0x402656"
         ],
         "LoD/1.07": [
@@ -33693,6 +35311,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "__seh_longjmp_unwind@4|0x402735"
         ],
         "Classic/1.04c": [
+          "__seh_longjmp_unwind@4|0x402735"
+        ],
+        "Classic/1.09d": [
           "__seh_longjmp_unwind@4|0x402735"
         ],
         "LoD/1.07": [
@@ -33811,6 +35432,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x25EE|CMP|ESI, dword ptr [ESP + 0x24]"
         ],
         "Classic/1.04c": [
+          "0x25C2|PUSH|EBX",
+          "0x25C3|PUSH|ESI",
+          "0x25C4|PUSH|EDI",
+          "0x25C5|MOV|EAX, dword ptr [ESP + 0x10]",
+          "0x25C9|PUSH|EAX",
+          "0x25CA|PUSH|-0x2",
+          "0x25CC|PUSH|0x4025a0",
+          "0x25D1|PUSH|dword ptr FS:[0x0]",
+          "0x25D8|MOV|dword ptr FS:[0x0], ESP",
+          "0x25DF|MOV|EAX, dword ptr [ESP + 0x20]",
+          "0x25E3|MOV|EBX, dword ptr [EAX + 0x8]",
+          "0x25E6|MOV|ESI, dword ptr [EAX + 0xc]",
+          "0x25E9|CMP|ESI, -0x1",
+          "0x25EC|JZ|0x0040261c",
+          "0x25EE|CMP|ESI, dword ptr [ESP + 0x24]"
+        ],
+        "Classic/1.09d": [
           "0x25C2|PUSH|EBX",
           "0x25C3|PUSH|ESI",
           "0x25C4|PUSH|EDI",
@@ -34089,6 +35727,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 33,
         "Classic/1.03": 33,
         "Classic/1.04c": 33,
+        "Classic/1.09d": 33,
         "LoD/1.07": 33,
         "LoD/1.08": 33,
         "LoD/1.09": 33,
@@ -34111,6 +35750,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 32,
         "Classic/1.03": 32,
         "Classic/1.04c": 32,
+        "Classic/1.09d": 32,
         "LoD/1.07": 32,
         "LoD/1.08": 32,
         "LoD/1.09": 32,
@@ -34133,6 +35773,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -34155,6 +35796,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "cd4ab8e23ed6997cd2e2434b8d375458",
         "Classic/1.03": "cd4ab8e23ed6997cd2e2434b8d375458",
         "Classic/1.04c": "cd4ab8e23ed6997cd2e2434b8d375458",
+        "Classic/1.09d": "cd4ab8e23ed6997cd2e2434b8d375458",
         "LoD/1.07": "cd4ab8e23ed6997cd2e2434b8d375458",
         "LoD/1.08": "cd4ab8e23ed6997cd2e2434b8d375458",
         "LoD/1.09": "cd4ab8e23ed6997cd2e2434b8d375458",
@@ -34189,6 +35831,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2608||0x101"
         ],
         "Classic/1.04c": [
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
+        ],
+        "Classic/1.09d": [
           "0x25CC||0x4025A0",
           "0x2608||0x101"
         ],
@@ -34274,6 +35920,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x25A0|LAB_004025a0|",
           "0xFF9FF000|ExceptionList|00000000"
         ],
+        "Classic/1.09d": [
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000"
+        ],
         "LoD/1.07": [
           "0x25A0|LAB_004025a0|",
           "0xFF9FF000|ExceptionList|00000000"
@@ -34341,6 +35991,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -34363,6 +36014,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -34385,6 +36037,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -34407,6 +36060,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -34429,6 +36083,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -34471,6 +36126,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_Control"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_2",
+          "STRUCT_UnitAny",
+          "STRUCT_Control"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_2",
           "STRUCT_UnitAny",
@@ -34573,6 +36234,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -34597,6 +36259,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402656",
         "Classic/1.03": "0x00402656",
         "Classic/1.04c": "0x00402656",
+        "Classic/1.09d": "0x00402656",
         "LoD/1.07": "0x00402656",
         "LoD/1.08": "0x00402656",
         "LoD/1.09": "0x00402656",
@@ -34619,6 +36282,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2656",
         "Classic/1.03": "0x2656",
         "Classic/1.04c": "0x2656",
+        "Classic/1.09d": "0x2656",
         "LoD/1.07": "0x2656",
         "LoD/1.08": "0x2656",
         "LoD/1.09": "0x2656",
@@ -34641,6 +36305,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 24,
         "Classic/1.03": 24,
         "Classic/1.04c": 24,
+        "Classic/1.09d": 24,
         "LoD/1.07": 24,
         "LoD/1.08": 24,
         "LoD/1.09": 24,
@@ -34691,6 +36356,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "LocalUnwindTwo|0x4025C2"
         ],
         "Classic/1.04c": [
+          "LocalUnwindTwo|0x4025C2"
+        ],
+        "Classic/1.09d": [
           "LocalUnwindTwo|0x4025C2"
         ],
         "LoD/1.07": [
@@ -34789,6 +36457,18 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x266B|RET|0x4"
         ],
         "Classic/1.04c": [
+          "0x2656|PUSH|EBX",
+          "0x2657|PUSH|ECX",
+          "0x2658|MOV|EBX, 0x4061e4",
+          "0x265D|MOV|ECX, dword ptr [EBP + 0x8]",
+          "0x2660|MOV|dword ptr [EBX + 0x8], ECX",
+          "0x2663|MOV|dword ptr [EBX + 0x4], EAX",
+          "0x2666|MOV|dword ptr [EBX + 0xc], EBP",
+          "0x2669|POP|ECX",
+          "0x266A|POP|EBX",
+          "0x266B|RET|0x4"
+        ],
+        "Classic/1.09d": [
           "0x2656|PUSH|EBX",
           "0x2657|PUSH|ECX",
           "0x2658|MOV|EBX, 0x4061e4",
@@ -34987,6 +36667,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 10,
         "Classic/1.03": 10,
         "Classic/1.04c": 10,
+        "Classic/1.09d": 10,
         "LoD/1.07": 10,
         "LoD/1.08": 10,
         "LoD/1.09": 10,
@@ -35009,6 +36690,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -35031,6 +36713,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -35053,6 +36736,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "ed17ad9d511f6e330c2b6a62378d83cf",
         "Classic/1.03": "ed17ad9d511f6e330c2b6a62378d83cf",
         "Classic/1.04c": "ed17ad9d511f6e330c2b6a62378d83cf",
+        "Classic/1.09d": "ed17ad9d511f6e330c2b6a62378d83cf",
         "LoD/1.07": "ed17ad9d511f6e330c2b6a62378d83cf",
         "LoD/1.08": "ed17ad9d511f6e330c2b6a62378d83cf",
         "LoD/1.09": "ed17ad9d511f6e330c2b6a62378d83cf",
@@ -35083,6 +36767,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2658||0x4061E4"
         ],
         "Classic/1.04c": [
+          "0x2658||0x4061E4"
+        ],
+        "Classic/1.09d": [
           "0x2658||0x4061E4"
         ],
         "LoD/1.07": [
@@ -35162,11 +36849,17 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x61E8|DAT_004061e8|0x0",
           "0x61F0|DAT_004061f0|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x61E4|DAT_004061e4|0x20",
           "0x61EC|DAT_004061ec|0x0",
           "0x61E8|DAT_004061e8|0x0",
           "0x61F0|DAT_004061f0|0x0"
+        ],
+        "LoD/1.07": [
+          "0x61E4|g_adwPad_004061d8[3]|",
+          "0x61EC|DWORD_004061ec|0x0",
+          "0x61E8|DWORD_004061e8|0x0",
+          "0x61F0|DWORD_004061f0|0x0"
         ],
         "LoD/1.08": [
           "0x61E4|DAT_004061e4|0x20",
@@ -35259,6 +36952,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -35281,6 +36975,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -35303,6 +36998,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -35341,6 +37037,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_0",
+          "PROP_LEAF",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -35427,6 +37128,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -35451,6 +37153,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402735",
         "Classic/1.03": "0x00402735",
         "Classic/1.04c": "0x00402735",
+        "Classic/1.09d": "0x00402735",
         "LoD/1.07": "0x00402735",
         "LoD/1.08": "0x00402735",
         "LoD/1.09": "0x00402735",
@@ -35473,6 +37176,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2735",
         "Classic/1.03": "0x2735",
         "Classic/1.04c": "0x2735",
+        "Classic/1.09d": "0x2735",
         "LoD/1.07": "0x2735",
         "LoD/1.08": "0x2735",
         "LoD/1.09": "0x2735",
@@ -35495,6 +37199,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 27,
         "Classic/1.03": 27,
         "Classic/1.04c": 27,
+        "Classic/1.09d": 27,
         "LoD/1.07": 27,
         "LoD/1.08": 27,
         "LoD/1.09": 27,
@@ -35545,6 +37250,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "LocalUnwindTwo|0x4025C2"
         ],
         "Classic/1.04c": [
+          "LocalUnwindTwo|0x4025C2"
+        ],
+        "Classic/1.09d": [
           "LocalUnwindTwo|0x4025C2"
         ],
         "LoD/1.07": [
@@ -35647,6 +37355,19 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x274D|RET|0x4"
         ],
         "Classic/1.04c": [
+          "0x2735|PUSH|EBP",
+          "0x2736|MOV|ECX, dword ptr [ESP + 0x8]",
+          "0x273A|MOV|EBP, dword ptr [ECX]",
+          "0x273C|MOV|EAX, dword ptr [ECX + 0x1c]",
+          "0x273F|PUSH|EAX",
+          "0x2740|MOV|EAX, dword ptr [ECX + 0x18]",
+          "0x2743|PUSH|EAX",
+          "0x2744|CALL|0x004025c2",
+          "0x2749|ADD|ESP, 0x8",
+          "0x274C|POP|EBP",
+          "0x274D|RET|0x4"
+        ],
+        "Classic/1.09d": [
           "0x2735|PUSH|EBP",
           "0x2736|MOV|ECX, dword ptr [ESP + 0x8]",
           "0x273A|MOV|EBP, dword ptr [ECX]",
@@ -35861,6 +37582,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 11,
         "Classic/1.03": 11,
         "Classic/1.04c": 11,
+        "Classic/1.09d": 11,
         "LoD/1.07": 11,
         "LoD/1.08": 11,
         "LoD/1.09": 11,
@@ -35883,6 +37605,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -35905,6 +37628,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -35927,6 +37651,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "89d1b619054116ad559c7c543db397fd",
         "Classic/1.03": "89d1b619054116ad559c7c543db397fd",
         "Classic/1.04c": "89d1b619054116ad559c7c543db397fd",
+        "Classic/1.09d": "89d1b619054116ad559c7c543db397fd",
         "LoD/1.07": "89d1b619054116ad559c7c543db397fd",
         "LoD/1.08": "89d1b619054116ad559c7c543db397fd",
         "LoD/1.09": "89d1b619054116ad559c7c543db397fd",
@@ -35949,6 +37674,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -35971,6 +37697,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -36009,6 +37736,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PROP_NOCALLER",
+          "PARAM_1",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PROP_NOCALLER",
           "PARAM_1",
           "PROP_SMALL"
@@ -36095,6 +37827,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -36119,6 +37852,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402750",
         "Classic/1.03": "0x00402750",
         "Classic/1.04c": "0x00402750",
+        "Classic/1.09d": "0x00402750",
         "LoD/1.07": "0x00402750",
         "LoD/1.08": "0x00402750",
         "LoD/1.09": "0x00402750",
@@ -36141,6 +37875,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2750",
         "Classic/1.03": "0x2750",
         "Classic/1.04c": "0x2750",
+        "Classic/1.09d": "0x2750",
         "LoD/1.07": "0x2750",
         "LoD/1.08": "0x2750",
         "LoD/1.09": "0x2750",
@@ -36163,6 +37898,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 57,
         "Classic/1.03": 57,
         "Classic/1.04c": 57,
+        "Classic/1.09d": 57,
         "LoD/1.07": 57,
         "LoD/1.08": 57,
         "LoD/1.09": 57,
@@ -36213,6 +37949,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.04c": [
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.09d": [
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.07": [
@@ -36267,12 +38006,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "AmsgExit|0x4015D9"
         ],
         "Classic/1.01": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "Classic/1.02": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "Classic/1.03": [
           "FUN_004015fe|0x4015FE",
@@ -36282,9 +38021,13 @@ var FUNCTIONS_Diablo_II_exe = {
           "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE"
         ],
+        "Classic/1.09d": [
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
+        ],
         "LoD/1.07": [
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "HandleFatalError|0x4015FE"
         ],
         "LoD/1.08": [
           "FUN_004015fe|0x4015FE",
@@ -36295,16 +38038,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.09b": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.09d": [
           "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.10": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.11": [
           "AmsgExit|0x4015D9",
@@ -36315,8 +38058,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.12a": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.13c": [
           "FUN_004015fe|0x4015FE",
@@ -36327,12 +38070,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.14a": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
-        ],
-        "LoD/1.14b": [
           "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
+        ],
+        "LoD/1.14b": [
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.14c": [
           "FUN_004015fe|0x4015FE",
@@ -36413,6 +38156,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x277D|PUSH|0xff"
         ],
         "Classic/1.04c": [
+          "0x2750|MOV|EAX, [0x004064bc]",
+          "0x2755|CMP|EAX, 0x1",
+          "0x2758|JZ|0x00402767",
+          "0x275A|TEST|EAX, EAX",
+          "0x275C|JNZ|0x00402788",
+          "0x275E|CMP|dword ptr [0x0040604c], 0x1",
+          "0x2765|JNZ|0x00402788",
+          "0x2767|PUSH|0xfc",
+          "0x276C|CALL|0x00402789",
+          "0x2771|MOV|EAX, [0x0040661c]",
+          "0x2776|POP|ECX",
+          "0x2777|TEST|EAX, EAX",
+          "0x2779|JZ|0x0040277d",
+          "0x277B|CALL|EAX",
+          "0x277D|PUSH|0xff"
+        ],
+        "Classic/1.09d": [
           "0x2750|MOV|EAX, [0x004064bc]",
           "0x2755|CMP|EAX, 0x1",
           "0x2758|JZ|0x00402767",
@@ -36691,6 +38451,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 18,
         "Classic/1.03": 18,
         "Classic/1.04c": 18,
+        "Classic/1.09d": 18,
         "LoD/1.07": 18,
         "LoD/1.08": 18,
         "LoD/1.09": 18,
@@ -36713,6 +38474,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -36735,6 +38497,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -36757,6 +38520,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "9765460a30498931557fab10cfc0be00",
         "Classic/1.03": "9765460a30498931557fab10cfc0be00",
         "Classic/1.04c": "9765460a30498931557fab10cfc0be00",
+        "Classic/1.09d": "9765460a30498931557fab10cfc0be00",
         "LoD/1.07": "9765460a30498931557fab10cfc0be00",
         "LoD/1.08": "9765460a30498931557fab10cfc0be00",
         "LoD/1.09": "9765460a30498931557fab10cfc0be00",
@@ -36795,6 +38559,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "Classic/1.04c": [
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
+        ],
+        "Classic/1.09d": [
           "0x64BC|g_dwConsoleDisplayFlag|0x0",
           "0x604C|g_dwConsoleDebugFlag|0x2",
           "0x661C|g_pfnCleanupCallback|0x0"
@@ -36881,6 +38650,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -36903,6 +38673,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -36925,6 +38696,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -36955,6 +38727,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_0"
         ],
         "Classic/1.04c": [
+          "PARAM_0"
+        ],
+        "Classic/1.09d": [
           "PARAM_0"
         ],
         "LoD/1.07": [
@@ -37009,6 +38784,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -37033,6 +38809,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402789",
         "Classic/1.03": "0x00402789",
         "Classic/1.04c": "0x00402789",
+        "Classic/1.09d": "0x00402789",
         "LoD/1.07": "0x00402789",
         "LoD/1.08": "0x00402789",
         "LoD/1.09": "0x00402789",
@@ -37055,6 +38832,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2789",
         "Classic/1.03": "0x2789",
         "Classic/1.04c": "0x2789",
+        "Classic/1.09d": "0x2789",
         "LoD/1.07": "0x2789",
         "LoD/1.08": "0x2789",
         "LoD/1.09": "0x2789",
@@ -37077,6 +38855,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 339,
         "Classic/1.03": 339,
         "Classic/1.04c": 339,
+        "Classic/1.09d": 339,
         "LoD/1.07": 339,
         "LoD/1.08": 339,
         "LoD/1.09": 339,
@@ -37115,204 +38894,214 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "_strncpy|0x403B80",
-          "OptimizedStringCopy|0x402E10",
-          "GetStdHandle|0x9",
-          "WriteFile|0x22",
           "GetModuleFileNameA|0x15",
-          "ShowMessageBoxWithActiveWindow|0x403AEE"
-        ],
-        "Classic/1.01": [
           "GetStdHandle|0x9",
-          "WriteFile|0x22",
-          "_strlen|0x401B80",
           "OptimizedStringCopy|0x402E10",
-          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
           "_strncpy|0x403B80",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetModuleFileNameA|0x15"
+          "CopyStringOptimized|0x402E00",
+          "WriteFile|0x22"
         ],
-        "Classic/1.02": [
+        "Classic/1.01": [
+          "CopyStringOptimized|0x402E00",
+          "OptimizedStringCopy|0x402E10",
+          "GetStdHandle|0x9",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "GetModuleFileNameA|0x15",
           "_strlen|0x401B80",
           "_strncpy|0x403B80",
+          "WriteFile|0x22"
+        ],
+        "Classic/1.02": [
           "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
+          "OptimizedStringCopy|0x402E10",
+          "WriteFile|0x22",
           "GetModuleFileNameA|0x15",
           "GetStdHandle|0x9",
-          "WriteFile|0x22",
-          "OptimizedStringCopy|0x402E10",
+          "_strncpy|0x403B80",
           "ShowMessageBoxWithActiveWindow|0x403AEE"
         ],
         "Classic/1.03": [
-          "CopyStringOptimized|0x402E00",
-          "OptimizedStringCopy|0x402E10",
-          "_strncpy|0x403B80",
-          "_strlen|0x401B80",
           "GetModuleFileNameA|0x15",
           "GetStdHandle|0x9",
+          "WriteFile|0x22",
+          "OptimizedStringCopy|0x402E10",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "_strncpy|0x403B80",
+          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80"
+        ],
+        "Classic/1.04c": [
+          "_strncpy|0x403B80",
+          "OptimizedStringCopy|0x402E10",
+          "GetModuleFileNameA|0x15",
+          "CopyStringOptimized|0x402E00",
+          "GetStdHandle|0x9",
+          "_strlen|0x401B80",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
           "WriteFile|0x22"
         ],
-        "Classic/1.04c": [
+        "Classic/1.09d": [
           "GetModuleFileNameA|0x15",
+          "WriteFile|0x22",
+          "_strlen|0x401B80",
+          "GetStdHandle|0x9",
+          "CopyStringOptimized|0x402E00",
           "_strncpy|0x403B80",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "WriteFile|0x22",
-          "GetStdHandle|0x9",
           "OptimizedStringCopy|0x402E10"
         ],
         "LoD/1.07": [
           "CopyStringOptimized|0x402E00",
           "GetModuleFileNameA|0x15",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetStdHandle|0x9",
-          "WriteFile|0x22",
-          "_strlen|0x401B80",
           "_strncpy|0x403B80",
-          "OptimizedStringCopy|0x402E10"
+          "_strlen|0x401B80",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "WriteFile|0x22",
+          "OptimizedStringCopy|0x402E10",
+          "GetStdHandle|0x9"
         ],
         "LoD/1.08": [
-          "GetStdHandle|0x9",
-          "WriteFile|0x22",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
           "OptimizedStringCopy|0x402E10",
-          "_strlen|0x401B80",
           "GetModuleFileNameA|0x15",
+          "CopyStringOptimized|0x402E00",
           "_strncpy|0x403B80",
-          "CopyStringOptimized|0x402E00"
+          "_strlen|0x401B80",
+          "GetStdHandle|0x9",
+          "WriteFile|0x22"
         ],
         "LoD/1.09": [
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "CopyStringOptimized|0x402E00",
-          "GetStdHandle|0x9",
           "_strncpy|0x403B80",
           "_strlen|0x401B80",
-          "WriteFile|0x22",
           "GetModuleFileNameA|0x15",
-          "OptimizedStringCopy|0x402E10"
+          "OptimizedStringCopy|0x402E10",
+          "WriteFile|0x22",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "GetStdHandle|0x9",
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.09b": [
-          "OptimizedStringCopy|0x402E10",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "GetStdHandle|0x9",
           "WriteFile|0x22",
           "GetModuleFileNameA|0x15",
-          "_strncpy|0x403B80"
+          "_strlen|0x401B80",
+          "GetStdHandle|0x9",
+          "CopyStringOptimized|0x402E00",
+          "_strncpy|0x403B80",
+          "OptimizedStringCopy|0x402E10"
         ],
         "LoD/1.09d": [
-          "OptimizedStringCopy|0x402E10",
-          "GetStdHandle|0x9",
-          "_strncpy|0x403B80",
-          "CopyStringOptimized|0x402E00",
-          "WriteFile|0x22",
-          "_strlen|0x401B80",
-          "GetModuleFileNameA|0x15",
-          "ShowMessageBoxWithActiveWindow|0x403AEE"
-        ],
-        "LoD/1.10": [
-          "GetModuleFileNameA|0x15",
-          "CopyStringOptimized|0x402E00",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
           "OptimizedStringCopy|0x402E10",
+          "_strlen|0x401B80",
+          "GetModuleFileNameA|0x15",
+          "CopyStringOptimized|0x402E00",
+          "_strncpy|0x403B80",
+          "GetStdHandle|0x9",
+          "WriteFile|0x22"
+        ],
+        "LoD/1.10": [
           "GetStdHandle|0x9",
           "_strncpy|0x403B80",
+          "GetModuleFileNameA|0x15",
+          "CopyStringOptimized|0x402E00",
           "_strlen|0x401B80",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "OptimizedStringCopy|0x402E10",
           "WriteFile|0x22"
         ],
         "LoD/1.11": [
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetStdHandle|0x9",
-          "WriteFile|0x22",
-          "GetModuleFileNameA|0x15",
           "CopyStringOptimized|0x402E00",
+          "WriteFile|0x22",
           "_strncpy|0x403B80",
+          "GetModuleFileNameA|0x15",
           "_strlen|0x401B80",
-          "OptimizedStringCopy|0x402E10"
+          "OptimizedStringCopy|0x402E10",
+          "GetStdHandle|0x9"
         ],
         "LoD/1.11b": [
-          "_strncpy|0x403B80",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "OptimizedStringCopy|0x402E10",
           "_strlen|0x401B80",
-          "CopyStringOptimized|0x402E00",
-          "GetModuleFileNameA|0x15",
+          "OptimizedStringCopy|0x402E10",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
           "GetStdHandle|0x9",
-          "WriteFile|0x22"
+          "GetModuleFileNameA|0x15",
+          "_strncpy|0x403B80",
+          "WriteFile|0x22",
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.12a": [
-          "OptimizedStringCopy|0x402E10",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "_strlen|0x401B80",
           "GetStdHandle|0x9",
-          "CopyStringOptimized|0x402E00",
-          "_strncpy|0x403B80",
           "GetModuleFileNameA|0x15",
-          "WriteFile|0x22"
+          "OptimizedStringCopy|0x402E10",
+          "WriteFile|0x22",
+          "_strncpy|0x403B80",
+          "CopyStringOptimized|0x402E00",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "_strlen|0x401B80"
         ],
         "LoD/1.13c": [
           "OptimizedStringCopy|0x402E10",
-          "_strncpy|0x403B80",
           "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "GetStdHandle|0x9",
+          "_strncpy|0x403B80",
+          "GetModuleFileNameA|0x15",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
           "WriteFile|0x22",
-          "GetModuleFileNameA|0x15"
+          "_strlen|0x401B80",
+          "GetStdHandle|0x9"
         ],
         "LoD/1.13d": [
+          "_strncpy|0x403B80",
+          "WriteFile|0x22",
+          "_strlen|0x401B80",
+          "OptimizedStringCopy|0x402E10",
           "GetStdHandle|0x9",
           "GetModuleFileNameA|0x15",
-          "_strlen|0x401B80",
-          "WriteFile|0x22",
           "CopyStringOptimized|0x402E00",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "OptimizedStringCopy|0x402E10",
-          "_strncpy|0x403B80"
+          "ShowMessageBoxWithActiveWindow|0x403AEE"
         ],
         "LoD/1.14a": [
-          "_strncpy|0x403B80",
-          "_strlen|0x401B80",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "OptimizedStringCopy|0x402E10",
-          "GetStdHandle|0x9",
           "WriteFile|0x22",
+          "_strncpy|0x403B80",
+          "OptimizedStringCopy|0x402E10",
+          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
           "GetModuleFileNameA|0x15",
-          "CopyStringOptimized|0x402E00"
+          "GetStdHandle|0x9"
         ],
         "LoD/1.14b": [
-          "_strlen|0x401B80",
-          "WriteFile|0x22",
           "GetModuleFileNameA|0x15",
-          "CopyStringOptimized|0x402E00",
-          "OptimizedStringCopy|0x402E10",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
           "_strncpy|0x403B80",
-          "GetStdHandle|0x9"
+          "CopyStringOptimized|0x402E00",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "_strlen|0x401B80",
+          "GetStdHandle|0x9",
+          "OptimizedStringCopy|0x402E10",
+          "WriteFile|0x22"
         ],
         "LoD/1.14c": [
+          "GetStdHandle|0x9",
+          "GetModuleFileNameA|0x15",
+          "WriteFile|0x22",
+          "CopyStringOptimized|0x402E00",
           "_strncpy|0x403B80",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "CopyStringOptimized|0x402E00",
-          "OptimizedStringCopy|0x402E10",
-          "GetModuleFileNameA|0x15",
           "_strlen|0x401B80",
-          "WriteFile|0x22",
-          "GetStdHandle|0x9"
+          "OptimizedStringCopy|0x402E10"
         ],
         "LoD/1.14d": [
-          "WriteFile|0x22",
           "CopyStringOptimized|0x402E00",
-          "GetModuleFileNameA|0x15",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
           "_strncpy|0x403B80",
+          "GetModuleFileNameA|0x15",
           "OptimizedStringCopy|0x402E10",
           "_strlen|0x401B80",
-          "GetStdHandle|0x9"
+          "WriteFile|0x22",
+          "GetStdHandle|0x9",
+          "ShowMessageBoxWithActiveWindow|0x403AEE"
         ]
       },
       "callers": {
@@ -37322,59 +39111,64 @@ var FUNCTIONS_Diablo_II_exe = {
           "AmsgExit|0x4015D9"
         ],
         "Classic/1.01": [
+          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9",
-          "CleanupConsoleOutput|0x402750",
-          "FUN_004015fe|0x4015FE"
+          "CleanupConsoleOutput|0x402750"
         ],
         "Classic/1.02": [
           "CleanupConsoleOutput|0x402750",
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "Classic/1.03": [
-          "FUN_004015fe|0x4015FE",
           "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
         "Classic/1.04c": [
+          "AmsgExit|0x4015D9",
+          "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE"
+        ],
+        "Classic/1.09d": [
           "CleanupConsoleOutput|0x402750",
           "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.07": [
+          "CleanupConsoleOutput|0x402750",
+          "AmsgExit|0x4015D9",
+          "HandleFatalError|0x4015FE"
+        ],
+        "LoD/1.08": [
           "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9",
           "CleanupConsoleOutput|0x402750"
         ],
-        "LoD/1.08": [
-          "CleanupConsoleOutput|0x402750",
-          "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9"
-        ],
         "LoD/1.09": [
-          "FUN_004015fe|0x4015FE",
           "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.09b": [
-          "AmsgExit|0x4015D9",
-          "CleanupConsoleOutput|0x402750",
-          "FUN_004015fe|0x4015FE"
-        ],
-        "LoD/1.09d": [
           "CleanupConsoleOutput|0x402750",
           "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
-        "LoD/1.10": [
-          "AmsgExit|0x4015D9",
+        "LoD/1.09d": [
+          "FUN_004015fe|0x4015FE",
           "CleanupConsoleOutput|0x402750",
-          "FUN_004015fe|0x4015FE"
+          "AmsgExit|0x4015D9"
+        ],
+        "LoD/1.10": [
+          "FUN_004015fe|0x4015FE",
+          "CleanupConsoleOutput|0x402750",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.11": [
           "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.11b": [
           "AmsgExit|0x4015D9",
@@ -37382,9 +39176,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.12a": [
-          "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.13c": [
           "FUN_004015fe|0x4015FE",
@@ -37393,17 +39187,17 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.13d": [
           "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.14a": [
-          "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14b": [
-          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE",
           "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.14c": [
@@ -37448,11 +39242,17 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x539C|s_<program_name_unknown>_0040539c|<program name unknown>",
           "0x537C|s_Runtime_Error!_Program:_0040537c|Runtime Error!\n\nProgram: "
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x52D0|s_R6009_-_not_enough_space_for_env_004052d0|R6009\r\n- not enough space for environment\r\n",
           "0x5350|s_Microsoft_Visual_C++_Runtime_Lib_00405350|Microsoft Visual C++ Runtime Library",
           "0x539C|s_<program_name_unknown>_0040539c|<program name unknown>",
           "0x537C|s_Runtime_Error!_Program:_0040537c|Runtime Error!\n\nProgram: "
+        ],
+        "LoD/1.07": [
+          "0x539C|sz<program_name_unknown>_0040539c|<program name unknown>",
+          "0x537C|szRuntime_Error!_Program:_0040537c|Runtime Error!\n\nProgram: ",
+          "0x52D0|szR6009_-_not_enough_space_for_env_004052d0|R6009\r\n- not enough space for environment\r\n",
+          "0x5350|szMicrosoft_Visual_C++_Runtime_Lib_00405350|Microsoft Visual C++ Runtime Library"
         ],
         "LoD/1.08": [
           "0x52D0|s_R6009_-_not_enough_space_for_env_004052d0|R6009\r\n- not enough space for environment\r\n",
@@ -37609,6 +39409,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x27AE|SHL|ESI, 0x3"
         ],
         "Classic/1.04c": [
+          "0x2789|PUSH|EBP",
+          "0x278A|MOV|EBP, ESP",
+          "0x278C|SUB|ESP, 0x1a4",
+          "0x2792|MOV|EDX, dword ptr [EBP + 0x8]",
+          "0x2795|XOR|ECX, ECX",
+          "0x2797|MOV|EAX, 0x4061f8",
+          "0x279C|CMP|EDX, dword ptr [EAX]",
+          "0x279E|JZ|0x004027ab",
+          "0x27A0|ADD|EAX, 0x8",
+          "0x27A3|INC|ECX",
+          "0x27A4|CMP|EAX, 0x406288",
+          "0x27A9|JL|0x0040279c",
+          "0x27AB|PUSH|ESI",
+          "0x27AC|MOV|ESI, ECX",
+          "0x27AE|SHL|ESI, 0x3"
+        ],
+        "Classic/1.09d": [
           "0x2789|PUSH|EBP",
           "0x278A|MOV|EBP, ESP",
           "0x278C|SUB|ESP, 0x1a4",
@@ -37887,6 +39704,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 100,
         "Classic/1.03": 100,
         "Classic/1.04c": 100,
+        "Classic/1.09d": 100,
         "LoD/1.07": 100,
         "LoD/1.08": 100,
         "LoD/1.09": 100,
@@ -37909,6 +39727,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 432,
         "Classic/1.03": 432,
         "Classic/1.04c": 432,
+        "Classic/1.09d": 432,
         "LoD/1.07": 432,
         "LoD/1.08": 432,
         "LoD/1.09": 432,
@@ -37931,6 +39750,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -37953,6 +39773,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "6bfb7faf8650903f50cd7e2ef7eba7fe",
         "Classic/1.03": "6bfb7faf8650903f50cd7e2ef7eba7fe",
         "Classic/1.04c": "6bfb7faf8650903f50cd7e2ef7eba7fe",
+        "Classic/1.09d": "6bfb7faf8650903f50cd7e2ef7eba7fe",
         "LoD/1.07": "6bfb7faf8650903f50cd7e2ef7eba7fe",
         "LoD/1.08": "6bfb7faf8650903f50cd7e2ef7eba7fe",
         "LoD/1.09": "6bfb7faf8650903f50cd7e2ef7eba7fe",
@@ -38031,6 +39852,21 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x28B6||0x4061FC"
         ],
         "Classic/1.04c": [
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC",
+          "0x2897||0x12010",
+          "0x28A2||0x405350",
+          "0x28B6||0x4061FC"
+        ],
+        "Classic/1.09d": [
           "0x278C||0x1A4",
           "0x2797||0x4061F8",
           "0x27A4||0x406288",
@@ -38342,7 +40178,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x61F8|DAT_004061f8|0x2",
           "0x6200|DAT_00406200|0x8",
           "0x6208|DAT_00406208|0x9",
@@ -38356,6 +40192,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
+        "LoD/1.07": [
+          "0x61F8|DWORD_004061f8|0x2",
+          "0x6200|DWORD_00406200|0x8",
+          "0x6208|DWORD_00406208|0x9",
+          "0x6288|g_adwData_406210[30]|",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x5050|g_pfnGetModuleFileNameA|00005674",
+          "0x5398|g_awPad_00405396[1]|",
+          "0x5378|g_abPad_00405375[3]|",
+          "0x620C|lpBuffer_0040620c|004052d0",
+          "0x5020|g_pfnGetStdHandle|00005718",
+          "0x5084|g_pfnWriteFile|00005778"
+        ],
         "LoD/1.08": [
           "0x61F8|DAT_004061f8|0x2",
           "0x6200|DAT_00406200|0x8",
@@ -38366,7 +40216,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
           "0x5398|DAT_00405398|0x2e",
           "0x5378|DAT_00405378|0xa",
-          "0x620C|PTR_s_R6009_-_not_enough_space_for_env_0040620c|004052d0",
+          "0x620C|lpBuffer_0040620c|004052d0",
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
@@ -38380,7 +40230,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
           "0x5398|DAT_00405398|0x2e",
           "0x5378|DAT_00405378|0xa",
-          "0x620C|PTR_s_R6009_-_not_enough_space_for_env_0040620c|004052d0",
+          "0x620C|lpBuffer_0040620c|004052d0",
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
@@ -38394,7 +40244,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
           "0x5398|DAT_00405398|0x2e",
           "0x5378|DAT_00405378|0xa",
-          "0x620C|PTR_s_R6009_-_not_enough_space_for_env_0040620c|004052d0",
+          "0x620C|lpBuffer_0040620c|004052d0",
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
@@ -38408,7 +40258,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
           "0x5398|DAT_00405398|0x2e",
           "0x5378|DAT_00405378|0xa",
-          "0x620C|PTR_s_R6009_-_not_enough_space_for_env_0040620c|004052d0",
+          "0x620C|lpBuffer_0040620c|004052d0",
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
@@ -38422,7 +40272,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
           "0x5398|DAT_00405398|0x2e",
           "0x5378|DAT_00405378|0xa",
-          "0x620C|PTR_s_R6009_-_not_enough_space_for_env_0040620c|004052d0",
+          "0x620C|lpBuffer_0040620c|004052d0",
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
@@ -38436,7 +40286,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
           "0x5398|DAT_00405398|0x2e",
           "0x5378|DAT_00405378|0xa",
-          "0x620C|PTR_s_R6009_-_not_enough_space_for_env_0040620c|004052d0",
+          "0x620C|lpBuffer_0040620c|004052d0",
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
@@ -38450,7 +40300,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
           "0x5398|DAT_00405398|0x2e",
           "0x5378|DAT_00405378|0xa",
-          "0x620C|PTR_s_R6009_-_not_enough_space_for_env_0040620c|004052d0",
+          "0x620C|lpBuffer_0040620c|004052d0",
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
@@ -38464,7 +40314,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
           "0x5398|DAT_00405398|0x2e",
           "0x5378|DAT_00405378|0xa",
-          "0x620C|PTR_s_R6009_-_not_enough_space_for_env_0040620c|004052d0",
+          "0x620C|lpBuffer_0040620c|004052d0",
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
@@ -38478,7 +40328,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
           "0x5398|DAT_00405398|0x2e",
           "0x5378|DAT_00405378|0xa",
-          "0x620C|PTR_s_R6009_-_not_enough_space_for_env_0040620c|004052d0",
+          "0x620C|lpBuffer_0040620c|004052d0",
           "0x5020|PTR_GetStdHandle_00405020|00005718",
           "0x5084|PTR_WriteFile_00405084|00005778"
         ],
@@ -38559,6 +40409,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -38581,6 +40432,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -38603,6 +40455,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -38625,6 +40478,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 13,
         "Classic/1.03": 13,
         "Classic/1.04c": 13,
+        "Classic/1.09d": 13,
         "LoD/1.07": 13,
         "LoD/1.08": 13,
         "LoD/1.09": 13,
@@ -38647,6 +40501,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -38669,6 +40524,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -38707,6 +40563,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_Control"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_1",
+          "STRUCT_Control"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_1",
           "STRUCT_Control"
@@ -38793,6 +40654,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -38817,6 +40679,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004028DC",
         "Classic/1.03": "0x004028DC",
         "Classic/1.04c": "0x004028DC",
+        "Classic/1.09d": "0x004028DC",
         "LoD/1.07": "0x004028DC",
         "LoD/1.08": "0x004028DC",
         "LoD/1.09": "0x004028DC",
@@ -38839,6 +40702,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x28DC",
         "Classic/1.03": "0x28DC",
         "Classic/1.04c": "0x28DC",
+        "Classic/1.09d": "0x28DC",
         "LoD/1.07": "0x28DC",
         "LoD/1.08": "0x28DC",
         "LoD/1.09": "0x28DC",
@@ -38861,6 +40725,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 511,
         "Classic/1.03": 511,
         "Classic/1.04c": 511,
+        "Classic/1.09d": 511,
         "LoD/1.07": 511,
         "LoD/1.08": 511,
         "LoD/1.09": 511,
@@ -38899,164 +40764,172 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "LCMapStringW|0x25",
-          "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringA|0x24",
-          "WideCharToMultiByte|0x18",
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23"
-        ],
-        "Classic/1.01": [
-          "LCMapStringA|0x24",
-          "WideCharToMultiByte|0x18",
-          "AllocateStackSpace|0x403C80",
           "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringW|0x25",
-          "MultiByteToWideChar|0x23"
-        ],
-        "Classic/1.02": [
-          "LCMapStringW|0x25",
           "MultiByteToWideChar|0x23",
-          "LCMapStringA|0x24",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "AllocateStackSpace|0x403C80",
-          "WideCharToMultiByte|0x18"
-        ],
-        "Classic/1.03": [
           "WideCharToMultiByte|0x18",
-          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringA|0x24",
           "LCMapStringW|0x25"
         ],
-        "Classic/1.04c": [
-          "LCMapStringW|0x25",
+        "Classic/1.01": [
           "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringA|0x24",
           "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringW|0x25"
+        ],
+        "Classic/1.02": [
+          "AllocateStackSpace|0x403C80",
+          "CalculateStringLengthWithLimit|0x402B00",
           "WideCharToMultiByte|0x18",
           "LCMapStringA|0x24",
+          "LCMapStringW|0x25",
+          "MultiByteToWideChar|0x23"
+        ],
+        "Classic/1.03": [
+          "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringW|0x25",
+          "AllocateStackSpace|0x403C80",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24",
+          "MultiByteToWideChar|0x23"
+        ],
+        "Classic/1.04c": [
+          "MultiByteToWideChar|0x23",
+          "LCMapStringW|0x25",
+          "AllocateStackSpace|0x403C80",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24"
+        ],
+        "Classic/1.09d": [
+          "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringW|0x25",
+          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.07": [
-          "WideCharToMultiByte|0x18",
-          "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringA|0x24",
           "LCMapStringW|0x25",
+          "WideCharToMultiByte|0x18",
           "AllocateStackSpace|0x403C80",
+          "CalculateStringLengthWithLimit|0x402B00",
           "MultiByteToWideChar|0x23"
         ],
         "LoD/1.08": [
-          "MultiByteToWideChar|0x23",
+          "LCMapStringW|0x25",
+          "CalculateStringLengthWithLimit|0x402B00",
           "AllocateStackSpace|0x403C80",
           "LCMapStringA|0x24",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringW|0x25",
+          "MultiByteToWideChar|0x23",
           "WideCharToMultiByte|0x18"
         ],
         "LoD/1.09": [
-          "MultiByteToWideChar|0x23",
-          "WideCharToMultiByte|0x18",
-          "LCMapStringA|0x24",
-          "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringW|0x25",
-          "AllocateStackSpace|0x403C80"
-        ],
-        "LoD/1.09b": [
+          "MultiByteToWideChar|0x23",
           "CalculateStringLengthWithLimit|0x402B00",
           "AllocateStackSpace|0x403C80",
           "WideCharToMultiByte|0x18",
-          "LCMapStringA|0x24",
-          "MultiByteToWideChar|0x23",
-          "LCMapStringW|0x25"
-        ],
-        "LoD/1.09d": [
-          "WideCharToMultiByte|0x18",
-          "LCMapStringW|0x25",
-          "MultiByteToWideChar|0x23",
-          "AllocateStackSpace|0x403C80",
-          "LCMapStringA|0x24",
-          "CalculateStringLengthWithLimit|0x402B00"
-        ],
-        "LoD/1.10": [
-          "MultiByteToWideChar|0x23",
-          "WideCharToMultiByte|0x18",
-          "LCMapStringW|0x25",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "AllocateStackSpace|0x403C80",
           "LCMapStringA|0x24"
         ],
-        "LoD/1.11": [
+        "LoD/1.09b": [
+          "LCMapStringW|0x25",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80"
+        ],
+        "LoD/1.09d": [
+          "CalculateStringLengthWithLimit|0x402B00",
           "WideCharToMultiByte|0x18",
           "MultiByteToWideChar|0x23",
-          "LCMapStringA|0x24",
-          "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringW|0x25",
+          "LCMapStringA|0x24",
           "AllocateStackSpace|0x403C80"
+        ],
+        "LoD/1.10": [
+          "LCMapStringA|0x24",
+          "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23",
+          "WideCharToMultiByte|0x18",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringW|0x25"
+        ],
+        "LoD/1.11": [
+          "LCMapStringA|0x24",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringW|0x25",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "CalculateStringLengthWithLimit|0x402B00"
         ],
         "LoD/1.11b": [
           "LCMapStringW|0x25",
-          "WideCharToMultiByte|0x18",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringA|0x24",
           "MultiByteToWideChar|0x23",
-          "AllocateStackSpace|0x403C80"
-        ],
-        "LoD/1.12a": [
-          "LCMapStringA|0x24",
-          "LCMapStringW|0x25",
-          "WideCharToMultiByte|0x18",
-          "MultiByteToWideChar|0x23",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "AllocateStackSpace|0x403C80"
-        ],
-        "LoD/1.13c": [
-          "LCMapStringA|0x24",
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23",
-          "LCMapStringW|0x25",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "WideCharToMultiByte|0x18"
-        ],
-        "LoD/1.13d": [
-          "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringW|0x25",
-          "WideCharToMultiByte|0x18",
-          "LCMapStringA|0x24",
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23"
-        ],
-        "LoD/1.14a": [
-          "LCMapStringA|0x24",
           "AllocateStackSpace|0x403C80",
           "CalculateStringLengthWithLimit|0x402B00",
-          "MultiByteToWideChar|0x23",
-          "LCMapStringW|0x25",
-          "WideCharToMultiByte|0x18"
-        ],
-        "LoD/1.14b": [
-          "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringA|0x24",
-          "AllocateStackSpace|0x403C80",
-          "LCMapStringW|0x25",
-          "MultiByteToWideChar|0x23",
-          "WideCharToMultiByte|0x18"
-        ],
-        "LoD/1.14c": [
-          "CalculateStringLengthWithLimit|0x402B00",
-          "MultiByteToWideChar|0x23",
-          "LCMapStringW|0x25",
-          "AllocateStackSpace|0x403C80",
           "WideCharToMultiByte|0x18",
           "LCMapStringA|0x24"
         ],
-        "LoD/1.14d": [
+        "LoD/1.12a": [
+          "AllocateStackSpace|0x403C80",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "MultiByteToWideChar|0x23",
+          "LCMapStringA|0x24",
+          "LCMapStringW|0x25",
+          "WideCharToMultiByte|0x18"
+        ],
+        "LoD/1.13c": [
+          "LCMapStringW|0x25",
+          "LCMapStringA|0x24",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "WideCharToMultiByte|0x18"
+        ],
+        "LoD/1.13d": [
+          "LCMapStringW|0x25",
+          "LCMapStringA|0x24",
+          "WideCharToMultiByte|0x18",
+          "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23",
+          "CalculateStringLengthWithLimit|0x402B00"
+        ],
+        "LoD/1.14a": [
+          "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringW|0x25",
           "AllocateStackSpace|0x403C80",
           "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24",
+          "MultiByteToWideChar|0x23"
+        ],
+        "LoD/1.14b": [
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "LCMapStringW|0x25",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24",
+          "CalculateStringLengthWithLimit|0x402B00"
+        ],
+        "LoD/1.14c": [
+          "LCMapStringA|0x24",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringW|0x25"
+        ],
+        "LoD/1.14d": [
+          "LCMapStringA|0x24",
+          "LCMapStringW|0x25",
           "MultiByteToWideChar|0x23",
           "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringA|0x24",
-          "LCMapStringW|0x25"
+          "AllocateStackSpace|0x403C80",
+          "WideCharToMultiByte|0x18"
         ]
       },
       "callers": {
@@ -39073,6 +40946,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeCharacterTables|0x401861"
         ],
         "Classic/1.04c": [
+          "InitializeCharacterTables|0x401861"
+        ],
+        "Classic/1.09d": [
           "InitializeCharacterTables|0x401861"
         ],
         "LoD/1.07": [
@@ -39191,6 +41067,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2904|CMP|dword ptr [0x00406640], EDI"
         ],
         "Classic/1.04c": [
+          "0x28DC|PUSH|EBP",
+          "0x28DD|MOV|EBP, ESP",
+          "0x28DF|PUSH|-0x1",
+          "0x28E1|PUSH|0x4053c0",
+          "0x28E6|PUSH|0x402678",
+          "0x28EB|MOV|EAX, FS:[0x0]",
+          "0x28F1|PUSH|EAX",
+          "0x28F2|MOV|dword ptr FS:[0x0], ESP",
+          "0x28F9|SUB|ESP, 0x1c",
+          "0x28FC|PUSH|EBX",
+          "0x28FD|PUSH|ESI",
+          "0x28FE|PUSH|EDI",
+          "0x28FF|MOV|dword ptr [EBP + -0x18], ESP",
+          "0x2902|XOR|EDI, EDI",
+          "0x2904|CMP|dword ptr [0x00406640], EDI"
+        ],
+        "Classic/1.09d": [
           "0x28DC|PUSH|EBP",
           "0x28DD|MOV|EBP, ESP",
           "0x28DF|PUSH|-0x1",
@@ -39469,6 +41362,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 177,
         "Classic/1.03": 177,
         "Classic/1.04c": 177,
+        "Classic/1.09d": 177,
         "LoD/1.07": 177,
         "LoD/1.08": 177,
         "LoD/1.09": 177,
@@ -39491,6 +41385,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 96,
         "Classic/1.03": 96,
         "Classic/1.04c": 96,
+        "Classic/1.09d": 96,
         "LoD/1.07": 96,
         "LoD/1.08": 96,
         "LoD/1.09": 96,
@@ -39513,6 +41408,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -39535,6 +41431,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "c1d05e132bc8c3bc87e7a971916e9b9b",
         "Classic/1.03": "c1d05e132bc8c3bc87e7a971916e9b9b",
         "Classic/1.04c": "c1d05e132bc8c3bc87e7a971916e9b9b",
+        "Classic/1.09d": "c1d05e132bc8c3bc87e7a971916e9b9b",
         "LoD/1.07": "c1d05e132bc8c3bc87e7a971916e9b9b",
         "LoD/1.08": "c1d05e132bc8c3bc87e7a971916e9b9b",
         "LoD/1.09": "c1d05e132bc8c3bc87e7a971916e9b9b",
@@ -39585,6 +41482,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2AE1||0x220"
         ],
         "Classic/1.04c": [
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
+        ],
+        "Classic/1.09d": [
           "0x28E1||0x4053C0",
           "0x28E6||0x402678",
           "0x2912||0x4053B8",
@@ -39779,7 +41684,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
           "0x505C|PTR_WideCharToMultiByte_0040505c|000056be"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x53C0|DAT_004053c0|-0x1",
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
@@ -39792,14 +41697,27 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
           "0x505C|PTR_WideCharToMultiByte_0040505c|000056be"
         ],
+        "LoD/1.07": [
+          "0x53C0|g_abData_4053b3[13]|",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0x6640|DWORD_00406640|0x0",
+          "0x53B8|lpSrcStr_004053b8|",
+          "0x5090|g_pfnLCMapStringW|000057aa",
+          "0x53B4|lpSrcStr_004053b4|",
+          "0x508C|g_pfnLCMapStringA|0000579a",
+          "0x6638|g_dwThreadLocaleCodePage|0x0",
+          "0x5088|g_pfnMultiByteToWideChar|00005784",
+          "0x505C|g_pfnWideCharToMultiByte|000056be"
+        ],
         "LoD/1.08": [
           "0x53C0|DAT_004053c0|-0x1",
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6640|DAT_00406640|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5090|PTR_LCMapStringW_00405090|000057aa",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x508C|PTR_LCMapStringA_0040508c|0000579a",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
@@ -39810,9 +41728,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6640|DAT_00406640|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5090|PTR_LCMapStringW_00405090|000057aa",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x508C|PTR_LCMapStringA_0040508c|0000579a",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
@@ -39823,9 +41741,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6640|DAT_00406640|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5090|PTR_LCMapStringW_00405090|000057aa",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x508C|PTR_LCMapStringA_0040508c|0000579a",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
@@ -39836,9 +41754,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6640|DAT_00406640|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5090|PTR_LCMapStringW_00405090|000057aa",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x508C|PTR_LCMapStringA_0040508c|0000579a",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
@@ -39849,9 +41767,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6640|DAT_00406640|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5090|PTR_LCMapStringW_00405090|000057aa",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x508C|PTR_LCMapStringA_0040508c|0000579a",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
@@ -39862,9 +41780,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6640|DAT_00406640|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5090|PTR_LCMapStringW_00405090|000057aa",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x508C|PTR_LCMapStringA_0040508c|0000579a",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
@@ -39875,9 +41793,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6640|DAT_00406640|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5090|PTR_LCMapStringW_00405090|000057aa",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x508C|PTR_LCMapStringA_0040508c|0000579a",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
@@ -39888,9 +41806,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6640|DAT_00406640|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5090|PTR_LCMapStringW_00405090|000057aa",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x508C|PTR_LCMapStringA_0040508c|0000579a",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
@@ -39901,9 +41819,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6640|DAT_00406640|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5090|PTR_LCMapStringW_00405090|000057aa",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x508C|PTR_LCMapStringA_0040508c|0000579a",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784",
@@ -39981,6 +41899,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -40003,6 +41922,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -40025,6 +41945,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -40047,6 +41968,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 11,
         "Classic/1.03": 11,
         "Classic/1.04c": 11,
+        "Classic/1.09d": 11,
         "LoD/1.07": 11,
         "LoD/1.08": 11,
         "LoD/1.09": 11,
@@ -40069,6 +41991,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -40127,6 +42050,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_PlayerData"
         ],
         "Classic/1.04c": [
+          "PROP_LARGE",
+          "PARAM_8",
+          "STRUCT_Act",
+          "STRUCT_Inventory",
+          "PROP_LOOPHEAVY",
+          "STRUCT_UnitAny",
+          "STRUCT_Control",
+          "STRUCT_PlayerData"
+        ],
+        "Classic/1.09d": [
           "PROP_LARGE",
           "PARAM_8",
           "STRUCT_Act",
@@ -40293,6 +42226,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -40317,6 +42251,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402B00",
         "Classic/1.03": "0x00402B00",
         "Classic/1.04c": "0x00402B00",
+        "Classic/1.09d": "0x00402B00",
         "LoD/1.07": "0x00402B00",
         "LoD/1.08": "0x00402B00",
         "LoD/1.09": "0x00402B00",
@@ -40339,6 +42274,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2B00",
         "Classic/1.03": "0x2B00",
         "Classic/1.04c": "0x2B00",
+        "Classic/1.09d": "0x2B00",
         "LoD/1.07": "0x2B00",
         "LoD/1.08": "0x2B00",
         "LoD/1.09": "0x2B00",
@@ -40361,6 +42297,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 43,
         "Classic/1.03": 43,
         "Classic/1.04c": 43,
+        "Classic/1.09d": 43,
         "LoD/1.07": 43,
         "LoD/1.08": 43,
         "LoD/1.09": 43,
@@ -40411,6 +42348,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "Classic/1.04c": [
+          "LocaleMapStringWithConversion|0x4028DC"
+        ],
+        "Classic/1.09d": [
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.07": [
@@ -40529,6 +42469,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2B20|POP|ESI"
         ],
         "Classic/1.04c": [
+          "0x2B00|MOV|EDX, dword ptr [ESP + 0x8]",
+          "0x2B04|MOV|EAX, dword ptr [ESP + 0x4]",
+          "0x2B08|TEST|EDX, EDX",
+          "0x2B0A|PUSH|ESI",
+          "0x2B0B|LEA|ECX, [EDX + -0x1]",
+          "0x2B0E|JZ|0x00402b1d",
+          "0x2B10|CMP|byte ptr [EAX], 0x0",
+          "0x2B13|JZ|0x00402b1d",
+          "0x2B15|INC|EAX",
+          "0x2B16|MOV|ESI, ECX",
+          "0x2B18|DEC|ECX",
+          "0x2B19|TEST|ESI, ESI",
+          "0x2B1B|JNZ|0x00402b10",
+          "0x2B1D|CMP|byte ptr [EAX], 0x0",
+          "0x2B20|POP|ESI"
+        ],
+        "Classic/1.09d": [
           "0x2B00|MOV|EDX, dword ptr [ESP + 0x8]",
           "0x2B04|MOV|EAX, dword ptr [ESP + 0x4]",
           "0x2B08|TEST|EDX, EDX",
@@ -40807,6 +42764,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 20,
         "Classic/1.03": 20,
         "Classic/1.04c": 20,
+        "Classic/1.09d": 20,
         "LoD/1.07": 20,
         "LoD/1.08": 20,
         "LoD/1.09": 20,
@@ -40829,6 +42787,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -40851,6 +42810,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -40873,6 +42833,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "c365f0335b7bc4452623cbc78de16e67",
         "Classic/1.03": "c365f0335b7bc4452623cbc78de16e67",
         "Classic/1.04c": "c365f0335b7bc4452623cbc78de16e67",
+        "Classic/1.09d": "c365f0335b7bc4452623cbc78de16e67",
         "LoD/1.07": "c365f0335b7bc4452623cbc78de16e67",
         "LoD/1.08": "c365f0335b7bc4452623cbc78de16e67",
         "LoD/1.09": "c365f0335b7bc4452623cbc78de16e67",
@@ -40895,6 +42856,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -40917,6 +42879,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -40955,6 +42918,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_2",
+          "PROP_LEAF",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_2",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -41041,6 +43009,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -41065,6 +43034,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402B2B",
         "Classic/1.03": "0x00402B2B",
         "Classic/1.04c": "0x00402B2B",
+        "Classic/1.09d": "0x00402B2B",
         "LoD/1.07": "0x00402B2B",
         "LoD/1.08": "0x00402B2B",
         "LoD/1.09": "0x00402B2B",
@@ -41087,6 +43057,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2B2B",
         "Classic/1.03": "0x2B2B",
         "Classic/1.04c": "0x2B2B",
+        "Classic/1.09d": "0x2B2B",
         "LoD/1.07": "0x2B2B",
         "LoD/1.08": "0x2B2B",
         "LoD/1.09": "0x2B2B",
@@ -41109,6 +43080,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 318,
         "Classic/1.03": 318,
         "Classic/1.04c": 318,
+        "Classic/1.09d": 318,
         "LoD/1.07": 318,
         "LoD/1.08": 318,
         "LoD/1.09": 318,
@@ -41147,144 +43119,148 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "GetStringTypeA|0x26",
-          "_memset|0x403CB0",
-          "AllocateStackSpace|0x403C80",
-          "GetStringTypeW|0x27",
-          "MultiByteToWideChar|0x23"
-        ],
-        "Classic/1.01": [
-          "AllocateStackSpace|0x403C80",
-          "_memset|0x403CB0",
-          "GetStringTypeA|0x26",
-          "MultiByteToWideChar|0x23",
-          "GetStringTypeW|0x27"
-        ],
-        "Classic/1.02": [
-          "MultiByteToWideChar|0x23",
           "_memset|0x403CB0",
           "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
           "GetStringTypeA|0x26",
           "AllocateStackSpace|0x403C80"
+        ],
+        "Classic/1.01": [
+          "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeA|0x26",
+          "_memset|0x403CB0"
+        ],
+        "Classic/1.02": [
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeW|0x27",
+          "GetStringTypeA|0x26",
+          "_memset|0x403CB0",
+          "MultiByteToWideChar|0x23"
         ],
         "Classic/1.03": [
           "GetStringTypeA|0x26",
+          "AllocateStackSpace|0x403C80",
+          "_memset|0x403CB0",
+          "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23"
+        ],
+        "Classic/1.04c": [
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeA|0x26",
+          "_memset|0x403CB0",
+          "GetStringTypeW|0x27"
+        ],
+        "Classic/1.09d": [
           "_memset|0x403CB0",
           "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80",
-          "GetStringTypeW|0x27"
-        ],
-        "Classic/1.04c": [
-          "_memset|0x403CB0",
-          "GetStringTypeA|0x26",
           "GetStringTypeW|0x27",
-          "MultiByteToWideChar|0x23",
-          "AllocateStackSpace|0x403C80"
+          "GetStringTypeA|0x26"
         ],
         "LoD/1.07": [
           "_memset|0x403CB0",
-          "GetStringTypeW|0x27",
-          "GetStringTypeA|0x26",
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23"
+          "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.08": [
-          "MultiByteToWideChar|0x23",
-          "AllocateStackSpace|0x403C80",
           "GetStringTypeW|0x27",
+          "_memset|0x403CB0",
+          "AllocateStackSpace|0x403C80",
           "GetStringTypeA|0x26",
-          "_memset|0x403CB0"
+          "MultiByteToWideChar|0x23"
         ],
         "LoD/1.09": [
           "MultiByteToWideChar|0x23",
+          "_memset|0x403CB0",
+          "GetStringTypeW|0x27",
           "GetStringTypeA|0x26",
+          "AllocateStackSpace|0x403C80"
+        ],
+        "LoD/1.09b": [
+          "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
+          "_memset|0x403CB0",
+          "GetStringTypeA|0x26",
+          "AllocateStackSpace|0x403C80"
+        ],
+        "LoD/1.09d": [
+          "GetStringTypeA|0x26",
+          "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
+          "_memset|0x403CB0",
+          "AllocateStackSpace|0x403C80"
+        ],
+        "LoD/1.10": [
           "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23",
+          "GetStringTypeA|0x26",
           "_memset|0x403CB0",
           "GetStringTypeW|0x27"
         ],
-        "LoD/1.09b": [
-          "AllocateStackSpace|0x403C80",
-          "GetStringTypeW|0x27",
-          "_memset|0x403CB0",
-          "GetStringTypeA|0x26",
-          "MultiByteToWideChar|0x23"
-        ],
-        "LoD/1.09d": [
-          "GetStringTypeW|0x27",
-          "GetStringTypeA|0x26",
-          "MultiByteToWideChar|0x23",
-          "AllocateStackSpace|0x403C80",
-          "_memset|0x403CB0"
-        ],
-        "LoD/1.10": [
-          "MultiByteToWideChar|0x23",
+        "LoD/1.11": [
           "_memset|0x403CB0",
           "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80",
           "GetStringTypeA|0x26"
-        ],
-        "LoD/1.11": [
-          "MultiByteToWideChar|0x23",
-          "_memset|0x403CB0",
-          "GetStringTypeA|0x26",
-          "GetStringTypeW|0x27",
-          "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.11b": [
           "MultiByteToWideChar|0x23",
           "_memset|0x403CB0",
-          "GetStringTypeW|0x27",
+          "AllocateStackSpace|0x403C80",
           "GetStringTypeA|0x26",
-          "AllocateStackSpace|0x403C80"
+          "GetStringTypeW|0x27"
         ],
         "LoD/1.12a": [
+          "AllocateStackSpace|0x403C80",
+          "_memset|0x403CB0",
+          "MultiByteToWideChar|0x23",
+          "GetStringTypeW|0x27",
+          "GetStringTypeA|0x26"
+        ],
+        "LoD/1.13c": [
           "GetStringTypeA|0x26",
           "GetStringTypeW|0x27",
           "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80",
           "_memset|0x403CB0"
         ],
-        "LoD/1.13c": [
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23",
-          "_memset|0x403CB0",
-          "GetStringTypeW|0x27",
-          "GetStringTypeA|0x26"
-        ],
         "LoD/1.13d": [
+          "GetStringTypeA|0x26",
           "AllocateStackSpace|0x403C80",
-          "_memset|0x403CB0",
           "MultiByteToWideChar|0x23",
           "GetStringTypeW|0x27",
-          "GetStringTypeA|0x26"
+          "_memset|0x403CB0"
         ],
         "LoD/1.14a": [
-          "GetStringTypeW|0x27",
-          "AllocateStackSpace|0x403C80",
           "GetStringTypeA|0x26",
-          "_memset|0x403CB0",
-          "MultiByteToWideChar|0x23"
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
+          "_memset|0x403CB0"
         ],
         "LoD/1.14b": [
-          "_memset|0x403CB0",
+          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80",
           "GetStringTypeA|0x26",
           "GetStringTypeW|0x27",
-          "MultiByteToWideChar|0x23"
+          "_memset|0x403CB0"
         ],
         "LoD/1.14c": [
-          "MultiByteToWideChar|0x23",
-          "_memset|0x403CB0",
-          "AllocateStackSpace|0x403C80",
           "GetStringTypeA|0x26",
-          "GetStringTypeW|0x27"
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeW|0x27",
+          "_memset|0x403CB0"
         ],
         "LoD/1.14d": [
-          "GetStringTypeA|0x26",
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23",
           "_memset|0x403CB0",
-          "GetStringTypeW|0x27"
+          "MultiByteToWideChar|0x23",
+          "GetStringTypeW|0x27",
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeA|0x26"
         ]
       },
       "callers": {
@@ -41301,6 +43277,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeCharacterTables|0x401861"
         ],
         "Classic/1.04c": [
+          "InitializeCharacterTables|0x401861"
+        ],
+        "Classic/1.09d": [
           "InitializeCharacterTables|0x401861"
         ],
         "LoD/1.07": [
@@ -41419,6 +43398,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2B56|XOR|EBX, EBX"
         ],
         "Classic/1.04c": [
+          "0x2B2B|PUSH|EBP",
+          "0x2B2C|MOV|EBP, ESP",
+          "0x2B2E|PUSH|-0x1",
+          "0x2B30|PUSH|0x4053d8",
+          "0x2B35|PUSH|0x402678",
+          "0x2B3A|MOV|EAX, FS:[0x0]",
+          "0x2B40|PUSH|EAX",
+          "0x2B41|MOV|dword ptr FS:[0x0], ESP",
+          "0x2B48|SUB|ESP, 0x18",
+          "0x2B4B|PUSH|EBX",
+          "0x2B4C|PUSH|ESI",
+          "0x2B4D|PUSH|EDI",
+          "0x2B4E|MOV|dword ptr [EBP + -0x18], ESP",
+          "0x2B51|MOV|EAX, [0x00406644]",
+          "0x2B56|XOR|EBX, EBX"
+        ],
+        "Classic/1.09d": [
           "0x2B2B|PUSH|EBP",
           "0x2B2C|MOV|EBP, ESP",
           "0x2B2E|PUSH|-0x1",
@@ -41697,6 +43693,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 117,
         "Classic/1.03": 117,
         "Classic/1.04c": 117,
+        "Classic/1.09d": 117,
         "LoD/1.07": 117,
         "LoD/1.08": 117,
         "LoD/1.09": 117,
@@ -41719,6 +43716,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 88,
         "Classic/1.03": 88,
         "Classic/1.04c": 88,
+        "Classic/1.09d": 88,
         "LoD/1.07": 88,
         "LoD/1.08": 88,
         "LoD/1.09": 88,
@@ -41741,6 +43739,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -41763,6 +43762,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "a7046d73bbd286a50d5e7204509858d2",
         "Classic/1.03": "a7046d73bbd286a50d5e7204509858d2",
         "Classic/1.04c": "a7046d73bbd286a50d5e7204509858d2",
+        "Classic/1.09d": "a7046d73bbd286a50d5e7204509858d2",
         "LoD/1.07": "a7046d73bbd286a50d5e7204509858d2",
         "LoD/1.08": "a7046d73bbd286a50d5e7204509858d2",
         "LoD/1.09": "a7046d73bbd286a50d5e7204509858d2",
@@ -41805,6 +43805,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2B7D||0x4053B4"
         ],
         "Classic/1.04c": [
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
+        ],
+        "Classic/1.09d": [
           "0x2B30||0x4053D8",
           "0x2B35||0x402678",
           "0x2B64||0x4053B8",
@@ -41967,7 +43973,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x53D8|DAT_004053d8|-0x1",
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
@@ -41980,14 +43986,27 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6638|g_dwThreadLocaleCodePage|0x0",
           "0x5088|PTR_MultiByteToWideChar_00405088|00005784"
         ],
+        "LoD/1.07": [
+          "0x53D8|g_dwPad_004053d8|0xffffffff",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0x6644|g_dwCharacterTypeMode|0x0",
+          "0x53B8|lpSrcStr_004053b8|",
+          "0x5098|g_pfnGetStringTypeW|000057cc",
+          "0x53B4|lpSrcStr_004053b4|",
+          "0x5094|g_pfnGetStringTypeA|000057ba",
+          "0x6628|g_dwLocaleFlags|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0",
+          "0x5088|g_pfnMultiByteToWideChar|00005784"
+        ],
         "LoD/1.08": [
           "0x53D8|DAT_004053d8|-0x1",
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6644|DAT_00406644|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5098|PTR_GetStringTypeW_00405098|000057cc",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x5094|PTR_GetStringTypeA_00405094|000057ba",
           "0x6628|g_dwLocaleFlags|0x0",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
@@ -41998,9 +44017,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6644|DAT_00406644|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5098|PTR_GetStringTypeW_00405098|000057cc",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x5094|PTR_GetStringTypeA_00405094|000057ba",
           "0x6628|g_dwLocaleFlags|0x0",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
@@ -42011,9 +44030,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6644|DAT_00406644|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5098|PTR_GetStringTypeW_00405098|000057cc",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x5094|PTR_GetStringTypeA_00405094|000057ba",
           "0x6628|g_dwLocaleFlags|0x0",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
@@ -42024,9 +44043,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6644|DAT_00406644|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5098|PTR_GetStringTypeW_00405098|000057cc",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x5094|PTR_GetStringTypeA_00405094|000057ba",
           "0x6628|g_dwLocaleFlags|0x0",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
@@ -42037,9 +44056,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6644|DAT_00406644|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5098|PTR_GetStringTypeW_00405098|000057cc",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x5094|PTR_GetStringTypeA_00405094|000057ba",
           "0x6628|g_dwLocaleFlags|0x0",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
@@ -42050,9 +44069,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6644|DAT_00406644|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5098|PTR_GetStringTypeW_00405098|000057cc",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x5094|PTR_GetStringTypeA_00405094|000057ba",
           "0x6628|g_dwLocaleFlags|0x0",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
@@ -42063,9 +44082,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6644|DAT_00406644|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5098|PTR_GetStringTypeW_00405098|000057cc",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x5094|PTR_GetStringTypeA_00405094|000057ba",
           "0x6628|g_dwLocaleFlags|0x0",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
@@ -42076,9 +44095,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6644|DAT_00406644|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5098|PTR_GetStringTypeW_00405098|000057cc",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x5094|PTR_GetStringTypeA_00405094|000057ba",
           "0x6628|g_dwLocaleFlags|0x0",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
@@ -42089,9 +44108,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2678|LAB_00402678|",
           "0xFF9FF000|ExceptionList|00000000",
           "0x6644|DAT_00406644|0x0",
-          "0x53B8|DAT_004053b8|0x0",
+          "0x53B8|lpSrcStr_004053b8|00000000",
           "0x5098|PTR_GetStringTypeW_00405098|000057cc",
-          "0x53B4|DAT_004053b4|0x0",
+          "0x53B4|lpSrcStr_004053b4|00000000",
           "0x5094|PTR_GetStringTypeA_00405094|000057ba",
           "0x6628|g_dwLocaleFlags|0x0",
           "0x6638|g_dwThreadLocaleCodePage|0x0",
@@ -42169,7 +44188,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
-        "LoD/1.07": 5,
+        "Classic/1.09d": 5,
+        "LoD/1.07": 2,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
         "LoD/1.09b": 5,
@@ -42191,6 +44211,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -42213,6 +44234,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -42235,6 +44257,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 11,
         "Classic/1.03": 11,
         "Classic/1.04c": 11,
+        "Classic/1.09d": 11,
         "LoD/1.07": 11,
         "LoD/1.08": 11,
         "LoD/1.09": 11,
@@ -42257,6 +44280,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 7,
         "Classic/1.03": 7,
         "Classic/1.04c": 7,
+        "Classic/1.09d": 7,
         "LoD/1.07": 7,
         "LoD/1.08": 7,
         "LoD/1.09": 7,
@@ -42307,6 +44331,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_PlayerData"
         ],
         "Classic/1.04c": [
+          "PARAM_7",
+          "STRUCT_Act",
+          "STRUCT_Inventory",
+          "STRUCT_UnitAny",
+          "STRUCT_Control",
+          "STRUCT_PlayerData"
+        ],
+        "Classic/1.09d": [
           "PARAM_7",
           "STRUCT_Act",
           "STRUCT_Inventory",
@@ -42441,6 +44473,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -42465,6 +44498,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402C74",
         "Classic/1.03": "0x00402C74",
         "Classic/1.04c": "0x00402C74",
+        "Classic/1.09d": "0x00402C74",
         "LoD/1.07": "0x00402C74",
         "LoD/1.08": "0x00402C74",
         "LoD/1.09": "0x00402C74",
@@ -42487,6 +44521,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2C74",
         "Classic/1.03": "0x2C74",
         "Classic/1.04c": "0x2C74",
+        "Classic/1.09d": "0x2C74",
         "LoD/1.07": "0x2C74",
         "LoD/1.08": "0x2C74",
         "LoD/1.09": "0x2C74",
@@ -42509,6 +44544,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 68,
         "Classic/1.03": 68,
         "Classic/1.04c": 68,
+        "Classic/1.09d": 68,
         "LoD/1.07": 68,
         "LoD/1.08": 68,
         "LoD/1.09": 68,
@@ -42525,8 +44561,12 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 68,
         "LoD/1.14d": 68
       },
+      "name": "GetMultiByteCharState",
+      "signature": "int GetMultiByteCharState(byte param_1, int param_2)",
       "calling_convention": "__cdecl",
       "return_type": "int",
+      "comment": "Determines the multi-byte character state for the next byte in a sequence.\n\nAlgorithm:\n1. Convert byte value to index for table lookup\n2. If current state is 1 (expecting trail byte):\n   a. Check bit 0x8 in character type table\n   b. Return 2 if valid trail byte, -1 if not\n3. Otherwise, check for lead byte (bit 0x4 in type table)\n   a. If lead byte detected, return 1 (expecting trail)\n4. Check character width table with mask 0x157\n   a. If no width bits and no lead/trail bits, return -1 (single byte)\n5. Return 0 (unknown/continue state)\n\nParameters:\n  bCharValue - Byte value to classify (0-255)\n  nCurrentState - Current parsing state:\n    -1 = Start/single byte complete\n     0 = Unknown/continue\n     1 = Lead byte seen, expecting trail byte\n\nReturns:\n  -1 = Single byte character or sequence complete\n   0 = Unknown state, continue parsing\n   1 = Lead byte detected, next byte should be trail\n   2 = Valid trail byte found (from state 1)\n\nMagic Numbers:\n  0x4 - Lead byte indicator bit in character type table\n  0x8 - Trail byte indicator bit in character type table\n  0x3 - Lead/trail byte mask\n  0x157 - Character width classification mask (CType bits)\n\nReferenced Tables:\n  DWORD_004068c0+1 - Multi-byte character type flags table (indexed by byte value)\n  g_adwData_4062a8+2 - Character width/classification table (word entries)",
+      "name_source": "Classic/1.00",
       "method": "NOP",
       "index": "NOP:f2bfd267937fe3c0bd718ba8bb6c41218df7436332f9ab45352abc7430275b62",
       "indexes": {
@@ -42541,67 +44581,69 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "0fa1e39de5e198af9c73a3977127b991",
         "PRO": "55ad8d3af928417566a7f1f214235c31"
       },
-      "display_name": "NOP_f2bfd267937fe3c0",
       "callers": {
         "Classic/1.00": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "Classic/1.01": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "Classic/1.02": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "Classic/1.03": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "Classic/1.04c": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
+        ],
+        "Classic/1.09d": [
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.07": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.08": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.09": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.09b": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.09d": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.10": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.11": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.11b": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.12a": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.13c": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.13d": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.14a": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.14b": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.14c": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ],
         "LoD/1.14d": [
-          "FUN_00401a02|0x401A02"
+          "GetTrailingLeadByteState|0x401A02"
         ]
       },
       "instructions": {
@@ -42674,6 +44716,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2CA0|OR|EAX, 0xffffffff"
         ],
         "Classic/1.04c": [
+          "0x2C74|MOV|EAX, dword ptr [ESP + 0x8]",
+          "0x2C78|DEC|EAX",
+          "0x2C79|MOVZX|EAX, byte ptr [ESP + 0x4]",
+          "0x2C7E|JZ|0x00402ca7",
+          "0x2C80|MOV|CL, byte ptr [EAX + 0x4068c1]",
+          "0x2C86|TEST|CL, 0x4",
+          "0x2C89|JZ|0x00402c8f",
+          "0x2C8B|PUSH|0x1",
+          "0x2C8D|POP|EAX",
+          "0x2C8E|RET|",
+          "0x2C8F|TEST|word ptr [EAX*0x2 + 0x4062aa], 0x157",
+          "0x2C99|JNZ|0x00402ca4",
+          "0x2C9B|TEST|CL, 0x3",
+          "0x2C9E|JNZ|0x00402ca4",
+          "0x2CA0|OR|EAX, 0xffffffff"
+        ],
+        "Classic/1.09d": [
           "0x2C74|MOV|EAX, dword ptr [ESP + 0x8]",
           "0x2C78|DEC|EAX",
           "0x2C79|MOVZX|EAX, byte ptr [ESP + 0x4]",
@@ -42952,6 +45011,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 25,
         "Classic/1.03": 25,
         "Classic/1.04c": 25,
+        "Classic/1.09d": 25,
         "LoD/1.07": 25,
         "LoD/1.08": 25,
         "LoD/1.09": 25,
@@ -42974,6 +45034,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -42996,6 +45057,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -43018,6 +45080,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "b31c4daec36fb36fa3cb9b8ebe073642",
         "Classic/1.03": "b31c4daec36fb36fa3cb9b8ebe073642",
         "Classic/1.04c": "b31c4daec36fb36fa3cb9b8ebe073642",
+        "Classic/1.09d": "b31c4daec36fb36fa3cb9b8ebe073642",
         "LoD/1.07": "b31c4daec36fb36fa3cb9b8ebe073642",
         "LoD/1.08": "b31c4daec36fb36fa3cb9b8ebe073642",
         "LoD/1.09": "b31c4daec36fb36fa3cb9b8ebe073642",
@@ -43060,6 +45123,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2CA7||0x4068C1"
         ],
         "Classic/1.04c": [
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
+        ],
+        "Classic/1.09d": [
           "0x2C80||0x4068C1",
           "0x2C8F||0x4062AA",
           "0x2C8F||0x157",
@@ -43177,9 +45246,13 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x68C1|DAT_004068c0+1|",
           "0x62AA|DAT_004062aa|0x20"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x68C1|DAT_004068c0+1|",
           "0x62AA|DAT_004062aa|0x20"
+        ],
+        "LoD/1.07": [
+          "0x68C1|g_abCharacterTypeFlags[1]|",
+          "0x62AA|g_adwData_4062a8[0]+2|"
         ],
         "LoD/1.08": [
           "0x68C1|DAT_004068c0+1|",
@@ -43244,6 +45317,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -43266,6 +45340,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -43288,6 +45363,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -43310,6 +45386,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -43344,6 +45421,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "PARAM_2",
+          "PROP_LEAF"
+        ],
+        "Classic/1.09d": [
           "PARAM_2",
           "PROP_LEAF"
         ],
@@ -43414,6 +45495,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -43438,6 +45520,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402CC0",
         "Classic/1.03": "0x00402CC0",
         "Classic/1.04c": "0x00402CC0",
+        "LoD/1.07": "0x00402CC0",
         "LoD/1.08": "0x00402CC0",
         "LoD/1.09": "0x00402CC0",
         "LoD/1.09b": "0x00402CC0",
@@ -43459,6 +45542,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2CC0",
         "Classic/1.03": "0x2CC0",
         "Classic/1.04c": "0x2CC0",
+        "LoD/1.07": "0x2CC0",
         "LoD/1.08": "0x2CC0",
         "LoD/1.09": "0x2CC0",
         "LoD/1.09b": "0x2CC0",
@@ -43480,6 +45564,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
         "LoD/1.09b": 5,
@@ -43541,6 +45626,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2CC3|POP|EBX",
           "0x2CC4|RET|"
         ],
+        "LoD/1.07": [
+          "0x2CC0|LEA|EAX, [EDX + -0x1]",
+          "0x2CC3|POP|EBX",
+          "0x2CC4|RET|"
+        ],
         "LoD/1.08": [
           "0x2CC0|LEA|EAX, [EDX + -0x1]",
           "0x2CC3|POP|EBX",
@@ -43618,6 +45708,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
         "LoD/1.09b": 3,
@@ -43639,6 +45730,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
         "LoD/1.09b": 4,
@@ -43660,6 +45752,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
@@ -43681,6 +45774,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "3ecdb5e459e29b4117490dc114e98574",
         "Classic/1.03": "3ecdb5e459e29b4117490dc114e98574",
         "Classic/1.04c": "3ecdb5e459e29b4117490dc114e98574",
+        "Classic/1.09d": "3ecdb5e459e29b4117490dc114e98574",
         "LoD/1.07": "3ecdb5e459e29b4117490dc114e98574",
         "LoD/1.08": "3ecdb5e459e29b4117490dc114e98574",
         "LoD/1.09": "3ecdb5e459e29b4117490dc114e98574",
@@ -43703,6 +45797,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "LoD/1.07": 2,
         "LoD/1.09d": 2,
         "LoD/1.10": 2,
         "LoD/1.11": 2,
@@ -43740,6 +45835,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "PARAM_2",
+          "PROP_NOCALLER",
+          "PROP_TINY",
+          "PROP_LEAF"
+        ],
+        "LoD/1.07": [
           "PARAM_2",
           "PROP_NOCALLER",
           "PROP_TINY",
@@ -43836,6 +45937,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
         "LoD/1.09b": "internal",
@@ -43852,7 +45954,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14d": "internal"
       },
       "candidates": {
-        "LoD/1.07": {
+        "Classic/1.09d": {
           "address": "0x00402E00",
           "rva": "0x2E00",
           "confidence": 0.886,
@@ -43869,6 +45971,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402CD6",
         "Classic/1.03": "0x00402CD6",
         "Classic/1.04c": "0x00402CD6",
+        "Classic/1.09d": "0x00402CD6",
         "LoD/1.07": "0x00402CD6",
         "LoD/1.08": "0x00402CD6",
         "LoD/1.09": "0x00402CD6",
@@ -43891,6 +45994,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2CD6",
         "Classic/1.03": "0x2CD6",
         "Classic/1.04c": "0x2CD6",
+        "Classic/1.09d": "0x2CD6",
         "LoD/1.07": "0x2CD6",
         "LoD/1.08": "0x2CD6",
         "LoD/1.09": "0x2CD6",
@@ -43913,6 +46017,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 182,
         "Classic/1.03": 182,
         "Classic/1.04c": 182,
+        "Classic/1.09d": 182,
         "LoD/1.07": 182,
         "LoD/1.08": 182,
         "LoD/1.09": 182,
@@ -43962,8 +46067,11 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "_strstr|0x401C00"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "FUN_00401c00|0x401C00"
+        ],
+        "LoD/1.07": [
+          "_strstr|0x401C00"
         ],
         "LoD/1.08": [
           "_strstr|0x401C00"
@@ -44078,6 +46186,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2CFB|OR|EBX, EAX"
         ],
         "Classic/1.04c": [
+          "0x2CD6|PUSH|EBX",
+          "0x2CD7|MOV|EBX, EAX",
+          "0x2CD9|SHL|EAX, 0x8",
+          "0x2CDC|MOV|EDX, dword ptr [ESP + 0x8]",
+          "0x2CE0|TEST|EDX, 0x3",
+          "0x2CE6|JZ|0x00402cfb",
+          "0x2CE8|MOV|CL, byte ptr [EDX]",
+          "0x2CEA|INC|EDX",
+          "0x2CEB|CMP|CL, BL",
+          "0x2CED|JZ|0x00402cc0",
+          "0x2CEF|TEST|CL, CL",
+          "0x2CF1|JZ|0x00402d44",
+          "0x2CF3|TEST|EDX, 0x3",
+          "0x2CF9|JNZ|0x00402ce8",
+          "0x2CFB|OR|EBX, EAX"
+        ],
+        "Classic/1.09d": [
           "0x2CD6|PUSH|EBX",
           "0x2CD7|MOV|EBX, EAX",
           "0x2CD9|SHL|EAX, 0x8",
@@ -44356,6 +46481,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 84,
         "Classic/1.03": 84,
         "Classic/1.04c": 84,
+        "Classic/1.09d": 84,
         "LoD/1.07": 84,
         "LoD/1.08": 84,
         "LoD/1.09": 84,
@@ -44378,6 +46504,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -44400,6 +46527,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -44422,6 +46550,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "69f7deb725db18136e67b38972cf97de",
         "Classic/1.03": "69f7deb725db18136e67b38972cf97de",
         "Classic/1.04c": "69f7deb725db18136e67b38972cf97de",
+        "Classic/1.09d": "69f7deb725db18136e67b38972cf97de",
         "LoD/1.07": "69f7deb725db18136e67b38972cf97de",
         "LoD/1.08": "69f7deb725db18136e67b38972cf97de",
         "LoD/1.09": "69f7deb725db18136e67b38972cf97de",
@@ -44452,6 +46581,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2D33||0x1010100"
         ],
         "Classic/1.04c": [
+          "0x2D33||0x1010100"
+        ],
+        "Classic/1.09d": [
           "0x2D33||0x1010100"
         ],
         "LoD/1.07": [
@@ -44506,6 +46638,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -44528,6 +46661,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -44550,6 +46684,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -44588,6 +46723,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_LOOPHEAVY",
+          "PROP_LEAF"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_LOOPHEAVY",
           "PROP_LEAF"
@@ -44674,6 +46814,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -44698,6 +46839,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402D8C",
         "Classic/1.03": "0x00402D8C",
         "Classic/1.04c": "0x00402D8C",
+        "Classic/1.09d": "0x00402D8C",
         "LoD/1.07": "0x00402D8C",
         "LoD/1.08": "0x00402D8C",
         "LoD/1.09": "0x00402D8C",
@@ -44720,6 +46862,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2D8C",
         "Classic/1.03": "0x2D8C",
         "Classic/1.04c": "0x2D8C",
+        "Classic/1.09d": "0x2D8C",
         "LoD/1.07": "0x2D8C",
         "LoD/1.08": "0x2D8C",
         "LoD/1.09": "0x2D8C",
@@ -44742,6 +46885,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 17,
         "Classic/1.03": 17,
         "Classic/1.04c": 17,
+        "Classic/1.09d": 17,
         "LoD/1.07": 17,
         "LoD/1.08": 17,
         "LoD/1.09": 17,
@@ -44758,8 +46902,12 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 17,
         "LoD/1.14d": 17
       },
+      "name": "IsLeadByte",
+      "signature": "BOOL IsLeadByte(byte bChar)",
       "calling_convention": "__cdecl",
       "return_type": "undefined",
+      "comment": "Checks if a byte is a lead byte in a multi-byte character set (MBCS).\nThis is a thin wrapper around CheckCharacterType that provides a cleaner API\nfor MBCS lead byte detection used during command line argument parsing.\n\nAlgorithm:\n1. Push _LEADBYTE flag (0x4) onto stack\n2. Push character type category (0x0) onto stack\n3. Push bChar parameter onto stack\n4. Call CheckCharacterType to perform the actual classification\n5. Clean up stack (cdecl) and return result\n\nParameters:\n- bChar (byte): The byte value to test for lead byte status\n\nReturns:\n- BOOL: TRUE (non-zero) if bChar is a valid lead byte, FALSE (0) otherwise\n\nSpecial Cases:\n- In single-byte character sets (SBCS), always returns FALSE\n- Lead bytes are typically in range 0x81-0xFE for DBCS code pages (Shift-JIS, GBK, Big5)\n- The function does not validate the trailing byte\n\nMagic Numbers:\n- 0x0: Character type category parameter (standard check mode)\n- 0x4: _LEADBYTE flag - checks if byte is a lead byte of a multi-byte character\n\nCalled By:\n- GetCommandLineArgs: Used to correctly parse multi-byte command line strings\n\nRelated Functions:\n- CheckCharacterType: Core implementation that performs the actual character classification",
+      "name_source": "LoD/1.07",
       "method": "NOP",
       "index": "NOP:bb716e3b63ba9a28706c5a9470d8338740099228119463a2a9478342059c3f6f",
       "indexes": {
@@ -44774,129 +46922,134 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "62e304a7d521240f86cfa75cc629cf4d",
         "PRO": "e067e555be462a2009cc84404e18b1ac"
       },
-      "display_name": "NOP_bb716e3b63ba9a28",
       "callees": {
         "Classic/1.00": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "Classic/1.01": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "Classic/1.02": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "Classic/1.03": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "Classic/1.04c": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
+        ],
+        "Classic/1.09d": [
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.07": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.08": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.09": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.09b": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.09d": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.10": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.11": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.11b": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.12a": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.13c": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.13d": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.14a": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.14b": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.14c": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ],
         "LoD/1.14d": [
-          "FUN_00402d9d|0x402D9D"
+          "CheckCharacterType|0x402D9D"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "Classic/1.01": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "Classic/1.02": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "Classic/1.03": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "Classic/1.04c": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
+        ],
+        "Classic/1.09d": [
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.07": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.08": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.09": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.09b": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.09d": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.10": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.11": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.11b": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.12a": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.13c": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.13d": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.14a": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.14b": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.14c": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ],
         "LoD/1.14d": [
-          "FUN_00401f06|0x401F06"
+          "GetCommandLineArgs|0x401F06"
         ]
       },
       "instructions": {
@@ -44933,6 +47086,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2D9C|RET|"
         ],
         "Classic/1.04c": [
+          "0x2D8C|PUSH|0x4",
+          "0x2D8E|PUSH|0x0",
+          "0x2D90|PUSH|dword ptr [ESP + 0xc]",
+          "0x2D94|CALL|0x00402d9d",
+          "0x2D99|ADD|ESP, 0xc",
+          "0x2D9C|RET|"
+        ],
+        "Classic/1.09d": [
           "0x2D8C|PUSH|0x4",
           "0x2D8E|PUSH|0x0",
           "0x2D90|PUSH|dword ptr [ESP + 0xc]",
@@ -45067,6 +47228,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -45089,6 +47251,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "Classic/1.09d": 5,
         "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -45111,6 +47274,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -45133,6 +47297,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "cd85d17a6b193c95680d3fdca645abba",
         "Classic/1.03": "cd85d17a6b193c95680d3fdca645abba",
         "Classic/1.04c": "cd85d17a6b193c95680d3fdca645abba",
+        "Classic/1.09d": "cd85d17a6b193c95680d3fdca645abba",
         "LoD/1.07": "cd85d17a6b193c95680d3fdca645abba",
         "LoD/1.08": "cd85d17a6b193c95680d3fdca645abba",
         "LoD/1.09": "cd85d17a6b193c95680d3fdca645abba",
@@ -45155,6 +47320,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -45177,6 +47343,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -45199,6 +47366,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -45233,6 +47401,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_SMALL"
         ],
@@ -45303,6 +47475,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -45327,6 +47500,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402D9D",
         "Classic/1.03": "0x00402D9D",
         "Classic/1.04c": "0x00402D9D",
+        "Classic/1.09d": "0x00402D9D",
         "LoD/1.07": "0x00402D9D",
         "LoD/1.08": "0x00402D9D",
         "LoD/1.09": "0x00402D9D",
@@ -45349,6 +47523,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2D9D",
         "Classic/1.03": "0x2D9D",
         "Classic/1.04c": "0x2D9D",
+        "Classic/1.09d": "0x2D9D",
         "LoD/1.07": "0x2D9D",
         "LoD/1.08": "0x2D9D",
         "LoD/1.09": "0x2D9D",
@@ -45371,6 +47546,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 49,
         "Classic/1.03": 49,
         "Classic/1.04c": 49,
+        "Classic/1.09d": 49,
         "LoD/1.07": 49,
         "LoD/1.08": 49,
         "LoD/1.09": 49,
@@ -45387,8 +47563,12 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 49,
         "LoD/1.14d": 49
       },
+      "name": "CheckCharacterType",
+      "signature": "undefined4 CheckCharacterType(byte param_1, uint param_2, byte param_3)",
       "calling_convention": "__cdecl",
       "return_type": "undefined4",
+      "comment": "Checks if a character matches specified type criteria using lookup tables.\n\nAlgorithm:\n1. Look up the character's direct flags from the byte table at (DWORD_004068c0 + bChar + 1)\n2. If any bit in bDirectFlags matches the lookup byte, return TRUE immediately\n3. If dwTypeMask is zero, set result to 0\n4. Otherwise, look up the 16-bit character type from table at (g_adwData_4062a8 + bChar*2 + 2)\n5. AND the 16-bit type with dwTypeMask to check for matching type bits\n6. Return TRUE if any masked bits are set, FALSE otherwise\n\nParameters:\n- bChar: Character value (0-255) to check\n- dwTypeMask: Bitmask for extended character type flags (16-bit lookup table)\n- bDirectFlags: Bitmask for direct flag test (8-bit lookup table)\n\nReturns:\n- TRUE (1): Character matches at least one of the specified type criteria\n- FALSE (0): Character does not match any specified criteria\n\nSpecial Cases:\n- If bDirectFlags matches immediately, dwTypeMask check is skipped\n- If dwTypeMask is 0 and bDirectFlags doesn't match, always returns FALSE",
+      "name_source": "Classic/1.00",
       "method": "NOP",
       "index": "NOP:dda17393f54059bbb931f1f8cf0780a64bd1b47352a68bf959a62288863f47ab",
       "indexes": {
@@ -45403,7 +47583,6 @@ var FUNCTIONS_Diablo_II_exe = {
         "CFG": "85d43acaaf4da912180ee68ae75e1834",
         "PRO": "eb79751ac250076fbd4621ac20b498cb"
       },
-      "display_name": "NOP_dda17393f54059bb",
       "callers": {
         "Classic/1.00": [
           "FUN_00402d8c|0x402D8C"
@@ -45420,8 +47599,11 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "FUN_00402d8c|0x402D8C"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "FUN_00402d8c|0x402D8C"
+        ],
+        "LoD/1.07": [
+          "IsLeadByte|0x402D8C"
         ],
         "LoD/1.08": [
           "FUN_00402d8c|0x402D8C"
@@ -45536,6 +47718,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2DCC|POP|EAX"
         ],
         "Classic/1.04c": [
+          "0x2D9D|MOVZX|EAX, byte ptr [ESP + 0x4]",
+          "0x2DA2|MOV|CL, byte ptr [ESP + 0xc]",
+          "0x2DA6|TEST|byte ptr [EAX + 0x4068c1], CL",
+          "0x2DAC|JNZ|0x00402dca",
+          "0x2DAE|CMP|dword ptr [ESP + 0x8], 0x0",
+          "0x2DB3|JZ|0x00402dc3",
+          "0x2DB5|MOVZX|EAX, word ptr [EAX*0x2 + 0x4062aa]",
+          "0x2DBD|AND|EAX, dword ptr [ESP + 0x8]",
+          "0x2DC1|JMP|0x00402dc5",
+          "0x2DC3|XOR|EAX, EAX",
+          "0x2DC5|TEST|EAX, EAX",
+          "0x2DC7|JNZ|0x00402dca",
+          "0x2DC9|RET|",
+          "0x2DCA|PUSH|0x1",
+          "0x2DCC|POP|EAX"
+        ],
+        "Classic/1.09d": [
           "0x2D9D|MOVZX|EAX, byte ptr [ESP + 0x4]",
           "0x2DA2|MOV|CL, byte ptr [ESP + 0xc]",
           "0x2DA6|TEST|byte ptr [EAX + 0x4068c1], CL",
@@ -45814,6 +48013,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -45836,6 +48036,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 13,
         "Classic/1.03": 13,
         "Classic/1.04c": 13,
+        "Classic/1.09d": 13,
         "LoD/1.07": 13,
         "LoD/1.08": 13,
         "LoD/1.09": 13,
@@ -45858,6 +48059,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -45880,6 +48082,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "53a6ac985e66444c6c82f2b7b12d7c09",
         "Classic/1.03": "53a6ac985e66444c6c82f2b7b12d7c09",
         "Classic/1.04c": "53a6ac985e66444c6c82f2b7b12d7c09",
+        "Classic/1.09d": "53a6ac985e66444c6c82f2b7b12d7c09",
         "LoD/1.07": "53a6ac985e66444c6c82f2b7b12d7c09",
         "LoD/1.08": "53a6ac985e66444c6c82f2b7b12d7c09",
         "LoD/1.09": "53a6ac985e66444c6c82f2b7b12d7c09",
@@ -45914,6 +48117,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2DB5||0x4062AA"
         ],
         "Classic/1.04c": [
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
+        ],
+        "Classic/1.09d": [
           "0x2DA6||0x4068C1",
           "0x2DB5||0x4062AA"
         ],
@@ -45999,9 +48206,13 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x68C1|DAT_004068c0+1|",
           "0x62AA|DAT_004062aa|0x20"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x68C1|DAT_004068c0+1|",
           "0x62AA|DAT_004062aa|0x20"
+        ],
+        "LoD/1.07": [
+          "0x68C1|g_abCharacterTypeFlags[1]|",
+          "0x62AA|g_adwData_4062a8[0]+2|"
         ],
         "LoD/1.08": [
           "0x68C1|DAT_004068c0+1|",
@@ -46066,6 +48277,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -46088,6 +48300,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -46110,6 +48323,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -46132,6 +48346,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -46174,6 +48389,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_3",
+          "PROP_LEAF",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_3",
           "PROP_LEAF",
@@ -46276,6 +48497,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -46300,6 +48522,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402DCE",
         "Classic/1.03": "0x00402DCE",
         "Classic/1.04c": "0x00402DCE",
+        "Classic/1.09d": "0x00402DCE",
         "LoD/1.07": "0x00402DCE",
         "LoD/1.08": "0x00402DCE",
         "LoD/1.09": "0x00402DCE",
@@ -46322,6 +48545,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2DCE",
         "Classic/1.03": "0x2DCE",
         "Classic/1.04c": "0x2DCE",
+        "Classic/1.09d": "0x2DCE",
         "LoD/1.07": "0x2DCE",
         "LoD/1.08": "0x2DCE",
         "LoD/1.09": "0x2DCE",
@@ -46344,6 +48568,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 47,
         "Classic/1.03": 47,
         "Classic/1.04c": 47,
+        "Classic/1.09d": 47,
         "LoD/1.07": 47,
         "LoD/1.08": 47,
         "LoD/1.09": 47,
@@ -46360,8 +48585,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 47,
         "LoD/1.14d": 47
       },
-      "name": "SmartFree",
-      "signature": "void SmartFree(void * pMemory)",
+      "name": "DeallocateMemory",
+      "signature": "void DeallocateMemory(void * pMemory)",
       "calling_convention": "__cdecl",
       "return_type": "void",
       "comment": "Smart memory deallocation function with managed pool fallback to system heap\n\nAlgorithm:\n1. Check if memory pointer is not null (early return if null)\n2. Call FUN_1001d50f to get control block for managed memory allocation\n3. If control block exists, call FUN_1001d53a for managed deallocation\n4. If no control block found, fallback to system HeapFree with global heap handle\n5. Return without value (void function)\n\nParameters:\n  pMemory - void* pointer to memory block to deallocate (may be null)\n\nReturns:\n  void (no return value)\n\nSpecial Cases:\n  - Null pointer: function returns immediately without action\n  - Memory not in managed pool: falls back to HeapFree\n  - Uses global heap handle g_hHeap for system memory deallocation\n\nError Handling:\n  - Graceful handling of null pointer input\n  - Fallback mechanism when managed deallocation unavailable\n  - No explicit error return codes (void function)",
@@ -46382,19 +48607,19 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "HeapFree|0x20",
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
-          "FindMemoryDescriptorByAddress|0x4032E3"
-        ],
-        "Classic/1.01": [
           "FindMemoryDescriptorByAddress|0x4032E3",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20"
         ],
-        "Classic/1.02": [
-          "HeapFree|0x20",
+        "Classic/1.01": [
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
+          "HeapFree|0x20",
           "FindMemoryDescriptorByAddress|0x4032E3"
+        ],
+        "Classic/1.02": [
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
+          "FindMemoryDescriptorByAddress|0x4032E3",
+          "HeapFree|0x20"
         ],
         "Classic/1.03": [
           "HeapFree|0x20",
@@ -46402,19 +48627,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "FindMemoryDescriptorByAddress|0x4032E3"
         ],
         "Classic/1.04c": [
+          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
+          "FindMemoryDescriptorByAddress|0x4032E3"
+        ],
+        "Classic/1.09d": [
           "FindMemoryDescriptorByAddress|0x4032E3",
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20"
         ],
         "LoD/1.07": [
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3",
-          "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "HeapFree|0x20"
         ],
         "LoD/1.08": [
-          "FindMemoryDescriptorByAddress|0x4032E3",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "FindMemoryDescriptorByAddress|0x4032E3"
         ],
         "LoD/1.09": [
           "FindMemoryDescriptorByAddress|0x4032E3",
@@ -46422,13 +48652,13 @@ var FUNCTIONS_Diablo_II_exe = {
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.09b": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20",
-          "FindMemoryDescriptorByAddress|0x4032E3"
+          "FindMemoryDescriptorByAddress|0x4032E3",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.09d": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20"
         ],
         "LoD/1.10": [
@@ -46442,66 +48672,70 @@ var FUNCTIONS_Diablo_II_exe = {
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.11b": [
-          "FindMemoryDescriptorByAddress|0x4032E3",
           "HeapFree|0x20",
+          "FindMemoryDescriptorByAddress|0x4032E3",
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.12a": [
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3",
-          "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "HeapFree|0x20"
         ],
         "LoD/1.13c": [
-          "FindMemoryDescriptorByAddress|0x4032E3",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "FindMemoryDescriptorByAddress|0x4032E3"
         ],
         "LoD/1.13d": [
           "FindMemoryDescriptorByAddress|0x4032E3",
+          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+        ],
+        "LoD/1.14a": [
+          "FindMemoryDescriptorByAddress|0x4032E3",
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20"
         ],
-        "LoD/1.14a": [
-          "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
-          "FindMemoryDescriptorByAddress|0x4032E3"
-        ],
         "LoD/1.14b": [
+          "FindMemoryDescriptorByAddress|0x4032E3",
+          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+        ],
+        "LoD/1.14c": [
+          "FindMemoryDescriptorByAddress|0x4032E3",
+          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+        ],
+        "LoD/1.14d": [
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3",
           "HeapFree|0x20"
-        ],
-        "LoD/1.14c": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
-          "HeapFree|0x20",
-          "FindMemoryDescriptorByAddress|0x4032E3"
-        ],
-        "LoD/1.14d": [
-          "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
-          "FindMemoryDescriptorByAddress|0x4032E3"
         ]
       },
       "callers": {
         "Classic/1.00": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "Classic/1.01": [
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.02": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.03": [
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "Classic/1.04c": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "Classic/1.09d": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.07": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -46512,8 +48746,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.09": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.09b": [
           "GetEnvironmentStringsConverted|0x402264",
@@ -46524,40 +48758,40 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.10": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "LoD/1.11": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "LoD/1.11b": [
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "LoD/1.11": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "LoD/1.11b": [
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.12a": [
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.13c": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
-        ],
-        "LoD/1.13d": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
-        ],
-        "LoD/1.14a": [
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.13d": [
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.14a": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.14b": [
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.14c": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.14d": [
           "GetEnvironmentStringsConverted|0x402264",
@@ -46634,6 +48868,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2DEB|POP|ESI"
         ],
         "Classic/1.04c": [
+          "0x2DCE|PUSH|ESI",
+          "0x2DCF|MOV|ESI, dword ptr [ESP + 0x8]",
+          "0x2DD3|TEST|ESI, ESI",
+          "0x2DD5|JZ|0x00402dfb",
+          "0x2DD7|PUSH|ESI",
+          "0x2DD8|CALL|0x004032e3",
+          "0x2DDD|POP|ECX",
+          "0x2DDE|TEST|EAX, EAX",
+          "0x2DE0|PUSH|ESI",
+          "0x2DE1|JZ|0x00402ded",
+          "0x2DE3|PUSH|EAX",
+          "0x2DE4|CALL|0x0040330e",
+          "0x2DE9|POP|ECX",
+          "0x2DEA|POP|ECX",
+          "0x2DEB|POP|ESI"
+        ],
+        "Classic/1.09d": [
           "0x2DCE|PUSH|ESI",
           "0x2DCF|MOV|ESI, dword ptr [ESP + 0x8]",
           "0x2DD3|TEST|ESI, ESI",
@@ -46912,6 +49163,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 21,
         "Classic/1.03": 21,
         "Classic/1.04c": 21,
+        "Classic/1.09d": 21,
         "LoD/1.07": 21,
         "LoD/1.08": 21,
         "LoD/1.09": 21,
@@ -46934,6 +49186,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -46956,6 +49209,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -46978,6 +49232,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "b18de4e8dfaa1ea94be3de3b62f2adf9",
         "Classic/1.03": "b18de4e8dfaa1ea94be3de3b62f2adf9",
         "Classic/1.04c": "b18de4e8dfaa1ea94be3de3b62f2adf9",
+        "Classic/1.09d": "b18de4e8dfaa1ea94be3de3b62f2adf9",
         "LoD/1.07": "b18de4e8dfaa1ea94be3de3b62f2adf9",
         "LoD/1.08": "b18de4e8dfaa1ea94be3de3b62f2adf9",
         "LoD/1.09": "b18de4e8dfaa1ea94be3de3b62f2adf9",
@@ -47015,44 +49270,48 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6674|g_hHeapHandle|0x0",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6674|g_hHeapHandle|0x0",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
+        "LoD/1.07": [
+          "0x6674|g_hHeap|0x0",
+          "0x507C|g_pfnHeapFree|00005760"
+        ],
         "LoD/1.08": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.09": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.09b": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.09d": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.10": [
-          "0x6674|g_hHeap|0x0",
+          "0x6674|hHeap_00406674|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.11": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.11b": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.12a": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.13c": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.13d": [
@@ -47082,6 +49341,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -47104,6 +49364,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -47126,6 +49387,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -47148,6 +49410,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -47182,6 +49445,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_SMALL"
         ],
@@ -47252,6 +49519,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -47276,6 +49544,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402E00",
         "Classic/1.03": "0x00402E00",
         "Classic/1.04c": "0x00402E00",
+        "Classic/1.09d": "0x00402E00",
         "LoD/1.07": "0x00402E00",
         "LoD/1.08": "0x00402E00",
         "LoD/1.09": "0x00402E00",
@@ -47298,6 +49567,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2E00",
         "Classic/1.03": "0x2E00",
         "Classic/1.04c": "0x2E00",
+        "Classic/1.09d": "0x2E00",
         "LoD/1.07": "0x2E00",
         "LoD/1.08": "0x2E00",
         "LoD/1.09": "0x2E00",
@@ -47320,6 +49590,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 7,
         "Classic/1.03": 7,
         "Classic/1.04c": 7,
+        "Classic/1.09d": 7,
         "LoD/1.07": 7,
         "LoD/1.08": 7,
         "LoD/1.09": 7,
@@ -47362,28 +49633,32 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.01": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "Classic/1.02": [
           "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "Classic/1.02": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.03": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.04c": [
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.09d": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.07": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.08": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.09": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -47394,36 +49669,36 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09d": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.10": [
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.11": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "LoD/1.11b": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "LoD/1.12a": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "LoD/1.13c": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "LoD/1.13d": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "LoD/1.14a": [
           "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.11b": [
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.12a": [
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.13c": [
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.13d": [
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.14a": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14b": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -47434,8 +49709,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14d": [
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ]
       },
       "instructions": {
@@ -47460,6 +49735,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2E05|JMP|0x00402e71"
         ],
         "Classic/1.04c": [
+          "0x2E00|PUSH|EDI",
+          "0x2E01|MOV|EDI, dword ptr [ESP + 0x8]",
+          "0x2E05|JMP|0x00402e71"
+        ],
+        "Classic/1.09d": [
           "0x2E00|PUSH|EDI",
           "0x2E01|MOV|EDI, dword ptr [ESP + 0x8]",
           "0x2E05|JMP|0x00402e71"
@@ -47546,6 +49826,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -47568,6 +49849,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -47590,6 +49872,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -47612,6 +49895,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "70593f43ea0b0d7692df2cd60ddf29e8",
         "Classic/1.03": "70593f43ea0b0d7692df2cd60ddf29e8",
         "Classic/1.04c": "70593f43ea0b0d7692df2cd60ddf29e8",
+        "Classic/1.09d": "70593f43ea0b0d7692df2cd60ddf29e8",
         "LoD/1.07": "70593f43ea0b0d7692df2cd60ddf29e8",
         "LoD/1.08": "70593f43ea0b0d7692df2cd60ddf29e8",
         "LoD/1.09": "70593f43ea0b0d7692df2cd60ddf29e8",
@@ -47634,6 +49918,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -47656,6 +49941,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -47694,6 +49980,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "PARAM_2",
+          "PROP_TINY",
+          "PROP_LEAF"
+        ],
+        "Classic/1.09d": [
           "PARAM_2",
           "PROP_TINY",
           "PROP_LEAF"
@@ -47780,6 +50071,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -47804,6 +50096,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402E10",
         "Classic/1.03": "0x00402E10",
         "Classic/1.04c": "0x00402E10",
+        "Classic/1.09d": "0x00402E10",
         "LoD/1.07": "0x00402E10",
         "LoD/1.08": "0x00402E10",
         "LoD/1.09": "0x00402E10",
@@ -47826,6 +50119,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2E10",
         "Classic/1.03": "0x2E10",
         "Classic/1.04c": "0x2E10",
+        "Classic/1.09d": "0x2E10",
         "LoD/1.07": "0x2E10",
         "LoD/1.08": "0x2E10",
         "LoD/1.09": "0x2E10",
@@ -47848,6 +50142,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 224,
         "Classic/1.03": 224,
         "Classic/1.04c": 224,
+        "Classic/1.09d": 224,
         "LoD/1.07": 224,
         "LoD/1.08": 224,
         "LoD/1.09": 224,
@@ -47898,6 +50193,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.04c": [
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.09d": [
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.07": [
@@ -48016,6 +50314,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2E38|XOR|EAX, EDX"
         ],
         "Classic/1.04c": [
+          "0x2E10|MOV|ECX, dword ptr [ESP + 0x4]",
+          "0x2E14|PUSH|EDI",
+          "0x2E15|TEST|ECX, 0x3",
+          "0x2E1B|JZ|0x00402e2c",
+          "0x2E1D|MOV|AL, byte ptr [ECX]",
+          "0x2E1F|INC|ECX",
+          "0x2E20|TEST|AL, AL",
+          "0x2E22|JZ|0x00402e5f",
+          "0x2E24|TEST|ECX, 0x3",
+          "0x2E2A|JNZ|0x00402e1d",
+          "0x2E2C|MOV|EAX, dword ptr [ECX]",
+          "0x2E2E|MOV|EDX, 0x7efefeff",
+          "0x2E33|ADD|EDX, EAX",
+          "0x2E35|XOR|EAX, 0xffffffff",
+          "0x2E38|XOR|EAX, EDX"
+        ],
+        "Classic/1.09d": [
           "0x2E10|MOV|ECX, dword ptr [ESP + 0x4]",
           "0x2E14|PUSH|EDI",
           "0x2E15|TEST|ECX, 0x3",
@@ -48294,6 +50609,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 84,
         "Classic/1.03": 84,
         "Classic/1.04c": 84,
+        "Classic/1.09d": 84,
         "LoD/1.07": 84,
         "LoD/1.08": 84,
         "LoD/1.09": 84,
@@ -48316,6 +50632,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -48338,6 +50655,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -48360,6 +50678,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "845fc5044ff181fe96e2ae868d3aa1f6",
         "Classic/1.03": "845fc5044ff181fe96e2ae868d3aa1f6",
         "Classic/1.04c": "845fc5044ff181fe96e2ae868d3aa1f6",
+        "Classic/1.09d": "845fc5044ff181fe96e2ae868d3aa1f6",
         "LoD/1.07": "845fc5044ff181fe96e2ae868d3aa1f6",
         "LoD/1.08": "845fc5044ff181fe96e2ae868d3aa1f6",
         "LoD/1.09": "845fc5044ff181fe96e2ae868d3aa1f6",
@@ -48394,6 +50713,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2EB8||0xFF0000"
         ],
         "Classic/1.04c": [
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
+        ],
+        "Classic/1.09d": [
           "0x2E4F||0xFF0000",
           "0x2EB8||0xFF0000"
         ],
@@ -48464,6 +50787,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -48486,6 +50810,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -48508,6 +50833,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -48550,6 +50876,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_2",
+          "PROP_LOOPHEAVY",
+          "PROP_LEAF"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_2",
           "PROP_LOOPHEAVY",
@@ -48652,6 +50984,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -48676,6 +51009,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402EF0",
         "Classic/1.03": "0x00402EF0",
         "Classic/1.04c": "0x00402EF0",
+        "Classic/1.09d": "0x00402EF0",
         "LoD/1.07": "0x00402EF0",
         "LoD/1.08": "0x00402EF0",
         "LoD/1.09": "0x00402EF0",
@@ -48698,6 +51032,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2EF0",
         "Classic/1.03": "0x2EF0",
         "Classic/1.04c": "0x2EF0",
+        "Classic/1.09d": "0x2EF0",
         "LoD/1.07": "0x2EF0",
         "LoD/1.08": "0x2EF0",
         "LoD/1.09": "0x2EF0",
@@ -48720,6 +51055,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 18,
         "Classic/1.03": 18,
         "Classic/1.04c": 18,
+        "Classic/1.09d": 18,
         "LoD/1.07": 18,
         "LoD/1.08": 18,
         "LoD/1.09": 18,
@@ -48772,6 +51108,9 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "__nh_malloc|0x402F02"
         ],
+        "Classic/1.09d": [
+          "__nh_malloc|0x402F02"
+        ],
         "LoD/1.07": [
           "__nh_malloc|0x402F02"
         ],
@@ -48820,22 +51159,22 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "Classic/1.01": [
           "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
-        "Classic/1.01": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017"
-        ],
         "Classic/1.02": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264",
-          "InitializeModuleData|0x402017"
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "Classic/1.03": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -48844,100 +51183,106 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeModuleData|0x402017"
         ],
         "Classic/1.04c": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017"
+          "InitializeFileDescriptors|0x402396",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396",
           "GetEnvironmentStringsConverted|0x402264"
         ],
-        "LoD/1.08": [
+        "LoD/1.07": [
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017",
+          "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "LoD/1.08": [
+          "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.09": [
           "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396"
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.09b": [
           "GetEnvironmentStringsConverted|0x402264",
-          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.09d": [
           "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.10": [
-          "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.11": [
-          "GetEnvironmentStringsConverted|0x402264",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017"
-        ],
-        "LoD/1.11b": [
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
           "GetEnvironmentStringsConverted|0x402264"
         ],
+        "LoD/1.11": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "LoD/1.11b": [
+          "InitializeFileDescriptors|0x402396",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017"
+        ],
         "LoD/1.12a": [
+          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396"
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.13c": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.13d": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396",
           "GetEnvironmentStringsConverted|0x402264",
-          "InitializeModuleData|0x402017"
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.14a": [
           "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.14b": [
-          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.14c": [
-          "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.14d": [
-          "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396"
         ]
       },
       "instructions": {
@@ -48974,6 +51319,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2F01|RET|"
         ],
         "Classic/1.04c": [
+          "0x2EF0|PUSH|dword ptr [0x00406654]",
+          "0x2EF6|PUSH|dword ptr [ESP + 0x8]",
+          "0x2EFA|CALL|0x00402f02",
+          "0x2EFF|POP|ECX",
+          "0x2F00|POP|ECX",
+          "0x2F01|RET|"
+        ],
+        "Classic/1.09d": [
           "0x2EF0|PUSH|dword ptr [0x00406654]",
           "0x2EF6|PUSH|dword ptr [ESP + 0x8]",
           "0x2EFA|CALL|0x00402f02",
@@ -49108,6 +51461,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -49130,6 +51484,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -49152,6 +51507,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -49174,6 +51530,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "301bd5440f60703ca7a24a8fb30f1e56",
         "Classic/1.03": "301bd5440f60703ca7a24a8fb30f1e56",
         "Classic/1.04c": "301bd5440f60703ca7a24a8fb30f1e56",
+        "Classic/1.09d": "301bd5440f60703ca7a24a8fb30f1e56",
         "LoD/1.07": "301bd5440f60703ca7a24a8fb30f1e56",
         "LoD/1.08": "301bd5440f60703ca7a24a8fb30f1e56",
         "LoD/1.09": "301bd5440f60703ca7a24a8fb30f1e56",
@@ -49204,6 +51561,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6654|g_pfnRetryHandler|0x0"
         ],
         "Classic/1.04c": [
+          "0x6654|g_pfnRetryHandler|0x0"
+        ],
+        "Classic/1.09d": [
           "0x6654|g_pfnRetryHandler|0x0"
         ],
         "LoD/1.07": [
@@ -49258,6 +51618,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -49280,6 +51641,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -49302,6 +51664,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -49324,6 +51687,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -49358,6 +51722,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_SMALL"
         ],
@@ -49428,6 +51796,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -49452,6 +51821,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402F02",
         "Classic/1.03": "0x00402F02",
         "Classic/1.04c": "0x00402F02",
+        "Classic/1.09d": "0x00402F02",
         "LoD/1.07": "0x00402F02",
         "LoD/1.08": "0x00402F02",
         "LoD/1.09": "0x00402F02",
@@ -49474,6 +51844,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2F02",
         "Classic/1.03": "0x2F02",
         "Classic/1.04c": "0x2F02",
+        "Classic/1.09d": "0x2F02",
         "LoD/1.07": "0x2F02",
         "LoD/1.08": "0x2F02",
         "LoD/1.09": "0x2F02",
@@ -49496,6 +51867,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 44,
         "Classic/1.03": 44,
         "Classic/1.04c": 44,
+        "Classic/1.09d": 44,
         "LoD/1.07": 44,
         "LoD/1.08": 44,
         "LoD/1.09": 44,
@@ -49534,24 +51906,28 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "InvokeCallbackHandler|0x403D08",
-          "AllocateMemoryWithCache|0x402F2E"
+          "AllocateMemoryWithCache|0x402F2E",
+          "InvokeCallbackHandler|0x403D08"
         ],
         "Classic/1.01": [
           "AllocateMemoryWithCache|0x402F2E",
           "InvokeCallbackHandler|0x403D08"
         ],
         "Classic/1.02": [
-          "InvokeCallbackHandler|0x403D08",
-          "AllocateMemoryWithCache|0x402F2E"
-        ],
-        "Classic/1.03": [
-          "InvokeCallbackHandler|0x403D08",
-          "AllocateMemoryWithCache|0x402F2E"
-        ],
-        "Classic/1.04c": [
           "AllocateMemoryWithCache|0x402F2E",
           "InvokeCallbackHandler|0x403D08"
+        ],
+        "Classic/1.03": [
+          "AllocateMemoryWithCache|0x402F2E",
+          "InvokeCallbackHandler|0x403D08"
+        ],
+        "Classic/1.04c": [
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
+        ],
+        "Classic/1.09d": [
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.07": [
           "AllocateMemoryWithCache|0x402F2E",
@@ -49570,12 +51946,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.09d": [
-          "InvokeCallbackHandler|0x403D08",
-          "AllocateMemoryWithCache|0x402F2E"
-        ],
-        "LoD/1.10": [
           "AllocateMemoryWithCache|0x402F2E",
           "InvokeCallbackHandler|0x403D08"
+        ],
+        "LoD/1.10": [
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.11": [
           "InvokeCallbackHandler|0x403D08",
@@ -49586,8 +51962,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.12a": [
-          "InvokeCallbackHandler|0x403D08",
-          "AllocateMemoryWithCache|0x402F2E"
+          "AllocateMemoryWithCache|0x402F2E",
+          "InvokeCallbackHandler|0x403D08"
         ],
         "LoD/1.13c": [
           "InvokeCallbackHandler|0x403D08",
@@ -49598,20 +51974,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "InvokeCallbackHandler|0x403D08"
         ],
         "LoD/1.14a": [
-          "AllocateMemoryWithCache|0x402F2E",
-          "InvokeCallbackHandler|0x403D08"
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.14b": [
-          "AllocateMemoryWithCache|0x402F2E",
-          "InvokeCallbackHandler|0x403D08"
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.14c": [
           "InvokeCallbackHandler|0x403D08",
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.14d": [
-          "AllocateMemoryWithCache|0x402F2E",
-          "InvokeCallbackHandler|0x403D08"
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
         ]
       },
       "callers": {
@@ -49628,6 +52004,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "_malloc|0x402EF0"
         ],
         "Classic/1.04c": [
+          "_malloc|0x402EF0"
+        ],
+        "Classic/1.09d": [
           "_malloc|0x402EF0"
         ],
         "LoD/1.07": [
@@ -49746,6 +52125,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2F2B|XOR|EAX, EAX"
         ],
         "Classic/1.04c": [
+          "0x2F02|CMP|dword ptr [ESP + 0x4], -0x20",
+          "0x2F07|JA|0x00402f2b",
+          "0x2F09|PUSH|dword ptr [ESP + 0x4]",
+          "0x2F0D|CALL|0x00402f2e",
+          "0x2F12|TEST|EAX, EAX",
+          "0x2F14|POP|ECX",
+          "0x2F15|JNZ|0x00402f2d",
+          "0x2F17|CMP|dword ptr [ESP + 0x8], EAX",
+          "0x2F1B|JZ|0x00402f2d",
+          "0x2F1D|PUSH|dword ptr [ESP + 0x4]",
+          "0x2F21|CALL|0x00403d08",
+          "0x2F26|TEST|EAX, EAX",
+          "0x2F28|POP|ECX",
+          "0x2F29|JNZ|0x00402f09",
+          "0x2F2B|XOR|EAX, EAX"
+        ],
+        "Classic/1.09d": [
           "0x2F02|CMP|dword ptr [ESP + 0x4], -0x20",
           "0x2F07|JA|0x00402f2b",
           "0x2F09|PUSH|dword ptr [ESP + 0x4]",
@@ -50024,6 +52420,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -50046,6 +52443,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -50068,6 +52466,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -50090,6 +52489,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "be05c38d951a724b98e30bc46956a8c1",
         "Classic/1.03": "be05c38d951a724b98e30bc46956a8c1",
         "Classic/1.04c": "be05c38d951a724b98e30bc46956a8c1",
+        "Classic/1.09d": "be05c38d951a724b98e30bc46956a8c1",
         "LoD/1.07": "be05c38d951a724b98e30bc46956a8c1",
         "LoD/1.08": "be05c38d951a724b98e30bc46956a8c1",
         "LoD/1.09": "be05c38d951a724b98e30bc46956a8c1",
@@ -50112,6 +52512,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -50134,6 +52535,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -50156,6 +52558,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -50190,6 +52593,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_2",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_2",
           "PROP_SMALL"
         ],
@@ -50260,6 +52667,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -50284,6 +52692,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00402F2E",
         "Classic/1.03": "0x00402F2E",
         "Classic/1.04c": "0x00402F2E",
+        "Classic/1.09d": "0x00402F2E",
         "LoD/1.07": "0x00402F2E",
         "LoD/1.08": "0x00402F2E",
         "LoD/1.09": "0x00402F2E",
@@ -50306,6 +52715,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x2F2E",
         "Classic/1.03": "0x2F2E",
         "Classic/1.04c": "0x2F2E",
+        "Classic/1.09d": "0x2F2E",
         "LoD/1.07": "0x2F2E",
         "LoD/1.08": "0x2F2E",
         "LoD/1.09": "0x2F2E",
@@ -50328,6 +52738,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 54,
         "Classic/1.03": 54,
         "Classic/1.04c": 54,
+        "Classic/1.09d": 54,
         "LoD/1.07": 54,
         "LoD/1.08": 54,
         "LoD/1.09": 54,
@@ -50374,8 +52785,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapAlloc|0x28"
         ],
         "Classic/1.02": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "Classic/1.03": [
           "AllocateMemoryDescriptorBlock|0x403639",
@@ -50385,21 +52796,25 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapAlloc|0x28",
           "AllocateMemoryDescriptorBlock|0x403639"
         ],
+        "Classic/1.09d": [
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
+        ],
         "LoD/1.07": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "LoD/1.08": [
           "HeapAlloc|0x28",
           "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "LoD/1.09": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
-        ],
-        "LoD/1.09b": [
           "AllocateMemoryDescriptorBlock|0x403639",
           "HeapAlloc|0x28"
+        ],
+        "LoD/1.09b": [
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "LoD/1.09d": [
           "AllocateMemoryDescriptorBlock|0x403639",
@@ -50414,24 +52829,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapAlloc|0x28"
         ],
         "LoD/1.11b": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.12a": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.13c": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.13d": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.14a": [
           "HeapAlloc|0x28",
           "AllocateMemoryDescriptorBlock|0x403639"
+        ],
+        "LoD/1.12a": [
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
+        ],
+        "LoD/1.13c": [
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
+        ],
+        "LoD/1.13d": [
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
+        ],
+        "LoD/1.14a": [
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ],
         "LoD/1.14b": [
           "AllocateMemoryDescriptorBlock|0x403639",
@@ -50442,8 +52857,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapAlloc|0x28"
         ],
         "LoD/1.14d": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ]
       },
       "callers": {
@@ -50460,6 +52875,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "__nh_malloc|0x402F02"
         ],
         "Classic/1.04c": [
+          "__nh_malloc|0x402F02"
+        ],
+        "Classic/1.09d": [
           "__nh_malloc|0x402F02"
         ],
         "LoD/1.07": [
@@ -50578,6 +52996,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x2F50|AND|ESI, 0xfffffff0"
         ],
         "Classic/1.04c": [
+          "0x2F2E|PUSH|ESI",
+          "0x2F2F|MOV|ESI, dword ptr [ESP + 0x8]",
+          "0x2F33|CMP|ESI, dword ptr [0x00406290]",
+          "0x2F39|JA|0x00402f46",
+          "0x2F3B|PUSH|ESI",
+          "0x2F3C|CALL|0x00403639",
+          "0x2F41|TEST|EAX, EAX",
+          "0x2F43|POP|ECX",
+          "0x2F44|JNZ|0x00402f62",
+          "0x2F46|TEST|ESI, ESI",
+          "0x2F48|JNZ|0x00402f4d",
+          "0x2F4A|PUSH|0x1",
+          "0x2F4C|POP|ESI",
+          "0x2F4D|ADD|ESI, 0xf",
+          "0x2F50|AND|ESI, 0xfffffff0"
+        ],
+        "Classic/1.09d": [
           "0x2F2E|PUSH|ESI",
           "0x2F2F|MOV|ESI, dword ptr [ESP + 0x8]",
           "0x2F33|CMP|ESI, dword ptr [0x00406290]",
@@ -50856,6 +53291,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 21,
         "Classic/1.03": 21,
         "Classic/1.04c": 21,
+        "Classic/1.09d": 21,
         "LoD/1.07": 21,
         "LoD/1.08": 21,
         "LoD/1.09": 21,
@@ -50878,6 +53314,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -50900,6 +53337,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -50922,6 +53360,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "4e5e59b9a63f832f54b3dcf90c4a63d7",
         "Classic/1.03": "4e5e59b9a63f832f54b3dcf90c4a63d7",
         "Classic/1.04c": "4e5e59b9a63f832f54b3dcf90c4a63d7",
+        "Classic/1.09d": "4e5e59b9a63f832f54b3dcf90c4a63d7",
         "LoD/1.07": "4e5e59b9a63f832f54b3dcf90c4a63d7",
         "LoD/1.08": "4e5e59b9a63f832f54b3dcf90c4a63d7",
         "LoD/1.09": "4e5e59b9a63f832f54b3dcf90c4a63d7",
@@ -50964,54 +53403,59 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6674|g_hHeapHandle|0x0",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6290|g_dwCacheSizeLimit|0x3f8",
           "0x6674|g_hHeapHandle|0x0",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
+        "LoD/1.07": [
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeap|0x0",
+          "0x509C|g_pfnHeapAlloc|000057de"
+        ],
         "LoD/1.08": [
           "0x6290|g_dwCacheSizeLimit|0x3f8",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.09": [
           "0x6290|g_dwCacheSizeLimit|0x3f8",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.09b": [
           "0x6290|g_dwCacheSizeLimit|0x3f8",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.09d": [
           "0x6290|g_dwCacheSizeLimit|0x3f8",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.10": [
           "0x6290|g_dwCacheSizeLimit|0x3f8",
-          "0x6674|g_hHeap|0x0",
+          "0x6674|hHeap_00406674|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.11": [
           "0x6290|g_dwCacheSizeLimit|0x3f8",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.11b": [
           "0x6290|g_dwCacheSizeLimit|0x3f8",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.12a": [
           "0x6290|g_dwCacheSizeLimit|0x3f8",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.13c": [
           "0x6290|g_dwCacheSizeLimit|0x3f8",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.13d": [
@@ -51046,6 +53490,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -51068,6 +53513,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -51090,6 +53536,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -51112,6 +53559,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -51142,6 +53590,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_1"
         ],
         "Classic/1.04c": [
+          "PARAM_1"
+        ],
+        "Classic/1.09d": [
           "PARAM_1"
         ],
         "LoD/1.07": [
@@ -51196,6 +53647,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -51220,6 +53672,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00403D30",
         "Classic/1.03": "0x00403D30",
         "Classic/1.04c": "0x00403D30",
+        "Classic/1.09d": "0x00403D30",
         "LoD/1.07": "0x00403D30",
         "LoD/1.08": "0x00403D30",
         "LoD/1.09": "0x00403D30",
@@ -51242,6 +53695,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x3D30",
         "Classic/1.03": "0x3D30",
         "Classic/1.04c": "0x3D30",
+        "Classic/1.09d": "0x3D30",
         "LoD/1.07": "0x3D30",
         "LoD/1.08": "0x3D30",
         "LoD/1.09": "0x3D30",
@@ -51264,6 +53718,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 664,
         "Classic/1.03": 664,
         "Classic/1.04c": 664,
+        "Classic/1.09d": 664,
         "LoD/1.07": 664,
         "LoD/1.08": 664,
         "LoD/1.09": 664,
@@ -51314,6 +53769,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "Classic/1.04c": [
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+        ],
+        "Classic/1.09d": [
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.07": [
@@ -51432,6 +53890,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3D50|TEST|EDI, 0x3"
         ],
         "Classic/1.04c": [
+          "0x3D30|PUSH|EBP",
+          "0x3D31|MOV|EBP, ESP",
+          "0x3D33|PUSH|EDI",
+          "0x3D34|PUSH|ESI",
+          "0x3D35|MOV|ESI, dword ptr [EBP + 0xc]",
+          "0x3D38|MOV|ECX, dword ptr [EBP + 0x10]",
+          "0x3D3B|MOV|EDI, dword ptr [EBP + 0x8]",
+          "0x3D3E|MOV|EAX, ECX",
+          "0x3D40|MOV|EDX, ECX",
+          "0x3D42|ADD|EAX, ESI",
+          "0x3D44|CMP|EDI, ESI",
+          "0x3D46|JBE|0x00403d50",
+          "0x3D48|CMP|EDI, EAX",
+          "0x3D4A|JC|0x00403ec8",
+          "0x3D50|TEST|EDI, 0x3"
+        ],
+        "Classic/1.09d": [
           "0x3D30|PUSH|EBP",
           "0x3D31|MOV|EBP, ESP",
           "0x3D33|PUSH|EDI",
@@ -51710,6 +54185,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 231,
         "Classic/1.03": 231,
         "Classic/1.04c": 231,
+        "Classic/1.09d": 231,
         "LoD/1.07": 231,
         "LoD/1.08": 231,
         "LoD/1.09": 231,
@@ -51732,6 +54208,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -51754,6 +54231,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -51776,6 +54254,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "bff09423b51fd121ea30afec957819f4",
         "Classic/1.03": "bff09423b51fd121ea30afec957819f4",
         "Classic/1.04c": "bff09423b51fd121ea30afec957819f4",
+        "Classic/1.09d": "bff09423b51fd121ea30afec957819f4",
         "LoD/1.07": "bff09423b51fd121ea30afec957819f4",
         "LoD/1.08": "bff09423b51fd121ea30afec957819f4",
         "LoD/1.09": "bff09423b51fd121ea30afec957819f4",
@@ -51866,6 +54345,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x4007||0x404010"
         ],
         "Classic/1.04c": [
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0",
+          "0x3F0D||0x403F18",
+          "0x3F14||0x404010",
+          "0x3F3E||0x404010",
+          "0x3F68||0x404010",
+          "0x3F9A||0x404010",
+          "0x4007||0x404010"
+        ],
+        "Classic/1.09d": [
           "0x3D65||0x403E78",
           "0x3D7D||0x403D90",
           "0x3D84||0x403E88",
@@ -52195,6 +54692,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3FC0|PTR_caseD_0_00403fc0|00404007",
           "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
+        "Classic/1.09d": [
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
+        ],
         "LoD/1.07": [
           "0x3E78|switchdataD_00403e78|00403e88",
           "0x3D94|switchdataD_00403d94|00403da0",
@@ -52322,6 +54827,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -52344,6 +54850,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -52366,6 +54873,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -52388,6 +54896,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -52450,6 +54959,17 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_PlayerData"
         ],
         "Classic/1.04c": [
+          "PROP_LARGE",
+          "STRUCT_Act",
+          "STRUCT_Inventory",
+          "PARAM_3",
+          "PROP_LOOPHEAVY",
+          "STRUCT_UnitAny",
+          "PROP_LEAF",
+          "STRUCT_Control",
+          "STRUCT_PlayerData"
+        ],
+        "Classic/1.09d": [
           "PROP_LARGE",
           "STRUCT_Act",
           "STRUCT_Inventory",
@@ -52632,6 +55152,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -52656,6 +55177,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004032A5",
         "Classic/1.03": "0x004032A5",
         "Classic/1.04c": "0x004032A5",
+        "Classic/1.09d": "0x004032A5",
         "LoD/1.07": "0x004032A5",
         "LoD/1.08": "0x004032A5",
         "LoD/1.09": "0x004032A5",
@@ -52678,6 +55200,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x32A5",
         "Classic/1.03": "0x32A5",
         "Classic/1.04c": "0x32A5",
+        "Classic/1.09d": "0x32A5",
         "LoD/1.07": "0x32A5",
         "LoD/1.08": "0x32A5",
         "LoD/1.09": "0x32A5",
@@ -52700,6 +55223,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 62,
         "Classic/1.03": 62,
         "Classic/1.04c": 62,
+        "Classic/1.09d": 62,
         "LoD/1.07": 62,
         "LoD/1.08": 62,
         "LoD/1.09": 62,
@@ -52750,6 +55274,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapAlloc|0x28"
         ],
         "Classic/1.04c": [
+          "HeapAlloc|0x28"
+        ],
+        "Classic/1.09d": [
           "HeapAlloc|0x28"
         ],
         "LoD/1.07": [
@@ -52812,6 +55339,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeDllHeapAndResources|0x402541"
         ],
         "Classic/1.04c": [
+          "InitializeDllHeapAndResources|0x402541"
+        ],
+        "Classic/1.09d": [
           "InitializeDllHeapAndResources|0x402541"
         ],
         "LoD/1.07": [
@@ -52930,6 +55460,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x32E2|RET|"
         ],
         "Classic/1.04c": [
+          "0x32A5|PUSH|0x140",
+          "0x32AA|PUSH|0x0",
+          "0x32AC|PUSH|dword ptr [0x00406674]",
+          "0x32B2|CALL|dword ptr [0x0040509c]",
+          "0x32B8|TEST|EAX, EAX",
+          "0x32BA|MOV|[0x00406670], EAX",
+          "0x32BF|JNZ|0x004032c2",
+          "0x32C1|RET|",
+          "0x32C2|AND|dword ptr [0x00406668], 0x0",
+          "0x32C9|AND|dword ptr [0x0040666c], 0x0",
+          "0x32D0|PUSH|0x1",
+          "0x32D2|MOV|[0x00406664], EAX",
+          "0x32D7|MOV|dword ptr [0x0040665c], 0x10",
+          "0x32E1|POP|EAX",
+          "0x32E2|RET|"
+        ],
+        "Classic/1.09d": [
           "0x32A5|PUSH|0x140",
           "0x32AA|PUSH|0x0",
           "0x32AC|PUSH|dword ptr [0x00406674]",
@@ -53208,6 +55755,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 15,
         "Classic/1.03": 15,
         "Classic/1.04c": 15,
+        "Classic/1.09d": 15,
         "LoD/1.07": 15,
         "LoD/1.08": 15,
         "LoD/1.09": 15,
@@ -53230,6 +55778,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -53252,6 +55801,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -53274,6 +55824,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "9714d3ad2deea30ac943f1376fae33d4",
         "Classic/1.03": "9714d3ad2deea30ac943f1376fae33d4",
         "Classic/1.04c": "9714d3ad2deea30ac943f1376fae33d4",
+        "Classic/1.09d": "9714d3ad2deea30ac943f1376fae33d4",
         "LoD/1.07": "9714d3ad2deea30ac943f1376fae33d4",
         "LoD/1.08": "9714d3ad2deea30ac943f1376fae33d4",
         "LoD/1.09": "9714d3ad2deea30ac943f1376fae33d4",
@@ -53304,6 +55855,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x32A5||0x140"
         ],
         "Classic/1.04c": [
+          "0x32A5||0x140"
+        ],
+        "Classic/1.09d": [
           "0x32A5||0x140"
         ],
         "LoD/1.07": [
@@ -53398,91 +55952,100 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6664|g_pBufferBasePointer|0x0",
           "0x665C|g_dwBufferElementSize|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6674|g_hHeapHandle|0x0",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
           "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
+        ],
+        "LoD/1.07": [
+          "0x6674|g_hHeap|0x0",
+          "0x509C|g_pfnHeapAlloc|000057de",
+          "0x6670|lpMem_00406670|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.08": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.09": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.09b": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.09d": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.10": [
-          "0x6674|g_hHeap|0x0",
+          "0x6674|hHeap_00406674|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.11": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.11b": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.12a": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.13c": [
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
@@ -53540,6 +56103,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -53562,6 +56126,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -53584,6 +56149,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -53606,6 +56172,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 7,
         "Classic/1.03": 7,
         "Classic/1.04c": 7,
+        "Classic/1.09d": 7,
         "LoD/1.07": 7,
         "LoD/1.08": 7,
         "LoD/1.09": 7,
@@ -53636,6 +56203,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_0"
         ],
         "Classic/1.04c": [
+          "PARAM_0"
+        ],
+        "Classic/1.09d": [
           "PARAM_0"
         ],
         "LoD/1.07": [
@@ -53690,6 +56260,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -53714,6 +56285,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004032E3",
         "Classic/1.03": "0x004032E3",
         "Classic/1.04c": "0x004032E3",
+        "Classic/1.09d": "0x004032E3",
         "LoD/1.07": "0x004032E3",
         "LoD/1.08": "0x004032E3",
         "LoD/1.09": "0x004032E3",
@@ -53736,6 +56308,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x32E3",
         "Classic/1.03": "0x32E3",
         "Classic/1.04c": "0x32E3",
+        "Classic/1.09d": "0x32E3",
         "LoD/1.07": "0x32E3",
         "LoD/1.08": "0x32E3",
         "LoD/1.09": "0x32E3",
@@ -53758,6 +56331,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 43,
         "Classic/1.03": 43,
         "Classic/1.04c": 43,
+        "Classic/1.09d": 43,
         "LoD/1.07": 43,
         "LoD/1.08": 43,
         "LoD/1.09": 43,
@@ -53796,64 +56370,67 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "Classic/1.01": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "Classic/1.02": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "Classic/1.03": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "Classic/1.04c": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
+        ],
+        "Classic/1.09d": [
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.07": [
           "SmartFree|0x402DCE"
         ],
         "LoD/1.08": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.09": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.09b": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.09d": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.10": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.11": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.11b": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.12a": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.13c": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.13d": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.14a": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.14b": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.14c": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.14d": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ]
       },
       "instructions": {
@@ -53922,6 +56499,22 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x330D|RET|"
         ],
         "Classic/1.04c": [
+          "0x32E3|MOV|EAX, [0x0040666c]",
+          "0x32E8|LEA|ECX, [EAX + EAX*0x4]",
+          "0x32EB|MOV|EAX, [0x00406670]",
+          "0x32F0|LEA|ECX, [EAX + ECX*0x4]",
+          "0x32F3|CMP|EAX, ECX",
+          "0x32F5|JNC|0x0040330b",
+          "0x32F7|MOV|EDX, dword ptr [ESP + 0x4]",
+          "0x32FB|SUB|EDX, dword ptr [EAX + 0xc]",
+          "0x32FE|CMP|EDX, 0x100000",
+          "0x3304|JC|0x0040330d",
+          "0x3306|ADD|EAX, 0x14",
+          "0x3309|JMP|0x004032f3",
+          "0x330B|XOR|EAX, EAX",
+          "0x330D|RET|"
+        ],
+        "Classic/1.09d": [
           "0x32E3|MOV|EAX, [0x0040666c]",
           "0x32E8|LEA|ECX, [EAX + EAX*0x4]",
           "0x32EB|MOV|EAX, [0x00406670]",
@@ -54184,6 +56777,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 14,
         "Classic/1.03": 14,
         "Classic/1.04c": 14,
+        "Classic/1.09d": 14,
         "LoD/1.07": 14,
         "LoD/1.08": 14,
         "LoD/1.09": 14,
@@ -54206,6 +56800,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -54228,6 +56823,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -54250,6 +56846,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "2a0dd1f395da0f8e13609d337843c676",
         "Classic/1.03": "2a0dd1f395da0f8e13609d337843c676",
         "Classic/1.04c": "2a0dd1f395da0f8e13609d337843c676",
+        "Classic/1.09d": "2a0dd1f395da0f8e13609d337843c676",
         "LoD/1.07": "2a0dd1f395da0f8e13609d337843c676",
         "LoD/1.08": "2a0dd1f395da0f8e13609d337843c676",
         "LoD/1.09": "2a0dd1f395da0f8e13609d337843c676",
@@ -54280,6 +56877,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x32FE||0x100000"
         ],
         "Classic/1.04c": [
+          "0x32FE||0x100000"
+        ],
+        "Classic/1.09d": [
           "0x32FE||0x100000"
         ],
         "LoD/1.07": [
@@ -54349,45 +56949,49 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x666C|g_nDescriptorCount|0x0",
           "0x6670|g_pDescriptorArray|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x6670|g_pDescriptorArray|0x0"
+        ],
+        "LoD/1.07": [
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|lpMem_00406670|0x0"
         ],
         "LoD/1.08": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0"
+          "0x6670|lpMem_00406670|00000000"
         ],
         "LoD/1.09": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0"
+          "0x6670|lpMem_00406670|00000000"
         ],
         "LoD/1.09b": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0"
+          "0x6670|lpMem_00406670|00000000"
         ],
         "LoD/1.09d": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0"
+          "0x6670|lpMem_00406670|00000000"
         ],
         "LoD/1.10": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0"
+          "0x6670|lpMem_00406670|00000000"
         ],
         "LoD/1.11": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0"
+          "0x6670|lpMem_00406670|00000000"
         ],
         "LoD/1.11b": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0"
+          "0x6670|lpMem_00406670|00000000"
         ],
         "LoD/1.12a": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0"
+          "0x6670|lpMem_00406670|00000000"
         ],
         "LoD/1.13c": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0"
+          "0x6670|lpMem_00406670|00000000"
         ],
         "LoD/1.13d": [
           "0x666C|g_nDescriptorCount|0x0",
@@ -54416,6 +57020,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -54438,6 +57043,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -54460,6 +57066,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -54482,6 +57089,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -54524,6 +57132,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_LEAF",
+          "RET_STRUCT_PTR",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_LEAF",
           "RET_STRUCT_PTR",
@@ -54626,6 +57240,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -54650,6 +57265,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x0040330E",
         "Classic/1.03": "0x0040330E",
         "Classic/1.04c": "0x0040330E",
+        "Classic/1.09d": "0x0040330E",
         "LoD/1.07": "0x0040330E",
         "LoD/1.08": "0x0040330E",
         "LoD/1.09": "0x0040330E",
@@ -54672,6 +57288,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x330E",
         "Classic/1.03": "0x330E",
         "Classic/1.04c": "0x330E",
+        "Classic/1.09d": "0x330E",
         "LoD/1.07": "0x330E",
         "LoD/1.08": "0x330E",
         "LoD/1.09": "0x330E",
@@ -54694,6 +57311,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 811,
         "Classic/1.03": 811,
         "Classic/1.04c": 811,
+        "Classic/1.09d": 811,
         "LoD/1.07": 811,
         "LoD/1.08": 811,
         "LoD/1.09": 811,
@@ -54732,33 +57350,38 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
+          "OptimizedMemoryMove|0x403D30",
+          "HeapFree|0x20",
+          "VirtualFree|0x1F"
+        ],
+        "Classic/1.01": [
+          "HeapFree|0x20",
+          "OptimizedMemoryMove|0x403D30",
+          "VirtualFree|0x1F"
+        ],
+        "Classic/1.02": [
+          "OptimizedMemoryMove|0x403D30",
+          "VirtualFree|0x1F",
+          "HeapFree|0x20"
+        ],
+        "Classic/1.03": [
+          "HeapFree|0x20",
+          "OptimizedMemoryMove|0x403D30",
+          "VirtualFree|0x1F"
+        ],
+        "Classic/1.04c": [
           "VirtualFree|0x1F",
           "HeapFree|0x20",
           "OptimizedMemoryMove|0x403D30"
         ],
-        "Classic/1.01": [
+        "Classic/1.09d": [
           "VirtualFree|0x1F",
           "OptimizedMemoryMove|0x403D30",
           "HeapFree|0x20"
         ],
-        "Classic/1.02": [
-          "OptimizedMemoryMove|0x403D30",
-          "HeapFree|0x20",
-          "VirtualFree|0x1F"
-        ],
-        "Classic/1.03": [
-          "OptimizedMemoryMove|0x403D30",
-          "HeapFree|0x20",
-          "VirtualFree|0x1F"
-        ],
-        "Classic/1.04c": [
-          "HeapFree|0x20",
-          "VirtualFree|0x1F",
-          "OptimizedMemoryMove|0x403D30"
-        ],
         "LoD/1.07": [
-          "VirtualFree|0x1F",
           "OptimizedMemoryMove|0x403D30",
+          "VirtualFree|0x1F",
           "HeapFree|0x20"
         ],
         "LoD/1.08": [
@@ -54767,9 +57390,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "OptimizedMemoryMove|0x403D30"
         ],
         "LoD/1.09": [
+          "OptimizedMemoryMove|0x403D30",
           "VirtualFree|0x1F",
-          "HeapFree|0x20",
-          "OptimizedMemoryMove|0x403D30"
+          "HeapFree|0x20"
         ],
         "LoD/1.09b": [
           "VirtualFree|0x1F",
@@ -54777,14 +57400,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "OptimizedMemoryMove|0x403D30"
         ],
         "LoD/1.09d": [
-          "VirtualFree|0x1F",
           "OptimizedMemoryMove|0x403D30",
+          "VirtualFree|0x1F",
           "HeapFree|0x20"
         ],
         "LoD/1.10": [
-          "HeapFree|0x20",
           "VirtualFree|0x1F",
-          "OptimizedMemoryMove|0x403D30"
+          "OptimizedMemoryMove|0x403D30",
+          "HeapFree|0x20"
         ],
         "LoD/1.11": [
           "HeapFree|0x20",
@@ -54792,28 +57415,28 @@ var FUNCTIONS_Diablo_II_exe = {
           "VirtualFree|0x1F"
         ],
         "LoD/1.11b": [
+          "HeapFree|0x20",
           "OptimizedMemoryMove|0x403D30",
-          "VirtualFree|0x1F",
-          "HeapFree|0x20"
+          "VirtualFree|0x1F"
         ],
         "LoD/1.12a": [
-          "OptimizedMemoryMove|0x403D30",
           "VirtualFree|0x1F",
+          "OptimizedMemoryMove|0x403D30",
           "HeapFree|0x20"
         ],
         "LoD/1.13c": [
-          "HeapFree|0x20",
-          "VirtualFree|0x1F",
-          "OptimizedMemoryMove|0x403D30"
-        ],
-        "LoD/1.13d": [
           "OptimizedMemoryMove|0x403D30",
           "HeapFree|0x20",
           "VirtualFree|0x1F"
         ],
-        "LoD/1.14a": [
+        "LoD/1.13d": [
+          "VirtualFree|0x1F",
           "HeapFree|0x20",
+          "OptimizedMemoryMove|0x403D30"
+        ],
+        "LoD/1.14a": [
           "OptimizedMemoryMove|0x403D30",
+          "HeapFree|0x20",
           "VirtualFree|0x1F"
         ],
         "LoD/1.14b": [
@@ -54822,8 +57445,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "VirtualFree|0x1F"
         ],
         "LoD/1.14c": [
-          "HeapFree|0x20",
           "OptimizedMemoryMove|0x403D30",
+          "HeapFree|0x20",
           "VirtualFree|0x1F"
         ],
         "LoD/1.14d": [
@@ -54834,64 +57457,67 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "Classic/1.00": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "Classic/1.01": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "Classic/1.02": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "Classic/1.03": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "Classic/1.04c": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
+        ],
+        "Classic/1.09d": [
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.07": [
           "SmartFree|0x402DCE"
         ],
         "LoD/1.08": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.09": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.09b": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.09d": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.10": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.11": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.11b": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.12a": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.13c": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.13d": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.14a": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.14b": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.14c": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ],
         "LoD/1.14d": [
-          "SmartFree|0x402DCE"
+          "DeallocateMemory|0x402DCE"
         ]
       },
       "instructions": {
@@ -54964,6 +57590,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x332E|MOV|ECX, ESI"
         ],
         "Classic/1.04c": [
+          "0x330E|PUSH|EBP",
+          "0x330F|MOV|EBP, ESP",
+          "0x3311|SUB|ESP, 0x14",
+          "0x3314|MOV|EDX, dword ptr [EBP + 0xc]",
+          "0x3317|MOV|ECX, dword ptr [EBP + 0x8]",
+          "0x331A|PUSH|EBX",
+          "0x331B|PUSH|ESI",
+          "0x331C|MOV|EAX, dword ptr [ECX + 0x10]",
+          "0x331F|MOV|ESI, EDX",
+          "0x3321|SUB|ESI, dword ptr [ECX + 0xc]",
+          "0x3324|MOV|EBX, dword ptr [EDX + -0x4]",
+          "0x3327|ADD|EDX, -0x4",
+          "0x332A|PUSH|EDI",
+          "0x332B|SHR|ESI, 0xf",
+          "0x332E|MOV|ECX, ESI"
+        ],
+        "Classic/1.09d": [
           "0x330E|PUSH|EBP",
           "0x330F|MOV|EBP, ESP",
           "0x3311|SUB|ESP, 0x14",
@@ -55242,6 +57885,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 264,
         "Classic/1.03": 264,
         "Classic/1.04c": 264,
+        "Classic/1.09d": 264,
         "LoD/1.07": 264,
         "LoD/1.08": 264,
         "LoD/1.09": 264,
@@ -55264,6 +57908,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 36,
         "Classic/1.03": 36,
         "Classic/1.04c": 36,
+        "Classic/1.09d": 36,
         "LoD/1.07": 36,
         "LoD/1.08": 36,
         "LoD/1.09": 36,
@@ -55286,6 +57931,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -55308,6 +57954,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "9bfd98dbbd3e5d7edb553bd7666739e4",
         "Classic/1.03": "9bfd98dbbd3e5d7edb553bd7666739e4",
         "Classic/1.04c": "9bfd98dbbd3e5d7edb553bd7666739e4",
+        "Classic/1.09d": "9bfd98dbbd3e5d7edb553bd7666739e4",
         "LoD/1.07": "9bfd98dbbd3e5d7edb553bd7666739e4",
         "LoD/1.08": "9bfd98dbbd3e5d7edb553bd7666739e4",
         "LoD/1.09": "9bfd98dbbd3e5d7edb553bd7666739e4",
@@ -55350,6 +57997,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x355E||0x4000"
         ],
         "Classic/1.04c": [
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
+        ],
+        "Classic/1.09d": [
           "0x3333||0x204",
           "0x333D||0x144",
           "0x3559||0x8000",
@@ -55497,7 +58150,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6670|g_pDescriptorArray|0x0",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0",
           "0x5078|PTR_VirtualFree_00405078|00005752",
@@ -55505,96 +58158,106 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x507C|PTR_HeapFree_0040507c|00005760",
           "0x666C|g_nDescriptorCount|0x0",
           "0x6670|g_pDescriptorArray|0x0",
+          "0x6664|g_pBufferBasePointer|0x0"
+        ],
+        "LoD/1.07": [
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0",
+          "0x5078|g_pfnVirtualFree|00005752",
+          "0x6674|g_hHeap|0x0",
+          "0x507C|g_pfnHeapFree|00005760",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|lpMem_00406670|0x0",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
         "LoD/1.08": [
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0",
           "0x5078|PTR_VirtualFree_00405078|00005752",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760",
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
         "LoD/1.09": [
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0",
           "0x5078|PTR_VirtualFree_00405078|00005752",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760",
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
         "LoD/1.09b": [
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0",
           "0x5078|PTR_VirtualFree_00405078|00005752",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760",
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
         "LoD/1.09d": [
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0",
           "0x5078|PTR_VirtualFree_00405078|00005752",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760",
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
         "LoD/1.10": [
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|DAT_00406660|0x0",
           "0x5078|PTR_VirtualFree_00405078|00005752",
-          "0x6674|g_hHeap|0x0",
+          "0x6674|hHeap_00406674|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760",
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
         "LoD/1.11": [
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0",
           "0x5078|PTR_VirtualFree_00405078|00005752",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760",
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
         "LoD/1.11b": [
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0",
           "0x5078|PTR_VirtualFree_00405078|00005752",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760",
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
         "LoD/1.12a": [
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0",
           "0x5078|PTR_VirtualFree_00405078|00005752",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760",
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
         "LoD/1.13c": [
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0",
           "0x5078|PTR_VirtualFree_00405078|00005752",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6674|g_hHeap|00000000",
           "0x507C|PTR_HeapFree_0040507c|00005760",
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0"
         ],
         "LoD/1.13d": [
@@ -55654,6 +58317,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -55676,6 +58340,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -55698,6 +58363,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -55720,6 +58386,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -55742,6 +58409,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -55800,6 +58468,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_PlayerData"
         ],
         "Classic/1.04c": [
+          "PROP_LARGE",
+          "STRUCT_Act",
+          "STRUCT_Inventory",
+          "PARAM_2",
+          "STRUCT_ItemData",
+          "STRUCT_UnitAny",
+          "STRUCT_Control",
+          "STRUCT_PlayerData"
+        ],
+        "Classic/1.09d": [
           "PROP_LARGE",
           "STRUCT_Act",
           "STRUCT_Inventory",
@@ -55966,6 +58644,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -55990,6 +58669,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00403639",
         "Classic/1.03": "0x00403639",
         "Classic/1.04c": "0x00403639",
+        "Classic/1.09d": "0x00403639",
         "LoD/1.07": "0x00403639",
         "LoD/1.08": "0x00403639",
         "LoD/1.09": "0x00403639",
@@ -56012,6 +58692,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x3639",
         "Classic/1.03": "0x3639",
         "Classic/1.04c": "0x3639",
+        "Classic/1.09d": "0x3639",
         "LoD/1.07": "0x3639",
         "LoD/1.08": "0x3639",
         "LoD/1.09": "0x3639",
@@ -56034,6 +58715,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 777,
         "Classic/1.03": 777,
         "Classic/1.04c": 777,
+        "Classic/1.09d": 777,
         "LoD/1.07": 777,
         "LoD/1.08": 777,
         "LoD/1.09": 777,
@@ -56072,12 +58754,12 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
-        ],
-        "Classic/1.01": [
           "AllocateMemoryDescriptor|0x403942",
           "AllocateMemorySlot|0x4039F3"
+        ],
+        "Classic/1.01": [
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
         ],
         "Classic/1.02": [
           "AllocateMemoryDescriptor|0x403942",
@@ -56090,6 +58772,10 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "AllocateMemoryDescriptor|0x403942",
           "AllocateMemorySlot|0x4039F3"
+        ],
+        "Classic/1.09d": [
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.07": [
           "AllocateMemorySlot|0x4039F3",
@@ -56104,28 +58790,28 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemorySlot|0x4039F3"
         ],
         "LoD/1.09b": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
+          "AllocateMemoryDescriptor|0x403942",
+          "AllocateMemorySlot|0x4039F3"
         ],
         "LoD/1.09d": [
           "AllocateMemorySlot|0x4039F3",
           "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.10": [
-          "AllocateMemoryDescriptor|0x403942",
-          "AllocateMemorySlot|0x4039F3"
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.11": [
-          "AllocateMemoryDescriptor|0x403942",
-          "AllocateMemorySlot|0x4039F3"
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.11b": [
           "AllocateMemoryDescriptor|0x403942",
           "AllocateMemorySlot|0x4039F3"
         ],
         "LoD/1.12a": [
-          "AllocateMemoryDescriptor|0x403942",
-          "AllocateMemorySlot|0x4039F3"
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.13c": [
           "AllocateMemorySlot|0x4039F3",
@@ -56136,8 +58822,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemorySlot|0x4039F3"
         ],
         "LoD/1.14a": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
+          "AllocateMemoryDescriptor|0x403942",
+          "AllocateMemorySlot|0x4039F3"
         ],
         "LoD/1.14b": [
           "AllocateMemorySlot|0x4039F3",
@@ -56166,6 +58852,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "Classic/1.04c": [
+          "AllocateMemoryWithCache|0x402F2E"
+        ],
+        "Classic/1.09d": [
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.07": [
@@ -56284,6 +58973,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x365F|MOV|dword ptr [EBP + -0x10], ECX"
         ],
         "Classic/1.04c": [
+          "0x3639|PUSH|EBP",
+          "0x363A|MOV|EBP, ESP",
+          "0x363C|SUB|ESP, 0x14",
+          "0x363F|MOV|EAX, [0x0040666c]",
+          "0x3644|MOV|EDX, dword ptr [0x00406670]",
+          "0x364A|PUSH|EBX",
+          "0x364B|PUSH|ESI",
+          "0x364C|LEA|EAX, [EAX + EAX*0x4]",
+          "0x364F|PUSH|EDI",
+          "0x3650|LEA|EDI, [EDX + EAX*0x4]",
+          "0x3653|MOV|EAX, dword ptr [EBP + 0x8]",
+          "0x3656|MOV|dword ptr [EBP + -0x4], EDI",
+          "0x3659|LEA|ECX, [EAX + 0x17]",
+          "0x365C|AND|ECX, 0xfffffff0",
+          "0x365F|MOV|dword ptr [EBP + -0x10], ECX"
+        ],
+        "Classic/1.09d": [
           "0x3639|PUSH|EBP",
           "0x363A|MOV|EBP, ESP",
           "0x363C|SUB|ESP, 0x14",
@@ -56562,6 +59268,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 275,
         "Classic/1.03": 275,
         "Classic/1.04c": 275,
+        "Classic/1.09d": 275,
         "LoD/1.07": 275,
         "LoD/1.08": 275,
         "LoD/1.09": 275,
@@ -56584,6 +59291,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 32,
         "Classic/1.03": 32,
         "Classic/1.04c": 32,
+        "Classic/1.09d": 32,
         "LoD/1.07": 32,
         "LoD/1.08": 32,
         "LoD/1.09": 32,
@@ -56606,6 +59314,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -56628,6 +59337,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "ff64648b3e6e32bc28a5e4bc8d984c1e",
         "Classic/1.03": "ff64648b3e6e32bc28a5e4bc8d984c1e",
         "Classic/1.04c": "ff64648b3e6e32bc28a5e4bc8d984c1e",
+        "Classic/1.09d": "ff64648b3e6e32bc28a5e4bc8d984c1e",
         "LoD/1.07": "ff64648b3e6e32bc28a5e4bc8d984c1e",
         "LoD/1.08": "ff64648b3e6e32bc28a5e4bc8d984c1e",
         "LoD/1.09": "ff64648b3e6e32bc28a5e4bc8d984c1e",
@@ -56662,6 +59372,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3796||0x144"
         ],
         "Classic/1.04c": [
+          "0x3790||0x204",
+          "0x3796||0x144"
+        ],
+        "Classic/1.09d": [
           "0x3790||0x204",
           "0x3796||0x144"
         ],
@@ -56762,72 +59476,79 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x6670|g_pDescriptorArray|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
+        ],
+        "LoD/1.07": [
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|lpMem_00406670|0x0",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.08": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.09": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.09b": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.09d": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.10": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|DAT_00406660|0x0"
         ],
         "LoD/1.11": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.11b": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.12a": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.13c": [
           "0x666C|g_nDescriptorCount|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
+          "0x6670|lpMem_00406670|00000000",
           "0x6664|g_pBufferBasePointer|0x0",
           "0x6668|g_dwBufferReadIndex|0x0",
           "0x6660|g_dwCurrentPoolIndex|0x0"
@@ -56874,6 +59595,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -56896,6 +59618,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -56918,6 +59641,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -56940,6 +59664,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "Classic/1.09d": 5,
         "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -56962,6 +59687,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -57016,6 +59742,15 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_PlayerData"
         ],
         "Classic/1.04c": [
+          "PROP_LARGE",
+          "STRUCT_Inventory",
+          "PARAM_1",
+          "PROP_LOOPHEAVY",
+          "STRUCT_UnitAny",
+          "STRUCT_Control",
+          "STRUCT_PlayerData"
+        ],
+        "Classic/1.09d": [
           "PROP_LARGE",
           "STRUCT_Inventory",
           "PARAM_1",
@@ -57166,6 +59901,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -57190,6 +59926,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00403942",
         "Classic/1.03": "0x00403942",
         "Classic/1.04c": "0x00403942",
+        "Classic/1.09d": "0x00403942",
         "LoD/1.07": "0x00403942",
         "LoD/1.08": "0x00403942",
         "LoD/1.09": "0x00403942",
@@ -57212,6 +59949,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x3942",
         "Classic/1.03": "0x3942",
         "Classic/1.04c": "0x3942",
+        "Classic/1.09d": "0x3942",
         "LoD/1.07": "0x3942",
         "LoD/1.08": "0x3942",
         "LoD/1.09": "0x3942",
@@ -57234,6 +59972,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 177,
         "Classic/1.03": 177,
         "Classic/1.04c": 177,
+        "Classic/1.09d": 177,
         "LoD/1.07": 177,
         "LoD/1.08": 177,
         "LoD/1.09": 177,
@@ -57272,124 +60011,130 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
-          "HeapFree|0x20",
-          "HeapAlloc|0x28"
-        ],
-        "Classic/1.01": [
-          "HeapReAlloc|0x2A",
           "HeapAlloc|0x28",
           "VirtualAlloc|0x29",
+          "HeapReAlloc|0x2A",
           "HeapFree|0x20"
         ],
-        "Classic/1.02": [
+        "Classic/1.01": [
           "HeapFree|0x20",
           "HeapReAlloc|0x2A",
+          "HeapAlloc|0x28",
+          "VirtualAlloc|0x29"
+        ],
+        "Classic/1.02": [
           "VirtualAlloc|0x29",
-          "HeapAlloc|0x28"
+          "HeapReAlloc|0x2A",
+          "HeapAlloc|0x28",
+          "HeapFree|0x20"
         ],
         "Classic/1.03": [
+          "HeapFree|0x20",
+          "VirtualAlloc|0x29",
+          "HeapReAlloc|0x2A",
+          "HeapAlloc|0x28"
+        ],
+        "Classic/1.04c": [
+          "VirtualAlloc|0x29",
+          "HeapFree|0x20",
+          "HeapReAlloc|0x2A",
+          "HeapAlloc|0x28"
+        ],
+        "Classic/1.09d": [
           "HeapAlloc|0x28",
           "HeapFree|0x20",
           "HeapReAlloc|0x2A",
           "VirtualAlloc|0x29"
         ],
-        "Classic/1.04c": [
+        "LoD/1.07": [
+          "HeapAlloc|0x28",
+          "VirtualAlloc|0x29",
+          "HeapReAlloc|0x2A",
+          "HeapFree|0x20"
+        ],
+        "LoD/1.08": [
+          "VirtualAlloc|0x29",
+          "HeapAlloc|0x28",
+          "HeapFree|0x20",
+          "HeapReAlloc|0x2A"
+        ],
+        "LoD/1.09": [
+          "VirtualAlloc|0x29",
+          "HeapFree|0x20",
+          "HeapReAlloc|0x2A",
+          "HeapAlloc|0x28"
+        ],
+        "LoD/1.09b": [
+          "HeapAlloc|0x28",
+          "VirtualAlloc|0x29",
+          "HeapReAlloc|0x2A",
+          "HeapFree|0x20"
+        ],
+        "LoD/1.09d": [
+          "HeapFree|0x20",
+          "HeapAlloc|0x28",
+          "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29"
+        ],
+        "LoD/1.10": [
           "HeapAlloc|0x28",
           "HeapFree|0x20",
           "VirtualAlloc|0x29",
           "HeapReAlloc|0x2A"
         ],
-        "LoD/1.07": [
-          "VirtualAlloc|0x29",
-          "HeapReAlloc|0x2A",
-          "HeapFree|0x20",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.08": [
-          "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
-          "HeapFree|0x20"
-        ],
-        "LoD/1.09": [
-          "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
-          "HeapFree|0x20"
-        ],
-        "LoD/1.09b": [
-          "HeapFree|0x20",
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.09d": [
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
-          "HeapAlloc|0x28",
-          "HeapFree|0x20"
-        ],
-        "LoD/1.10": [
-          "HeapFree|0x20",
-          "VirtualAlloc|0x29",
-          "HeapReAlloc|0x2A",
-          "HeapAlloc|0x28"
-        ],
         "LoD/1.11": [
-          "HeapAlloc|0x28",
           "VirtualAlloc|0x29",
           "HeapReAlloc|0x2A",
+          "HeapAlloc|0x28",
           "HeapFree|0x20"
         ],
         "LoD/1.11b": [
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
+          "HeapAlloc|0x28",
           "HeapFree|0x20",
-          "HeapAlloc|0x28"
+          "VirtualAlloc|0x29",
+          "HeapReAlloc|0x2A"
         ],
         "LoD/1.12a": [
+          "HeapAlloc|0x28",
           "HeapReAlloc|0x2A",
           "VirtualAlloc|0x29",
-          "HeapFree|0x20",
-          "HeapAlloc|0x28"
+          "HeapFree|0x20"
         ],
         "LoD/1.13c": [
+          "HeapFree|0x20",
+          "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29",
+          "HeapAlloc|0x28"
+        ],
+        "LoD/1.13d": [
           "HeapAlloc|0x28",
           "HeapFree|0x20",
           "HeapReAlloc|0x2A",
           "VirtualAlloc|0x29"
         ],
-        "LoD/1.13d": [
+        "LoD/1.14a": [
+          "HeapReAlloc|0x2A",
+          "HeapFree|0x20",
+          "VirtualAlloc|0x29",
+          "HeapAlloc|0x28"
+        ],
+        "LoD/1.14b": [
+          "HeapAlloc|0x28",
+          "VirtualAlloc|0x29",
+          "HeapFree|0x20",
+          "HeapReAlloc|0x2A"
+        ],
+        "LoD/1.14c": [
+          "VirtualAlloc|0x29",
+          "HeapAlloc|0x28",
+          "HeapFree|0x20",
+          "HeapReAlloc|0x2A"
+        ],
+        "LoD/1.14d": [
           "HeapReAlloc|0x2A",
           "VirtualAlloc|0x29",
           "HeapAlloc|0x28",
           "HeapFree|0x20"
-        ],
-        "LoD/1.14a": [
-          "HeapFree|0x20",
-          "VirtualAlloc|0x29",
-          "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A"
-        ],
-        "LoD/1.14b": [
-          "HeapFree|0x20",
-          "HeapAlloc|0x28",
-          "VirtualAlloc|0x29",
-          "HeapReAlloc|0x2A"
-        ],
-        "LoD/1.14c": [
-          "HeapReAlloc|0x2A",
-          "VirtualAlloc|0x29",
-          "HeapFree|0x20",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.14d": [
-          "VirtualAlloc|0x29",
-          "HeapFree|0x20",
-          "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A"
         ]
       },
       "callers": {
@@ -57406,6 +60151,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "Classic/1.04c": [
+          "AllocateMemoryDescriptorBlock|0x403639"
+        ],
+        "Classic/1.09d": [
           "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "LoD/1.07": [
@@ -57524,6 +60272,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3970|CMP|EAX, EDI"
         ],
         "Classic/1.04c": [
+          "0x3942|MOV|EAX, [0x0040666c]",
+          "0x3947|MOV|ECX, dword ptr [0x0040665c]",
+          "0x394D|PUSH|ESI",
+          "0x394E|PUSH|EDI",
+          "0x394F|XOR|EDI, EDI",
+          "0x3951|CMP|EAX, ECX",
+          "0x3953|JNZ|0x00403985",
+          "0x3955|LEA|EAX, [ECX + ECX*0x4 + 0x50]",
+          "0x3959|SHL|EAX, 0x2",
+          "0x395C|PUSH|EAX",
+          "0x395D|PUSH|dword ptr [0x00406670]",
+          "0x3963|PUSH|EDI",
+          "0x3964|PUSH|dword ptr [0x00406674]",
+          "0x396A|CALL|dword ptr [0x004050a4]",
+          "0x3970|CMP|EAX, EDI"
+        ],
+        "Classic/1.09d": [
           "0x3942|MOV|EAX, [0x0040666c]",
           "0x3947|MOV|ECX, dword ptr [0x0040665c]",
           "0x394D|PUSH|ESI",
@@ -57802,6 +60567,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 53,
         "Classic/1.03": 53,
         "Classic/1.04c": 53,
+        "Classic/1.09d": 53,
         "LoD/1.07": 53,
         "LoD/1.08": 53,
         "LoD/1.09": 53,
@@ -57824,6 +60590,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -57846,6 +60613,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -57868,6 +60636,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "b59a8a7d2c8fdcc2aac183f01f99a847",
         "Classic/1.03": "b59a8a7d2c8fdcc2aac183f01f99a847",
         "Classic/1.04c": "b59a8a7d2c8fdcc2aac183f01f99a847",
+        "Classic/1.09d": "b59a8a7d2c8fdcc2aac183f01f99a847",
         "LoD/1.07": "b59a8a7d2c8fdcc2aac183f01f99a847",
         "LoD/1.08": "b59a8a7d2c8fdcc2aac183f01f99a847",
         "LoD/1.09": "b59a8a7d2c8fdcc2aac183f01f99a847",
@@ -57906,6 +60675,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x39B2||0x100000"
         ],
         "Classic/1.04c": [
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
+        ],
+        "Classic/1.09d": [
           "0x398B||0x41C4",
           "0x39AD||0x2000",
           "0x39B2||0x100000"
@@ -58037,7 +60811,7 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x665C|g_dwBufferElementSize|0x0",
           "0x6670|g_pDescriptorArray|0x0",
@@ -58047,11 +60821,21 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
           "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
+        "LoD/1.07": [
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|lpMem_00406670|0x0",
+          "0x6674|g_hHeap|0x0",
+          "0x50A4|g_pfnHeapReAlloc|000057fa",
+          "0x509C|g_pfnHeapAlloc|000057de",
+          "0x50A0|g_pfnVirtualAlloc|000057ea",
+          "0x507C|g_pfnHeapFree|00005760"
+        ],
         "LoD/1.08": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x665C|g_dwBufferElementSize|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6670|lpMem_00406670|00000000",
+          "0x6674|g_hHeap|00000000",
           "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
@@ -58060,8 +60844,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.09": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x665C|g_dwBufferElementSize|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6670|lpMem_00406670|00000000",
+          "0x6674|g_hHeap|00000000",
           "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
@@ -58070,8 +60854,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.09b": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x665C|g_dwBufferElementSize|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6670|lpMem_00406670|00000000",
+          "0x6674|g_hHeap|00000000",
           "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
@@ -58080,8 +60864,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.09d": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x665C|g_dwBufferElementSize|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6670|lpMem_00406670|00000000",
+          "0x6674|g_hHeap|00000000",
           "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
@@ -58090,8 +60874,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.10": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x665C|g_dwBufferElementSize|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
-          "0x6674|g_hHeap|0x0",
+          "0x6670|lpMem_00406670|00000000",
+          "0x6674|hHeap_00406674|00000000",
           "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
@@ -58100,8 +60884,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.11": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x665C|g_dwBufferElementSize|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6670|lpMem_00406670|00000000",
+          "0x6674|g_hHeap|00000000",
           "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
@@ -58110,8 +60894,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.11b": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x665C|g_dwBufferElementSize|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6670|lpMem_00406670|00000000",
+          "0x6674|g_hHeap|00000000",
           "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
@@ -58120,8 +60904,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.12a": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x665C|g_dwBufferElementSize|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6670|lpMem_00406670|00000000",
+          "0x6674|g_hHeap|00000000",
           "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
@@ -58130,8 +60914,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.13c": [
           "0x666C|g_nDescriptorCount|0x0",
           "0x665C|g_dwBufferElementSize|0x0",
-          "0x6670|g_pDescriptorArray|0x0",
-          "0x6674|g_hHeapHandle|0x0",
+          "0x6670|lpMem_00406670|00000000",
+          "0x6674|g_hHeap|00000000",
           "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
           "0x509C|PTR_HeapAlloc_0040509c|000057de",
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
@@ -58194,6 +60978,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -58216,6 +61001,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -58238,6 +61024,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -58260,6 +61047,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -58294,6 +61082,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_0"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_0"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_0"
         ],
@@ -58364,6 +61156,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -58388,6 +61181,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x004039F3",
         "Classic/1.03": "0x004039F3",
         "Classic/1.04c": "0x004039F3",
+        "Classic/1.09d": "0x004039F3",
         "LoD/1.07": "0x004039F3",
         "LoD/1.08": "0x004039F3",
         "LoD/1.09": "0x004039F3",
@@ -58410,6 +61204,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x39F3",
         "Classic/1.03": "0x39F3",
         "Classic/1.04c": "0x39F3",
+        "Classic/1.09d": "0x39F3",
         "LoD/1.07": "0x39F3",
         "LoD/1.08": "0x39F3",
         "LoD/1.09": "0x39F3",
@@ -58432,6 +61227,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 251,
         "Classic/1.03": 251,
         "Classic/1.04c": 251,
+        "Classic/1.09d": 251,
         "LoD/1.07": 251,
         "LoD/1.08": 251,
         "LoD/1.09": 251,
@@ -58484,7 +61280,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "VirtualAlloc|0x29"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "VirtualAlloc|0x29"
         ],
         "LoD/1.08": [
@@ -58544,6 +61340,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "Classic/1.04c": [
+          "AllocateMemoryDescriptorBlock|0x403639"
+        ],
+        "Classic/1.09d": [
           "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "LoD/1.07": [
@@ -58662,6 +61461,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3A0C|JMP|0x00403a05"
         ],
         "Classic/1.04c": [
+          "0x39F3|PUSH|EBP",
+          "0x39F4|MOV|EBP, ESP",
+          "0x39F6|PUSH|ECX",
+          "0x39F7|MOV|ECX, dword ptr [EBP + 0x8]",
+          "0x39FA|PUSH|EBX",
+          "0x39FB|PUSH|ESI",
+          "0x39FC|PUSH|EDI",
+          "0x39FD|MOV|ESI, dword ptr [ECX + 0x10]",
+          "0x3A00|MOV|EAX, dword ptr [ECX + 0x8]",
+          "0x3A03|XOR|EBX, EBX",
+          "0x3A05|TEST|EAX, EAX",
+          "0x3A07|JL|0x00403a0e",
+          "0x3A09|SHL|EAX, 0x1",
+          "0x3A0B|INC|EBX",
+          "0x3A0C|JMP|0x00403a05"
+        ],
+        "Classic/1.09d": [
           "0x39F3|PUSH|EBP",
           "0x39F4|MOV|EBP, ESP",
           "0x39F6|PUSH|ECX",
@@ -58940,6 +61756,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 85,
         "Classic/1.03": 85,
         "Classic/1.04c": 85,
+        "Classic/1.09d": 85,
         "LoD/1.07": 85,
         "LoD/1.08": 85,
         "LoD/1.09": 85,
@@ -58962,6 +61779,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -58984,6 +61802,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -59006,6 +61825,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0002c858ef3942a0b403454c72674bfe",
         "Classic/1.03": "0002c858ef3942a0b403454c72674bfe",
         "Classic/1.04c": "0002c858ef3942a0b403454c72674bfe",
+        "Classic/1.09d": "0002c858ef3942a0b403454c72674bfe",
         "LoD/1.07": "0002c858ef3942a0b403454c72674bfe",
         "LoD/1.08": "0002c858ef3942a0b403454c72674bfe",
         "LoD/1.09": "0002c858ef3942a0b403454c72674bfe",
@@ -59080,6 +61900,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3AA2||0x1F8"
         ],
         "Classic/1.04c": [
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0",
+          "0x3A90||0x1000",
+          "0x3AA2||0x1F8"
+        ],
+        "Classic/1.09d": [
           "0x3A12||0x204",
           "0x3A19||0x144",
           "0x3A39||0x1000",
@@ -59320,8 +62154,11 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
+        ],
+        "LoD/1.07": [
+          "0x50A0|g_pfnVirtualAlloc|000057ea"
         ],
         "LoD/1.08": [
           "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
@@ -59372,7 +62209,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
-        "LoD/1.07": 1,
+        "Classic/1.09d": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -59394,6 +62231,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -59416,6 +62254,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 12,
         "Classic/1.03": 12,
         "Classic/1.04c": 12,
+        "Classic/1.09d": 12,
         "LoD/1.07": 12,
         "LoD/1.08": 12,
         "LoD/1.09": 12,
@@ -59438,6 +62277,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -59460,6 +62300,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -59517,12 +62358,21 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_UnitAny",
           "STRUCT_Control"
         ],
+        "Classic/1.09d": [
+          "STRUCT_Inventory",
+          "STRUCT_ItemData",
+          "PARAM_1",
+          "PROP_LOOPHEAVY",
+          "STRUCT_UnitAny",
+          "STRUCT_Control"
+        ],
         "LoD/1.07": [
           "STRUCT_Inventory",
           "STRUCT_ItemData",
           "PARAM_1",
           "PROP_LOOPHEAVY",
           "STRUCT_UnitAny",
+          "PROP_LEAF",
           "STRUCT_Control"
         ],
         "LoD/1.08": [
@@ -59644,6 +62494,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -59668,6 +62519,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00403AEE",
         "Classic/1.03": "0x00403AEE",
         "Classic/1.04c": "0x00403AEE",
+        "Classic/1.09d": "0x00403AEE",
         "LoD/1.07": "0x00403AEE",
         "LoD/1.08": "0x00403AEE",
         "LoD/1.09": "0x00403AEE",
@@ -59690,6 +62542,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x3AEE",
         "Classic/1.03": "0x3AEE",
         "Classic/1.04c": "0x3AEE",
+        "Classic/1.09d": "0x3AEE",
         "LoD/1.07": "0x3AEE",
         "LoD/1.08": "0x3AEE",
         "LoD/1.09": "0x3AEE",
@@ -59712,6 +62565,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 137,
         "Classic/1.03": 137,
         "Classic/1.04c": 137,
+        "Classic/1.09d": 137,
         "LoD/1.07": 137,
         "LoD/1.08": 137,
         "LoD/1.09": 137,
@@ -59750,16 +62604,16 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callees": {
         "Classic/1.00": [
+          "LoadLibraryA|0x1B",
+          "GetProcAddress|0xA"
+        ],
+        "Classic/1.01": [
           "GetProcAddress|0xA",
           "LoadLibraryA|0x1B"
         ],
-        "Classic/1.01": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
-        ],
         "Classic/1.02": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
+          "GetProcAddress|0xA",
+          "LoadLibraryA|0x1B"
         ],
         "Classic/1.03": [
           "GetProcAddress|0xA",
@@ -59769,25 +62623,29 @@ var FUNCTIONS_Diablo_II_exe = {
           "LoadLibraryA|0x1B",
           "GetProcAddress|0xA"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "GetProcAddress|0xA",
           "LoadLibraryA|0x1B"
+        ],
+        "LoD/1.07": [
+          "LoadLibraryA|0x1B",
+          "GetProcAddress|0xA"
         ],
         "LoD/1.08": [
           "LoadLibraryA|0x1B",
           "GetProcAddress|0xA"
         ],
         "LoD/1.09": [
-          "GetProcAddress|0xA",
-          "LoadLibraryA|0x1B"
-        ],
-        "LoD/1.09b": [
           "LoadLibraryA|0x1B",
           "GetProcAddress|0xA"
         ],
-        "LoD/1.09d": [
+        "LoD/1.09b": [
           "GetProcAddress|0xA",
           "LoadLibraryA|0x1B"
+        ],
+        "LoD/1.09d": [
+          "LoadLibraryA|0x1B",
+          "GetProcAddress|0xA"
         ],
         "LoD/1.10": [
           "GetProcAddress|0xA",
@@ -59802,16 +62660,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetProcAddress|0xA"
         ],
         "LoD/1.12a": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
+          "GetProcAddress|0xA",
+          "LoadLibraryA|0x1B"
         ],
         "LoD/1.13c": [
           "LoadLibraryA|0x1B",
           "GetProcAddress|0xA"
         ],
         "LoD/1.13d": [
-          "GetProcAddress|0xA",
-          "LoadLibraryA|0x1B"
+          "LoadLibraryA|0x1B",
+          "GetProcAddress|0xA"
         ],
         "LoD/1.14a": [
           "GetProcAddress|0xA",
@@ -59844,6 +62702,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.04c": [
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.09d": [
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.07": [
@@ -59923,11 +62784,17 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x5414|s_user32.dll_00405414|user32.dll",
           "0x53F8|s_GetActiveWindow_004053f8|GetActiveWindow"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x53E4|s_GetLastActivePopup_004053e4|GetLastActivePopup",
           "0x5408|s_MessageBoxA_00405408|MessageBoxA",
           "0x5414|s_user32.dll_00405414|user32.dll",
           "0x53F8|s_GetActiveWindow_004053f8|GetActiveWindow"
+        ],
+        "LoD/1.07": [
+          "0x5408|szMessageBoxA_00405408|MessageBoxA",
+          "0x53E4|szGetLastActivePopup_004053e4|GetLastActivePopup",
+          "0x53F8|szGetActiveWindow_004053f8|GetActiveWindow",
+          "0x5414|szuser32.dll_00405414|user32.dll"
         ],
         "LoD/1.08": [
           "0x53E4|s_GetLastActivePopup_004053e4|GetLastActivePopup",
@@ -60084,6 +62951,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3B18|CALL|ESI"
         ],
         "Classic/1.04c": [
+          "0x3AEE|PUSH|EBX",
+          "0x3AEF|XOR|EBX, EBX",
+          "0x3AF1|CMP|dword ptr [0x00406648], EBX",
+          "0x3AF7|PUSH|ESI",
+          "0x3AF8|PUSH|EDI",
+          "0x3AF9|JNZ|0x00403b3d",
+          "0x3AFB|PUSH|0x405414",
+          "0x3B00|CALL|dword ptr [0x00405068]",
+          "0x3B06|MOV|EDI, EAX",
+          "0x3B08|CMP|EDI, EBX",
+          "0x3B0A|JZ|0x00403b73",
+          "0x3B0C|MOV|ESI, dword ptr [0x00405024]",
+          "0x3B12|PUSH|0x405408",
+          "0x3B17|PUSH|EDI",
+          "0x3B18|CALL|ESI"
+        ],
+        "Classic/1.09d": [
           "0x3AEE|PUSH|EBX",
           "0x3AEF|XOR|EBX, EBX",
           "0x3AF1|CMP|dword ptr [0x00406648], EBX",
@@ -60362,6 +63246,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 50,
         "Classic/1.03": 50,
         "Classic/1.04c": 50,
+        "Classic/1.09d": 50,
         "LoD/1.07": 50,
         "LoD/1.08": 50,
         "LoD/1.09": 50,
@@ -60384,6 +63269,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -60406,6 +63292,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -60428,6 +63315,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "d28466b802ff41201d4ac81308d22266",
         "Classic/1.03": "d28466b802ff41201d4ac81308d22266",
         "Classic/1.04c": "d28466b802ff41201d4ac81308d22266",
+        "Classic/1.09d": "d28466b802ff41201d4ac81308d22266",
         "LoD/1.07": "d28466b802ff41201d4ac81308d22266",
         "LoD/1.08": "d28466b802ff41201d4ac81308d22266",
         "LoD/1.09": "d28466b802ff41201d4ac81308d22266",
@@ -60470,6 +63358,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3B2B||0x4053E4"
         ],
         "Classic/1.04c": [
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
+        ],
+        "Classic/1.09d": [
           "0x3AFB||0x405414",
           "0x3B12||0x405408",
           "0x3B23||0x4053F8",
@@ -60602,10 +63496,17 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x664C|g_pfnGetActiveWindow|0x0",
           "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x6648|g_pfnMessageBoxA|0x0",
           "0x5068|PTR_LoadLibraryA_00405068|0000581a",
           "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
+        ],
+        "LoD/1.07": [
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|g_pfnLoadLibraryA|0000581a",
+          "0x5024|g_pfnGetProcAddress|00005808",
           "0x664C|g_pfnGetActiveWindow|0x0",
           "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
@@ -60714,6 +63615,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -60736,6 +63638,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -60758,6 +63661,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -60780,6 +63684,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -60802,6 +63707,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 5,
         "Classic/1.03": 5,
         "Classic/1.04c": 5,
+        "Classic/1.09d": 5,
         "LoD/1.07": 5,
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -60824,6 +63730,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -60854,6 +63761,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "PARAM_3"
         ],
         "Classic/1.04c": [
+          "PARAM_3"
+        ],
+        "Classic/1.09d": [
           "PARAM_3"
         ],
         "LoD/1.07": [
@@ -60908,6 +63818,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -60932,6 +63843,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00403B80",
         "Classic/1.03": "0x00403B80",
         "Classic/1.04c": "0x00403B80",
+        "Classic/1.09d": "0x00403B80",
         "LoD/1.07": "0x00403B80",
         "LoD/1.08": "0x00403B80",
         "LoD/1.09": "0x00403B80",
@@ -60954,6 +63866,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x3B80",
         "Classic/1.03": "0x3B80",
         "Classic/1.04c": "0x3B80",
+        "Classic/1.09d": "0x3B80",
         "LoD/1.07": "0x3B80",
         "LoD/1.08": "0x3B80",
         "LoD/1.09": "0x3B80",
@@ -60976,6 +63889,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 254,
         "Classic/1.03": 254,
         "Classic/1.04c": 254,
+        "Classic/1.09d": 254,
         "LoD/1.07": 254,
         "LoD/1.08": 254,
         "LoD/1.09": 254,
@@ -60996,7 +63910,7 @@ var FUNCTIONS_Diablo_II_exe = {
       "signature": "char * _strncpy(char * _Dest, char * _Source, size_t _Count)",
       "calling_convention": "__cdecl",
       "return_type": "char *",
-      "comment": "Library Function - Single Match\n _strncpy\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
+      "comment": "Copies up to nCount characters from lpszSource to lpszDest with null-padding.\n\nAlgorithm:\n1. Return immediately if nCount is zero (early exit optimization)\n2. Handle unaligned source by copying byte-by-byte until DWORD-aligned\n3. Perform DWORD-aligned bulk copy using null-byte detection magic\n4. If null terminator found mid-DWORD, mask and write partial DWORD\n5. Pad remaining destination bytes with null terminators\n6. Handle remaining bytes (nCount mod 4) via byte copy loop\n7. Return original destination pointer\n\nParameters:\n  lpszDest   - char* destination buffer (must have nCount bytes capacity)\n  lpszSource - char* source string to copy from\n  nCount     - size_t maximum characters to copy\n\nReturns:\n  char* - returns lpszDest (original destination pointer)\n  Always succeeds; no error return value\n\nSpecial Cases:\n  - If nCount is 0, returns lpszDest immediately without modification\n  - If lpszSource shorter than nCount, pads remainder with null bytes\n  - If lpszSource longer than nCount, result is NOT null-terminated\n\nMagic Numbers Reference:\n  0x7efefeff - Null byte detection constant for DWORD scanning\n  0x81010100 - Mask to detect null byte in any position of DWORD\n  0x3        - Alignment mask (DWORD boundary check)\n\nAlgorithm Details - Null Detection:\n  The expression ((val ^ 0xffffffff ^ val + 0x7efefeff) & 0x81010100)\n  detects if any byte in the DWORD is zero. When a byte is 0x00,\n  adding 0x7e causes carry to propagate, setting high bit of that byte.\n  XOR operations isolate these carry flags for the mask check.",
       "name_source": "Classic/1.00",
       "method": "NOP",
       "index": "NOP:7eb7c12ea9373f0451516ad64604b6d6bf5ce026bb126d676398f3b237c385be",
@@ -61026,6 +63940,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "Classic/1.04c": [
+          "DisplayRuntimeError|0x402789"
+        ],
+        "Classic/1.09d": [
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.07": [
@@ -61144,6 +64061,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3BA4|MOV|AL, byte ptr [ESI]"
         ],
         "Classic/1.04c": [
+          "0x3B80|MOV|ECX, dword ptr [ESP + 0xc]",
+          "0x3B84|PUSH|EDI",
+          "0x3B85|TEST|ECX, ECX",
+          "0x3B87|JZ|0x00403c03",
+          "0x3B89|PUSH|ESI",
+          "0x3B8A|PUSH|EBX",
+          "0x3B8B|MOV|EBX, ECX",
+          "0x3B8D|MOV|ESI, dword ptr [ESP + 0x14]",
+          "0x3B91|TEST|ESI, 0x3",
+          "0x3B97|MOV|EDI, dword ptr [ESP + 0x10]",
+          "0x3B9B|JNZ|0x00403ba4",
+          "0x3B9D|SHR|ECX, 0x2",
+          "0x3BA0|JNZ|0x00403c11",
+          "0x3BA2|JMP|0x00403bc5",
+          "0x3BA4|MOV|AL, byte ptr [ESI]"
+        ],
+        "Classic/1.09d": [
           "0x3B80|MOV|ECX, dword ptr [ESP + 0xc]",
           "0x3B84|PUSH|EDI",
           "0x3B85|TEST|ECX, ECX",
@@ -61422,6 +64356,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 109,
         "Classic/1.03": 109,
         "Classic/1.04c": 109,
+        "Classic/1.09d": 109,
         "LoD/1.07": 109,
         "LoD/1.08": 109,
         "LoD/1.09": 109,
@@ -61444,6 +64379,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -61466,6 +64402,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 9,
         "Classic/1.03": 9,
         "Classic/1.04c": 9,
+        "Classic/1.09d": 9,
         "LoD/1.07": 9,
         "LoD/1.08": 9,
         "LoD/1.09": 9,
@@ -61488,6 +64425,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "60fb4369558c571ee3e9892006835a82",
         "Classic/1.03": "60fb4369558c571ee3e9892006835a82",
         "Classic/1.04c": "60fb4369558c571ee3e9892006835a82",
+        "Classic/1.09d": "60fb4369558c571ee3e9892006835a82",
         "LoD/1.07": "60fb4369558c571ee3e9892006835a82",
         "LoD/1.08": "60fb4369558c571ee3e9892006835a82",
         "LoD/1.09": "60fb4369558c571ee3e9892006835a82",
@@ -61522,6 +64460,10 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3C47||0xFFFF"
         ],
         "Classic/1.04c": [
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
+        ],
+        "Classic/1.09d": [
           "0x3C33||0xFF0000",
           "0x3C47||0xFFFF"
         ],
@@ -61592,6 +64534,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -61614,6 +64557,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -61636,6 +64580,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -61690,6 +64635,15 @@ var FUNCTIONS_Diablo_II_exe = {
           "STRUCT_Control"
         ],
         "Classic/1.04c": [
+          "STRUCT_Act",
+          "STRUCT_Inventory",
+          "PARAM_3",
+          "PROP_LOOPHEAVY",
+          "STRUCT_UnitAny",
+          "PROP_LEAF",
+          "STRUCT_Control"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Act",
           "STRUCT_Inventory",
           "PARAM_3",
@@ -61840,6 +64794,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -61864,6 +64819,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00403C80",
         "Classic/1.03": "0x00403C80",
         "Classic/1.04c": "0x00403C80",
+        "Classic/1.09d": "0x00403C80",
         "LoD/1.07": "0x00403C80",
         "LoD/1.08": "0x00403C80",
         "LoD/1.09": "0x00403C80",
@@ -61886,6 +64842,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x3C80",
         "Classic/1.03": "0x3C80",
         "Classic/1.04c": "0x3C80",
+        "Classic/1.09d": "0x3C80",
         "LoD/1.07": "0x3C80",
         "LoD/1.08": "0x3C80",
         "LoD/1.09": "0x3C80",
@@ -61908,6 +64865,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 47,
         "Classic/1.03": 47,
         "Classic/1.04c": 47,
+        "Classic/1.09d": 47,
         "LoD/1.07": 47,
         "LoD/1.08": 47,
         "LoD/1.09": 47,
@@ -61950,12 +64908,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "Classic/1.01": [
-          "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "Classic/1.02": [
-          "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "Classic/1.03": [
           "GetCharacterTypeInfo|0x402B2B",
@@ -61965,21 +64923,25 @@ var FUNCTIONS_Diablo_II_exe = {
           "LocaleMapStringWithConversion|0x4028DC",
           "GetCharacterTypeInfo|0x402B2B"
         ],
+        "Classic/1.09d": [
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
+        ],
         "LoD/1.07": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.08": [
           "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.09": [
-          "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.09b": [
-          "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.09d": [
           "LocaleMapStringWithConversion|0x4028DC",
@@ -61998,28 +64960,28 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.12a": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
-        ],
-        "LoD/1.13c": [
           "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
+        ],
+        "LoD/1.13c": [
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.13d": [
           "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.14a": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.14b": [
           "LocaleMapStringWithConversion|0x4028DC",
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.14c": [
-          "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.14d": [
           "LocaleMapStringWithConversion|0x4028DC",
@@ -62096,6 +65058,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3CAA|MOV|EAX, dword ptr [EAX + 0x4]"
         ],
         "Classic/1.04c": [
+          "0x3C80|PUSH|ECX",
+          "0x3C81|CMP|EAX, 0x1000",
+          "0x3C86|LEA|ECX, [ESP + 0x8]",
+          "0x3C8A|JC|0x00403ca0",
+          "0x3C8C|SUB|ECX, 0x1000",
+          "0x3C92|SUB|EAX, 0x1000",
+          "0x3C97|TEST|dword ptr [ECX], EAX",
+          "0x3C99|CMP|EAX, 0x1000",
+          "0x3C9E|JNC|0x00403c8c",
+          "0x3CA0|SUB|ECX, EAX",
+          "0x3CA2|MOV|EAX, ESP",
+          "0x3CA4|TEST|dword ptr [ECX], EAX",
+          "0x3CA6|MOV|ESP, ECX",
+          "0x3CA8|MOV|ECX, dword ptr [EAX]",
+          "0x3CAA|MOV|EAX, dword ptr [EAX + 0x4]"
+        ],
+        "Classic/1.09d": [
           "0x3C80|PUSH|ECX",
           "0x3C81|CMP|EAX, 0x1000",
           "0x3C86|LEA|ECX, [ESP + 0x8]",
@@ -62374,6 +65353,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 17,
         "Classic/1.03": 17,
         "Classic/1.04c": 17,
+        "Classic/1.09d": 17,
         "LoD/1.07": 17,
         "LoD/1.08": 17,
         "LoD/1.09": 17,
@@ -62396,6 +65376,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4096,
         "Classic/1.03": 4096,
         "Classic/1.04c": 4096,
+        "Classic/1.09d": 4096,
         "LoD/1.07": 4096,
         "LoD/1.08": 4096,
         "LoD/1.09": 4096,
@@ -62418,6 +65399,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -62440,6 +65422,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
         "Classic/1.03": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
         "Classic/1.04c": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
+        "Classic/1.09d": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
         "LoD/1.07": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
         "LoD/1.08": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
         "LoD/1.09": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
@@ -62482,6 +65465,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3C99||0x1000"
         ],
         "Classic/1.04c": [
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
+        ],
+        "Classic/1.09d": [
           "0x3C81||0x1000",
           "0x3C8C||0x1000",
           "0x3C92||0x1000",
@@ -62584,6 +65573,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -62606,6 +65596,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -62644,6 +65635,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_0",
+          "PROP_LEAF",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_0",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -62730,6 +65726,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -62754,6 +65751,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00403CB0",
         "Classic/1.03": "0x00403CB0",
         "Classic/1.04c": "0x00403CB0",
+        "Classic/1.09d": "0x00403CB0",
         "LoD/1.07": "0x00403CB0",
         "LoD/1.08": "0x00403CB0",
         "LoD/1.09": "0x00403CB0",
@@ -62776,6 +65774,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x3CB0",
         "Classic/1.03": "0x3CB0",
         "Classic/1.04c": "0x3CB0",
+        "Classic/1.09d": "0x3CB0",
         "LoD/1.07": "0x3CB0",
         "LoD/1.08": "0x3CB0",
         "LoD/1.09": "0x3CB0",
@@ -62798,6 +65797,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 88,
         "Classic/1.03": 88,
         "Classic/1.04c": 88,
+        "Classic/1.09d": 88,
         "LoD/1.07": 88,
         "LoD/1.08": 88,
         "LoD/1.09": 88,
@@ -62848,6 +65848,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "Classic/1.04c": [
+          "GetCharacterTypeInfo|0x402B2B"
+        ],
+        "Classic/1.09d": [
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.07": [
@@ -62966,6 +65969,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3CD3|MOV|byte ptr [EDI], AL"
         ],
         "Classic/1.04c": [
+          "0x3CB0|MOV|EDX, dword ptr [ESP + 0xc]",
+          "0x3CB4|MOV|ECX, dword ptr [ESP + 0x4]",
+          "0x3CB8|TEST|EDX, EDX",
+          "0x3CBA|JZ|0x00403d03",
+          "0x3CBC|XOR|EAX, EAX",
+          "0x3CBE|MOV|AL, byte ptr [ESP + 0x8]",
+          "0x3CC2|PUSH|EDI",
+          "0x3CC3|MOV|EDI, ECX",
+          "0x3CC5|CMP|EDX, 0x4",
+          "0x3CC8|JC|0x00403cf7",
+          "0x3CCA|NEG|ECX",
+          "0x3CCC|AND|ECX, 0x3",
+          "0x3CCF|JZ|0x00403cd9",
+          "0x3CD1|SUB|EDX, ECX",
+          "0x3CD3|MOV|byte ptr [EDI], AL"
+        ],
+        "Classic/1.09d": [
           "0x3CB0|MOV|EDX, dword ptr [ESP + 0xc]",
           "0x3CB4|MOV|ECX, dword ptr [ESP + 0x4]",
           "0x3CB8|TEST|EDX, EDX",
@@ -63244,6 +66264,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 40,
         "Classic/1.03": 40,
         "Classic/1.04c": 40,
+        "Classic/1.09d": 40,
         "LoD/1.07": 40,
         "LoD/1.08": 40,
         "LoD/1.09": 40,
@@ -63266,6 +66287,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 16,
         "Classic/1.03": 16,
         "Classic/1.04c": 16,
+        "Classic/1.09d": 16,
         "LoD/1.07": 16,
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -63288,6 +66310,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 2,
         "Classic/1.03": 2,
         "Classic/1.04c": 2,
+        "Classic/1.09d": 2,
         "LoD/1.07": 2,
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -63310,6 +66333,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "b99d3962c0b26901db87269607fbf85a",
         "Classic/1.03": "b99d3962c0b26901db87269607fbf85a",
         "Classic/1.04c": "b99d3962c0b26901db87269607fbf85a",
+        "Classic/1.09d": "b99d3962c0b26901db87269607fbf85a",
         "LoD/1.07": "b99d3962c0b26901db87269607fbf85a",
         "LoD/1.08": "b99d3962c0b26901db87269607fbf85a",
         "LoD/1.09": "b99d3962c0b26901db87269607fbf85a",
@@ -63332,6 +66356,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -63354,6 +66379,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 3,
         "Classic/1.03": 3,
         "Classic/1.04c": 3,
+        "Classic/1.09d": 3,
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -63392,6 +66418,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "STRUCT_Inventory",
+          "PARAM_3",
+          "PROP_LEAF"
+        ],
+        "Classic/1.09d": [
           "STRUCT_Inventory",
           "PARAM_3",
           "PROP_LEAF"
@@ -63478,6 +66509,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -63502,6 +66534,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00403D08",
         "Classic/1.03": "0x00403D08",
         "Classic/1.04c": "0x00403D08",
+        "Classic/1.09d": "0x00403D08",
         "LoD/1.07": "0x00403D08",
         "LoD/1.08": "0x00403D08",
         "LoD/1.09": "0x00403D08",
@@ -63524,6 +66557,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x3D08",
         "Classic/1.03": "0x3D08",
         "Classic/1.04c": "0x3D08",
+        "Classic/1.09d": "0x3D08",
         "LoD/1.07": "0x3D08",
         "LoD/1.08": "0x3D08",
         "LoD/1.09": "0x3D08",
@@ -63546,6 +66580,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 27,
         "Classic/1.03": 27,
         "Classic/1.04c": 27,
+        "Classic/1.09d": 27,
         "LoD/1.07": 27,
         "LoD/1.08": 27,
         "LoD/1.09": 27,
@@ -63596,6 +66631,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "__nh_malloc|0x402F02"
         ],
         "Classic/1.04c": [
+          "__nh_malloc|0x402F02"
+        ],
+        "Classic/1.09d": [
           "__nh_malloc|0x402F02"
         ],
         "LoD/1.07": [
@@ -63706,6 +66744,21 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x3D22|RET|"
         ],
         "Classic/1.04c": [
+          "0x3D08|MOV|EAX, [0x00406658]",
+          "0x3D0D|TEST|EAX, EAX",
+          "0x3D0F|JZ|0x00403d20",
+          "0x3D11|PUSH|dword ptr [ESP + 0x4]",
+          "0x3D15|CALL|EAX",
+          "0x3D17|TEST|EAX, EAX",
+          "0x3D19|POP|ECX",
+          "0x3D1A|JZ|0x00403d20",
+          "0x3D1C|PUSH|0x1",
+          "0x3D1E|POP|EAX",
+          "0x3D1F|RET|",
+          "0x3D20|XOR|EAX, EAX",
+          "0x3D22|RET|"
+        ],
+        "Classic/1.09d": [
           "0x3D08|MOV|EAX, [0x00406658]",
           "0x3D0D|TEST|EAX, EAX",
           "0x3D0F|JZ|0x00403d20",
@@ -63952,6 +67005,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 13,
         "Classic/1.03": 13,
         "Classic/1.04c": 13,
+        "Classic/1.09d": 13,
         "LoD/1.07": 13,
         "LoD/1.08": 13,
         "LoD/1.09": 13,
@@ -63974,6 +67028,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 8,
         "Classic/1.03": 8,
         "Classic/1.04c": 8,
+        "Classic/1.09d": 8,
         "LoD/1.07": 8,
         "LoD/1.08": 8,
         "LoD/1.09": 8,
@@ -63996,6 +67051,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -64018,6 +67074,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "ee4facdaccbd6fc5f3297fd5b85b73c2",
         "Classic/1.03": "ee4facdaccbd6fc5f3297fd5b85b73c2",
         "Classic/1.04c": "ee4facdaccbd6fc5f3297fd5b85b73c2",
+        "Classic/1.09d": "ee4facdaccbd6fc5f3297fd5b85b73c2",
         "LoD/1.07": "ee4facdaccbd6fc5f3297fd5b85b73c2",
         "LoD/1.08": "ee4facdaccbd6fc5f3297fd5b85b73c2",
         "LoD/1.09": "ee4facdaccbd6fc5f3297fd5b85b73c2",
@@ -64048,6 +67105,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "0x6658|g_pfnCallbackHandler|0x0"
         ],
         "Classic/1.04c": [
+          "0x6658|g_pfnCallbackHandler|0x0"
+        ],
+        "Classic/1.09d": [
           "0x6658|g_pfnCallbackHandler|0x0"
         ],
         "LoD/1.07": [
@@ -64102,6 +67162,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -64124,6 +67185,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -64146,6 +67208,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -64184,6 +67247,11 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_SMALL"
         ],
         "Classic/1.04c": [
+          "PARAM_1",
+          "PROP_LEAF",
+          "PROP_SMALL"
+        ],
+        "Classic/1.09d": [
           "PARAM_1",
           "PROP_LEAF",
           "PROP_SMALL"
@@ -64270,6 +67338,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "internal",
         "Classic/1.03": "internal",
         "Classic/1.04c": "internal",
+        "Classic/1.09d": "internal",
         "LoD/1.07": "internal",
         "LoD/1.08": "internal",
         "LoD/1.09": "internal",
@@ -64294,6 +67363,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x00404066",
         "Classic/1.03": "0x00404066",
         "Classic/1.04c": "0x00404066",
+        "Classic/1.09d": "0x00404066",
         "LoD/1.07": "0x00404066",
         "LoD/1.08": "0x00404066",
         "LoD/1.09": "0x00404066",
@@ -64316,6 +67386,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "0x4066",
         "Classic/1.03": "0x4066",
         "Classic/1.04c": "0x4066",
+        "Classic/1.09d": "0x4066",
         "LoD/1.07": "0x4066",
         "LoD/1.08": "0x4066",
         "LoD/1.09": "0x4066",
@@ -64338,6 +67409,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 6,
         "Classic/1.03": 6,
         "Classic/1.04c": 6,
+        "Classic/1.09d": 6,
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -64387,6 +67459,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "GlobalUnwind2|0x402580"
         ],
         "Classic/1.04c": [
+          "GlobalUnwind2|0x402580"
+        ],
+        "Classic/1.09d": [
           "GlobalUnwind2|0x402580"
         ],
         "LoD/1.07": [
@@ -64451,6 +67526,9 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.04c": [
           "0x4066|JMP|dword ptr [0x00405080]"
         ],
+        "Classic/1.09d": [
+          "0x4066|JMP|dword ptr [0x00405080]"
+        ],
         "LoD/1.07": [
           "0x4066|JMP|dword ptr [0x00405080]"
         ],
@@ -64503,6 +67581,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -64525,6 +67604,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 20,
         "Classic/1.03": 20,
         "Classic/1.04c": 20,
+        "Classic/1.09d": 20,
         "LoD/1.07": 20,
         "LoD/1.08": 20,
         "LoD/1.09": 20,
@@ -64547,6 +67627,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 0,
         "Classic/1.03": 0,
         "Classic/1.04c": 0,
+        "Classic/1.09d": 0,
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
@@ -64569,6 +67650,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "e3e7225badfcf3c2e051c42d71d7237a",
         "Classic/1.03": "e3e7225badfcf3c2e051c42d71d7237a",
         "Classic/1.04c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "Classic/1.09d": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.07": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.08": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.09": "e3e7225badfcf3c2e051c42d71d7237a",
@@ -64591,6 +67673,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 1,
         "Classic/1.03": 1,
         "Classic/1.04c": 1,
+        "Classic/1.09d": 1,
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -64613,6 +67696,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": 4,
         "Classic/1.03": 4,
         "Classic/1.04c": 4,
+        "Classic/1.09d": 4,
         "LoD/1.07": 4,
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -64655,6 +67739,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "PROP_LEAF"
         ],
         "Classic/1.04c": [
+          "PROP_THUNK",
+          "PROP_TINY",
+          "PARAM_4",
+          "PROP_LEAF"
+        ],
+        "Classic/1.09d": [
           "PROP_THUNK",
           "PROP_TINY",
           "PARAM_4",
@@ -64757,6 +67847,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "thunk",
         "Classic/1.03": "thunk",
         "Classic/1.04c": "thunk",
+        "Classic/1.09d": "thunk",
         "LoD/1.07": "thunk",
         "LoD/1.08": "thunk",
         "LoD/1.09": "thunk",
@@ -64776,13 +67867,13 @@ var FUNCTIONS_Diablo_II_exe = {
     },
     "Diablo II_NOP_0597d102cd3e": {
       "addresses": {
-        "LoD/1.07": "0x00401C00"
+        "Classic/1.09d": "0x00401C00"
       },
       "rvas": {
-        "LoD/1.07": "0x1C00"
+        "Classic/1.09d": "0x1C00"
       },
       "sizes": {
-        "LoD/1.07": 133
+        "Classic/1.09d": 133
       },
       "calling_convention": "__cdecl",
       "return_type": "uint *",
@@ -64802,17 +67893,17 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "display_name": "NOP_0597d102cd3e6a52",
       "callees": {
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "FUN_00402cd6|0x402CD6"
         ]
       },
       "callers": {
-        "LoD/1.07": [
-          "FUN_0040146d|0x40146D"
+        "Classic/1.09d": [
+          "FindSubstringMultibyte|0x40146D"
         ]
       },
       "instructions": {
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "0x1C00|MOV|ECX, dword ptr [ESP + 0x8]",
           "0x1C04|PUSH|EDI",
           "0x1C05|PUSH|EBX",
@@ -64831,13 +67922,13 @@ var FUNCTIONS_Diablo_II_exe = {
         ]
       },
       "instruction_counts": {
-        "LoD/1.07": 69
+        "Classic/1.09d": 69
       },
       "stack_frame_sizes": {
-        "LoD/1.07": 12
+        "Classic/1.09d": 12
       },
       "loop_counts": {
-        "LoD/1.07": 5
+        "Classic/1.09d": 5
       },
       "mnemonic_hashes": {
         "Classic/1.00": "8cf740ead1ec396b63dfd5a3659dee5d",
@@ -64845,6 +67936,7 @@ var FUNCTIONS_Diablo_II_exe = {
         "Classic/1.02": "8cf740ead1ec396b63dfd5a3659dee5d",
         "Classic/1.03": "8cf740ead1ec396b63dfd5a3659dee5d",
         "Classic/1.04c": "8cf740ead1ec396b63dfd5a3659dee5d",
+        "Classic/1.09d": "8cf740ead1ec396b63dfd5a3659dee5d",
         "LoD/1.07": "8cf740ead1ec396b63dfd5a3659dee5d",
         "LoD/1.08": "8cf740ead1ec396b63dfd5a3659dee5d",
         "LoD/1.09": "8cf740ead1ec396b63dfd5a3659dee5d",
@@ -64862,22 +67954,22 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14d": "8cf740ead1ec396b63dfd5a3659dee5d"
       },
       "callee_counts": {
-        "LoD/1.07": 1
+        "Classic/1.09d": 1
       },
       "caller_counts": {
-        "LoD/1.07": 1
+        "Classic/1.09d": 1
       },
       "param_counts": {
-        "LoD/1.07": 2
+        "Classic/1.09d": 2
       },
       "tags": {
-        "LoD/1.07": [
+        "Classic/1.09d": [
           "PARAM_2",
           "PROP_LOOPHEAVY"
         ]
       },
       "function_types": {
-        "LoD/1.07": "internal"
+        "Classic/1.09d": "internal"
       }
     }
   }

@@ -1558,6 +1558,11 @@
             color: var(--color-set);
         }
 
+        .compare-section-summary .match-checkmark {
+            color: var(--color-set);
+            font-weight: bold;
+        }
+
         .compare-section-content {
             background: var(--bg-dark);
         }
@@ -6070,11 +6075,13 @@
             const normalizedCount = pairs.filter(p => p.matchType === 'normalized').length;
 
             let summaryText = 'empty';
+            const allMatch = matchCount === total && total > 0;
+            const checkmark = allMatch ? '<span class="match-checkmark">✓</span> ' : '';
             if (total > 0) {
                 if (normalizedCount > 0) {
-                    summaryText = `<span class="match-count">${exactCount}</span>+<span class="match-count-normalized">${normalizedCount}</span>/${total}`;
+                    summaryText = `${checkmark}<span class="match-count">${exactCount}</span>+<span class="match-count-normalized">${normalizedCount}</span>/${total}`;
                 } else {
-                    summaryText = `<span class="match-count">${matchCount}</span>/${total} matched`;
+                    summaryText = `${checkmark}<span class="match-count">${matchCount}</span>/${total}`;
                 }
             }
 
@@ -6626,8 +6633,6 @@
             // Extract all values for source
             const sourceSize = funcData.sizes?.[sourceVersion] || null;
             const sourceInstrCount = funcData.instructions?.[sourceVersion]?.length || 0;
-            const sourceLoopCount = funcData.loop_counts?.[sourceVersion] ?? null;
-            const sourceStackFrame = funcData.stack_frame_sizes?.[sourceVersion] || 0;
             const sourceCalleeCount = funcData.callees?.[sourceVersion]?.length || 0;
             const sourceStringCount = funcData.strings?.[sourceVersion]?.length || 0;
             const sourceConstCount = funcData.constants?.[sourceVersion]?.length || 0;
@@ -6636,34 +6641,20 @@
             // Extract all values for target
             const targetSize = targetData.sizes?.[targetVersion] || null;
             const targetInstrCount = targetData.instructions?.[targetVersion]?.length || 0;
-            const targetLoopCount = targetData.loop_counts?.[targetVersion] ?? null;
-            const targetStackFrame = targetData.stack_frame_sizes?.[targetVersion] || 0;
             const targetCalleeCount = targetData.callees?.[targetVersion]?.length || 0;
             const targetStringCount = targetData.strings?.[targetVersion]?.length || 0;
             const targetConstCount = targetData.constants?.[targetVersion]?.length || 0;
             const targetGlobalCount = targetData.globals?.[targetVersion]?.length || 0;
 
-            // Build structural counts section
+            // Build structural counts section (Size and Instructions only - other counts shown in section headers)
             const countsRows =
                 renderCompareRow(sourceSize, 'Size (bytes)', targetSize, getMatchType(sourceSize, targetSize, 0.15)) +
-                renderCompareRow(sourceInstrCount, 'Instructions', targetInstrCount, getMatchType(sourceInstrCount, targetInstrCount, 0.15)) +
-                renderCompareRow(sourceLoopCount, 'Loops', targetLoopCount, getMatchType(sourceLoopCount, targetLoopCount)) +
-                renderCompareRow(sourceStackFrame, 'Stack Frame', targetStackFrame, getMatchType(sourceStackFrame, targetStackFrame, 0.1)) +
-                renderCompareRow(sourceCalleeCount, 'Callees', targetCalleeCount, getMatchType(sourceCalleeCount, targetCalleeCount, 0.2)) +
-                renderCompareRow(sourceStringCount, 'Strings', targetStringCount, getMatchType(sourceStringCount, targetStringCount, 0.3)) +
-                renderCompareRow(sourceConstCount, 'Constants', targetConstCount, getMatchType(sourceConstCount, targetConstCount, 0.3)) +
-                renderCompareRow(sourceGlobalCount, 'Globals', targetGlobalCount, getMatchType(sourceGlobalCount, targetGlobalCount, 0.25));
+                renderCompareRow(sourceInstrCount, 'Instructions', targetInstrCount, getMatchType(sourceInstrCount, targetInstrCount, 0.15));
 
             // Count matches for summary
             let matchedCounts = 0;
             if (sourceSize === targetSize) matchedCounts++;
             if (sourceInstrCount === targetInstrCount) matchedCounts++;
-            if (sourceLoopCount === targetLoopCount) matchedCounts++;
-            if (sourceStackFrame === targetStackFrame) matchedCounts++;
-            if (sourceCalleeCount === targetCalleeCount) matchedCounts++;
-            if (sourceStringCount === targetStringCount) matchedCounts++;
-            if (sourceConstCount === targetConstCount) matchedCounts++;
-            if (sourceGlobalCount === targetGlobalCount) matchedCounts++;
 
             // Get arrays for list sections
             const sourceCallees = funcData.callees?.[sourceVersion] || [];
@@ -6688,32 +6679,32 @@
 
             // Structural Counts - with score alongside counts summary
             const scoreInfo = identityMatch ? ` · ${identityMatch.score}%` : '';
-            const countsSummaryWithScore = `<span class="match-count">${matchedCounts}</span>/8 exact${scoreInfo}`;
+            const countsSummaryWithScore = `<span class="match-count">${matchedCounts}</span>/2 exact${scoreInfo}`;
             html += renderCompareSection('Structural Counts', countsRows, countsSummaryWithScore, false);
 
             // Section 2: Mnemonic Hash
             html += renderCompareHashSection('Mnemonic Hash', sourceMnemonicHash, targetMnemonicHash, false);
 
             // Section 3: Signature
-            html += renderCompareSignatureSection(funcData, targetData, true);
+            html += renderCompareSignatureSection(funcData, targetData, false);
 
             // Section 4: Callees (match by function name)
-            html += renderCompareListSection('Callees', sourceCallees, targetCallees, sourceCallees.length > 10, 'callees');
+            html += renderCompareListSection('Callees', sourceCallees, targetCallees, false, 'callees');
 
             // Section 5: Callers (match by function name)
-            html += renderCompareListSection('Callers', sourceCallers, targetCallers, sourceCallers.length > 10, 'callers');
+            html += renderCompareListSection('Callers', sourceCallers, targetCallers, false, 'callers');
 
             // Section 6: Strings (match by value with path normalization)
-            html += renderCompareListSection('String References', sourceStrings, targetStrings, true, 'strings');
+            html += renderCompareListSection('String References', sourceStrings, targetStrings, false, 'strings');
 
             // Section 7: Constants (match by value)
-            html += renderCompareListSection('Constants', sourceConstants, targetConstants, true, 'constants');
+            html += renderCompareListSection('Constants', sourceConstants, targetConstants, false, 'constants');
 
             // Section 8: Globals (match by name)
-            html += renderCompareListSection('Global References', sourceGlobals, targetGlobals, true, 'globals');
+            html += renderCompareListSection('Global References', sourceGlobals, targetGlobals, false, 'globals');
 
             // Section 9: Tags
-            html += renderCompareListSection('Function Tags', sourceTags, targetTags, true, 'default');
+            html += renderCompareListSection('Function Tags', sourceTags, targetTags, false, 'default');
 
             return html;
         }
