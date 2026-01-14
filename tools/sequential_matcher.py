@@ -74,14 +74,11 @@ CLASSIC_VERSION_ORDER = [
 
 
 # Match method weights (higher = more reliable)
-# NOTE: export_ordinal demoted - ordinals change between D2 versions
 MATCH_WEIGHTS = {
-    "export_ordinal": 0.50,  # Export ordinal - NOT reliable across versions
     "mnemonic_hash": 0.98,  # Identical opcode sequence
     "index_nop": 0.97,  # NOP index - normalized opcode hash (address-independent)
     "export_name": 0.95,  # Named export match
     "unique_string": 0.92,  # Unique string reference
-    "index_exp": 0.50,  # EXP index - NOT reliable across versions
     "index_str": 0.88,  # STR index match
     "index_cal": 0.87,  # CAL index match (sorted callee names - very stable)
     "index_api": 0.85,  # API sequence match (order-dependent)
@@ -94,8 +91,6 @@ MATCH_WEIGHTS = {
     "callee_set_size": 0.80,  # Same callees + same size
     "callee_overlap": 0.60,  # High callee overlap (>=80%)
     "signature_match": 0.70,  # Same function signature/prototype
-    "size_proximity": 0.20,  # Similar size (very weak, tiebreaker)
-    "size_exact": 0.30,  # Exact size match
 }
 
 # Minimum score to accept a match
@@ -113,14 +108,14 @@ MIN_MATCH_SCORE_NO_TIER1 = 4.0  # Requires multiple strong Tier 2/3 signals
 VECTOR_FEATURE_WEIGHTS = {
     # Hash matches (binary 0/1) - strongest signals
     "mnemonic_hash": 2.0,      # Identical opcode sequence
-    "export_ordinal": 0.2,     # Export ordinal - NOT reliable across versions
     "export_name": 0.4,        # Named export match
-    "str_index": 1.0,          # String hash index
-    "cal_index": 1.0,          # Callee names index
-    "cfg_index": 0.6,          # CFG structure index
-    "api_index": 1.0,          # API sequence index
-    "con_index": 0.5,          # Constants index
-    "pro_index": 0.3,          # Prologue index (weak)
+    "nop_hash": 1.0,           # Normalized opcode hash (address-independent)
+    "str_hash": 1.0,           # String reference hash
+    "cal_hash": 1.0,           # Callee names hash
+    "cfg_hash": 0.6,           # CFG structure hash
+    "api_hash": 1.0,           # API sequence hash
+    "con_hash": 0.5,           # Constants hash
+    "pro_hash": 0.3,           # Prologue hash (weak)
 
     # Set overlaps (0.0-1.0) - Jaccard similarity
     "callee_overlap": 0.7,     # Callee set overlap
@@ -128,7 +123,6 @@ VECTOR_FEATURE_WEIGHTS = {
     "constant_overlap": 0.4,   # Constant value overlap
 
     # Numeric similarities (0.0-1.0)
-    "size_sim": 0.6,           # Size similarity
     "callee_count_sim": 0.6,   # Callee count similarity
     "string_count_sim": 0.8,   # String count similarity
     "loop_count_sim": 0.4,     # Loop count similarity
@@ -260,6 +254,10 @@ class SequentialMatcher:
         # Index lookups: {dll: {version_key: {index_key: [addresses]}}}
         self.index_lookup: Dict[str, Dict[str, Dict[str, List[str]]]] = {}
 
+        # Param count lookup: {dll: {version_key: {param_count: [addresses]}}}
+        # Used for pre-filtering candidates to only those with matching param counts
+        self.param_count_lookup: Dict[str, Dict[str, Dict[int, List[str]]]] = {}
+
         # Results: {dll: {canonical_id: FunctionIdentity}}
         self.identities: Dict[str, Dict[str, FunctionIdentity]] = {}
 
@@ -317,15 +315,21 @@ class SequentialMatcher:
         if dll_name not in self.addr_to_func:
             self.addr_to_func[dll_name] = {}
             self.index_lookup[dll_name] = {}
+            self.param_count_lookup[dll_name] = {}
 
         for version_key, functions in version_data.items():
             self.addr_to_func[dll_name][version_key] = {}
             self.index_lookup[dll_name][version_key] = defaultdict(list)
+            self.param_count_lookup[dll_name][version_key] = defaultdict(list)
 
             for func in functions:
                 addr = func.get("address", "")
                 if addr:
                     self.addr_to_func[dll_name][version_key][addr] = func
+
+                    # Build param_count lookup for pre-filtering
+                    param_count = func.get("param_count", 0) or 0
+                    self.param_count_lookup[dll_name][version_key][param_count].append(addr)
 
                 # Build index lookups
                 indexes = func.get("indexes", {})
@@ -378,7 +382,7 @@ class SequentialMatcher:
             if features["mnemonic_hash"] == 1.0:
                 methods.append("mnemonic_hash")
 
-        # NOP index - normalized opcode hash (address-independent, very reliable)
+        # NOP hash - normalized opcode hash (address-independent, very reliable)
         source_nop = source_indexes.get("NOP")
         target_nop = target_indexes.get("NOP")
         if source_nop and target_nop:
@@ -386,19 +390,10 @@ class SequentialMatcher:
             if match:
                 key = f"NOP:{source_nop}"
                 collisions = len(self.index_lookup[dll_name][target_ver].get(key, []))
-                features["nop_index"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
-                methods.append("nop_index")
+                features["nop_hash"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
+                methods.append("nop_hash")
             else:
-                features["nop_index"] = 0.0
-
-        # Export ordinal
-        source_exp = source_indexes.get("EXP")
-        target_exp = target_indexes.get("EXP")
-        if source_exp and target_exp:
-            features["export_ordinal"] = 1.0 if source_exp == target_exp else 0.0
-            if features["export_ordinal"] == 1.0:
-                methods.append("export_ordinal")
-                details["exp_match"] = source_exp
+                features["nop_hash"] = 0.0
 
         # Named export match
         source_name = source_func.get("name", "")
@@ -410,7 +405,7 @@ class SequentialMatcher:
             if features["export_name"] == 1.0:
                 methods.append("export_name")
 
-        # String index (STR)
+        # String hash (STR)
         source_str = source_indexes.get("STR")
         target_str = target_indexes.get("STR")
         if source_str and target_str:
@@ -419,12 +414,12 @@ class SequentialMatcher:
             if match:
                 key = f"STR:{source_str}"
                 collisions = len(self.index_lookup[dll_name][target_ver].get(key, []))
-                features["str_index"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
-                methods.append("str_index")
+                features["str_hash"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
+                methods.append("str_hash")
             else:
-                features["str_index"] = 0.0
+                features["str_hash"] = 0.0
 
-        # Callee index (CAL)
+        # Callee hash (CAL)
         source_cal = source_indexes.get("CAL")
         target_cal = target_indexes.get("CAL")
         if source_cal and target_cal:
@@ -432,12 +427,12 @@ class SequentialMatcher:
             if match:
                 key = f"CAL:{source_cal}"
                 collisions = len(self.index_lookup[dll_name][target_ver].get(key, []))
-                features["cal_index"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
-                methods.append("cal_index")
+                features["cal_hash"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
+                methods.append("cal_hash")
             else:
-                features["cal_index"] = 0.0
+                features["cal_hash"] = 0.0
 
-        # CFG index
+        # CFG hash
         source_cfg = source_indexes.get("CFG")
         target_cfg = target_indexes.get("CFG")
         if source_cfg and target_cfg:
@@ -445,28 +440,28 @@ class SequentialMatcher:
             if match:
                 key = f"CFG:{source_cfg}"
                 collisions = len(self.index_lookup[dll_name][target_ver].get(key, []))
-                features["cfg_index"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
-                methods.append("cfg_index")
+                features["cfg_hash"] = 1.0 if collisions <= 1 else 0.5 if collisions <= 3 else 0.2
+                methods.append("cfg_hash")
             else:
-                features["cfg_index"] = 0.0
+                features["cfg_hash"] = 0.0
 
-        # API index
+        # API hash
         source_api = source_indexes.get("API") or source_indexes.get("APS")
         target_api = target_indexes.get("API") or target_indexes.get("APS")
         if source_api and target_api:
-            features["api_index"] = 1.0 if source_api == target_api else 0.0
-            if features["api_index"] == 1.0:
-                methods.append("api_index")
+            features["api_hash"] = 1.0 if source_api == target_api else 0.0
+            if features["api_hash"] == 1.0:
+                methods.append("api_hash")
 
-        # Constants index (CON)
+        # Constants hash (CON)
         source_con = source_indexes.get("CON")
         target_con = target_indexes.get("CON")
         if source_con and target_con:
-            features["con_index"] = 1.0 if source_con == target_con else 0.0
-            if features["con_index"] == 1.0:
-                methods.append("con_index")
+            features["con_hash"] = 1.0 if source_con == target_con else 0.0
+            if features["con_hash"] == 1.0:
+                methods.append("con_hash")
 
-        # Prologue index (PRO) - weak signal
+        # Prologue hash (PRO) - weak signal
         source_pro = source_indexes.get("PRO")
         target_pro = target_indexes.get("PRO")
         if source_pro and target_pro:
@@ -474,11 +469,11 @@ class SequentialMatcher:
             if match:
                 key = f"PRO:{source_pro}"
                 collisions = len(self.index_lookup[dll_name][target_ver].get(key, []))
-                features["pro_index"] = 1.0 if collisions <= 1 else 0.0
-                if features["pro_index"] > 0:
-                    methods.append("pro_index")
+                features["pro_hash"] = 1.0 if collisions <= 1 else 0.0
+                if features["pro_hash"] > 0:
+                    methods.append("pro_hash")
             else:
-                features["pro_index"] = 0.0
+                features["pro_hash"] = 0.0
 
         # =================================================================
         # Set-based features (Jaccard similarity: 0.0 - 1.0)
@@ -542,16 +537,6 @@ class SequentialMatcher:
         # =================================================================
         # Numeric features (ratio similarity: 0.0 - 1.0)
         # =================================================================
-
-        # Size similarity
-        source_size = source_func.get("size", 0) or 0
-        target_size = target_func.get("size", 0) or 0
-        size_sim = numeric_similarity(source_size, target_size)
-        features["size_sim"] = size_sim
-        if size_sim == 1.0:
-            methods.append("size_exact")
-        elif size_sim >= 0.9:
-            methods.append(f"size_sim({size_sim:.0%})")
 
         # Callee count similarity
         callee_count_sim = numeric_similarity(len(source_callees), len(target_callees))
@@ -631,13 +616,13 @@ class SequentialMatcher:
         # =================================================================
         tier1_matched = any([
             features.get("mnemonic_hash", 0) > 0,
-            features.get("export_ordinal", 0) > 0,
+            features.get("nop_hash", 0) > 0,
             features.get("export_name", 0) > 0,
-            features.get("str_index", 0) > 0,
-            features.get("cal_index", 0) > 0,
-            features.get("api_index", 0) > 0,
-            features.get("cfg_index", 0) > 0,
-            features.get("con_index", 0) > 0,
+            features.get("str_hash", 0) > 0,
+            features.get("cal_hash", 0) > 0,
+            features.get("api_hash", 0) > 0,
+            features.get("cfg_hash", 0) > 0,
+            features.get("con_hash", 0) > 0,
         ])
 
         # =================================================================
@@ -702,6 +687,9 @@ class SequentialMatcher:
             if not source_addr:
                 continue
 
+            # Get source param_count for pre-filtering
+            source_param_count = source_func.get("param_count", 0) or 0
+
             # Pre-filter targets using index lookups for efficiency
             candidate_targets = set()
             source_indexes = source_func.get("indexes", {})
@@ -717,20 +705,52 @@ class SequentialMatcher:
             if source_addr in self.addr_to_func[dll_name].get(target_ver, {}):
                 candidate_targets.add(source_addr)
 
-            # If no index matches, fall back to size-based filtering
+            # Filter candidates by param_count (if source has known param_count)
+            if source_param_count > 0 and candidate_targets:
+                filtered_targets = set()
+                for addr in candidate_targets:
+                    target_func = self.addr_to_func[dll_name][target_ver].get(addr)
+                    if target_func:
+                        target_param_count = target_func.get("param_count", 0) or 0
+                        # Allow match if target has same param_count OR unknown (0)
+                        if target_param_count == 0 or target_param_count == source_param_count:
+                            filtered_targets.add(addr)
+                candidate_targets = filtered_targets
+
+            # If no index matches, fall back to param_count + size-based filtering
             if not candidate_targets:
                 source_size = source_func.get("size", 0)
-                if source_size > 0:
-                    for target_func in target_funcs:
-                        target_size = target_func.get("size", 0)
-                        if target_size > 0:
-                            ratio = min(source_size, target_size) / max(
-                                source_size, target_size
-                            )
-                            if ratio >= 0.8:
-                                target_addr = target_func.get("address", "")
-                                if target_addr:
-                                    candidate_targets.add(target_addr)
+                # Get candidates with matching param_count first
+                if source_param_count > 0:
+                    param_matches = self.param_count_lookup[dll_name][target_ver].get(source_param_count, [])
+                    # Also include unknown param_count (0) as possible matches
+                    param_matches = set(param_matches) | set(self.param_count_lookup[dll_name][target_ver].get(0, []))
+                else:
+                    # Source has unknown param_count, consider all targets
+                    param_matches = None  # Will iterate all target_funcs
+
+                if param_matches is not None:
+                    # Filter by size within param_count matches
+                    if source_size > 0:
+                        for target_addr in param_matches:
+                            target_func = self.addr_to_func[dll_name][target_ver].get(target_addr)
+                            if target_func:
+                                target_size = target_func.get("size", 0)
+                                if target_size > 0:
+                                    ratio = min(source_size, target_size) / max(source_size, target_size)
+                                    if ratio >= 0.8:
+                                        candidate_targets.add(target_addr)
+                else:
+                    # Fallback: iterate all targets (source has unknown param_count)
+                    if source_size > 0:
+                        for target_func in target_funcs:
+                            target_size = target_func.get("size", 0)
+                            if target_size > 0:
+                                ratio = min(source_size, target_size) / max(source_size, target_size)
+                                if ratio >= 0.8:
+                                    target_addr = target_func.get("address", "")
+                                    if target_addr:
+                                        candidate_targets.add(target_addr)
 
             # Score each candidate
             for target_addr in candidate_targets:
@@ -810,10 +830,10 @@ class SequentialMatcher:
         ]
 
         if len(available_versions) < 2:
-            print(f"    Skipping forward pass: fewer than 2 versions available")
+            print(f"    Skipping forward pass: fewer than 2 versions available", flush=True)
             return
 
-        print(f"    Forward pass: {available_versions[0]} -> {available_versions[-1]}")
+        print(f"    Forward pass: {available_versions[0]} -> {available_versions[-1]}", flush=True)
 
         # Initialize identities from first version
         first_ver = f"{game_type}/{available_versions[0]}"
@@ -904,7 +924,8 @@ class SequentialMatcher:
 
             print(
                 f"      {available_versions[i]} -> {available_versions[i+1]}: "
-                f"{len(matches)} matched, {len(target_funcs) - len(matched_targets)} new"
+                f"{len(matches)} matched, {len(target_funcs) - len(matched_targets)} new",
+                flush=True
             )
 
     def process_dll(self, dll_name: str, game_type: str) -> Dict[str, FunctionIdentity]:
@@ -915,12 +936,12 @@ class SequentialMatcher:
         # Normalize DLL name for consistent keying
         norm_name = self.register_dll_name(dll_name)
 
-        print(f"  Processing {dll_name} ({game_type})...")
+        print(f"  Processing {dll_name} ({game_type})...", flush=True)
 
         # Load data
         version_data = self.load_dll_data(dll_name, game_type)
         if not version_data:
-            print(f"    No data found")
+            print(f"    No data found", flush=True)
             return self.identities.get(norm_name, {})
 
         # Merge with existing data if any
@@ -944,7 +965,8 @@ class SequentialMatcher:
 
         total_funcs = sum(len(funcs) for funcs in version_data.values())
         print(
-            f"    Loaded {len(version_data)} versions, {total_funcs} total function instances"
+            f"    Loaded {len(version_data)} versions, {total_funcs} total function instances",
+            flush=True
         )
 
         # Forward pass - match functions between adjacent versions
@@ -959,11 +981,13 @@ class SequentialMatcher:
         )
 
         print(
-            f"    Result: {unique_identities} unique functions ({named_identities} named)"
+            f"    Result: {unique_identities} unique functions ({named_identities} named)",
+            flush=True
         )
         print(
             f"    Stats: {self.stats[norm_name]['forward_matches']} matched, "
-            f"{self.stats[norm_name]['new_functions']} new"
+            f"{self.stats[norm_name]['new_functions']} new",
+            flush=True
         )
 
         return self.identities[norm_name]

@@ -422,7 +422,14 @@ class FunctionMerger:
             and index_method not in verified_methods
         ):
             if full_key in self.index_to_canonical:
-                return self.index_to_canonical[full_key]
+                canonical_id = self.index_to_canonical[full_key]
+                existing_func = self.functions.get(canonical_id)
+                # Check param_count compatibility before accepting match
+                if existing_func and not self._check_param_count_compatible(func_data, existing_func):
+                    self.stats["param_count_rejections"] += 1
+                    # Don't return, continue to try alternate indexes
+                else:
+                    return canonical_id
 
         # Try alternate indexes in priority order (skip disabled methods)
         for method in enabled_methods:
@@ -432,10 +439,16 @@ class FunctionMerger:
                 if alt_key in self.index_to_canonical:
                     # Found match via alternate index
                     canonical_id = self.index_to_canonical[alt_key]
+                    existing_func = self.functions.get(canonical_id)
+
+                    # PARAM COUNT CHECK: Reject if param counts don't match
+                    if existing_func and not self._check_param_count_compatible(func_data, existing_func):
+                        new_pc = func_data.get("param_count", 0) or 0
+                        self.stats["param_count_rejections"] += 1
+                        continue  # Don't use this match, try next method
 
                     # COLLISION DETECTION: Check if this would create a same-version-different-address conflict
                     if game_type and version and address:
-                        existing_func = self.functions.get(canonical_id)
                         if existing_func:
                             version_key = f"{game_type}/{version}"
                             existing_version_data = existing_func.get(
@@ -477,8 +490,12 @@ class FunctionMerger:
                 exp_key = f"{dll_name}:{method}:{idx_value}"
                 if exp_key in self.index_to_canonical:
                     canonical_id = self.index_to_canonical[exp_key]
-                    # Verify with a secondary index
                     existing_func = self.functions.get(canonical_id)
+                    # Check param_count compatibility first
+                    if existing_func and not self._check_param_count_compatible(func_data, existing_func):
+                        self.stats["param_count_rejections"] += 1
+                        continue
+                    # Verify with a secondary index
                     if existing_func and self._verify_match(func_data, existing_func):
                         self.stats["verified_matches"] += 1
                         return canonical_id
@@ -505,6 +522,32 @@ class FunctionMerger:
                     self.index_to_canonical[alt_key] = canonical_id
 
         return canonical_id
+
+    def _check_param_count_compatible(self, func_data: dict, existing_func: dict) -> bool:
+        """
+        Check if two functions have compatible parameter counts.
+
+        Returns True if:
+        - Both have the same param_count
+        - Either one has param_count = 0 (unknown)
+
+        Returns False if both have known param_counts that differ.
+        """
+        new_param_count = func_data.get("param_count", 0) or 0
+
+        # Get existing param_count from any version's data
+        existing_param_count = 0
+        for version_data in existing_func.get("versions", {}).values():
+            existing_param_count = version_data.get("param_count", 0) or 0
+            if existing_param_count > 0:
+                break
+
+        # If either is unknown (0), allow the match
+        if new_param_count == 0 or existing_param_count == 0:
+            return True
+
+        # Both have known param counts - they must match
+        return new_param_count == existing_param_count
 
     def _verify_match(self, func_data: dict, existing_func: dict) -> bool:
         """
